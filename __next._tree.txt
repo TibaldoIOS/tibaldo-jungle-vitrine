@@ -1,0 +1,7 @@
+:HL["/_next/static/chunks/0vmq8jn0hfn_o.css","style"]
+:HL["/tibaldo-jungle-logo.webp","image"]
+:HL["https://cdn.simpleicons.org/instagram/153b2c","image"]
+:HL["https://cdn.simpleicons.org/facebook/ffffff","image"]
+:HL["https://cdn.simpleicons.org/instagram/b9c9a7","image"]
+:HL["https://cdn.simpleicons.org/facebook/b9c9a7","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"uY08QM7AlQGuK3oKSnJQH"}
