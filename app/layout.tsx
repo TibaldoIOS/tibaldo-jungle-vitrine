@@ -13,11 +13,53 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tibaldo Jungle — Studio Végétal à Lille",
-  description: "Boutique de plantes d’intérieur à Lille : plantes rares, conseils, rempotage et ateliers végétaux.",
-  other: {
-    "codex-preview": "development",
+  metadataBase: new URL("https://jungle.tibaldo.fr"),
+  title: "Boutique de plantes rares à Lille | Tibaldo Jungle",
+  description:
+    "Découvrez Tibaldo Jungle, nouvelle boutique de plantes rares et exotiques à Lille : sélection d’un passionné, rempotage, substrats en vrac et conseils personnalisés.",
+  applicationName: "Tibaldo Jungle — Studio Végétal",
+  keywords: [
+    "boutique de plantes rares à Lille",
+    "plantes exotiques à Lille",
+    "studio végétal Lille",
+  ],
+  alternates: { canonical: "/" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: "/",
+    siteName: "Tibaldo Jungle — Studio Végétal",
+    title: "Tibaldo Jungle, boutique de plantes rares et exotiques à Lille",
+    description:
+      "Une nouvelle boutique née de la passion du végétal vivant : plantes rares et exotiques, rempotage, substrats en vrac et conseils à Lille.",
+    images: [
+      {
+        url: "/boutique-projet-ia.webp",
+        width: 1200,
+        height: 630,
+        alt: "Tibaldo Jungle, future boutique de plantes rares et exotiques à Lille",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tibaldo Jungle, plantes rares et exotiques à Lille",
+    description:
+      "Découvrez un Studio Végétal vivant, imaginé par un passionné de plantes à Lille.",
+    images: ["/boutique-projet-ia.webp"],
+  },
+  category: "boutique de plantes",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
