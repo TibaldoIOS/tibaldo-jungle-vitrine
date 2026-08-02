@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://jungle.tibaldo.fr
+Sitemap: https://jungle.tibaldo.fr/sitemap.xml
