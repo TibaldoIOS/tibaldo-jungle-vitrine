@@ -122,7 +122,10 @@ export default function Home() {
 
         <div className="hero-content shell">
           <p className="eyebrow"><span /> Nouvelle boutique · Lille</p>
-          <h1>Plantes rares<br />& exotiques <em>à Lille.</em></h1>
+          <h1 aria-label="Plantes rares et exotiques à Lille">
+            <span className="hero-line" aria-hidden="true"><span>Plantes rares</span></span>
+            <span className="hero-line" aria-hidden="true"><span>&amp; exotiques <em>à Lille.</em></span></span>
+          </h1>
           <p className="hero-copy">
             Tibaldo Jungle est un Studio Végétal né de la passion du vivant.<br />
             Une sélection singulière, des plantes cultivées et de vrais conseils.
@@ -160,7 +163,7 @@ export default function Home() {
       <section className="feature-grid shell" aria-label="L'univers Tibaldo Jungle">
         <article className="feature-card feature-card-large reveal-left" data-reveal>
           <div className="card-photo">
-            <img src="/feature-selection.jpg" alt="Sélection de plantes rares et exotiques en intérieur" width={2000} height={1333} loading="lazy" decoding="async" />
+            <img data-parallax="18" src="/feature-selection.jpg" alt="Sélection de plantes rares et exotiques en intérieur" width={2000} height={1333} loading="lazy" decoding="async" />
           </div>
           <div className="card-caption">
             <span>01</span>
@@ -172,7 +175,7 @@ export default function Home() {
         </article>
         <article className="feature-card reveal-right reveal-delay-1" data-reveal>
           <div className="card-photo">
-            <img src="/advice-rempotage.jpg" alt="Plantes d’intérieur accompagnées de conseils personnalisés" width={1200} height={1800} loading="lazy" decoding="async" />
+            <img data-parallax="14" src="/advice-rempotage.jpg" alt="Plantes d’intérieur accompagnées de conseils personnalisés" width={1200} height={1800} loading="lazy" decoding="async" />
           </div>
           <div className="card-caption">
             <span>02</span>
@@ -253,7 +256,7 @@ export default function Home() {
 
       <section className="workshop shell" id="rempotage">
         <div className="workshop-photo reveal-left" data-reveal>
-          <img src="/advice-rempotage.jpg" alt="Rempotage d’une plante au Studio Végétal" width={1200} height={1800} loading="lazy" decoding="async" />
+          <img data-parallax="18" src="/advice-rempotage.jpg" alt="Rempotage d’une plante au Studio Végétal" width={1200} height={1800} loading="lazy" decoding="async" />
           <span>Service gratuit</span>
         </div>
         <div className="workshop-copy reveal-right reveal-delay-1" data-reveal>
@@ -315,15 +318,15 @@ export default function Home() {
         </div>
         <div className="plant-strip" aria-label="Exemples de plantes proposées">
           <article className="reveal-scale" data-reveal>
-            <div className="plant-photo"><img src="/plant-anthurium.jpg" alt="Anthurium aux feuilles nervurées" width={900} height={675} loading="lazy" decoding="async" /></div>
+            <div className="plant-photo"><img data-parallax="12" src="/plant-anthurium.jpg" alt="Anthurium aux feuilles nervurées" width={900} height={675} loading="lazy" decoding="async" /></div>
             <p><strong>Anthurium</strong><span>Collection · rare</span></p>
           </article>
           <article className="reveal-scale reveal-delay-1" data-reveal>
-            <div className="plant-photo"><img src="/plant-monstera.jpg" alt="Monstera au feuillage graphique" width={900} height={1125} loading="lazy" decoding="async" /></div>
+            <div className="plant-photo"><img data-parallax="12" src="/plant-monstera.jpg" alt="Monstera au feuillage graphique" width={900} height={1125} loading="lazy" decoding="async" /></div>
             <p><strong>Monstera</strong><span>Graphique · iconique</span></p>
           </article>
           <article className="reveal-scale reveal-delay-2" data-reveal>
-            <div className="plant-photo"><img src="/plant-alocasia.jpg" alt="Alocasia tropicale sculpturale" width={900} height={1125} loading="lazy" decoding="async" /></div>
+            <div className="plant-photo"><img data-parallax="12" src="/plant-alocasia.jpg" alt="Alocasia tropicale sculpturale" width={900} height={1125} loading="lazy" decoding="async" /></div>
             <p><strong>Alocasia</strong><span>Sculpturale · tropicale</span></p>
           </article>
         </div>
@@ -379,7 +382,7 @@ export default function Home() {
       </section>
 
       <section className="project-teaser">
-        <div className="project-teaser-photo" aria-hidden="true" />
+        <div className="project-teaser-photo" data-parallax="22" aria-hidden="true" />
         <div className="project-teaser-shade" aria-hidden="true" />
         <div className="shell project-teaser-content" data-reveal>
           <p className="section-kicker">Création de la boutique · Projet IA</p>
@@ -390,7 +393,7 @@ export default function Home() {
       </section>
 
       <section className="opening" id="contact">
-        <div className="opening-photo" aria-hidden="true" />
+        <div className="opening-photo" data-parallax="18" aria-hidden="true" />
         <div className="opening-overlay" aria-hidden="true" />
         <div className="shell opening-content" data-reveal>
           <p className="section-kicker">Ouverture le 26 septembre 2026</p>

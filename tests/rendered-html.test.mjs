@@ -35,6 +35,8 @@ test("renders the homepage SEO signals and editorial content", async () => {
   assert.match(html, /<link(?=[^>]*rel=["']canonical["'])(?=[^>]*href=["']https:\/\/jungle\.tibaldo\.fr\/?["'])[^>]*>/i);
   assert.match(html, /application\/ld\+json/i);
   assert.match(html, /Plantes rares[\s\S]*&amp; exotiques[\s\S]*à Lille\./i);
+  assert.match(html, /class=["']hero-line["']/i);
+  assert.match(html, /data-parallax=["']18["']/i);
   assert.match(html, /Pourquoi « Studio Végétal » \?/i);
   assert.match(html, /Ouverture le 26 septembre 2026 à Lille/i);
   assert.match(html, /Rempotage offert pour l’inauguration/i);
