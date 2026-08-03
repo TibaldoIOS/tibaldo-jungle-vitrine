@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jungle.tibaldo.fr"),
-  title: "Boutique de plantes rares à Lille | Tibaldo Jungle",
+  title: "Tibaldo Jungle — Studio Végétal à Lille",
   description:
-    "Découvrez Tibaldo Jungle, nouvelle boutique de plantes rares et exotiques à Lille : sélection d’un passionné, rempotage, substrats en vrac et conseils personnalisés.",
+    "Nouveauté à Lille : Tibaldo Jungle, Studio Végétal et boutique de plantes rares et exotiques. Ouverture le 26 septembre 2026, rempotage offert.",
   applicationName: "Tibaldo Jungle — Studio Végétal",
   keywords: [
     "boutique de plantes rares à Lille",
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "/",
     siteName: "Tibaldo Jungle — Studio Végétal",
-    title: "Tibaldo Jungle, boutique de plantes rares et exotiques à Lille",
+    title: "Tibaldo Jungle — Studio Végétal à Lille",
     description:
-      "Une nouvelle boutique née de la passion du végétal vivant : plantes rares et exotiques, rempotage, substrats en vrac et conseils à Lille.",
+      "Nouveauté à Lille : une boutique de plantes rares et exotiques, des conseils sincères et un rempotage offert pour l’inauguration.",
     images: [
       {
         url: "/boutique-projet-ia.webp",
@@ -54,15 +54,16 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tibaldo Jungle, plantes rares et exotiques à Lille",
+    title: "Tibaldo Jungle — Studio Végétal à Lille",
     description:
-      "Découvrez un Studio Végétal vivant, imaginé par un passionné de plantes à Lille.",
+      "Nouveauté à Lille : boutique de plantes rares et exotiques. Ouverture le 26 septembre 2026.",
     images: ["/boutique-projet-ia.webp"],
   },
   category: "boutique de plantes",
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: [{ url: "/favicon.png", type: "image/png", sizes: "192x192" }],
+    shortcut: "/favicon.png",
+    apple: [{ url: "/favicon.png", sizes: "192x192", type: "image/png" }],
   },
 };
 

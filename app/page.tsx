@@ -15,7 +15,7 @@ const structuredData = {
       image: "https://jungle.tibaldo.fr/boutique-projet-ia.webp",
       email: "tibaldojungle@gmail.com",
       description:
-        "Nouvelle boutique de plantes rares et exotiques à Lille, spécialisée dans les plantes d’intérieur, le rempotage, les substrats en vrac et le conseil végétal.",
+        "Nouveauté à Lille : Tibaldo Jungle, Studio Végétal et boutique de plantes rares et exotiques. Ouverture le 26 septembre 2026.",
       slogan: "Faites entrer le vivant chez vous.",
       foundingDate: "2026",
       address: {
@@ -60,7 +60,7 @@ const structuredData = {
         "Découvrez la nouvelle boutique de plantes rares et exotiques Tibaldo Jungle à Lille.",
       isPartOf: { "@id": "https://jungle.tibaldo.fr/#website" },
       about: { "@id": "https://jungle.tibaldo.fr/#store" },
-      dateModified: "2026-08-02",
+      dateModified: "2026-08-03",
       inLanguage: "fr-FR",
     },
   ],
@@ -91,7 +91,7 @@ export default function Home() {
             <span className="brand-wordmark">
               <strong><span>TIBALDO</span><em>Jungle</em></strong>
               <small>Studio Végétal</small>
-              <span className="brand-location">Lille · Nord · France</span>
+              <span className="brand-location">Lille</span>
             </span>
           </a>
 
@@ -105,9 +105,19 @@ export default function Home() {
             <a href="#contact">Contact</a>
           </nav>
 
-          <a className="header-cta" href="#contact">
-            Nous trouver <Arrow />
-          </a>
+          <div className="header-actions">
+            <div className="header-socials" aria-label="Réseaux sociaux Tibaldo Jungle">
+              <a href="https://www.instagram.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Instagram Tibaldo Jungle">
+                <img src="https://cdn.simpleicons.org/instagram/ffffff" alt="" aria-hidden="true" />
+              </a>
+              <a href="https://www.facebook.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Facebook Tibaldo Jungle">
+                <img src="https://cdn.simpleicons.org/facebook/ffffff" alt="" aria-hidden="true" />
+              </a>
+            </div>
+            <a className="header-cta" href="#contact">
+              Nous trouver <Arrow />
+            </a>
+          </div>
         </header>
 
         <div className="hero-content shell">
@@ -121,18 +131,16 @@ export default function Home() {
             <a className="button button-light" href="#boutique">
               Découvrir le studio <Arrow />
             </a>
-            <a className="text-link" href="#rempotage">Rempotage offert <span aria-hidden="true">↓</span></a>
           </div>
-        </div>
-
-        <div className="hero-bottom shell">
-          <div className="opening-note">
-            <span className="pulse" />
-            <p><strong>Ouverture rentrée 2026</strong><br />Lille · place de l’Arbonnoise</p>
-          </div>
-          <p className="scroll-note">Explorez la jungle <span aria-hidden="true">↓</span></p>
         </div>
       </section>
+
+      <aside className="opening-banner" aria-label="Information inauguration">
+        <div className="shell opening-banner-inner">
+          <span className="pulse" aria-hidden="true" />
+          <p><strong>Ouverture le 26 septembre 2026 à Lille</strong><span aria-hidden="true">—</span> Rempotage offert pour l’inauguration</p>
+        </div>
+      </aside>
 
       <section className="intro intro-editorial shell" id="boutique" data-reveal>
         <div className="intro-title">
@@ -141,7 +149,7 @@ export default function Home() {
         </div>
         <div className="intro-copy">
           <p>
-            Tibaldo Jungle ouvrira à la rentrée 2026 près de la place de l’Arbonnoise. Cette nouvelle boutique lilloise réunira des plantes d’intérieur, des variétés rares et des espèces exotiques choisies pour leur beauté, leur caractère et leur capacité à s’épanouir chez vous.
+            Tibaldo Jungle ouvrira le 26 septembre 2026 près de la place de l’Arbonnoise. Cette nouvelle boutique lilloise réunira des plantes d’intérieur, des variétés rares et des espèces exotiques choisies pour leur beauté, leur caractère et leur capacité à s’épanouir chez vous.
           </p>
           <p>
             Ici, pas de sélection impersonnelle : chaque plante est observée, comprise et proposée avec les conseils qui lui correspondent. Que vous cherchiez une première plante facile, un feuillage spectaculaire ou une variété de collection, le Studio Végétal vous aide à trouver le vivant adapté à votre lumière, à votre espace et à votre quotidien.
@@ -151,7 +159,9 @@ export default function Home() {
 
       <section className="feature-grid shell" aria-label="L'univers Tibaldo Jungle">
         <article className="feature-card feature-card-large reveal-left" data-reveal>
-          <div className="card-photo photo-selection" aria-hidden="true" />
+          <div className="card-photo">
+            <img src="/feature-selection.jpg" alt="Sélection de plantes rares et exotiques en intérieur" width={2000} height={1333} loading="lazy" decoding="async" />
+          </div>
           <div className="card-caption">
             <span>01</span>
             <div>
@@ -161,7 +171,9 @@ export default function Home() {
           </div>
         </article>
         <article className="feature-card reveal-right reveal-delay-1" data-reveal>
-          <div className="card-photo photo-advice" aria-hidden="true" />
+          <div className="card-photo">
+            <img src="/advice-rempotage.jpg" alt="Plantes d’intérieur accompagnées de conseils personnalisés" width={1200} height={1800} loading="lazy" decoding="async" />
+          </div>
           <div className="card-caption">
             <span>02</span>
             <div>
@@ -197,9 +209,9 @@ export default function Home() {
         </div>
 
         <div className="shell studio-values" aria-label="Les engagements du Studio Végétal">
-          <article data-reveal><span>01</span><h3>Sélection passionnée</h3><p>Des plantes choisies une à une pour leur qualité, leur singularité et leur potentiel.</p></article>
-          <article className="reveal-delay-1" data-reveal><span>02</span><h3>Culture locale</h3><p>Des boutures et multiplications suivies à Wattignies, au rythme naturel du vivant.</p></article>
-          <article className="reveal-delay-2" data-reveal><span>03</span><h3>Conseils sincères</h3><p>Des recommandations adaptées à votre intérieur, sans jargon et sans achat inutile.</p></article>
+          <article data-reveal><span>01</span><h3>Sélection passionnée</h3><p>Chaque plante est choisie individuellement pour sa qualité, sa singularité et son potentiel. Des variétés accessibles aux plantes de collection, la sélection évolue au fil des arrivages et des saisons.</p></article>
+          <article className="reveal-delay-1" data-reveal><span>02</span><h3>Culture locale</h3><p>Une partie de nos plantes est bouturée, multipliée et suivie à Wattignies. Une production locale, réalisée en petites quantités et au rythme naturel du vivant.</p></article>
+          <article className="reveal-delay-2" data-reveal><span>03</span><h3>Conseils sincères</h3><p>Nous vous aidons à choisir une plante adaptée à votre lumière, votre espace et votre quotidien. Des conseils simples et honnêtes, sans jargon ni achat inutile.</p></article>
         </div>
       </section>
 
@@ -240,7 +252,8 @@ export default function Home() {
       </section>
 
       <section className="workshop shell" id="rempotage">
-        <div className="workshop-photo reveal-left" aria-hidden="true" data-reveal>
+        <div className="workshop-photo reveal-left" data-reveal>
+          <img src="/advice-rempotage.jpg" alt="Rempotage d’une plante au Studio Végétal" width={1200} height={1800} loading="lazy" decoding="async" />
           <span>Service gratuit</span>
         </div>
         <div className="workshop-copy reveal-right reveal-delay-1" data-reveal>
@@ -302,15 +315,15 @@ export default function Home() {
         </div>
         <div className="plant-strip" aria-label="Exemples de plantes proposées">
           <article className="reveal-scale" data-reveal>
-            <div className="plant-photo photo-anthurium" aria-hidden="true" />
+            <div className="plant-photo"><img src="/plant-anthurium.jpg" alt="Anthurium aux feuilles nervurées" width={900} height={675} loading="lazy" decoding="async" /></div>
             <p><strong>Anthurium</strong><span>Collection · rare</span></p>
           </article>
           <article className="reveal-scale reveal-delay-1" data-reveal>
-            <div className="plant-photo photo-monstera" aria-hidden="true" />
+            <div className="plant-photo"><img src="/plant-monstera.jpg" alt="Monstera au feuillage graphique" width={900} height={1125} loading="lazy" decoding="async" /></div>
             <p><strong>Monstera</strong><span>Graphique · iconique</span></p>
           </article>
           <article className="reveal-scale reveal-delay-2" data-reveal>
-            <div className="plant-photo photo-alocasia" aria-hidden="true" />
+            <div className="plant-photo"><img src="/plant-alocasia.jpg" alt="Alocasia tropicale sculpturale" width={900} height={1125} loading="lazy" decoding="async" /></div>
             <p><strong>Alocasia</strong><span>Sculpturale · tropicale</span></p>
           </article>
         </div>
@@ -360,7 +373,7 @@ export default function Home() {
           </article>
         </div>
         <div className="shell visit-guide-cta" data-reveal>
-          <p><strong>Ouverture prévue à la rentrée 2026</strong><span>Près de la place de l’Arbonnoise · Lille</span></p>
+          <p><strong>Ouverture le 26 septembre 2026</strong><span>Près de la place de l’Arbonnoise · Lille</span></p>
           <a className="button button-green" href="#contact">Suivre l’ouverture <Arrow /></a>
         </div>
       </section>
@@ -380,7 +393,7 @@ export default function Home() {
         <div className="opening-photo" aria-hidden="true" />
         <div className="opening-overlay" aria-hidden="true" />
         <div className="shell opening-content" data-reveal>
-          <p className="section-kicker">Bientôt à Lille</p>
+          <p className="section-kicker">Ouverture le 26 septembre 2026</p>
           <h2>La nouvelle jungle<br />lilloise prend racine.</h2>
           <p>Tibaldo Jungle, nouvelle boutique de plantes rares et exotiques à Lille, ouvrira près de la place de l’Arbonnoise. Le Studio Végétal a trouvé sa cachette… mais sa porte reste encore dissimulée sous les feuillages.</p>
           <div className="opening-meta">

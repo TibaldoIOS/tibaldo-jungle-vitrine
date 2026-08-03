@@ -27,13 +27,17 @@ test("renders the homepage SEO signals and editorial content", async () => {
     /^text\/html\b/i,
   );
   const html = await response.text();
-  assert.match(html, /<title>Boutique de plantes rares à Lille \| Tibaldo Jungle<\/title>/i);
+  assert.match(html, /<title>Tibaldo Jungle — Studio Végétal à Lille<\/title>/i);
   assert.match(
     html,
-    /<meta(?=[^>]*name=["']description["'])(?=[^>]*content=["'][^"']*nouvelle boutique de plantes rares et exotiques à Lille[^"']*["'])[^>]*>/i,
+    /<meta(?=[^>]*name=["']description["'])(?=[^>]*content=["'][^"']*Nouveauté à Lille[^"']*26 septembre 2026[^"']*["'])[^>]*>/i,
   );
   assert.match(html, /<link(?=[^>]*rel=["']canonical["'])(?=[^>]*href=["']https:\/\/jungle\.tibaldo\.fr\/?["'])[^>]*>/i);
   assert.match(html, /application\/ld\+json/i);
   assert.match(html, /Plantes rares[\s\S]*&amp; exotiques[\s\S]*à Lille\./i);
   assert.match(html, /Pourquoi « Studio Végétal » \?/i);
+  assert.match(html, /Ouverture le 26 septembre 2026 à Lille/i);
+  assert.match(html, /Rempotage offert pour l’inauguration/i);
+  assert.doesNotMatch(html, /Lille · Nord · France/i);
+  assert.match(html, /href=["'](?:https:\/\/jungle\.tibaldo\.fr)?\/favicon\.png["']/i);
 });
