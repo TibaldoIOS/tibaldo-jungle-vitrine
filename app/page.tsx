@@ -10,6 +10,7 @@ const structuredData = {
       "@id": "https://jungle.tibaldo.fr/#store",
       name: "Tibaldo Jungle — Studio Végétal",
       alternateName: "Tibaldo Jungle",
+      legalName: "Pruvost Romain EI",
       url: "https://jungle.tibaldo.fr/",
       logo: "https://jungle.tibaldo.fr/tibaldo-jungle-logo.webp",
       image: "https://jungle.tibaldo.fr/boutique-projet-ia.webp",
@@ -448,7 +449,7 @@ export default function Home() {
         </div>
         <div className="shell footer-bottom" data-reveal>
           <span>© 2026 Tibaldo Jungle · Studio Végétal · Lille</span>
-          <span>Entrepreneur individuel · SIRET 518 102 603 00074 · TVA FR94 518 102 603 · RNE 518 102 603</span>
+          <span>Pruvost Romain EI · nom commercial Tibaldo Jungle · SIRET 518 102 603 00074 · TVA FR94 518 102 603 · RNE 518 102 603</span>
         </div>
       </footer>
     </main>
