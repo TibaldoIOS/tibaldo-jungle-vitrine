@@ -116,7 +116,7 @@ export default function CreationBoutique() {
             <p>Nouvelles visualisations, choix des matériaux, avancée du chantier et premières installations végétales : le carnet de création sera enrichi au fil du projet.</p>
             <div className="project-actions">
               <Link className="button button-light" href="/">Retour à l’accueil <Arrow /></Link>
-              <a className="project-mail" href="mailto:tibaldojungle@gmail.com">tibaldojungle@gmail.com</a>
+              <a className="project-mail" href="mailto:jungle@tibaldo.fr">jungle@tibaldo.fr</a>
             </div>
           </div>
         </div>

@@ -13,14 +13,17 @@ const structuredData = {
       url: "https://jungle.tibaldo.fr/",
       logo: "https://jungle.tibaldo.fr/tibaldo-jungle-logo.webp",
       image: "https://jungle.tibaldo.fr/boutique-projet-ia.webp",
-      email: "tibaldojungle@gmail.com",
+      email: "jungle@tibaldo.fr",
+      telephone: "+33743727079",
+      vatID: "FR94518102603",
+      taxID: "51810260300074",
       description:
         "Nouveauté à Lille : Tibaldo Jungle, Studio Végétal et boutique de plantes rares et exotiques. Ouverture le 26 septembre 2026.",
       slogan: "Faites entrer le vivant chez vous.",
       foundingDate: "2026",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Place de l’Arbonnoise",
+        streetAddress: "3 place de l’Arbonnoise",
         postalCode: "59000",
         addressLocality: "Lille",
         addressRegion: "Hauts-de-France",
@@ -60,7 +63,7 @@ const structuredData = {
         "Découvrez la nouvelle boutique de plantes rares et exotiques Tibaldo Jungle à Lille.",
       isPartOf: { "@id": "https://jungle.tibaldo.fr/#website" },
       about: { "@id": "https://jungle.tibaldo.fr/#store" },
-      dateModified: "2026-08-03",
+      dateModified: "2026-08-04",
       inLanguage: "fr-FR",
     },
   ],
@@ -152,7 +155,7 @@ export default function Home() {
         </div>
         <div className="intro-copy">
           <p>
-            Tibaldo Jungle ouvrira le 26 septembre 2026 près de la place de l’Arbonnoise. Cette nouvelle boutique lilloise réunira des plantes d’intérieur, des variétés rares et des espèces exotiques choisies pour leur beauté, leur caractère et leur capacité à s’épanouir chez vous.
+            Tibaldo Jungle ouvrira le 26 septembre 2026 au 3, place de l’Arbonnoise. Cette nouvelle boutique lilloise réunira des plantes d’intérieur, des variétés rares et des espèces exotiques choisies pour leur beauté, leur caractère et leur capacité à s’épanouir chez vous.
           </p>
           <p>
             Ici, pas de sélection impersonnelle : chaque plante est observée, comprise et proposée avec les conseils qui lui correspondent. Que vous cherchiez une première plante facile, un feuillage spectaculaire ou une variété de collection, le Studio Végétal vous aide à trouver le vivant adapté à votre lumière, à votre espace et à votre quotidien.
@@ -339,7 +342,7 @@ export default function Home() {
           <div className="nursery-copy reveal-right reveal-delay-1" data-reveal>
             <p>À la pépinière de Wattignies, nous travaillons nos propres croisements et suivons actuellement plusieurs créations végétales en cours.</p>
             <p>Boutures, multiplications et sélections patientes nous permettent de proposer des plantes singulières, cultivées localement et parfois disponibles en très petite quantité.</p>
-            <a href="mailto:tibaldojungle@gmail.com?subject=Recherche%20d%E2%80%99une%20vari%C3%A9t%C3%A9">Rechercher une variété sur commande <Arrow /></a>
+            <a href="mailto:jungle@tibaldo.fr?subject=Recherche%20d%E2%80%99une%20vari%C3%A9t%C3%A9">Rechercher une variété sur commande <Arrow /></a>
           </div>
         </div>
       </section>
@@ -376,7 +379,7 @@ export default function Home() {
           </article>
         </div>
         <div className="shell visit-guide-cta" data-reveal>
-          <p><strong>Ouverture le 26 septembre 2026</strong><span>Près de la place de l’Arbonnoise · Lille</span></p>
+          <p><strong>Ouverture le 26 septembre 2026</strong><span>3 place de l’Arbonnoise · Lille</span></p>
           <a className="button button-green" href="#contact">Suivre l’ouverture <Arrow /></a>
         </div>
       </section>
@@ -398,11 +401,11 @@ export default function Home() {
         <div className="shell opening-content" data-reveal>
           <p className="section-kicker">Ouverture le 26 septembre 2026</p>
           <h2>La nouvelle jungle<br />lilloise prend racine.</h2>
-          <p>Tibaldo Jungle, nouvelle boutique de plantes rares et exotiques à Lille, ouvrira près de la place de l’Arbonnoise. Le Studio Végétal a trouvé sa cachette… mais sa porte reste encore dissimulée sous les feuillages.</p>
+          <p>Tibaldo Jungle, nouvelle boutique de plantes rares et exotiques à Lille, ouvrira au 3, place de l’Arbonnoise. Le Studio Végétal a trouvé sa cachette… mais sa porte reste encore dissimulée sous les feuillages.</p>
           <div className="opening-meta">
-            <p><span>Secteur</span><strong>Place de l’Arbonnoise</strong><small>59000 Lille · l’entrée se révélera bientôt</small></p>
+            <p><span>Adresse</span><strong>3 place de l’Arbonnoise</strong><small>59000 Lille</small></p>
             <p><span>Horaires</span><strong>Mardi–samedi · 10h–19h</strong><small>Dimanche · 10h–13h</small></p>
-            <p><span>Contact</span><a href="mailto:tibaldojungle@gmail.com">tibaldojungle@gmail.com</a><small>Une question ? Écrivez-nous.</small></p>
+            <p><span>Contact</span><a href="mailto:jungle@tibaldo.fr">jungle@tibaldo.fr</a><small><a href="tel:+33743727079">07 43 72 70 79</a></small></p>
           </div>
           <div className="opening-socials" aria-label="Réseaux sociaux Tibaldo Jungle">
             <a className="social-button social-button-light" href="https://www.instagram.com/tibaldojungle" target="_blank" rel="noreferrer">
@@ -440,10 +443,13 @@ export default function Home() {
             <div><span>Explorer</span><a href="#boutique">La boutique</a><a href="/creation-boutique">Création de la boutique</a><a href="#rempotage">Rempotage offert</a><a href="#substrats">Substrats en vrac</a></div>
             <div className="social-links"><span>Nous suivre</span><a href="https://www.instagram.com/tibaldojungle" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/instagram/b9c9a7" alt="" aria-hidden="true" />Instagram</a><a href="https://www.facebook.com/tibaldojungle" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/facebook/b9c9a7" alt="" aria-hidden="true" />Facebook</a></div>
             <div><span>Horaires</span><p>Mardi–samedi<br />10h–19h<br />Dimanche · 10h–13h</p></div>
-            <div><span>Venir & écrire</span><p>Place de l’Arbonnoise<br />59000 Lille<br />La jungle garde encore son entrée secrète.</p><a className="footer-email" href="mailto:tibaldojungle@gmail.com">tibaldojungle@gmail.com</a></div>
+            <div><span>Venir & écrire</span><p>3 place de l’Arbonnoise<br />59000 Lille<br /><a href="tel:+33743727079">07 43 72 70 79</a></p><a className="footer-email" href="mailto:jungle@tibaldo.fr">jungle@tibaldo.fr</a></div>
           </div>
         </div>
-        <div className="shell footer-bottom" data-reveal><span>© 2026 Tibaldo Jungle</span><span>Studio Végétal · Lille</span></div>
+        <div className="shell footer-bottom" data-reveal>
+          <span>© 2026 Tibaldo Jungle · Studio Végétal · Lille</span>
+          <span>Entrepreneur individuel · SIRET 518 102 603 00074 · TVA FR94 518 102 603 · RNE 518 102 603</span>
+        </div>
       </footer>
     </main>
   );

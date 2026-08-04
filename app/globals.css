@@ -322,7 +322,8 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
 .footer-links .social-links a { display: inline-flex; align-items: center; gap: 9px; }
 .footer-links .social-links img { width: 15px; height: 15px; }
 .footer-links .footer-email { margin-top: 4px; color: var(--sage); overflow-wrap: anywhere; }
-.footer-bottom { display: flex; justify-content: space-between; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.16); color: rgba(255,255,255,.35); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
+.footer-bottom { display: flex; justify-content: space-between; gap: 28px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.16); color: rgba(255,255,255,.35); font-size: 9px; line-height: 1.6; letter-spacing: .1em; text-transform: uppercase; }
+.footer-bottom span:last-child { max-width: 620px; text-align: right; }
 
 @media (max-width: 900px) {
   .shell { width: min(100% - 40px, 1180px); }
@@ -425,6 +426,7 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
   .footer-main { grid-template-columns: 1fr; }
   .footer-links { grid-template-columns: 1fr 1fr; }
   .footer-bottom { flex-direction: column; gap: 10px; }
+  .footer-bottom span:last-child { max-width: none; text-align: left; }
   .project-teaser { min-height: 620px; }
   .project-hero { min-height: 760px; }
   .project-hero-content { padding-top: 115px; }
