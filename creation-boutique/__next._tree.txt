@@ -3,4 +3,4 @@
 :HL["/_next/static/css/8bc0e89d4b7bd37b.css","style"]
 :HL["/tibaldo-jungle-logo.webp","image"]
 :HL["/boutique-projet-ia.webp","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"creation-boutique","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"eaRsXFktruXgUfdXoREBR"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"creation-boutique","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"CQlu7RVrqt6tQ7ZQB5E61"}

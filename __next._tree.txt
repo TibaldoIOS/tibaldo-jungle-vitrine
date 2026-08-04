@@ -7,4 +7,4 @@
 :HL["https://cdn.simpleicons.org/instagram/153b2c","image"]
 :HL["https://cdn.simpleicons.org/instagram/b9c9a7","image"]
 :HL["https://cdn.simpleicons.org/facebook/b9c9a7","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"eaRsXFktruXgUfdXoREBR"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"CQlu7RVrqt6tQ7ZQB5E61"}
