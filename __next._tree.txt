@@ -1,10 +1,7 @@
 :HL["/_next/static/media/22a5144ee8d83bca-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/7d4881bb7e1bf84d-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/_next/static/css/8bc0e89d4b7bd37b.css","style"]
+:HL["/_next/static/css/306e6c5c2de3318b.css","style"]
 :HL["/tibaldo-jungle-logo.webp","image"]
-:HL["https://cdn.simpleicons.org/instagram/ffffff","image"]
-:HL["https://cdn.simpleicons.org/facebook/ffffff","image"]
-:HL["https://cdn.simpleicons.org/instagram/153b2c","image"]
-:HL["https://cdn.simpleicons.org/instagram/b9c9a7","image"]
-:HL["https://cdn.simpleicons.org/facebook/b9c9a7","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"CQlu7RVrqt6tQ7ZQB5E61"}
+:HL["/feature-selection.jpg","image"]
+:HL["/advice-rempotage.jpg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"CDmdwJ969QVm2j3T66nKv"}
