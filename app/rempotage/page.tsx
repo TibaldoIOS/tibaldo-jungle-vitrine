@@ -1,0 +1,5 @@
+import type { Metadata } from "next";
+import InnerPage from "../InnerPage";
+
+export const metadata: Metadata = { title: "Rempotage de plantes à Lille | Tibaldo Jungle", description: "Service de rempotage à Lille : diagnostic des racines, choix du pot et substrat adapté chez Tibaldo Jungle, Studio Végétal.", alternates: { canonical: "/rempotage" } };
+export default function RepottingPage() { return <InnerPage eyebrow="Rempotage plantes · Lille" title="Prendre soin" accent="des racines." intro="Apportez votre plante ou choisissez-la en boutique : le Studio vous accompagne avec le bon contenant, le bon mélange et des gestes respectueux du vivant." cards={[{title:"Observer",copy:"État des racines, croissance et signes d’excès d’eau sont examinés avant d’agir."},{title:"Composer",copy:"Le mélange est ajusté selon l’espèce, le pot, la lumière et vos habitudes d’arrosage."},{title:"Transmettre",copy:"Vous repartez avec des conseils simples pour accompagner la reprise de votre plante."}]} />; }

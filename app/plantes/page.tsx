@@ -1,0 +1,5 @@
+import type { Metadata } from "next";
+import InnerPage from "../InnerPage";
+
+export const metadata: Metadata = { title: "Plantes rares et d’intérieur à Lille | Tibaldo Jungle", description: "Découvrez bientôt la sélection Tibaldo Jungle : plantes rares, tropicales et d’intérieur à Lille, choisies et conseillées par le Studio Végétal.", alternates: { canonical: "/plantes" } };
+export default function PlantsPage() { return <InnerPage eyebrow="Plantes rares & d’intérieur · Lille" title="Des plantes choisies" accent="une à une." intro="La future collection en ligne accueillera Anthurium, Monstera, Philodendron, Alocasia, Hoya et les arrivages singuliers du Studio." cards={[{title:"Plantes accessibles",copy:"Des espèces graphiques et robustes pour commencer ou agrandir une jungle intérieure."},{title:"Sélection du Studio",copy:"Des plantes retenues pour leur port, leur feuillage et leur personnalité."},{title:"Pièces de collection",copy:"Des variétés rares, parfois cultivées localement et disponibles en petites quantités."}]} />; }
