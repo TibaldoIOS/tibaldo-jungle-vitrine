@@ -21,6 +21,18 @@ export function SiteHeader({ light = false }: { light?: boolean }) {
         <a href="/contact">Contact</a>
       </nav>
 
+      <details className="mobile-menu">
+        <summary aria-label="Ouvrir le menu principal"><span aria-hidden="true">☰</span><b>Menu</b></summary>
+        <div className="mobile-menu-panel" aria-label="Navigation mobile">
+          <a href="/"><span>01</span>Accueil</a>
+          <a href="/plantes"><span>02</span>Plantes</a>
+          <a href="/substrats"><span>03</span>Substrats</a>
+          <a href="/rempotage"><span>04</span>Rempotage</a>
+          <a href="/services"><span>05</span>Nos services</a>
+          <a href="/contact"><span>06</span>Contact</a>
+        </div>
+      </details>
+
       <div className="header-actions">
         <div className="header-socials" aria-label="Réseaux sociaux Tibaldo Jungle">
           <a href="https://www.instagram.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Instagram Tibaldo Jungle"><span aria-hidden="true">◎</span></a>
