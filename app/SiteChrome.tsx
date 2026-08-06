@@ -24,7 +24,7 @@ export function SiteHeader({ light = false }: { light?: boolean }) {
       </nav>
 
       <details className="mobile-menu">
-        <summary aria-label="Ouvrir le menu principal"><span aria-hidden="true">☰</span><b>Menu</b></summary>
+        <summary aria-label="Ouvrir le menu principal"><span className="menu-glyph" aria-hidden="true"><i /><i /></span><b>Menu</b></summary>
         <div className="mobile-menu-panel" aria-label="Navigation mobile">
           <a href="/"><span>01</span>Accueil</a>
           <a href="/plantes"><span>02</span>Plantes</a>
@@ -32,6 +32,11 @@ export function SiteHeader({ light = false }: { light?: boolean }) {
           <a href="/rempotage"><span>04</span>Rempotage</a>
           <a href="/services"><span>05</span>Nos services</a>
           <a href="/contact"><span>06</span>Contact</a>
+          <div className="mobile-menu-socials">
+            <span>Suivre la Jungle</span>
+            <a href="https://www.instagram.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Instagram Tibaldo Jungle"><InstagramIcon /><strong>Instagram</strong></a>
+            <a href="https://www.facebook.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Facebook Tibaldo Jungle"><FacebookIcon /><strong>Facebook</strong></a>
+          </div>
         </div>
       </details>
 
