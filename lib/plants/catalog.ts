@@ -1,0 +1,92 @@
+import type { PlantEntry } from "./types";
+
+export const plantFamilies = [
+  { slug: "alocasia", name: "Alocasia", eyebrow: "Collection ouverte", description: "Plantes tropicales architecturales aux feuilles spectaculaires, les Alocasia aiment la lumière vive, la chaleur et un substrat très aéré. Découvrez nos conseils de culture et les Alocasia rares observés au Studio Végétal Tibaldo Jungle à Lille.", image: "/alocasia-imperial-red.png", imageAlt: "Alocasia mature aux pétioles bordeaux", available: true },
+  { slug: "anthurium", name: "Anthurium", eyebrow: "Guide disponible", description: "Des Anthurium d’intérieur fleuris aux espèces botaniques aux feuilles veloutées, ce genre révèle une diversité exceptionnelle. Notre guide détaille lumière, humidité, arrosage et substrat pour cultiver un Anthurium de collection à Lille.", image: "/plant-anthurium.jpg", imageAlt: "Anthurium au feuillage tropical", available: true },
+  { slug: "monstera", name: "Monstera", eyebrow: "Guide disponible", description: "Célèbres pour leurs feuilles découpées et leurs fenestrations, les Monstera deviennent de véritables plantes-sculptures lorsqu’ils peuvent grimper. Retrouvez les variétés classiques et rares, ainsi que nos conseils d’entretien adaptés aux intérieurs lillois.", image: "/plant-monstera.jpg", imageAlt: "Monstera au feuillage découpé", available: true },
+  { slug: "philodendron", name: "Philodendron", eyebrow: "Guide disponible", description: "Grimpants, rampants ou autoportants, les Philodendron offrent une incroyable palette de formes, de couleurs et de textures. Tibaldo Jungle documente leur croissance, leur rempotage et les bons substrats pour réussir leur culture à Lille.", image: "/feature-selection.jpg", imageAlt: "Sélection de plantes tropicales et Philodendron", available: true },
+  { slug: "epipremnum", name: "Epipremnum", eyebrow: "Guide disponible", description: "Souvent appelés pothos, les Epipremnum sont des lianes tropicales accessibles qui développent de grandes feuilles lorsqu’elles grimpent dans de bonnes conditions. Découvrez comment améliorer leur lumière, leur tuteurage et leur croissance en intérieur à Lille.", image: "/hero-jungle.jpg", imageAlt: "Epipremnum grimpant dans un intérieur végétalisé", available: true },
+  { slug: "colocasia", name: "Colocasia", eyebrow: "Guide disponible", description: "Avec leurs immenses feuilles en oreilles d’éléphant, les Colocasia aiment l’eau, la chaleur et une nutrition généreuse pendant leur croissance. Notre guide explique leur culture en pot, leur saison extérieure et leur hivernage sous le climat de Lille.", image: "/opening-jungle.jpg", imageAlt: "Colocasia aux grandes feuilles tropicales", available: true },
+  { slug: "pilea", name: "Pilea", eyebrow: "Espèce documentée", description: "Le genre Pilea rassemble la plante à monnaie chinoise et de nombreuses espèces compactes, rampantes ou texturées. Apprenez à cultiver, tourner et multiplier le Pilea peperomioides, une plante d’intérieur graphique disponible selon les arrivages à Lille.", image: "/pilea-peperomioides.png", imageAlt: "Pilea peperomioides aux feuilles rondes", available: true },
+  { slug: "peperomia", name: "Peperomia", eyebrow: "Guide disponible", description: "Compacts et graphiques, les Peperomia séduisent par leurs feuilles charnues, gaufrées, argentées ou panachées. Découvrez leurs besoins en lumière, leur arrosage modéré et les mélanges drainants conseillés par Tibaldo Jungle à Lille.", image: "/boutique-projet-ia.webp", imageAlt: "Peperomia compact au feuillage décoratif", available: true },
+] as const;
+
+export const plants = [{
+  slug: "imperial-red", genre: "alocasia", genreLabel: "Alocasia", botanicalName: "Alocasia ‘Imperial Red’", displayName: "Imperial Red",
+  subtitle: "Une Alocasia architecturale aux pétioles rouge bordeaux.", family: "Araceae", origin: "Hybride horticole tropical",
+  hybridization: "Alocasia odora × Alocasia macrorrhizos ‘Pink Petiole’, hybridation attribuée à LariAnn Garner.",
+  synonyms: ["Alocasia × ‘Imperial Red’", "Imperial Red Elephant Ear"],
+  description: [
+    "Alocasia ‘Imperial Red’ est une grande plante tropicale au port dressé. Ses larges feuilles vertes sont portées par des pétioles qui prennent, avec la maturité et une lumière adaptée, des nuances rouges, roses puis bordeaux.",
+    "Plus vigoureuse que de nombreuses Alocasia compactes, elle devient une véritable plante-sculpture. Elle demande surtout de la lumière, de la chaleur et un substrat respirant : ses racines apprécient une humidité régulière, jamais une terre durablement détrempée.",
+  ],
+  specimen: { observedHeight: "Environ 160 cm", note: "Hauteur observée sur le spécimen suivi par Tibaldo Jungle. La taille varie selon la lumière, le volume racinaire et les conditions de culture." },
+  growth: { adultSize: "Grand développement · souvent 150 à 250 cm en intérieur favorable", speed: "Rapide en période chaude et lumineuse", habit: "Dressé, ample et architectural" },
+  care: {
+    light: 4, water: 3, humidity: 4, difficulty: 3,
+    lightText: "Lumière vive et indirecte. Un soleil doux du matin est possible après acclimatation.",
+    watering: "Arroser lorsque les premiers centimètres du mélange commencent à sécher. Vider l’eau du cache-pot et réduire en hiver.",
+    humidityText: "Une humidité moyenne à élevée limite les bords secs, avec une circulation d’air indispensable.",
+    temperature: "Idéalement 18 à 28 °C. Éviter les courants d’air et les températures durablement inférieures à 15 °C.",
+    substrate: "Mélange riche et aéré : terreau structuré, écorce, chips de coco et pierre ponce ou perlite. Pot percé obligatoire.",
+    repotting: "Rempoter au printemps lorsque les racines occupent le pot. Choisir seulement une taille au-dessus.",
+    fertilizing: "De mars à septembre, engrais équilibré à demi-dose toutes les deux à quatre semaines sur substrat humide.",
+    propagation: "Séparation des rejets ou des cormes lors du rempotage, lorsque chaque division possède des racines actives.",
+  },
+  toxicity: { level: "toxique", summary: "À tenir hors de portée des enfants et des animaux.", details: "Les Alocasia contiennent des cristaux insolubles d’oxalate de calcium. La mastication peut provoquer irritation, douleur, salivation, gonflement et difficulté à avaler. En cas d’ingestion, contacter rapidement un professionnel de santé ou un vétérinaire." },
+  problems: [
+    { title: "Feuilles jaunes", cause: "Excès d’eau, refroidissement des racines ou renouvellement naturel.", advice: "Contrôler le drainage et les racines avant d’arroser davantage." },
+    { title: "Bords secs", cause: "Air sec, arrosages irréguliers, sels ou chauffage.", advice: "Stabiliser l’arrosage, éloigner du chauffage et rincer ponctuellement le substrat." },
+    { title: "Pétioles très allongés", cause: "Lumière insuffisante ou fenêtre située d’un seul côté.", advice: "Rapprocher progressivement la plante de la lumière et tourner le pot." },
+    { title: "Thrips", cause: "Insectes laissant plages argentées, déformations et points noirs.", advice: "Isoler, doucher les feuilles et répéter un traitement adapté plusieurs semaines." },
+    { title: "Araignées rouges", cause: "Acariens favorisés par l’air chaud et sec.", advice: "Inspecter l’envers des feuilles, isoler, doucher et maintenir une meilleure humidité." },
+    { title: "Pourriture", cause: "Substrat compact, pot trop grand, eau stagnante ou froid.", advice: "Retirer les parties molles et rempoter dans un mélange plus respirant." },
+  ],
+  comparisons: [
+    { name: "Alocasia ‘Dark Star’", difference: "La face inférieure des feuilles matures montre généralement une nervation sombre plus marquée." },
+    { name: "Alocasia ‘Regal Shields’", difference: "Feuillage plus sombre et velouté, avec un contraste différent entre dessus et revers." },
+    { name: "Alocasia macrorrhizos", difference: "Espèce parente de très grand développement, moins caractérisée par les pétioles bordeaux." },
+  ],
+  faq: [
+    { question: "L’Alocasia Imperial Red est-elle une espèce naturelle ?", answer: "Non. Elle est généralement décrite comme un hybride horticole entre Alocasia odora et une forme d’Alocasia macrorrhizos à pétioles roses." },
+    { question: "Pourquoi ses pétioles ne sont-ils pas encore rouges ?", answer: "Les jeunes sujets peuvent être plus verts. La génétique, la maturité et une lumière vive influencent les pigments." },
+    { question: "Peut-elle dépasser 150 cm ?", answer: "Oui. Le spécimen suivi par Tibaldo Jungle atteint environ 160 cm et de bonnes conditions peuvent produire des sujets imposants." },
+    { question: "À quelle fréquence faut-il l’arroser ?", answer: "Il n’existe pas de calendrier fixe. Arrosez lorsque la surface commence à sécher, puis laissez l’excédent s’écouler." },
+    { question: "Faut-il vaporiser les feuilles ?", answer: "La vaporisation agit très brièvement. Un humidificateur et une bonne ventilation sont plus réguliers." },
+    { question: "Pourquoi perd-elle une feuille quand une nouvelle apparaît ?", answer: "Un jeune sujet peut maintenir peu de feuilles. Si la croissance et les racines sont saines, cela peut être normal." },
+    { question: "Quel pot choisir ?", answer: "Un pot percé, stable et seulement légèrement plus grand que la motte." },
+    { question: "Est-elle adaptée aux animaux ?", answer: "Non. Les Alocasia sont toxiques par ingestion pour les chats et les chiens." },
+  ],
+  tibaldoAdvice: ["Ne rempotez pas automatiquement après l’achat : observez d’abord les racines et le rythme de séchage.", "Pour un port dense, privilégiez une lumière franche plutôt qu’une humidité extrême.", "Nettoyez les grandes feuilles : la plante travaille mieux et les parasites deviennent visibles."],
+  gallery: [
+    { src: "/alocasia-imperial-red.png", alt: "Alocasia Imperial Red mature aux larges feuilles vertes et pétioles bordeaux", caption: "Interprétation éditoriale de l’Alocasia ‘Imperial Red’ — photographies du spécimen du Studio à venir.", width: 1024, height: 1536 },
+    { src: "/hero-jungle.jpg", alt: "Grande plante tropicale dans un intérieur lumineux", caption: "Une lumière vive favorise un port plus dense.", width: 2000, height: 1333 },
+    { src: "/advice-rempotage.jpg", alt: "Conseil de rempotage pour une plante tropicale", caption: "Le volume du pot et l’aération du mélange sont déterminants.", width: 1200, height: 1800 },
+  ],
+  availability: { label: "Spécimen visible au Studio", note: "Disponibilité à confirmer en boutique. Cette page est une fiche encyclopédique et non une vente en ligne." },
+  seo: { title: "Alocasia Imperial Red : entretien et pétioles rouges", description: "Entretien de l’Alocasia Imperial Red : lumière, arrosage, substrat, toxicité et problèmes. Découvrez notre spécimen de 160 cm à Lille.", keywords: ["Alocasia Imperial Red entretien", "Alocasia pétioles rouges", "Alocasia Lille", "plante XXL Lille"] },
+  sources: [{ label: "NC State Extension", url: "https://plants.ces.ncsu.edu/plants/alocasia/common-name/alocasia/" }, { label: "ASPCA", url: "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/alocasia" }, { label: "Aroidpedia", url: "https://www.aroidpedia.com/journal/alocasia-imperial-red" }],
+  publishedAt: "2026-08-06", updatedAt: "2026-08-06",
+}, {
+  slug: "peperomioides", genre: "pilea", genreLabel: "Pilea", botanicalName: "Pilea peperomioides", displayName: "Peperomioides",
+  subtitle: "La plante à monnaie chinoise, graphique, généreuse et facile à partager.", family: "Urticaceae", origin: "Sud-ouest de la Chine · Sichuan et Yunnan",
+  hybridization: "Espèce botanique décrite par Ludwig Diels en 1912.", synonyms: ["Plante à monnaie chinoise", "Plante missionnaire", "Chinese money plant"],
+  description: ["Pilea peperomioides se reconnaît à ses feuilles rondes et peltées : le pétiole rejoint presque le centre du limbe, comme sur un petit nénuphar suspendu.", "Avec le temps, son tronc s’allonge et la plante produit de nombreux rejets à sa base. Cette générosité lui vaut aussi le surnom de plante de l’amitié : chaque rejet peut devenir une nouvelle plante à transmettre."],
+  specimen: { observedHeight: "Environ 20 à 35 cm", note: "La hauteur dépend de l’âge, de la lumière et de la conduite du tronc. Tourner régulièrement le pot aide à conserver une silhouette équilibrée." },
+  growth: { adultSize: "Port compact · généralement 20 à 40 cm en intérieur", speed: "Rapide en saison lumineuse", habit: "Dressé, arrondi puis légèrement arborescent" },
+  care: { light: 4, water: 3, humidity: 2, difficulty: 1, lightText: "Lumière vive indirecte, avec soleil doux possible après acclimatation.", watering: "Arroser lorsque la surface du mélange sèche, puis laisser égoutter complètement.", humidityText: "L’humidité normale d’un logement lui convient ; éviter surtout l’air brûlant d’un radiateur.", temperature: "Idéalement 16 à 26 °C, loin des courants d’air froid et des fortes sources de chaleur.", substrate: "Terreau léger et drainant, enrichi de perlite ou pierre ponce. Pot percé indispensable.", repotting: "Rempoter quand les racines occupent le contenant, dans un pot seulement légèrement plus grand.", fertilizing: "Engrais plantes vertes à faible dose toutes les trois à quatre semaines pendant la croissance active.", propagation: "Séparation des rejets racinaires ou bouture de tige au printemps et en été." },
+  toxicity: { level: "non toxique selon les références horticoles usuelles", summary: "Généralement considérée comme compatible avec chats et chiens.", details: "Une plante non toxique n’est pas destinée à être consommée. Éloignez-la d’un animal qui mâchouille régulièrement le feuillage et demandez conseil à un vétérinaire en cas de symptômes." },
+  problems: [{ title: "Port penché", cause: "La plante se dirige naturellement vers la lumière.", advice: "Tourner le pot d’un quart de tour régulièrement." }, { title: "Feuilles qui retombent", cause: "Manque d’eau, excès d’eau ou racines refroidies.", advice: "Vérifier le substrat et les racines avant d’arroser automatiquement." }, { title: "Taches ou brûlures", cause: "Soleil trop brutal ou feuillage mouillé trop longtemps.", advice: "Acclimater progressivement et arroser directement le substrat." }, { title: "Tige très longue", cause: "Lumière insuffisante ou vieillissement naturel.", advice: "Augmenter la lumière ou rajeunir la plante par bouturage." }],
+  comparisons: [{ name: "Peperomia polybotrya", difference: "Feuilles plus épaisses et forme en goutte ; elle appartient aux Piperaceae, pas aux Urticaceae." }, { name: "Pilea depressa", difference: "Port rampant et feuilles minuscules, souvent cultivée en suspension ou terrarium." }, { name: "Pilea cadierei", difference: "Feuilles ovales ornées de plages argentées, avec un port plus ramifié." }],
+  faq: [{ question: "Pourquoi tourner un Pilea peperomioides ?", answer: "Ses feuilles s’orientent vers la fenêtre. Une rotation régulière aide à maintenir une couronne plus homogène." }, { question: "À quelle fréquence l’arroser ?", answer: "Il n’existe pas de calendrier universel. Arrosez lorsque la surface sèche et adaptez selon la lumière, la température et la saison." }, { question: "Comment séparer les bébés Pilea ?", answer: "Attendez qu’un rejet soit suffisamment développé, prélevez-le avec quelques racines puis placez-le dans un petit pot drainant." }, { question: "Le Pilea peperomioides est-il un Peperomia ?", answer: "Non. Son nom signifie qu’il ressemble à un Peperomia, mais il appartient au genre Pilea et à la famille des Urticaceae." }, { question: "Le Pilea est-il adapté aux animaux ?", answer: "Il est généralement considéré comme non toxique pour les chats et les chiens, sans être comestible." }, { question: "Où trouver un Pilea peperomioides à Lille ?", answer: "Tibaldo Jungle propose progressivement des Pilea au Studio Végétal de Lille, avec conseils et rempotage gratuit." }],
+  tibaldoAdvice: ["Tournez le pot régulièrement plutôt que de chercher une symétrie parfaite en une seule fois.", "Ne séparez pas tous les rejets : quelques jeunes plants donnent une silhouette plus dense.", "Un pot trop grand reste humide trop longtemps ; préférez une progression douce."],
+  gallery: [{ src: "/pilea-peperomioides.png", alt: "Pilea peperomioides mature aux feuilles rondes dans un pot en céramique", caption: "Interprétation éditoriale du Pilea peperomioides — photographies du spécimen du Studio à venir.", width: 1024, height: 1536 }, { src: "/pilea-peperomioides.png", alt: "Feuillage rond et pelté du Pilea peperomioides", caption: "Les pétioles rejoignent le centre des feuilles rondes.", width: 1024, height: 1536 }, { src: "/pilea-peperomioides.png", alt: "Pilea peperomioides avec rejets au pied", caption: "Les rejets permettent de multiplier facilement la plante.", width: 1024, height: 1536 }],
+  availability: { label: "Présent dans la collection Tibaldo", note: "Disponibilité à confirmer au Studio. Cette fiche accompagne la plante, sans constituer une boutique en ligne." },
+  seo: { title: "Pilea peperomioides : entretien et plante à monnaie Lille", description: "Guide du Pilea peperomioides : lumière, arrosage, rejets, substrat et problèmes. Retrouvez la plante à monnaie chinoise à Lille.", keywords: ["Pilea peperomioides entretien", "plante monnaie chinoise Lille", "Pilea Lille", "Pilea animaux", "bouture Pilea"] },
+  sources: [{ label: "Kew Science", url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:855664-1/general-information" }, { label: "NC State Extension", url: "https://plants.ces.ncsu.edu/plants/pilea-peperomioides/" }, { label: "Plantes Pour Tous — fiche consultée", url: "https://plantespourtous.co/products/pilea-peperomioides" }],
+  publishedAt: "2026-08-06", updatedAt: "2026-08-06",
+}] satisfies PlantEntry[];
+
+export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
+export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
+export const getPlantsByGenre = (genre: string) => plants.filter((plant) => plant.genre === genre);

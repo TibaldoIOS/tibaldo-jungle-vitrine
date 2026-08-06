@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://jungle.tibaldo.fr"),
   title: "Tibaldo Jungle — Studio Végétal à Lille",
   description:
-    "Nouveauté à Lille : Tibaldo Jungle, Studio Végétal et boutique de plantes rares et exotiques. Ouverture le 26 septembre 2026, rempotage offert.",
+    "Nouveauté à Lille : Tibaldo Jungle, Studio Végétal et boutique de plantes rares et exotiques. Ouverture le 26 septembre 2026, rempotage gratuit.",
   applicationName: "Tibaldo Jungle — Studio Végétal",
   keywords: [
     "boutique de plantes rares à Lille",
