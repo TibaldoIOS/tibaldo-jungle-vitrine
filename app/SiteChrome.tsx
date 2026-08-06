@@ -1,4 +1,6 @@
 const Arrow = () => <span aria-hidden="true">↗</span>;
+const InstagramIcon = () => <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4.25" /><circle className="social-icon-dot" cx="17.4" cy="6.8" r="1" /></svg>;
+const FacebookIcon = () => <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.7 21v-8h2.8l.42-3.2H13.7V7.75c0-.93.26-1.56 1.62-1.56H17V3.33c-.3-.04-1.3-.13-2.48-.13-2.46 0-4.15 1.5-4.15 4.27V9.8H7.6V13h2.77v8h3.33Z" /></svg>;
 
 export function SiteHeader({ light = false }: { light?: boolean }) {
   return (
@@ -35,8 +37,8 @@ export function SiteHeader({ light = false }: { light?: boolean }) {
 
       <div className="header-actions">
         <div className="header-socials" aria-label="Réseaux sociaux Tibaldo Jungle">
-          <a href="https://www.instagram.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Instagram Tibaldo Jungle"><span aria-hidden="true">◎</span></a>
-          <a href="https://www.facebook.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Facebook Tibaldo Jungle"><span aria-hidden="true">f</span></a>
+          <a href="https://www.instagram.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Instagram Tibaldo Jungle"><InstagramIcon /></a>
+          <a href="https://www.facebook.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Facebook Tibaldo Jungle"><FacebookIcon /></a>
         </div>
         <a className="header-cta" href="/contact">Nous trouver <Arrow /></a>
       </div>

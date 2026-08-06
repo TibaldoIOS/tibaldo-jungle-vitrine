@@ -39,7 +39,10 @@ nav a:hover::after { right: 0; }
 .header-socials { display: flex; align-items: center; gap: 7px; }
 .header-socials a { width: 30px; height: 30px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.45); border-radius: 50%; transition: background .2s ease, border-color .2s ease; }
 .header-socials a:hover { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.8); }
-.header-socials img { width: 13px; height: 13px; display: block; }
+.header-socials svg { width: 16px; height: 16px; display: block; overflow: visible; }
+.header-socials svg rect, .header-socials svg circle { fill: none; stroke: currentColor; stroke-width: 1.8; }
+.header-socials svg .social-icon-dot { fill: currentColor; stroke: none; }
+.header-socials svg path { fill: currentColor; }
 .header-cta { display: inline-flex; align-items: center; gap: 22px; padding: 14px 18px; border: 1px solid rgba(255,255,255,.7); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; transition: .2s ease; }
 .header-cta:hover { background: #fff; color: var(--forest); }
 .mobile-menu { display: none; }
