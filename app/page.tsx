@@ -45,7 +45,7 @@ export default function Home() {
         </div>
       </section>
 
-      <aside className="opening-banner" aria-label="Annonce de la grande ouverture"><div className="opening-banner-glow" aria-hidden="true" /><div className="shell opening-banner-inner"><span className="opening-badge">Save the date</span><p><strong>Grande ouverture · 26 septembre 2026 · Lille</strong><span className="opening-separator" aria-hidden="true">✦</span><span>Rempotage gratuit toute l’année</span><a href="/evenements/ouverture-tibaldo-jungle-lille">Voir l’événement ↗</a></p><span className="opening-arrow" aria-hidden="true">↓</span></div></aside>
+      <aside className="opening-banner" aria-label="Annonce de la grande ouverture"><div className="opening-banner-glow" aria-hidden="true" /><a className="shell opening-banner-inner" href="/evenements/ouverture-tibaldo-jungle-lille"><span className="opening-badge"><strong>26</strong><small>SEP</small></span><p><span className="opening-live"><i aria-hidden="true" /> Événement à venir</span><strong>Grande ouverture Tibaldo Jungle · Lille</strong><span>Découvrez le Studio Végétal et indiquez votre présence.</span></p><span className="opening-banner-cta">Découvrir l’événement <b aria-hidden="true">↗</b></span><span className="opening-arrow" aria-hidden="true">↓</span></a></aside>
 
       <section className="home-intro shell" data-reveal>
         <div><p className="section-kicker">Une nouvelle adresse végétale</p><h2>Choisir moins.<br />Choisir <em>mieux.</em></h2></div>
