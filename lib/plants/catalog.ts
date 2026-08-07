@@ -1,4 +1,5 @@
 import type { PlantEntry } from "./types";
+import { prayerPlants } from "./prayer-plants";
 
 export const plantFamilies = [
   { slug: "alocasia", name: "Alocasia", eyebrow: "Collection ouverte", description: "Plantes tropicales architecturales aux feuilles spectaculaires, les Alocasia aiment la lumière vive, la chaleur et un substrat très aéré. Découvrez nos conseils de culture et les Alocasia rares observés au Studio Végétal Tibaldo Jungle à Lille.", image: "/alocasia-cuprea-feuillage.jpg", imageAlt: "Feuillage nervuré vert métallique d’un Alocasia cuprea", available: true },
@@ -10,6 +11,8 @@ export const plantFamilies = [
   { slug: "pilea", name: "Pilea", eyebrow: "Espèce documentée", description: "Le genre Pilea rassemble la plante à monnaie chinoise et de nombreuses espèces compactes, rampantes ou texturées. Apprenez à cultiver, tourner et multiplier le Pilea peperomioides, une plante d’intérieur graphique disponible selon les arrivages à Lille.", image: "/pilea-peperomioides-plante.jpg", imageAlt: "Pilea peperomioides en pot avec feuilles rondes et jeunes rejets", available: true },
   { slug: "peperomia", name: "Peperomia", eyebrow: "Guide disponible", description: "Compacts et graphiques, les Peperomia séduisent par leurs feuilles charnues, gaufrées, argentées ou panachées. Découvrez leurs besoins en lumière, leur arrosage modéré et les mélanges drainants conseillés par Tibaldo Jungle à Lille.", image: "/peperomia-argyreia-feuillage.jpg", imageAlt: "Feuillage rayé argent et vert de Peperomia argyreia", available: true },
   { slug: "cactus", name: "Cactus", eyebrow: "Nouvel univers", description: "Des cactus miniatures aux grands cierges sculpturaux, les Cactaceae réunissent des plantes adaptées à la sécheresse mais exigeantes en lumière. Découvrez comment choisir, arroser, rempoter et faire refleurir un cactus dans un intérieur à Lille.", image: "/cactus-collection-serre.jpg", imageAlt: "Collection de cactus globulaires et colonnaires cultivés sous une serre lumineuse", available: true },
+  { slug: "maranta", name: "Maranta", eyebrow: "Plantes qui prient", description: "Les Maranta déploient des feuillages peints de nervures rouges, de taches sombres et de nuances veloutées. Découvrez comment préserver leurs couleurs, comprendre le mouvement quotidien de leurs feuilles et réussir leur culture dans un intérieur à Lille.", image: "/maranta-leuconeura-tibaldo.png", imageAlt: "Maranta leuconeura mature aux feuilles vertes marquées de nervures rouges", available: true },
+  { slug: "calathea", name: "Calathea", eyebrow: "Feuillages graphiques", description: "Calathea reste le nom horticole familier de nombreuses plantes aujourd’hui classées dans le genre Goeppertia. Leurs grandes feuilles rayées, rondes ou dessinées demandent lumière douce, chaleur stable et arrosage attentif.", image: "/calathea-orbifolia-tibaldo.png", imageAlt: "Calathea orbifolia aux grandes feuilles rondes rayées de vert argenté", available: true },
 ] as const;
 
 export const plants = [{
@@ -90,7 +93,7 @@ export const plants = [{
   seo: { title: "Pilea peperomioides : entretien et plante à monnaie Lille", description: "Guide du Pilea peperomioides : lumière, arrosage, rejets, substrat et problèmes. Retrouvez la plante à monnaie chinoise à Lille.", keywords: ["Pilea peperomioides entretien", "plante monnaie chinoise Lille", "Pilea Lille", "Pilea animaux", "bouture Pilea"] },
   sources: [{ label: "Kew Science", url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:855664-1/general-information" }, { label: "NC State Extension", url: "https://plants.ces.ncsu.edu/plants/pilea-peperomioides/" }, { label: "Plantes Pour Tous — fiche consultée", url: "https://plantespourtous.co/products/pilea-peperomioides" }],
   publishedAt: "2026-08-06", updatedAt: "2026-08-06",
-}] satisfies PlantEntry[];
+}, ...prayerPlants] satisfies PlantEntry[];
 
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
