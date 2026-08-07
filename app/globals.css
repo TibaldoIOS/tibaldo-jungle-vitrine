@@ -836,6 +836,40 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
 .plant-explorer.is-compact { position: relative; top: auto; box-shadow: none; }
 .plant-explorer.is-compact .plant-explorer-inner { display: block; min-height: 0; }
 .plant-explorer.is-compact .plant-explorer-inner > div > span { margin-bottom: 15px; }
+.plant-search { padding-top: 115px; padding-bottom: 25px; }
+.plant-search > header { display: grid; grid-template-columns: 1.1fr .9fr; gap: 25px 80px; align-items: end; margin-bottom: 55px; }
+.plant-search > header .section-kicker { grid-column: 1 / -1; }
+.plant-search > header h2 { margin: 0; color: var(--forest); font: 400 clamp(48px, 6vw, 82px)/.96 Georgia, serif; letter-spacing: -.05em; }
+.plant-search > header h2 em { color: #91a875; font-weight: 400; }
+.plant-search > header > p:last-child { margin: 0; color: #637067; line-height: 1.8; }
+.plant-search-panel { padding: clamp(25px, 4vw, 48px); background: #103b2c; color: #fff; box-shadow: 0 24px 70px rgba(7,37,27,.16); }
+.plant-search label span { display: block; margin-bottom: 10px; color: var(--sage); font-size: 8px; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
+.plant-search input, .plant-search select { width: 100%; min-height: 54px; border: 0; border-bottom: 1px solid rgba(255,255,255,.25); border-radius: 0; background: transparent; color: #fff; font: 400 17px Georgia, serif; outline: none; }
+.plant-search input::placeholder { color: rgba(255,255,255,.45); }
+.plant-search select { appearance: auto; }
+.plant-search-query input { min-height: 70px; font-size: clamp(24px, 3vw, 40px); }
+.plant-search-filters { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; margin-top: 35px; }
+.plant-more-filters { display: flex; justify-content: space-between; width: 100%; margin-top: 32px; padding: 18px 0; border: 0; border-top: 1px solid rgba(255,255,255,.15); border-bottom: 1px solid rgba(255,255,255,.15); background: transparent; color: #fff; font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.plant-more-filters span { color: var(--sage); font-size: 18px; }
+.plant-search-check { display: flex; align-items: center; gap: 14px; min-height: 54px; align-self: end; border-bottom: 1px solid rgba(255,255,255,.25); }
+.plant-search-check input { width: 18px; min-height: 18px; accent-color: var(--sage); }
+.plant-search-check span { margin: 0 !important; color: #fff !important; }
+.plant-search-status { display: flex; justify-content: space-between; align-items: center; margin-top: 32px; }
+.plant-search-status strong { font: 400 20px Georgia, serif; }
+.plant-search-status button, .plant-search-empty button { border: 0; border-bottom: 1px solid var(--sage); background: transparent; color: var(--sage); font-size: 9px; letter-spacing: .13em; text-transform: uppercase; }
+.plant-search-results { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 25px; border-top: 1px solid rgba(21,59,44,.16); border-left: 1px solid rgba(21,59,44,.16); }
+.plant-search-results > a { display: grid; grid-template-columns: 180px 1fr; gap: 28px; padding: 25px; border-right: 1px solid rgba(21,59,44,.16); border-bottom: 1px solid rgba(21,59,44,.16); background: #f8f6ed; }
+.plant-search-results img { width: 180px; height: 220px; object-fit: cover; }
+.plant-search-results span { color: #87917e; font-size: 8px; letter-spacing: .14em; text-transform: uppercase; }
+.plant-search-results h3 { margin: 15px 0 10px; color: var(--forest); font: 400 clamp(27px, 3vw, 40px)/1 Georgia, serif; }
+.plant-search-results p { color: #637067; font-size: 13px; line-height: 1.6; }
+.plant-search-results ul { display: flex; flex-wrap: wrap; gap: 7px; margin: 18px 0 0; padding: 0; list-style: none; }
+.plant-search-results li { padding: 7px 9px; background: #e5e9dd; color: var(--forest); font-size: 8px; text-transform: capitalize; }
+.plant-search-empty { grid-column: 1 / -1; padding: 65px; border-right: 1px solid rgba(21,59,44,.16); border-bottom: 1px solid rgba(21,59,44,.16); text-align: center; }
+.plant-search-empty h3 { color: var(--forest); font: 400 34px Georgia, serif; }
+.plant-profile-hero-meta a { color: inherit; border-bottom: 1px solid rgba(255,255,255,.45); }
+.plant-taxonomy a { color: var(--forest); border-bottom: 1px solid #91a875; }
+.plant-taxonomy .is-secondary { opacity: .62; }
 .family-genre-breadcrumb { display: inline-flex; gap: 8px; margin-bottom: 24px; color: rgba(255,255,255,.7); font-size: 8px; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
 .family-genre-breadcrumb span { color: var(--sage); }
 .family-genre-breadcrumb:hover { color: #fff; }
@@ -1021,6 +1055,10 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
   .plant-explorer-inner { grid-template-columns: 1fr; gap: 18px; }
   .plant-care-passport-inner { grid-template-columns: 1fr; gap: 28px; }
   .plant-profile-layout > aside { position: sticky; top: 0; z-index: 6; margin: 0 -5vw; padding: 0 5vw; overflow-x: auto; background: rgba(248,246,237,.94); backdrop-filter: blur(12px); }
+  .plant-search > header { grid-template-columns: 1fr; }
+  .plant-search > header .section-kicker { grid-column: auto; }
+  .plant-search-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .plant-search-results { grid-template-columns: 1fr; }
   .plant-section-nav { display: flex; width: max-content; border: 0; }
   .plant-section-nav a, .plant-section-nav a.is-active { padding: 17px 15px; border: 0; white-space: nowrap; }
   .plant-index-grid, .plant-section-heading { grid-template-columns: 1fr; }
@@ -1066,6 +1104,21 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
   .contact-map iframe { height: 470px; }
   .contact-map-label { left: 12px; right: 12px; bottom: 12px; padding: 17px; }
   .plant-index { padding-top: 78px; padding-bottom: 82px; }
+  .plant-search { padding-top: 78px; }
+  .plant-search > header { gap: 22px; margin-bottom: 38px; }
+  .plant-search > header h2 { font-size: 46px; }
+  .plant-search-panel { margin: 0 -5vw; padding: 28px 5vw; }
+  .plant-search-query input { min-height: 58px; font-size: 25px; }
+  .plant-search-filters { grid-template-columns: 1fr; gap: 18px; margin-top: 26px; }
+  .plant-search-status { gap: 20px; }
+  .plant-search-status strong { font-size: 17px; }
+  .plant-search-results { margin-left: -5vw; margin-right: -5vw; border-left: 0; }
+  .plant-search-results > a { grid-template-columns: 105px 1fr; gap: 18px; padding: 18px 5vw; border-right: 0; }
+  .plant-search-results img { width: 105px; height: 145px; }
+  .plant-search-results h3 { font-size: 27px; }
+  .plant-search-results p { display: none; }
+  .plant-search-results ul { margin-top: 12px; }
+  .plant-search-empty { padding: 45px 25px; border-right: 0; }
   .plant-explorer-inner { min-height: 255px; gap: 26px; padding-top: 30px; padding-bottom: 30px; }
   .plant-explorer.is-compact .plant-explorer-inner { min-height: 0; padding-top: 22px; padding-bottom: 24px; }
   .plant-explorer.is-compact .plant-explorer-links > a, .plant-explorer.is-compact .plant-explorer-links > span { font-size: 21px; }

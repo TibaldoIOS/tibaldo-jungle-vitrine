@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 import { plantFamilies, plants } from "@/lib/plants/catalog";
+import PlantExplorer from "./PlantExplorer";
 
 export const metadata: Metadata = {
   title: "Plantes rares et d’intérieur à Lille | Tibaldo Jungle",
@@ -31,7 +32,7 @@ export default function PlantsPage() {
       <nav className="plant-explorer" aria-label="Explorer les plantes">
         <div className="shell plant-explorer-inner">
           <div>
-            <span>01 · Genres</span>
+            <span>01 · Univers botaniques</span>
             <div className="plant-explorer-links">
               {plantFamilies.map((family) => (
                 <a href={`/plantes/${family.slug}`} key={family.slug}>{family.name}</a>
@@ -39,7 +40,7 @@ export default function PlantsPage() {
             </div>
           </div>
           <div>
-            <span>02 · Espèces & variétés</span>
+            <span>02 · Espèces & cultivars</span>
             <div className="plant-explorer-links">
               {plants.map((plant) => (
                 <a href={`/plantes/${plant.genre}/${plant.slug}`} key={`${plant.genre}-${plant.slug}`}>
@@ -50,6 +51,8 @@ export default function PlantsPage() {
           </div>
         </div>
       </nav>
+
+      <PlantExplorer plants={plants} />
 
       <section className="plant-family-index shell">
         <header data-reveal>

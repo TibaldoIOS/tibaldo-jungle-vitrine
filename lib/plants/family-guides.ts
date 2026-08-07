@@ -118,7 +118,7 @@ export const familyGuides = {
     sources: [{ label: "NC State Extension — Peperomia", url: "https://plants.ces.ncsu.edu/plants/peperomia/" }, { label: "Kew Science — ressources taxonomiques", url: "https://powo.science.kew.org/" }],
   },
   cactus: {
-    name: "Cactus", image: "/cactus-collection-serre.jpg", imageAlt: "Collection de cactus globulaires et colonnaires cultivés sous une serre lumineuse", heroSubtitle: "Formes graphiques, épines délicates et floraisons inattendues : comprendre les cactus pour les cultiver durablement à Lille.",
+    name: "Cactus", rank: "family", botanicalName: "Cactaceae", image: "/cactus-collection-serre.jpg", imageAlt: "Collection de cactus globulaires et colonnaires cultivés sous une serre lumineuse", heroSubtitle: "Formes graphiques, épines délicates et floraisons inattendues : comprendre les Cactaceae pour les cultiver durablement à Lille.",
     care: { difficulty: 2, light: 5, water: 1, humidity: 1, substrate: "Très minéral, drainant et pauvre", nutrition: "Légère, uniquement pendant la croissance" },
     lead: "Les cactus fascinent par leur capacité à transformer la lumière et de rares réserves d’eau en silhouettes sculpturales. Faciles lorsqu’ils bénéficient d’un emplacement très lumineux, ils souffrent surtout des arrosages trop fréquents, des pots sans drainage et des hivers chauds mais sombres.",
     origin: "Les cactus forment la famille botanique des Cactaceae, presque entièrement originaire des Amériques. Ils occupent des milieux très variés, des déserts aux montagnes et aux forêts tropicales. Les aréoles, petits coussinets d’où naissent épines, fleurs ou nouvelles pousses, permettent de les distinguer des autres plantes succulentes.",

@@ -39,6 +39,7 @@ export async function GET() {
       priority: index === 1 ? 0.9 : 0.8,
     })),
     ...Object.keys(familyGuides).map((genre) => ({ path: `/plantes/${genre}`, modified: "2026-08-06", frequency: "monthly" as const, priority: 0.8 })),
+    ...Array.from(new Set(plants.map((plant) => plant.taxonomy.family.toLowerCase()))).map((family) => ({ path: `/plantes/famille/${family}`, modified: "2026-08-07", frequency: "monthly" as const, priority: 0.75 })),
     ...plants.map((plant) => ({ path: `/plantes/${plant.genre}/${plant.slug}`, modified: plant.updatedAt, frequency: "monthly" as const, priority: 0.85 })),
     ...publicEvents.map((event) => ({ path: `/evenements/${event.slug}`, modified: event.updatedAt, frequency: "weekly" as const, priority: 0.9 })),
     { path: "/creation-boutique", modified: "2026-08-03", frequency: "weekly", priority: 0.75 },
