@@ -24,18 +24,18 @@ const structuredData = {
   "@graph": [
     {
       "@type": "CollectionPage",
-      "@id": "https://jungle.tibaldo.fr/substrats/#page",
+      "@id": "https://jungle.tibaldo.fr/substrats#page",
       name: "Substrats en vrac à Lille",
-      url: "https://jungle.tibaldo.fr/substrats/",
+      url: "https://jungle.tibaldo.fr/substrats",
       description: "Composants horticoles en vrac et conseils de mélange pour plantes d’intérieur à Lille.",
       isPartOf: { "@id": "https://jungle.tibaldo.fr/#website" },
       about: { "@id": "https://jungle.tibaldo.fr/#store" },
-      mainEntity: { "@id": "https://jungle.tibaldo.fr/substrats/#list" },
+      mainEntity: { "@id": "https://jungle.tibaldo.fr/substrats#list" },
       inLanguage: "fr-FR",
     },
     {
       "@type": "ItemList",
-      "@id": "https://jungle.tibaldo.fr/substrats/#list",
+      "@id": "https://jungle.tibaldo.fr/substrats#list",
       name: "Composants de substrat disponibles en vrac",
       numberOfItems: substrates.length,
       itemListElement: substrates.map((item, index) => ({ "@type": "ListItem", position: index + 1, name: item.name })),
@@ -44,7 +44,7 @@ const structuredData = {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Accueil", item: "https://jungle.tibaldo.fr/" },
-        { "@type": "ListItem", position: 2, name: "Substrats", item: "https://jungle.tibaldo.fr/substrats/" },
+        { "@type": "ListItem", position: 2, name: "Substrats", item: "https://jungle.tibaldo.fr/substrats" },
       ],
     },
   ],
@@ -85,10 +85,10 @@ export default function SubstratesPage() {
         <div className="shell material-list">
           {substrates.map((item) => (
             <article className="material-card" id={item.slug} key={item.slug} data-reveal>
-              <div className={`material-visual material-${item.tone}`} aria-label={`Emplacement photo futur : ${item.name}`}>
+              <div className={`material-visual material-${item.tone}`} aria-label={`Illustration éditoriale : ${item.name}`}>
                 <span className="material-number">{item.number}</span>
                 <span className="material-grain" aria-hidden="true" />
-                <small>Photographie produit à venir</small>
+                <small>Visuel produit en préparation</small>
               </div>
               <div className="material-content">
                 <div className="material-title"><p>Composant · vente en vrac</p><h3>{item.name}</h3></div>
@@ -98,7 +98,7 @@ export default function SubstratesPage() {
                   <div><dt>Usages</dt><dd>{item.uses}</dd></div>
                   <div><dt>Pour quelles plantes ?</dt><dd>{item.plants}</dd></div>
                 </dl>
-                <div className="material-price"><span>Prix</span><strong>À venir</strong><small>Vendu au volume · quantité au choix</small></div>
+                <div className="material-price"><span>Tarif</span><strong>Bientôt disponible au Studio</strong><small>Vendu au volume · quantité au choix</small></div>
               </div>
             </article>
           ))}
