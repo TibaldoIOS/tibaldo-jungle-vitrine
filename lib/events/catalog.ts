@@ -36,7 +36,7 @@ export const openingEvent: JungleEvent = {
     { src: "/advice-rempotage.jpg", alt: "Service de rempotage de plantes à Lille", caption: "Le rempotage est gratuit toute l’année au Studio." },
   ],
   coverImage: "/opening-jungle.jpg",
-  facebookUrl: "https://www.facebook.com/tibaldojungle",
+  facebookUrl: "https://www.facebook.com/events/895747596492933/",
   instagramUrl: "https://www.instagram.com/tibaldojungle",
   mapsUrl: "https://www.google.com/maps/dir/?api=1&destination=3%20place%20de%20l%27Arbonnoise%2059000%20Lille",
   registrationUrl: null,
@@ -47,7 +47,7 @@ export const openingEvent: JungleEvent = {
   publishedAt: "2026-08-07T08:00:00+02:00",
   archivedAt: null,
   createdAt: "2026-08-07T08:00:00+02:00",
-  updatedAt: "2026-08-07T17:00:00+02:00",
+  updatedAt: "2026-08-07T17:40:00+02:00",
   sortOrder: 100,
 };
 
