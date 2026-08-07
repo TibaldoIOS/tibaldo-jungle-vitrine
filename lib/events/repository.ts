@@ -36,7 +36,12 @@ function fromRow(row: EventRow): JungleEvent {
 
 async function seedOpeningEvent() {
   const db = await getDb();
-  await db.insert(events).values(toRow(openingEvent)).onConflictDoNothing();
+  const [existing] = await db.select().from(events).where(eq(events.id, openingEvent.id)).limit(1);
+  if (!existing) {
+    await db.insert(events).values(toRow(openingEvent));
+  } else if (new Date(existing.updatedAt).getTime() < new Date(openingEvent.updatedAt).getTime()) {
+    await db.update(events).set(toRow(openingEvent)).where(eq(events.id, openingEvent.id));
+  }
 }
 
 export async function listPublicEvents(): Promise<JungleEvent[]> {

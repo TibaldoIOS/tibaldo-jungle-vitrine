@@ -582,12 +582,24 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
 .event-location iframe { width: 100%; height: 480px; border: 0; filter: saturate(.7) contrast(.95); }
 .event-location .button { margin-top: 25px; background: var(--cream); color: var(--forest); }
 .event-facebook-button { display: block; width: fit-content; margin-top: 14px; padding-bottom: 6px; border-bottom: 1px solid var(--sage); color: var(--sage); font-size: 10px; }
+.event-rsvp { margin: 38px 0 0; padding: 30px; border-left: 3px solid var(--sage); background: #0a3023; color: #fff; }
+.event-rsvp span { color: var(--sage); font-size: 8px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+.event-rsvp h3 { margin: 12px 0; font: 400 28px/1.15 Georgia, serif; }
+.event-rsvp p { margin: 0 0 20px; color: rgba(255,255,255,.72); line-height: 1.7; }
+.event-rsvp a, .event-faq-rsvp a { display: inline-block; padding-bottom: 5px; border-bottom: 1px solid var(--sage); color: var(--sage); font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.event-lille-guide { padding: 115px 0; background: #e9eadf; color: var(--forest); }
+.event-lille-guide > div { display: grid; grid-template-columns: .9fr 1.1fr; gap: 90px; }
+.event-lille-guide h2 { margin: 28px 0 0; font: 400 clamp(48px, 6vw, 78px)/.96 Georgia, serif; letter-spacing: -.05em; }
+.event-lille-guide h2 em { color: #768b6d; font-weight: 400; }
+.event-lille-guide div > div p { margin: 0 0 22px; color: #526159; font: 400 17px/1.85 Georgia, serif; }
 .event-faq { padding-top: 120px; padding-bottom: 120px; }
 .event-faq header { margin-bottom: 45px; }
 .event-faq h2 { color: var(--forest); font: 400 clamp(45px, 6vw, 76px) Georgia, serif; }
 .event-faq details { padding: 24px 0; border-top: 1px solid rgba(21,59,44,.16); }
 .event-faq summary { display: flex; justify-content: space-between; color: var(--forest); font: 400 22px Georgia, serif; cursor: pointer; list-style: none; }
 .event-faq details p { max-width: 760px; color: #657169; line-height: 1.8; }
+.event-faq-rsvp { margin-top: 38px; padding: 28px 30px; background: var(--forest); color: #fff; }
+.event-faq-rsvp p { margin: 0 0 16px; font: 400 20px/1.5 Georgia, serif; }
 .other-events { padding-bottom: 120px; }
 .other-events header { margin-bottom: 45px; }
 
@@ -634,7 +646,7 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
   .events-index-copy h1 { font-size: 76px; }
   .events-index-copy > p:last-child, .event-detail-hero-copy > p:last-child { font-size: 15px; }
   .events-index { padding-top: 78px; padding-bottom: 85px; }
-  .events-index > header, .event-story, .event-program header, .event-location > div { grid-template-columns: 1fr; gap: 30px; }
+  .events-index > header, .event-story, .event-program header, .event-location > div, .event-lille-guide > div { grid-template-columns: 1fr; gap: 30px; }
   .event-filters { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 7px; }
   .event-filters button { flex: 0 0 auto; }
   .event-card { grid-template-columns: 1fr; min-height: 0; }
@@ -644,6 +656,7 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
   .event-essential > div { grid-template-columns: 1fr; }
   .event-essential > div > div { min-height: 0; padding: 25px 0; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.14); }
   .event-story { padding-top: 78px; padding-bottom: 80px; }
+  .event-lille-guide { padding: 78px 0; }
   .event-countdown > div { gap: 6px; }
   .event-countdown strong { font-size: 26px; }
   .event-calendar > span, .event-share > span { width: 100%; }
