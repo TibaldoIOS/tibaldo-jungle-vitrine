@@ -7,7 +7,7 @@ export function GET() {
     "Disallow: /admin/",
     "Disallow: /api/",
     "",
-    "Sitemap: https://jungle.tibaldo.fr/sitemap.xml/",
+    "Sitemap: https://jungle.tibaldo.fr/sitemap.xml",
     "Host: jungle.tibaldo.fr",
     "",
   ].join("\n");

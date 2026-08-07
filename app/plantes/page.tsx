@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Plantes rares et d’intérieur à Lille | Tibaldo Jungle",
   description:
     "Explorez les genres et espèces de plantes rares et d’intérieur documentés par Tibaldo Jungle, Studio Végétal à Lille.",
-  alternates: { canonical: "/plantes/" },
+  alternates: { canonical: "/plantes" },
 };
 
 export default function PlantsPage() {

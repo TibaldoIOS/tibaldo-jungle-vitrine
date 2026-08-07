@@ -33,15 +33,15 @@ export async function GET() {
   const entries: SitemapEntry[] = [
     { path: "/", modified: "2026-08-07", frequency: "weekly", priority: 1 },
     ...["plantes", "substrats", "rempotage", "evenements", "services", "contact"].map((path, index) => ({
-      path: `/${path}/`,
+      path: `/${path}`,
       modified: "2026-08-07",
       frequency: "weekly" as const,
       priority: index === 1 ? 0.9 : 0.8,
     })),
-    ...Object.keys(familyGuides).map((genre) => ({ path: `/plantes/${genre}/`, modified: "2026-08-06", frequency: "monthly" as const, priority: 0.8 })),
-    ...plants.map((plant) => ({ path: `/plantes/${plant.genre}/${plant.slug}/`, modified: plant.updatedAt, frequency: "monthly" as const, priority: 0.85 })),
-    ...publicEvents.map((event) => ({ path: `/evenements/${event.slug}/`, modified: event.updatedAt, frequency: "weekly" as const, priority: 0.9 })),
-    { path: "/creation-boutique/", modified: "2026-08-03", frequency: "weekly", priority: 0.75 },
+    ...Object.keys(familyGuides).map((genre) => ({ path: `/plantes/${genre}`, modified: "2026-08-06", frequency: "monthly" as const, priority: 0.8 })),
+    ...plants.map((plant) => ({ path: `/plantes/${plant.genre}/${plant.slug}`, modified: plant.updatedAt, frequency: "monthly" as const, priority: 0.85 })),
+    ...publicEvents.map((event) => ({ path: `/evenements/${event.slug}`, modified: event.updatedAt, frequency: "weekly" as const, priority: 0.9 })),
+    { path: "/creation-boutique", modified: "2026-08-03", frequency: "weekly", priority: 0.75 },
   ];
 
   const urls = entries.map((entry) => `<url><loc>${escapeXml(`${origin}${entry.path}`)}</loc><lastmod>${escapeXml(new Date(entry.modified).toISOString())}</lastmod><changefreq>${entry.frequency}</changefreq><priority>${entry.priority.toFixed(2)}</priority></url>`).join("");

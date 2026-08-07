@@ -20,8 +20,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${guide.name} à Lille : entretien, lumière et variétés`,
     description: `Guide complet des ${guide.name} à Lille : exposition, arrosage, température, substrat, rempotage et variétés proposées par Tibaldo Jungle.`,
     keywords: [`${guide.name} Lille`, `${guide.name} entretien`, `${guide.name} lumière`, `${guide.name} arrosage`, `acheter ${guide.name} Lille`, `rempotage ${guide.name} Lille`],
-    alternates: { canonical: `/plantes/${genre}/` },
-    openGraph: { title: `${guide.name} à Lille — Guide Tibaldo Jungle`, description: guide.lead, url: `/plantes/${genre}/`, type: "article", images: [{ url: guide.image, alt: guide.imageAlt }] },
+    alternates: { canonical: `/plantes/${genre}` },
+    openGraph: { title: `${guide.name} à Lille — Guide Tibaldo Jungle`, description: guide.lead, url: `/plantes/${genre}`, type: "article", images: [{ url: guide.image, alt: guide.imageAlt }] },
   };
 }
 
