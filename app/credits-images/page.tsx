@@ -17,6 +17,7 @@ const credits = [
   ["Colocasia esculenta", "Forest & Kim Starr", "CC BY 3.0 US", "https://commons.wikimedia.org/wiki/File:Starr-090519-8057-Colocasia_esculenta-leaves-Native_Nursery_Kula-Maui_(24325097844).jpg"],
   ["Pilea peperomioides", "Husky", "CC0", "https://commons.wikimedia.org/wiki/File:Pilea_peperomioides_Chinese_money_plant.jpg"],
   ["Peperomia argyreia", "Mokkie", "CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:Watermelon_Peperomia_(Peperomia_argyreia).jpg"],
+  ["Collection de cactus en serre", "Anita Austvika", "Licence Unsplash", "https://unsplash.com/photos/a-variety-of-cactus-plants-in-a-greenhouse-Ip9vn5h-aSE"],
 ] as const;
 
 export default function ImageCreditsPage() {
