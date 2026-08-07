@@ -1,0 +1,51 @@
+import type { JungleEvent } from "./types";
+
+export const openingEvent: JungleEvent = {
+  id: "opening-2026",
+  slug: "ouverture-tibaldo-jungle-lille",
+  title: "Ouverture officielle de Tibaldo Jungle",
+  category: "ouverture",
+  status: "published",
+  startAt: "2026-09-26T10:00:00+02:00",
+  endAt: "2026-09-26T19:00:00+02:00",
+  venueName: "Tibaldo Jungle — Studio Végétal",
+  address: "3 place de l’Arbonnoise",
+  postalCode: "59000",
+  city: "Lille",
+  excerpt: "Une nouvelle jungle urbaine ouvre ses portes à Lille : plantes rares, découvertes végétales, conseils et rempotage gratuit.",
+  description: "Le 26 septembre 2026, Tibaldo Jungle ouvre officiellement son Studio Végétal au 3 place de l’Arbonnoise à Lille. Cette journée d’inauguration est pensée comme une rencontre autour du vivant : découvrir une sélection de plantes d’intérieur rares et singulières, comprendre leurs besoins et visiter un lieu imaginé pour rendre la botanique plus accessible. Romain vous accueille toute la journée pour présenter le projet, les plantes disponibles, les substrats en vrac et le service de rempotage gratuit proposé toute l’année.",
+  program: [
+    { time: "10:00", title: "Ouverture des portes", description: "Première découverte du Studio, de la sélection végétale et des espaces." },
+    { time: "11:30", title: "Rencontre autour des plantes rares", description: "Échanges libres sur les arrivages, la culture et l’acclimatation à Lille." },
+    { time: "14:00", title: "Démonstrations de rempotage", description: "Comprendre les racines, choisir le bon pot et composer un substrat adapté." },
+    { time: "Toute la journée", title: "Conseils personnalisés", description: "Venez avec une photo de votre intérieur ou de votre plante pour recevoir un conseil sincère." },
+  ],
+  faq: [
+    { question: "L’entrée est-elle gratuite ?", answer: "Oui, l’inauguration est ouverte librement au public pendant les horaires indiqués." },
+    { question: "Faut-il réserver ?", answer: "Aucune réservation n’est nécessaire pour découvrir la boutique. Les éventuels ateliers avec places limitées seront signalés séparément." },
+    { question: "Puis-je apporter une plante à rempoter ?", answer: "Oui. Le rempotage est gratuit toute l’année ; seuls le pot et les matières utilisées sont facturés lorsqu’ils sont nécessaires." },
+    { question: "Comment venir à Tibaldo Jungle ?", answer: "Le Studio se situe au 3 place de l’Arbonnoise, 59000 Lille. Le bouton itinéraire ouvre directement la navigation Google Maps." },
+    { question: "Les animaux sont-ils acceptés ?", answer: "Les animaux calmes et tenus sont les bienvenus, dans le respect des plantes et des autres visiteurs." },
+  ],
+  gallery: [
+    { src: "/opening-jungle.jpg", alt: "Tibaldo Jungle, Studio Végétal à Lille", caption: "Un nouvel espace végétal au cœur de Lille." },
+    { src: "/hero-jungle.jpg", alt: "Collection de plantes tropicales Tibaldo Jungle", caption: "Plantes d’intérieur, raretés et grands spécimens." },
+    { src: "/advice-rempotage.jpg", alt: "Service de rempotage de plantes à Lille", caption: "Le rempotage est gratuit toute l’année au Studio." },
+  ],
+  coverImage: "/opening-jungle.jpg",
+  facebookUrl: "https://www.facebook.com/share/1AejZcPW5q/?mibextid=wwXIfr",
+  instagramUrl: "https://www.instagram.com/tibaldojungle",
+  mapsUrl: "https://www.google.com/maps/dir/?api=1&destination=3%20place%20de%20l%27Arbonnoise%2059000%20Lille",
+  registrationUrl: null,
+  videoUrl: null,
+  seoTitle: "Ouverture Tibaldo Jungle à Lille — 26 septembre 2026",
+  seoDescription: "Ouverture de Tibaldo Jungle le 26 septembre 2026 à Lille : plantes rares, Studio Végétal, conseils et rempotage gratuit. Découvrez le programme.",
+  seoKeywords: ["ouverture boutique plantes Lille", "événement plantes Lille", "Tibaldo Jungle ouverture", "plantes rares Lille", "Studio Végétal Lille"],
+  publishedAt: "2026-08-07T08:00:00+02:00",
+  archivedAt: null,
+  createdAt: "2026-08-07T08:00:00+02:00",
+  updatedAt: "2026-08-07T08:00:00+02:00",
+  sortOrder: 100,
+};
+
+export const eventFallbacks = [openingEvent];

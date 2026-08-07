@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { plants } from "@/lib/plants/catalog";
 import { familyGuides } from "@/lib/plants/family-guides";
+import { eventFallbacks } from "@/lib/events/catalog";
 
 export const dynamic = "force-static";
 
@@ -12,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1,
     },
-    ...["plantes", "substrats", "rempotage", "services", "contact"].map((path, index) => ({
+    ...["plantes", "substrats", "rempotage", "evenements", "services", "contact"].map((path, index) => ({
       url: `https://jungle.tibaldo.fr/${path}/`,
       lastModified: new Date("2026-08-05"),
       changeFrequency: "weekly" as const,
@@ -20,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...Object.keys(familyGuides).map((genre) => ({ url: `https://jungle.tibaldo.fr/plantes/${genre}/`, lastModified: new Date("2026-08-06"), changeFrequency: "monthly" as const, priority: 0.8 })),
     ...plants.map((plant) => ({ url: `https://jungle.tibaldo.fr/plantes/${plant.genre}/${plant.slug}/`, lastModified: new Date(plant.updatedAt), changeFrequency: "monthly" as const, priority: 0.85 })),
+    ...eventFallbacks.map((event) => ({ url: `https://jungle.tibaldo.fr/evenements/${event.slug}/`, lastModified: new Date(event.updatedAt), changeFrequency: "weekly" as const, priority: 0.9 })),
     {
       url: "https://jungle.tibaldo.fr/creation-boutique/",
       lastModified: new Date("2026-08-03"),

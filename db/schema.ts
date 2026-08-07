@@ -1,4 +1,34 @@
-// Intentionally empty by default.
-// Add Drizzle tables here when the site actually needs a database.
-// See examples/d1/db/schema.ts for an opt-in example.
-export {};
+import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
+
+export const events = sqliteTable("events", {
+  id: text("id").primaryKey(),
+  slug: text("slug").notNull().unique(),
+  title: text("title").notNull(),
+  category: text("category").notNull(),
+  status: text("status").notNull().default("draft"),
+  startAt: text("start_at").notNull(),
+  endAt: text("end_at"),
+  venueName: text("venue_name").notNull(),
+  address: text("address").notNull(),
+  postalCode: text("postal_code").notNull(),
+  city: text("city").notNull(),
+  excerpt: text("excerpt").notNull(),
+  description: text("description").notNull(),
+  programJson: text("program_json").notNull().default("[]"),
+  faqJson: text("faq_json").notNull().default("[]"),
+  galleryJson: text("gallery_json").notNull().default("[]"),
+  coverImage: text("cover_image").notNull(),
+  facebookUrl: text("facebook_url"),
+  instagramUrl: text("instagram_url"),
+  mapsUrl: text("maps_url"),
+  registrationUrl: text("registration_url"),
+  videoUrl: text("video_url"),
+  seoTitle: text("seo_title").notNull(),
+  seoDescription: text("seo_description").notNull(),
+  seoKeywords: text("seo_keywords").notNull().default(""),
+  publishedAt: text("published_at"),
+  archivedAt: text("archived_at"),
+  createdAt: text("created_at").notNull(),
+  updatedAt: text("updated_at").notNull(),
+  sortOrder: integer("sort_order").notNull().default(0),
+});
