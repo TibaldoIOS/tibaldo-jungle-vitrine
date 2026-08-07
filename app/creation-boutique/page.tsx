@@ -7,11 +7,11 @@ const Arrow = () => <span aria-hidden="true">↗</span>;
 export const metadata: Metadata = {
   title: "Création de la boutique — Tibaldo Jungle",
   description: "Suivez la création de la boutique Tibaldo Jungle à Lille à travers ses visualisations IA, ses intentions d’aménagement et son mur végétal naturel.",
-  alternates: { canonical: "/creation-boutique/" },
+  alternates: { canonical: "/creation-boutique" },
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: "/creation-boutique/",
+    url: "/creation-boutique",
     title: "Création de la boutique Tibaldo Jungle à Lille",
     description:
       "Découvrez les visualisations et les choix d’aménagement du futur Studio Végétal Tibaldo Jungle à Lille.",
