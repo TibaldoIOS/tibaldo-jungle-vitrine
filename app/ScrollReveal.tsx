@@ -50,7 +50,7 @@ export default function ScrollReveal() {
 
         hero.style.setProperty("--hero-photo-y", `${progress * 34}px`);
         hero.style.setProperty("--hero-photo-scale", `${1.04 + progress * 0.025}`);
-        hero.style.setProperty("--hero-content-y", `${progress * 72}px`);
+        hero.style.setProperty("--hero-content-y", `${progress * -42}px`);
         hero.style.setProperty(
           "--hero-content-opacity",
           `${Math.max(0, 1 - progress * 1.35)}`,
