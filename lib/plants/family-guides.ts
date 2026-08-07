@@ -1,8 +1,8 @@
 export const familyGuides = {
   alocasia: {
     name: "Alocasia",
-    image: "/alocasia-imperial-red.png",
-    imageAlt: "Alocasia mature aux pétioles bordeaux",
+    image: "/alocasia-cuprea-feuillage.jpg",
+    imageAlt: "Feuillage nervuré vert métallique d’un Alocasia cuprea",
     heroSubtitle: "Feuillages sculpturaux, culture tropicale et variétés singulières : comprendre les Alocasia avant de choisir celui qui vivra chez vous.",
     care: { difficulty: 3, light: 4, water: 3, humidity: 4, substrate: "Riche, respirant, drainant", nutrition: "Régulière et modérée au printemps–été" },
     lead: "Avec leurs feuilles dressées, nervurées ou presque métalliques, les Alocasia comptent parmi les plantes tropicales les plus architecturales. À Lille, leur réussite repose moins sur des recettes rigides que sur un équilibre précis entre lumière, chaleur, humidité et respiration des racines.",
@@ -40,7 +40,7 @@ export const familyGuides = {
     ],
   },
   anthurium: {
-    name: "Anthurium", image: "/plant-anthurium.jpg", imageAlt: "Anthurium tropical au feuillage nervuré", heroSubtitle: "Velours, nervures graphiques ou floraisons colorées : les Anthurium révèlent une diversité bien plus vaste que la plante fleurie classique.",
+    name: "Anthurium", image: "/anthurium-crystallinum-feuille.jpg", imageAlt: "Grande feuille veloutée et nervurée d’Anthurium crystallinum", heroSubtitle: "Velours, nervures graphiques ou floraisons colorées : les Anthurium révèlent une diversité bien plus vaste que la plante fleurie classique.",
     care: { difficulty: 4, light: 4, water: 3, humidity: 5, substrate: "Très aéré, organique, légèrement humide", nutrition: "Douce et régulière, adaptée au feuillage ou à la floraison" },
     lead: "Les Anthurium réunissent des espèces fleuries accessibles et des plantes de collection au feuillage spectaculaire. Leur culture demande une lumière franche, une humidité stable et surtout des racines parfaitement aérées.",
     origin: "Membres des Araceae, les Anthurium sont originaires des Amériques tropicales. Beaucoup vivent dans des forêts humides, parfois comme épiphytes ou lithophytes : leur système racinaire n’est donc pas conçu pour rester compacté dans un terreau lourd.",
@@ -58,7 +58,7 @@ export const familyGuides = {
     sources: [{ label: "NC State Extension — Anthurium", url: "https://plants.ces.ncsu.edu/plants/anthurium/common-name/tailflower/" }, { label: "Kew Science — Araceae", url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30000216-2/general-information" }],
   },
   monstera: {
-    name: "Monstera", image: "/plant-monstera.jpg", imageAlt: "Monstera au feuillage découpé", heroSubtitle: "Des lianes tropicales capables de changer de silhouette en grandissant, jusqu’aux célèbres feuilles fenêtrées.",
+    name: "Monstera", image: "/monstera-deliciosa-feuilles.jpg", imageAlt: "Feuilles découpées et fenêtrées de Monstera deliciosa", heroSubtitle: "Des lianes tropicales capables de changer de silhouette en grandissant, jusqu’aux célèbres feuilles fenêtrées.",
     care: { difficulty: 2, light: 4, water: 3, humidity: 3, substrate: "Structuré, organique et drainant", nutrition: "Modérée pendant la croissance active" },
     lead: "Les Monstera sont des plantes grimpantes tropicales dont le feuillage évolue avec l’âge, la lumière et la qualité du support. Bien conduites, elles produisent des feuilles de plus en plus grandes et découpées.", origin: "Le genre Monstera appartient aux Araceae et provient du Mexique jusqu’à l’Amérique tropicale. Dans les forêts humides, ces plantes grimpent sur les troncs grâce à leurs racines aériennes.",
     facts: [{ label: "Exposition", value: "Lumière vive indirecte" }, { label: "Température", value: "17–28 °C" }, { label: "Arrosage", value: "Après séchage partiel" }, { label: "Support", value: "Tuteur stable conseillé" }],
@@ -68,7 +68,7 @@ export const familyGuides = {
     sources: [{ label: "Kew Science — Monstera", url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:330206-2/general-information" }, { label: "NC State Extension — Monstera deliciosa", url: "https://plants.ces.ncsu.edu/plants/monstera-deliciosa/" }],
   },
   philodendron: {
-    name: "Philodendron", image: "/feature-selection.jpg", imageAlt: "Philodendron tropical au feuillage généreux", heroSubtitle: "Grimpants, rampants ou autoportants : les Philodendron composent une famille d’une diversité exceptionnelle.",
+    name: "Philodendron", image: "/philodendron-hastatum-feuillage.jpg", imageAlt: "Feuillage argenté lancéolé de Philodendron hastatum", heroSubtitle: "Grimpants, rampants ou autoportants : les Philodendron composent une famille d’une diversité exceptionnelle.",
     care: { difficulty: 2, light: 3, water: 3, humidity: 3, substrate: "Organique, souple et bien drainé", nutrition: "Équilibrée, légère à modérée" },
     lead: "Le genre Philodendron offre des ports et des textures très différents : lianes à feuilles en cœur, espèces rampantes, hybrides compacts ou plantes majestueuses. Leur culture reste accessible lorsque lumière et drainage sont cohérents.", origin: "Originaires du Mexique à l’Amérique tropicale, les Philodendron sont principalement des plantes de forêt, souvent grimpantes, épiphytes ou hémiepiphytes. Ils appartiennent aux Araceae.",
     facts: [{ label: "Exposition", value: "Moyenne à vive" }, { label: "Température", value: "18–29 °C" }, { label: "Arrosage", value: "Modéré et régulier" }, { label: "Port", value: "Grimpant, rampant ou compact" }],
@@ -78,7 +78,7 @@ export const familyGuides = {
     sources: [{ label: "Kew Science — Philodendron", url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:326132-2/general-information" }, { label: "NC State Extension — Philodendron", url: "https://plants.ces.ncsu.edu/plants/philodendron/" }],
   },
   epipremnum: {
-    name: "Epipremnum", image: "/hero-jungle.jpg", imageAlt: "Epipremnum grimpant dans un intérieur végétalisé", heroSubtitle: "Les célèbres pothos sont des lianes endurantes qui changent radicalement de feuillage lorsqu’on leur offre lumière et support.",
+    name: "Epipremnum", image: "/epipremnum-aureum-pothos.jpg", imageAlt: "Liane panachée d’Epipremnum aureum, aussi appelée pothos doré", heroSubtitle: "Les célèbres pothos sont des lianes endurantes qui changent radicalement de feuillage lorsqu’on leur offre lumière et support.",
     care: { difficulty: 1, light: 3, water: 2, humidity: 2, substrate: "Léger, drainant et tolérant", nutrition: "Faible à modérée en croissance" },
     lead: "Souvent vendus sous le nom de pothos, les Epipremnum sont des plantes grimpantes faciles à vivre. Leur forme juvénile retombante est familière, mais un sujet qui grimpe peut produire des feuilles bien plus grandes et parfois découpées.", origin: "Les Epipremnum appartiennent aux Araceae et sont originaires des régions tropicales d’Asie et du Pacifique. Ils utilisent leurs racines aériennes pour s’accrocher et monter vers la lumière.",
     facts: [{ label: "Exposition", value: "Moyenne à vive" }, { label: "Température", value: "17–29 °C" }, { label: "Arrosage", value: "Après séchage partiel" }, { label: "Difficulté", value: "Très accessible" }],
@@ -88,7 +88,7 @@ export const familyGuides = {
     sources: [{ label: "NC State Extension — distinction avec Philodendron", url: "https://plants.ces.ncsu.edu/plants/philodendron-hederaceum/" }, { label: "Kew Science — Araceae", url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30000216-2/general-information" }],
   },
   colocasia: {
-    name: "Colocasia", image: "/opening-jungle.jpg", imageAlt: "Colocasia aux grandes feuilles tropicales", heroSubtitle: "Des oreilles d’éléphant généreuses, amatrices d’eau et de chaleur, à ne pas confondre avec les Alocasia.",
+    name: "Colocasia", image: "/colocasia-esculenta-feuille.jpg", imageAlt: "Grande feuille en cœur de Colocasia esculenta, oreille d’éléphant", heroSubtitle: "Des oreilles d’éléphant généreuses, amatrices d’eau et de chaleur, à ne pas confondre avec les Alocasia.",
     care: { difficulty: 3, light: 4, water: 5, humidity: 4, substrate: "Riche, humide et nourrissant", nutrition: "Soutenue pendant la croissance" },
     lead: "Les Colocasia forment des plantes tropicales puissantes, souvent cultivées pour leurs immenses feuilles. Contrairement à beaucoup d’Alocasia, elles apprécient une humidité du sol plus constante et peuvent devenir spectaculaires en extérieur pendant la belle saison.", origin: "Le genre Colocasia appartient aux Araceae et vient d’Asie tropicale et subtropicale. Plusieurs espèces poussent naturellement dans des zones très humides, près des cours d’eau ou sur des sols riches.",
     facts: [{ label: "Exposition", value: "Lumineuse à ensoleillée" }, { label: "Température", value: "20–30 °C en croissance" }, { label: "Arrosage", value: "Abondant et régulier" }, { label: "Nutrition", value: "Plante gourmande" }],
@@ -98,7 +98,7 @@ export const familyGuides = {
     sources: [{ label: "Kew Science — Colocasia", url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:331172-2/general-information" }, { label: "Kew Science — Colocasia esculenta", url: "https://powo.science.kew.org/taxon/1170772-2" }],
   },
   pilea: {
-    name: "Pilea", image: "/pilea-peperomioides.png", imageAlt: "Pilea peperomioides aux feuilles rondes dans un pot en céramique", heroSubtitle: "Des plantes graphiques et souvent compactes, du célèbre Pilea peperomioides aux espèces texturées de terrarium.",
+    name: "Pilea", image: "/pilea-peperomioides-plante.jpg", imageAlt: "Pilea peperomioides en pot avec feuilles rondes et jeunes rejets", heroSubtitle: "Des plantes graphiques et souvent compactes, du célèbre Pilea peperomioides aux espèces texturées de terrarium.",
     care: { difficulty: 2, light: 3, water: 3, humidity: 3, substrate: "Fin, léger et bien drainé", nutrition: "Légère au printemps et en été" },
     lead: "Les Pilea ne sont ni des Philodendron ni des Peperomia. Ce genre de la famille des Urticaceae rassemble des plantes très diverses, appréciées pour leurs feuilles rondes, gaufrées, argentées ou minuscules.", origin: "Les Pilea sont largement répartis dans les régions tropicales et subtropicales. Leur croissance souvent rapide et leur facilité de bouturage en font des plantes vivantes et évolutives.",
     facts: [{ label: "Exposition", value: "Lumière douce à vive" }, { label: "Température", value: "16–26 °C" }, { label: "Arrosage", value: "Régulier sans saturation" }, { label: "Multiplication", value: "Boutures ou rejets" }],
@@ -108,7 +108,7 @@ export const familyGuides = {
     sources: [{ label: "Kew Science — ressources taxonomiques", url: "https://powo.science.kew.org/" }, { label: "NC State Extension — plantes d’intérieur", url: "https://plants.ces.ncsu.edu/" }],
   },
   peperomia: {
-    name: "Peperomia", image: "/boutique-projet-ia.webp", imageAlt: "Peperomia compact au feuillage décoratif", heroSubtitle: "Des plantes compactes aux feuilles charnues, gaufrées ou panachées, idéales lorsque l’arrosage reste mesuré.",
+    name: "Peperomia", image: "/peperomia-argyreia-feuillage.jpg", imageAlt: "Feuillage rayé argent et vert de Peperomia argyreia", heroSubtitle: "Des plantes compactes aux feuilles charnues, gaufrées ou panachées, idéales lorsque l’arrosage reste mesuré.",
     care: { difficulty: 1, light: 3, water: 2, humidity: 2, substrate: "Très drainant, fin et léger", nutrition: "Faible, à dose réduite" },
     lead: "Les Peperomia sont des plantes compactes de la famille du poivre. Leur feuillage stocke souvent une partie de l’eau, ce qui explique leur sensibilité aux arrosages trop fréquents et leur bonne adaptation aux petits espaces.", origin: "Le genre Peperomia appartient aux Piperaceae et compte un très grand nombre d’espèces tropicales et subtropicales réparties notamment en Amérique, en Afrique, en Asie et en Australie.",
     facts: [{ label: "Exposition", value: "Vive indirecte" }, { label: "Température", value: "17–27 °C" }, { label: "Arrosage", value: "Modéré" }, { label: "Format", value: "Compact" }],

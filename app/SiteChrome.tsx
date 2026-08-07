@@ -73,7 +73,7 @@ export function SiteFooter() {
       </div>
       <div className="shell footer-bottom" data-reveal>
         <span>© 2026 Tibaldo Jungle · Studio Végétal · Lille</span>
-        <span>Pruvost Romain EI · SIRET 518 102 603 00074 · TVA FR94 518 102 603 · RNE 518 102 603</span>
+        <span>Pruvost Romain EI · SIRET 518 102 603 00074 · TVA FR94 518 102 603 · RNE 518 102 603 · <a href="/credits-images">Crédits photos</a></span>
       </div>
     </footer>
   );
