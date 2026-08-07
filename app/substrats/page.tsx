@@ -6,7 +6,7 @@ import { substrates } from "./data";
 export const metadata: Metadata = {
   title: "Substrats en vrac à Lille | Terreau, perlite, sphaigne",
   description: "Substrats en vrac à Lille : terreau, perlite, sphaigne, écorce, pierre ponce et zéolite. Conseils et mélanges sur mesure chez Tibaldo Jungle.",
-  alternates: { canonical: "/substrats" },
+  alternates: { canonical: "/substrats/" },
   keywords: ["substrats en vrac Lille", "terreau Lille", "perlite Lille", "sphaigne Lille", "écorce de pin Lille", "pierre ponce Lille", "zéolite Lille"],
   openGraph: {
     type: "website",

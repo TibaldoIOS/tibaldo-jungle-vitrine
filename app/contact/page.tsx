@@ -5,7 +5,7 @@ import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 export const metadata: Metadata = {
   title: "Contact et boutique de plantes à Lille | Tibaldo Jungle",
   description: "Tibaldo Jungle, boutique de plantes et Studio Végétal : 3 place de l’Arbonnoise, 59000 Lille. Horaires, itinéraire GPS et contact.",
-  alternates: { canonical: "/contact" },
+  alternates: { canonical: "/contact/" },
 };
 
 const gpsLinks = {

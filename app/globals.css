@@ -76,6 +76,7 @@ h1 em { color: var(--sage); font-weight: 400; }
 .opening-badge { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; background: #08291e; color: #fff; font: italic 11px/1.05 Georgia, serif; text-align: center; transform: rotate(-8deg); animation: openingBadge 2.8s ease-in-out infinite; }
 .opening-banner p { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 7px 15px; margin: 0; font-size: 13px; line-height: 1.5; letter-spacing: .025em; text-align: center; }
 .opening-banner p strong { font-size: 14px; letter-spacing: .08em; text-transform: uppercase; }
+.opening-banner p a { padding-bottom: 2px; border-bottom: 1px solid currentColor; font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .opening-separator { font-size: 16px; animation: openingStar 2.3s linear infinite; }
 .opening-arrow { font: 400 26px Georgia, serif; animation: openingArrow 1.4s ease-in-out infinite; }
 @keyframes openingSweep { 0%, 52% { transform: skewX(-18deg) translateX(-160%); } 78%, 100% { transform: skewX(-18deg) translateX(460%); } }

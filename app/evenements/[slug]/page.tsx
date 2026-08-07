@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const event = await getPublicEvent(slug);
   if (!event) return {};
-  const url = `/evenements/${event.slug}`;
+  const url = `/evenements/${event.slug}/`;
   return { title: event.seoTitle, description: event.seoDescription, keywords: event.seoKeywords, alternates: { canonical: url }, openGraph: { type: "article", locale: "fr_FR", url, title: event.seoTitle, description: event.seoDescription, images: [{ url: event.coverImage, alt: event.title }] }, twitter: { card: "summary_large_image", title: event.seoTitle, description: event.seoDescription, images: [event.coverImage] } };
 }
 

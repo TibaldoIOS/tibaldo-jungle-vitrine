@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
 import InnerPage from "../InnerPage";
 
-export const metadata: Metadata = { title: "Studio végétal et services plantes à Lille | Tibaldo Jungle", description: "Diagnostic, conseil, rempotage et projets végétaux à Lille. Découvrez les services du Studio Végétal Tibaldo Jungle.", alternates: { canonical: "/services" } };
+export const metadata: Metadata = { title: "Studio végétal et services plantes à Lille | Tibaldo Jungle", description: "Diagnostic, conseil, rempotage et projets végétaux à Lille. Découvrez les services du Studio Végétal Tibaldo Jungle.", alternates: { canonical: "/services/" } };
 export default function ServicesPage() { return <InnerPage eyebrow="Nos services · Studio Végétal Lille" title="Faire grandir" accent="votre jungle." intro="Des conseils quotidiens aux projets végétaux sur mesure, le Studio accompagne les particuliers et les professionnels à Lille." cards={[{title:"Diagnostic plante",copy:"Comprendre feuilles jaunes, parasites, croissance ralentie ou arrosage difficile."},{title:"Conseil personnalisé",copy:"Choisir une plante réellement adaptée à votre espace, votre lumière et votre rythme."},{title:"Projets végétaux",copy:"Imaginer des compositions vivantes pour la maison, les commerces et les espaces de travail."}]} />; }

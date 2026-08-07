@@ -5,7 +5,7 @@ import { listPublicEvents } from "@/lib/events/repository";
 import { EventFilters } from "./EventTools";
 
 export const dynamic = "force-dynamic";
-export const metadata: Metadata = { title: "Événements végétaux à Lille | Tibaldo Jungle", description: "Ateliers plantes, ouvertures, rempotage, portes ouvertes et événements végétaux organisés par Tibaldo Jungle au 3 place de l’Arbonnoise à Lille.", alternates: { canonical: "/evenements" }, openGraph: { title: "Événements Tibaldo Jungle à Lille", description: "Découvrez les prochains événements, ateliers et journées végétales de Tibaldo Jungle à Lille.", url: "/evenements", images: [{ url: "/opening-jungle.jpg", alt: "Événements Tibaldo Jungle à Lille" }] } };
+export const metadata: Metadata = { title: "Événements végétaux à Lille | Tibaldo Jungle", description: "Ateliers plantes, ouvertures, rempotage, portes ouvertes et événements végétaux organisés par Tibaldo Jungle au 3 place de l’Arbonnoise à Lille.", alternates: { canonical: "/evenements/" }, openGraph: { title: "Événements Tibaldo Jungle à Lille", description: "Découvrez les prochains événements, ateliers et journées végétales de Tibaldo Jungle à Lille.", url: "/evenements/", images: [{ url: "/opening-jungle.jpg", alt: "Événements Tibaldo Jungle à Lille" }] } };
 
 export default async function EventsPage() {
   const events = await listPublicEvents();
