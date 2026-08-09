@@ -1,5 +1,6 @@
 import type { PlantEntry } from "./types";
 import { prayerPlants } from "./prayer-plants";
+import { collectionPlants } from "./collection-plants";
 
 export const plantFamilies = [
   { slug: "alocasia", name: "Alocasia", eyebrow: "Collection ouverte", description: "Plantes tropicales architecturales aux feuilles spectaculaires, les Alocasia aiment la lumière vive, la chaleur et un substrat très aéré. Découvrez nos conseils de culture et les Alocasia rares observés au Studio Végétal Tibaldo Jungle à Lille.", image: "/alocasia-cuprea-feuillage.jpg", imageAlt: "Feuillage nervuré vert métallique d’un Alocasia cuprea", available: true },
@@ -151,7 +152,7 @@ export const plants = [{
   seo: { title: "Pilea peperomioides : entretien et plante à monnaie Lille", description: "Guide du Pilea peperomioides : lumière, arrosage, rejets, substrat et problèmes. Retrouvez la plante à monnaie chinoise à Lille.", keywords: ["Pilea peperomioides entretien", "plante monnaie chinoise Lille", "Pilea Lille", "Pilea animaux", "bouture Pilea"] },
   sources: [{ label: "Kew Science", url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:855664-1/general-information" }, { label: "NC State Extension", url: "https://plants.ces.ncsu.edu/plants/pilea-peperomioides/" }, { label: "Plantes Pour Tous — fiche consultée", url: "https://plantespourtous.co/products/pilea-peperomioides" }],
   publishedAt: "2026-08-06", updatedAt: "2026-08-06",
-}, ...prayerPlants] satisfies PlantEntry[];
+}, ...collectionPlants, ...prayerPlants] satisfies PlantEntry[];
 
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
