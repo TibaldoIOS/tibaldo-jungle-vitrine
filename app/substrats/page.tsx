@@ -10,6 +10,19 @@ const substratePhotos: Record<string, { src: string; alt: string }> = {
   "billes-argile": { src: "/substrat-billes-argile-vrac-tibaldo.png", alt: "Billes d’argile expansée en vrac pour culture semi-hydroponique" },
 };
 
+const substrateRoles: Record<string, string> = {
+  "terreau-signature": "Base vivante",
+  "ecorce-pin": "Structure",
+  "chips-coco": "Souplesse",
+  perlite: "Aération",
+  "sphaigne-sechee": "Propagation",
+  "charbon-actif": "Équilibre",
+  "billes-argile": "Semi-hydro",
+  "pierre-ponce": "Porosité",
+  vermiculite: "Rétention",
+  zeolite: "Réserve minérale",
+};
+
 export const metadata: Metadata = {
   title: "Substrats en vrac à Lille | Terreau, perlite, sphaigne",
   description: "Substrats en vrac à Lille : terreau, perlite, sphaigne, écorce, pierre ponce et zéolite. Conseils et mélanges sur mesure chez Tibaldo Jungle.",
@@ -97,13 +110,13 @@ export default function SubstratesPage() {
               <div className={`material-visual material-${item.tone}`} aria-label={`${photo ? "Photographie" : "Illustration éditoriale"} : ${item.name}`}>
                 <span className="material-number">{item.number}</span>
                 {photo ? <img className="material-photo" src={photo.src} alt={photo.alt} width="1456" height="1092" loading="lazy" /> : <span className="material-grain" aria-hidden="true" />}
-                <small>{photo ? "Matière · vue rapprochée" : "Visuel produit en préparation"}</small>
+                <div className="material-visual-caption"><small>{photo ? "Matière · vue rapprochée" : "Portrait de matière"}</small><strong>{substrateRoles[item.slug]}</strong></div>
               </div>
               <div className="material-content">
-                <div className="material-title"><p>Composant · vente en vrac</p><h3>{item.name}</h3></div>
+                <div className="material-title"><p>Composant · vente en vrac</p><span>{substrateRoles[item.slug]}</span><h3>{item.name}</h3></div>
                 <p className="material-description">{item.description}</p>
                 <dl>
-                  <div><dt>Avantages</dt><dd>{item.benefits.join(" · ")}</dd></div>
+                  <div className="material-benefits"><dt>Ses forces</dt><dd>{item.benefits.map((benefit) => <span key={benefit}>{benefit}</span>)}</dd></div>
                   <div><dt>Usages</dt><dd>{item.uses}</dd></div>
                   <div><dt>Pour quelles plantes ?</dt><dd>{item.plants}</dd></div>
                 </dl>
