@@ -3,6 +3,13 @@ import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 import { substrates } from "./data";
 
+const substratePhotos: Record<string, { src: string; alt: string }> = {
+  perlite: { src: "/substrat-perlite-vrac-tibaldo.png", alt: "Perlite horticole blanche en vrac pour alléger et drainer les substrats" },
+  vermiculite: { src: "/substrat-vermiculite-vrac-tibaldo.png", alt: "Vermiculite horticole dorée en vrac pour retenir progressivement l’humidité" },
+  "sphaigne-sechee": { src: "/substrat-sphaigne-sechee-vrac-tibaldo.png", alt: "Sphaigne séchée à longues fibres pour boutures et plantes tropicales" },
+  "billes-argile": { src: "/substrat-billes-argile-vrac-tibaldo.png", alt: "Billes d’argile expansée en vrac pour culture semi-hydroponique" },
+};
+
 export const metadata: Metadata = {
   title: "Substrats en vrac à Lille | Terreau, perlite, sphaigne",
   description: "Substrats en vrac à Lille : terreau, perlite, sphaigne, écorce, pierre ponce et zéolite. Conseils et mélanges sur mesure chez Tibaldo Jungle.",
@@ -83,12 +90,14 @@ export default function SubstratesPage() {
           <p>Chaque matière joue un rôle précis. Découvrez son toucher, son comportement et les plantes auxquelles elle convient.</p>
         </div>
         <div className="shell material-list">
-          {substrates.map((item) => (
-            <article className="material-card" id={item.slug} key={item.slug} data-reveal>
-              <div className={`material-visual material-${item.tone}`} aria-label={`Illustration éditoriale : ${item.name}`}>
+          {substrates.map((item) => {
+            const photo = substratePhotos[item.slug];
+            return (
+            <article className={`material-card${photo ? " has-product-photo" : ""}`} id={item.slug} key={item.slug} data-reveal>
+              <div className={`material-visual material-${item.tone}`} aria-label={`${photo ? "Photographie" : "Illustration éditoriale"} : ${item.name}`}>
                 <span className="material-number">{item.number}</span>
-                <span className="material-grain" aria-hidden="true" />
-                <small>Visuel produit en préparation</small>
+                {photo ? <img className="material-photo" src={photo.src} alt={photo.alt} width="1456" height="1092" loading="lazy" /> : <span className="material-grain" aria-hidden="true" />}
+                <small>{photo ? "Matière · vue rapprochée" : "Visuel produit en préparation"}</small>
               </div>
               <div className="material-content">
                 <div className="material-title"><p>Composant · vente en vrac</p><h3>{item.name}</h3></div>
@@ -101,7 +110,7 @@ export default function SubstratesPage() {
                 <div className="material-price"><span>Tarif</span><strong>Bientôt disponible au Studio</strong><small>Vendu au volume · quantité au choix</small></div>
               </div>
             </article>
-          ))}
+          );})}
         </div>
       </section>
 
