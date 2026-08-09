@@ -767,6 +767,7 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
 .inner-hero-content .button { animation: hero-arrival .8s .72s both; }
 .inner-hero-index { position: absolute; z-index: 1; left: 50%; bottom: 28px; transform: translateX(-50%); display: flex; gap: 42px; color: rgba(255,255,255,.55); font-size: 9px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
 .compact-inner-hero { min-height: 680px; height: 84svh; }
+.plants-directory-hero { min-height: 560px; height: 70svh; }
 
 .substrate-manifesto { display: grid; grid-template-columns: .9fr 1.1fr; gap: 100px; padding: 120px 0; }
 .substrate-manifesto h2, .collection-heading h2, .mix-guide h2, .inner-overview h2 { margin: 18px 0 0; color: var(--forest); font: 400 clamp(48px, 5vw, 72px)/.98 Georgia, serif; letter-spacing: -.045em; }
@@ -1020,6 +1021,9 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
 .family-guide-intro { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(60px, 10vw, 150px); padding-top: 120px; padding-bottom: 105px; }
 .family-guide-intro h2 { margin: 18px 0 0; color: var(--forest); font: 400 clamp(52px, 6vw, 84px)/.96 Georgia, serif; letter-spacing: -.05em; }
 .family-guide-intro h2 em { color: #91a875; font-weight: 400; }
+.family-guide-portrait { width: min(260px, 100%); margin: 38px 0 0; }
+.family-guide-portrait img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.family-guide-portrait figcaption { margin-top: 10px; color: #7c897f; font-size: 8px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
 .family-guide-intro > div:last-child { padding-top: 28px; }
 .family-guide-intro > div:last-child p { margin: 0 0 24px; color: #59675e; font: 400 17px/1.85 Georgia, serif; }
 .family-guide-facts { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(21,59,44,.2); border-bottom: 1px solid rgba(21,59,44,.2); }
@@ -1179,6 +1183,7 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
   .home-value-grid p { padding: 25px 0; border-bottom: 1px solid rgba(21,59,44,.15); }
   .inner-hero { min-height: 690px; height: 90svh; }
   .compact-inner-hero { min-height: 650px; height: 82svh; }
+  .plants-directory-hero { min-height: 570px; height: 72svh; }
   .inner-hero-content { padding-top: 92px; }
   .inner-hero-content h1 { font-size: clamp(48px, 14vw, 68px); }
   .inner-hero-index { flex-wrap: wrap; gap: 8px 20px; bottom: 20px; }
@@ -1234,6 +1239,7 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
   .plant-family-index { padding-top: 78px; padding-bottom: 82px; }
   .family-guide-intro { padding-top: 78px; padding-bottom: 70px; }
   .family-guide-intro h2 { font-size: 48px; }
+  .family-guide-portrait { width: 210px; margin-top: 30px; }
   .family-guide-intro > div:last-child { padding-top: 0; }
   .family-guide-facts { grid-template-columns: 1fr 1fr; }
   .family-guide-facts > div { min-height: 135px; padding: 21px 16px; }

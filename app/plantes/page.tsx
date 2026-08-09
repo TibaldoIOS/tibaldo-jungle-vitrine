@@ -40,7 +40,7 @@ export default function PlantsPage() {
     <main className="editorial-page">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <ScrollReveal />
-      <section className="inner-hero compact-inner-hero">
+      <section className="inner-hero compact-inner-hero plants-directory-hero">
         <div className="inner-hero-texture" />
         <div className="inner-hero-shade" />
         <SiteHeader />
@@ -50,7 +50,7 @@ export default function PlantsPage() {
             <span className="hero-line"><span>Comprendre</span></span>
             <span className="hero-line"><span><em>le vivant.</em></span></span>
           </h1>
-          <p>Explorez les grands genres végétaux, puis découvrez chaque espèce et variété dans une fiche complète.</p>
+          <p>Explorez les grands genres végétaux, identifiez leurs besoins essentiels et descendez jusqu’aux espèces et cultivars. Chaque fiche rassemble lumière, arrosage, substrat, croissance, toxicité et conseils Tibaldo Jungle.</p>
         </div>
       </section>
 
