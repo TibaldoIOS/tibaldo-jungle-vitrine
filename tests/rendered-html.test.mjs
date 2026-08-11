@@ -85,3 +85,18 @@ test("serves a crawlable robots file and a populated XML sitemap", async () => {
   assert.match(xml, /https:\/\/jungle\.tibaldo\.fr\/plantes\/alocasia\//i);
   assert.doesNotMatch(xml, /\/admin\//i);
 });
+
+test("renders the opening event with complete crawlable SEO data", async () => {
+  const response = await render("/evenements/ouverture-tibaldo-jungle-lille");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+
+  assert.match(html, /<title>Que faire à Lille ce week-end \? Ouverture Tibaldo Jungle<\/title>/i);
+  assert.match(html, /<link(?=[^>]*rel=["']canonical["'])(?=[^>]*href=["']https:\/\/jungle\.tibaldo\.fr\/evenements\/ouverture-tibaldo-jungle-lille["'])[^>]*>/i);
+  assert.match(html, /<h1>Ouverture de Tibaldo Jungle à Lille — 26 septembre 2026<\/h1>/i);
+  assert.match(html, /"@type":"Event"/i);
+  assert.match(html, /"isAccessibleForFree":true/i);
+  assert.match(html, /"@type":"FAQPage"/i);
+  assert.match(html, /"@type":"BreadcrumbList"/i);
+  assert.match(html, /Que faire à Lille le week-end du 26 septembre 2026/i);
+});

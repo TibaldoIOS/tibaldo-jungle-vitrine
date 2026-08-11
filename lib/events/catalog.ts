@@ -3,7 +3,7 @@ import type { JungleEvent } from "./types";
 export const openingEvent: JungleEvent = {
   id: "opening-2026",
   slug: "ouverture-tibaldo-jungle-lille",
-  title: "Ouverture officielle de Tibaldo Jungle",
+  title: "Ouverture de Tibaldo Jungle à Lille — 26 septembre 2026",
   category: "ouverture",
   status: "published",
   startAt: "2026-09-26T10:00:00+02:00",
@@ -41,13 +41,13 @@ export const openingEvent: JungleEvent = {
   mapsUrl: "https://www.google.com/maps/dir/?api=1&destination=3%20place%20de%20l%27Arbonnoise%2059000%20Lille",
   registrationUrl: null,
   videoUrl: null,
-  seoTitle: "Que faire à Lille le 26 septembre ? Ouverture Tibaldo Jungle",
-  seoDescription: "Sortie gratuite à Lille le 26 septembre 2026 : ouverture de Tibaldo Jungle, plantes rares, conseils, substrats et rempotage. Programme et accès.",
+  seoTitle: "Que faire à Lille ce week-end ? Ouverture Tibaldo Jungle",
+  seoDescription: "Que faire à Lille le week-end du 26 septembre 2026 ? Découvrez gratuitement Tibaldo Jungle : plantes rares, rempotage, conseils et programme.",
   seoKeywords: ["que faire à Lille", "que faire à Lille ce week-end", "sortie Lille septembre 2026", "événement Lille 26 septembre 2026", "événement gratuit Lille", "activité Lille", "sortie famille Lille", "agenda Lille", "événement plantes Lille", "ouverture boutique Lille", "ouverture boutique plantes Lille", "nouvelle boutique Lille", "boutique plantes Lille", "plantes rares Lille", "plantes exotiques Lille", "plantes intérieur Lille", "rempotage Lille", "substrats Lille", "Studio Végétal Lille", "événement métropole lilloise", "sortie Nord", "Tibaldo Jungle ouverture"],
   publishedAt: "2026-08-07T08:00:00+02:00",
   archivedAt: null,
   createdAt: "2026-08-07T08:00:00+02:00",
-  updatedAt: "2026-08-07T17:40:00+02:00",
+  updatedAt: "2026-08-11T20:00:00+02:00",
   sortOrder: 100,
 };
 
