@@ -98,3 +98,13 @@ export const plants = [{
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
 export const getPlantsByGenre = (genre: string) => plants.filter((plant) => plant.genre === genre);
+
+export const studioCollection = [
+  { genre: "Chlorophytum", href: null, plants: ["Chlorophytum comosum"] },
+  { genre: "Maranta", href: "/plantes/maranta", plants: ["Maranta leuconeura ‘Lemon Lime’"] },
+  { genre: "Bananiers", href: null, plants: ["Musa panaché · cultivar à confirmer", "Musa basjoo", "Musa sikkimensis ‘Red Tiger’", "Ensete ventricosum ‘Maurelii’"] },
+  { genre: "Anthurium", href: "/plantes/anthurium", plants: ["Anthurium ‘Delta Force’", "Anthurium veitchii", "Anthurium clarinervium", "Anthurium pallidiflorum", "Anthurium warocqueanum"] },
+  { genre: "Philodendron", href: "/plantes/philodendron", plants: ["Philodendron gloriosum", "Philodendron melanochrysum"] },
+  { genre: "Epipremnum · Pothos", href: "/plantes/epipremnum", plants: ["Plusieurs cultivars à identifier au Studio"] },
+  { genre: "Strelitzia", href: null, plants: ["Oiseau de paradis · espèce à confirmer"] },
+] as const;

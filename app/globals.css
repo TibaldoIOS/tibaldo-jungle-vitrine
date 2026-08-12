@@ -824,6 +824,21 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
 .home-service-list p { max-width: 280px; color: rgba(255,255,255,.58); font-size: 13px; line-height: 1.7; }
 .home-service-list a > span:last-child { position: absolute; right: 30px; bottom: 28px; color: var(--sage); font-size: 20px; }
 .home-values { padding: 115px 0 125px; text-align: center; }
+.studio-collection { padding-top: 115px; padding-bottom: 125px; }
+.studio-collection > header { display: grid; grid-template-columns: .8fr 1.2fr; gap: 35px 90px; padding-bottom: 65px; }
+.studio-collection > header .section-kicker { grid-column: 1 / -1; }
+.studio-collection > header h2 { margin: 0; color: var(--forest); font: 400 clamp(50px,6vw,82px)/.94 Georgia,serif; letter-spacing: -.055em; }
+.studio-collection > header h2 em { color: #78906f; font-weight: 400; }
+.studio-collection > header > p:last-child { max-width: 550px; margin: 0; color: #657169; font-size: 14px; line-height: 1.85; }
+.studio-collection-list { border-top: 1px solid rgba(21,59,44,.22); }
+.studio-collection-list article { display: grid; grid-template-columns: 80px 1fr; padding: 30px 0; border-bottom: 1px solid rgba(21,59,44,.22); }
+.studio-collection-list article > span { color: #8b9c90; font: italic 12px Georgia,serif; }
+.studio-collection-list h3 { margin: 0 0 16px; color: var(--forest); font: 400 27px Georgia,serif; }
+.studio-collection-list h3 a { color: inherit; }
+.studio-collection-list h3 a span { margin-left: 8px; color: #78906f; font-size: 15px; }
+.studio-collection-list ul { display: flex; gap: 8px; flex-wrap: wrap; margin: 0; padding: 0; list-style: none; }
+.studio-collection-list li { padding: 9px 13px; border: 1px solid rgba(21,59,44,.18); border-radius: 999px; color: #54635a; font-size: 11px; }
+.studio-collection-note { margin: 22px 0 0 80px; color: #7b857f; font-size: 10px; line-height: 1.6; }
 .home-values h2 { margin-inline: auto; }
 .home-value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 50px; margin: 65px 0 45px; padding: 42px 0; border-top: 1px solid rgba(21,59,44,.2); border-bottom: 1px solid rgba(21,59,44,.2); text-align: left; }
 .home-value-grid p { margin: 0; color: #667169; font-size: 13px; line-height: 1.75; }
@@ -1238,6 +1253,13 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
   .care-meter-grid { grid-template-columns: repeat(3, 1fr); }
   .plant-comparison-grid { grid-template-columns: 1fr; }
   .plant-comparison-grid article, .plant-comparison-grid article:last-child { border-right: 0; }
+  .studio-collection { padding-top: 78px; padding-bottom: 82px; }
+  .studio-collection > header { grid-template-columns: 1fr; gap: 28px; padding-bottom: 45px; }
+  .studio-collection > header .section-kicker { grid-column: auto; }
+  .studio-collection-list article { grid-template-columns: 38px 1fr; gap: 8px; }
+  .studio-collection-list h3 { font-size: 23px; }
+  .studio-collection-list li { font-size: 10px; }
+  .studio-collection-note { margin-left: 46px; }
   .repotting-diagnosis, .repotting-note { grid-template-columns: 1fr; gap: 45px; padding-top: 78px; padding-bottom: 82px; }
   .repotting-symptoms article { grid-template-columns: 35px 1fr; gap: 12px; }
   .repotting-symptoms article p { grid-column: 2; }
