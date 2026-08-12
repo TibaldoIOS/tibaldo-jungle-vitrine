@@ -78,6 +78,7 @@ export default function PlantsPage() {
       </nav>
 
       <PlantExplorer plants={plants} />
+      <section className="shell plant-help-bridge" data-reveal><div><p className="section-kicker">Une plante vous inquiète ?</p><h2>Feuilles jaunes,<br/><em>parasites ou racines serrées.</em></h2></div><div><p>L’encyclopédie aide à comprendre une espèce. Le parcours SOS Plantes part de votre symptôme pour éviter les gestes inutiles.</p><a className="button button-green" href="/sos-plantes">Commencer le diagnostic <Arrow /></a></div></section>
 
       <section className="plant-family-index shell">
         <header data-reveal>

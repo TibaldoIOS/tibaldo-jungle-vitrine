@@ -3,8 +3,8 @@ import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 
 export const metadata: Metadata = {
-  title: "SOS Rempotage de plantes à Lille | Studio Végétal Tibaldo Jungle",
-  description: "Plante à l’étroit, racines abîmées ou terreau épuisé ? Diagnostic et rempotage de plantes à Lille chez Studio Végétal Tibaldo Jungle.",
+  title: "Bar à rempotage gratuit à Lille | Tibaldo Jungle",
+  description: "Bar à rempotage gratuit à Lille : diagnostic des racines, choix du substrat et conseils personnalisés chez Studio Végétal Tibaldo Jungle.",
   alternates: { canonical: "/rempotage" },
 };
 
@@ -20,13 +20,13 @@ export default function RepottingPage() {
     <section className="inner-hero compact-inner-hero repotting-hero">
       <div className="inner-hero-texture" aria-hidden="true" /><div className="inner-hero-shade" aria-hidden="true" />
       <SiteHeader />
-      <div className="shell inner-hero-content"><p className="eyebrow"><span /> SOS Rempotage · Lille</p><h1><span className="hero-line"><span>Votre plante</span></span><span className="hero-line"><span><em>manque d’espace ?</em></span></span></h1><p>Apportez-la au Studio : nous observons ses racines, son substrat et son contenant avant de choisir le geste juste.</p><a className="button button-light" href="/contact">Préparer ma visite <Arrow /></a></div>
+      <div className="shell inner-hero-content"><p className="eyebrow"><span /> Bar à rempotage · Gratuit · Lille</p><h1><span className="hero-line"><span>Votre plante</span></span><span className="hero-line"><span><em>manque d’espace ?</em></span></span></h1><p>Apportez-la au Studio : le geste de rempotage est offert toute l’année. Vous réglez uniquement le pot, le substrat ou les fournitures choisis si nécessaire.</p><a className="button button-light" href="/sos-plantes">Diagnostiquer ma plante <Arrow /></a></div>
     </section>
     <section className="repotting-diagnosis shell">
       <div className="repotting-heading" data-reveal><p className="section-kicker">Reconnaître les signes</p><h2>Quand faut-il<br />rempoter ?</h2><p>Un pot plus grand n’est pas toujours la réponse. Le diagnostic évite les rempotages inutiles et protège les racines.</p></div>
       <div className="repotting-symptoms">{symptoms.map(([title, copy], index) => <article key={title} data-reveal><span>0{index + 1}</span><h3>{title}</h3><p>{copy}</p></article>)}</div>
     </section>
-    <section className="repotting-process"><div className="shell"><p className="section-kicker" data-reveal>Au Studio Végétal</p><h2 data-reveal>Observer. Composer.<br /><em>Faire repartir.</em></h2><div className="repotting-steps"><p data-reveal><strong>01 · Diagnostic</strong>Nous vérifions la motte, les racines, l’humidité et la stabilité de la plante.</p><p data-reveal><strong>02 · Mélange sur mesure</strong>Le substrat est ajusté à l’espèce, à votre lumière et à vos habitudes d’arrosage.</p><p data-reveal><strong>03 · Conseils de reprise</strong>Vous repartez avec des gestes simples pour l’arrosage et les semaines suivantes.</p></div><a className="button button-light" href="/contact">Venir au Studio <Arrow /></a></div></section>
+    <section className="repotting-process"><div className="shell"><p className="section-kicker" data-reveal>Au Studio Végétal</p><h2 data-reveal>Observer. Composer.<br /><em>Faire repartir.</em></h2><div className="repotting-steps"><p data-reveal><strong>01 · Diagnostic</strong>Nous vérifions la motte, les racines, l’humidité et la stabilité de la plante.</p><p data-reveal><strong>02 · Mélange sur mesure</strong>Le substrat est ajusté à l’espèce, à votre lumière et à vos habitudes d’arrosage.</p><p data-reveal><strong>03 · Conseils de reprise</strong>Vous repartez avec des gestes simples pour l’arrosage et les semaines suivantes.</p></div><div className="repotting-free-note"><strong>Le rempotage est offert.</strong><span>Le terreau, les composants et le nouveau pot restent facturés lorsqu’ils sont fournis par le Studio.</span></div><a className="button button-light" href="/contact">Venir au Studio <Arrow /></a></div></section>
     <section className="repotting-note shell" data-reveal><img src="/advice-rempotage.jpg" alt="Rempotage et diagnostic des racines au Studio Végétal Tibaldo Jungle à Lille" width="1200" height="1800" /><div><p className="section-kicker">Le bon réflexe</p><h2>Venez avec votre plante.</h2><p>Si elle est volumineuse, envoyez-nous d’abord une photo du feuillage, du pot et des racines visibles. Nous pourrons préparer votre passage.</p><a className="button button-green" href="mailto:jungle@tibaldo.fr?subject=SOS%20Rempotage">Envoyer des photos <Arrow /></a></div></section>
     <SiteFooter />
   </main>;

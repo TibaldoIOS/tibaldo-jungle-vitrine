@@ -17,6 +17,7 @@ export function SiteHeader({ light = false }: { light?: boolean }) {
       <nav aria-label="Navigation principale">
         <a href="/">Accueil</a>
         <a href="/plantes">Plantes</a>
+        <a href="/conseils">Conseils</a>
         <a href="/fleurs">Fleurs</a>
         <a href="/substrats">Substrats</a>
         <a href="/rempotage">Rempotage</a>
@@ -31,9 +32,11 @@ export function SiteHeader({ light = false }: { light?: boolean }) {
         <div className="mobile-menu-panel" aria-label="Navigation mobile">
           <a href="/"><span>01</span>Accueil</a>
           <a href="/plantes"><span>02</span>Plantes</a>
-          <a href="/fleurs"><span>03</span>Fleurs sur commande</a>
-          <a href="/substrats"><span>04</span>Substrats</a>
-          <a href="/rempotage"><span>04</span>Rempotage</a>
+          <a href="/conseils"><span>03</span>Conseils</a>
+          <a href="/sos-plantes"><span>04</span>SOS Plantes</a>
+          <a href="/fleurs"><span>05</span>Fleurs sur commande</a>
+          <a href="/substrats"><span>06</span>Substrats</a>
+          <a href="/rempotage"><span>07</span>Bar à rempotage</a>
           <a href="/evenements"><span>05</span>Événements</a>
           <a href="https://shop.tibaldo.fr"><span>06</span>Boutique en ligne</a>
           <a href="/services"><span>07</span>Nos services</a>
@@ -69,7 +72,7 @@ export function SiteFooter() {
           <p>Plantes d’intérieur, plantes rares,<br />rempotage et substrats en vrac à Lille.</p>
         </div>
         <div className="footer-links">
-          <div><span>Explorer</span><a href="/boutique-plantes-lille">Boutique plantes Lille</a><a href="/plantes">Plantes</a><a href="/fleurs">Catalogue de fleurs</a><a href="/substrats-en-vrac-lille">Substrats en vrac Lille</a><a href="/rempotage-plantes-lille">Rempotage Lille</a><a href="/fleurs-sur-commande-lille">Fleurs sur commande</a><a href="/evenements">Événements</a><a href="/services">Nos services</a></div>
+          <div><span>Explorer</span><a href="/boutique-plantes-lille">Boutique plantes Lille</a><a href="/plantes">Plantes</a><a href="/conseils">Conseils plantes</a><a href="/sos-plantes">SOS Plantes</a><a href="/fleurs">Catalogue de fleurs</a><a href="/substrats-en-vrac-lille">Substrats en vrac Lille</a><a href="/rempotage-plantes-lille">Bar à rempotage Lille</a><a href="/fleurs-sur-commande-lille">Fleurs sur commande</a><a href="/evenements">Événements</a><a href="/services">Nos services</a></div>
           <div className="social-links"><span>Nous suivre</span><a href="https://www.instagram.com/tibaldojungle" target="_blank" rel="noreferrer">Instagram</a><a href="https://www.facebook.com/tibaldojungle" target="_blank" rel="noreferrer">Facebook</a></div>
           <div><span>Horaires</span><p>Mardi–samedi<br />10h–19h<br />Dimanche · 10h–13h</p></div>
           <div><span>Venir & écrire</span><p>3 place de l’Arbonnoise<br />59000 Lille<br /><a href="tel:+33743727079">07 43 72 70 79</a></p><a className="footer-email" href="mailto:jungle@tibaldo.fr">jungle@tibaldo.fr</a></div>

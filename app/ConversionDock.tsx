@@ -1,0 +1,3 @@
+"use client";
+const destination="3 place de l'Arbonnoise, 59000 Lille";
+export default function ConversionDock(){return <nav className="conversion-dock" aria-label="Actions rapides"><a href="/sos-plantes" data-action="sos">SOS Plantes</a><a href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destination)}`} target="_blank" rel="noreferrer" data-action="route">Itinéraire</a><a href="https://shop.tibaldo.fr" data-action="shop">Boutique</a></nav>}
