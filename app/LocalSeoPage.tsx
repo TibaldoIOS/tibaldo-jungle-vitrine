@@ -13,6 +13,11 @@ type LocalPageProps = {
   highlights: { title: string; copy: string }[];
   faq: { question: string; answer: string }[];
   links: { href: string; label: string; copy: string }[];
+  service?: {
+    name: string;
+    description: string;
+    areaServed: string[];
+  };
 };
 
 const address = "3 place de l’Arbonnoise, 59000 Lille";
@@ -34,6 +39,16 @@ export default function LocalSeoPage(props: LocalPageProps) {
           { "@type": "OpeningHoursSpecification", dayOfWeek: "Sunday", opens: "10:00", closes: "13:00" },
         ],
       },
+      ...(props.service ? [{
+        "@type": "Service",
+        "@id": `https://jungle.tibaldo.fr${props.canonical}#service`,
+        name: props.service.name,
+        description: props.service.description,
+        url: `https://jungle.tibaldo.fr${props.canonical}`,
+        provider: { "@id": "https://jungle.tibaldo.fr/#store" },
+        areaServed: props.service.areaServed.map((name) => ({ "@type": "City", name })),
+        serviceType: props.service.name,
+      }] : []),
       { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Accueil", item: "https://jungle.tibaldo.fr/" }, { "@type": "ListItem", position: 2, name: props.title, item: `https://jungle.tibaldo.fr${props.canonical}` }] },
       { "@type": "FAQPage", mainEntity: props.faq.map((item) => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } })) },
     ],
