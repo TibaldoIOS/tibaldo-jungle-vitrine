@@ -32,7 +32,7 @@ export async function GET() {
 
   const entries: SitemapEntry[] = [
     { path: "/", modified: "2026-08-07", frequency: "weekly", priority: 1 },
-    ...["plantes", "substrats", "rempotage", "evenements", "services", "contact"].map((path, index) => ({
+    ...["plantes", "fleurs", "substrats", "rempotage", "evenements", "services", "contact"].map((path, index) => ({
       path: `/${path}`,
       modified: "2026-08-07",
       frequency: "weekly" as const,

@@ -1,0 +1,53 @@
+export type FlowerEntry = {
+  slug: string;
+  name: string;
+  botanicalName: string;
+  family: string;
+  category: "fleur" | "feuillage" | "fleur séchée";
+  colors: string[];
+  seasons: string[];
+  styles: string[];
+  uses: string[];
+  vaseLife: string;
+  description: string;
+  pairing: string[];
+};
+
+export const flowers: FlowerEntry[] = [
+  ["rose", "Rose", "Rosa × hybrida", "Rosaceae", ["blanc", "rose", "rouge", "jaune", "orange", "lilas"], ["toute l’année"], ["romantique", "élégant", "moderne"], ["bouquet", "centre de table", "arche", "soliflore"], "7 à 12 jours", "Incontournable et plurielle, la rose existe dans une immense palette de formes, de couleurs et de niveaux d’ouverture."],
+  ["pivoine", "Pivoine", "Paeonia lactiflora", "Paeoniaceae", ["blanc", "rose", "rouge", "corail"], ["printemps", "début d’été"], ["romantique", "jardin", "généreux"], ["bouquet", "centre de table", "mariage"], "5 à 8 jours", "Une fleur saisonnière généreuse dont le bouton compact s’ouvre en une corolle spectaculaire."],
+  ["gypsophile", "Gypsophile", "Gypsophila paniculata", "Caryophyllaceae", ["blanc", "rose"], ["toute l’année"], ["aérien", "champêtre", "minimaliste"], ["bouquet", "arche", "centre de table", "fleur séchée"], "7 à 14 jours", "Des milliers de petites fleurs légères pour créer du volume, de la douceur et un effet nuage."],
+  ["hortensia", "Hortensia", "Hydrangea macrophylla", "Hydrangeaceae", ["blanc", "rose", "bleu", "vert", "bordeaux"], ["été", "automne"], ["généreux", "jardin", "élégant"], ["centre de table", "bouquet", "grande composition"], "7 à 12 jours", "Une tête florale ample qui structure instantanément les compositions et offre de beaux effets de couleur."],
+  ["renoncule", "Renoncule", "Ranunculus asiaticus", "Ranunculaceae", ["blanc", "rose", "rouge", "orange", "jaune"], ["hiver", "printemps"], ["romantique", "délicat", "jardin"], ["bouquet", "centre de table", "mariage"], "7 à 10 jours", "Ses pétales serrés et délicats composent une fleur ronde, raffinée et particulièrement photogénique."],
+  ["tulipe", "Tulipe", "Tulipa gesneriana", "Liliaceae", ["blanc", "rose", "rouge", "jaune", "orange", "violet"], ["hiver", "printemps"], ["graphique", "naturel", "moderne"], ["bouquet", "soliflore", "centre de table"], "5 à 10 jours", "Droite puis mouvante en vase, la tulipe apporte une ligne vivante aux compositions de saison."],
+  ["dahlia", "Dahlia", "Dahlia × hortensis", "Asteraceae", ["blanc", "rose", "rouge", "orange", "jaune", "bordeaux"], ["été", "automne"], ["généreux", "champêtre", "spectaculaire"], ["bouquet", "centre de table", "mariage"], "4 à 7 jours", "Pompon, décoratif ou cactus : le dahlia offre des géométries florales remarquables en fin d’été."],
+  ["lisianthus", "Lisianthus", "Eustoma grandiflorum", "Gentianaceae", ["blanc", "rose", "violet", "vert"], ["toute l’année"], ["romantique", "élégant", "doux"], ["bouquet", "centre de table", "mariage"], "10 à 14 jours", "Des fleurs souples proches de petites roses, portées par des tiges ramifiées à excellente tenue."],
+  ["oeillet", "Œillet", "Dianthus caryophyllus", "Caryophyllaceae", ["blanc", "rose", "rouge", "orange", "jaune", "violet"], ["toute l’année"], ["rétro", "graphique", "généreux"], ["bouquet", "centre de table", "installation"], "12 à 20 jours", "Une fleur résistante, texturée et parfumée, disponible dans des nuances naturelles ou très contemporaines."],
+  ["anemone", "Anémone", "Anemone coronaria", "Ranunculaceae", ["blanc", "rose", "rouge", "bleu", "violet"], ["hiver", "printemps"], ["graphique", "romantique", "contrasté"], ["bouquet", "centre de table", "mariage"], "5 à 8 jours", "Son cœur sombre et sa corolle franche créent un contraste graphique très recherché."],
+  ["freesia", "Freesia", "Freesia × hybrida", "Iridaceae", ["blanc", "rose", "jaune", "orange", "violet"], ["hiver", "printemps"], ["parfumé", "délicat", "lumineux"], ["bouquet", "soliflore", "mariage"], "7 à 12 jours", "Une tige arquée de petites fleurs vivement parfumées, idéale pour alléger un bouquet."],
+  ["delphinium", "Delphinium", "Delphinium elatum", "Ranunculaceae", ["blanc", "bleu", "violet", "rose"], ["printemps", "été"], ["vertical", "champêtre", "spectaculaire"], ["grande composition", "arche", "bouquet"], "5 à 8 jours", "Ses longues hampes florales donnent hauteur et profondeur aux décors floraux."],
+  ["glaieul", "Glaïeul", "Gladiolus × hortulanus", "Iridaceae", ["blanc", "rose", "rouge", "orange", "violet"], ["été", "automne"], ["vertical", "théâtral", "moderne"], ["grande composition", "soliflore", "cérémonie"], "7 à 12 jours", "Une ligne verticale forte, ponctuée de fleurs qui s’ouvrent progressivement le long de la hampe."],
+  ["lys", "Lys", "Lilium hybrids", "Liliaceae", ["blanc", "rose", "orange", "jaune"], ["toute l’année"], ["parfumé", "majestueux", "classique"], ["bouquet", "grande composition", "cérémonie"], "10 à 14 jours", "Une fleur ample et majestueuse, parfois très parfumée, qui demande de retirer soigneusement ses étamines."],
+  ["amaryllis", "Amaryllis", "Hippeastrum hybrids", "Amaryllidaceae", ["blanc", "rouge", "rose", "saumon"], ["hiver"], ["spectaculaire", "festif", "architectural"], ["grande composition", "soliflore", "décor de fête"], "7 à 14 jours", "Une tige sculpturale portant plusieurs trompettes spectaculaires, particulièrement appréciée en hiver."],
+  ["chrysantheme", "Chrysanthème", "Chrysanthemum × morifolium", "Asteraceae", ["blanc", "rose", "jaune", "vert", "orange", "bordeaux"], ["toute l’année"], ["graphique", "généreux", "contemporain"], ["bouquet", "centre de table", "installation"], "14 à 21 jours", "Du santini miniature à la grande fleur incurvée, le chrysanthème offre une tenue exceptionnelle."],
+  ["germini", "Germini", "Gerbera × hybrida", "Asteraceae", ["blanc", "rose", "rouge", "jaune", "orange"], ["toute l’année"], ["joyeux", "graphique", "coloré"], ["bouquet", "soliflore", "événement"], "7 à 12 jours", "Une version compacte du gerbera, aux couleurs franches et à la silhouette très lisible."],
+  ["statice", "Statice", "Limonium sinuatum", "Plumbaginaceae", ["blanc", "rose", "bleu", "violet", "jaune"], ["toute l’année"], ["champêtre", "aérien", "séché"], ["bouquet", "fleur séchée", "centre de table"], "10 à 18 jours", "De petites fleurs papyracées, parfaites pour donner de la texture et conserver ensuite la composition séchée."],
+  ["muflier", "Muflier", "Antirrhinum majus", "Plantaginaceae", ["blanc", "rose", "rouge", "jaune", "orange"], ["printemps", "été"], ["jardin", "vertical", "romantique"], ["bouquet", "centre de table", "grande composition"], "7 à 10 jours", "Une hampe florale expressive dont les fleurs étagées donnent une allure de jardin anglais."],
+  ["pois-de-senteur", "Pois de senteur", "Lathyrus odoratus", "Fabaceae", ["blanc", "rose", "violet", "saumon"], ["printemps", "début d’été"], ["parfumé", "romantique", "aérien"], ["petit bouquet", "mariage", "soliflore"], "4 à 7 jours", "Délicat et très parfumé, le pois de senteur est une fleur saisonnière précieuse aux pétales ondulés."],
+  ["tournesol", "Tournesol", "Helianthus annuus", "Asteraceae", ["jaune", "orange", "brun"], ["été", "automne"], ["solaire", "champêtre", "généreux"], ["bouquet", "événement", "grande composition"], "7 à 12 jours", "Une fleur solaire et généreuse, disponible en formes classiques ou dans des nuances plus profondes."],
+  ["protea", "Protéa", "Protea cynaroides", "Proteaceae", ["rose", "rouge", "blanc"], ["automne", "hiver"], ["exotique", "architectural", "spectaculaire"], ["bouquet", "soliflore", "fleur séchée"], "12 à 20 jours", "Une inflorescence imposante à l’allure exotique, idéale comme point focal et belle une fois séchée."],
+  ["anthurium-coupe", "Anthurium coupé", "Anthurium andraeanum", "Araceae", ["blanc", "rose", "rouge", "vert", "corail"], ["toute l’année"], ["tropical", "graphique", "moderne"], ["soliflore", "centre de table", "installation"], "14 à 25 jours", "Une spathe brillante et durable aux lignes très graphiques, parfaite pour les décors contemporains."],
+  ["orchidee-cymbidium", "Orchidée Cymbidium", "Cymbidium hybrids", "Orchidaceae", ["blanc", "rose", "vert", "jaune", "brun"], ["automne", "hiver", "printemps"], ["luxueux", "exotique", "élégant"], ["centre de table", "bouquet", "événement"], "14 à 25 jours", "Une orchidée coupée particulièrement résistante, disponible en branche ou en fleurs individuelles."],
+  ["calla", "Calla", "Zantedeschia hybrids", "Araceae", ["blanc", "rose", "jaune", "orange", "bordeaux", "noir"], ["toute l’année"], ["minimaliste", "graphique", "élégant"], ["bouquet", "soliflore", "mariage"], "7 à 14 jours", "Sa spathe enroulée et sa tige souple permettent des compositions épurées ou très sculpturales."],
+  ["celosie", "Célosie", "Celosia argentea", "Amaranthaceae", ["rose", "rouge", "orange", "jaune"], ["été", "automne"], ["texturé", "coloré", "original"], ["bouquet", "centre de table", "fleur séchée"], "10 à 15 jours", "Crête veloutée ou plume colorée, la célosie apporte une matière insolite aux compositions."],
+  ["astrance", "Astrance", "Astrantia major", "Apiaceae", ["blanc", "rose", "bordeaux"], ["printemps", "été"], ["champêtre", "délicat", "jardin"], ["bouquet", "centre de table", "mariage"], "7 à 12 jours", "Une petite fleur étoilée et texturée, précieuse pour les compositions naturelles et nuancées."],
+  ["eucalyptus", "Eucalyptus", "Eucalyptus spp.", "Myrtaceae", ["vert", "gris", "bleuté"], ["toute l’année"], ["naturel", "parfumé", "moderne"], ["bouquet", "arche", "feuillage", "fleur séchée"], "10 à 20 jours", "Un feuillage aromatique aux nuances gris-vert, utilisé pour créer lignes, volume et mouvement."],
+  ["ruscus", "Ruscus", "Ruscus spp.", "Asparagaceae", ["vert"], ["toute l’année"], ["élégant", "structuré", "naturel"], ["bouquet", "arche", "feuillage"], "14 à 25 jours", "Un feuillage souple et durable, très efficace pour dessiner les contours d’un bouquet ou d’une arche."],
+  ["olivier", "Feuillage d’olivier", "Olea europaea", "Oleaceae", ["vert", "argenté"], ["toute l’année"], ["méditerranéen", "naturel", "élégant"], ["bouquet", "centre de table", "guirlande"], "10 à 18 jours", "Ses feuilles fines et argentées apportent une ambiance méditerranéenne douce et intemporelle."],
+].map(([slug, name, botanicalName, family, colors, seasons, styles, uses, vaseLife, description]) => ({
+  slug, name, botanicalName, family, colors, seasons, styles, uses, vaseLife, description,
+  category: ["eucalyptus", "ruscus", "olivier"].includes(slug as string) ? "feuillage" : "fleur",
+  pairing: [],
+})) as FlowerEntry[];
+
+export const getFlower = (slug: string) => flowers.find((flower) => flower.slug === slug);
