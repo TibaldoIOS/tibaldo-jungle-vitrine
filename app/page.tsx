@@ -40,8 +40,8 @@ export default function Home() {
         <div className="hero-content shell">
           <p className="eyebrow"><span /> Nouvelle boutique · Lille</p>
           <h1 aria-label="Plantes rares et exotiques à Lille"><span className="hero-line" aria-hidden="true"><span>Plantes rares</span></span><span className="hero-line" aria-hidden="true"><span>&amp; exotiques <em>à Lille.</em></span></span></h1>
-          <p className="hero-copy">Tibaldo Jungle est un Studio Végétal né de la passion du vivant.<br />Une sélection singulière, des plantes cultivées et de vrais conseils.</p>
-          <div className="hero-actions"><a className="button button-light" href="/plantes">Découvrir les plantes <Arrow /></a></div>
+          <p className="hero-copy">Studio Végétal Tibaldo Jungle réunit à Lille plantes rares, culture locale et conseils sincères.</p>
+          <div className="hero-actions"><a className="button button-light" href="/plantes">Découvrir les plantes <Arrow /></a><a className="hero-shop-link" href="https://shop.tibaldo.fr">Voir la boutique en ligne <Arrow /></a></div>
         </div>
       </section>
 
@@ -60,7 +60,7 @@ export default function Home() {
       <section className="home-services">
         <div className="shell home-services-heading" data-reveal><div><p className="section-kicker">Nos services à Lille</p><h2>Faire grandir<br /><em>votre jungle.</em></h2></div><p>Rempotage, diagnostic, conseil et compositions végétales : le Studio vous accompagne au-delà de l’achat.</p></div>
         <div className="shell home-service-list">
-          <a href="/rempotage" data-reveal><span>01</span><h3>Rempotage</h3><p>Le bon pot, le bon mélange et des gestes respectueux des racines.</p><Arrow /></a>
+          <a href="/rempotage" data-reveal><span>01</span><h3>SOS Rempotage</h3><p>Diagnostic, racines, pot et substrat : trouvez la bonne solution pour votre plante.</p><Arrow /></a>
           <a href="/services" className="reveal-delay-1" data-reveal><span>02</span><h3>Diagnostic</h3><p>Comprendre une plante qui jaunit, ralentit ou semble en difficulté.</p><Arrow /></a>
           <a href="/services" className="reveal-delay-2" data-reveal><span>03</span><h3>Projets végétaux</h3><p>Des compositions naturelles pour maisons et espaces professionnels.</p><Arrow /></a>
         </div>

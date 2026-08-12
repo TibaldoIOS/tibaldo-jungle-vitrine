@@ -20,6 +20,7 @@ export function SiteHeader({ light = false }: { light?: boolean }) {
         <a href="/substrats">Substrats</a>
         <a href="/rempotage">Rempotage</a>
         <a href="/evenements">Événements</a>
+        <a href="https://shop.tibaldo.fr">Boutique</a>
         <a href="/services">Nos services</a>
         <a href="/contact">Contact</a>
       </nav>
@@ -32,8 +33,9 @@ export function SiteHeader({ light = false }: { light?: boolean }) {
           <a href="/substrats"><span>03</span>Substrats</a>
           <a href="/rempotage"><span>04</span>Rempotage</a>
           <a href="/evenements"><span>05</span>Événements</a>
-          <a href="/services"><span>06</span>Nos services</a>
-          <a href="/contact"><span>07</span>Contact</a>
+          <a href="https://shop.tibaldo.fr"><span>06</span>Boutique en ligne</a>
+          <a href="/services"><span>07</span>Nos services</a>
+          <a href="/contact"><span>08</span>Contact</a>
           <div className="mobile-menu-socials">
             <span>Suivre la Jungle</span>
             <a href="https://www.instagram.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Instagram Tibaldo Jungle"><InstagramIcon /><strong>Instagram</strong></a>
