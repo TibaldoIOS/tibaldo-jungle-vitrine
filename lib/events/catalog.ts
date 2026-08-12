@@ -31,11 +31,11 @@ export const openingEvent: JungleEvent = {
     { question: "Les animaux sont-ils acceptés ?", answer: "Les animaux calmes et tenus sont les bienvenus, dans le respect des plantes et des autres visiteurs." },
   ],
   gallery: [
-    { src: "/opening-jungle.jpg", alt: "Tibaldo Jungle, Studio Végétal à Lille", caption: "Un nouvel espace végétal au cœur de Lille." },
+    { src: "/facade-tibaldo-jungle-studio-vegetal-lille.jpg", alt: "Aperçu de la façade de Tibaldo Jungle, Studio Végétal au 3 place de l’Arbonnoise à Lille", caption: "Tibaldo Jungle — Studio Végétal, nouvelle boutique de plantes à Lille." },
     { src: "/hero-jungle.jpg", alt: "Collection de plantes tropicales Tibaldo Jungle", caption: "Plantes d’intérieur, raretés et grands spécimens." },
     { src: "/advice-rempotage.jpg", alt: "Service de rempotage de plantes à Lille", caption: "Le rempotage est gratuit toute l’année au Studio." },
   ],
-  coverImage: "/opening-jungle.jpg",
+  coverImage: "/facade-tibaldo-jungle-studio-vegetal-lille.jpg",
   facebookUrl: "https://www.facebook.com/events/895747596492933/",
   instagramUrl: "https://www.instagram.com/tibaldojungle",
   mapsUrl: "https://www.google.com/maps/dir/?api=1&destination=3%20place%20de%20l%27Arbonnoise%2059000%20Lille",
