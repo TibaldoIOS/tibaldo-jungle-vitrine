@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import LegalPage, { CompanyIdentity, type LegalSection } from "../LegalPage";
 
-export const metadata: Metadata = { title: "Conditions générales de vente | Tibaldo Jungle Lille", description: "Conditions générales applicables aux achats réalisés dans la boutique physique Tibaldo Jungle, Studio Végétal à Lille.", alternates: { canonical: "/conditions-generales-de-vente" }, robots: { index: false, follow: false } };
+export const metadata: Metadata = { title: "Conditions générales de vente | Studio Végétal Tibaldo Jungle", description: "Conditions générales applicables aux achats réalisés dans la boutique physique Studio Végétal Tibaldo Jungle à Lille.", alternates: { canonical: "/conditions-generales-de-vente" }, robots: { index: false, follow: false } };
 
 const sections: LegalSection[] = [
   { id: "identite", title: "Identité du vendeur et champ d’application", content: <><CompanyIdentity /><p>Les présentes conditions générales de vente régissent les ventes conclues avec des consommateurs dans la boutique physique Tibaldo Jungle. Elles concernent notamment les plantes, végétaux, boutures, pièces rares ou de collection, pots, cache-pots, substrats, amendements, engrais, accessoires, objets décoratifs, cartes cadeaux ainsi que les prestations de rempotage et ateliers.</p><p>Elles ne régissent pas une éventuelle vente à distance ou boutique en ligne, laquelle devra disposer de conditions adaptées avant son ouverture. Toute commande particulière, réservation ou inscription peut être complétée par des conditions spécifiques portées à la connaissance du client avant son engagement.</p></> },

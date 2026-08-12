@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "fr_FR",
     url: "/substrats",
-    siteName: "Tibaldo Jungle — Studio Végétal",
+    siteName: "Studio Végétal — Tibaldo Jungle",
     title: "Substrats en vrac à Lille | Tibaldo Jungle",
     description: "Composez le mélange juste pour vos plantes : dix composants en vrac, des conseils experts et la quantité dont vous avez réellement besoin.",
     images: [{ url: "/advice-rempotage.jpg", width: 1200, height: 630, alt: "Substrats et rempotage pour plantes d’intérieur à Lille" }],

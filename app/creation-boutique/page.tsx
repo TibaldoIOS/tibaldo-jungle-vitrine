@@ -29,7 +29,7 @@ export default function CreationBoutique() {
         <div className="project-hero-shade" aria-hidden="true" />
 
         <header className="site-header project-header shell">
-          <Link className="brand" href="/" aria-label="Tibaldo Jungle, retour à l’accueil">
+          <Link className="brand" href="/" aria-label="Studio Végétal Tibaldo Jungle, retour à l’accueil">
             <img
               className="brand-logo"
               src="/tibaldo-jungle-logo.webp"
@@ -39,8 +39,8 @@ export default function CreationBoutique() {
               style={{ borderRadius: "50%", objectFit: "cover" }}
             />
             <span className="brand-wordmark">
-              <strong><span>TIBALDO</span><em>Jungle</em></strong>
-              <small>Studio Végétal</small>
+              <strong><span>STUDIO VÉGÉTAL</span></strong>
+              <small>Tibaldo Jungle</small>
               <span className="brand-location">Lille · Nord · France</span>
             </span>
           </Link>

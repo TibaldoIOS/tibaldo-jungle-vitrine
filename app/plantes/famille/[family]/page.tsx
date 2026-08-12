@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: { canonical: `/plantes/famille/${slug}` },
-    openGraph: { type: "website", locale: "fr_FR", url: `/plantes/famille/${slug}`, siteName: "Tibaldo Jungle — Studio Végétal", title, description, images: image ? [{ url: image.src, width: image.width, height: image.height, alt: image.alt }] : undefined },
+    openGraph: { type: "website", locale: "fr_FR", url: `/plantes/famille/${slug}`, siteName: "Studio Végétal — Tibaldo Jungle", title, description, images: image ? [{ url: image.src, width: image.width, height: image.height, alt: image.alt }] : undefined },
     twitter: { card: "summary_large_image", title, description, images: image ? [image.src] : undefined },
   };
 }

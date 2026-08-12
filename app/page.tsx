@@ -7,7 +7,7 @@ const structuredData = {
     {
       "@type": ["Florist", "Store", "LocalBusiness"],
       "@id": "https://jungle.tibaldo.fr/#store",
-      name: "Tibaldo Jungle — Studio Végétal",
+      name: "Studio Végétal — Tibaldo Jungle",
       alternateName: "Tibaldo Jungle",
       legalName: "Pruvost Romain EI",
       url: "https://jungle.tibaldo.fr/",
@@ -24,7 +24,7 @@ const structuredData = {
       knowsAbout: ["Plantes rares", "Plantes d’intérieur", "Rempotage de plantes", "Substrats horticoles en vrac", "Studio végétal"],
       sameAs: ["https://www.instagram.com/tibaldojungle", "https://www.facebook.com/tibaldojungle"],
     },
-    { "@type": "WebSite", "@id": "https://jungle.tibaldo.fr/#website", url: "https://jungle.tibaldo.fr/", name: "Tibaldo Jungle — Studio Végétal", publisher: { "@id": "https://jungle.tibaldo.fr/#store" }, inLanguage: "fr-FR" },
+    { "@type": "WebSite", "@id": "https://jungle.tibaldo.fr/#website", url: "https://jungle.tibaldo.fr/", name: "Studio Végétal — Tibaldo Jungle", publisher: { "@id": "https://jungle.tibaldo.fr/#store" }, inLanguage: "fr-FR" },
     { "@type": "WebPage", "@id": "https://jungle.tibaldo.fr/#webpage", url: "https://jungle.tibaldo.fr/", name: "Boutique de plantes rares à Lille | Tibaldo Jungle", isPartOf: { "@id": "https://jungle.tibaldo.fr/#website" }, about: { "@id": "https://jungle.tibaldo.fr/#store" }, inLanguage: "fr-FR" },
   ],
 };

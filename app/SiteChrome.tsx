@@ -5,11 +5,11 @@ const FacebookIcon = () => <svg viewBox="0 0 24 24" aria-hidden="true"><path d="
 export function SiteHeader({ light = false }: { light?: boolean }) {
   return (
     <header className={`site-header shell${light ? " site-header-light" : ""}`}>
-      <a className="brand" href="/" aria-label="Tibaldo Jungle, accueil">
-        <img className="brand-logo" src="/tibaldo-jungle-logo.webp" alt="Tibaldo Jungle, Studio Végétal à Lille" width={72} height={72} />
+      <a className="brand" href="/" aria-label="Studio Végétal Tibaldo Jungle, accueil">
+        <img className="brand-logo" src="/tibaldo-jungle-logo.webp" alt="Studio Végétal Tibaldo Jungle à Lille" width={72} height={72} />
         <span className="brand-wordmark">
-          <strong><span>TIBALDO</span><em>Jungle</em></strong>
-          <small>Studio Végétal</small>
+          <strong><span>STUDIO VÉGÉTAL</span></strong>
+          <small>Tibaldo Jungle</small>
           <span className="brand-location">Lille</span>
         </span>
       </a>
@@ -58,9 +58,9 @@ export function SiteFooter() {
     <footer>
       <div className="shell footer-main" data-reveal>
         <div className="footer-brand">
-          <a className="brand footer-brand-mark" href="/" aria-label="Tibaldo Jungle, accueil">
-            <img className="brand-logo footer-logo" src="/tibaldo-jungle-logo.webp" alt="Tibaldo Jungle" width={120} height={120} />
-            <span className="brand-wordmark"><strong><span>TIBALDO</span><em>Jungle</em></strong><small>Studio Végétal</small></span>
+          <a className="brand footer-brand-mark" href="/" aria-label="Studio Végétal Tibaldo Jungle, accueil">
+            <img className="brand-logo footer-logo" src="/tibaldo-jungle-logo.webp" alt="Studio Végétal Tibaldo Jungle" width={120} height={120} />
+            <span className="brand-wordmark"><strong><span>STUDIO VÉGÉTAL</span></strong><small>Tibaldo Jungle</small></span>
           </a>
           <p>Plantes d’intérieur, plantes rares,<br />rempotage et substrats en vrac à Lille.</p>
         </div>
@@ -72,7 +72,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="shell footer-bottom" data-reveal>
-        <span>© 2026 Tibaldo Jungle · Studio Végétal · Lille</span>
+        <span>© 2026 Studio Végétal · Tibaldo Jungle · Lille</span>
         <span>Pruvost Romain EI · SIRET 518 102 603 00074 · TVA FR94 518 102 603 · RNE 518 102 603</span>
         <nav className="footer-legal" aria-label="Informations légales"><a className="footer-legal-primary" href="/conditions-generales-de-vente">Consulter les CGV</a><a href="/programme-fidelite">Fidélité</a><a href="/cartes-cadeaux">Cartes cadeaux</a><a href="/politique-confidentialite">Confidentialité</a><a href="/mentions-legales">Mentions légales</a><a href="/credits-images">Crédits photos</a></nav>
       </div>

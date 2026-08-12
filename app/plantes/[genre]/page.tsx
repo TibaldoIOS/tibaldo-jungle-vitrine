@@ -34,7 +34,7 @@ export default async function Page({ params }: Props) {
   const editorials = familyEditorials[genre as keyof typeof familyEditorials];
   const list = getPlantsByGenre(genre);
   const schema = [
-    { "@context": "https://schema.org", "@type": "Article", headline: `${guide.name} : guide de culture et variétés à Lille`, description: guide.lead, image: guide.image, author: { "@type": "Organization", name: "Tibaldo Jungle" }, publisher: { "@type": "LocalBusiness", name: "Tibaldo Jungle — Studio Végétal", address: { "@type": "PostalAddress", streetAddress: "3 place de l’Arbonnoise", postalCode: "59000", addressLocality: "Lille", addressCountry: "FR" } } },
+    { "@context": "https://schema.org", "@type": "Article", headline: `${guide.name} : guide de culture et variétés à Lille`, description: guide.lead, image: guide.image, author: { "@type": "Organization", name: "Studio Végétal — Tibaldo Jungle" }, publisher: { "@type": "LocalBusiness", name: "Studio Végétal — Tibaldo Jungle", alternateName: "Tibaldo Jungle", address: { "@type": "PostalAddress", streetAddress: "3 place de l’Arbonnoise", postalCode: "59000", addressLocality: "Lille", addressCountry: "FR" } } },
     { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: guide.faq.map((item) => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } })) },
   ];
   return <main className="editorial-page"><ScrollReveal />

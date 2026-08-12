@@ -3,7 +3,7 @@
 import { useState } from "react";
 import type { JungleEvent } from "@/lib/events/types";
 
-const blankEvent = (): JungleEvent => ({ id: "", slug: "", title: "", category: "atelier", status: "draft", startAt: "", endAt: null, venueName: "Tibaldo Jungle — Studio Végétal", address: "3 place de l’Arbonnoise", postalCode: "59000", city: "Lille", excerpt: "", description: "", program: [], faq: [], gallery: [], coverImage: "/opening-jungle.jpg", facebookUrl: null, instagramUrl: "https://www.instagram.com/tibaldojungle", mapsUrl: "https://www.google.com/maps/dir/?api=1&destination=3%20place%20de%20l%27Arbonnoise%2059000%20Lille", registrationUrl: null, videoUrl: null, seoTitle: "", seoDescription: "", seoKeywords: [], publishedAt: null, archivedAt: null, createdAt: "", updatedAt: "", sortOrder: 0 });
+const blankEvent = (): JungleEvent => ({ id: "", slug: "", title: "", category: "atelier", status: "draft", startAt: "", endAt: null, venueName: "Studio Végétal — Tibaldo Jungle", address: "3 place de l’Arbonnoise", postalCode: "59000", city: "Lille", excerpt: "", description: "", program: [], faq: [], gallery: [], coverImage: "/opening-jungle.jpg", facebookUrl: null, instagramUrl: "https://www.instagram.com/tibaldojungle", mapsUrl: "https://www.google.com/maps/dir/?api=1&destination=3%20place%20de%20l%27Arbonnoise%2059000%20Lille", registrationUrl: null, videoUrl: null, seoTitle: "", seoDescription: "", seoKeywords: [], publishedAt: null, archivedAt: null, createdAt: "", updatedAt: "", sortOrder: 0 });
 const localDate = (value: string | null) => value ? value.slice(0, 16) : "";
 const isoDate = (value: string | null) => value ? new Date(value).toISOString() : null;
 

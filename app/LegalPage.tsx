@@ -31,7 +31,7 @@ export default function LegalPage({ eyebrow, title, intro, updated, warning, sec
 }
 
 export const CompanyIdentity = () => <>
-  <p><strong>Pruvost Romain, Entrepreneur individuel</strong>, exerçant sous le nom commercial <strong>Tibaldo Jungle — Studio Végétal</strong>.</p>
+  <p><strong>Pruvost Romain, Entrepreneur individuel</strong>, exerçant sous le nom commercial <strong>Tibaldo Jungle</strong> et présenté sous la signature <strong>Studio Végétal — Tibaldo Jungle</strong>.</p>
   <ul><li>Adresse actuellement inscrite au RNE : 16 rue Voltaire, 59139 Wattignies</li><li>Boutique : 3 place de l’Arbonnoise, 59000 Lille</li><li>SIRET Tibaldo Jungle : 518 102 603 00074</li><li>SIREN / RNE : 518 102 603</li><li>TVA intracommunautaire : FR94 518 102 603</li><li>Téléphone : 07 43 72 70 79</li><li>E-mail : <a href="mailto:jungle@tibaldo.fr">jungle@tibaldo.fr</a></li></ul>
   <p>Ci-après désigné « Tibaldo Jungle » ou « le Vendeur ».</p>
 </>;

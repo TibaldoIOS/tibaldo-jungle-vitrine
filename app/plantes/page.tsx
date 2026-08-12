@@ -7,13 +7,13 @@ import PlantExplorer from "./PlantExplorer";
 export const metadata: Metadata = {
   title: "Plantes rares et d’intérieur à Lille | Tibaldo Jungle",
   description:
-    "Explorez les genres et espèces de plantes rares et d’intérieur documentés par Tibaldo Jungle, Studio Végétal à Lille.",
+    "Explorez les genres et espèces de plantes rares et d’intérieur documentés par Studio Végétal Tibaldo Jungle à Lille.",
   alternates: { canonical: "/plantes" },
   openGraph: {
     type: "website",
     locale: "fr_FR",
     url: "/plantes",
-    siteName: "Tibaldo Jungle — Studio Végétal",
+    siteName: "Studio Végétal — Tibaldo Jungle",
     title: "Encyclopédie des plantes rares et d’intérieur à Lille",
     description: "Recherchez une plante par son nom, sa famille botanique ou ses besoins et consultez les guides Tibaldo Jungle.",
     images: [{ url: "/alocasia-imperial-red.png", width: 1024, height: 1536, alt: "Encyclopédie végétale Tibaldo Jungle à Lille" }],
