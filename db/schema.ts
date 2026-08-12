@@ -51,3 +51,7 @@ export const flowerQuoteRequests = sqliteTable("flower_quote_requests", {
   consentAt: text("consent_at").notNull(),
   createdAt: text("created_at").notNull(),
 });
+
+export const conversionEvents = sqliteTable("conversion_events", {
+  id: text("id").primaryKey(), action: text("action").notNull(), path: text("path").notNull(), target: text("target"), createdAt: text("created_at").notNull(),
+});

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ConversionDock from "./ConversionDock";
+import ConversionTracker from "./ConversionTracker";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -81,6 +82,7 @@ export default function RootLayout({
         <a className="skip-link" href="#contenu-principal">Aller au contenu principal</a>
         <div id="contenu-principal" tabIndex={-1}>{children}</div>
         <ConversionDock />
+        <ConversionTracker />
       </body>
     </html>
   );

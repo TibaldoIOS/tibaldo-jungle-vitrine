@@ -1,0 +1,3 @@
+import { getDb } from "@/db";import { conversionEvents } from "@/db/schema";
+const allowed=new Set(["sos","route","shop","email","facebook","quote"]);const clean=(value:unknown,max:number)=>typeof value==="string"?value.trim().slice(0,max):"";
+export async function POST(request:Request){try{const body=await request.json() as Record<string,unknown>;const action=clean(body.action,40);if(!allowed.has(action))return Response.json({error:"Action invalide."},{status:400});await(await getDb()).insert(conversionEvents).values({id:crypto.randomUUID(),action,path:clean(body.path,300)||"/",target:clean(body.target,500)||null,createdAt:new Date().toISOString()});return Response.json({ok:true})}catch{return Response.json({error:"Événement non enregistré."},{status:500})}}
