@@ -39,7 +39,7 @@ export async function GET() {
       frequency: "weekly" as const,
       priority: index === 1 ? 0.9 : 0.8,
     })),
-    ...["boutique-plantes-lille", "rempotage-plantes-lille", "substrats-en-vrac-lille", "fleurs-sur-commande-lille", "fleurs-mariage-lille", "fleurs-evenement-lille", "livraison-fleurs-coupees-lille", "sos-plantes", "conseils"].map((path) => ({ path: `/${path}`, modified: "2026-08-12", frequency: "weekly" as const, priority: 0.9 })),
+    ...["boutique-plantes-lille", "rempotage-plantes-lille", "substrats-en-vrac-lille", "fleurs-sur-commande-lille", "fleurs-mariage-lille", "fleurs-evenement-lille", "livraison-fleurs-coupees-lille", "livraison-plantes-lille", "bouquets-fleurs-livraison-lille", "sos-plantes", "conseils"].map((path) => ({ path: `/${path}`, modified: "2026-08-12", frequency: "weekly" as const, priority: 0.9 })),
     ...["diagnostic-plante-lille", "traitement-thrips-lille", "rempotage-monstera-lille", "substrat-alocasia-lille"].map((path) => ({ path: `/${path}`, modified: "2026-08-12", frequency: "monthly" as const, priority: 0.88 })),
     ...["feuilles-jaunes-plantes-interieur", "thrips-plantes-interieur-lille", "arroser-plantes-interieur", "choisir-substrat-plante-interieur"].map((path) => ({ path: `/conseils/${path}`, modified: "2026-08-12", frequency: "monthly" as const, priority: 0.82 })),
     ...featuredFlowerSlugs.map((slug) => ({ path: `/fleurs/${slug}`, modified: "2026-08-12", frequency: "monthly" as const, priority: 0.85 })),

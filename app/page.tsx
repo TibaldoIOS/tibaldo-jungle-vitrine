@@ -62,7 +62,7 @@ export default function Home() {
         <div className="shell home-service-list">
           <a href="/rempotage" data-reveal><span>01</span><h3>SOS Rempotage</h3><p>Diagnostic, racines, pot et substrat : trouvez la bonne solution pour votre plante.</p><Arrow /></a>
           <a href="/services" className="reveal-delay-1" data-reveal><span>02</span><h3>Diagnostic</h3><p>Comprendre une plante qui jaunit, ralentit ou semble en difficulté.</p><Arrow /></a>
-          <a href="/services" className="reveal-delay-2" data-reveal><span>03</span><h3>Projets végétaux</h3><p>Des compositions naturelles pour maisons et espaces professionnels.</p><Arrow /></a>
+          <a href="/livraison-plantes-lille" className="reveal-delay-2" data-reveal><span>03</span><h3>Livraison végétale</h3><p>Plantes d’intérieur, grands sujets et commandes florales livrés à Lille sur devis.</p><Arrow /></a>
         </div>
       </section>
 
