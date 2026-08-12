@@ -38,6 +38,7 @@ export async function GET() {
       frequency: "weekly" as const,
       priority: index === 1 ? 0.9 : 0.8,
     })),
+    ...["boutique-plantes-lille", "rempotage-plantes-lille", "substrats-en-vrac-lille"].map((path) => ({ path: `/${path}`, modified: "2026-08-12", frequency: "weekly" as const, priority: 0.9 })),
     ...Object.keys(familyGuides).map((genre) => ({ path: `/plantes/${genre}`, modified: "2026-08-06", frequency: "monthly" as const, priority: 0.8 })),
     ...Array.from(new Set(plants.map((plant) => plant.taxonomy.family.toLowerCase()))).map((family) => ({ path: `/plantes/famille/${family}`, modified: "2026-08-07", frequency: "monthly" as const, priority: 0.75 })),
     ...plants.map((plant) => ({ path: `/plantes/${plant.genre}/${plant.slug}`, modified: plant.updatedAt, frequency: "monthly" as const, priority: 0.85 })),
