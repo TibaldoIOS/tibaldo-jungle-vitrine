@@ -334,6 +334,41 @@ img[data-parallax] { transform: translate3d(0, var(--parallax-y), 0) scale(1.08)
 .opening-socials { display: flex; gap: 12px; flex-wrap: wrap; }
 
 .repotting-hero .inner-hero-texture { background: linear-gradient(110deg, rgba(7,40,28,.35), rgba(7,40,28,.05)), url("/advice-rempotage.jpg") center 43%/cover; }
+.flowers-hero .inner-hero-texture { background: radial-gradient(circle at 77% 22%, rgba(255,196,187,.38), transparent 21%), radial-gradient(circle at 66% 65%, rgba(196,107,127,.35), transparent 23%), linear-gradient(125deg, #082b20 0%, #315944 52%, #b99283 100%); }
+.flowers-intro { display: grid; grid-template-columns: .9fr 1.1fr; gap: 95px; padding-top: 120px; padding-bottom: 120px; }
+.flowers-intro h2, .flowers-options h2 { margin: 18px 0 0; color: var(--forest); font: 400 clamp(48px, 5vw, 74px)/.98 Georgia, serif; letter-spacing: -.045em; }
+.flowers-intro h2 em, .flowers-options h2 em { color: #a56f72; font-weight: 400; }
+.flowers-intro > div { padding-top: 42px; }
+.flowers-intro > div p { margin: 0 0 22px; color: #56635b; font: 400 17px/1.85 Georgia, serif; }
+.flowers-intro > div strong { display: block; padding: 22px 0 0; border-top: 1px solid rgba(21,59,44,.2); color: var(--forest); font-size: 13px; line-height: 1.7; }
+.flowers-steps { background: #e9dfd8; }
+.flowers-steps .shell { display: grid; grid-template-columns: repeat(3, 1fr); }
+.flowers-steps article { min-height: 300px; padding: 38px 32px; border-right: 1px solid rgba(21,59,44,.18); }
+.flowers-steps article:first-child { border-left: 1px solid rgba(21,59,44,.18); }
+.flowers-steps span { color: #a56f72; font: italic 13px Georgia, serif; }
+.flowers-steps h2 { margin: 70px 0 16px; color: var(--forest); font: 400 30px Georgia, serif; }
+.flowers-steps p, .flowers-options article p { color: #637068; font-size: 13px; line-height: 1.8; }
+.flowers-options { display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; padding-top: 120px; padding-bottom: 120px; }
+.flowers-options > div:last-child { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid rgba(21,59,44,.2); border-bottom: 1px solid rgba(21,59,44,.2); }
+.flowers-options article { min-height: 340px; padding: 34px 30px; border-right: 1px solid rgba(21,59,44,.2); }
+.flowers-options article:first-child { border-left: 1px solid rgba(21,59,44,.2); }
+.flowers-options article > span { color: #a56f72; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; }
+.flowers-options h3 { margin: 75px 0 18px; color: var(--forest); font: 400 28px Georgia, serif; }
+.flowers-notice { padding: 100px 0; background: #a56f72; color: #fff; }
+.flowers-notice .shell { display: grid; grid-template-columns: .45fr 1fr 1fr auto; gap: 38px; align-items: center; }
+.flowers-notice p { margin: 0; font-size: 10px; letter-spacing: .15em; text-transform: uppercase; }
+.flowers-notice h2 { margin: 0; font: 400 38px Georgia, serif; }
+.flowers-notice span { color: rgba(255,255,255,.75); font-size: 13px; line-height: 1.75; }
+.flowers-faq { padding-bottom: 120px; }
+
+@media (max-width: 780px) {
+  .flowers-intro, .flowers-options { grid-template-columns: 1fr; gap: 44px; padding-top: 78px; padding-bottom: 82px; }
+  .flowers-intro > div { padding-top: 0; }
+  .flowers-steps .shell, .flowers-options > div:last-child { grid-template-columns: 1fr; }
+  .flowers-steps article, .flowers-steps article:first-child, .flowers-options article, .flowers-options article:first-child { min-height: 230px; border-left: 0; border-right: 0; border-bottom: 1px solid rgba(21,59,44,.18); }
+  .flowers-steps h2, .flowers-options h3 { margin-top: 45px; }
+  .flowers-notice .shell { grid-template-columns: 1fr; }
+}
 .repotting-diagnosis { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(55px,8vw,130px); padding-top: 120px; padding-bottom: 125px; }
 .repotting-heading h2, .repotting-process h2, .repotting-note h2 { margin: 18px 0 24px; color: var(--forest); font: 400 clamp(48px,5vw,76px)/.96 Georgia,serif; letter-spacing: -.05em; }
 .repotting-heading > p:last-child { max-width: 430px; color: #657169; font-size: 14px; line-height: 1.8; }
