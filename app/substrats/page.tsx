@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
-import { substrates } from "./data";
+import { featuredSubstrateSlugs, substrates, substrateProfiles } from "./data";
 
 export const metadata: Metadata = {
   title: "Guide des substrats pour plantes | Tibaldo Jungle",
@@ -36,7 +36,7 @@ const structuredData = {
     {
       "@type": "ItemList",
       "@id": "https://jungle.tibaldo.fr/substrats#list",
-      name: "Composants de substrat disponibles en vrac",
+      name: "Composants de substrat et amendements horticoles",
       numberOfItems: substrates.length,
       itemListElement: substrates.map((item, index) => ({ "@type": "ListItem", position: index + 1, name: item.name })),
     },
@@ -98,7 +98,7 @@ export default function SubstratesPage() {
                   <div><dt>Usages</dt><dd>{item.uses}</dd></div>
                   <div><dt>Pour quelles plantes ?</dt><dd>{item.plants}</dd></div>
                 </dl>
-                <div className="material-price"><span>Tarif</span><strong>Bientôt disponible au Studio</strong><small>Vendu au volume · quantité au choix</small></div>
+                {featuredSubstrateSlugs.includes(item.slug as (typeof featuredSubstrateSlugs)[number]) ? <><div className="material-price"><span>Disponibilité</span><strong>{substrateProfiles[item.slug as keyof typeof substrateProfiles].statusLabel}</strong><small>Conditionnement et tarif affichés prochainement</small></div><a className="material-discover" href={`/substrats/${item.slug}`}>Découvrir le guide complet <Arrow /></a></> : <div className="material-price"><span>Collection</span><strong>Fiche détaillée à venir</strong><small>La matériauthèque continue de s’enrichir</small></div>}
               </div>
             </article>
           ))}

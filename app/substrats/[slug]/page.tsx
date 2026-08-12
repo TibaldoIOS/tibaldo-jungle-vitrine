@@ -1,0 +1,55 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import ScrollReveal from "../../ScrollReveal";
+import { Arrow, SiteFooter, SiteHeader } from "../../SiteChrome";
+import { featuredSubstrateSlugs, substrateProfiles } from "../data";
+
+const origin = "https://jungle.tibaldo.fr";
+
+export function generateStaticParams() {
+  return featuredSubstrateSlugs.map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const profile = substrateProfiles[slug as keyof typeof substrateProfiles];
+  if (!profile) return {};
+  const canonical = `/substrats/${profile.slug}`;
+  return {
+    title: `${profile.shortName} à Lille : usages et conseils | Tibaldo Jungle`,
+    description: profile.seoDescription,
+    alternates: { canonical },
+    keywords: [`${profile.shortName} Lille`, `${profile.shortName} plantes`, `substrat plantes Lille`, "Studio Végétal Lille"],
+    openGraph: { type: "article", locale: "fr_FR", url: canonical, siteName: "Studio Végétal — Tibaldo Jungle", title: `${profile.shortName} pour plantes à Lille`, description: profile.seoDescription, images: [{ url: "/advice-rempotage.jpg", width: 1200, height: 630, alt: `${profile.shortName} pour plantes d’intérieur chez Tibaldo Jungle à Lille` }] },
+    twitter: { card: "summary_large_image", title: `${profile.shortName} pour plantes à Lille`, description: profile.seoDescription, images: ["/advice-rempotage.jpg"] },
+  };
+}
+
+export default async function SubstrateProfilePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const profile = substrateProfiles[slug as keyof typeof substrateProfiles];
+  if (!profile) notFound();
+  const url = `${origin}/substrats/${profile.slug}`;
+  const schema = { "@context": "https://schema.org", "@graph": [
+    { "@type": "Article", "@id": `${url}#article`, headline: `${profile.shortName} pour plantes à Lille : usages et conseils`, description: profile.seoDescription, mainEntityOfPage: url, inLanguage: "fr-FR", author: { "@type": "Organization", name: "Studio Végétal — Tibaldo Jungle", url: origin }, publisher: { "@id": `${origin}/#store` }, about: profile.name },
+    { "@type": "FAQPage", "@id": `${url}#faq`, mainEntity: profile.faq.map((item) => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } })) },
+    { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Accueil", item: `${origin}/` }, { "@type": "ListItem", position: 2, name: "Substrats", item: `${origin}/substrats` }, { "@type": "ListItem", position: 3, name: profile.shortName, item: url }] },
+  ] };
+
+  return <main className={`editorial-page substrate-detail substrate-detail-${profile.slug}`}>
+    <ScrollReveal />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+    <section className="inner-hero substrate-detail-hero">
+      <div className="inner-hero-texture" aria-hidden="true" /><div className="inner-hero-shade" aria-hidden="true" /><SiteHeader />
+      <div className="shell inner-hero-content"><a className="family-genre-breadcrumb" href="/substrats">Substrats <span>→</span> {profile.shortName}</a><p className="eyebrow"><span /> {profile.eyebrow}</p><h1><span className="hero-line"><span>{profile.title}</span></span><span className="hero-line"><span><em>{profile.accent}</em></span></span></h1><p>{profile.intro}</p><a className="button button-light" href="#guide">Comprendre ce composant <Arrow /></a></div>
+      <div className="shell substrate-availability"><span className={profile.status === "available" ? "is-available" : "is-soon"} /> <strong>{profile.statusLabel}</strong><small>3 place de l’Arbonnoise · Lille</small></div>
+    </section>
+    <section className="shell substrate-detail-intro" id="guide" data-reveal><div><p className="section-kicker">Son rôle dans le pot</p><h2>Un composant,<br /><em>un équilibre précis.</em></h2></div><p>{profile.role}</p></section>
+    <section className="substrate-detail-strengths"><div className="shell"><header data-reveal><p className="section-kicker">Ce qu’il apporte</p><h2>Lire la matière<br />avant de la mélanger.</h2></header><div className="substrate-strength-grid">{profile.strengths.map((item, index) => <article key={item.title} data-reveal><span>0{index + 1}</span><h3>{item.title}</h3><p>{item.copy}</p></article>)}</div></div></section>
+    <section className="shell substrate-detail-methods"><header data-reveal><p className="section-kicker">Gestes du Studio</p><h2>Comment utiliser<br />{profile.shortName.toLowerCase()}.</h2></header><div>{profile.methods.map((item) => <article key={item.title} data-reveal><h3>{item.title}</h3><p>{item.copy}</p></article>)}</div></section>
+    <section className="substrate-detail-guide"><div className="shell substrate-detail-guide-grid"><div data-reveal><p className="section-kicker">Pour quelles plantes ?</p><h2>Une matière choisie<br /><em>selon les racines.</em></h2><ul>{profile.suitableFor.map((plant) => <li key={plant}>{plant}</li>)}</ul></div><aside data-reveal><span>À garder en tête</span>{profile.cautions.map((caution) => <p key={caution}>{caution}</p>)}</aside></div></section>
+    <section className="shell local-seo-faq flowers-faq"><header data-reveal><p className="section-kicker">Questions fréquentes</p><h2>Bien utiliser {profile.shortName.toLowerCase()}.</h2></header>{profile.faq.map((item) => <details key={item.question} data-reveal><summary>{item.question}<span>+</span></summary><p>{item.answer}</p></details>)}</section>
+    <nav className="shell flower-service-link" data-reveal><a href="/substrats">Explorer toute la matériauthèque <span>↗</span></a><a href="/substrats-en-vrac-lille">Substrats en vrac à Lille <span>↗</span></a></nav>
+    <SiteFooter />
+  </main>;
+}

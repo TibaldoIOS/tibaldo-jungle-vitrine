@@ -3,6 +3,7 @@ import { listPublicEvents } from "@/lib/events/repository";
 import { plants } from "@/lib/plants/catalog";
 import { featuredFlowerSlugs } from "@/lib/flowers/catalog";
 import { familyGuides } from "@/lib/plants/family-guides";
+import { featuredSubstrateSlugs } from "@/app/substrats/data";
 
 export const dynamic = "force-dynamic";
 
@@ -43,6 +44,7 @@ export async function GET() {
     ...["diagnostic-plante-lille", "traitement-thrips-lille", "rempotage-monstera-lille", "substrat-alocasia-lille"].map((path) => ({ path: `/${path}`, modified: "2026-08-12", frequency: "monthly" as const, priority: 0.88 })),
     ...["feuilles-jaunes-plantes-interieur", "thrips-plantes-interieur-lille", "arroser-plantes-interieur", "choisir-substrat-plante-interieur"].map((path) => ({ path: `/conseils/${path}`, modified: "2026-08-12", frequency: "monthly" as const, priority: 0.82 })),
     ...featuredFlowerSlugs.map((slug) => ({ path: `/fleurs/${slug}`, modified: "2026-08-12", frequency: "monthly" as const, priority: 0.85 })),
+    ...featuredSubstrateSlugs.map((slug) => ({ path: `/substrats/${slug}`, modified: "2026-08-12", frequency: "monthly" as const, priority: 0.88 })),
     ...Object.keys(familyGuides).map((genre) => ({ path: `/plantes/${genre}`, modified: "2026-08-06", frequency: "monthly" as const, priority: 0.8 })),
     ...Array.from(new Set(plants.map((plant) => plant.taxonomy.family.toLowerCase()))).map((family) => ({ path: `/plantes/famille/${family}`, modified: "2026-08-07", frequency: "monthly" as const, priority: 0.75 })),
     ...plants.map((plant) => ({ path: `/plantes/${plant.genre}/${plant.slug}`, modified: plant.updatedAt, frequency: "monthly" as const, priority: 0.85 })),
