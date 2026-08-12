@@ -4,8 +4,8 @@ import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 import { substrates } from "./data";
 
 export const metadata: Metadata = {
-  title: "Substrats en vrac à Lille | Terreau, perlite, sphaigne",
-  description: "Substrats en vrac à Lille : terreau, perlite, sphaigne, écorce, pierre ponce et zéolite. Conseils et mélanges sur mesure chez Tibaldo Jungle.",
+  title: "Guide des substrats pour plantes | Tibaldo Jungle",
+  description: "Comprendre terreau, perlite, sphaigne, écorce, pierre ponce et zéolite pour composer un substrat adapté à chaque plante d’intérieur.",
   alternates: { canonical: "/substrats" },
   keywords: ["substrats en vrac Lille", "terreau Lille", "perlite Lille", "sphaigne Lille", "écorce de pin Lille", "pierre ponce Lille", "zéolite Lille"],
   openGraph: {
@@ -13,8 +13,8 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "/substrats",
     siteName: "Studio Végétal — Tibaldo Jungle",
-    title: "Substrats en vrac à Lille | Tibaldo Jungle",
-    description: "Composez le mélange juste pour vos plantes : dix composants en vrac, des conseils experts et la quantité dont vous avez réellement besoin.",
+    title: "Guide des substrats pour plantes | Tibaldo Jungle",
+    description: "Découvrez le rôle de dix composants et apprenez à composer un mélange adapté aux racines de vos plantes d’intérieur.",
     images: [{ url: "/advice-rempotage.jpg", width: 1200, height: 630, alt: "Substrats et rempotage pour plantes d’intérieur à Lille" }],
   },
 };
@@ -120,6 +120,9 @@ export default function SubstratesPage() {
           <a href="/contact"><span>À Lille</span><strong>Venir au<br />Studio Végétal</strong><Arrow /></a>
         </div>
       </section>
+      <nav className="shell flower-service-link" data-reveal>
+        <a href="/substrats-en-vrac-lille">Acheter des substrats en vrac à Lille <span>↗</span></a>
+      </nav>
       <SiteFooter />
     </main>
   );

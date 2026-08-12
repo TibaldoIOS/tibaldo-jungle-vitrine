@@ -3,8 +3,8 @@ import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 
 export const metadata: Metadata = {
-  title: "Bar à rempotage gratuit à Lille | Tibaldo Jungle",
-  description: "Bar à rempotage gratuit à Lille : diagnostic des racines, choix du substrat et conseils personnalisés chez Studio Végétal Tibaldo Jungle.",
+  title: "Guide du rempotage des plantes | Tibaldo Jungle",
+  description: "Quand et comment rempoter une plante d’intérieur : signes à observer, diagnostic des racines, choix du pot et composition du substrat.",
   alternates: { canonical: "/rempotage" },
 };
 
@@ -28,6 +28,7 @@ export default function RepottingPage() {
     </section>
     <section className="repotting-process"><div className="shell"><p className="section-kicker" data-reveal>Au Studio Végétal</p><h2 data-reveal>Observer. Composer.<br /><em>Faire repartir.</em></h2><div className="repotting-steps"><p data-reveal><strong>01 · Diagnostic</strong>Nous vérifions la motte, les racines, l’humidité et la stabilité de la plante.</p><p data-reveal><strong>02 · Mélange sur mesure</strong>Le substrat est ajusté à l’espèce, à votre lumière et à vos habitudes d’arrosage.</p><p data-reveal><strong>03 · Conseils de reprise</strong>Vous repartez avec des gestes simples pour l’arrosage et les semaines suivantes.</p></div><div className="repotting-free-note"><strong>Le rempotage est offert.</strong><span>Le terreau, les composants et le nouveau pot restent facturés lorsqu’ils sont fournis par le Studio.</span></div><a className="button button-light" href="/contact">Venir au Studio <Arrow /></a></div></section>
     <section className="repotting-note shell" data-reveal><img src="/advice-rempotage.jpg" alt="Rempotage et diagnostic des racines au Studio Végétal Tibaldo Jungle à Lille" width="1200" height="1800" /><div><p className="section-kicker">Le bon réflexe</p><h2>Venez avec votre plante.</h2><p>Si elle est volumineuse, envoyez-nous d’abord une photo du feuillage, du pot et des racines visibles. Nous pourrons préparer votre passage.</p><a className="button button-green" href="mailto:jungle@tibaldo.fr?subject=SOS%20Rempotage">Envoyer des photos <Arrow /></a><p className="repotting-local-links"><a href="/rempotage-monstera-lille">Rempotage Monstera à Lille ↗</a><a href="/diagnostic-plante-lille">Diagnostic de plante à Lille ↗</a></p></div></section>
+    <nav className="shell flower-service-link" data-reveal><a href="/rempotage-plantes-lille">Découvrir le service de rempotage à Lille <span>↗</span></a></nav>
     <SiteFooter />
   </main>;
 }
