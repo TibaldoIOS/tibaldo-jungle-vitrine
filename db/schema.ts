@@ -32,3 +32,22 @@ export const events = sqliteTable("events", {
   updatedAt: text("updated_at").notNull(),
   sortOrder: integer("sort_order").notNull().default(0),
 });
+
+export const flowerQuoteRequests = sqliteTable("flower_quote_requests", {
+  id: text("id").primaryKey(),
+  status: text("status").notNull().default("new"),
+  firstName: text("first_name").notNull(),
+  lastName: text("last_name").notNull(),
+  email: text("email").notNull(),
+  phone: text("phone"),
+  eventType: text("event_type").notNull(),
+  eventDate: text("event_date"),
+  city: text("city").notNull(),
+  fulfillment: text("fulfillment").notNull(),
+  budget: text("budget"),
+  colors: text("colors"),
+  flowerSlugs: text("flower_slugs").notNull().default(""),
+  message: text("message").notNull(),
+  consentAt: text("consent_at").notNull(),
+  createdAt: text("created_at").notNull(),
+});

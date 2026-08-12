@@ -11,6 +11,9 @@ export type FlowerEntry = {
   vaseLife: string;
   description: string;
   pairing: string[];
+  symbolism?: string;
+  care?: string[];
+  faq?: { question: string; answer: string }[];
 };
 
 export const flowers: FlowerEntry[] = [
@@ -51,3 +54,15 @@ export const flowers: FlowerEntry[] = [
 })) as FlowerEntry[];
 
 export const getFlower = (slug: string) => flowers.find((flower) => flower.slug === slug);
+
+const details: Record<string, Pick<FlowerEntry, "symbolism" | "pairing" | "care" | "faq">> = {
+  rose: { symbolism: "Amour, gratitude, douceur ou engagement selon les nuances choisies.", pairing: ["Lisianthus", "Gypsophile", "Eucalyptus"], care: ["Recouper les tiges en biais avec un outil propre.", "Retirer les feuilles qui seraient immergées.", "Renouveler l’eau régulièrement et tenir loin d’une forte chaleur."], faq: [{ question: "Peut-on commander des roses toute l’année à Lille ?", answer: "Les roses sont généralement accessibles toute l’année, mais les variétés, couleurs, longueurs et tarifs dépendent des arrivages professionnels." }, { question: "Quelles roses choisir pour un mariage ?", answer: "Le choix dépend du style recherché : rose de jardin pour un rendu romantique, grande fleur pour une ligne élégante ou petites roses branchues pour plus de mouvement." }] },
+  pivoine: { symbolism: "Bonheur, générosité et sentiments sincères.", pairing: ["Rose", "Pois de senteur", "Eucalyptus"], care: ["Choisir des boutons souples qui commencent à montrer leur couleur.", "Prévoir un vase propre et suffisamment large.", "Éviter le soleil direct et les pièces surchauffées."], faq: [{ question: "Quelle est la saison des pivoines ?", answer: "La pleine saison se concentre principalement au printemps et au début de l’été. Les dates varient selon les productions et la météo." }, { question: "Peut-on garantir une pivoine précise ?", answer: "Une variété ou nuance est demandée au fournisseur, mais elle n’est confirmée qu’après vérification de l’arrivage disponible." }] },
+  gypsophile: { symbolism: "Légèreté, tendresse et amour durable.", pairing: ["Rose", "Renoncule", "Eucalyptus"], care: ["Conserver les tiges dans une eau peu profonde et propre.", "Éviter l’humidité excessive sur les petites fleurs.", "Faire sécher tête en bas pour prolonger son usage décoratif."], faq: [{ question: "Où commander du gypsophile à Lille ?", answer: "Tibaldo Jungle peut rechercher du gypsophile blanc ou coloré sur commande, puis préparer un retrait au Studio ou une livraison sur devis." }, { question: "Combien de gypsophile prévoir pour un mariage ?", answer: "La quantité dépend du nombre de tables, du volume souhaité et de l’utilisation en bouquet ou en arche. Elle est estimée dans le devis." }] },
+  hortensia: { symbolism: "Abondance, reconnaissance et émotion sincère.", pairing: ["Rose", "Dahlia", "Ruscus"], care: ["Recouper franchement les tiges ligneuses.", "Maintenir une eau fraîche et abondante.", "Brumiser légèrement la tête si elle montre des signes de déshydratation."], faq: [{ question: "L’hortensia coupé tient-il bien en vase ?", answer: "Avec une bonne hydratation et des tiges fraîchement recoupées, sa tenue est intéressante. Les fleurs peuvent aussi évoluer vers un joli séchage." }, { question: "Quelles couleurs peut-on commander ?", answer: "Blanc, vert, rose, bleu ou nuances automnales peuvent être recherchés, selon la période et les arrivages." }] },
+  renoncule: { symbolism: "Charme, délicatesse et admiration.", pairing: ["Anémone", "Tulipe", "Pois de senteur"], care: ["Utiliser peu d’eau mais la renouveler souvent.", "Soutenir les tiges si elles deviennent très courbes.", "Éloigner des fruits mûrs et des sources de chaleur."], faq: [{ question: "Quand commander des renoncules à Lille ?", answer: "Elles sont surtout proposées en hiver et au printemps. Une demande anticipée améliore les possibilités de couleur et de quantité." }, { question: "Les renoncules conviennent-elles aux centres de table ?", answer: "Oui. Leur forme ronde et leur hauteur modérée sont particulièrement adaptées aux compositions de table romantiques ou naturelles." }] },
+};
+
+for (const flower of flowers) Object.assign(flower, details[flower.slug] ?? {});
+
+export const featuredFlowerSlugs = ["rose", "pivoine", "gypsophile", "hortensia", "renoncule"] as const;
