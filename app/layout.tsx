@@ -77,7 +77,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <a className="skip-link" href="#contenu-principal">Aller au contenu principal</a>
+        <div id="contenu-principal" tabIndex={-1}>{children}</div>
       </body>
     </html>
   );

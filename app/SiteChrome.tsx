@@ -65,7 +65,7 @@ export function SiteFooter() {
           <p>Plantes d’intérieur, plantes rares,<br />rempotage et substrats en vrac à Lille.</p>
         </div>
         <div className="footer-links">
-          <div><span>Explorer</span><a href="/plantes">Plantes</a><a href="/substrats">Substrats en vrac</a><a href="/rempotage">Rempotage</a><a href="/evenements">Événements</a><a href="/services">Nos services</a></div>
+          <div><span>Explorer</span><a href="/boutique-plantes-lille">Boutique plantes Lille</a><a href="/plantes">Plantes</a><a href="/substrats-en-vrac-lille">Substrats en vrac Lille</a><a href="/rempotage-plantes-lille">Rempotage Lille</a><a href="/evenements">Événements</a><a href="/services">Nos services</a></div>
           <div className="social-links"><span>Nous suivre</span><a href="https://www.instagram.com/tibaldojungle" target="_blank" rel="noreferrer">Instagram</a><a href="https://www.facebook.com/tibaldojungle" target="_blank" rel="noreferrer">Facebook</a></div>
           <div><span>Horaires</span><p>Mardi–samedi<br />10h–19h<br />Dimanche · 10h–13h</p></div>
           <div><span>Venir & écrire</span><p>3 place de l’Arbonnoise<br />59000 Lille<br /><a href="tel:+33743727079">07 43 72 70 79</a></p><a className="footer-email" href="mailto:jungle@tibaldo.fr">jungle@tibaldo.fr</a></div>
