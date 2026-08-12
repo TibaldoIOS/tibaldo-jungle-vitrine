@@ -35,9 +35,9 @@ export default function ContactPage() {
         <div className="gps-chooser" id="itineraire">
           <p><span>Itinéraire GPS</span><strong>Ouvrir avec votre application préférée</strong></p>
           <div className="gps-options">
-            <a href={gpsLinks.google} target="_blank" rel="noreferrer" aria-label="Ouvrir l’itinéraire vers Tibaldo Jungle dans Google Maps"><span>G</span>Google Maps <Arrow /></a>
-            <a href={gpsLinks.apple} target="_blank" rel="noreferrer" aria-label="Ouvrir l’itinéraire vers Tibaldo Jungle dans Plans Apple"><span></span>Plans <Arrow /></a>
-            <a href={gpsLinks.waze} target="_blank" rel="noreferrer" aria-label="Ouvrir l’itinéraire vers Tibaldo Jungle dans Waze"><span>W</span>Waze <Arrow /></a>
+            <a data-action="route" href={gpsLinks.google} target="_blank" rel="noreferrer" aria-label="Ouvrir l’itinéraire vers Tibaldo Jungle dans Google Maps"><span>G</span>Google Maps <Arrow /></a>
+            <a data-action="route" href={gpsLinks.apple} target="_blank" rel="noreferrer" aria-label="Ouvrir l’itinéraire vers Tibaldo Jungle dans Plans Apple"><span></span>Plans <Arrow /></a>
+            <a data-action="route" href={gpsLinks.waze} target="_blank" rel="noreferrer" aria-label="Ouvrir l’itinéraire vers Tibaldo Jungle dans Waze"><span>W</span>Waze <Arrow /></a>
           </div>
         </div>
       </div>

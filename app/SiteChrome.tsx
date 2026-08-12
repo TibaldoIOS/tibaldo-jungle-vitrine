@@ -54,7 +54,7 @@ export function SiteHeader({ light = false }: { light?: boolean }) {
           <a href="https://www.instagram.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Instagram Tibaldo Jungle"><InstagramIcon /></a>
           <a href="https://www.facebook.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Facebook Tibaldo Jungle"><FacebookIcon /></a>
         </div>
-        <a className="header-cta" href="/contact">Nous trouver <Arrow /></a>
+        <a className="header-cta" data-action="route" href="/contact">Nous trouver <Arrow /></a>
       </div>
     </header>
   );

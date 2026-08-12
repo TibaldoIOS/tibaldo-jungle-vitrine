@@ -41,7 +41,7 @@ export default function Home() {
           <p className="eyebrow"><span /> Nouvelle boutique · Lille</p>
           <h1 aria-label="Plantes rares et exotiques à Lille"><span className="hero-line" aria-hidden="true"><span>Plantes rares</span></span><span className="hero-line" aria-hidden="true"><span>&amp; exotiques <em>à Lille.</em></span></span></h1>
           <p className="hero-copy">Studio Végétal Tibaldo Jungle réunit à Lille plantes rares, culture locale et conseils sincères.</p>
-          <div className="hero-actions"><a className="button button-light" href="/plantes">Découvrir les plantes <Arrow /></a><a className="hero-shop-link" href="https://shop.tibaldo.fr">Voir la boutique en ligne <Arrow /></a></div>
+          <div className="hero-actions"><a className="button button-light" href="/plantes">Découvrir les plantes <Arrow /></a><a className="hero-shop-link" data-action="shop" href="https://shop.tibaldo.fr">Voir la boutique en ligne <Arrow /></a></div>
         </div>
       </section>
 
@@ -64,6 +64,11 @@ export default function Home() {
           <a href="/services" className="reveal-delay-1" data-reveal><span>02</span><h3>Diagnostic</h3><p>Comprendre une plante qui jaunit, ralentit ou semble en difficulté.</p><Arrow /></a>
           <a href="/services" className="reveal-delay-2" data-reveal><span>03</span><h3>Projets végétaux</h3><p>Des compositions naturelles pour maisons et espaces professionnels.</p><Arrow /></a>
         </div>
+      </section>
+
+      <section className="home-conversion-hub shell" aria-label="Préparer votre visite ou votre projet" data-reveal>
+        <header><p className="section-kicker">Comment pouvons-nous vous aider ?</p><h2>Une visite, un diagnostic<br /><em>ou un projet floral.</em></h2></header>
+        <div><a href="/contact" data-action="route"><span>01 · Venir au Studio</span><strong>Adresse, horaires et GPS</strong><Arrow /></a><a href="/diagnostic-plante-lille" data-action="sos"><span>02 · Sauver une plante</span><strong>Demander un diagnostic</strong><Arrow /></a><a href="/fleurs#demande-devis" data-action="quote"><span>03 · Préparer un événement</span><strong>Composer une demande de devis</strong><Arrow /></a><a href="https://shop.tibaldo.fr" data-action="shop"><span>04 · Acheter en ligne</span><strong>Voir la boutique</strong><Arrow /></a></div>
       </section>
 
       <section className="home-values shell" data-reveal>
