@@ -36,6 +36,7 @@ a { color: inherit; text-decoration: none; }
 .footer-logo { width: 120px; height: 120px; }
 .footer-brand-mark { min-width: 0; }
 nav { display: flex; align-items: center; gap: 19px; font-size: 11px; }
+.site-header > nav { margin-left: auto; margin-right: 24px; gap: 15px; font-size: 10px; }
 nav a { position: relative; opacity: .9; }
 nav a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: -8px; height: 1px; background: #fff; transition: right .25s ease; }
 nav a:hover::after { right: 0; }
@@ -673,6 +674,9 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
 .local-seo-visit { display: grid; grid-template-columns: .9fr 1.1fr; gap: 75px; align-items: center; padding-top: 120px; padding-bottom: 120px; }
 .local-seo-visit > div > p:not(.section-kicker) { margin: 35px 0; color: #59665e; font-size: 15px; line-height: 1.9; }
 .local-seo-visit iframe { width: 100%; min-height: 530px; border: 0; filter: saturate(.65) sepia(.12) hue-rotate(82deg); }
+.local-seo-visit-visual { position: relative; min-width: 0; margin: 0; overflow: hidden; background: var(--forest-dark); }
+.local-seo-visit-visual img { display: block; width: 100%; min-height: 530px; object-fit: cover; }
+.local-seo-visit-visual figcaption { position: absolute; right: 18px; bottom: 18px; left: 18px; padding: 13px 16px; background: rgba(9,38,27,.86); color: rgba(255,255,255,.84); font-size: 10px; line-height: 1.5; letter-spacing: .08em; text-transform: uppercase; backdrop-filter: blur(10px); }
 .local-seo-links { padding: 110px 0; background: #e4e7dc; }
 .local-seo-links header { margin-bottom: 55px; }
 .local-seo-links header h2 { font-size: clamp(48px, 5vw, 70px); }
@@ -698,6 +702,7 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
   .local-seo-links a, .local-seo-links a:first-child { border-color: rgba(21,59,44,.22); }
   .local-seo-highlights h2 { margin-top: 45px; }
   .local-seo-visit iframe { min-height: 430px; }
+  .local-seo-visit-visual img { min-height: 0; aspect-ratio: 4 / 3; }
   .local-seo-links, .local-seo-faq { padding-top: 78px; padding-bottom: 82px; }
   :where(.button, .header-cta, .gps-options a) { min-height: 44px; }
 }

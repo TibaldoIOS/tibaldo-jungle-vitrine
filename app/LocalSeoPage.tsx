@@ -18,11 +18,21 @@ type LocalPageProps = {
     description: string;
     areaServed: string[];
   };
+  visitVisual?: {
+    src: string;
+    alt: string;
+    caption: string;
+  };
 };
 
 const address = "3 place de l’Arbonnoise, 59000 Lille";
 
 export default function LocalSeoPage(props: LocalPageProps) {
+  const visitVisual = props.visitVisual ?? (props.canonical === "/livraison-plantes-lille" ? {
+    src: "/livraison-plantes-studio-vegetal-tibaldo-jungle-lille.jpg",
+    alt: "Vitrine du Studio Végétal Tibaldo Jungle, boutique de plantes et point de départ des livraisons à Lille",
+    caption: "Studio Végétal — Tibaldo Jungle · 3 place de l’Arbonnoise à Lille",
+  } : undefined);
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -74,7 +84,7 @@ export default function LocalSeoPage(props: LocalPageProps) {
 
     <section className="shell local-seo-visit" id="informations">
       <div data-reveal><p className="section-kicker">Boutique physique</p><h2>Une adresse végétale<br /><em>au cœur de Lille.</em></h2><p><strong>Studio Végétal — Tibaldo Jungle</strong><br />{address}<br />Mardi–samedi · 10h–19h<br />Dimanche · 10h–13h</p><a className="button button-green" href="https://www.google.com/maps/dir/?api=1&destination=3%20place%20de%20l%27Arbonnoise%2C%2059000%20Lille" target="_blank" rel="noreferrer">Ouvrir l’itinéraire <Arrow /></a></div>
-      <iframe title={`Carte pour ${props.title} chez Tibaldo Jungle à Lille`} src="https://www.google.com/maps?q=3%20place%20de%20l%27Arbonnoise%2C%2059000%20Lille&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+      {visitVisual ? <figure className="local-seo-visit-visual"><img src={visitVisual.src} alt={visitVisual.alt} width="1280" height="960" loading="lazy" /><figcaption>{visitVisual.caption}</figcaption></figure> : <iframe title={`Carte pour ${props.title} chez Tibaldo Jungle à Lille`} src="https://www.google.com/maps?q=3%20place%20de%20l%27Arbonnoise%2C%2059000%20Lille&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />}
     </section>
 
     <section className="local-seo-links"><div className="shell"><header data-reveal><p className="section-kicker">Continuer la visite</p><h2>Explorer le Studio.</h2></header><div>{props.links.map((link) => <a href={link.href} key={link.href} data-reveal><h3>{link.label}</h3><p>{link.copy}</p><strong>Découvrir <Arrow /></strong></a>)}</div></div></section>
