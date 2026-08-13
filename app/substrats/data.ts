@@ -100,7 +100,7 @@ export const substrates = [
     name: "Vermiculite",
     number: "09",
     tone: "gold",
-    image: "/substrats/vermiculite-substrat-plantes-lille.jpg",
+    image: "/substrats/vermiculite-horticole-substrat-plantes-lille.jpg",
     imageAlt: "Vermiculite horticole dorée pour retenir l’humidité des semis",
     description: "Un minéral feuilleté qui absorbe doucement l’eau et la restitue dans le temps. Il apporte de la régularité aux cultures qui redoutent les sécheresses brusques.",
     benefits: ["Retient l’humidité", "Restitution progressive", "Très légère"],
