@@ -1595,6 +1595,22 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
 @media(max-width:1180px){.site-header > .desktop-nav{display:none}}
 @media(max-width:800px){.guide-index > div{gap:16px;margin-top:46px}.guide-index > div > a{min-height:285px;padding:30px 25px;border-radius:28px 6px 28px 6px}.guide-index > div > a h2{margin-top:48px;font-size:37px}.event-detail-hero-copy h1{font-size:clamp(43px,12vw,62px)}.event-card img.event-cover-storefront{padding:10px}}
 
+/* Fiche événement — vitrine préservée et texte lisible */
+.event-detail-hero > img{object-position:center center;transform:scale(1.015)}
+.event-detail-hero .event-detail-shade{background:linear-gradient(90deg,rgba(4,27,19,.97) 0%,rgba(5,30,21,.91) 36%,rgba(6,31,22,.35) 58%,rgba(5,24,17,.04) 78%),linear-gradient(0deg,rgba(4,25,18,.5),transparent 48%)}
+.event-detail-hero-copy{padding-top:clamp(132px,20vh,205px)}
+.event-detail-hero-copy h1{max-width:680px;font-size:clamp(48px,4.15vw,70px);line-height:.93}
+.event-detail-hero-copy > p:last-child{max-width:570px}
+@media(max-width:800px){
+  .event-detail-hero{min-height:760px;height:92svh}
+  .event-detail-hero > img{object-position:64% center;transform:scale(1.03)}
+  .event-detail-hero .event-detail-shade{background:linear-gradient(0deg,rgba(4,27,19,.98) 0%,rgba(5,29,21,.9) 52%,rgba(5,25,18,.2) 82%),linear-gradient(90deg,rgba(5,28,20,.62),transparent)}
+  .event-detail-hero-copy{display:flex;min-height:100%;flex-direction:column;justify-content:flex-end;padding-top:150px;padding-bottom:54px}
+  .event-detail-hero-copy > a{margin-bottom:20px}
+  .event-detail-hero-copy h1{max-width:520px;margin:18px 0 20px;font-size:clamp(43px,12vw,57px);line-height:.92}
+  .event-detail-hero-copy > p:last-child{max-width:480px;font-size:14px;line-height:1.55}
+}
+
 /* Rempotage — diagnostic et parcours premium */
 .repotting-diagnosis{align-items:start}
 .repotting-heading{position:sticky;top:42px}
