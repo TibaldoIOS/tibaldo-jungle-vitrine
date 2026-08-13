@@ -85,10 +85,10 @@ export default function SubstratesPage() {
         <div className="shell material-list">
           {substrates.map((item) => (
             <article className="material-card" id={item.slug} key={item.slug} data-reveal>
-              <div className={`material-visual material-${item.tone}`} aria-label={`Illustration éditoriale : ${item.name}`}>
+              <div className={`material-visual material-${item.tone}`}>
+                <img src={item.image} alt={item.imageAlt} loading="lazy" width="900" height="700" />
                 <span className="material-number">{item.number}</span>
-                <span className="material-grain" aria-hidden="true" />
-                <small>Visuel produit en préparation</small>
+                <small>Photo matière · Guide Tibaldo</small>
               </div>
               <div className="material-content">
                 <div className="material-title"><p>Composant · vente en vrac</p><h3>{item.name}</h3></div>
@@ -98,7 +98,7 @@ export default function SubstratesPage() {
                   <div><dt>Usages</dt><dd>{item.uses}</dd></div>
                   <div><dt>Pour quelles plantes ?</dt><dd>{item.plants}</dd></div>
                 </dl>
-                {featuredSubstrateSlugs.includes(item.slug as (typeof featuredSubstrateSlugs)[number]) ? <><div className="material-price"><span>Disponibilité</span><strong>{substrateProfiles[item.slug as keyof typeof substrateProfiles].statusLabel}</strong><small>Conditionnement et tarif affichés prochainement</small></div><a className="material-discover" href={`/substrats/${item.slug}`}>Découvrir le guide complet <Arrow /></a></> : <div className="material-price"><span>Collection</span><strong>Fiche détaillée à venir</strong><small>La matériauthèque continue de s’enrichir</small></div>}
+                <div className="material-price"><span>Disponibilité</span><strong>{substrateProfiles[item.slug].statusLabel}</strong><small>Conditionnement et tarif affichés prochainement</small></div><a className="material-discover" href={`/substrats/${item.slug}`}>Découvrir le guide complet <Arrow /></a>
               </div>
             </article>
           ))}

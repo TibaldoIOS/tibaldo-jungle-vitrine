@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ScrollReveal from "../../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../../SiteChrome";
-import { featuredSubstrateSlugs, substrateProfiles } from "../data";
+import { featuredSubstrateSlugs, substrateProfiles, substrates } from "../data";
 
 const origin = "https://jungle.tibaldo.fr";
 
@@ -29,6 +29,7 @@ export default async function SubstrateProfilePage({ params }: { params: Promise
   const { slug } = await params;
   const profile = substrateProfiles[slug as keyof typeof substrateProfiles];
   if (!profile) notFound();
+  const substrate = substrates.find((item) => item.slug === profile.slug)!;
   const url = `${origin}/substrats/${profile.slug}`;
   const schema = { "@context": "https://schema.org", "@graph": [
     { "@type": "Article", "@id": `${url}#article`, headline: `${profile.shortName} pour plantes à Lille : usages et conseils`, description: profile.seoDescription, mainEntityOfPage: url, inLanguage: "fr-FR", author: { "@type": "Organization", name: "Studio Végétal — Tibaldo Jungle", url: origin }, publisher: { "@id": `${origin}/#store` }, about: profile.name },
@@ -44,6 +45,7 @@ export default async function SubstrateProfilePage({ params }: { params: Promise
       <div className="shell inner-hero-content"><a className="family-genre-breadcrumb" href="/substrats">Substrats <span>→</span> {profile.shortName}</a><p className="eyebrow"><span /> {profile.eyebrow}</p><h1><span className="hero-line"><span>{profile.title}</span></span><span className="hero-line"><span><em>{profile.accent}</em></span></span></h1><p>{profile.intro}</p><a className="button button-light" href="#guide">Comprendre ce composant <Arrow /></a></div>
       <div className="shell substrate-availability"><span className={profile.status === "available" ? "is-available" : "is-soon"} /> <strong>{profile.statusLabel}</strong><small>3 place de l’Arbonnoise · Lille</small></div>
     </section>
+    <section className="shell substrate-detail-photo" data-reveal><img src={substrate.image} alt={substrate.imageAlt} width="1400" height="850" /><p><span>La matière en détail</span>{profile.intro}</p></section>
     <section className="shell substrate-detail-intro" id="guide" data-reveal><div><p className="section-kicker">Son rôle dans le pot</p><h2>Un composant,<br /><em>un équilibre précis.</em></h2></div><p>{profile.role}</p></section>
     <section className="substrate-detail-strengths"><div className="shell"><header data-reveal><p className="section-kicker">Ce qu’il apporte</p><h2>Lire la matière<br />avant de la mélanger.</h2></header><div className="substrate-strength-grid">{profile.strengths.map((item, index) => <article key={item.title} data-reveal><span>0{index + 1}</span><h3>{item.title}</h3><p>{item.copy}</p></article>)}</div></div></section>
     <section className="shell substrate-detail-methods"><header data-reveal><p className="section-kicker">Gestes du Studio</p><h2>Comment utiliser<br />{profile.shortName.toLowerCase()}.</h2></header><div>{profile.methods.map((item) => <article key={item.title} data-reveal><h3>{item.title}</h3><p>{item.copy}</p></article>)}</div></section>

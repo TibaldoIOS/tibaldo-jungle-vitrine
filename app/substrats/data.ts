@@ -4,6 +4,8 @@ export const substrates = [
     name: "Terreau Signature by Romain",
     number: "01",
     tone: "earth",
+    image: "/substrats/terreau-signature-substrat-plantes-lille.jpg",
+    imageAlt: "Terreau horticole brun pour rempotage de plantes d’intérieur à Lille",
     description: "Le mélange maison du Studio : une base équilibrée, souple et vivante, pensée pour offrir aux racines un juste rapport entre humidité, air et nutrition.",
     benefits: ["Équilibre eau et oxygène", "Structure durable", "Prêt à utiliser"],
     uses: "Rempotage courant, reprise après achat et entretien des plantes d’intérieur.",
@@ -14,6 +16,8 @@ export const substrates = [
     name: "Écorce de pin",
     number: "02",
     tone: "bark",
+    image: "/substrats/ecorce-de-pin-substrat-plantes-lille.jpg",
+    imageAlt: "Écorces de pin horticoles pour substrat aéré de plantes tropicales",
     description: "Des fragments structurants qui ouvrent le mélange et ménagent des poches d’air autour des racines. Un geste simple pour retrouver un sol plus proche de celui des épiphytes.",
     benefits: ["Aération durable", "Drainage renforcé", "Limite le tassement"],
     uses: "À incorporer aux mélanges aérés ou à employer comme base pour orchidées.",
@@ -24,6 +28,8 @@ export const substrates = [
     name: "Chips de coco",
     number: "03",
     tone: "coco",
+    image: "/substrats/chips-coco-substrat-plantes-lille.jpg",
+    imageAlt: "Chips de coco fibreuses pour substrat de plantes tropicales",
     description: "Une matière fibreuse et légère qui retient une part d’humidité sans étouffer les racines. Elle donne du ressort au substrat et accompagne les croissances actives.",
     benefits: ["Réserve d’humidité", "Bonne circulation de l’air", "Mélange plus souple"],
     uses: "En complément d’un terreau ou dans un mélange très aéré pour plantes tropicales.",
@@ -34,6 +40,8 @@ export const substrates = [
     name: "Perlite",
     number: "04",
     tone: "pearl",
+    image: "/substrats/perlite-substrat-plantes-lille.jpg",
+    imageAlt: "Perlite horticole blanche pour alléger et drainer le terreau",
     description: "Cette roche expansée très légère allège les mélanges compacts et facilite l’écoulement de l’eau. Les jeunes racines y trouvent un environnement plus respirant.",
     benefits: ["Allège le substrat", "Favorise le drainage", "Soutient l’enracinement"],
     uses: "Mélanges de rempotage, semis, boutures et récupération d’une plante trop arrosée.",
@@ -44,6 +52,8 @@ export const substrates = [
     name: "Sphaigne séchée",
     number: "05",
     tone: "moss",
+    image: "/substrats/sphaigne-sechee-substrat-plantes-lille.jpg",
+    imageAlt: "Sphaigne séchée pour boutures et racines de plantes tropicales",
     description: "Une fibre végétale capable de conserver une humidité régulière tout en restant aérienne. Réhydratée avec soin, elle devient un support précieux pour les racines fragiles.",
     benefits: ["Humidité homogène", "Texture aérienne", "Idéale en propagation"],
     uses: "Bouturage, marcottage, reprise racinaire, tuteurs et culture temporaire.",
@@ -54,6 +64,8 @@ export const substrates = [
     name: "Charbon actif",
     number: "06",
     tone: "coal",
+    image: "/substrats/charbon-actif-substrat-plantes-lille.jpg",
+    imageAlt: "Charbon actif horticole noir pour mélanges et terrariums",
     description: "Un composant sombre, poreux et discret qui complète les mélanges techniques. Il contribue à maintenir un environnement plus sain dans les contenants peu ventilés.",
     benefits: ["Capte certaines impuretés", "Aide à limiter les odeurs", "Structure poreuse"],
     uses: "En petite proportion dans les terrariums, mélanges tropicaux et substrats de propagation.",
@@ -64,6 +76,8 @@ export const substrates = [
     name: "Billes d’argile",
     number: "07",
     tone: "clay",
+    image: "/substrats/billes-argile-substrat-plantes-lille.jpg",
+    imageAlt: "Billes d’argile expansée pour plantes et culture semi-hydroponique",
     description: "Des granulés robustes et réutilisables pour stabiliser un pot, créer une réserve autour d’un cache-pot ou installer une culture semi-hydroponique.",
     benefits: ["Réutilisables", "Stables et propres", "Adaptées à la semi-hydro"],
     uses: "Culture semi-hydroponique, plateaux d’humidité et allègement de grands contenants.",
@@ -74,6 +88,8 @@ export const substrates = [
     name: "Pierre ponce",
     number: "08",
     tone: "stone",
+    image: "/substrats/pierre-ponce-substrat-plantes-lille.jpg",
+    imageAlt: "Pierre ponce horticole poreuse pour substrats minéraux drainants",
     description: "Une roche volcanique poreuse qui apporte du poids sans fermer le mélange. Elle garde une fine réserve d’eau et de nutriments tout en laissant les racines respirer.",
     benefits: ["Drainage stable", "Bonne porosité", "Retient une fine réserve"],
     uses: "Mélanges minéraux, bonsaïs, plantes matures et substrats devant rester structurés.",
@@ -84,6 +100,8 @@ export const substrates = [
     name: "Vermiculite",
     number: "09",
     tone: "gold",
+    image: "/substrats/vermiculite-substrat-plantes-lille.jpg",
+    imageAlt: "Vermiculite horticole dorée pour retenir l’humidité des semis",
     description: "Un minéral feuilleté qui absorbe doucement l’eau et la restitue dans le temps. Il apporte de la régularité aux cultures qui redoutent les sécheresses brusques.",
     benefits: ["Retient l’humidité", "Restitution progressive", "Très légère"],
     uses: "Semis, jeunes plants et mélanges qui sèchent trop rapidement.",
@@ -94,6 +112,8 @@ export const substrates = [
     name: "Zéolite",
     number: "10",
     tone: "zeolite",
+    image: "/substrats/zeolite-substrat-plantes-lille.jpg",
+    imageAlt: "Zéolite minérale poreuse pour substrats techniques de plantes",
     description: "Une pierre minérale microporeuse qui aide le mélange à mieux gérer eau et éléments nutritifs. Sa structure reste stable et convient aux compositions de longue durée.",
     benefits: ["Échanges nutritifs", "Structure durable", "Gestion de l’humidité"],
     uses: "Mélanges minéraux, semi-hydroponie et substrats techniques à renouvellement lent.",
@@ -120,9 +140,31 @@ export type SubstrateProfile = {
   seoDescription: string;
 };
 
-export const featuredSubstrateSlugs = ["perlite", "vermiculite", "ecorce-de-pin", "billes-argile", "sphaigne-sechee"] as const;
+export const featuredSubstrateSlugs = substrates.map((item) => item.slug);
 
-export const substrateProfiles: Record<(typeof featuredSubstrateSlugs)[number], SubstrateProfile> = {
+export const substrateProfiles: Record<string, SubstrateProfile> = {
+  "terreau-signature": {
+    slug: "terreau-signature", name: "Terreau Signature by Romain", shortName: "Terreau Signature", status: "soon", statusLabel: "Préparation au Studio",
+    eyebrow: "Mélange maison · Lille", title: "Le Terreau Signature,", accent: "pensé comme un écosystème.",
+    intro: "Un mélange maison équilibré pour simplifier le rempotage des plantes d’intérieur sans leur imposer une recette industrielle uniforme.",
+    role: "Le Terreau Signature associe une base organique à des éléments d’aération et de structure. Son objectif est de conserver assez d’humidité pour nourrir les racines tout en évitant le tassement qui favorise l’asphyxie. La recette est ajustée au Studio selon la plante, le volume du pot et les habitudes d’arrosage.",
+    strengths: [{title:"Équilibre",copy:"Une réserve d’eau mesurée associée à des espaces d’air durables."},{title:"Simplicité",copy:"Une base prête à utiliser pour de nombreuses plantes tropicales d’intérieur."},{title:"Adaptation",copy:"Le mélange peut être corrigé avec écorce, perlite ou vermiculite selon les racines."}],
+    methods: [{title:"Pour un rempotage courant",copy:"Démêlez seulement les racines abîmées, choisissez un pot légèrement supérieur et remplissez sans tasser excessivement."},{title:"Pour une plante sensible",copy:"Le Studio adapte la texture à la finesse des racines et à la vitesse de séchage attendue."},{title:"Après le rempotage",copy:"Laissez la plante retrouver son équilibre avant de reprendre une fertilisation soutenue."}],
+    suitableFor:["Monstera","Philodendron","Pothos","Ficus","Strelitzia","plantes tropicales d’intérieur"], cautions:["Toujours utiliser un pot percé.","Ne pas surdimensionner le nouveau pot.","Adapter l’arrosage à la saison et à la lumière."],
+    faq:[{question:"Qu’est-ce que le Terreau Signature Tibaldo Jungle ?",answer:"C’est un mélange maison structuré pour concilier humidité, drainage et oxygénation des racines des plantes d’intérieur."},{question:"Convient-il à toutes les plantes ?",answer:"Il constitue une bonne base, mais certaines plantes demandent davantage d’écorce, de minéral ou de rétention. Le mélange est alors adapté."},{question:"Où trouver un terreau pour plantes d’intérieur à Lille ?",answer:"Le Terreau Signature est préparé au Studio Végétal Tibaldo Jungle, 3 place de l’Arbonnoise à Lille."}], seoDescription:"Terreau pour plantes d’intérieur à Lille : découvrez le Terreau Signature Tibaldo Jungle, sa composition, ses usages et nos conseils de rempotage."
+  },
+  "chips-coco": {
+    slug:"chips-coco",name:"Chips de coco horticoles",shortName:"Chips de coco",status:"soon",statusLabel:"Prochainement au Studio",eyebrow:"Fibre végétale · Lille",title:"Les chips de coco,",accent:"de l’air et de la souplesse.",intro:"Des fragments fibreux qui absorbent une part d’eau tout en gardant une structure ouverte autour des racines tropicales.",role:"Plus grossières que la fibre de coco fine, les chips de coco donnent du ressort au mélange. Elles peuvent remplacer une partie des composants ligneux, mais doivent être rincées et utilisées dans une recette équilibrée car elles ne constituent pas à elles seules un substrat nutritif complet.",strengths:[{title:"Porosité",copy:"Les morceaux créent des passages d’air entre les autres composants."},{title:"Humidité",copy:"La fibre conserve une réserve modérée sans former une masse compacte."},{title:"Durabilité",copy:"Leur calibre maintient la structure du mélange pendant plusieurs cycles d’arrosage."}],methods:[{title:"Dans un mélange tropical",copy:"Associez-les à une base organique et à un minéral drainant pour équilibrer eau et oxygène."},{title:"Avant utilisation",copy:"Réhydratez puis rincez les chips, notamment lorsque leur origine ou leur préparation est inconnue."},{title:"Pour les racines épaisses",copy:"Choisissez un calibre cohérent avec le pot afin de ne pas laisser de cavités excessives."}],suitableFor:["Alocasia","Anthurium","Monstera","Philodendron","Hoya","orchidées tropicales"],cautions:["Rincer avant emploi.","Ne pas employer seules sans nutrition adaptée.","Surveiller le séchage dans les petits pots."],faq:[{question:"Quelle différence entre chips et fibre de coco ?",answer:"Les chips sont des fragments grossiers qui structurent et aèrent davantage ; la fibre fine retient plus uniformément l’eau."},{question:"Les chips de coco remplacent-elles l’écorce ?",answer:"Elles peuvent jouer un rôle voisin dans certains mélanges, avec une rétention d’eau souvent différente. Le choix dépend de la plante et du climat intérieur."},{question:"Où acheter des chips de coco à Lille ?",answer:"Elles seront proposées dans la matériauthèque Tibaldo Jungle avec des conseils de dosage personnalisés."}],seoDescription:"Chips de coco horticoles à Lille : usages, avantages, rinçage, dosage et plantes tropicales adaptées avec les conseils Tibaldo Jungle."
+  },
+  "charbon-actif": {
+    slug:"charbon-actif",name:"Charbon actif horticole",shortName:"Charbon actif",status:"soon",statusLabel:"Prochainement au Studio",eyebrow:"Composant poreux · Lille",title:"Le charbon actif,",accent:"un complément discret.",intro:"Un matériau poreux utilisé en faible proportion dans les terrariums et certains mélanges techniques pour racines sensibles.",role:"Le charbon actif possède une grande surface poreuse susceptible de fixer certaines molécules. En horticulture, il complète un mélange mais ne remplace ni une bonne aération, ni un arrosage maîtrisé, ni l’élimination des tissus pourris. Son usage doit rester mesuré et ciblé.",strengths:[{title:"Porosité",copy:"Sa structure multiplie les surfaces de contact dans le substrat."},{title:"Fraîcheur",copy:"Il peut aider à limiter certaines odeurs dans les contenants peu ventilés."},{title:"Technique",copy:"Une petite dose complète les mélanges de propagation ou de terrarium."}],methods:[{title:"Dans un terrarium",copy:"Placez-le en quantité raisonnable au sein d’une conception incluant drainage, substrat et ventilation."},{title:"Dans un mélange tropical",copy:"Répartissez de petits fragments, sans transformer le pot en support majoritairement carboné."},{title:"Après une pourriture",copy:"Retirez d’abord les racines atteintes et corrigez la cause ; le charbon ne remplace pas ces gestes."}],suitableFor:["terrariums","orchidées","Anthurium","boutures tropicales","plantes à racines sensibles"],cautions:["Éviter les poussières lors de la manipulation.","Utiliser un produit adapté à l’horticulture.","Ne pas le présenter comme un traitement curatif."],faq:[{question:"À quoi sert le charbon actif dans un substrat ?",answer:"Il est surtout utilisé comme complément poreux dans certains mélanges techniques et terrariums."},{question:"Empêche-t-il la pourriture des racines ?",answer:"Non. La prévention dépend surtout d’un bon drainage, de l’aération et d’un arrosage adapté."},{question:"Où trouver du charbon horticole à Lille ?",answer:"Tibaldo Jungle prévoit de le proposer avec des conseils adaptés à chaque usage."}],seoDescription:"Charbon actif horticole à Lille : rôle dans les terrariums et substrats, dosage, limites et précautions expliqués par Tibaldo Jungle."
+  },
+  "pierre-ponce": {
+    slug:"pierre-ponce",name:"Pierre ponce horticole",shortName:"Pierre ponce",status:"soon",statusLabel:"Prochainement au Studio",eyebrow:"Roche volcanique · Lille",title:"La pierre ponce,",accent:"une structure minérale durable.",intro:"Une roche volcanique légère et poreuse qui stabilise le pot, laisse circuler l’air et conserve une fine réserve d’humidité.",role:"Contrairement aux composants organiques, la pierre ponce se dégrade très lentement. Elle apporte une structure durable aux mélanges minéraux et aux plantes conservées longtemps dans le même pot. Sa porosité retient un peu d’eau et de nutriments sans fermer les espaces nécessaires aux racines.",strengths:[{title:"Durabilité",copy:"Elle conserve son calibre et limite le tassement du mélange."},{title:"Drainage",copy:"Ses grains laissent circuler l’eau et l’air autour des racines."},{title:"Stabilité",copy:"Son poids modéré aide à stabiliser les plantes hautes ou les petits contenants."}],methods:[{title:"Dans un mélange minéral",copy:"Associez-la à d’autres granulométries et prévoyez une fertilisation adaptée."},{title:"Pour une plante mature",copy:"Elle maintient la structure d’un grand pot dont le rempotage est moins fréquent."},{title:"Pour cactus et succulentes",copy:"Utilisez-la dans une recette très drainante ajustée à l’espèce et aux conditions de lumière."}],suitableFor:["Anthurium","Alocasia","cactus","succulentes","bonsaïs","plantes méditerranéennes"],cautions:["Rincer les poussières avant emploi.","Adapter la granulométrie aux racines.","Prévoir la nutrition dans les mélanges très minéraux."],faq:[{question:"Quelle différence entre pierre ponce et perlite ?",answer:"La pierre ponce est plus lourde et stable ; la perlite est beaucoup plus légère. Toutes deux favorisent l’aération, avec des comportements différents."},{question:"La pierre ponce retient-elle l’eau ?",answer:"Sa porosité conserve une fine réserve tout en assurant un drainage important."},{question:"Où acheter de la pierre ponce à Lille ?",answer:"Elle est prévue dans la matériauthèque en vrac de Tibaldo Jungle à Lille."}],seoDescription:"Pierre ponce horticole à Lille : drainage, porosité, usages pour cactus, succulentes et plantes tropicales, avec conseils de mélange."
+  },
+  zeolite: {
+    slug:"zeolite",name:"Zéolite horticole",shortName:"Zéolite",status:"soon",statusLabel:"Prochainement au Studio",eyebrow:"Minéral microporeux · Lille",title:"La zéolite,",accent:"une réserve minérale maîtrisée.",intro:"Un minéral stable à la structure microporeuse, apprécié dans les mélanges techniques et les cultures où l’on souhaite mieux tamponner eau et nutriments.",role:"La zéolite est une famille de minéraux capables d’échanges ioniques. Dans un substrat, elle peut participer à la gestion de certains éléments nutritifs et de l’humidité. Elle reste cependant un composant : la fertilisation, la qualité de l’eau et l’équilibre général du mélange demeurent essentiels.",strengths:[{title:"Échanges",copy:"Sa structure peut retenir puis échanger certains éléments présents dans la solution nutritive."},{title:"Stabilité",copy:"Elle se dégrade peu et convient aux recettes minérales de longue durée."},{title:"Tampon",copy:"Elle contribue à rendre l’environnement racinaire moins brutal entre deux apports."}],methods:[{title:"En semi-hydroponie",copy:"Intégrez-la à un mélange minéral cohérent et suivez précisément fertilisation et rinçage."},{title:"Dans un substrat technique",copy:"Employez-la en proportion mesurée avec des composants aux fonctions complémentaires."},{title:"Pour les bonsaïs",copy:"Choisissez une granulométrie adaptée et tenez compte des besoins spécifiques de l’espèce."}],suitableFor:["plantes tropicales","bonsaïs","succulentes","semi-hydroponie","mélanges minéraux"],cautions:["Ne pas surinterpréter son rôle nutritif.","Rincer avant utilisation.","Adapter le dosage au système de culture."],faq:[{question:"À quoi sert la zéolite pour les plantes ?",answer:"Elle complète les substrats minéraux grâce à sa stabilité, sa porosité et ses capacités d’échange."},{question:"La zéolite remplace-t-elle l’engrais ?",answer:"Non. Elle peut participer à la gestion des nutriments mais n’est pas une fertilisation complète."},{question:"Où trouver de la zéolite horticole à Lille ?",answer:"La zéolite rejoindra prochainement la matériauthèque de Tibaldo Jungle à Lille."}],seoDescription:"Zéolite horticole à Lille : fonctionnement, usages en substrat minéral et semi-hydroponie, dosage et précautions avec Tibaldo Jungle."
+  },
   perlite: {
     slug: "perlite", name: "Perlite horticole", shortName: "Perlite", status: "available", statusLabel: "Disponible au Studio",
     eyebrow: "Minéral léger · Disponible à Lille", title: "La perlite,", accent: "l’air dans le mélange.",
