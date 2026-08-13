@@ -1578,3 +1578,29 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
 .event-card img.event-cover-storefront{object-fit:contain;padding:18px;background:#e9ece4}.event-detail-hero-copy h1{max-width:1080px;font-size:clamp(48px,4.4vw,76px);line-height:.94}
 @media(max-width:1180px){.site-header > .desktop-nav{display:none}}
 @media(max-width:800px){.guide-index > div{gap:16px;margin-top:46px}.guide-index > div > a{min-height:285px;padding:30px 25px;border-radius:28px 6px 28px 6px}.guide-index > div > a h2{margin-top:48px;font-size:37px}.event-detail-hero-copy h1{font-size:clamp(43px,12vw,62px)}.event-card img.event-cover-storefront{padding:10px}}
+
+/* Rempotage — diagnostic et parcours premium */
+.repotting-diagnosis{align-items:start}
+.repotting-heading{position:sticky;top:42px}
+.repotting-symptoms{display:grid;gap:14px;border:0;counter-reset:repotting-sign}
+.repotting-symptoms article{position:relative;isolation:isolate;grid-template-columns:78px 1fr;gap:4px 24px;min-height:190px;padding:30px 34px;overflow:hidden;border:0;border-radius:32px 7px 32px 7px;background:linear-gradient(135deg,#f0ece2,#faf8f2);box-shadow:0 16px 45px rgba(12,48,35,.08);transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s ease}
+.repotting-symptoms article:nth-child(even){margin-left:38px;background:linear-gradient(135deg,#173f31,#092b21);color:#fff}
+.repotting-symptoms article::after{content:"";position:absolute;z-index:-1;right:-62px;bottom:-95px;width:210px;height:210px;border:1px solid currentColor;border-radius:43% 57% 62% 38%;opacity:.09;transform:rotate(25deg)}
+.repotting-symptoms article:hover{transform:translateY(-5px);box-shadow:0 26px 60px rgba(12,48,35,.14)}
+.repotting-symptoms span{grid-row:1 / 3;display:grid;place-items:center;width:62px;height:62px;border:1px solid rgba(21,59,44,.2);border-radius:50%;color:#8aa16f;font:italic 18px Georgia,serif}
+.repotting-symptoms article:nth-child(even) span{border-color:rgba(255,255,255,.24);color:var(--sage)}
+.repotting-symptoms h3{align-self:end;font-size:29px;line-height:1.05}.repotting-symptoms p{align-self:start;font-size:13px;line-height:1.75}
+.repotting-symptoms article:nth-child(even) h3{color:#fff}.repotting-symptoms article:nth-child(even) p{color:rgba(255,255,255,.66)}
+
+.repotting-steps{position:relative;gap:18px;background:transparent}
+.repotting-steps::before{content:"";position:absolute;top:47px;left:15%;right:15%;height:1px;background:linear-gradient(90deg,transparent,rgba(185,216,141,.6),transparent)}
+.repotting-steps p{position:relative;isolation:isolate;min-height:285px;padding:34px 32px;border:1px solid rgba(255,255,255,.17);border-radius:42px 8px 42px 8px;background:linear-gradient(150deg,rgba(255,255,255,.1),rgba(255,255,255,.025));box-shadow:0 22px 55px rgba(0,0,0,.13);backdrop-filter:blur(8px);transition:transform .4s ease,background .4s ease}
+.repotting-steps p:nth-child(2){transform:translateY(28px)}
+.repotting-steps p::after{content:"";position:absolute;z-index:-1;right:20px;bottom:18px;width:92px;height:118px;border:1px solid rgba(185,216,141,.18);border-radius:70% 30% 65% 35%;transform:rotate(28deg)}
+.repotting-steps p:hover{transform:translateY(-7px);background:rgba(255,255,255,.12)}.repotting-steps p:nth-child(2):hover{transform:translateY(20px)}
+.repotting-steps strong{display:flex;align-items:center;gap:14px;margin-bottom:70px;font-size:23px}.repotting-steps strong::before{content:"";width:11px;height:11px;border-radius:50%;background:var(--sage);box-shadow:0 0 0 8px rgba(185,216,141,.09)}
+
+@media(max-width:800px){
+  .repotting-heading{position:static}.repotting-symptoms article,.repotting-symptoms article:nth-child(even){margin-left:0;min-height:175px;padding:25px 23px;grid-template-columns:58px 1fr;border-radius:25px 6px 25px 6px}.repotting-symptoms span{width:48px;height:48px;font-size:15px}.repotting-symptoms h3{font-size:25px}.repotting-symptoms article p{grid-column:2}
+  .repotting-steps{gap:14px}.repotting-steps::before{top:25px;bottom:25px;left:25px;right:auto;width:1px;height:auto}.repotting-steps p,.repotting-steps p:nth-child(2){min-height:230px;padding:29px 25px;transform:none;border-radius:30px 7px 30px 7px}.repotting-steps p:hover,.repotting-steps p:nth-child(2):hover{transform:translateY(-4px)}.repotting-steps strong{margin-bottom:48px;font-size:21px}
+}
