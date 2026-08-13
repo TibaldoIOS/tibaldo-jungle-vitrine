@@ -560,11 +560,12 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
   .header-cta { display: none; }
   .mobile-menu { order: 2; margin-left: 7px; }
   .mobile-menu summary { width: 42px; height: 42px; }
-  .mobile-menu-panel { top: 80px; grid-template-columns: 1fr; padding: 14px 16px 20px; }
-  .mobile-menu-panel a { padding: 14px 8px; font-size: 20px; }
-  .mobile-menu-socials { padding: 14px 0 0; flex-wrap: wrap; }
+  .mobile-menu-panel { top: 80px; grid-template-columns: repeat(2, minmax(0, 1fr)); max-height: calc(100dvh - 178px); padding: 10px 16px 14px; overflow-y: auto; overscroll-behavior: contain; }
+  .mobile-menu-panel > a { min-width: 0; gap: 8px; padding: 11px 7px; font-size: 16px; line-height: 1.08; }
+  .mobile-menu-panel > a span { flex: 0 0 auto; font-size: 7px; }
+  .mobile-menu-socials { padding: 11px 0 0; flex-wrap: nowrap; }
   .mobile-menu-socials > span { width: 100%; margin: 0 0 3px; }
-  .mobile-menu-socials a { flex: 1; justify-content: center; padding: 9px 11px; font-size: 9px; }
+  .mobile-menu-socials a { flex: 0 1 auto; justify-content: center; min-height: 34px; padding: 7px 10px; font-size: 8px; }
   .hero-content { padding-top: 52px; padding-bottom: 64px; }
   h1 { margin: 20px 0 24px; font-size: clamp(48px, 15vw, 66px); line-height: .94; }
   .hero-copy br { display: none; }
