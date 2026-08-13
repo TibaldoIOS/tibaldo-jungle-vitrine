@@ -14,7 +14,7 @@ export function SiteHeader({ light = false }: { light?: boolean }) {
         </span>
       </a>
 
-      <nav aria-label="Navigation principale">
+      <nav className="desktop-nav" aria-label="Navigation principale">
         <a href="/">Accueil</a>
         <a href="/plantes">Plantes</a>
         <a href="/conseils">Conseils</a>
@@ -24,7 +24,7 @@ export function SiteHeader({ light = false }: { light?: boolean }) {
         <a href="/evenements">Événements</a>
         <a href="https://shop.tibaldo.fr">Boutique</a>
         <a href="/services">Nos services</a>
-        <a href="/contact">Contact</a>
+        <a className="nav-contact" href="/contact">Contact</a>
       </nav>
 
       <details className="mobile-menu">

@@ -63,5 +63,5 @@ export function EventFilters({ events }: { events: JungleEvent[] }) {
 
 export function EventCard({ event }: { event: JungleEvent }) {
   const date = new Date(event.startAt);
-  return <a className="event-card" href={`/evenements/${event.slug}`}><div><img src={event.coverImage} alt={`Illustration de ${event.title}`} loading="lazy" width="1200" height="800" /><span>{event.category}</span></div><section><time dateTime={event.startAt}>{new Intl.DateTimeFormat("fr-FR", { day: "2-digit", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit" }).format(date)}</time><h2>{event.title}</h2><p>{event.excerpt}</p><small>{event.venueName} · {event.city}</small><strong>Découvrir <b>↗</b></strong></section></a>;
+  return <a className="event-card" href={`/evenements/${event.slug}`}><div><img className={event.slug === "ouverture-tibaldo-jungle-lille" ? "event-cover-storefront" : undefined} src={event.coverImage} alt={`Illustration de ${event.title}`} loading="lazy" width="1200" height="800" /><span>{event.category}</span></div><section><time dateTime={event.startAt}>{new Intl.DateTimeFormat("fr-FR", { day: "2-digit", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit" }).format(date)}</time><h2>{event.title}</h2><p>{event.excerpt}</p><small>{event.venueName} · {event.city}</small><strong>Découvrir <b>↗</b></strong></section></a>;
 }
