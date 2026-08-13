@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: "Création de la boutique Tibaldo Jungle à Lille",
     description:
       "Découvrez les visualisations et les choix d’aménagement du futur Studio Végétal Tibaldo Jungle à Lille.",
-    images: ["/boutique-projet-ia.webp"],
+    images: ["/projet-boutique-tibaldo-jungle-lille.webp"],
   },
 };
 
@@ -33,7 +33,7 @@ export default function CreationBoutique() {
             <img
               className="brand-logo"
               src="/tibaldo-jungle-logo.webp"
-              alt=""
+              alt="Logo du Studio Végétal Tibaldo Jungle à Lille"
               width={72}
               height={72}
               style={{ borderRadius: "50%", objectFit: "cover" }}
@@ -75,7 +75,7 @@ export default function CreationBoutique() {
 
       <section className="project-gallery shell" aria-label="Visualisations de la future boutique">
         <figure className="project-main-visual reveal-scale" data-reveal>
-          <img src="/boutique-projet-ia.webp" alt="Visualisation IA de la future boutique Tibaldo Jungle avec un grand mur végétal naturel" />
+          <img src="/projet-boutique-tibaldo-jungle-lille.webp" alt="Projet d’aménagement de la boutique Tibaldo Jungle à Lille avec mur végétal naturel" />
           <figcaption><span>Vue d’ensemble</span><small>Visualisation IA · version de travail</small></figcaption>
         </figure>
 

@@ -262,7 +262,7 @@ img[data-parallax] { transform: translate3d(0, var(--parallax-y), 0) scale(1.08)
 
 .project-teaser { position: relative; min-height: 690px; display: grid; align-items: center; color: #fff; overflow: hidden; }
 .project-teaser-photo, .project-teaser-shade { position: absolute; inset: 0; }
-.project-teaser-photo { background: url("/boutique-projet-ia.webp") center/cover; transform: translate3d(0, var(--parallax-y), 0) scale(1.06); transition: transform 1.2s cubic-bezier(.2,.72,.2,1); }
+.project-teaser-photo { background: url("/projet-boutique-tibaldo-jungle-lille.webp") center/cover; transform: translate3d(0, var(--parallax-y), 0) scale(1.06); transition: transform 1.2s cubic-bezier(.2,.72,.2,1); }
 .project-teaser-shade { background: linear-gradient(90deg, rgba(7,34,24,.94), rgba(7,34,24,.62) 48%, rgba(7,34,24,.12)); }
 .project-teaser:hover .project-teaser-photo { transform: translate3d(0, var(--parallax-y), 0) scale(1.085); }
 .project-teaser-content { position: relative; z-index: 1; }
@@ -273,7 +273,7 @@ img[data-parallax] { transform: translate3d(0, var(--parallax-y), 0) scale(1.08)
 .project-page { background: var(--paper); }
 .project-hero { position: relative; min-height: 800px; height: 100svh; max-height: 980px; overflow: hidden; color: #fff; background: var(--forest-dark); }
 .project-hero-photo, .project-hero-shade { position: absolute; inset: 0; }
-.project-hero-photo { background: url("/boutique-projet-ia.webp") center/cover; animation: hero-breathe 1.8s cubic-bezier(.2,.72,.2,1) both; }
+.project-hero-photo { background: url("/projet-boutique-tibaldo-jungle-lille.webp") center/cover; animation: hero-breathe 1.8s cubic-bezier(.2,.72,.2,1) both; }
 .project-hero-shade { background: linear-gradient(90deg, rgba(5,30,21,.94) 0%, rgba(7,34,24,.65) 43%, rgba(7,34,24,.12) 78%), linear-gradient(0deg, rgba(4,24,17,.48), transparent 45%); }
 .project-header { color: #fff; }
 .project-hero-content { position: relative; z-index: 1; padding-top: clamp(110px, 17vh, 180px); }
@@ -295,7 +295,7 @@ img[data-parallax] { transform: translate3d(0, var(--parallax-y), 0) scale(1.08)
 .project-gallery figcaption span { font: 400 20px Georgia, serif; }
 .project-gallery figcaption small { color: #768078; font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
 .project-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 75px; }
-.project-crop { height: 480px; background-image: url("/boutique-projet-ia.webp"); background-repeat: no-repeat; background-size: 165%; }
+.project-crop { height: 480px; background-image: url("/projet-boutique-tibaldo-jungle-lille.webp"); background-repeat: no-repeat; background-size: 165%; }
 .project-crop-wall { background-position: 2% 48%; }
 .project-crop-display { background-position: 98% 52%; }
 

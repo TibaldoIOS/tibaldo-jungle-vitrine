@@ -47,7 +47,7 @@ export const metadata: Metadata = {
       "Nouveauté à Lille : une boutique de plantes rares et exotiques, des conseils sincères et un rempotage offert pour l’inauguration.",
     images: [
       {
-        url: "/boutique-projet-ia.webp",
+        url: "/projet-boutique-tibaldo-jungle-lille.webp",
         width: 1200,
         height: 630,
         alt: "Tibaldo Jungle, future boutique de plantes rares et exotiques à Lille",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     title: "Studio Végétal Tibaldo Jungle à Lille",
     description:
       "Nouveauté à Lille : boutique de plantes rares et exotiques. Ouverture le 26 septembre 2026.",
-    images: ["/boutique-projet-ia.webp"],
+    images: ["/projet-boutique-tibaldo-jungle-lille.webp"],
   },
   category: "boutique de plantes",
   icons: {
