@@ -932,12 +932,18 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
 .home-services h2 { margin: 18px 0 0; font: 400 clamp(48px, 5vw, 72px)/.98 Georgia, serif; letter-spacing: -.045em; }
 .home-services-heading > p { margin: 0; color: rgba(255,255,255,.63); font-size: 14px; line-height: 1.8; }
 .home-service-list { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(255,255,255,.22); border-bottom: 1px solid rgba(255,255,255,.22); }
-.home-service-list a { position: relative; min-height: 290px; padding: 35px 32px; border-right: 1px solid rgba(255,255,255,.22); }
+.home-service-list a { position: relative; min-height: 360px; padding: 35px 32px; border-right: 1px solid rgba(255,255,255,.22); overflow: hidden; isolation: isolate; }
 .home-service-list a:first-child { border-left: 1px solid rgba(255,255,255,.22); }
-.home-service-list span { color: rgba(255,255,255,.35); font: italic 12px Georgia, serif; }
-.home-service-list h3 { margin: 62px 0 14px; font: 400 29px Georgia, serif; }
-.home-service-list p { max-width: 280px; color: rgba(255,255,255,.58); font-size: 13px; line-height: 1.7; }
-.home-service-list a > span:last-child { position: absolute; right: 30px; bottom: 28px; color: var(--sage); font-size: 20px; }
+.home-service-image { position: absolute; inset: 0; z-index: -3; width: 100%; height: 100%; object-fit: cover; transition: transform 1s cubic-bezier(.2,.75,.2,1), filter .7s ease; }
+.home-service-shade { position: absolute; inset: 0; z-index: -2; background: linear-gradient(180deg, rgba(3,30,20,.28) 0%, rgba(3,30,20,.54) 42%, rgba(3,30,20,.96) 100%); transition: background .7s ease; }
+.home-service-list a::after { content: ""; position: absolute; inset: 16px; z-index: -1; border: 1px solid rgba(255,255,255,0); transition: border-color .45s ease, inset .45s ease; }
+.home-service-list a:hover .home-service-image { transform: scale(1.055); filter: saturate(1.08); }
+.home-service-list a:hover .home-service-shade { background: linear-gradient(180deg, rgba(3,30,20,.12) 0%, rgba(3,30,20,.43) 40%, rgba(3,30,20,.96) 100%); }
+.home-service-list a:hover::after { inset: 12px; border-color: rgba(255,255,255,.34); }
+.home-service-number { position: relative; color: rgba(255,255,255,.62); font: italic 12px Georgia, serif; }
+.home-service-list h3 { position: relative; margin: 140px 0 14px; font: 400 31px Georgia, serif; text-shadow: 0 2px 18px rgba(0,0,0,.24); }
+.home-service-list p { position: relative; max-width: 300px; color: rgba(255,255,255,.78); font-size: 13px; line-height: 1.7; }
+.home-service-list a > svg { position: absolute; right: 30px; bottom: 28px; color: var(--sage); font-size: 20px; }
 .home-values { padding: 115px 0 125px; text-align: center; }
 .studio-collection { padding-top: 115px; padding-bottom: 125px; }
 .studio-collection > header { display: grid; grid-template-columns: .8fr 1.2fr; gap: 35px 90px; padding-bottom: 65px; }
@@ -1452,8 +1458,8 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
   .home-card-copy { padding: 38px 28px 42px; }
   .home-card-copy h2 { margin-top: 28px; }
   .home-services { padding: 80px 0; }
-  .home-service-list a { min-height: 235px; padding: 30px 25px; }
-  .home-service-list h3 { margin-top: 42px; }
+  .home-service-list a { min-height: 310px; padding: 28px 25px; }
+  .home-service-list h3 { margin-top: 115px; }
   .home-value-grid { gap: 0; margin-top: 42px; }
   .home-value-grid p { padding: 25px 0; border-bottom: 1px solid rgba(21,59,44,.15); }
   .inner-hero { min-height: 690px; height: 90svh; }

@@ -60,9 +60,9 @@ export default function Home() {
       <section className="home-services">
         <div className="shell home-services-heading" data-reveal><div><p className="section-kicker">Nos services à Lille</p><h2>Faire grandir<br /><em>votre jungle.</em></h2></div><p>Rempotage, diagnostic, conseil et compositions végétales : le Studio vous accompagne au-delà de l’achat.</p></div>
         <div className="shell home-service-list">
-          <a href="/rempotage" data-reveal><span>01</span><h3>SOS Rempotage</h3><p>Diagnostic, racines, pot et substrat : trouvez la bonne solution pour votre plante.</p><Arrow /></a>
-          <a href="/services" className="reveal-delay-1" data-reveal><span>02</span><h3>Diagnostic</h3><p>Comprendre une plante qui jaunit, ralentit ou semble en difficulté.</p><Arrow /></a>
-          <a href="/livraison-plantes-lille" className="reveal-delay-2" data-reveal><span>03</span><h3>Livraison végétale</h3><p>Plantes d’intérieur, grands sujets et commandes florales livrés à Lille sur devis.</p><Arrow /></a>
+          <a href="/rempotage" data-reveal><img className="home-service-image" src="/service-rempotage-plantes-lille.jpg" alt="Rempotage d’une plante tropicale au Studio Végétal Tibaldo Jungle à Lille" width={1536} height={1152} /><span className="home-service-shade" aria-hidden="true" /><span className="home-service-number">01</span><h3>SOS Rempotage</h3><p>Diagnostic, racines, pot et substrat : trouvez la bonne solution pour votre plante.</p><Arrow /></a>
+          <a href="/services" className="reveal-delay-1" data-reveal><img className="home-service-image" src="/service-diagnostic-plantes-lille.jpg" alt="Diagnostic d’une feuille de plante tropicale au Studio Végétal Tibaldo Jungle à Lille" width={1536} height={1152} /><span className="home-service-shade" aria-hidden="true" /><span className="home-service-number">02</span><h3>Diagnostic</h3><p>Comprendre une plante qui jaunit, ralentit ou semble en difficulté.</p><Arrow /></a>
+          <a href="/livraison-plantes-lille" className="reveal-delay-2" data-reveal><img className="home-service-image" src="/service-livraison-plantes-lille.jpg" alt="Plantes tropicales préparées pour une livraison à Lille par Tibaldo Jungle" width={1536} height={1152} /><span className="home-service-shade" aria-hidden="true" /><span className="home-service-number">03</span><h3>Livraison végétale</h3><p>Plantes d’intérieur, grands sujets et commandes florales livrés à Lille sur devis.</p><Arrow /></a>
         </div>
       </section>
 
