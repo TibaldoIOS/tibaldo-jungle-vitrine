@@ -39,5 +39,6 @@ export type PlantEntry = {
   gallery: { src: string; alt: string; caption: string; width: number; height: number }[];
   seo: { title: string; description: string; keywords: string[] };
   sources: { label: string; url: string }[];
+  shopUrl?: string;
   publishedAt: string; updatedAt: string;
 };
