@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jungle.tibaldo.fr"),
-  title: "Studio Végétal Tibaldo Jungle à Lille",
+  title: "Tibaldo Jungle — Studio Végétal à Lille",
   description:
     "Nouveauté à Lille : Studio Végétal Tibaldo Jungle, boutique de plantes rares et exotiques. Ouverture le 26 septembre 2026, rempotage gratuit.",
   applicationName: "Studio Végétal — Tibaldo Jungle",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "/",
     siteName: "Studio Végétal — Tibaldo Jungle",
-    title: "Studio Végétal Tibaldo Jungle à Lille",
+    title: "Tibaldo Jungle — Studio Végétal à Lille",
     description:
       "Nouveauté à Lille : une boutique de plantes rares et exotiques, des conseils sincères et un rempotage offert pour l’inauguration.",
     images: [
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Studio Végétal Tibaldo Jungle à Lille",
+    title: "Tibaldo Jungle — Studio Végétal à Lille",
     description:
       "Nouveauté à Lille : boutique de plantes rares et exotiques. Ouverture le 26 septembre 2026.",
     images: ["/projet-boutique-tibaldo-jungle-lille.webp"],

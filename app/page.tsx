@@ -1,5 +1,8 @@
 import ScrollReveal from "./ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "./SiteChrome";
+import { plantFamilies } from "@/lib/plants/catalog";
+import { substrates } from "./substrats/data";
+import HomeExperience from "./HomeExperience";
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -45,7 +48,24 @@ export default function Home() {
         </div>
       </section>
 
-      <aside className="opening-banner" aria-label="Annonce de la grande ouverture"><div className="opening-banner-glow" aria-hidden="true" /><a className="shell opening-banner-inner" href="/evenements/ouverture-tibaldo-jungle-lille"><span className="opening-badge"><strong>26</strong><small>SEP</small></span><p><span className="opening-live"><i aria-hidden="true" /> Événement à venir</span><strong>Grande ouverture Tibaldo Jungle · Lille</strong><span>Découvrez le Studio Végétal et indiquez votre présence.</span></p><span className="opening-banner-cta">Découvrir l’événement <b aria-hidden="true">↗</b></span><span className="opening-arrow" aria-hidden="true">↓</span></a></aside>
+      <aside className="opening-banner" aria-label="Annonce de la grande ouverture"><div className="opening-banner-glow" aria-hidden="true" /><a className="shell opening-banner-inner" href="/evenements/ouverture-tibaldo-jungle-lille"><span className="opening-badge"><strong>26</strong><small>SEP</small></span><p><span className="opening-live"><i aria-hidden="true" /> Événement à venir</span><strong>Grande ouverture · 26 septembre 2026 · Lille</strong><span>Rempotage gratuit toute l’année · découvrez le Studio et indiquez votre présence.</span></p><span className="opening-banner-cta">Découvrir l’événement <b aria-hidden="true">↗</b></span><span className="opening-arrow" aria-hidden="true">↓</span></a></aside>
+
+      {false ? <><section className="home-categories" aria-labelledby="home-categories-title">
+        <div className="shell home-categories-heading" data-reveal><div><p className="section-kicker">L’encyclopédie végétale</p><h2 id="home-categories-title">Choisir une famille.<br /><em>Suivre sa curiosité.</em></h2></div><p>Parcourez les plantes par univers botanique avant de lancer une recherche précise.</p></div>
+        <div className="home-category-rail" aria-label="Catégories de plantes">
+          {plantFamilies.map((family, index) => <a href={`/plantes/${family.slug}`} key={family.slug}><img src={family.image} alt="" width="720" height="900" loading="lazy" /><span>{String(index + 1).padStart(2, "0")}</span><strong>{family.name}</strong><small>Explorer ↗</small></a>)}
+        </div>
+      </section>
+
+      <section className="home-categories home-substrate-categories" aria-labelledby="home-substrate-categories-title">
+        <div className="shell home-categories-heading" data-reveal><div><p className="section-kicker">La matériauthèque</p><h2 id="home-substrate-categories-title">Choisir un composant.<br /><em>Comprendre son rôle.</em></h2></div><p>Explorez chaque matière avant de composer un mélange adapté aux racines, à la plante et à votre manière d’arroser.</p></div>
+        <div className="home-category-rail home-substrate-rail" aria-label="Sélection des substrats">
+          {substrates.map((substrate, index) => <a href={`/substrats/${substrate.slug}`} key={substrate.slug}><img src={substrate.image} alt={substrate.imageAlt} width="720" height="900" loading="lazy" /><span>{String(index + 1).padStart(2, "0")}</span><strong>{substrate.name}</strong><small>Voir la fiche ↗</small></a>)}
+        </div>
+        <div className="shell home-substrate-all"><a className="text-link" href="/substrats">Explorer tous les substrats <Arrow /></a></div>
+      </section>
+
+      <section className="home-pots shell" data-reveal><div className="home-pots-copy"><p className="section-kicker">Nouvel univers · Arrivages en cours</p><h2>Pots & cache-pots.<br /><em>La forme au service des racines.</em></h2><p>Terre cuite, céramique émaillée, matières minérales et contenants légers : une sélection de pots percés et de cache-pots est en préparation pour accompagner les plantes du Studio.</p><a className="button button-green" href="/pots-cache-pots-lille">Découvrir la future collection <Arrow /></a></div><div className="home-pots-art" aria-hidden="true"><span /><span /><span /></div></section>
 
       <section className="home-intro shell" data-reveal>
         <div><p className="section-kicker">Une nouvelle adresse végétale</p><h2>Choisir moins.<br />Choisir <em>mieux.</em></h2></div>
@@ -60,8 +80,8 @@ export default function Home() {
       <section className="home-services">
         <div className="shell home-services-heading" data-reveal><div><p className="section-kicker">Nos services à Lille</p><h2>Faire grandir<br /><em>votre jungle.</em></h2></div><p>Rempotage, diagnostic, conseil et compositions végétales : le Studio vous accompagne au-delà de l’achat.</p></div>
         <div className="shell home-service-list">
-          <a href="/rempotage" data-reveal><img className="home-service-image" src="/service-rempotage-plantes-lille.jpg" alt="Rempotage d’une plante tropicale au Studio Végétal Tibaldo Jungle à Lille" width={1536} height={1152} /><span className="home-service-shade" aria-hidden="true" /><span className="home-service-number">01</span><h3>SOS Rempotage</h3><p>Diagnostic, racines, pot et substrat : trouvez la bonne solution pour votre plante.</p><Arrow /></a>
-          <a href="/services" className="reveal-delay-1" data-reveal><img className="home-service-image" src="/service-diagnostic-plantes-lille.jpg" alt="Diagnostic d’une feuille de plante tropicale au Studio Végétal Tibaldo Jungle à Lille" width={1536} height={1152} /><span className="home-service-shade" aria-hidden="true" /><span className="home-service-number">02</span><h3>Diagnostic</h3><p>Comprendre une plante qui jaunit, ralentit ou semble en difficulté.</p><Arrow /></a>
+          <a href="/rempotage" data-reveal><img className="home-service-image" src="/service-rempotage-plantes-lille.jpg" alt="Rempotage d’une plante tropicale au Studio Végétal Tibaldo Jungle à Lille" width={1536} height={1152} /><span className="home-service-shade" aria-hidden="true" /><span className="home-service-number">01 · Geste technique</span><h3>Bar à rempotage</h3><p>Examiner les racines, choisir le bon volume de pot et composer un substrat réellement adapté.</p><Arrow /></a>
+          <a href="/sos-plantes" className="reveal-delay-1" data-reveal><img className="home-service-image" src="/service-diagnostic-plantes-lille.jpg" alt="Diagnostic d’une feuille de plante tropicale au Studio Végétal Tibaldo Jungle à Lille" width={1536} height={1152} /><span className="home-service-shade" aria-hidden="true" /><span className="home-service-number">02 · Comprendre</span><h3>SOS Plantes</h3><p>Identifier les symptômes, les parasites et les déséquilibres avant d’agir ou de traiter.</p><Arrow /></a>
           <a href="/livraison-plantes-lille" className="reveal-delay-2" data-reveal><img className="home-service-image" src="/service-livraison-plantes-lille.jpg" alt="Plantes tropicales préparées pour une livraison à Lille par Tibaldo Jungle" width={1536} height={1152} /><span className="home-service-shade" aria-hidden="true" /><span className="home-service-number">03</span><h3>Livraison végétale</h3><p>Plantes d’intérieur, grands sujets et commandes florales livrés à Lille sur devis.</p><Arrow /></a>
         </div>
       </section>
@@ -76,6 +96,8 @@ export default function Home() {
         <div className="home-value-grid"><p><strong>Sélection passionnée</strong>Chaque plante est choisie individuellement pour sa qualité, sa singularité et son potentiel. Des variétés accessibles aux plantes de collection, la sélection évolue au fil des arrivages et des saisons.</p><p><strong>Culture locale</strong>Une partie de nos plantes est bouturée, multipliée et suivie à Wattignies. Une production locale, réalisée en petites quantités et au rythme naturel du vivant.</p><p><strong>Conseils sincères</strong>Nous vous aidons à choisir une plante adaptée à votre lumière, votre espace et votre quotidien. Des conseils simples et honnêtes, sans jargon ni achat inutile.</p></div>
         <a className="text-link" href="/services">Découvrir notre approche <Arrow /></a>
       </section>
+
+      <section className="home-journal shell" data-reveal><div className="home-journal-image"><img src="/projet-boutique-tibaldo-jungle-lille.webp" alt="Création du Studio Végétal Tibaldo Jungle à Lille" width="1200" height="800" loading="lazy" /></div><div><p className="section-kicker">Les coulisses de la Jungle</p><h2>De la première idée<br /><em>jusqu’au jour J.</em></h2><p>Travaux, choix des plantes, mobilier, arrivages et derniers préparatifs : suivez la naissance du Studio Végétal étape par étape.</p><a className="button button-green" href="/coulisses">Voir le journal <Arrow /></a></div></section></> : <HomeExperience />}
 
       <section className="opening" id="contact"><div className="opening-photo" data-parallax="18" aria-hidden="true" /><div className="opening-overlay" aria-hidden="true" /><div className="shell opening-content" data-reveal><p className="section-kicker">Ouverture le 26 septembre 2026</p><h2>La nouvelle jungle<br />lilloise prend racine.</h2><p>Retrouvez la boutique de plantes rares et exotiques Tibaldo Jungle au 3, place de l’Arbonnoise à Lille.</p><div className="opening-meta"><p><span>Adresse</span><strong>3 place de l’Arbonnoise</strong><small>59000 Lille</small></p><p><span>Horaires</span><strong>Mardi–samedi · 10h–19h</strong><small>Dimanche · 10h–13h</small></p><p><span>Contact</span><a href="mailto:jungle@tibaldo.fr">jungle@tibaldo.fr</a><small><a href="tel:+33743727079">07 43 72 70 79</a></small></p></div><a className="button button-light" href="/contact">Carte & itinéraire GPS <Arrow /></a></div></section>
       <SiteFooter />

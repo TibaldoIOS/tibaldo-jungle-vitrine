@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import LocalSeoPage from "../LocalSeoPage";
 
-const title = "Bar à rempotage gratuit à Lille | Tibaldo Jungle";
-const description = "Découvrez le bar à rempotage gratuit de Tibaldo Jungle à Lille : diagnostic des racines, mélange sur mesure et conseils pour toutes vos plantes.";
+const title = "Rempotage gratuit à Lille, terreau offert | Tibaldo Jungle";
+const description = "Bar à rempotage gratuit à Lille : geste, conseils et Terreau Signature offerts pour les plantes classiques. Grands sujets hors normes sur devis.";
 
 export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/rempotage-plantes-lille" },
+  keywords: ["rempotage gratuit Lille", "bar à rempotage Lille", "terreau gratuit Lille", "terreau offert rempotage", "rempoter plante Lille", "rempotage plante intérieur Lille", "rempotage Monstera Lille", "Tibaldo Jungle rempotage"],
   openGraph: {
     title,
     description,
@@ -34,33 +35,38 @@ export default function RempotagePlantesLille() {
     title="Rempotage gratuit"
     accent="au cœur de Lille."
     intro="Venez avec votre plante, même achetée ailleurs. Au Studio Végétal, le geste de rempotage est offert toute l’année : nous observons les racines, choisissons le bon volume et composons un mélange adapté."
+    notice={{
+      eyebrow: "Rempotage et Terreau Signature offerts",
+      title: "0 € pour une plante classique",
+      copy: "Le geste, le conseil et le Terreau Signature sont fournis gratuitement pour les plantes de format classique. Les sujets hors normes, besoins techniques particuliers et contenants restent exclus de cette offre.",
+    }}
     sectionTitle="Un service végétal rare à Lille,"
     sectionAccent="simple, utile et vraiment gratuit."
     paragraphs={[
       "Le bar à rempotage Tibaldo Jungle a été imaginé pour rendre le soin des plantes plus accessible en centre-ville de Lille. Vous n’avez pas besoin de deviner la taille du prochain pot, d’acheter un grand sac de terreau ou de mélanger plusieurs composants chez vous : apportez simplement votre plante au 3 place de l’Arbonnoise. Nous prenons le temps de regarder ce qui se passe sous la surface avant d’intervenir.",
-      "Le geste et le conseil sont gratuits toute l’année, pour les plantes achetées chez Tibaldo Jungle comme pour celles qui viennent d’une autre boutique. Seuls le nouveau pot et la quantité de substrat réellement utilisés sont facturés lorsqu’ils sont nécessaires. Vous savez ainsi précisément ce qui est utile à votre plante, sans forfait de main-d’œuvre ni achat superflu.",
+      "Le geste, le conseil et le Terreau Signature sont gratuits toute l’année pour les plantes d’intérieur de format classique, qu’elles aient été achetées chez Tibaldo Jungle ou dans une autre boutique. Vous pouvez apporter un pot percé adapté ou choisir un nouveau contenant au Studio. Le pot, les composants techniques complémentaires et les demandes particulières ne sont pas compris dans la gratuité.",
       "Un bon rempotage ne consiste pas seulement à placer une plante dans un pot plus grand. Nous contrôlons la densité de la motte, l’état des racines, le drainage, les signes d’excès d’eau, la présence éventuelle de parasites et la cohérence entre la plante et son contenant. Si elle n’a pas besoin d’être rempotée, nous vous le disons : un diagnostic honnête vaut mieux qu’une intervention automatique.",
-      "Chaque mélange est ajusté à l’espèce et à votre quotidien. Alocasia, Anthurium, Monstera et Philodendron apprécient souvent une structure aérée ; cactus et plantes grasses demandent une part minérale plus importante ; Maranta, Calathea et fougères nécessitent une rétention d’eau mieux maîtrisée. Terreau, écorce de pin, perlite, sphaigne, pierre ponce, charbon actif ou zéolite sont associés selon les besoins réels de la plante.",
-      "Le bar à rempotage s’adresse aussi bien aux débutants qu’aux collectionneurs de plantes rares à Lille. Vous repartez avec une plante installée proprement et des indications simples sur le premier arrosage, la reprise, la lumière et le délai avant fertilisation. Pour une grande plante, plusieurs sujets ou une motte difficile à transporter, contactez-nous avant votre venue afin que nous préparions l’espace nécessaire.",
+      "Le Terreau Signature constitue la base offerte pour les plantes classiques. Il est pensé pour concilier réserve d’eau, structure et circulation de l’air. Certaines plantes demandent toutefois une recette plus technique : écorce de pin, perlite, sphaigne, charbon actif, vermiculite ou zéolite peuvent alors compléter le mélange selon les racines, la lumière et votre manière d’arroser.",
+      "Le bar à rempotage s’adresse aussi bien aux débutants qu’aux collectionneurs de plantes rares à Lille. Vous repartez avec une plante installée proprement et des indications simples sur le premier arrosage, la reprise, la lumière et le délai avant fertilisation. Les plantes XXL, pots très lourds, sujets nécessitant plusieurs personnes, systèmes racinaires exceptionnels et projets en série sont considérés comme hors normes : contactez-nous avant votre venue pour vérifier la faisabilité et obtenir une estimation.",
     ]}
     highlights={[
       {
-        title: "Vous apportez votre plante",
-        copy: "Avec ou sans nouveau pot. Le service accueille aussi les plantes achetées ailleurs, sous réserve qu’elles puissent être manipulées en sécurité.",
+        title: "Terreau Signature offert",
+        copy: "Pour une plante classique, la base de Terreau Signature et le geste de rempotage sont fournis gratuitement, même si la plante vient d’ailleurs.",
       },
       {
         title: "Nous observons les racines",
         copy: "Motte, drainage, croissance, parasites et humidité sont contrôlés avant de décider s’il faut vraiment rempoter.",
       },
       {
-        title: "Nous composons le bon mélange",
-        copy: "Le geste est offert. Vous réglez uniquement le contenant et les matières utilisés, puis repartez avec des conseils personnalisés.",
+        title: "Une offre clairement délimitée",
+        copy: "Le pot, les composants techniques supplémentaires et les plantes hors normes ne sont pas inclus. La faisabilité est confirmée avant intervention.",
       },
     ]}
     faq={[
       {
         question: "Le rempotage est-il vraiment gratuit à Lille ?",
-        answer: "Oui. Chez Tibaldo Jungle, la main-d’œuvre et les conseils de rempotage sont gratuits toute l’année. Seuls le pot et la quantité de substrat réellement utilisés sont facturés lorsqu’ils sont nécessaires.",
+        answer: "Oui. Pour une plante classique, la main-d’œuvre, les conseils et le Terreau Signature sont gratuits toute l’année. Le contenant, les composants techniques supplémentaires et les sujets hors normes ne sont pas compris.",
       },
       {
         question: "Puis-je apporter une plante achetée dans une autre boutique ?",
@@ -68,7 +74,15 @@ export default function RempotagePlantesLille() {
       },
       {
         question: "Faut-il prendre rendez-vous pour le bar à rempotage ?",
-        answer: "Une plante de taille courante peut être apportée pendant les horaires d’ouverture. Pour plusieurs plantes, un très grand sujet ou une intervention plus complexe, contactez le Studio avant votre venue.",
+        answer: "Une plante classique peut être apportée pendant les horaires d’ouverture, dans la limite d’un passage par semaine. Chaque passage est comptabilisé sur votre compte client. Pour plusieurs passages dans la même semaine, plusieurs plantes, un sujet XXL, un pot très lourd ou une intervention complexe, la prestation est proposée sur devis : contactez le Studio avant votre venue.",
+      },
+      {
+        question: "Le Terreau Signature est-il vraiment fourni gratuitement ?",
+        answer: "Oui. Le Terreau Signature utilisé comme base lors du rempotage d’une plante classique est offert. Un mélange demandant des composants techniques particuliers peut entraîner un supplément annoncé avant l’intervention.",
+      },
+      {
+        question: "Qu’est-ce qu’une plante hors normes ?",
+        answer: "Il s’agit notamment d’un sujet XXL, d’un ensemble très lourd, d’un pot difficile à déplacer, d’une motte nécessitant plusieurs personnes ou d’une intervention longue et technique. Contactez le Studio avec une photo et les dimensions pour vérifier la faisabilité.",
       },
       {
         question: "Quand faut-il rempoter une plante d’intérieur ?",
@@ -76,7 +90,7 @@ export default function RempotagePlantesLille() {
       },
       {
         question: "Quel substrat utilisez-vous pour les plantes tropicales ?",
-        answer: "Il n’existe pas de recette unique. Nous adaptons le mélange à l’espèce, à la taille du pot, à la lumière et aux habitudes d’arrosage, avec notamment terreau, écorce de pin, perlite, sphaigne, pierre ponce, charbon actif ou zéolite.",
+        answer: "Il n’existe pas de recette unique. Nous adaptons le mélange à l’espèce, à la taille du pot, à la lumière et aux habitudes d’arrosage, avec notamment terreau, écorce de pin, perlite, sphaigne, charbon actif ou zéolite.",
       },
       {
         question: "Peut-on rempoter un Monstera, un Alocasia ou un Anthurium au Studio ?",
@@ -103,11 +117,25 @@ export default function RempotagePlantesLille() {
         label: "Diagnostic de plante",
         copy: "Feuilles jaunes, racines abîmées ou croissance ralentie : identifier la cause avant d’agir.",
       },
+      {
+        href: "/conseils/pot-perce-cache-pot-coupelle",
+        label: "Pot percé ou cache-pot ?",
+        copy: "Comprendre pourquoi l’évacuation de l’eau reste indispensable après un rempotage.",
+      },
+      {
+        href: "/pots-cache-pots-lille",
+        label: "Pots et cache-pots à Lille",
+        copy: "Découvrir les matières et préparer le choix du prochain contenant.",
+      },
     ]}
     service={{
       name: "Bar à rempotage gratuit à Lille",
-      description: "Service gratuit de rempotage de plantes d’intérieur avec diagnostic des racines, choix du pot, mélange de substrat sur mesure et conseils personnalisés.",
+      description: "Service de rempotage gratuit à Lille avec diagnostic des racines, conseils et Terreau Signature offert pour les plantes classiques. Sujets hors normes et besoins techniques particuliers exclus.",
       areaServed: ["Lille", "La Madeleine", "Lambersart", "Loos", "Ronchin", "Wattignies", "Métropole Européenne de Lille"],
+      offer: {
+        price: "0",
+        description: "Geste de rempotage, conseils et Terreau Signature offerts pour une plante classique. Hors pot, composants techniques supplémentaires et sujets hors normes.",
+      },
     }}
   />;
 }

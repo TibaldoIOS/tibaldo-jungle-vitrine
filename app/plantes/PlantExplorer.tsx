@@ -35,7 +35,7 @@ export default function PlantExplorer({ plants }: { plants: readonly PlantEntry[
 
   const reset = () => { setQuery(""); setFamily(""); setGenus(""); setLight(""); setWatering(""); setDifficulty("5"); setTemperature(""); setHabit(""); setPetSafe(false); };
 
-  return <section className="plant-search shell" aria-labelledby="plant-search-title">
+  return <section className="plant-search shell" id="recherche-plantes" aria-labelledby="plant-search-title">
     <header data-reveal><p className="section-kicker">Trouver votre plante</p><h2 id="plant-search-title">Chercher par nom.<br /><em>Explorer par besoins.</em></h2><p>Combinez plusieurs critères pour découvrir les plantes adaptées à votre lumière, votre température et votre expérience.</p></header>
     <div className="plant-search-panel">
       <label className="plant-search-query"><span>Recherche intelligente</span><input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Monstera, deliciosa, Thai…" /></label>

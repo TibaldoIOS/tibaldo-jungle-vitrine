@@ -2,18 +2,19 @@ import type { Metadata } from "next";
 import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 import { featuredSubstrateSlugs, substrates, substrateProfiles } from "./data";
+import OpeningEventLink from "../OpeningEventLink";
 
 export const metadata: Metadata = {
-  title: "Guide des substrats pour plantes | Tibaldo Jungle",
-  description: "Comprendre terreau, perlite, sphaigne, écorce, pierre ponce et zéolite pour composer un substrat adapté à chaque plante d’intérieur.",
+  title: "Substrats en vrac à Lille | Guide Tibaldo Jungle",
+  description: "Comprendre terreau, perlite, sphaigne, écorce et zéolite pour composer un substrat adapté à chaque plante d’intérieur.",
   alternates: { canonical: "/substrats" },
-  keywords: ["substrats en vrac Lille", "terreau Lille", "perlite Lille", "sphaigne Lille", "écorce de pin Lille", "pierre ponce Lille", "zéolite Lille"],
+  keywords: ["substrats en vrac Lille", "terreau Lille", "perlite Lille", "sphaigne Lille", "écorce de pin Lille", "zéolite Lille"],
   openGraph: {
     type: "website",
     locale: "fr_FR",
     url: "/substrats",
     siteName: "Studio Végétal — Tibaldo Jungle",
-    title: "Guide des substrats pour plantes | Tibaldo Jungle",
+    title: "Substrats en vrac à Lille | Guide Tibaldo Jungle",
     description: "Découvrez le rôle de dix composants et apprenez à composer un mélange adapté aux racines de vos plantes d’intérieur.",
     images: [{ url: "/advice-rempotage.jpg", width: 1200, height: 630, alt: "Substrats et rempotage pour plantes d’intérieur à Lille" }],
   },
@@ -65,7 +66,7 @@ export default function SubstratesPage() {
           <p>Terreau, écorces, fibres et minéraux : composez un mélange adapté à votre plante, dans la quantité réellement nécessaire.</p>
           <a className="button button-light" href="#composants">Explorer les composants <Arrow /></a>
         </div>
-        <div className="shell inner-hero-index" aria-hidden="true"><span>10 composants</span><span>Vente au détail</span><span>Conseils sur place</span></div>
+        <div className="shell inner-hero-index" aria-hidden="true"><span>9 composants</span><span>Vente au détail</span><span>Conseils sur place</span></div>
       </section>
 
       <section className="substrate-manifesto shell" data-reveal>
@@ -79,7 +80,7 @@ export default function SubstratesPage() {
       <section className="substrate-collection" id="composants">
         <div className="shell collection-heading" data-reveal>
           <p className="section-kicker">La matériauthèque végétale</p>
-          <h2>Dix composants.<br /><em>Une infinité d’équilibres.</em></h2>
+          <h2>Neuf composants.<br /><em>Une infinité d’équilibres.</em></h2>
           <p>Chaque matière joue un rôle précis. Découvrez son toucher, son comportement et les plantes auxquelles elle convient.</p>
         </div>
         <div className="shell material-list">
@@ -122,7 +123,9 @@ export default function SubstratesPage() {
       </section>
       <nav className="shell flower-service-link" data-reveal>
         <a href="/substrats-en-vrac-lille">Acheter des substrats en vrac à Lille <span>↗</span></a>
+        <a href="/pots-cache-pots-lille">Choisir un pot ou un cache-pot <span>↗</span></a>
       </nav>
+      <OpeningEventLink />
       <SiteFooter />
     </main>
   );

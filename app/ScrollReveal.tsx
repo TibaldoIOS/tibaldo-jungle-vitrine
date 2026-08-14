@@ -63,10 +63,11 @@ export default function ScrollReveal() {
 
         if (rect.bottom < -120 || rect.top > viewportHeight + 120) return;
 
-        const strength = Number(element.dataset.parallax) || 18;
+        const strength = Math.abs(Number(element.dataset.parallax) || 18);
+        const direction = element.dataset.parallaxDirection === "down" ? -1 : 1;
         const position =
           (rect.top + rect.height / 2 - viewportHeight / 2) / viewportHeight;
-        const shift = Math.max(
+        const shift = direction * Math.max(
           -strength,
           Math.min(strength, -position * strength),
         );

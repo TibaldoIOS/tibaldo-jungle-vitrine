@@ -43,9 +43,9 @@ test("renders the homepage SEO signals and editorial content", async () => {
   assert.match(html, /Plantes rares[\s\S]*&amp; exotiques[\s\S]*à Lille\./i);
   assert.match(html, /class=["']hero-line["']/i);
   assert.match(html, /data-parallax=["']18["']/i);
-  assert.match(html, /Découvrir la sélection/i);
+  assert.match(html, /Trois univers/i);
   assert.match(html, /href=["']\/substrats["']/i);
-  assert.match(html, /Une passion cultivée/i);
+  assert.match(html, /Conseiller sans sur-vendre/i);
   assert.match(html, /Grande ouverture · 26 septembre 2026 · Lille/i);
   assert.match(html, /Rempotage gratuit toute l’année/i);
   assert.match(html, /href=["']\/evenements\/ouverture-tibaldo-jungle-lille["']/i);
@@ -65,9 +65,9 @@ test("renders the substrates collection with local SEO metadata", async () => {
   assert.match(html, /Terreau Signature by Romain/i);
   assert.match(html, /Écorce de pin/i);
   assert.match(html, /Sphaigne séchée/i);
-  assert.match(html, /Pierre ponce/i);
   assert.match(html, /Zéolite/i);
-  assert.match(html, /Photographie produit à venir/i);
+  assert.match(html, /src=["']\/substrats\/terreau-signature-substrat-plantes-lille\.jpg["']/i);
+  assert.match(html, /src=["']\/substrats\/sphaigne-sechee-substrat-plantes-lille-v2\.png["']/i);
 });
 
 test("serves a crawlable robots file and a populated XML sitemap", async () => {
@@ -82,8 +82,19 @@ test("serves a crawlable robots file and a populated XML sitemap", async () => {
   const xml = await sitemap.text();
   assert.match(xml, /<urlset xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9">/i);
   assert.match(xml, /https:\/\/jungle\.tibaldo\.fr\/evenements\//i);
+  assert.match(xml, /https:\/\/jungle\.tibaldo\.fr\/evenements\/ouverture-tibaldo-jungle-lille/i);
   assert.match(xml, /https:\/\/jungle\.tibaldo\.fr\/plantes\/alocasia\//i);
   assert.doesNotMatch(xml, /\/admin\//i);
+});
+
+test("links the opening event contextually from major editorial pages", async () => {
+  for (const route of ["/plantes", "/substrats", "/services"]) {
+    const response = await render(route);
+    assert.equal(response.status, 200);
+    const html = await response.text();
+    assert.match(html, /href=["']\/evenements\/ouverture-tibaldo-jungle-lille["']/i);
+    assert.match(html, /Nouvelle boutique de plantes à Lille/i);
+  }
 });
 
 test("renders the opening event with complete crawlable SEO data", async () => {
@@ -91,12 +102,12 @@ test("renders the opening event with complete crawlable SEO data", async () => {
   assert.equal(response.status, 200);
   const html = await response.text();
 
-  assert.match(html, /<title>Que faire à Lille ce week-end \? Ouverture Tibaldo Jungle<\/title>/i);
+  assert.match(html, /<title>Ouverture boutique de plantes à Lille \| Tibaldo Jungle<\/title>/i);
   assert.match(html, /<link(?=[^>]*rel=["']canonical["'])(?=[^>]*href=["']https:\/\/jungle\.tibaldo\.fr\/evenements\/ouverture-tibaldo-jungle-lille["'])[^>]*>/i);
   assert.match(html, /<h1>Ouverture de Tibaldo Jungle à Lille — 26 septembre 2026<\/h1>/i);
   assert.match(html, /"@type":"Event"/i);
   assert.match(html, /"isAccessibleForFree":true/i);
   assert.match(html, /"@type":"FAQPage"/i);
   assert.match(html, /"@type":"BreadcrumbList"/i);
-  assert.match(html, /Que faire à Lille le week-end du 26 septembre 2026/i);
+  assert.match(html, /Nouvelle boutique de plantes à Lille : inauguration gratuite/i);
 });

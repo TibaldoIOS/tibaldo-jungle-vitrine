@@ -41,7 +41,11 @@ export default async function SubstrateProfilePage({ params }: { params: Promise
     <ScrollReveal />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     <section className="inner-hero substrate-detail-hero">
-      <div className="inner-hero-texture" aria-hidden="true" /><div className="inner-hero-shade" aria-hidden="true" /><SiteHeader />
+      <div
+        className="inner-hero-texture"
+        style={{ backgroundImage: `linear-gradient(105deg, rgba(6,35,27,.88), rgba(6,35,27,.28)), url(${substrate.image})` }}
+        aria-hidden="true"
+      /><div className="inner-hero-shade" aria-hidden="true" /><SiteHeader />
       <div className="shell inner-hero-content"><a className="family-genre-breadcrumb" href="/substrats">Substrats <span>→</span> {profile.shortName}</a><p className="eyebrow"><span /> {profile.eyebrow}</p><h1><span className="hero-line"><span>{profile.title}</span></span><span className="hero-line"><span><em>{profile.accent}</em></span></span></h1><p>{profile.intro}</p><a className="button button-light" href="#guide">Comprendre ce composant <Arrow /></a></div>
       <div className="shell substrate-availability"><span className={profile.status === "available" ? "is-available" : "is-soon"} /> <strong>{profile.statusLabel}</strong><small>3 place de l’Arbonnoise · Lille</small></div>
     </section>
@@ -51,7 +55,7 @@ export default async function SubstrateProfilePage({ params }: { params: Promise
     <section className="shell substrate-detail-methods"><header data-reveal><p className="section-kicker">Gestes du Studio</p><h2>Comment utiliser<br />{profile.shortName.toLowerCase()}.</h2></header><div>{profile.methods.map((item) => <article key={item.title} data-reveal><h3>{item.title}</h3><p>{item.copy}</p></article>)}</div></section>
     <section className="substrate-detail-guide"><div className="shell substrate-detail-guide-grid"><div data-reveal><p className="section-kicker">Pour quelles plantes ?</p><h2>Une matière choisie<br /><em>selon les racines.</em></h2><ul>{profile.suitableFor.map((plant) => <li key={plant}>{plant}</li>)}</ul></div><aside data-reveal><span>À garder en tête</span>{profile.cautions.map((caution) => <p key={caution}>{caution}</p>)}</aside></div></section>
     <section className="shell local-seo-faq flowers-faq"><header data-reveal><p className="section-kicker">Questions fréquentes</p><h2>Bien utiliser {profile.shortName.toLowerCase()}.</h2></header>{profile.faq.map((item) => <details key={item.question} data-reveal><summary>{item.question}<span>+</span></summary><p>{item.answer}</p></details>)}</section>
-    <nav className="shell flower-service-link" data-reveal><a href="/substrats">Explorer toute la matériauthèque <span>↗</span></a><a href="/substrats-en-vrac-lille">Substrats en vrac à Lille <span>↗</span></a></nav>
+    <nav className="shell flower-service-link" data-reveal><a href="/substrats">Explorer toute la matériauthèque <span>↗</span></a><a href="/substrats-en-vrac-lille">Substrats en vrac à Lille <span>↗</span></a><a href="/pots-cache-pots-lille">Pots et cache-pots à Lille <span>↗</span></a></nav>
     <SiteFooter />
   </main>;
 }
