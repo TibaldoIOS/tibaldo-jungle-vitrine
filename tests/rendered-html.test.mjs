@@ -65,9 +65,9 @@ test("renders the substrates collection with local SEO metadata", async () => {
   assert.match(html, /Terreau Signature by Romain/i);
   assert.match(html, /Écorce de pin/i);
   assert.match(html, /Sphaigne séchée/i);
-  assert.match(html, /Pierre ponce/i);
   assert.match(html, /Zéolite/i);
-  assert.match(html, /Photographie produit à venir/i);
+  assert.match(html, /src=["']\/substrats\/terreau-signature-substrat-plantes-lille\.jpg["']/i);
+  assert.match(html, /src=["']\/substrats\/sphaigne-sechee-substrat-plantes-lille-v2\.png["']/i);
 });
 
 test("serves a crawlable robots file and a populated XML sitemap", async () => {

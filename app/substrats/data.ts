@@ -16,7 +16,7 @@ export const substrates = [
     name: "Écorce de pin",
     number: "02",
     tone: "bark",
-    image: "/substrats/ecorce-de-pin-substrat-plantes-lille.jpg",
+    image: "/substrats/ecorce-de-pin-substrat-plantes-lille-v2.png",
     imageAlt: "Écorces de pin horticoles pour substrat aéré de plantes tropicales",
     description: "Des fragments structurants qui ouvrent le mélange et ménagent des poches d’air autour des racines. Un geste simple pour retrouver un sol plus proche de celui des épiphytes.",
     benefits: ["Aération durable", "Drainage renforcé", "Limite le tassement"],
@@ -52,7 +52,7 @@ export const substrates = [
     name: "Sphaigne séchée",
     number: "05",
     tone: "moss",
-    image: "/substrats/sphaigne-sechee-substrat-plantes-lille.jpg",
+    image: "/substrats/sphaigne-sechee-substrat-plantes-lille-v2.png",
     imageAlt: "Sphaigne séchée pour boutures et racines de plantes tropicales",
     description: "Une fibre végétale capable de conserver une humidité régulière tout en restant aérienne. Réhydratée avec soin, elle devient un support précieux pour les racines fragiles.",
     benefits: ["Humidité homogène", "Texture aérienne", "Idéale en propagation"],
@@ -84,21 +84,9 @@ export const substrates = [
     plants: "Plantes tropicales adaptées à la semi-hydro et grands sujets d’intérieur.",
   },
   {
-    slug: "pierre-ponce",
-    name: "Pierre ponce",
-    number: "08",
-    tone: "stone",
-    image: "/substrats/pierre-ponce-substrat-plantes-lille.jpg",
-    imageAlt: "Pierre ponce horticole poreuse pour substrats minéraux drainants",
-    description: "Une roche volcanique poreuse qui apporte du poids sans fermer le mélange. Elle garde une fine réserve d’eau et de nutriments tout en laissant les racines respirer.",
-    benefits: ["Drainage stable", "Bonne porosité", "Retient une fine réserve"],
-    uses: "Mélanges minéraux, bonsaïs, plantes matures et substrats devant rester structurés.",
-    plants: "Alocasia, Anthurium, bonsaïs, succulentes et plantes méditerranéennes.",
-  },
-  {
     slug: "vermiculite",
     name: "Vermiculite",
-    number: "09",
+    number: "08",
     tone: "gold",
     image: "/substrats/vermiculite-horticole-substrat-plantes-lille.jpg",
     imageAlt: "Vermiculite horticole dorée pour retenir l’humidité des semis",
@@ -110,7 +98,7 @@ export const substrates = [
   {
     slug: "zeolite",
     name: "Zéolite",
-    number: "10",
+    number: "09",
     tone: "zeolite",
     image: "/substrats/zeolite-substrat-plantes-lille.jpg",
     imageAlt: "Zéolite minérale poreuse pour substrats techniques de plantes",
@@ -158,9 +146,6 @@ export const substrateProfiles: Record<string, SubstrateProfile> = {
   },
   "charbon-actif": {
     slug:"charbon-actif",name:"Charbon actif horticole",shortName:"Charbon actif",status:"soon",statusLabel:"Prochainement au Studio",eyebrow:"Composant poreux · Lille",title:"Le charbon actif,",accent:"un complément discret.",intro:"Un matériau poreux utilisé en faible proportion dans les terrariums et certains mélanges techniques pour racines sensibles.",role:"Le charbon actif possède une grande surface poreuse susceptible de fixer certaines molécules. En horticulture, il complète un mélange mais ne remplace ni une bonne aération, ni un arrosage maîtrisé, ni l’élimination des tissus pourris. Son usage doit rester mesuré et ciblé.",strengths:[{title:"Porosité",copy:"Sa structure multiplie les surfaces de contact dans le substrat."},{title:"Fraîcheur",copy:"Il peut aider à limiter certaines odeurs dans les contenants peu ventilés."},{title:"Technique",copy:"Une petite dose complète les mélanges de propagation ou de terrarium."}],methods:[{title:"Dans un terrarium",copy:"Placez-le en quantité raisonnable au sein d’une conception incluant drainage, substrat et ventilation."},{title:"Dans un mélange tropical",copy:"Répartissez de petits fragments, sans transformer le pot en support majoritairement carboné."},{title:"Après une pourriture",copy:"Retirez d’abord les racines atteintes et corrigez la cause ; le charbon ne remplace pas ces gestes."}],suitableFor:["terrariums","orchidées","Anthurium","boutures tropicales","plantes à racines sensibles"],cautions:["Éviter les poussières lors de la manipulation.","Utiliser un produit adapté à l’horticulture.","Ne pas le présenter comme un traitement curatif."],faq:[{question:"À quoi sert le charbon actif dans un substrat ?",answer:"Il est surtout utilisé comme complément poreux dans certains mélanges techniques et terrariums."},{question:"Empêche-t-il la pourriture des racines ?",answer:"Non. La prévention dépend surtout d’un bon drainage, de l’aération et d’un arrosage adapté."},{question:"Où trouver du charbon horticole à Lille ?",answer:"Tibaldo Jungle prévoit de le proposer avec des conseils adaptés à chaque usage."}],seoDescription:"Charbon actif horticole à Lille : rôle dans les terrariums et substrats, dosage, limites et précautions expliqués par Tibaldo Jungle."
-  },
-  "pierre-ponce": {
-    slug:"pierre-ponce",name:"Pierre ponce horticole",shortName:"Pierre ponce",status:"soon",statusLabel:"Prochainement au Studio",eyebrow:"Roche volcanique · Lille",title:"La pierre ponce,",accent:"une structure minérale durable.",intro:"Une roche volcanique légère et poreuse qui stabilise le pot, laisse circuler l’air et conserve une fine réserve d’humidité.",role:"Contrairement aux composants organiques, la pierre ponce se dégrade très lentement. Elle apporte une structure durable aux mélanges minéraux et aux plantes conservées longtemps dans le même pot. Sa porosité retient un peu d’eau et de nutriments sans fermer les espaces nécessaires aux racines.",strengths:[{title:"Durabilité",copy:"Elle conserve son calibre et limite le tassement du mélange."},{title:"Drainage",copy:"Ses grains laissent circuler l’eau et l’air autour des racines."},{title:"Stabilité",copy:"Son poids modéré aide à stabiliser les plantes hautes ou les petits contenants."}],methods:[{title:"Dans un mélange minéral",copy:"Associez-la à d’autres granulométries et prévoyez une fertilisation adaptée."},{title:"Pour une plante mature",copy:"Elle maintient la structure d’un grand pot dont le rempotage est moins fréquent."},{title:"Pour cactus et succulentes",copy:"Utilisez-la dans une recette très drainante ajustée à l’espèce et aux conditions de lumière."}],suitableFor:["Anthurium","Alocasia","cactus","succulentes","bonsaïs","plantes méditerranéennes"],cautions:["Rincer les poussières avant emploi.","Adapter la granulométrie aux racines.","Prévoir la nutrition dans les mélanges très minéraux."],faq:[{question:"Quelle différence entre pierre ponce et perlite ?",answer:"La pierre ponce est plus lourde et stable ; la perlite est beaucoup plus légère. Toutes deux favorisent l’aération, avec des comportements différents."},{question:"La pierre ponce retient-elle l’eau ?",answer:"Sa porosité conserve une fine réserve tout en assurant un drainage important."},{question:"Où acheter de la pierre ponce à Lille ?",answer:"Elle est prévue dans la matériauthèque en vrac de Tibaldo Jungle à Lille."}],seoDescription:"Pierre ponce horticole à Lille : drainage, porosité, usages pour cactus, succulentes et plantes tropicales, avec conseils de mélange."
   },
   zeolite: {
     slug:"zeolite",name:"Zéolite horticole",shortName:"Zéolite",status:"soon",statusLabel:"Prochainement au Studio",eyebrow:"Minéral microporeux · Lille",title:"La zéolite,",accent:"une réserve minérale maîtrisée.",intro:"Un minéral stable à la structure microporeuse, apprécié dans les mélanges techniques et les cultures où l’on souhaite mieux tamponner eau et nutriments.",role:"La zéolite est une famille de minéraux capables d’échanges ioniques. Dans un substrat, elle peut participer à la gestion de certains éléments nutritifs et de l’humidité. Elle reste cependant un composant : la fertilisation, la qualité de l’eau et l’équilibre général du mélange demeurent essentiels.",strengths:[{title:"Échanges",copy:"Sa structure peut retenir puis échanger certains éléments présents dans la solution nutritive."},{title:"Stabilité",copy:"Elle se dégrade peu et convient aux recettes minérales de longue durée."},{title:"Tampon",copy:"Elle contribue à rendre l’environnement racinaire moins brutal entre deux apports."}],methods:[{title:"En semi-hydroponie",copy:"Intégrez-la à un mélange minéral cohérent et suivez précisément fertilisation et rinçage."},{title:"Dans un substrat technique",copy:"Employez-la en proportion mesurée avec des composants aux fonctions complémentaires."},{title:"Pour les bonsaïs",copy:"Choisissez une granulométrie adaptée et tenez compte des besoins spécifiques de l’espèce."}],suitableFor:["plantes tropicales","bonsaïs","succulentes","semi-hydroponie","mélanges minéraux"],cautions:["Ne pas surinterpréter son rôle nutritif.","Rincer avant utilisation.","Adapter le dosage au système de culture."],faq:[{question:"À quoi sert la zéolite pour les plantes ?",answer:"Elle complète les substrats minéraux grâce à sa stabilité, sa porosité et ses capacités d’échange."},{question:"La zéolite remplace-t-elle l’engrais ?",answer:"Non. Elle peut participer à la gestion des nutriments mais n’est pas une fertilisation complète."},{question:"Où trouver de la zéolite horticole à Lille ?",answer:"La zéolite rejoindra prochainement la matériauthèque de Tibaldo Jungle à Lille."}],seoDescription:"Zéolite horticole à Lille : fonctionnement, usages en substrat minéral et semi-hydroponie, dosage et précautions avec Tibaldo Jungle."

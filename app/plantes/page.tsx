@@ -3,6 +3,7 @@ import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 import { plantFamilies, plants, studioCollection } from "@/lib/plants/catalog";
 import PlantExplorer from "./PlantExplorer";
+import PlantUniverseCards from "./PlantUniverseCards";
 
 export const metadata: Metadata = {
   title: "Plantes rares et d’intérieur à Lille | Tibaldo Jungle",
@@ -37,7 +38,7 @@ export default function PlantsPage() {
     ],
   };
   return (
-    <main className="editorial-page">
+    <main className="editorial-page plants-library-page">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <ScrollReveal />
       <section className="inner-hero compact-inner-hero">
@@ -54,25 +55,18 @@ export default function PlantsPage() {
         </div>
       </section>
 
-      <nav className="plant-explorer" aria-label="Explorer les plantes">
+      <nav className="plant-explorer plant-library-intro" aria-label="Explorer les plantes">
         <div className="shell plant-explorer-inner">
-          <div>
+          <div className="plant-universe-panel">
             <span>01 · Univers botaniques</span>
-            <div className="plant-explorer-links">
-              {plantFamilies.map((family) => (
-                <a href={`/plantes/${family.slug}`} key={family.slug}>{family.name}</a>
-              ))}
-            </div>
+            <PlantUniverseCards families={plantFamilies} />
           </div>
-          <div>
+          <div className="plant-species-panel">
             <span>02 · Espèces & cultivars</span>
-            <div className="plant-explorer-links">
-              {plants.map((plant) => (
-                <a href={`/plantes/${plant.genre}/${plant.slug}`} key={`${plant.genre}-${plant.slug}`}>
-                  {plant.botanicalName}
-                </a>
-              ))}
-            </div>
+            <strong>{plants.length}</strong>
+            <h2>Fiches botaniques<br /><em>à explorer.</em></h2>
+            <p>Recherchez une plante par son nom, sa famille ou ses besoins, puis ouvrez sa fiche détaillée.</p>
+            <a href="#recherche-plantes">Accéder à la recherche <Arrow /></a>
           </div>
         </div>
       </nav>
