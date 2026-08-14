@@ -4,6 +4,7 @@ import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 import { plantFamilies, plants, studioCollection } from "@/lib/plants/catalog";
 import PlantExplorer from "./PlantExplorer";
 import PlantUniverseCards from "./PlantUniverseCards";
+import OpeningEventLink from "../OpeningEventLink";
 
 export const metadata: Metadata = {
   title: "Plantes rares et d’intérieur à Lille | Tibaldo Jungle",
@@ -102,6 +103,7 @@ export default function PlantsPage() {
         <div className="studio-collection-list">{studioCollection.map((group, index) => <article key={group.genre} data-reveal><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{group.href ? <a href={group.href}>{group.genre} <Arrow /></a> : group.genre}</h3><ul>{group.plants.map((plant) => <li key={plant}>{plant}</li>)}</ul></div></article>)}</div>
         <p className="studio-collection-note">Les mentions « à confirmer » seront remplacées après vérification de l’étiquette horticole ou du fournisseur.</p>
       </section>
+      <OpeningEventLink />
       <SiteFooter />
     </main>
   );

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 import { featuredSubstrateSlugs, substrates, substrateProfiles } from "./data";
+import OpeningEventLink from "../OpeningEventLink";
 
 export const metadata: Metadata = {
   title: "Substrats en vrac à Lille | Guide Tibaldo Jungle",
@@ -124,6 +125,7 @@ export default function SubstratesPage() {
         <a href="/substrats-en-vrac-lille">Acheter des substrats en vrac à Lille <span>↗</span></a>
         <a href="/pots-cache-pots-lille">Choisir un pot ou un cache-pot <span>↗</span></a>
       </nav>
+      <OpeningEventLink />
       <SiteFooter />
     </main>
   );

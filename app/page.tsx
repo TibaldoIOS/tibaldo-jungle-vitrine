@@ -2,6 +2,7 @@ import ScrollReveal from "./ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "./SiteChrome";
 import { plantFamilies } from "@/lib/plants/catalog";
 import { substrates } from "./substrats/data";
+import HomeExperience from "./HomeExperience";
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -49,7 +50,7 @@ export default function Home() {
 
       <aside className="opening-banner" aria-label="Annonce de la grande ouverture"><div className="opening-banner-glow" aria-hidden="true" /><a className="shell opening-banner-inner" href="/evenements/ouverture-tibaldo-jungle-lille"><span className="opening-badge"><strong>26</strong><small>SEP</small></span><p><span className="opening-live"><i aria-hidden="true" /> Événement à venir</span><strong>Grande ouverture · 26 septembre 2026 · Lille</strong><span>Rempotage gratuit toute l’année · découvrez le Studio et indiquez votre présence.</span></p><span className="opening-banner-cta">Découvrir l’événement <b aria-hidden="true">↗</b></span><span className="opening-arrow" aria-hidden="true">↓</span></a></aside>
 
-      <section className="home-categories" aria-labelledby="home-categories-title">
+      {false ? <><section className="home-categories" aria-labelledby="home-categories-title">
         <div className="shell home-categories-heading" data-reveal><div><p className="section-kicker">L’encyclopédie végétale</p><h2 id="home-categories-title">Choisir une famille.<br /><em>Suivre sa curiosité.</em></h2></div><p>Parcourez les plantes par univers botanique avant de lancer une recherche précise.</p></div>
         <div className="home-category-rail" aria-label="Catégories de plantes">
           {plantFamilies.map((family, index) => <a href={`/plantes/${family.slug}`} key={family.slug}><img src={family.image} alt="" width="720" height="900" loading="lazy" /><span>{String(index + 1).padStart(2, "0")}</span><strong>{family.name}</strong><small>Explorer ↗</small></a>)}
@@ -96,7 +97,7 @@ export default function Home() {
         <a className="text-link" href="/services">Découvrir notre approche <Arrow /></a>
       </section>
 
-      <section className="home-journal shell" data-reveal><div className="home-journal-image"><img src="/projet-boutique-tibaldo-jungle-lille.webp" alt="Création du Studio Végétal Tibaldo Jungle à Lille" width="1200" height="800" loading="lazy" /></div><div><p className="section-kicker">Les coulisses de la Jungle</p><h2>De la première idée<br /><em>jusqu’au jour J.</em></h2><p>Travaux, choix des plantes, mobilier, arrivages et derniers préparatifs : suivez la naissance du Studio Végétal étape par étape.</p><a className="button button-green" href="/coulisses">Voir le journal <Arrow /></a></div></section>
+      <section className="home-journal shell" data-reveal><div className="home-journal-image"><img src="/projet-boutique-tibaldo-jungle-lille.webp" alt="Création du Studio Végétal Tibaldo Jungle à Lille" width="1200" height="800" loading="lazy" /></div><div><p className="section-kicker">Les coulisses de la Jungle</p><h2>De la première idée<br /><em>jusqu’au jour J.</em></h2><p>Travaux, choix des plantes, mobilier, arrivages et derniers préparatifs : suivez la naissance du Studio Végétal étape par étape.</p><a className="button button-green" href="/coulisses">Voir le journal <Arrow /></a></div></section></> : <HomeExperience />}
 
       <section className="opening" id="contact"><div className="opening-photo" data-parallax="18" aria-hidden="true" /><div className="opening-overlay" aria-hidden="true" /><div className="shell opening-content" data-reveal><p className="section-kicker">Ouverture le 26 septembre 2026</p><h2>La nouvelle jungle<br />lilloise prend racine.</h2><p>Retrouvez la boutique de plantes rares et exotiques Tibaldo Jungle au 3, place de l’Arbonnoise à Lille.</p><div className="opening-meta"><p><span>Adresse</span><strong>3 place de l’Arbonnoise</strong><small>59000 Lille</small></p><p><span>Horaires</span><strong>Mardi–samedi · 10h–19h</strong><small>Dimanche · 10h–13h</small></p><p><span>Contact</span><a href="mailto:jungle@tibaldo.fr">jungle@tibaldo.fr</a><small><a href="tel:+33743727079">07 43 72 70 79</a></small></p></div><a className="button button-light" href="/contact">Carte & itinéraire GPS <Arrow /></a></div></section>
       <SiteFooter />
