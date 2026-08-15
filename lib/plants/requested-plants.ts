@@ -2,6 +2,7 @@ import type { PlantEntry } from "./types";
 
 type Draft = {
   slug: string; genre: string; genreLabel: string; botanicalName: string; displayName: string;
+  listingName?: string;
   subtitle: string; family: string; origin: string; genus: string; species: string; cultivar: string | null;
   commonNames: string[]; habitat: string; hybridization: string; synonyms: string[]; description: string[];
   image: string; imageAlt: string; imageCaption: string; imageWidth: number; imageHeight: number;
@@ -15,7 +16,7 @@ const genericToxicity = { level: "toxique", summary: "À tenir hors de portée d
 
 function makePlant(d: Draft): PlantEntry {
   return {
-    slug: d.slug, genre: d.genre, genreLabel: d.genreLabel, botanicalName: d.botanicalName, displayName: d.displayName,
+    slug: d.slug, genre: d.genre, genreLabel: d.genreLabel, botanicalName: d.botanicalName, displayName: d.displayName, listingName: d.listingName,
     subtitle: d.subtitle, family: d.family, origin: d.origin,
     taxonomy: { order: d.family === "Cactaceae" ? "Caryophyllales" : "Alismatales", family: d.family, genus: d.genus, species: d.species, cultivar: d.cultivar, commonNames: d.commonNames },
     filters: d.filters, habitat: d.habitat, hybridization: d.hybridization, synonyms: d.synonyms, description: d.description,
@@ -54,8 +55,8 @@ const aroidFilters = (variegated: boolean, growthRate: "lente" | "moyenne" | "ra
 
 export const requestedPlants = [
   makePlant({
-    slug: "anguliger", genre: "epiphyllum", genreLabel: "Epiphyllum", botanicalName: "Disocactus anguliger", displayName: "Epiphyllum anguliger", subtitle: "Le cactus zigzag aux longues tiges découpées et aux fleurs nocturnes parfumées.", family: "Cactaceae", origin: "Mexique", genus: "Disocactus", species: "Disocactus anguliger", cultivar: null,
-    commonNames: ["Epiphyllum anguliger", "Cactus zigzag", "Cactus arête-de-poisson"], habitat: "Cactus épiphyte des forêts humides mexicaines, installé sur les branches dans une lumière filtrée.", hybridization: "Espèce botanique. Epiphyllum anguliger est le nom horticole historique encore très utilisé.", synonyms: ["Epiphyllum anguliger", "Phyllocactus anguliger"],
+    slug: "anguliger", genre: "epiphyllum", genreLabel: "Epiphyllum", botanicalName: "Disocactus anguliger", displayName: "Epiphyllum anguliger", listingName: "Cactus zigzag · Epiphyllum anguliger", subtitle: "Le cactus zigzag aux longues tiges découpées et aux fleurs nocturnes parfumées.", family: "Cactaceae", origin: "Mexique", genus: "Disocactus", species: "Disocactus anguliger", cultivar: null,
+    commonNames: ["Epiphyllum anguliger", "Cactus zigzag", "Cactus arête-de-poisson"], habitat: "Cactus épiphyte des forêts humides mexicaines, installé sur les branches dans une lumière filtrée.", hybridization: "Espèce botanique aujourd’hui acceptée sous le nom Disocactus anguliger. Epiphyllum anguliger reste son nom horticole historique le plus utilisé.", synonyms: ["Epiphyllum anguligerum", "Phyllocactus anguliger"],
     description: ["Ses tiges plates dessinent une succession de lobes profonds qui évoquent une arête de poisson.", "Contrairement aux cactus désertiques, il apprécie une lumière vive filtrée, un mélange organique très aéré et des arrosages réguliers pendant sa croissance."],
     image: "/disocactus-anguliger-real.jpg", imageAlt: "Disocactus anguliger réel avec ses tiges plates profondément découpées", imageCaption: "Photographie réelle de Disocactus anguliger — Wikimedia Commons.", imageWidth: 1920, imageHeight: 1280,
     light: 4, water: 3, humidity: 3, difficulty: 2, lightText: "Lumière vive indirecte ; un soleil doux aide la floraison, mais le soleil brûlant marque les tiges.", watering: "Arroser lorsque le mélange a partiellement séché, davantage en croissance et beaucoup moins en hiver.", humidityText: "Une humidité domestique moyenne convient si l’air circule.", temperature: "Idéalement 16 à 26 °C, avec une période hivernale plus fraîche sans gel.", substrate: "Mélange pour cactus épiphytes : terreau fibreux, écorce fine et fraction minérale, dans un pot percé.",
