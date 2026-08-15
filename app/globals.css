@@ -1265,6 +1265,9 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
 .family-genre-breadcrumb:hover { color: #fff; }
 @keyframes explorerAura { to { opacity: .5; transform: translateY(-50%) scale(1.25); } }
 .family-genre-hero { min-height: 590px; height: 68svh; }
+.family-genre-image.is-herbier { position: absolute; inset: 0; background-repeat: no-repeat; background-size: cover; opacity: .72; filter: saturate(.88) contrast(.94); transform: scale(1.015); animation: hero-photo-arrival 1.45s cubic-bezier(.2,.72,.2,1) both; }
+.family-genre-image.is-herbier::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(4,29,20,.48), rgba(4,29,20,.08) 72%), linear-gradient(0deg, rgba(4,29,20,.28), transparent 48%); }
+.family-genre-hero:has(.is-herbier) .inner-hero-shade { background: linear-gradient(90deg, rgba(4,29,20,.94) 0%, rgba(7,39,27,.67) 45%, rgba(7,34,24,.2) 76%, rgba(7,34,24,.1)); }
 .plant-care-passport { position: relative; z-index: 7; background: #f3f0e5; border-bottom: 1px solid rgba(21,59,44,.16); }
 .plant-care-passport-inner { min-height: 145px; display: grid; grid-template-columns: 1.25fr .75fr; gap: 45px; align-items: center; padding-top: 22px; padding-bottom: 22px; }
 .plant-care-levels { display: grid; grid-template-columns: repeat(4, 1fr); }
@@ -1532,6 +1535,7 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
   .plant-explorer-links::-webkit-scrollbar { display: none; }
   .plant-explorer-links > a, .plant-explorer-links > span, .plant-explorer-links > strong { flex: 0 0 auto; padding-bottom: 8px; font-size: 29px; }
   .family-genre-hero { min-height: 545px; height: 68svh; }
+  .family-genre-image.is-herbier { background-position: 36% center !important; opacity: .62; }
   .family-genre-hero .inner-hero-content { padding-top: 105px; }
   .plant-care-passport-inner { padding-top: 25px; padding-bottom: 28px; }
   .plant-care-levels { grid-template-columns: 1fr 1fr; gap: 22px 0; }

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getPlantsByGenre } from "@/lib/plants/catalog";
 import { familyGuides } from "@/lib/plants/family-guides";
 import { familyEditorials } from "@/lib/plants/family-editorials";
+import { genreHerbiers } from "@/lib/plants/genre-herbiers";
 import ScrollReveal from "../../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../../SiteChrome";
 import PlantCarePassport from "../PlantCarePassport";
@@ -32,6 +33,7 @@ export default async function Page({ params }: Props) {
   const isFamily = "rank" in guide && guide.rank === "family";
   const botanicalName = "botanicalName" in guide ? guide.botanicalName : guide.name;
   const editorials = familyEditorials[genre as keyof typeof familyEditorials] ?? [];
+  const herbier = genreHerbiers[genre as keyof typeof genreHerbiers];
   const list = getPlantsByGenre(genre);
   const genrePortraits = list
     .map((plant) => ({ src: plant.gallery[0].src, alt: plant.gallery[0].alt, name: plant.listingName ?? plant.botanicalName, href: `/plantes/${genre}/${plant.slug}` }))
@@ -43,7 +45,7 @@ export default async function Page({ params }: Props) {
   ];
   return <main className="editorial-page"><ScrollReveal />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-    <section className="inner-hero compact-inner-hero family-genre-hero"><div className="family-genre-image" style={{ backgroundImage: `url(${guide.image})` }} /><div className="inner-hero-shade" /><SiteHeader /><div className="shell inner-hero-content"><a className="family-genre-breadcrumb" href="/plantes">Encyclopédie <span>·</span> Tous les univers</a><p className="eyebrow"><span /> {isFamily ? "Famille botanique" : "Genre végétal"}</p><h1><span className="hero-line"><span>Les</span></span><span className="hero-line"><span><em>{isFamily ? botanicalName : guide.name}.</em></span></span></h1><p>{guide.heroSubtitle}</p></div></section>
+    <section className="inner-hero compact-inner-hero family-genre-hero">{herbier && <div className="family-genre-image is-herbier" role="img" aria-label={herbier.alt} style={{ backgroundImage: `url(${herbier.image})`, backgroundPosition: herbier.position }} />}<div className="inner-hero-shade" /><SiteHeader /><div className="shell inner-hero-content"><a className="family-genre-breadcrumb" href="/plantes">Encyclopédie <span>·</span> Tous les univers</a><p className="eyebrow"><span /> {isFamily ? "Famille botanique" : "Genre végétal"}</p><h1><span className="hero-line"><span>Les</span></span><span className="hero-line"><span><em>{isFamily ? botanicalName : guide.name}.</em></span></span></h1><p>{guide.heroSubtitle}</p></div></section>
     <PlantCarePassport indicators={[{ label: "Difficulté", value: guide.care.difficulty, tone: "coral" }, { label: "Lumière", value: guide.care.light, tone: "gold" }, { label: "Arrosage", value: guide.care.water, tone: "blue" }, { label: "Humidité", value: guide.care.humidity, tone: "sage" }]} substrate={guide.care.substrate} nutrition={guide.care.nutrition} />
     <section className="genre-portrait shell" aria-labelledby="genre-portrait-title" data-reveal>
       <header><p className="section-kicker">Reconnaître le genre</p><h2 id="genre-portrait-title">Plusieurs silhouettes,<br /><em>un même univers.</em></h2><p>Feuilles, ports et textures varient d’une espèce à l’autre. Parcourez les spécimens déjà présents dans l’encyclopédie.</p></header>
