@@ -104,7 +104,7 @@ export function SiteFooter() {
         <div className="footer-links">
           <div><span>Explorer</span><a href="/boutique-plantes-lille">Boutique plantes Lille</a><a href="/plantes">Plantes</a><a href="/conseils">Conseils plantes</a><a href="/sos-plantes">SOS Plantes</a><a href="/rempotage-plantes-lille">Bar à rempotage</a><a href="/fleurs">Catalogue de fleurs</a><a href="/substrats-en-vrac-lille">Substrats en vrac Lille</a><a href="/pots-cache-pots-lille">Pots et cache-pots à Lille</a><a href="/coulisses">Les coulisses</a><a href="/livraison-plantes-lille">Livraison de plantes</a><a href="/fleurs-sur-commande-lille">Fleurs sur commande</a><a href="/bouquets-fleurs-livraison-lille">Bouquets fournisseurs</a><a href="/evenements">Événements</a><a href="/services">Nos services</a></div>
           <div className="social-links"><span>Nous suivre</span><a href="https://www.instagram.com/tibaldojungle" target="_blank" rel="noreferrer">Instagram</a><a href="https://www.facebook.com/tibaldojungle" target="_blank" rel="noreferrer">Facebook</a></div>
-          <div><span>Horaires</span><p>Mardi–samedi<br />10h–19h<br />Dimanche · 10h–13h</p></div>
+          <div><span>Horaires</span><p>Mardi · 14h–19h<br />Mercredi–samedi · 10h–19h<br />Dimanche · 10h–13h</p></div>
           <div><span>Venir & écrire</span><p>3 place de l’Arbonnoise<br />59000 Lille<br /><a href="tel:+33743727079">07 43 72 70 79</a></p><a className="footer-email" href="mailto:jungle@tibaldo.fr">jungle@tibaldo.fr</a></div>
         </div>
       </div>
