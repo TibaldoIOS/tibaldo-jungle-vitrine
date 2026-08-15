@@ -42,8 +42,8 @@ export default function Home() {
         <SiteHeader />
         <div className="hero-content shell">
           <p className="eyebrow"><span /> Nouvelle boutique · Lille</p>
-          <h1 aria-label="Plantes rares et exotiques à Lille"><span className="hero-line" aria-hidden="true"><span>Plantes rares</span></span><span className="hero-line" aria-hidden="true"><span>&amp; exotiques <em>à Lille.</em></span></span></h1>
-          <p className="hero-copy">Studio Végétal Tibaldo Jungle réunit à Lille plantes rares, culture locale et conseils sincères.</p>
+          <h1 aria-label="Plantes rares et tropicales à Lille"><span className="hero-line" aria-hidden="true"><span>Plantes rares</span></span><span className="hero-line" aria-hidden="true"><span>&amp; tropicales <em>à Lille.</em></span></span></h1>
+          <p className="hero-copy">Plantes d’intérieur et d’extérieur, espèces exotiques, pépites rares et conseils passionnés.</p>
           <div className="hero-actions"><a className="button button-light" href="/plantes">Découvrir les plantes <Arrow /></a><a className="hero-shop-link" data-action="shop" href="https://shop.tibaldo.fr">Voir la boutique en ligne <Arrow /></a></div>
         </div>
       </section>
@@ -99,7 +99,7 @@ export default function Home() {
 
       <section className="home-journal shell" data-reveal><div className="home-journal-image"><img src="/projet-boutique-tibaldo-jungle-lille.webp" alt="Création du Studio Végétal Tibaldo Jungle à Lille" width="1200" height="800" loading="lazy" /></div><div><p className="section-kicker">Les coulisses de la Jungle</p><h2>De la première idée<br /><em>jusqu’au jour J.</em></h2><p>Travaux, choix des plantes, mobilier, arrivages et derniers préparatifs : suivez la naissance du Studio Végétal étape par étape.</p><a className="button button-green" href="/coulisses">Voir le journal <Arrow /></a></div></section></> : <HomeExperience />}
 
-      <section className="opening" id="contact"><div className="opening-photo" data-parallax="18" aria-hidden="true" /><div className="opening-overlay" aria-hidden="true" /><div className="shell opening-content" data-reveal><p className="section-kicker">Ouverture le 26 septembre 2026</p><h2>La nouvelle jungle<br />lilloise prend racine.</h2><p>Retrouvez la boutique de plantes rares et exotiques Tibaldo Jungle au 3, place de l’Arbonnoise à Lille.</p><div className="opening-meta"><p><span>Adresse</span><strong>3 place de l’Arbonnoise</strong><small>59000 Lille</small></p><p><span>Horaires</span><strong>Mardi–samedi · 10h–19h</strong><small>Dimanche · 10h–13h</small></p><p><span>Contact</span><a href="mailto:jungle@tibaldo.fr">jungle@tibaldo.fr</a><small><a href="tel:+33743727079">07 43 72 70 79</a></small></p></div><a className="button button-light" href="/contact">Carte & itinéraire GPS <Arrow /></a></div></section>
+      <section className="opening" id="contact"><div className="opening-photo" data-parallax="18" aria-hidden="true" /><div className="opening-overlay" aria-hidden="true" /><div className="shell opening-content" data-reveal><p className="section-kicker">Ouverture le 26 septembre 2026</p><h2>La nouvelle jungle<br />lilloise prend racine.</h2><p>Retrouvez la boutique de plantes rares et exotiques Tibaldo Jungle au 3, place de l’Arbonnoise à Lille.</p><div className="opening-meta"><p><span>Adresse</span><strong>3 place de l’Arbonnoise</strong><small>59000 Lille</small></p><p><span>Horaires</span><strong>Mardi · 14h–19h</strong><small>Mercredi–samedi · 10h–19h<br />Dimanche · 10h–13h</small></p><p><span>Contact</span><a href="mailto:jungle@tibaldo.fr">jungle@tibaldo.fr</a><small><a href="tel:+33743727079">07 43 72 70 79</a></small></p></div><a className="button button-light" href="/contact">Carte & itinéraire GPS <Arrow /></a></div></section>
       <SiteFooter />
     </main>
   );

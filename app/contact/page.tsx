@@ -29,7 +29,7 @@ export default function ContactPage() {
         <h2>Venez découvrir<br />le Studio Végétal.</h2>
         <div className="contact-details">
           <p><span>Adresse</span><strong>3 place de l’Arbonnoise<br />59000 Lille</strong></p>
-          <p><span>Horaires</span><strong>Mardi–samedi · 10h–19h<br />Dimanche · 10h–13h</strong></p>
+          <p><span>Horaires</span><strong>Mardi · 14h–19h<br />Mercredi–samedi · 10h–19h<br />Dimanche · 10h–13h</strong></p>
           <p><span>Contact</span><strong><a href="mailto:jungle@tibaldo.fr">jungle@tibaldo.fr</a><br /><a href="tel:+33743727079">07 43 72 70 79</a></strong></p>
         </div>
         <div className="gps-chooser" id="itineraire">

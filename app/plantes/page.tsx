@@ -30,6 +30,19 @@ export const metadata: Metadata = {
 
 export default function PlantsPage() {
   const pageUrl = "https://jungle.tibaldo.fr/plantes";
+  const animatedFamilies = plantFamilies.map((family) => ({
+    slug: family.slug,
+    name: family.name,
+    image: family.image,
+    imageAlt: family.imageAlt,
+    varieties: plants
+      .filter((plant) => plant.genre === family.slug)
+      .map((plant) => {
+        const visual = plant.gallery?.[0];
+        const image = visual?.src && !visual.src.includes("photo-reelle-a-venir") ? visual.src : family.image;
+        return { name: plant.displayName, botanicalName: plant.botanicalName, image, alt: visual?.alt || family.imageAlt };
+      }),
+  }));
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -60,7 +73,7 @@ export default function PlantsPage() {
         <div className="shell plant-explorer-inner">
           <div className="plant-universe-panel">
             <span>01 · Univers botaniques</span>
-            <PlantUniverseCards families={plantFamilies} />
+            <PlantUniverseCards families={animatedFamilies} />
           </div>
           <div className="plant-species-panel">
             <span>02 · Espèces & cultivars</span>

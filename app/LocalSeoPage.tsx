@@ -59,7 +59,8 @@ export default function LocalSeoPage(props: LocalPageProps) {
         email: "jungle@tibaldo.fr",
         address: { "@type": "PostalAddress", streetAddress: "3 place de l’Arbonnoise", postalCode: "59000", addressLocality: "Lille", addressRegion: "Hauts-de-France", addressCountry: "FR" },
         openingHoursSpecification: [
-          { "@type": "OpeningHoursSpecification", dayOfWeek: ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], opens: "10:00", closes: "19:00" },
+          { "@type": "OpeningHoursSpecification", dayOfWeek: "Tuesday", opens: "14:00", closes: "19:00" },
+          { "@type": "OpeningHoursSpecification", dayOfWeek: ["Wednesday", "Thursday", "Friday", "Saturday"], opens: "10:00", closes: "19:00" },
           { "@type": "OpeningHoursSpecification", dayOfWeek: "Sunday", opens: "10:00", closes: "13:00" },
         ],
       },
@@ -82,7 +83,7 @@ export default function LocalSeoPage(props: LocalPageProps) {
   return <main className="editorial-page local-seo-page">
     <ScrollReveal />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-    <section className={`inner-hero compact-inner-hero local-seo-hero${props.canonical === "/livraison-plantes-lille" ? " is-delivery-hero" : ""}`}>
+    <section className={`inner-hero compact-inner-hero local-seo-hero${props.canonical === "/livraison-plantes-lille" ? " is-delivery-hero" : ""}${props.canonical === "/mur-vegetal-naturel-lille" ? " is-living-wall-hero" : ""}`}>
       <div className="inner-hero-texture" aria-hidden="true" /><div className="inner-hero-shade" aria-hidden="true" />
       <SiteHeader />
       <div className="shell inner-hero-content"><p className="eyebrow"><span /> {props.eyebrow}</p><h1><span className="hero-line"><span>{props.title}</span></span><span className="hero-line"><span><em>{props.accent}</em></span></span></h1><p>{props.intro}</p><a className="button button-light" href="#informations">Préparer ma visite <Arrow /></a></div>
@@ -100,7 +101,7 @@ export default function LocalSeoPage(props: LocalPageProps) {
     </div></section>
 
     <section className="shell local-seo-visit" id="informations">
-      <div data-reveal><p className="section-kicker">Boutique physique</p><h2>Une adresse végétale<br /><em>au cœur de Lille.</em></h2><p><strong>Studio Végétal — Tibaldo Jungle</strong><br />{address}<br />Mardi–samedi · 10h–19h<br />Dimanche · 10h–13h</p><a className="button button-green" href="https://www.google.com/maps/dir/?api=1&destination=3%20place%20de%20l%27Arbonnoise%2C%2059000%20Lille" target="_blank" rel="noreferrer">Ouvrir l’itinéraire <Arrow /></a></div>
+      <div data-reveal><p className="section-kicker">Boutique physique</p><h2>Une adresse végétale<br /><em>au cœur de Lille.</em></h2><p><strong>Studio Végétal — Tibaldo Jungle</strong><br />{address}<br />Mardi · 14h–19h<br />Mercredi–samedi · 10h–19h<br />Dimanche · 10h–13h</p><a className="button button-green" href="https://www.google.com/maps/dir/?api=1&destination=3%20place%20de%20l%27Arbonnoise%2C%2059000%20Lille" target="_blank" rel="noreferrer">Ouvrir l’itinéraire <Arrow /></a></div>
       {visitVisual ? <figure className="local-seo-visit-visual"><img src={visitVisual.src} alt={visitVisual.alt} width="1280" height="960" loading="lazy" /><figcaption>{visitVisual.caption}</figcaption></figure> : <iframe title={`Carte pour ${props.title} chez Tibaldo Jungle à Lille`} src="https://www.google.com/maps?q=3%20place%20de%20l%27Arbonnoise%2C%2059000%20Lille&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />}
     </section>
 

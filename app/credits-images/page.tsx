@@ -9,6 +9,11 @@ export const metadata: Metadata = {
 };
 
 const credits = [
+  ["Herbier du genre Alocasia · Alocasia reginula", "Obsidian Soul", "CC0", "https://commons.wikimedia.org/wiki/File:Alocasia_reginula_(Philippines)_02.jpg"],
+  ["Herbier du genre Alocasia · Alocasia portei", "Obsidian Soul", "CC0", "https://commons.wikimedia.org/wiki/File:Alocasia_portei_(Philippines)_young_plant_01.jpg"],
+  ["Herbier du genre Alocasia · Alocasia nycteris", "Obsidian Soul", "CC0", "https://commons.wikimedia.org/wiki/File:Alocasia_nycteris_(Philippines)_Batwing_alocasia_0004.jpg"],
+  ["Herbier du genre Alocasia · Alocasia sinuata", "Obsidian Soul", "CC0", "https://commons.wikimedia.org/wiki/File:Alocasia_sinuata_(Philippines)_0003.jpg"],
+  ["Herbier du genre Alocasia · Alocasia zebrina", "Obsidian Soul", "CC0", "https://commons.wikimedia.org/wiki/File:Alocasia_zebrina_(Philippines)_0006.jpg"],
   ["Alocasia cuprea", "Frank Schulenburg", "CC BY-SA 3.0", "https://commons.wikimedia.org/wiki/File:Alocasia_cuprea_(portrait_orientation).jpg"],
   ["Anthurium crystallinum", "David J. Stang", "CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:Anthurium_crystallinum_6zz.jpg"],
   ["Anthurium veitchii", "Supertita", "CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:Anthurium_veitchii-King_Anthurium.jpg"],
