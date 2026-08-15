@@ -2,6 +2,7 @@ import type { PlantEntry } from "./types";
 import { prayerPlants } from "./prayer-plants";
 import { newArrivalPlants } from "./new-arrivals";
 import { requestedPlants } from "./requested-plants";
+import { afternoonPlants } from "./afternoon-plants";
 
 export const plantFamilies = [
   { slug: "alocasia", name: "Alocasia", eyebrow: "Collection ouverte", description: "Plantes tropicales architecturales aux feuilles spectaculaires, les Alocasia aiment la lumière vive, la chaleur et un substrat très aéré. Découvrez nos conseils de culture et les Alocasia rares observés au Studio Végétal Tibaldo Jungle à Lille.", image: "/alocasia-cuprea-feuillage.jpg", imageAlt: "Feuillage nervuré vert métallique d’un Alocasia cuprea", available: true },
@@ -17,6 +18,12 @@ export const plantFamilies = [
   { slug: "cactus", name: "Cactus", eyebrow: "Nouvel univers", description: "Des cactus miniatures aux grands cierges sculpturaux, les Cactaceae réunissent des plantes adaptées à la sécheresse mais exigeantes en lumière. Découvrez comment choisir, arroser, rempoter et faire refleurir un cactus dans un intérieur à Lille.", image: "/cactus-collection-serre.jpg", imageAlt: "Collection de cactus globulaires et colonnaires cultivés sous une serre lumineuse", available: true },
   { slug: "maranta", name: "Maranta", eyebrow: "Plantes qui prient", description: "Les Maranta déploient des feuillages peints de nervures rouges, de taches sombres et de nuances veloutées. Découvrez comment préserver leurs couleurs, comprendre le mouvement quotidien de leurs feuilles et réussir leur culture dans un intérieur à Lille.", image: "/maranta-leuconeura-tibaldo.webp", imageAlt: "Maranta leuconeura mature aux feuilles vertes marquées de nervures rouges", available: true },
   { slug: "calathea", name: "Calathea", eyebrow: "Feuillages graphiques", description: "Calathea reste le nom horticole familier de nombreuses plantes aujourd’hui classées dans le genre Goeppertia. Leurs grandes feuilles rayées, rondes ou dessinées demandent lumière douce, chaleur stable et arrosage attentif.", image: "/calathea-orbifolia-tibaldo.webp", imageAlt: "Calathea orbifolia aux grandes feuilles rondes rayées de vert argenté", available: true },
+  { slug: "aloe", name: "Aloe", eyebrow: "Nouvelle fiche locale", description: "Les Aloe sont des succulentes lumineuses aux feuilles charnues. La première fiche documente Aloe vera sans transformer une plante décorative en promesse médicale.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle d’Aloe à ajouter", available: true },
+  { slug: "chlorophytum", name: "Chlorophytum", eyebrow: "Nouvelle fiche locale", description: "La plante araignée et ses jeunes plants suspendus rejoignent l’encyclopédie avec une fiche dédiée à Chlorophytum comosum.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle de Chlorophytum à ajouter", available: true },
+  { slug: "yucca", name: "Yucca", eyebrow: "Extérieur", description: "Les Yucca associent résistance, soleil et silhouette graphique. Yucca rostrata ouvre cet univers consacré aux végétaux extérieurs.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle de Yucca rostrata à ajouter", available: true },
+  { slug: "plumeria", name: "Plumeria", eyebrow: "Frangipaniers", description: "Floraisons roses ou jaunes, chaleur et repos hivernal : les frangipaniers sont regroupés sans inventer le nom de leurs cultivars.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle de frangipanier à ajouter", available: true },
+  { slug: "equisetum", name: "Prêle japonaise", eyebrow: "Extérieur humide", description: "La prêle japonaise forme des tiges verticales très graphiques et demande une culture maîtrisée pour contenir ses rhizomes.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle de prêle japonaise à ajouter", available: true },
+  { slug: "ficus", name: "Ficus", eyebrow: "Gamme en préparation", description: "La gamme Ficus sera documentée espèce par espèce après identification et photographie des sujets réellement proposés au Studio.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographies réelles de la gamme Ficus à ajouter", available: true },
 ] as const;
 
 export const plants = [{
@@ -158,14 +165,14 @@ export const plants = [{
   seo: { title: "Pilea peperomioides : entretien et plante à monnaie Lille", description: "Guide du Pilea peperomioides : lumière, arrosage, rejets, substrat et problèmes. Retrouvez la plante à monnaie chinoise à Lille.", keywords: ["Pilea peperomioides entretien", "plante monnaie chinoise Lille", "Pilea Lille", "Pilea animaux", "bouture Pilea"] },
   sources: [{ label: "Kew Science", url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:855664-1/general-information" }, { label: "NC State Extension", url: "https://plants.ces.ncsu.edu/plants/pilea-peperomioides/" }, { label: "Plantes Pour Tous — fiche consultée", url: "https://plantespourtous.co/products/pilea-peperomioides" }],
   publishedAt: "2026-08-06", updatedAt: "2026-08-06",
-}, ...newArrivalPlants, ...requestedPlants, ...prayerPlants] satisfies PlantEntry[];
+}, ...newArrivalPlants, ...requestedPlants, ...afternoonPlants, ...prayerPlants] satisfies PlantEntry[];
 
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
 export const getPlantsByGenre = (genre: string) => plants.filter((plant) => plant.genre === genre);
 
 export const studioCollection = [
-  { genre: "Chlorophytum", href: null, plants: ["Chlorophytum comosum"] },
+  { genre: "Chlorophytum", href: "/plantes/chlorophytum", plants: ["Chlorophytum comosum"] },
   { genre: "Maranta", href: "/plantes/maranta", plants: ["Maranta leuconeura ‘Lemon Lime’"] },
   { genre: "Bananiers", href: null, plants: ["Musa panaché · cultivar à confirmer", "Musa basjoo", "Musa sikkimensis ‘Red Tiger’", "Ensete ventricosum ‘Maurelii’"] },
   { genre: "Anthurium", href: "/plantes/anthurium", plants: ["Anthurium ‘Delta Force’", "Anthurium veitchii", "Anthurium clarinervium", "Anthurium pallidiflorum", "Anthurium warocqueanum"] },
@@ -173,4 +180,5 @@ export const studioCollection = [
   { genre: "Epipremnum · Pothos", href: "/plantes/epipremnum", plants: ["Epipremnum aureum ‘Marble Queen’"] },
   { genre: "Asparagus", href: "/plantes/asparagus", plants: ["Asparagus setaceus · vendu comme Asparagus plumosus"] },
   { genre: "Strelitzia", href: null, plants: ["Oiseau de paradis · espèce à confirmer"] },
+  { genre: "Ficus", href: "/plantes/ficus", plants: ["Gamme à identifier et photographier"] },
 ] as const;

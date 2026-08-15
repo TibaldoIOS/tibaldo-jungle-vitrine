@@ -1,4 +1,36 @@
+const simpleGuide = (name: string, botanicalName: string, lead: string, origin: string, imageAlt: string) => ({
+  name,
+  image: "/photo-reelle-a-venir.svg",
+  imageAlt,
+  heroSubtitle: lead,
+  care: { difficulty: 2, light: 4, water: 3, humidity: 3, substrate: "Adapté au système racinaire, aéré et drainant", nutrition: "Modérée pendant la croissance" },
+  lead,
+  origin,
+  facts: [{ label: "Photographies", value: "Uniquement des sujets réels" }, { label: "Identification", value: botanicalName }, { label: "Culture", value: "Fiche adaptée à Lille" }, { label: "Drainage", value: "Pot percé obligatoire" }],
+  sections: [
+    { title: `Identifier les ${name}`, text: `Le nom ${name} peut couvrir plusieurs espèces ou cultivars aux comportements différents. La fiche botanique et l’étiquette d’origine restent prioritaires avant toute recommandation.` },
+    { title: "Choisir la bonne lumière", text: "La lumière détermine la solidité de la croissance. L’exposition sera précisée plante par plante, avec une acclimatation progressive au soleil direct lorsqu’il est adapté." },
+    { title: "Arroser selon la plante, pas selon le calendrier", text: "Le poids du pot, le séchage du mélange, la saison et l’état des racines guident l’arrosage. L’eau ne doit jamais rester prisonnière dans un cache-pot." },
+    { title: "Un substrat cohérent", text: "Le mélange doit combiner la rétention utile à l’espèce et suffisamment d’air autour des racines. Le rempotage n’est déclenché que lorsque la motte le justifie." },
+    { title: "Photographier avant de publier", text: "Tibaldo Jungle écarte les images générées par intelligence artificielle de l’encyclopédie. Chaque nouvelle fiche attend une photographie réelle et un texte alternatif descriptif." },
+    { title: "Observer la croissance", text: "Les mesures et observations réalisées au Studio complètent progressivement les sources botaniques et permettent de distinguer un jeune plant de son aspect adulte." },
+  ],
+  problems: [{ title: "Identification incertaine", text: "Conservez l’étiquette et attendez une feuille mature avant d’attribuer une espèce ou un cultivar." }, { title: "Feuillage jaune", text: "Contrôlez racines, lumière et froid avant de changer l’arrosage." }, { title: "Croissance faible", text: "Une baisse saisonnière peut être normale ; l’engrais ne remplace pas la lumière." }, { title: "Parasites", text: "Isolez le sujet et inspectez minutieusement les nouvelles pousses." }],
+  faq: [{ question: `Comment identifier un ${name} ?`, answer: "À partir de plusieurs caractères adultes, de l’étiquette fournisseur et de sources botaniques fiables." }, { question: "Pourquoi certaines fiches n’ont-elles pas encore de photo ?", answer: "Parce que seules des photographies réelles et correctement identifiées seront utilisées." }, { question: "Faut-il rempoter après l’achat ?", answer: "Non automatiquement : contrôlez d’abord les racines et le rythme de séchage." }, { question: "Peut-on utiliser un cache-pot ?", answer: "Oui, à condition que la plante reste dans un pot percé et que l’eau résiduelle soit vidée." }, { question: "Où obtenir un conseil à Lille ?", answer: "Au Studio Végétal Tibaldo Jungle, 3 place de l’Arbonnoise à Lille." }],
+  sources: [{ label: `Kew Science — ${botanicalName}`, url: `https://powo.science.kew.org/results?q=${encodeURIComponent(botanicalName)}` }],
+});
+
+const simpleGuides = {
+  aloe: simpleGuide("Aloe", "Aloe", "Des succulentes lumineuses aux feuilles charnues, à distinguer selon leur espèce avant toute utilisation ou conseil.", "Le genre Aloe appartient aux Asphodelaceae et rassemble de nombreuses espèces principalement africaines.", "Photographie réelle d’un Aloe à ajouter"),
+  chlorophytum: simpleGuide("Chlorophytum", "Chlorophytum", "Des plantes souples et généreuses, dont la célèbre plante araignée produit de nombreux jeunes plants sur ses stolons.", "Les Chlorophytum appartiennent aux Asparagaceae et plusieurs espèces sont originaires d’Afrique.", "Photographie réelle d’un Chlorophytum à ajouter"),
+  yucca: simpleGuide("Yucca", "Yucca", "Des silhouettes graphiques adaptées au soleil, de l’intérieur lumineux aux sujets rustiques cultivés dehors.", "Le genre Yucca appartient aux Asparagaceae et provient des Amériques.", "Photographie réelle d’un Yucca à ajouter"),
+  plumeria: simpleGuide("Plumeria", "Plumeria", "Les frangipaniers associent branches sculpturales, repos hivernal et floraisons parfumées sous une lumière généreuse.", "Les Plumeria appartiennent aux Apocynaceae et sont originaires des régions tropicales américaines.", "Photographie réelle d’un frangipanier à ajouter"),
+  equisetum: simpleGuide("Equisetum", "Equisetum", "Les prêles forment des tiges graphiques et rhizomateuses adaptées aux sols humides, à contenir soigneusement au jardin.", "Le genre Equisetum constitue une ancienne lignée de plantes vasculaires présente dans de nombreuses régions du monde.", "Photographie réelle d’une prêle japonaise à ajouter"),
+  ficus: simpleGuide("Ficus", "Ficus", "Une future gamme à identifier espèce par espèce : arbres d’intérieur, formes retombantes et feuillages sculpturaux.", "Le vaste genre Ficus appartient aux Moraceae et rassemble des espèces tropicales et subtropicales très diverses.", "Photographies réelles de la gamme Ficus à ajouter"),
+};
+
 export const familyGuides = {
+  ...simpleGuides,
   alocasia: {
     name: "Alocasia",
     image: "/alocasia-cuprea-feuillage.jpg",
