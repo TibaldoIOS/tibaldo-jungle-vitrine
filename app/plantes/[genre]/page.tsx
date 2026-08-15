@@ -39,10 +39,13 @@ export default async function Page({ params }: Props) {
     .map((plant) => ({ src: plant.gallery[0].src, alt: plant.gallery[0].alt, name: plant.listingName ?? plant.botanicalName, href: `/plantes/${genre}/${plant.slug}` }))
     .filter((portrait, index, portraits) => portraits.findIndex((item) => item.src === portrait.src) === index)
     .slice(0, 4);
-  const schema = [
-    { "@context": "https://schema.org", "@type": "Article", headline: `${guide.name} : guide de culture et variétés à Lille`, description: guide.lead, image: guide.image, author: { "@type": "Organization", name: "Studio Végétal — Tibaldo Jungle" }, publisher: { "@type": "LocalBusiness", name: "Studio Végétal — Tibaldo Jungle", alternateName: "Tibaldo Jungle", address: { "@type": "PostalAddress", streetAddress: "3 place de l’Arbonnoise", postalCode: "59000", addressLocality: "Lille", addressCountry: "FR" } } },
-    { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: guide.faq.map((item) => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } })) },
-  ];
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "Article", headline: `${guide.name} : guide de culture et variétés à Lille`, description: guide.lead, image: guide.image, author: { "@type": "Organization", name: "Studio Végétal — Tibaldo Jungle" }, publisher: { "@type": "LocalBusiness", name: "Studio Végétal — Tibaldo Jungle", alternateName: "Tibaldo Jungle", address: { "@type": "PostalAddress", streetAddress: "3 place de l’Arbonnoise", postalCode: "59000", addressLocality: "Lille", addressCountry: "FR" } } },
+      { "@type": "FAQPage", mainEntity: guide.faq.map((item) => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } })) },
+    ],
+  };
   return <main className="editorial-page"><ScrollReveal />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     <section className="inner-hero compact-inner-hero family-genre-hero">{herbier && <div className="family-genre-image is-herbier" role="img" aria-label={herbier.alt} style={{ backgroundImage: `url(${herbier.image})`, backgroundPosition: herbier.position }} />}<div className="inner-hero-shade" /><SiteHeader /><div className="shell inner-hero-content"><a className="family-genre-breadcrumb" href="/plantes">Encyclopédie <span>·</span> Tous les univers</a><p className="eyebrow"><span /> {isFamily ? "Famille botanique" : "Genre végétal"}</p><h1><span className="hero-line"><span>Les</span></span><span className="hero-line"><span><em>{isFamily ? botanicalName : guide.name}.</em></span></span></h1><p>{guide.heroSubtitle}</p></div></section>

@@ -4,7 +4,7 @@ import InnerPage from "../InnerPage";
 export const metadata: Metadata = {
   title: "Services et livraison de plantes et fleurs à Lille | Tibaldo Jungle",
   description:
-    "Diagnostic, rempotage, livraison de plantes à Lille, fleurs coupées et bouquets fournisseurs sur commande avec retrait ou livraison sur devis.",
+    "Diagnostic, rempotage, livraison de plantes et création de murs végétaux naturels à Lille, avec ou sans entretien et sur devis.",
   alternates: { canonical: "/services" },
 };
 export default function ServicesPage() {
@@ -44,6 +44,11 @@ export default function ServicesPage() {
           title: "Projets végétaux",
           copy: "Imaginer une sélection de plantes pour la maison, un commerce, des bureaux ou un événement.",
           href: "/contact",
+        },
+        {
+          title: "Murs végétaux naturels",
+          copy: "Concevoir un mur vivant sur mesure pour un intérieur privé ou professionnel, avec ou sans entretien. Prix sur devis.",
+          href: "/mur-vegetal-naturel-lille",
         },
       ]}
       partner={{

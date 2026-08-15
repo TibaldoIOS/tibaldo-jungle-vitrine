@@ -83,7 +83,7 @@ export default function LocalSeoPage(props: LocalPageProps) {
   return <main className="editorial-page local-seo-page">
     <ScrollReveal />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-    <section className={`inner-hero compact-inner-hero local-seo-hero${props.canonical === "/livraison-plantes-lille" ? " is-delivery-hero" : ""}`}>
+    <section className={`inner-hero compact-inner-hero local-seo-hero${props.canonical === "/livraison-plantes-lille" ? " is-delivery-hero" : ""}${props.canonical === "/mur-vegetal-naturel-lille" ? " is-living-wall-hero" : ""}`}>
       <div className="inner-hero-texture" aria-hidden="true" /><div className="inner-hero-shade" aria-hidden="true" />
       <SiteHeader />
       <div className="shell inner-hero-content"><p className="eyebrow"><span /> {props.eyebrow}</p><h1><span className="hero-line"><span>{props.title}</span></span><span className="hero-line"><span><em>{props.accent}</em></span></span></h1><p>{props.intro}</p><a className="button button-light" href="#informations">Préparer ma visite <Arrow /></a></div>

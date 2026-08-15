@@ -40,7 +40,8 @@ test("renders the homepage SEO signals and editorial content", async () => {
   );
   assert.match(html, /<link(?=[^>]*rel=["']canonical["'])(?=[^>]*href=["']https:\/\/jungle\.tibaldo\.fr\/?["'])[^>]*>/i);
   assert.match(html, /application\/ld\+json/i);
-  assert.match(html, /Plantes rares[\s\S]*&amp; exotiques[\s\S]*à Lille\./i);
+  assert.match(html, /Plantes rares[\s\S]*&amp; tropicales[\s\S]*à Lille\./i);
+  assert.match(html, /Plantes d’intérieur et d’extérieur, espèces exotiques, pépites rares et conseils passionnés\./i);
   assert.match(html, /class=["']hero-line["']/i);
   assert.match(html, /data-parallax=["']18["']/i);
   assert.match(html, /Trois univers/i);

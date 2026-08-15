@@ -42,8 +42,8 @@ export default function Home() {
         <SiteHeader />
         <div className="hero-content shell">
           <p className="eyebrow"><span /> Nouvelle boutique · Lille</p>
-          <h1 aria-label="Plantes rares et exotiques à Lille"><span className="hero-line" aria-hidden="true"><span>Plantes rares</span></span><span className="hero-line" aria-hidden="true"><span>&amp; exotiques <em>à Lille.</em></span></span></h1>
-          <p className="hero-copy">Studio Végétal Tibaldo Jungle réunit à Lille plantes rares, culture locale et conseils sincères.</p>
+          <h1 aria-label="Plantes rares et tropicales à Lille"><span className="hero-line" aria-hidden="true"><span>Plantes rares</span></span><span className="hero-line" aria-hidden="true"><span>&amp; tropicales <em>à Lille.</em></span></span></h1>
+          <p className="hero-copy">Plantes d’intérieur et d’extérieur, espèces exotiques, pépites rares et conseils passionnés.</p>
           <div className="hero-actions"><a className="button button-light" href="/plantes">Découvrir les plantes <Arrow /></a><a className="hero-shop-link" data-action="shop" href="https://shop.tibaldo.fr">Voir la boutique en ligne <Arrow /></a></div>
         </div>
       </section>
