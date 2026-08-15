@@ -4,6 +4,7 @@ import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 import PlantSectionNav from "./PlantSectionNav";
 import PlantCarePassport from "./PlantCarePassport";
 import ScientificName from "./ScientificName";
+import PlantShopBar from "./PlantShopBar";
 
 function Meter({ label, value, copy }: { label: string; value: Level; copy: string }) { return <article className="care-meter" data-reveal><header><span>{label}</span><strong><b>{value}</b>/5</strong></header><div className="care-meter-track" aria-label={`${label} : ${value} sur 5`}>{[1,2,3,4,5].map((level) => <i className={level <= value ? "is-filled" : ""} key={level} />)}</div><p>{copy}</p></article>; }
 
@@ -22,5 +23,5 @@ export default function PlantProfile({ plant }: { plant: PlantEntry }) {
       <section className="tibaldo-advice plant-profile-section" id="conseils" data-reveal><p className="section-kicker">Conseils Tibaldo Jungle</p><h2>Notre regard<br />au Studio.</h2><ol>{plant.tibaldoAdvice.map((advice,index) => <li key={advice}><span>0{index+1}</span><p>{advice}</p></li>)}</ol><div className="plant-availability"><span>{plant.shopUrl ? "Disponibilité en boutique" : "Poursuivre l’exploration"}</span><p>{plant.shopUrl ? "Consultez la fiche marchande pour connaître le stock actuel. Cette encyclopédie reste indépendante du catalogue de vente." : "Cette fiche appartient à la bibliothèque végétale Tibaldo Jungle. Explorez les plantes du même genre ou de la même famille botanique."}</p><a className="button button-light" href={plant.shopUrl || `/plantes/${plant.genre}`}>{plant.shopUrl ? "Voir en boutique" : `Découvrir les ${plant.genreLabel}`} <Arrow /></a></div></section>
       <section className="plant-faq plant-profile-section" id="faq"><header className="plant-section-heading" data-reveal><p className="section-kicker">Questions fréquentes</p><h2>Tout savoir avant de l’accueillir.</h2></header><div>{plant.faq.map((item) => <details key={item.question} data-reveal><summary><strong>{item.question}</strong><span>+</span></summary><p>{item.answer}</p></details>)}</div></section>
       <section className="plant-sources" data-reveal><p className="section-kicker">Sources & prudence</p><p>Fiche croisée avec des références botaniques et horticoles identifiées. Les conditions de chaque intérieur peuvent modifier le comportement de la plante.</p><div>{plant.sources.map((source) => <a href={source.url} target="_blank" rel="noreferrer" key={source.url}>{source.label} <Arrow /></a>)}</div></section>
-    </div></div><SiteFooter /></main>;
+    </div></div><SiteFooter />{plant.shopUrl && <PlantShopBar shopUrl={plant.shopUrl} plantName={plant.botanicalName} />}</main>;
 }
