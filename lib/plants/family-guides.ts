@@ -200,7 +200,7 @@ export const familyGuides = {
     sources: [{ label: "Kew Science — Cactaceae", url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30000055-2" }, { label: "Royal Horticultural Society — cactus et succulentes", url: "https://www.rhs.org.uk/plants/types/cacti-succulents/growing-guide" }],
   },
   epiphyllum: {
-    name: "Epiphyllum", image: "/disocactus-anguliger-real.jpg", imageAlt: "Tiges plates découpées de Disocactus anguliger, cactus zigzag", heroSubtitle: "Des cactus de forêt retombants, encore connus sous leur ancien nom Epiphyllum, qui préfèrent la lumière filtrée aux conditions désertiques.",
+    name: "Epiphyllum", image: "/disocactus-anguliger-cactus-zigzag.webp", imageAlt: "Disocactus anguliger suspendu en serre avec de longues tiges vertes plates et profondément découpées", heroSubtitle: "Des cactus de forêt retombants, encore connus sous leur ancien nom Epiphyllum, qui préfèrent la lumière filtrée aux conditions désertiques.",
     care: { difficulty: 2, light: 4, water: 3, humidity: 3, substrate: "Organique, très aéré et drainant", nutrition: "Légère pendant la croissance" },
     lead: "Le nom Epiphyllum reste très utilisé pour le cactus zigzag. La classification actuelle retient Disocactus anguliger : un cactus épiphyte mexicain aux tiges profondément découpées et aux fleurs nocturnes.",
     origin: "Les cactus épiphytes vivent dans les forêts tropicales américaines, installés sur des branches où leurs racines profitent d’humus, d’air et d’une humidité passagère sans rester noyées.",
