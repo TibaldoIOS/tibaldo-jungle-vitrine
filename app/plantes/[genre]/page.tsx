@@ -31,7 +31,7 @@ export default async function Page({ params }: Props) {
   if (!guide) notFound();
   const isFamily = "rank" in guide && guide.rank === "family";
   const botanicalName = "botanicalName" in guide ? guide.botanicalName : guide.name;
-  const editorials = familyEditorials[genre as keyof typeof familyEditorials];
+  const editorials = familyEditorials[genre as keyof typeof familyEditorials] ?? [];
   const list = getPlantsByGenre(genre);
   const genrePortraits = list
     .map((plant) => ({ src: plant.gallery[0].src, alt: plant.gallery[0].alt, name: plant.listingName ?? plant.botanicalName, href: `/plantes/${genre}/${plant.slug}` }))
