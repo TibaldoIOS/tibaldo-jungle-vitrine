@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { existsSync } from "node:fs";
 import test from "node:test";
 
 async function render(pathname = "/") {
@@ -111,4 +112,52 @@ test("renders the opening event with complete crawlable SEO data", async () => {
   assert.match(html, /"@type":"FAQPage"/i);
   assert.match(html, /"@type":"BreadcrumbList"/i);
   assert.match(html, /Nouvelle boutique de plantes à Lille : inauguration gratuite/i);
+});
+
+test("conserves the existing plant encyclopedia API contract", async () => {
+  const response = await render("/api/encyclopedie/plantes");
+  assert.equal(response.status, 200);
+  const entries = await response.json();
+  assert.ok(entries.length > 0);
+  const expectedFields = ["id", "genre", "genreLabel", "slug", "displayName", "botanicalName", "cultivar", "family", "imageUrl", "imageAlt", "encyclopediaSlug", "encyclopediaUrl", "publishedAt", "updatedAt"];
+  for (const entry of entries) {
+    assert.deepEqual(Object.keys(entry), expectedFields);
+    assert.match(entry.encyclopediaSlug, /^plantes\/[a-z0-9-]+\/[a-z0-9-]+$/);
+    assert.equal(entry.encyclopediaUrl, `https://jungle.tibaldo.fr/${entry.encyclopediaSlug}`);
+    assert.match(entry.imageUrl, /^https:\/\/jungle\.tibaldo\.fr\//);
+    assert.ok(entry.botanicalName);
+  }
+  assert.equal(new Set(entries.map((entry) => entry.id)).size, entries.length);
+  assert.equal(new Set(entries.map((entry) => entry.encyclopediaSlug)).size, entries.length);
+});
+
+test("exposes an additive versioned plant encyclopedia V2", async () => {
+  const response = await render("/api/v2/encyclopedie/plantes");
+  assert.equal(response.status, 200);
+  assert.equal(response.headers.get("x-tibaldo-contract-version"), "2.0");
+  const entries = await response.json();
+  assert.ok(entries.length > 0);
+  assert.equal(new Set(entries.map((entry) => entry.botanicalName.toLowerCase())).size, entries.length);
+  for (const entry of entries) {
+    assert.equal(entry.contractVersion, "2.0");
+    assert.ok(entry.navigationGenre);
+    assert.ok(entry.taxonomy.genus);
+    assert.equal(entry.taxonomyGenreDiffers, entry.taxonomy.genus.toLowerCase() !== entry.navigationGenre);
+    assert.ok(entry.taxonomy.species);
+    assert.ok(entry.primaryImage.url);
+    assert.ok(entry.images.length > 0);
+    assert.equal(entry.primaryImage.url, entry.imageUrl);
+    for (const image of entry.images) {
+      assert.match(image.path, /^\//);
+      assert.equal(image.url, `https://jungle.tibaldo.fr${image.path}`);
+      assert.ok(existsSync(new URL(`../public${image.path}`, import.meta.url)), `Média absent : ${image.path}`);
+    }
+  }
+  const taxonKeys = entries.map((entry) => [entry.taxonomy.genus, entry.taxonomy.species, entry.taxonomy.cultivar ?? ""].join("|").toLowerCase());
+  assert.equal(new Set(taxonKeys).size, entries.length);
+});
+
+test("returns 404 for an unknown encyclopedia plant page", async () => {
+  const response = await render("/plantes/inconnu/plante-inconnue");
+  assert.equal(response.status, 404);
 });

@@ -1,15 +1,14 @@
+import { toPlantApiV2 } from "@/lib/plants/api-contract";
 import { plants } from "@/lib/plants/catalog";
-import { toPlantApiV1 } from "@/lib/plants/api-contract";
 
 export const dynamic = "force-static";
 
 export function GET() {
-  const entries = plants.map(toPlantApiV1);
-
-  return Response.json(entries, {
+  return Response.json(plants.map(toPlantApiV2), {
     headers: {
-      "Access-Control-Allow-Origin": "https://caisse.tibaldo.fr",
+      "Access-Control-Allow-Origin": "*",
       "Cache-Control": "public, max-age=300, s-maxage=3600",
+      "X-Tibaldo-Contract-Version": "2.0",
     },
   });
 }
