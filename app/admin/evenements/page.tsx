@@ -3,7 +3,7 @@ import { listAdminEvents } from "@/lib/events/repository";
 import EventAdmin from "./EventAdmin";
 
 export const dynamic = "force-dynamic";
-const ALLOWED = new Set(["contact@tibaldo.fr", "jungle@tibaldo.fr"]);
+const ALLOWED = new Set(["contact@tibaldo.fr", "jungle@tibaldo.fr", "rom.pruvost@me.com"]);
 
 export default async function AdminEventsPage() {
   const user = await requireChatGPTUser("/admin/evenements");

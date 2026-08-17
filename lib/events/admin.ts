@@ -1,6 +1,6 @@
 import { getChatGPTUser } from "@/app/chatgpt-auth";
 
-const ADMIN_EMAILS = new Set(["contact@tibaldo.fr", "jungle@tibaldo.fr"]);
+const ADMIN_EMAILS = new Set(["contact@tibaldo.fr", "jungle@tibaldo.fr", "rom.pruvost@me.com"]);
 
 export async function getEventAdmin() {
   const user = await getChatGPTUser();
