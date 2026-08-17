@@ -1,11 +1,28 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
+
+const canonical = "https://jungle.tibaldo.fr/rempotage";
+const socialImage = "https://jungle.tibaldo.fr/advice-rempotage.jpg";
 
 export const metadata: Metadata = {
   title: "Guide du rempotage des plantes | Tibaldo Jungle",
   description: "Quand et comment rempoter une plante d’intérieur : signes à observer, diagnostic des racines, choix du pot et composition du substrat.",
   alternates: { canonical: "/rempotage" },
+  openGraph: {
+    type: "article",
+    url: canonical,
+    title: "Guide du rempotage des plantes",
+    description: "Reconnaître le bon moment, choisir le pot et le substrat, puis rempoter une plante sans fragiliser ses racines.",
+    images: [{ url: socialImage, width: 1200, height: 1800, alt: "Rempotage d’une plante et observation de ses racines" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Guide du rempotage des plantes",
+    description: "Les signes à observer, le choix du pot et du substrat, les étapes et les soins après rempotage.",
+    images: [socialImage],
+  },
 };
 
 const symptoms = [
@@ -14,21 +31,27 @@ const symptoms = [
   ["Plante fragilisée", "Feuilles jaunes, croissance ralentie, pot instable ou suspicion de pourriture."],
 ];
 
+const steps = [
+  ["Préparer", "Choisissez un pot percé légèrement plus large, un substrat adapté, puis arrosez modérément la plante la veille si la motte est très sèche."],
+  ["Observer", "Sortez délicatement la motte. Desserrez seulement les racines qui tournent fortement et retirez les parties molles ou mortes avec un outil propre."],
+  ["Replanter", "Placez la plante à la même hauteur, comblez sans tasser excessivement et laissez une marge d’arrosage sous le bord du pot."],
+];
+
 export default function RepottingPage() {
   return <main className="editorial-page repotting-page">
     <ScrollReveal />
     <section className="inner-hero compact-inner-hero repotting-hero">
       <div className="inner-hero-texture" aria-hidden="true" /><div className="inner-hero-shade" aria-hidden="true" />
       <SiteHeader />
-      <div className="shell inner-hero-content"><p className="eyebrow"><span /> Bar à rempotage · Gratuit · Lille</p><h1><span className="hero-line"><span>Votre plante</span></span><span className="hero-line"><span><em>manque d’espace ?</em></span></span></h1><p>Apportez-la au Studio : le geste de rempotage est offert toute l’année. Vous réglez uniquement le pot, le substrat ou les fournitures choisis si nécessaire.</p><a className="button button-light" href="/sos-plantes">Diagnostiquer ma plante <Arrow /></a></div>
+      <div className="shell inner-hero-content"><p className="eyebrow"><span /> Guide pratique · Plantes d’intérieur</p><h1><span className="hero-line"><span>Quand et comment</span></span><span className="hero-line"><span><em>rempoter une plante ?</em></span></span></h1><p>Reconnaître le bon moment, choisir un pot drainant et renouveler le substrat sans fragiliser les racines.</p><a className="button button-light" href="#etapes">Voir les étapes <Arrow /></a></div>
     </section>
     <section className="repotting-diagnosis shell">
       <div className="repotting-heading" data-reveal><p className="section-kicker">Reconnaître les signes</p><h2>Quand faut-il<br />rempoter ?</h2><p>Un pot plus grand n’est pas toujours la réponse. Le diagnostic évite les rempotages inutiles et protège les racines.</p></div>
       <div className="repotting-symptoms">{symptoms.map(([title, copy], index) => <article key={title} data-reveal><span>0{index + 1}</span><h3>{title}</h3><p>{copy}</p></article>)}</div>
     </section>
-    <section className="repotting-process"><div className="shell"><p className="section-kicker" data-reveal>Au Studio Végétal</p><h2 data-reveal>Observer. Composer.<br /><em>Faire repartir.</em></h2><div className="repotting-steps"><p data-reveal data-parallax="48" data-parallax-direction="up"><strong>01 · Diagnostic</strong>Nous vérifions la motte, les racines, l’humidité et la stabilité de la plante.</p><p data-reveal data-parallax="58" data-parallax-direction="down"><strong>02 · Mélange sur mesure</strong>Le substrat est ajusté à l’espèce, à votre lumière et à vos habitudes d’arrosage.</p><p data-reveal data-parallax="48" data-parallax-direction="up"><strong>03 · Conseils de reprise</strong>Vous repartez avec des gestes simples pour l’arrosage et les semaines suivantes.</p></div><div className="repotting-free-note"><strong>Le geste et le Terreau Signature sont offerts.</strong><span>Pour une plante classique, même achetée ailleurs. Le nouveau pot, les composants techniques supplémentaires et les sujets hors normes ne sont pas inclus.</span></div><a className="button button-light" href="/contact">Venir au Studio <Arrow /></a></div></section>
-    <section className="repotting-note shell" data-reveal><img src="/advice-rempotage.jpg" alt="Rempotage et diagnostic des racines au Studio Végétal Tibaldo Jungle à Lille" width="1200" height="1800" /><div><p className="section-kicker">Le bon réflexe</p><h2>Venez avec votre plante.</h2><p>Si elle est volumineuse, envoyez-nous d’abord une photo du feuillage, du pot et des racines visibles. Nous pourrons préparer votre passage.</p><a className="button button-green" href="mailto:jungle@tibaldo.fr?subject=SOS%20Rempotage">Envoyer des photos <Arrow /></a><p className="repotting-local-links"><a href="/rempotage-plantes-lille">Service de rempotage à Lille ↗</a><a href="/sos-plantes">Diagnostic de plante à Lille ↗</a></p></div></section>
-    <nav className="shell flower-service-link" data-reveal><a href="/rempotage-plantes-lille">Découvrir le service de rempotage à Lille <span>↗</span></a></nav>
+    <section className="repotting-process" id="etapes"><div className="shell"><p className="section-kicker" data-reveal>La méthode</p><h2 data-reveal>Préparer. Observer.<br /><em>Replanter.</em></h2><div className="repotting-steps">{steps.map(([title, copy], index) => <p key={title} data-reveal data-parallax={index === 1 ? "58" : "48"} data-parallax-direction={index === 1 ? "down" : "up"}><strong>0{index + 1} · {title}</strong>{copy}</p>)}</div><div className="repotting-free-note"><strong>Le drainage commence par un trou d’évacuation.</strong><span>Un pot percé permet à l’excédent d’eau de sortir. Une couche de billes d’argile ne remplace pas ce drainage dans un contenant fermé.</span></div><Link className="button button-light" href="/conseils/pot-perce-cache-pot-coupelle">Choisir le bon contenant <Arrow /></Link></div></section>
+    <section className="repotting-note shell" data-reveal><img src="/advice-rempotage.jpg" alt="Rempotage d’une plante et observation de ses racines" width="1200" height="1800" /><div><p className="section-kicker">Après le rempotage</p><h2>Laisser les racines reprendre.</h2><p>Arrosez selon les besoins de l’espèce et la texture du nouveau mélange, puis laissez toute l’eau s’écouler. Évitez l’engrais immédiatement après une taille importante des racines et replacez la plante dans une lumière adaptée, sans changement brutal.</p><p>Les erreurs les plus fréquentes sont un pot beaucoup trop grand, un substrat trop compact, des racines enterrées plus profondément qu’avant et des arrosages répétés alors que la motte reste humide.</p><p className="repotting-local-links"><Link href="/substrats">Comprendre les substrats ↗</Link><Link href="/conseils/arroser-plantes-interieur">Adapter l’arrosage ↗</Link></p></div></section>
+    <nav className="shell flower-service-link" data-reveal><Link href="/rempotage-plantes-lille"><span>Vous êtes à Lille ?</span> Le Studio Végétal propose également un service de rempotage <strong>↗</strong></Link></nav>
     <SiteFooter />
   </main>;
 }

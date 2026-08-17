@@ -104,8 +104,8 @@ export default function RempotagePlantesLille() {
     links={[
       {
         href: "/rempotage",
-        label: "Découvrir le bar à rempotage",
-        copy: "Le fonctionnement du service gratuit, les plantes acceptées et la préparation de votre visite.",
+        label: "Lire le guide du rempotage",
+        copy: "Reconnaître le bon moment, choisir un pot drainant et rempoter une plante sans fragiliser ses racines.",
       },
       {
         href: "/substrats-en-vrac-lille",
