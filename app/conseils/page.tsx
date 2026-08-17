@@ -30,7 +30,7 @@ export default function Page() {
 
     <section className="shell advice-library" id="guides"><header data-reveal><p className="section-kicker">La bibliothèque</p><h2>Treize guides.<br/><em>Des gestes concrets.</em></h2><p>Des réponses courtes à consulter au bon moment, complétées progressivement par les observations du Studio à Lille.</p></header>{universes.map((universe) => { const items = guides.filter((guide) => guide.category === universe.name); return <section id={universe.name.toLowerCase()} key={universe.name} className="advice-category" data-reveal><div><span>{String(items.length).padStart(2, "0")} sujets</span><h3>{universe.name}</h3><p>{universe.copy}</p></div><div>{items.map((guide) => <a href={`/conseils/${guide.slug}`} key={guide.slug}><img src={guide.image} alt=""/><div><span>{guide.eyebrow} · {guide.readingTime}</span><h4>{guide.title}</h4><p>{guide.intro}</p></div><strong>↗</strong></a>)}</div></section>; })}</section>
 
-    <section className="local-topic-links shell"><a href="/diagnostic-plante-lille"><span>Service à Lille</span><strong>Diagnostic de plante</strong></a><a href="/traitement-thrips-lille"><span>Parasites</span><strong>Thrips sur plantes d’intérieur</strong></a><a href="/substrat-alocasia-lille"><span>Substrats</span><strong>Mélange pour Alocasia</strong></a></section>
+    <section className="local-topic-links shell"><a href="/sos-plantes"><span>Service à Lille</span><strong>Diagnostic de plante</strong></a><a href="/conseils/thrips-plantes-interieur"><span>Parasites</span><strong>Thrips sur plantes d’intérieur</strong></a><a href="/plantes/alocasia"><span>Substrats</span><strong>Mélange et culture des Alocasia</strong></a></section>
     <SiteFooter/>
   </main>;
 }

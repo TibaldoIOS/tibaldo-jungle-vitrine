@@ -88,7 +88,7 @@ export default function Home() {
 
       <section className="home-conversion-hub shell" aria-label="Préparer votre visite ou votre projet" data-reveal>
         <header><p className="section-kicker">Comment pouvons-nous vous aider ?</p><h2>Une visite, un diagnostic<br /><em>ou un projet floral.</em></h2></header>
-        <div><a href="/contact" data-action="route"><span>01 · Venir au Studio</span><strong>Adresse, horaires et GPS</strong><Arrow /></a><a href="/diagnostic-plante-lille" data-action="sos"><span>02 · Sauver une plante</span><strong>Demander un diagnostic</strong><Arrow /></a><a href="/fleurs#demande-devis" data-action="quote"><span>03 · Préparer un événement</span><strong>Composer une demande de devis</strong><Arrow /></a><a href="https://shop.tibaldo.fr" data-action="shop"><span>04 · Acheter en ligne</span><strong>Voir la boutique</strong><Arrow /></a></div>
+        <div><a href="/contact" data-action="route"><span>01 · Venir au Studio</span><strong>Adresse, horaires et GPS</strong><Arrow /></a><a href="/sos-plantes" data-action="sos"><span>02 · Sauver une plante</span><strong>Demander un diagnostic</strong><Arrow /></a><a href="/fleurs#demande-devis" data-action="quote"><span>03 · Préparer un événement</span><strong>Composer une demande de devis</strong><Arrow /></a><a href="https://shop.tibaldo.fr" data-action="shop"><span>04 · Acheter en ligne</span><strong>Voir la boutique</strong><Arrow /></a></div>
       </section>
 
       <section className="home-values shell" data-reveal>

@@ -33,12 +33,12 @@ export default function ServicesPage() {
         {
           title: "Fleurs coupées",
           copy: "Commander des bottes et fleurs coupées professionnelles sur devis, avec retrait ou livraison à Lille.",
-          href: "/livraison-fleurs-coupees-lille",
+          href: "/fleurs-sur-commande-lille",
         },
         {
           title: "Bouquets fournisseurs",
           copy: "Accéder sur demande à des bouquets déjà confectionnés par un fournisseur professionnel, sans prestation de composition par Tibaldo Jungle.",
-          href: "/bouquets-fleurs-livraison-lille",
+          href: "/fleurs-sur-commande-lille",
         },
         {
           title: "Projets végétaux",

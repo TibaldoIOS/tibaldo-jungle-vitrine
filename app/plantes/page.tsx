@@ -7,16 +7,16 @@ import PlantUniverseCards from "./PlantUniverseCards";
 import OpeningEventLink from "../OpeningEventLink";
 
 export const metadata: Metadata = {
-  title: "Plantes rares et d’intérieur à Lille | Tibaldo Jungle",
+  title: "Encyclopédie des plantes d’intérieur et tropicales",
   description:
-    "Explorez les genres et espèces de plantes rares et d’intérieur documentés par Studio Végétal Tibaldo Jungle à Lille.",
+    "Explorez les genres, familles, espèces et cultivars de plantes d’intérieur et tropicales avec des fiches de culture détaillées.",
   alternates: { canonical: "/plantes" },
   openGraph: {
     type: "website",
     locale: "fr_FR",
     url: "/plantes",
     siteName: "Studio Végétal — Tibaldo Jungle",
-    title: "Encyclopédie des plantes rares et d’intérieur à Lille",
+    title: "Encyclopédie des plantes d’intérieur et tropicales",
     description: "Recherchez une plante par son nom, sa famille botanique ou ses besoins et consultez les guides Tibaldo Jungle.",
     images: [{ url: "/alocasia-imperial-red.webp", width: 1024, height: 1536, alt: "Encyclopédie végétale Tibaldo Jungle à Lille" }],
   },
@@ -46,7 +46,7 @@ export default function PlantsPage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
-      { "@type": "CollectionPage", "@id": `${pageUrl}#page`, name: "Encyclopédie des plantes rares et d’intérieur", url: pageUrl, description: metadata.description, isPartOf: { "@id": "https://jungle.tibaldo.fr/#website" }, about: { "@id": "https://jungle.tibaldo.fr/#store" }, mainEntity: { "@id": `${pageUrl}#plants` }, inLanguage: "fr-FR" },
+      { "@type": "CollectionPage", "@id": `${pageUrl}#page`, name: "Encyclopédie des plantes d’intérieur et tropicales", url: pageUrl, description: metadata.description, isPartOf: { "@id": "https://jungle.tibaldo.fr/#website" }, about: { "@type": "Thing", name: "Plantes d’intérieur et tropicales" }, mainEntity: { "@id": `${pageUrl}#plants` }, inLanguage: "fr-FR" },
       { "@type": "ItemList", "@id": `${pageUrl}#plants`, name: "Fiches botaniques Tibaldo Jungle", numberOfItems: plants.length, itemListElement: plants.map((plant, index) => ({ "@type": "ListItem", position: index + 1, name: plant.botanicalName, url: `${pageUrl}/${plant.genre}/${plant.slug}` })) },
       { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Accueil", item: "https://jungle.tibaldo.fr/" }, { "@type": "ListItem", position: 2, name: "Plantes", item: pageUrl }] },
     ],
@@ -60,7 +60,7 @@ export default function PlantsPage() {
         <div className="inner-hero-shade" />
         <SiteHeader />
         <div className="shell inner-hero-content">
-          <p className="eyebrow"><span /> Encyclopédie végétale · Lille</p>
+          <p className="eyebrow"><span /> Encyclopédie végétale</p>
           <h1>
             <span className="hero-line"><span>Comprendre</span></span>
             <span className="hero-line"><span><em>le vivant.</em></span></span>

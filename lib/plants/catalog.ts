@@ -1,8 +1,8 @@
 import type { PlantEntry } from "./types";
-import { prayerPlants } from "./prayer-plants";
-import { newArrivalPlants } from "./new-arrivals";
-import { requestedPlants } from "./requested-plants";
-import { afternoonPlants } from "./afternoon-plants";
+import { prayerPlants } from "./prayer-plants.ts";
+import { newArrivalPlants } from "./new-arrivals.ts";
+import { requestedPlants } from "./requested-plants.ts";
+import { afternoonPlants } from "./afternoon-plants.ts";
 
 export const plantFamilies = [
   { slug: "alocasia", name: "Alocasia", eyebrow: "Collection ouverte", description: "Plantes tropicales architecturales aux feuilles spectaculaires, les Alocasia aiment la lumière vive, la chaleur et un substrat très aéré. Découvrez nos conseils de culture et les Alocasia rares observés au Studio Végétal Tibaldo Jungle à Lille.", image: "/alocasia-cuprea-feuillage.jpg", imageAlt: "Feuillage nervuré vert métallique d’un Alocasia cuprea", available: true },

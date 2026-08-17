@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ScrollReveal from "../../ScrollReveal";
-import { Arrow, SiteFooter, SiteHeader } from "../../SiteChrome";
+import { SiteFooter, SiteHeader } from "../../SiteChrome";
 import { eventFallbacks } from "@/lib/events/catalog";
 import { getPublicEvent, listPublicEvents } from "@/lib/events/repository";
 import { EventActions, EventCard, EventCountdown } from "../EventTools";
@@ -47,6 +47,8 @@ export default async function EventPage({ params }: Props) {
   const others = allEvents.filter((item) => item.id !== event.id).slice(0, 3);
   const start = new Date(event.startAt);
   const end = event.endAt ? new Date(event.endAt) : null;
+  // The public status must follow real time; this server route is intentionally dynamic.
+  // eslint-disable-next-line react-hooks/purity
   const isPast = (end ?? start).getTime() < Date.now();
   const fullAddress = `${event.address}, ${event.postalCode} ${event.city}`;
   const isOpening = event.slug === "ouverture-tibaldo-jungle-lille";
@@ -61,7 +63,7 @@ export default async function EventPage({ params }: Props) {
         description: event.description,
         startDate: event.startAt,
         endDate: event.endAt,
-        eventStatus: "https://schema.org/EventScheduled",
+        eventStatus: isPast ? "https://schema.org/EventCompleted" : "https://schema.org/EventScheduled",
         eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
         isAccessibleForFree: true,
         keywords: event.seoKeywords.join(", "),
@@ -82,7 +84,7 @@ export default async function EventPage({ params }: Props) {
         },
         organizer: {
           "@type": "Organization",
-          name: "Studio Végétal — Tibaldo Jungle",
+          name: "Studio Végétal – Tibaldo Jungle",
           alternateName: "Tibaldo Jungle",
           url: "https://jungle.tibaldo.fr",
           telephone: "+33743727079",

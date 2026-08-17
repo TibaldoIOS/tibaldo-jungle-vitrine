@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { plants } from "@/lib/plants/catalog";
 import ScrollReveal from "../../../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../../../SiteChrome";
+import { isFamilyIndexable } from "@/lib/seo/indexability";
 
 type Props = { params: Promise<{ family: string }> };
 const families = [...new Set(plants.map((plant) => plant.taxonomy.family))];
@@ -19,6 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: { canonical: `/plantes/famille/${slug}` },
+    robots: isFamilyIndexable(slug) ? { index: true, follow: true } : { index: false, follow: true },
     openGraph: { type: "website", locale: "fr_FR", url: `/plantes/famille/${slug}`, siteName: "Studio Végétal — Tibaldo Jungle", title, description, images: image ? [{ url: image.src, width: image.width, height: image.height, alt: image.alt }] : undefined },
     twitter: { card: "summary_large_image", title, description, images: image ? [image.src] : undefined },
   };

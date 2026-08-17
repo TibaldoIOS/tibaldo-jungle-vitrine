@@ -86,6 +86,12 @@ test("serves a crawlable robots file and a populated XML sitemap", async () => {
   assert.match(xml, /https:\/\/jungle\.tibaldo\.fr\/evenements\//i);
   assert.match(xml, /https:\/\/jungle\.tibaldo\.fr\/evenements\/ouverture-tibaldo-jungle-lille/i);
   assert.match(xml, /https:\/\/jungle\.tibaldo\.fr\/plantes\/alocasia\//i);
+  for (const guide of ["lumiere-plantes-interieur", "choisir-plante-selon-piece", "engrais-plantes-interieur", "plantes-interieur-hiver", "humidite-plantes-tropicales", "nettoyer-feuilles-plantes", "araignees-rouges-plantes", "pot-perce-cache-pot-coupelle"]) {
+    assert.match(xml, new RegExp(`https://jungle\\.tibaldo\\.fr/conseils/${guide}`));
+  }
+  for (const redirected of ["creation-boutique", "diagnostic-plante-lille", "traitement-thrips-lille", "rempotage-monstera-lille", "substrat-alocasia-lille", "livraison-fleurs-coupees-lille", "bouquets-fleurs-livraison-lille", "conseils/thrips-plantes-interieur-lille", "conseils/rempoter-plante-quand-comment"]) {
+    assert.doesNotMatch(xml, new RegExp(`<loc>https://jungle\\.tibaldo\\.fr/${redirected}</loc>`));
+  }
   assert.doesNotMatch(xml, /\/admin\//i);
 });
 
@@ -104,14 +110,34 @@ test("renders the opening event with complete crawlable SEO data", async () => {
   assert.equal(response.status, 200);
   const html = await response.text();
 
-  assert.match(html, /<title>Ouverture boutique de plantes à Lille \| Tibaldo Jungle<\/title>/i);
+  assert.match(html, /<title>Ouverture du Studio Végétal à Lille — 26 septembre 2026<\/title>/i);
   assert.match(html, /<link(?=[^>]*rel=["']canonical["'])(?=[^>]*href=["']https:\/\/jungle\.tibaldo\.fr\/evenements\/ouverture-tibaldo-jungle-lille["'])[^>]*>/i);
-  assert.match(html, /<h1>Ouverture de Tibaldo Jungle à Lille — 26 septembre 2026<\/h1>/i);
+  assert.match(html, /<h1>Ouverture du Studio Végétal – Tibaldo Jungle à Lille<\/h1>/i);
   assert.match(html, /"@type":"Event"/i);
   assert.match(html, /"isAccessibleForFree":true/i);
   assert.match(html, /"@type":"FAQPage"/i);
   assert.match(html, /"@type":"BreadcrumbList"/i);
-  assert.match(html, /Nouvelle boutique de plantes à Lille : inauguration gratuite/i);
+  assert.match(html, /26 septembre 2026/i);
+  assert.doesNotMatch(html, /Que faire à Lille ce week-end/i);
+});
+
+test("serves every retained SEO migration as one direct 301", async () => {
+  const redirects = new Map([
+    ["/creation-boutique", "/coulisses"],
+    ["/diagnostic-plante-lille", "/sos-plantes"],
+    ["/traitement-thrips-lille", "/sos-plantes"],
+    ["/conseils/thrips-plantes-interieur-lille", "/conseils/thrips-plantes-interieur"],
+    ["/conseils/rempoter-plante-quand-comment", "/rempotage"],
+    ["/rempotage-monstera-lille", "/rempotage-plantes-lille"],
+    ["/substrat-alocasia-lille", "/plantes/alocasia"],
+    ["/livraison-fleurs-coupees-lille", "/fleurs-sur-commande-lille"],
+    ["/bouquets-fleurs-livraison-lille", "/fleurs-sur-commande-lille"],
+  ]);
+  for (const [source, destination] of redirects) {
+    const response = await render(source);
+    assert.equal(response.status, 301, source);
+    assert.equal(new URL(response.headers.get("location"), "https://jungle.tibaldo.fr").pathname.replace(/\/$/, ""), destination);
+  }
 });
 
 test("conserves the existing plant encyclopedia API contract", async () => {
@@ -129,6 +155,7 @@ test("conserves the existing plant encyclopedia API contract", async () => {
   }
   assert.equal(new Set(entries.map((entry) => entry.id)).size, entries.length);
   assert.equal(new Set(entries.map((entry) => entry.encyclopediaSlug)).size, entries.length);
+  assert.ok(entries.some((entry) => entry.encyclopediaSlug === "plantes/epiphyllum/anguliger"));
 });
 
 test("exposes an additive versioned plant encyclopedia V2", async () => {

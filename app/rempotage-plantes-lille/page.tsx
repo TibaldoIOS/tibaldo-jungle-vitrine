@@ -103,7 +103,7 @@ export default function RempotagePlantesLille() {
     ]}
     links={[
       {
-        href: "/bar-a-rempotage-lille",
+        href: "/rempotage",
         label: "Découvrir le bar à rempotage",
         copy: "Le fonctionnement du service gratuit, les plantes acceptées et la préparation de votre visite.",
       },
@@ -113,7 +113,7 @@ export default function RempotagePlantesLille() {
         copy: "Comprendre les composants utilisés et repartir avec la quantité réellement nécessaire.",
       },
       {
-        href: "/diagnostic-plante-lille",
+        href: "/sos-plantes",
         label: "Diagnostic de plante",
         copy: "Feuilles jaunes, racines abîmées ou croissance ralentie : identifier la cause avant d’agir.",
       },
