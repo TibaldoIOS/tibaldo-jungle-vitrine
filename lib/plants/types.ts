@@ -27,6 +27,7 @@ export type PlantFilters = {
 };
 export type PlantEntry = {
   slug: string; genre: string; genreLabel: string; botanicalName: string; displayName: string; subtitle: string;
+  listingName?: string;
   family: string; taxonomy: PlantTaxonomy; filters: PlantFilters; origin: string; habitat: string; hybridization: string; synonyms: string[]; description: string[];
   specimen: { observedHeight: string; note: string };
   growth: { adultSize: string; speed: string; habit: string };

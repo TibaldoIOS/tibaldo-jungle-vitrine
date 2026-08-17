@@ -1,64 +1,31 @@
-import { eventFallbacks } from "@/lib/events/catalog";
-import { listPublicEvents } from "@/lib/events/repository";
-import { plants } from "@/lib/plants/catalog";
 import { featuredFlowerSlugs } from "@/lib/flowers/catalog";
+import { listPublicEvents } from "@/lib/events/repository";
+import { eventFallbacks } from "@/lib/events/catalog";
+import { plants } from "@/lib/plants/catalog";
 import { familyGuides } from "@/lib/plants/family-guides";
 import { featuredSubstrateSlugs } from "@/app/substrats/data";
+import { canonicalGuideSlugs, isFamilyIndexable, isGenreIndexable } from "@/lib/seo/indexability";
+import { editorialLastModified, lastModifiedDefaults } from "@/lib/seo/last-modified";
 
 export const dynamic = "force-dynamic";
-
 const origin = "https://jungle.tibaldo.fr";
-
-type SitemapEntry = {
-  path: string;
-  modified: string;
-  frequency: "weekly" | "monthly";
-  priority: number;
-};
-
-const escapeXml = (value: string) => value.replace(/[<>&'\"]/g, (character) => ({
-  "<": "&lt;",
-  ">": "&gt;",
-  "&": "&amp;",
-  "'": "&apos;",
-  '"': "&quot;",
-}[character] ?? character));
+type Entry = { path: string; modified: string };
+const escapeXml = (value: string) => value.replace(/[<>&'\"]/g, (character) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;", "'": "&apos;", '"': "&quot;" }[character] ?? character));
 
 export async function GET() {
   let publicEvents = eventFallbacks;
-  try {
-    publicEvents = await listPublicEvents();
-  } catch {
-    // The published fallback event keeps the sitemap available if D1 is temporarily unavailable.
-  }
-
-  const entries: SitemapEntry[] = [
-    { path: "/", modified: "2026-08-07", frequency: "weekly", priority: 1 },
-    ...["plantes", "fleurs", "substrats", "rempotage", "evenements", "services", "contact"].map((path, index) => ({
-      path: `/${path}`,
-      modified: "2026-08-07",
-      frequency: "weekly" as const,
-      priority: index === 1 ? 0.9 : 0.8,
-    })),
-    ...["boutique-plantes-lille", "rempotage-plantes-lille", "substrats-en-vrac-lille", "fleurs-sur-commande-lille", "fleurs-mariage-lille", "fleurs-evenement-lille", "livraison-fleurs-coupees-lille", "livraison-plantes-lille", "bouquets-fleurs-livraison-lille", "sos-plantes", "conseils"].map((path) => ({ path: `/${path}`, modified: "2026-08-12", frequency: "weekly" as const, priority: 0.9 })),
-    ...["diagnostic-plante-lille", "traitement-thrips-lille", "rempotage-monstera-lille", "substrat-alocasia-lille"].map((path) => ({ path: `/${path}`, modified: "2026-08-12", frequency: "monthly" as const, priority: 0.88 })),
-    ...["feuilles-jaunes-plantes-interieur", "thrips-plantes-interieur-lille", "arroser-plantes-interieur", "choisir-substrat-plante-interieur"].map((path) => ({ path: `/conseils/${path}`, modified: "2026-08-12", frequency: "monthly" as const, priority: 0.82 })),
-    ...featuredFlowerSlugs.map((slug) => ({ path: `/fleurs/${slug}`, modified: "2026-08-12", frequency: "monthly" as const, priority: 0.85 })),
-    ...featuredSubstrateSlugs.map((slug) => ({ path: `/substrats/${slug}`, modified: "2026-08-12", frequency: "monthly" as const, priority: 0.88 })),
-    ...Object.keys(familyGuides).map((genre) => ({ path: `/plantes/${genre}`, modified: "2026-08-06", frequency: "monthly" as const, priority: 0.8 })),
-    ...Array.from(new Set(plants.map((plant) => plant.taxonomy.family.toLowerCase()))).map((family) => ({ path: `/plantes/famille/${family}`, modified: "2026-08-07", frequency: "monthly" as const, priority: 0.75 })),
-    ...plants.map((plant) => ({ path: `/plantes/${plant.genre}/${plant.slug}`, modified: plant.updatedAt, frequency: "monthly" as const, priority: 0.85 })),
-    ...publicEvents.map((event) => ({ path: `/evenements/${event.slug}`, modified: event.updatedAt, frequency: "weekly" as const, priority: 0.9 })),
-    { path: "/creation-boutique", modified: "2026-08-03", frequency: "weekly", priority: 0.75 },
+  try { publicEvents = await listPublicEvents(); } catch { /* Published fallbacks keep the sitemap available. */ }
+  const entries: Entry[] = [
+    ...Object.entries(editorialLastModified).map(([path, modified]) => ({ path, modified })),
+    ...canonicalGuideSlugs.map((slug) => ({ path: `/conseils/${slug}`, modified: lastModifiedDefaults.guides })),
+    ...featuredFlowerSlugs.map((slug) => ({ path: `/fleurs/${slug}`, modified: lastModifiedDefaults.flowers })),
+    ...featuredSubstrateSlugs.map((slug) => ({ path: `/substrats/${slug}`, modified: lastModifiedDefaults.substrates })),
+    ...Object.keys(familyGuides).filter(isGenreIndexable).map((genre) => ({ path: `/plantes/${genre}`, modified: lastModifiedDefaults.taxonomy })),
+    ...Array.from(new Set(plants.map((plant) => plant.taxonomy.family.toLowerCase()))).filter(isFamilyIndexable).map((family) => ({ path: `/plantes/famille/${family}`, modified: lastModifiedDefaults.taxonomy })),
+    ...plants.map((plant) => ({ path: `/plantes/${plant.genre}/${plant.slug}`, modified: plant.updatedAt })),
+    ...publicEvents.filter((event) => event.status === "published").map((event) => ({ path: `/evenements/${event.slug}`, modified: event.updatedAt })),
   ];
-
-  const urls = entries.map((entry) => `<url><loc>${escapeXml(`${origin}${entry.path}`)}</loc><lastmod>${escapeXml(new Date(entry.modified).toISOString())}</lastmod><changefreq>${entry.frequency}</changefreq><priority>${entry.priority.toFixed(2)}</priority></url>`).join("");
-  const xml = `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}</urlset>`;
-
-  return new Response(xml, {
-    headers: {
-      "Content-Type": "application/xml; charset=utf-8",
-      "Cache-Control": "public, max-age=300, s-maxage=3600",
-    },
-  });
+  const unique = Array.from(new Map(entries.map((entry) => [entry.path, entry])).values());
+  const urls = unique.map((entry) => `<url><loc>${escapeXml(`${origin}${entry.path}`)}</loc><lastmod>${escapeXml(new Date(entry.modified).toISOString())}</lastmod></url>`).join("");
+  return new Response(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}</urlset>`, { headers: { "Content-Type": "application/xml; charset=utf-8", "Cache-Control": "public, max-age=300, s-maxage=3600" } });
 }

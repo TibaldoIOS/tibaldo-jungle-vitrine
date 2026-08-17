@@ -3,18 +3,20 @@ import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 import { plantFamilies, plants, studioCollection } from "@/lib/plants/catalog";
 import PlantExplorer from "./PlantExplorer";
+import PlantUniverseCards from "./PlantUniverseCards";
+import OpeningEventLink from "../OpeningEventLink";
 
 export const metadata: Metadata = {
-  title: "Plantes rares et d’intérieur à Lille | Tibaldo Jungle",
+  title: "Encyclopédie des plantes d’intérieur et tropicales",
   description:
-    "Explorez les genres et espèces de plantes rares et d’intérieur documentés par Studio Végétal Tibaldo Jungle à Lille.",
+    "Explorez les genres, familles, espèces et cultivars de plantes d’intérieur et tropicales avec des fiches de culture détaillées.",
   alternates: { canonical: "/plantes" },
   openGraph: {
     type: "website",
     locale: "fr_FR",
     url: "/plantes",
     siteName: "Studio Végétal — Tibaldo Jungle",
-    title: "Encyclopédie des plantes rares et d’intérieur à Lille",
+    title: "Encyclopédie des plantes d’intérieur et tropicales",
     description: "Recherchez une plante par son nom, sa famille botanique ou ses besoins et consultez les guides Tibaldo Jungle.",
     images: [{ url: "/alocasia-imperial-red.webp", width: 1024, height: 1536, alt: "Encyclopédie végétale Tibaldo Jungle à Lille" }],
   },
@@ -28,16 +30,29 @@ export const metadata: Metadata = {
 
 export default function PlantsPage() {
   const pageUrl = "https://jungle.tibaldo.fr/plantes";
+  const animatedFamilies = plantFamilies.map((family) => ({
+    slug: family.slug,
+    name: family.name,
+    image: family.image,
+    imageAlt: family.imageAlt,
+    varieties: plants
+      .filter((plant) => plant.genre === family.slug)
+      .map((plant) => {
+        const visual = plant.gallery?.[0];
+        const image = visual?.src && !visual.src.includes("photo-reelle-a-venir") ? visual.src : family.image;
+        return { name: plant.displayName, botanicalName: plant.botanicalName, image, alt: visual?.alt || family.imageAlt };
+      }),
+  }));
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
-      { "@type": "CollectionPage", "@id": `${pageUrl}#page`, name: "Encyclopédie des plantes rares et d’intérieur", url: pageUrl, description: metadata.description, isPartOf: { "@id": "https://jungle.tibaldo.fr/#website" }, about: { "@id": "https://jungle.tibaldo.fr/#store" }, mainEntity: { "@id": `${pageUrl}#plants` }, inLanguage: "fr-FR" },
+      { "@type": "CollectionPage", "@id": `${pageUrl}#page`, name: "Encyclopédie des plantes d’intérieur et tropicales", url: pageUrl, description: metadata.description, isPartOf: { "@id": "https://jungle.tibaldo.fr/#website" }, about: { "@type": "Thing", name: "Plantes d’intérieur et tropicales" }, mainEntity: { "@id": `${pageUrl}#plants` }, inLanguage: "fr-FR" },
       { "@type": "ItemList", "@id": `${pageUrl}#plants`, name: "Fiches botaniques Tibaldo Jungle", numberOfItems: plants.length, itemListElement: plants.map((plant, index) => ({ "@type": "ListItem", position: index + 1, name: plant.botanicalName, url: `${pageUrl}/${plant.genre}/${plant.slug}` })) },
       { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Accueil", item: "https://jungle.tibaldo.fr/" }, { "@type": "ListItem", position: 2, name: "Plantes", item: pageUrl }] },
     ],
   };
   return (
-    <main className="editorial-page">
+    <main className="editorial-page plants-library-page">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <ScrollReveal />
       <section className="inner-hero compact-inner-hero">
@@ -45,7 +60,7 @@ export default function PlantsPage() {
         <div className="inner-hero-shade" />
         <SiteHeader />
         <div className="shell inner-hero-content">
-          <p className="eyebrow"><span /> Encyclopédie végétale · Lille</p>
+          <p className="eyebrow"><span /> Encyclopédie végétale</p>
           <h1>
             <span className="hero-line"><span>Comprendre</span></span>
             <span className="hero-line"><span><em>le vivant.</em></span></span>
@@ -54,25 +69,18 @@ export default function PlantsPage() {
         </div>
       </section>
 
-      <nav className="plant-explorer" aria-label="Explorer les plantes">
+      <nav className="plant-explorer plant-library-intro" aria-label="Explorer les plantes">
         <div className="shell plant-explorer-inner">
-          <div>
+          <div className="plant-universe-panel">
             <span>01 · Univers botaniques</span>
-            <div className="plant-explorer-links">
-              {plantFamilies.map((family) => (
-                <a href={`/plantes/${family.slug}`} key={family.slug}>{family.name}</a>
-              ))}
-            </div>
+            <PlantUniverseCards families={animatedFamilies} />
           </div>
-          <div>
+          <div className="plant-species-panel">
             <span>02 · Espèces & cultivars</span>
-            <div className="plant-explorer-links">
-              {plants.map((plant) => (
-                <a href={`/plantes/${plant.genre}/${plant.slug}`} key={`${plant.genre}-${plant.slug}`}>
-                  {plant.botanicalName}
-                </a>
-              ))}
-            </div>
+            <strong>{plants.length}</strong>
+            <h2>Fiches botaniques<br /><em>à explorer.</em></h2>
+            <p>Recherchez une plante par son nom, sa famille ou ses besoins, puis ouvrez sa fiche détaillée.</p>
+            <a href="#recherche-plantes">Accéder à la recherche <Arrow /></a>
           </div>
         </div>
       </nav>
@@ -108,6 +116,7 @@ export default function PlantsPage() {
         <div className="studio-collection-list">{studioCollection.map((group, index) => <article key={group.genre} data-reveal><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{group.href ? <a href={group.href}>{group.genre} <Arrow /></a> : group.genre}</h3><ul>{group.plants.map((plant) => <li key={plant}>{plant}</li>)}</ul></div></article>)}</div>
         <p className="studio-collection-note">Les mentions « à confirmer » seront remplacées après vérification de l’étiquette horticole ou du fournisseur.</p>
       </section>
+      <OpeningEventLink />
       <SiteFooter />
     </main>
   );

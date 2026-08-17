@@ -1,4 +1,5 @@
 "use client";
+
 import { useMemo, useState } from "react";
 
 const symptoms = [
@@ -11,10 +12,40 @@ const symptoms = [
 
 export default function SosPlantDiagnostic() {
   const [selected, setSelected] = useState(symptoms[0].id);
+  const [preview, setPreview] = useState<string | null>(null);
+  const [imageName, setImageName] = useState("");
+  const [context, setContext] = useState("Je ne sais pas");
+  const [analyzed, setAnalyzed] = useState(false);
   const current = useMemo(() => symptoms.find((item) => item.id === selected) ?? symptoms[0], [selected]);
   const subject = encodeURIComponent(`SOS Plante — ${current.label}`);
-  return <div className="sos-diagnostic" data-reveal>
-    <div className="sos-symptom-list" role="tablist" aria-label="Choisir un symptôme">{symptoms.map((item, index) => <button key={item.id} type="button" role="tab" aria-selected={selected === item.id} onClick={() => setSelected(item.id)}><span>0{index + 1}</span>{item.label}</button>)}</div>
-    <div className="sos-result" role="tabpanel"><p className="section-kicker">Première lecture</p><h2>{current.label}</h2><p>{current.result}</p><strong>Un diagnostic à distance reste indicatif : ne rempotez pas et ne traitez pas au hasard.</strong><a className="button button-green" href={`mailto:jungle@tibaldo.fr?subject=${subject}&body=Bonjour,%0A%0AVoici%20ma%20plante%20et%20son%20problème%20:%0A%0A`}>Envoyer mes photos ↗</a></div>
+
+  const loadImage = (file?: File) => {
+    if (!file) return;
+    setImageName(file.name);
+    setAnalyzed(false);
+    const reader = new FileReader();
+    reader.onload = () => setPreview(typeof reader.result === "string" ? reader.result : null);
+    reader.readAsDataURL(file);
+  };
+
+  return <div className="photo-diagnostic" data-reveal>
+    <header className="photo-diagnostic-heading"><p className="section-kicker">Assistant photo · version bêta</p><h2>Montrez-nous<br/><em>ce qui vous inquiète.</em></h2><p>Ajoutez une photo nette, choisissez le signe principal et précisez le contexte. Le résultat reste une première orientation, jamais un diagnostic certain.</p></header>
+    <div className="photo-diagnostic-grid">
+      <div className="photo-diagnostic-form">
+        <label className={`photo-dropzone${preview ? " has-image" : ""}`}>
+          <input type="file" accept="image/jpeg,image/png,image/webp,image/heic" onChange={(event) => loadImage(event.target.files?.[0])}/>
+          {preview ? <img src={preview} alt="Aperçu de la plante à diagnostiquer"/> : <span aria-hidden="true">＋</span>}
+          <strong>{preview ? "Changer la photo" : "Ajouter une photo"}</strong>
+          <small>{imageName || "JPG, PNG, WebP ou HEIC"}</small>
+        </label>
+        <fieldset><legend>Quel signe voyez-vous surtout ?</legend><div className="photo-symptoms">{symptoms.map((item) => <button className={selected === item.id ? "is-selected" : ""} key={item.id} type="button" onClick={() => { setSelected(item.id); setAnalyzed(false); }}>{item.label}</button>)}</div></fieldset>
+        <label className="photo-context"><span>Depuis quand ?</span><select value={context} onChange={(event) => {setContext(event.target.value);setAnalyzed(false);}}><option>Je ne sais pas</option><option>Depuis quelques jours</option><option>Depuis plusieurs semaines</option><option>Après un rempotage</option><option>Après un changement de place</option></select></label>
+        <button className="button button-green photo-analyze" type="button" disabled={!preview} onClick={() => setAnalyzed(true)}>{preview ? "Lancer le pré-diagnostic" : "Ajoutez d’abord une photo"}</button>
+      </div>
+      <div className={`sos-result${analyzed ? " is-ready" : ""}`} aria-live="polite">
+        <p className="section-kicker">Première lecture</p>
+        {analyzed ? <><h2>{current.label}</h2><p>{current.result}</p><dl><div><dt>Contexte indiqué</dt><dd>{context}</dd></div><div><dt>Niveau de confiance</dt><dd>Orientation prudente · à confirmer</dd></div></dl><strong>Une photo seule ne montre ni l’humidité au cœur du pot ni l’état complet des racines. Ne rempotez pas et ne traitez pas au hasard.</strong><a className="button button-green" href={`mailto:jungle@tibaldo.fr?subject=${subject}&body=Bonjour,%0A%0ASymptôme%20principal%20:%20${encodeURIComponent(current.label)}%0AContexte%20:%20${encodeURIComponent(context)}%0A%0AJe%20joins%20mes%20photos%20à%20ce%20message.%0A`}>Confirmer avec le Studio ↗</a></> : <div className="sos-result-placeholder"><span>01</span><h3>Votre pré-diagnostic apparaîtra ici.</h3><p>Choisissez une photo bien éclairée, sans filtre, avec une vue générale et si possible un détail du revers des feuilles.</p></div>}
+      </div>
+    </div>
   </div>;
 }

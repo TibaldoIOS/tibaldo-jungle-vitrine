@@ -35,7 +35,7 @@ export default function PlantExplorer({ plants }: { plants: readonly PlantEntry[
 
   const reset = () => { setQuery(""); setFamily(""); setGenus(""); setLight(""); setWatering(""); setDifficulty("5"); setTemperature(""); setHabit(""); setPetSafe(false); };
 
-  return <section className="plant-search shell" aria-labelledby="plant-search-title">
+  return <section className="plant-search shell" id="recherche-plantes" aria-labelledby="plant-search-title">
     <header data-reveal><p className="section-kicker">Trouver votre plante</p><h2 id="plant-search-title">Chercher par nom.<br /><em>Explorer par besoins.</em></h2><p>Combinez plusieurs critères pour découvrir les plantes adaptées à votre lumière, votre température et votre expérience.</p></header>
     <div className="plant-search-panel">
       <label className="plant-search-query"><span>Recherche intelligente</span><input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Monstera, deliciosa, Thai…" /></label>
@@ -54,6 +54,6 @@ export default function PlantExplorer({ plants }: { plants: readonly PlantEntry[
       </div>}
       <div className="plant-search-status"><strong>{results.length} {results.length > 1 ? "plantes trouvées" : "plante trouvée"}</strong><button type="button" onClick={reset}>Effacer les filtres</button></div>
     </div>
-    <div className="plant-search-results">{results.length ? results.map((plant) => <a href={`/plantes/${plant.genre}/${plant.slug}`} key={`${plant.genre}-${plant.slug}`}><img src={plant.gallery[0].src} alt={plant.gallery[0].alt} width={plant.gallery[0].width} height={plant.gallery[0].height} loading="lazy" /><div><span>{plant.taxonomy.family} · {plant.taxonomy.genus}</span><h3>{plant.botanicalName}</h3><p>{plant.subtitle}</p><ul><li>{"★".repeat(plant.care.difficulty)} difficulté</li><li>{plant.filters.light}</li><li>{plant.filters.temperatureMin} °C min.</li></ul></div></a>) : <div className="plant-search-empty"><h3>Aucune plante ne correspond encore.</h3><p>Élargissez un critère : l’encyclopédie s’enrichit progressivement.</p><button type="button" onClick={reset}>Réinitialiser</button></div>}</div>
+    <div className="plant-search-results">{results.length ? results.map((plant) => <a href={`/plantes/${plant.genre}/${plant.slug}`} key={`${plant.genre}-${plant.slug}`}><img src={plant.gallery[0].src} alt={plant.gallery[0].alt} width={plant.gallery[0].width} height={plant.gallery[0].height} loading="lazy" /><div><span>{plant.taxonomy.family} · {plant.taxonomy.genus}</span><h3>{plant.listingName ?? plant.botanicalName}</h3><p>{plant.subtitle}</p><ul><li>{"★".repeat(plant.care.difficulty)} difficulté</li><li>{plant.filters.light}</li><li>{plant.filters.temperatureMin} °C min.</li></ul></div></a>) : <div className="plant-search-empty"><h3>Aucune plante ne correspond encore.</h3><p>Élargissez un critère : l’encyclopédie s’enrichit progressivement.</p><button type="button" onClick={reset}>Réinitialiser</button></div>}</div>
   </section>;
 }
