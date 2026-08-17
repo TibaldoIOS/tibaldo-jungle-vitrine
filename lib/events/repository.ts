@@ -40,10 +40,14 @@ async function seedOpeningEvent() {
   if (!existing) {
     await db.insert(events).values(toRow(openingEvent));
   } else {
-    if (existing.seoTitle === "Que faire à Lille ce week-end ? Ouverture Tibaldo Jungle") {
+    if (
+      existing.seoTitle === "Que faire à Lille ce week-end ? Ouverture Tibaldo Jungle" ||
+      existing.seoKeywords.includes("que faire à Lille ce week-end")
+    ) {
       await db.update(events).set({
         seoTitle: openingEvent.seoTitle,
         seoDescription: openingEvent.seoDescription,
+        seoKeywords: openingEvent.seoKeywords.join(", "),
         updatedAt: new Date().toISOString(),
       }).where(eq(events.id, openingEvent.id));
     } else if (new Date(existing.updatedAt).getTime() < new Date(openingEvent.updatedAt).getTime()) {
