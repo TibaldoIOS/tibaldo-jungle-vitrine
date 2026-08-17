@@ -39,8 +39,16 @@ async function seedOpeningEvent() {
   const [existing] = await db.select().from(events).where(eq(events.id, openingEvent.id)).limit(1);
   if (!existing) {
     await db.insert(events).values(toRow(openingEvent));
-  } else if (new Date(existing.updatedAt).getTime() < new Date(openingEvent.updatedAt).getTime()) {
-    await db.update(events).set(toRow(openingEvent)).where(eq(events.id, openingEvent.id));
+  } else {
+    if (existing.seoTitle === "Que faire à Lille ce week-end ? Ouverture Tibaldo Jungle") {
+      await db.update(events).set({
+        seoTitle: openingEvent.seoTitle,
+        seoDescription: openingEvent.seoDescription,
+        updatedAt: new Date().toISOString(),
+      }).where(eq(events.id, openingEvent.id));
+    } else if (new Date(existing.updatedAt).getTime() < new Date(openingEvent.updatedAt).getTime()) {
+      await db.update(events).set(toRow(openingEvent)).where(eq(events.id, openingEvent.id));
+    }
   }
 }
 
