@@ -17,6 +17,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const event = await getPublicEvent(slug);
   if (!event) return {};
   const url = `/evenements/${event.slug}`;
+  const socialTitle = event.slug === "ouverture-tibaldo-jungle-lille"
+    ? "Que faire à Lille le 26 septembre 2026 ? Ouverture du Studio Végétal"
+    : event.seoTitle;
   return {
     title: event.seoTitle,
     description: event.seoDescription,
@@ -26,13 +29,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       locale: "fr_FR",
       url,
-      title: event.seoTitle,
+      title: socialTitle,
       description: event.seoDescription,
       images: [{ url: event.coverImage, alt: event.title }],
     },
     twitter: {
       card: "summary_large_image",
-      title: event.seoTitle,
+      title: socialTitle,
       description: event.seoDescription,
       images: [event.coverImage],
     },

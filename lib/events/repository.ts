@@ -41,10 +41,16 @@ async function seedOpeningEvent() {
     await db.insert(events).values(toRow(openingEvent));
   } else {
     if (
+      existing.title !== openingEvent.title ||
+      existing.excerpt !== openingEvent.excerpt ||
+      existing.description !== openingEvent.description ||
       existing.seoTitle === "Que faire à Lille ce week-end ? Ouverture Tibaldo Jungle" ||
       existing.seoKeywords.includes("que faire à Lille ce week-end")
     ) {
       await db.update(events).set({
+        title: openingEvent.title,
+        excerpt: openingEvent.excerpt,
+        description: openingEvent.description,
         seoTitle: openingEvent.seoTitle,
         seoDescription: openingEvent.seoDescription,
         seoKeywords: openingEvent.seoKeywords.join(", "),

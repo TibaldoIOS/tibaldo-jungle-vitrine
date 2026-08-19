@@ -111,6 +111,8 @@ test("renders the opening event with complete crawlable SEO data", async () => {
   const html = await response.text();
 
   assert.match(html, /<title>Ouverture du Studio Végétal à Lille — 26 septembre 2026<\/title>/i);
+  assert.match(html, /<meta(?=[^>]*property=["']og:title["'])(?=[^>]*content=["']Que faire à Lille le 26 septembre 2026 \? Ouverture du Studio Végétal["'])[^>]*>/i);
+  assert.match(html, /<meta(?=[^>]*name=["']twitter:title["'])(?=[^>]*content=["']Que faire à Lille le 26 septembre 2026 \? Ouverture du Studio Végétal["'])[^>]*>/i);
   assert.match(html, /<link(?=[^>]*rel=["']canonical["'])(?=[^>]*href=["']https:\/\/jungle\.tibaldo\.fr\/evenements\/ouverture-tibaldo-jungle-lille["'])[^>]*>/i);
   assert.match(html, /<h1>Ouverture du Studio Végétal – Tibaldo Jungle à Lille<\/h1>/i);
   assert.match(html, /"@type":"Event"/i);
