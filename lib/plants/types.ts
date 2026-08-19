@@ -37,6 +37,7 @@ export type PlantEntry = {
   comparisons: { name: string; difference: string }[];
   faq: { question: string; answer: string }[];
   tibaldoAdvice: string[];
+  localSpotlight?: { title: string; text: string };
   gallery: { src: string; alt: string; caption: string; width: number; height: number }[];
   seo: { title: string; description: string; keywords: string[] };
   sources: { label: string; url: string }[];

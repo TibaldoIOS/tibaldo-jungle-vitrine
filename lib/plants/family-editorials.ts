@@ -90,7 +90,7 @@ export const familyEditorials = {
     { title: "Le drainage comme priorité", text: "Un Yucca tolère mieux un léger manque d’eau qu’un mélange saturé. Le pot doit être percé et le substrat fortement drainant. Pour Yucca rostrata à Lille, l’humidité hivernale autour du cœur et des racines constitue un risque majeur malgré une bonne tolérance au froid sec." },
   ],
   cycas: [
-    { title: "Ni palmier, ni fougère", text: "Le Cycas appartient à une ancienne lignée de gymnospermes. Sa couronne de frondes rigides évoque un palmier, mais sa botanique et son rythme de croissance sont très différents. Cycas revoluta, originaire de Chine du Sud-Est, du Japon et de Taiwan, est l’espèce la plus couramment cultivée." },
+    { title: "Ni palmier, ni fougère", text: "Le Cycas appartient à une ancienne lignée de gymnospermes. Sa couronne de frondes rigides évoque un palmier, mais sa botanique et son rythme de croissance sont très différents. Cycas revoluta, originaire du sud-est de la Chine, du sud du Japon et de Taïwan, est l’espèce la plus couramment cultivée." },
     { title: "Soleil, lenteur et drainage", text: "Une lumière généreuse produit une couronne plus compacte. En pot, le mélange doit être très drainant et sécher partiellement entre les arrosages. À Lille, un sujet extérieur doit être acclimaté et protégé des longues périodes de froid humide, particulièrement autour du cœur et des racines." },
     { title: "Une plante toxique à manipuler avec prudence", text: "Toutes les parties du Cycas sont toxiques par ingestion, particulièrement les graines. La plante doit rester hors de portée des enfants et des animaux. Sa croissance lente impose aussi d’éviter les tailles inutiles : seules les frondes entièrement sèches sont retirées proprement." },
   ],
