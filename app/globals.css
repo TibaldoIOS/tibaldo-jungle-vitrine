@@ -1911,7 +1911,7 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
 
 /* Nomenclature botanique — binôme normalisé sans altérer le dessin des titres */
 .scientific-name{font:inherit;letter-spacing:inherit}.scientific-binomial{white-space:nowrap}.scientific-name i{font:inherit;font-style:italic}.scientific-suffix{font-style:normal}.plant-profile-hero .scientific-name-hero{display:block}.plant-profile-hero .scientific-genus{color:#fff}.plant-profile-hero .scientific-epithet,.plant-profile-hero .scientific-suffix{color:var(--sage)}
-@media(max-width:600px){.plant-profile-hero .scientific-binomial{white-space:normal}.plant-profile-hero h1{overflow-wrap:normal;word-break:normal}.plant-profile-hero .scientific-name-hero{max-width:100%}}
+@media(max-width:600px){.plant-profile-hero .scientific-binomial{white-space:normal}.plant-profile-hero h1{font-size:clamp(38px,11vw,58px);line-height:.9;overflow-wrap:anywhere;word-break:normal}.plant-profile-hero .scientific-name-hero,.plant-profile-hero .scientific-name-hero .scientific-suffix{display:block;max-width:100%}}
 
 /* Ouverture — la façade présente le Studio sur l'accueil */
 .opening{min-height:780px}.opening-photo{background-position:center 45%}.opening-overlay{background:linear-gradient(90deg,rgba(5,29,21,.97) 0%,rgba(5,29,21,.88) 39%,rgba(5,29,21,.35) 67%,rgba(5,29,21,.12)),linear-gradient(0deg,rgba(5,29,21,.55),transparent 55%)}

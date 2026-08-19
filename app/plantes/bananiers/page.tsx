@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { SiteFooter, SiteHeader } from "../../SiteChrome";
 import "./bananiers.css";
 
@@ -24,7 +23,7 @@ export default function BananiersPage() {
     { "@type": "ItemList", "@id": `${origin}/plantes/bananiers#list`, numberOfItems: cards.length, itemListElement: cards.map((card, index) => ({ "@type": "ListItem", position: index + 1, name: card.name, url: `${origin}${card.href}` })) },
     { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Accueil", item: origin }, { "@type": "ListItem", position: 2, name: "Plantes", item: `${origin}/plantes` }, { "@type": "ListItem", position: 3, name: "Bananiers", item: `${origin}/plantes/bananiers` }] },
   ] };
-  return <><Script id="bananiers-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+  return <><script id="bananiers-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     <section className="inner-hero compact-inner-hero banana-hero"><div className="inner-hero-shade" /><SiteHeader /><div className="shell inner-hero-content"><a className="family-genre-breadcrumb" href="/plantes">Encyclopédie · Tous les univers</a><p className="eyebrow"><span /> Univers horticole · Musaceae</p><h1><span className="hero-line"><span>Les</span></span><span className="hero-line"><span><em>bananiers.</em></span></span></h1><p>Musa et Ensete : des silhouettes proches, mais des racines, des rejets et des hivernages qui ne se conduisent pas de la même façon.</p></div></section>
     <main className="banana-main">
       <section className="shell banana-intro"><div><p className="section-kicker">Comprendre avant de cultiver</p><h2>Une allure tropicale.<br /><em>Plusieurs stratégies.</em></h2></div><div><p>Un bananier est une grande plante herbacée, pas un arbre. Son « tronc » est un pseudo-tronc formé par les gaines des feuilles. Sous terre, l’organisation varie : les Musa sont souvent rhizomateux et capables de rejeter, tandis que les Ensete restent normalement solitaires.</p><p>Cette différence commande la multiplication, la place nécessaire et l’hivernage. La rusticité ne se résume jamais à un chiffre : une feuille, un pseudo-tronc et un rhizome n’ont pas la même résistance, et l’humidité hivernale peut être aussi décisive que le froid.</p></div></section>

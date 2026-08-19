@@ -204,3 +204,44 @@ test("renders the Bananiers cluster and preserves its API identities", async () 
   assert.equal(florida.taxonomy.species, "Non déterminée");
   assert.equal(florida.cultivar, "Florida Variegata");
 });
+
+test("consolidates the V2 hierarchy without orphaning Anthurium or Bananiers", async () => {
+  const plantsPage = await (await render("/plantes")).text();
+  assert.match(plantsPage, /href=["']\/plantes\/bananiers["']/i);
+  assert.doesNotMatch(plantsPage, /class=["']plant-family-card["'][^>]+href=["']\/plantes\/(?:musa|ensete)["']/i);
+
+  const anthurium = await (await render("/plantes/anthurium")).text();
+  assert.match(anthurium, /href=["']\/plantes\/anthurium\/clarinervium["']/i);
+  assert.match(anthurium, /href=["']\/plantes\/anthurium\/warocqueanum["']/i);
+
+  const bananiers = await (await render("/plantes/bananiers")).text();
+  for (const path of ["/plantes/musa", "/plantes/ensete", "/plantes/musa/basjoo", "/plantes/musa/sikkimensis-red-tiger", "/plantes/musa/florida-variegata", "/plantes/ensete/ventricosum-maurelii"]) {
+    assert.match(bananiers, new RegExp(`href=["']${path.replaceAll("/", "\\/")}["']`, "i"), path);
+  }
+});
+
+test("serves complete SEO metadata for the nine V2 pages", async () => {
+  const paths = [
+    "/plantes/anthurium/clarinervium",
+    "/plantes/anthurium/warocqueanum",
+    "/plantes/bananiers",
+    "/plantes/musa",
+    "/plantes/ensete",
+    "/plantes/musa/basjoo",
+    "/plantes/musa/sikkimensis-red-tiger",
+    "/plantes/musa/florida-variegata",
+    "/plantes/ensete/ventricosum-maurelii",
+  ];
+  for (const path of paths) {
+    const response = await render(path);
+    assert.equal(response.status, 200, path);
+    const html = await response.text();
+    assert.match(html, /<title>[^<]+<\/title>/i, path);
+    assert.match(html, /<meta[^>]+name=["']description["'][^>]+content=["'][^"']+/i, path);
+    assert.match(html, /<meta[^>]+property=["']og:title["']/i, path);
+    assert.match(html, /<meta[^>]+property=["']og:image["']/i, path);
+    assert.match(html, /"@type":"BreadcrumbList"/i, path);
+    assert.match(html, /<link[^>]+rel=["']canonical["']/i, path);
+    assert.doesNotMatch(html, /noindex/i, path);
+  }
+});

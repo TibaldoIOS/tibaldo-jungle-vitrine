@@ -48,6 +48,7 @@ export default async function Page({ params }: Props) {
     "@graph": [
       { "@type": "Article", headline: `${guide.name} : guide de culture, espèces et variétés`, description: guide.lead, image: guide.image, author: { "@type": "Organization", name: "Studio Végétal – Tibaldo Jungle" }, publisher: { "@type": "Organization", name: "Studio Végétal – Tibaldo Jungle", alternateName: "Tibaldo Jungle", url: "https://jungle.tibaldo.fr" } },
       { "@type": "FAQPage", mainEntity: guide.faq.map((item) => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } })) },
+      { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Accueil", item: "https://jungle.tibaldo.fr/" }, { "@type": "ListItem", position: 2, name: "Plantes", item: "https://jungle.tibaldo.fr/plantes" }, { "@type": "ListItem", position: 3, name: guide.name, item: `https://jungle.tibaldo.fr/plantes/${genre}` }] },
     ],
   };
   return <main className="editorial-page"><ScrollReveal />

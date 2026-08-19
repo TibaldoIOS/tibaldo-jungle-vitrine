@@ -30,7 +30,8 @@ export const metadata: Metadata = {
 
 export default function PlantsPage() {
   const pageUrl = "https://jungle.tibaldo.fr/plantes";
-  const animatedFamilies = plantFamilies.map((family) => ({
+  const primaryPlantFamilies = plantFamilies.filter((family) => !["musa", "ensete"].includes(family.slug));
+  const animatedFamilies = primaryPlantFamilies.map((family) => ({
     slug: family.slug,
     name: family.name,
     image: family.image,
@@ -95,7 +96,7 @@ export default function PlantsPage() {
           <p>Chaque univers rassemble les espèces et variétés observées, cultivées ou présentées au Studio. L’encyclopédie s’enrichira progressivement.</p>
         </header>
         <div className="plant-family-list">
-          {plantFamilies.map((family, index) => (
+          {primaryPlantFamilies.map((family, index) => (
             <a className="plant-family-card" href={`/plantes/${family.slug}`} key={family.slug} data-reveal>
               <div className="plant-family-visual">
                 <img src={family.image} alt={family.imageAlt} width="900" height="1100" />
