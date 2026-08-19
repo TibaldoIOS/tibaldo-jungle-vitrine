@@ -1,3 +1,5 @@
+import { bananaGuides } from "./banana-guides";
+
 const simpleGuide = (name: string, botanicalName: string, lead: string, origin: string, imageAlt: string) => ({
   name,
   image: "/photo-reelle-a-venir.svg",
@@ -36,6 +38,7 @@ const simpleGuides = {
 
 export const familyGuides = {
   ...simpleGuides,
+  ...bananaGuides,
   alocasia: {
     name: "Alocasia",
     image: "/alocasia-cuprea-feuillage.jpg",

@@ -4,8 +4,12 @@ import { newArrivalPlants } from "./new-arrivals.ts";
 import { requestedPlants } from "./requested-plants.ts";
 import { afternoonPlants } from "./afternoon-plants.ts";
 import { encyclopediaV2Step1Plants } from "./encyclopedia-v2-step1.ts";
+import { encyclopediaV2Step2Plants } from "./encyclopedia-v2-step2.ts";
 
 export const plantFamilies = [
+  { slug: "bananiers", name: "Bananiers", eyebrow: "Nouvel univers", description: "Bananiers d’intérieur, de terrasse ou de pleine terre : découvrez les différences entre Musa et Ensete, leur croissance, leur hivernage et quatre identités documentées.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle d’un ensemble de Musa et Ensete à ajouter", available: true },
+  { slug: "musa", name: "Musa", eyebrow: "Genre documenté", description: "Le genre Musa rassemble des bananiers rhizomateux aux usages et résistances très différents. Trois fiches détaillent Basjoo, Red Tiger et Florida Variegata.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle de plusieurs Musa à ajouter", available: true },
+  { slug: "ensete", name: "Ensete", eyebrow: "Genre documenté", description: "Proches des Musa mais généralement solitaires, les Ensete forment de puissantes rosettes ornementales. Découvrez Ensete ventricosum Maurelii.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle d’un Ensete à ajouter", available: true },
   { slug: "alocasia", name: "Alocasia", eyebrow: "Collection ouverte", description: "Plantes tropicales architecturales aux feuilles spectaculaires, les Alocasia aiment la lumière vive, la chaleur et un substrat très aéré. Découvrez nos conseils de culture et les Alocasia rares observés au Studio Végétal Tibaldo Jungle à Lille.", image: "/alocasia-cuprea-feuillage.jpg", imageAlt: "Feuillage nervuré vert métallique d’un Alocasia cuprea", available: true },
   { slug: "anthurium", name: "Anthurium", eyebrow: "Guide disponible", description: "Des Anthurium d’intérieur fleuris aux espèces botaniques aux feuilles veloutées, ce genre révèle une diversité exceptionnelle. Notre guide détaille lumière, humidité, arrosage et substrat pour cultiver un Anthurium de collection à Lille.", image: "/anthurium-crystallinum-feuille.jpg", imageAlt: "Grande feuille veloutée et nervurée d’Anthurium crystallinum", available: true },
   { slug: "monstera", name: "Monstera", eyebrow: "Guide disponible", description: "Célèbres pour leurs feuilles découpées et leurs fenestrations, les Monstera deviennent de véritables plantes-sculptures lorsqu’ils peuvent grimper. Retrouvez les variétés classiques et rares, ainsi que nos conseils d’entretien adaptés aux intérieurs lillois.", image: "/monstera-deliciosa-feuilles.jpg", imageAlt: "Feuilles découpées et fenêtrées de Monstera deliciosa", available: true },
@@ -171,7 +175,7 @@ export const plants = [{
   seo: { title: "Pilea peperomioides : entretien et plante à monnaie Lille", description: "Guide du Pilea peperomioides : lumière, arrosage, rejets, substrat et problèmes. Retrouvez la plante à monnaie chinoise à Lille.", keywords: ["Pilea peperomioides entretien", "plante monnaie chinoise Lille", "Pilea Lille", "Pilea animaux", "bouture Pilea"] },
   sources: [{ label: "Kew Science", url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:855664-1/general-information" }, { label: "NC State Extension", url: "https://plants.ces.ncsu.edu/plants/pilea-peperomioides/" }, { label: "Plantes Pour Tous — fiche consultée", url: "https://plantespourtous.co/products/pilea-peperomioides" }],
   publishedAt: "2026-08-06", updatedAt: "2026-08-06",
-}, ...newArrivalPlants, ...requestedPlants, ...afternoonPlants, ...prayerPlants, ...encyclopediaV2Step1Plants] satisfies PlantEntry[];
+}, ...newArrivalPlants, ...requestedPlants, ...afternoonPlants, ...prayerPlants, ...encyclopediaV2Step1Plants, ...encyclopediaV2Step2Plants] satisfies PlantEntry[];
 
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
@@ -180,7 +184,7 @@ export const getPlantsByGenre = (genre: string) => plants.filter((plant) => plan
 export const studioCollection = [
   { genre: "Chlorophytum", href: "/plantes/chlorophytum", plants: ["Chlorophytum comosum"] },
   { genre: "Maranta", href: "/plantes/maranta", plants: ["Maranta leuconeura ‘Lemon Lime’"] },
-  { genre: "Bananiers", href: null, plants: ["Musa panaché · cultivar à confirmer", "Musa basjoo", "Musa sikkimensis ‘Red Tiger’", "Ensete ventricosum ‘Maurelii’"] },
+  { genre: "Bananiers", href: "/plantes/bananiers", plants: ["Musa ‘Florida Variegata’", "Musa basjoo", "Musa sikkimensis ‘Red Tiger’", "Ensete ventricosum ‘Maurelii’"] },
   { genre: "Anthurium", href: "/plantes/anthurium", plants: ["Anthurium ‘Delta Force’", "Anthurium veitchii", "Anthurium clarinervium", "Anthurium pallidiflorum", "Anthurium warocqueanum"] },
   { genre: "Philodendron", href: "/plantes/philodendron", plants: ["Philodendron billietiae", "Philodendron gloriosum", "Philodendron melanochrysum"] },
   { genre: "Epipremnum · Pothos", href: "/plantes/epipremnum", plants: ["Epipremnum aureum ‘Marble Queen’"] },

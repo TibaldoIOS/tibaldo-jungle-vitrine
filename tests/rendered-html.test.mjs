@@ -190,3 +190,17 @@ test("returns 404 for an unknown encyclopedia plant page", async () => {
   const response = await render("/plantes/inconnu/plante-inconnue");
   assert.equal(response.status, 404);
 });
+
+test("renders the Bananiers cluster and preserves its API identities", async () => {
+  for (const path of ["/plantes/bananiers", "/plantes/musa", "/plantes/ensete", "/plantes/musa/basjoo", "/plantes/musa/sikkimensis-red-tiger", "/plantes/musa/florida-variegata", "/plantes/ensete/ventricosum-maurelii"]) {
+    const response = await render(path);
+    assert.equal(response.status, 200, path);
+    const html = await response.text();
+    assert.match(html, /<h1/i, path);
+    assert.match(html, /canonical/i, path);
+  }
+  const entries = await (await render("/api/v2/encyclopedie/plantes")).json();
+  const florida = entries.find((entry) => entry.encyclopediaSlug === "plantes/musa/florida-variegata");
+  assert.equal(florida.taxonomy.species, "Non déterminée");
+  assert.equal(florida.cultivar, "Florida Variegata");
+});

@@ -59,3 +59,20 @@ test("tous les encyclopedia_slug restent uniques", () => {
   const slugs = plants.map(encyclopediaSlugOf);
   assert.equal(new Set(slugs).size, slugs.length);
 });
+
+test("l’étape 2 ajoute quatre identités Bananiers sans taille commerciale", () => {
+  const expected = [
+    ["musa", "basjoo", "Musa basjoo"],
+    ["musa", "sikkimensis-red-tiger", "Musa sikkimensis 'Red Tiger'"],
+    ["musa", "florida-variegata", "Musa 'Florida Variegata'"],
+    ["ensete", "ventricosum-maurelii", "Ensete ventricosum 'Maurelii'"],
+  ];
+  for (const [genre, slug, botanicalName] of expected) {
+    const entry = plants.find((plant) => plant.genre === genre && plant.slug === slug);
+    assert.equal(entry?.botanicalName, botanicalName);
+    assert.equal(encyclopediaSlugOf(entry!), `plantes/${genre}/${slug}`);
+  }
+  const florida = plants.find((plant) => plant.slug === "florida-variegata");
+  assert.equal(florida?.taxonomy.species, "Non déterminée");
+  assert.equal(florida?.taxonomy.cultivar, "Florida Variegata");
+});
