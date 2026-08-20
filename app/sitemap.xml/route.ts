@@ -17,6 +17,7 @@ export async function GET() {
   try { publicEvents = await listPublicEvents(); } catch { /* Published fallbacks keep the sitemap available. */ }
   const entries: Entry[] = [
     ...Object.entries(editorialLastModified).map(([path, modified]) => ({ path, modified })),
+    { path: "/plantes/bananiers", modified: lastModifiedDefaults.taxonomy },
     ...canonicalGuideSlugs.map((slug) => ({ path: `/conseils/${slug}`, modified: lastModifiedDefaults.guides })),
     ...featuredFlowerSlugs.map((slug) => ({ path: `/fleurs/${slug}`, modified: lastModifiedDefaults.flowers })),
     ...featuredSubstrateSlugs.map((slug) => ({ path: `/substrats/${slug}`, modified: lastModifiedDefaults.substrates })),

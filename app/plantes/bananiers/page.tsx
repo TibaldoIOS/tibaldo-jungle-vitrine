@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   description: "Guide des bananiers : différences entre Musa et Ensete, culture en pot ou pleine terre, eau, substrat, vent, froid et hivernage dans le Nord.",
   alternates: { canonical: "/plantes/bananiers" },
   openGraph: { type: "article", locale: "fr_FR", url: "/plantes/bananiers", title: "Bananiers : comprendre Musa et Ensete", description: "Culture, entretien, rusticité et comparaison de quatre bananiers documentés par Jungle.", images: [{ url: "/photo-reelle-a-venir.svg", width: 1200, height: 1500, alt: "Photographie réelle d’un ensemble de Musa et Ensete à ajouter" }] },
+  twitter: { card: "summary_large_image", title: "Bananiers : comprendre Musa et Ensete", description: "Culture, entretien, rusticité et comparaison de quatre bananiers documentés par Jungle.", images: ["/photo-reelle-a-venir.svg"] },
 };
 
 export default function BananiersPage() {
