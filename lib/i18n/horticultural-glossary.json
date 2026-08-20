@@ -12,7 +12,7 @@
   "lumière indirecte": { "en": "indirect light", "es": "luz indirecta" },
   "soleil direct": { "en": "direct sunlight", "es": "sol directo" },
   "humidité ambiante": { "en": "ambient humidity", "es": "humedad ambiental" },
-  "hivernage": { "en": "overwintering", "es": "invernada" },
+  "hivernage": { "en": "overwintering", "es": "protección invernal" },
   "dormance": { "en": "dormancy", "es": "dormancia" },
   "fertilisation": { "en": "fertilising", "es": "fertilización" },
   "engrais": { "en": "fertiliser", "es": "fertilizante" },
@@ -37,5 +37,16 @@
   "aération": { "en": "aeration", "es": "aireación" },
   "granulométrie": { "en": "particle size", "es": "granulometría" },
   "mélange minéral": { "en": "mineral growing medium", "es": "sustrato mineral" },
-  "semi-hydroponie": { "en": "semi-hydroponics", "es": "semihidroponía" }
+  "semi-hydroponie": { "en": "semi-hydroponics", "es": "semihidroponía" },
+  "agave": { "en": "agave", "es": "agave" },
+  "rosette": { "en": "rosette", "es": "roseta" },
+  "panachure": { "en": "variegation", "es": "variegación" },
+  "panachure sectorielle": { "en": "sectoral variegation", "es": "variegación sectorial" },
+  "épine": { "en": "spine", "es": "espina" },
+  "rejets": { "en": "offsets", "es": "hijuelos" },
+  "oiseau de paradis": { "en": "bird of paradise", "es": "ave del paraíso" },
+  "pétiole": { "en": "petiole", "es": "pecíolo" },
+  "limbe": { "en": "leaf blade", "es": "limbo foliar" },
+  "inflorescence": { "en": "inflorescence", "es": "inflorescencia" },
+  "rusticité": { "en": "hardiness", "es": "rusticidad" }
 }
