@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-08-20",
+  "paths": [
+    { "path": "/substrats", "kind": "substrate-hub", "decision": "include", "intent": "editorial-collection-with-local-context" },
+    { "path": "/substrats/terreau-signature", "kind": "substrate-profile", "decision": "include", "intent": "editorial-component-with-local-context" },
+    { "path": "/substrats/ecorce-de-pin", "kind": "substrate-profile", "decision": "include", "intent": "editorial-component-with-local-context" },
+    { "path": "/substrats/chips-coco", "kind": "substrate-profile", "decision": "include", "intent": "editorial-component-with-local-context" },
+    { "path": "/substrats/perlite", "kind": "substrate-profile", "decision": "include", "intent": "editorial-component-with-local-context" },
+    { "path": "/substrats/sphaigne-sechee", "kind": "substrate-profile", "decision": "include", "intent": "editorial-component-with-local-context" },
+    { "path": "/substrats/charbon-actif", "kind": "substrate-profile", "decision": "include", "intent": "editorial-component-with-local-context" },
+    { "path": "/substrats/billes-argile", "kind": "substrate-profile", "decision": "include", "intent": "editorial-component-with-local-context" },
+    { "path": "/substrats/vermiculite", "kind": "substrate-profile", "decision": "include", "intent": "editorial-component-with-local-context" },
+    { "path": "/substrats/zeolite", "kind": "substrate-profile", "decision": "include", "intent": "editorial-component-with-local-context" }
+  ],
+  "excluded": [
+    { "path": "/substrats-en-vrac-lille", "reason": "achat local et vente en vrac" },
+    { "path": "/rempotage", "reason": "service commercial distinct" },
+    { "path": "/rempotage-plantes-lille", "reason": "service local Lille" },
+    { "path": "/pots-cache-pots-lille", "reason": "page commerciale locale" }
+  ]
+}

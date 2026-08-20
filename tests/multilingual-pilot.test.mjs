@@ -63,8 +63,8 @@ test("exposes a beta-only multilingual sitemap with all published URLs", async (
   assert.equal(response.status, 200);
   assert.equal(response.headers.get("x-robots-tag"), "noindex");
   const xml = await response.text();
-  assert.equal((xml.match(/<url>/g) ?? []).length, 249);
-  assert.equal((xml.match(/hreflang="x-default"/g) ?? []).length, 249);
+  assert.equal((xml.match(/<url>/g) ?? []).length, 279);
+  assert.equal((xml.match(/hreflang="x-default"/g) ?? []).length, 279);
   for (const path of paths) for (const locale of ["fr", "en", "es"]) assert.match(xml, new RegExp(`<loc>${origin.replaceAll("/", "\\/")}${localized(path, locale).replaceAll("/", "\\/")}<\\/loc>`));
 });
 

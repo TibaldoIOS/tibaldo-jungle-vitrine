@@ -1,0 +1,195 @@
+{
+  "generatedAt": "2026-08-20",
+  "pages": {
+    "/substrats": {
+      "kind": "substrate-hub",
+      "sourceVersion": "fr-wave3-2026-08-20.1",
+      "sourceFingerprint": "780b22ac7741600dac6bc6a431b80ef3907cdcc59c68fd741cfb9b149b282134",
+      "translations": {
+        "en": {
+          "version": "en-wave3-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "780b22ac7741600dac6bc6a431b80ef3907cdcc59c68fd741cfb9b149b282134"
+        },
+        "es": {
+          "version": "es-wave3-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "780b22ac7741600dac6bc6a431b80ef3907cdcc59c68fd741cfb9b149b282134"
+        }
+      }
+    },
+    "/substrats/terreau-signature": {
+      "kind": "substrate-profile",
+      "sourceVersion": "fr-wave3-2026-08-20.1",
+      "sourceFingerprint": "190eb8c39f7f966c21920c48920f676df4b8c7ae9ac4483c1b98dd25ef59c376",
+      "translations": {
+        "en": {
+          "version": "en-wave3-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "190eb8c39f7f966c21920c48920f676df4b8c7ae9ac4483c1b98dd25ef59c376"
+        },
+        "es": {
+          "version": "es-wave3-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "190eb8c39f7f966c21920c48920f676df4b8c7ae9ac4483c1b98dd25ef59c376"
+        }
+      }
+    },
+    "/substrats/ecorce-de-pin": {
+      "kind": "substrate-profile",
+      "sourceVersion": "fr-wave3-2026-08-20.1",
+      "sourceFingerprint": "ddaee87597e6986abf9d5058573bce536178580ec8346bf3b19516d5da291f78",
+      "translations": {
+        "en": {
+          "version": "en-wave3-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "ddaee87597e6986abf9d5058573bce536178580ec8346bf3b19516d5da291f78"
+        },
+        "es": {
+          "version": "es-wave3-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "ddaee87597e6986abf9d5058573bce536178580ec8346bf3b19516d5da291f78"
+        }
+      }
+    },
+    "/substrats/chips-coco": {
+      "kind": "substrate-profile",
+      "sourceVersion": "fr-wave3-2026-08-20.1",
+      "sourceFingerprint": "5812ec2cde6106d9b4604464957d9c2a96e6b7f0c49a2fee59e5e8d1665b0f6c",
+      "translations": {
+        "en": {
+          "version": "en-wave3-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "5812ec2cde6106d9b4604464957d9c2a96e6b7f0c49a2fee59e5e8d1665b0f6c"
+        },
+        "es": {
+          "version": "es-wave3-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "5812ec2cde6106d9b4604464957d9c2a96e6b7f0c49a2fee59e5e8d1665b0f6c"
+        }
+      }
+    },
+    "/substrats/perlite": {
+      "kind": "substrate-profile",
+      "sourceVersion": "fr-wave3-2026-08-20.1",
+      "sourceFingerprint": "f520edd9c36db21fcf37966ae245533d364f51ba9428ee5d9b71a45afc538f19",
+      "translations": {
+        "en": {
+          "version": "en-wave3-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "f520edd9c36db21fcf37966ae245533d364f51ba9428ee5d9b71a45afc538f19"
+        },
+        "es": {
+          "version": "es-wave3-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "f520edd9c36db21fcf37966ae245533d364f51ba9428ee5d9b71a45afc538f19"
+        }
+      }
+    },
+    "/substrats/sphaigne-sechee": {
+      "kind": "substrate-profile",
+      "sourceVersion": "fr-wave3-2026-08-20.1",
+      "sourceFingerprint": "2779389aea393dc47da513b84a683ecadc1edabfd59a7e133b35c3256c3179f7",
+      "translations": {
+        "en": {
+          "version": "en-wave3-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "2779389aea393dc47da513b84a683ecadc1edabfd59a7e133b35c3256c3179f7"
+        },
+        "es": {
+          "version": "es-wave3-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "2779389aea393dc47da513b84a683ecadc1edabfd59a7e133b35c3256c3179f7"
+        }
+      }
+    },
+    "/substrats/charbon-actif": {
+      "kind": "substrate-profile",
+      "sourceVersion": "fr-wave3-2026-08-20.1",
+      "sourceFingerprint": "1f07218cb940a2956d53d734e3ec52a7837b346ec0f30d062373569e23d365ed",
+      "translations": {
+        "en": {
+          "version": "en-wave3-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "1f07218cb940a2956d53d734e3ec52a7837b346ec0f30d062373569e23d365ed"
+        },
+        "es": {
+          "version": "es-wave3-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "1f07218cb940a2956d53d734e3ec52a7837b346ec0f30d062373569e23d365ed"
+        }
+      }
+    },
+    "/substrats/billes-argile": {
+      "kind": "substrate-profile",
+      "sourceVersion": "fr-wave3-2026-08-20.1",
+      "sourceFingerprint": "fc8ff86078381785918d7c07bc0cbe57e4eae2265fe31d0121ffbf5a5204406c",
+      "translations": {
+        "en": {
+          "version": "en-wave3-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "fc8ff86078381785918d7c07bc0cbe57e4eae2265fe31d0121ffbf5a5204406c"
+        },
+        "es": {
+          "version": "es-wave3-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "fc8ff86078381785918d7c07bc0cbe57e4eae2265fe31d0121ffbf5a5204406c"
+        }
+      }
+    },
+    "/substrats/vermiculite": {
+      "kind": "substrate-profile",
+      "sourceVersion": "fr-wave3-2026-08-20.1",
+      "sourceFingerprint": "9e377cb04be18775bf29ee643f4ea98891085880bb4d016e9cd261031ec76f8d",
+      "translations": {
+        "en": {
+          "version": "en-wave3-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "9e377cb04be18775bf29ee643f4ea98891085880bb4d016e9cd261031ec76f8d"
+        },
+        "es": {
+          "version": "es-wave3-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "9e377cb04be18775bf29ee643f4ea98891085880bb4d016e9cd261031ec76f8d"
+        }
+      }
+    },
+    "/substrats/zeolite": {
+      "kind": "substrate-profile",
+      "sourceVersion": "fr-wave3-2026-08-20.1",
+      "sourceFingerprint": "a7914b1ab3a82e73ac2205e58c0b0cdf2be3d1ec066d9d8a7d98fd64a3bf4924",
+      "translations": {
+        "en": {
+          "version": "en-wave3-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "a7914b1ab3a82e73ac2205e58c0b0cdf2be3d1ec066d9d8a7d98fd64a3bf4924"
+        },
+        "es": {
+          "version": "es-wave3-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "a7914b1ab3a82e73ac2205e58c0b0cdf2be3d1ec066d9d8a7d98fd64a3bf4924"
+        }
+      }
+    }
+  }
+}

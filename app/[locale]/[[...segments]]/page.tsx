@@ -9,6 +9,8 @@ import { getWave1Family, getWave1Genre, getWave1Plant, wave1KindOf } from "@/lib
 import Wave1BotanicalPage from "./Wave1BotanicalPage";
 import { isWave2Path, getWave2Guide, wave2Ui } from "@/lib/i18n/wave2";
 import Wave2GuidePage from "./Wave2GuidePage";
+import { isWave3Path, getWave3Profile, getWave3Ui } from "@/lib/i18n/wave3";
+import Wave3SubstratePage from "./Wave3SubstratePage";
 
 type Props = { params: Promise<{ locale: string; segments?: string[] }> };
 const origin = "https://jungle.tibaldo.fr";
@@ -32,6 +34,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const plant = getWave1Plant(page.path, page.locale);
   const genre = getWave1Genre(page.path, page.locale);
   const family = getWave1Family(page.path, page.locale);
+  if (isWave3Path(page.path)) {
+    const profile = getWave3Profile(page.path, page.locale);
+    const ui = getWave3Ui(page.locale);
+    const title = profile ? `${profile.title} ${profile.accent} | Tibaldo Jungle` : ui.hubTitle;
+    const description = profile?.seoDescription ?? ui.hubDescription;
+    const sourceImage = profile ? "/advice-rempotage.jpg" : "/substrats-horticoles-vrac-tibaldo-jungle-lille.jpg";
+    return { title, description, alternates: { canonical, languages: { fr: page.path, en: localizedPath(page.path, "en"), es: localizedPath(page.path, "es"), "x-default": page.path } }, openGraph: { type: profile ? "article" : "website", locale: openGraphLocales[page.locale], alternateLocale: page.locale === "en" ? ["fr_FR", "es_ES"] : ["fr_FR", "en_GB"], url: canonical, siteName: "Studio Végétal — Tibaldo Jungle", title, description, images: [{ url: sourceImage, alt: profile?.shortName ?? ui.hubTitle }] }, twitter: { card: "summary_large_image", title, description, images: [sourceImage] } };
+  }
   if (isWave2Path(page.path) && !isPilotPath(page.path)) {
     const guide = getWave2Guide(page.path, page.locale);
     const ui = wave2Ui[page.locale];
@@ -75,6 +85,7 @@ export default async function LocalizedPilotPage({ params }: Props) {
   const page = resolve(await params);
   if (!page) notFound();
   const { locale, path } = page;
+  if (isWave3Path(path)) return <Wave3SubstratePage path={path} locale={locale}/>;
   if (isWave2Path(path) && !isPilotPath(path)) return <Wave2GuidePage path={path} locale={locale}/>;
   if (wave1KindOf(path) && path !== "/plantes" && path !== "/plantes/bananiers") return <Wave1BotanicalPage path={path} locale={locale} />;
   const content = page.content;
