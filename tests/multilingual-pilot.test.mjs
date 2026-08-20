@@ -1,14 +1,15 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 const origin = "https://jungle.tibaldo.fr";
 const paths = ["/", "/plantes", "/plantes/cycas/revoluta", "/plantes/anthurium/clarinervium", "/plantes/monstera/thai-constellation", "/plantes/bananiers", "/conseils/arroser-plantes-interieur"];
 
-async function render(pathname = "/") {
+async function render(pathname = "/", hostname = "localhost") {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}-${Math.random()}`);
   const { default: worker } = await import(workerUrl.href);
-  return worker.fetch(new Request(`http://localhost${pathname}`, { headers: { accept: "text/html" } }), { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } }, { waitUntil() {}, passThroughOnException() {} });
+  return worker.fetch(new Request(`https://${hostname}${pathname}`, { headers: { accept: "text/html" } }), { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } }, { waitUntil() {}, passThroughOnException() {} });
 }
 
 function localized(path, locale) { return locale === "fr" ? path : `/${locale}${path === "/" ? "" : path}`; }
@@ -74,3 +75,23 @@ test("does not change the locale-neutral encyclopedia API identities", async () 
   for (const expected of ["plantes/cycas/revoluta", "plantes/anthurium/clarinervium", "plantes/monstera/thai-constellation"]) assert.equal(entries.filter((entry) => entry.encyclopediaSlug === expected).length, 1, expected);
 });
 
+test("keeps every non-production preview out of search engines", async () => {
+  const beta = await render("/en/plantes/cycas/revoluta", "pilot.example.test");
+  assert.equal(beta.headers.get("x-robots-tag"), "noindex, nofollow, noarchive");
+  const production = await render("/en/plantes/cycas/revoluta", "jungle.tibaldo.fr");
+  assert.equal(production.headers.get("x-robots-tag"), null);
+});
+
+test("tracks source and translation versions for every pilot page", async () => {
+  const manifest = JSON.parse(await readFile(new URL("../lib/i18n/editorial-status.json", import.meta.url), "utf8"));
+  assert.deepEqual(Object.keys(manifest.pages), paths);
+  for (const [path, page] of Object.entries(manifest.pages)) {
+    assert.match(page.sourceVersion, /^fr-/i, path);
+    assert.match(page.sourceFingerprint, /^[a-f0-9]{64}$/, path);
+    assert.ok(page.sourceFiles.length > 0, path);
+    for (const locale of ["en", "es"]) {
+      assert.equal(page.translations[locale].status, "published", `${path} ${locale}`);
+      assert.equal(page.translations[locale].translatedFromFingerprint, page.sourceFingerprint, `${path} ${locale}`);
+    }
+  }
+});
