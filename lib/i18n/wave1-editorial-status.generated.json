@@ -99,19 +99,19 @@
     "/plantes/cycas": {
       "kind": "genre",
       "sourceVersion": "fr-wave1-2026-08-20.1",
-      "sourceFingerprint": "35a2e3f78a0ba4c4594bc29701531e4ac953330e3664afb211f9a5d2484e16ac",
+      "sourceFingerprint": "5ca9d66c94f3c8b11b0d7fe205d1a4f00c097f7dadb5ac6cf29d899a21c48902",
       "translations": {
         "en": {
           "version": "en-wave1-2026-08-20.1",
           "status": "published",
           "parity": "validated",
-          "translatedFromFingerprint": "35a2e3f78a0ba4c4594bc29701531e4ac953330e3664afb211f9a5d2484e16ac"
+          "translatedFromFingerprint": "5ca9d66c94f3c8b11b0d7fe205d1a4f00c097f7dadb5ac6cf29d899a21c48902"
         },
         "es": {
           "version": "es-wave1-2026-08-20.1",
           "status": "published",
           "parity": "validated",
-          "translatedFromFingerprint": "35a2e3f78a0ba4c4594bc29701531e4ac953330e3664afb211f9a5d2484e16ac"
+          "translatedFromFingerprint": "5ca9d66c94f3c8b11b0d7fe205d1a4f00c097f7dadb5ac6cf29d899a21c48902"
         }
       }
     },
@@ -1087,19 +1087,19 @@
     "/plantes/cycas/revoluta": {
       "kind": "identity",
       "sourceVersion": "fr-wave1-2026-08-20.1",
-      "sourceFingerprint": "c49ce022fcd5be7cf7e11b2ed430356e63d091448cc6e588c18834b4f8958f35",
+      "sourceFingerprint": "6af6ccbfb8effe4fbbdd3dc44544df39c5f5eca847d8b03c293043bc56139f8b",
       "translations": {
         "en": {
           "version": "en-wave1-2026-08-20.1",
           "status": "published",
           "parity": "validated",
-          "translatedFromFingerprint": "c49ce022fcd5be7cf7e11b2ed430356e63d091448cc6e588c18834b4f8958f35"
+          "translatedFromFingerprint": "6af6ccbfb8effe4fbbdd3dc44544df39c5f5eca847d8b03c293043bc56139f8b"
         },
         "es": {
           "version": "es-wave1-2026-08-20.1",
           "status": "published",
           "parity": "validated",
-          "translatedFromFingerprint": "c49ce022fcd5be7cf7e11b2ed430356e63d091448cc6e588c18834b4f8958f35"
+          "translatedFromFingerprint": "6af6ccbfb8effe4fbbdd3dc44544df39c5f5eca847d8b03c293043bc56139f8b"
         }
       }
     },

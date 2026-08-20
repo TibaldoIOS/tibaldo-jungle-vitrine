@@ -14,25 +14,25 @@
       }
     },
     "/plantes": {
-      "sourceVersion": "fr-2026-08-20.1",
+      "sourceVersion": "fr-2026-08-20.2",
       "sourceUpdatedAt": "2026-08-20",
       "sourceFiles": ["app/plantes/page.tsx", "lib/plants/catalog.ts"],
-      "sourceFingerprint": "f437b8f62ff82201a941aa756cdde68a62697e98973461461dc02e35bf4ef064",
+      "sourceFingerprint": "07a5d6ea7b11099a665e823ea0ad736bbcb5dbbadc04a248264a2bcbdb1f1b7d",
       "parity": { "en": "validated", "es": "validated" },
       "translations": {
-        "en": { "version": "en-2026-08-20.2", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "f437b8f62ff82201a941aa756cdde68a62697e98973461461dc02e35bf4ef064" },
-        "es": { "version": "es-2026-08-20.2", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "f437b8f62ff82201a941aa756cdde68a62697e98973461461dc02e35bf4ef064" }
+        "en": { "version": "en-2026-08-20.3", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "07a5d6ea7b11099a665e823ea0ad736bbcb5dbbadc04a248264a2bcbdb1f1b7d" },
+        "es": { "version": "es-2026-08-20.3", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "07a5d6ea7b11099a665e823ea0ad736bbcb5dbbadc04a248264a2bcbdb1f1b7d" }
       }
     },
     "/plantes/cycas/revoluta": {
-      "sourceVersion": "fr-2026-08-20.1",
+      "sourceVersion": "fr-2026-08-20.2",
       "sourceUpdatedAt": "2026-08-20",
-      "sourceFiles": ["app/plantes/[genre]/[slug]/page.tsx", "lib/plants/afternoon-plants.ts"],
-      "sourceFingerprint": "f00933f27fa7359e830f0a69b6158946fce6cd94198c9a07b7a0a044c2c8c131",
+      "sourceFiles": ["app/plantes/[genre]/[slug]/page.tsx", "lib/plants/cycas-revoluta.ts"],
+      "sourceFingerprint": "2483680dbb5a65289cbd3cc124ba22a85e86a68527b03f4d8be3da6765c1cc3b",
       "parity": { "en": "validated", "es": "validated" },
       "translations": {
-        "en": { "version": "en-2026-08-20.2", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "f00933f27fa7359e830f0a69b6158946fce6cd94198c9a07b7a0a044c2c8c131" },
-        "es": { "version": "es-2026-08-20.2", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "f00933f27fa7359e830f0a69b6158946fce6cd94198c9a07b7a0a044c2c8c131" }
+        "en": { "version": "en-2026-08-20.3", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "2483680dbb5a65289cbd3cc124ba22a85e86a68527b03f4d8be3da6765c1cc3b" },
+        "es": { "version": "es-2026-08-20.3", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "2483680dbb5a65289cbd3cc124ba22a85e86a68527b03f4d8be3da6765c1cc3b" }
       }
     },
     "/plantes/anthurium/clarinervium": {
