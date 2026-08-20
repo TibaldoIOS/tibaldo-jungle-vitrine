@@ -4,7 +4,7 @@ import { SiteHeader } from "../../SiteChrome";
 import ScrollReveal from "../../ScrollReveal";
 import { isPilotPath, isTranslatedLocale, languageTags, localizedPath, openGraphLocales, pilotPaths, type PilotPath, type TranslatedLocale } from "@/lib/i18n/config";
 import { pilotTranslations } from "@/lib/i18n/pilot-content";
-import { getPlant } from "@/lib/plants/catalog";
+import { getPlant, plants as plantEntries } from "@/lib/plants/catalog";
 
 type Props = { params: Promise<{ locale: string; segments?: string[] }> };
 const origin = "https://jungle.tibaldo.fr";
@@ -60,7 +60,7 @@ export default async function LocalizedPilotPage({ params }: Props) {
   const breadcrumbItems = content.breadcrumbs.map((name, index) => ({ "@type": "ListItem", position: index + 1, name, item: index === content.breadcrumbs.length - 1 ? url : `${origin}${localizedPath(index === 0 ? "/" : "/plantes", locale)}` }));
   const structuredData = { "@context": "https://schema.org", "@graph": [
     { "@type": content.kind === "plant" || content.kind === "guide" ? "Article" : "CollectionPage", "@id": `${url}#page`, url, headline: content.title, name: content.title, description: content.description, inLanguage: languageTags[locale], image: `${origin}${image}`, mainEntityOfPage: url, about: plant ? { "@type": "Thing", name: plant.botanicalName, alternateName: plant.synonyms } : undefined, author: { "@id": `${origin}/#organization` }, publisher: { "@id": `${origin}/#organization` } },
-    { "@type": "FAQPage", "@id": `${url}#faq`, inLanguage: languageTags[locale], mainEntity: content.faq.map((item) => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } })) },
+    ...(content.faq.length ? [{ "@type": "FAQPage", "@id": `${url}#faq`, inLanguage: languageTags[locale], mainEntity: content.faq.map((item) => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } })) }] : []),
     { "@type": "BreadcrumbList", "@id": `${url}#breadcrumbs`, itemListElement: breadcrumbItems },
   ] };
   const home = localizedPath("/", locale);
@@ -75,8 +75,9 @@ export default async function LocalizedPilotPage({ params }: Props) {
     <nav className="pilot-breadcrumbs shell" aria-label="Breadcrumb"><ol>{content.breadcrumbs.map((item, index) => <li key={`${item}-${index}`}>{index < content.breadcrumbs.length - 1 ? <a href={index === 0 ? home : plants}>{item}</a> : <span aria-current="page">{item}</span>}</li>)}</ol></nav>
     <nav className="pilot-localized-nav shell" aria-label={labels.menu}><span>{labels.pilot}</span><a href={home}>{labels.home}</a><a href={plants}>{labels.plants}</a><a href={guide}>{labels.guide}</a></nav>
     <PlantFacts path={path} locale={locale} />
-    <article className="shell pilot-localized-article"><aside><span>{labels.sections}</span>{content.sections.map((section, index) => <a key={section.title} href={`#section-${index + 1}`}>{String(index + 1).padStart(2, "0")} · {section.title}</a>)}</aside><div>{content.sections.map((section, index) => <section id={`section-${index + 1}`} key={section.title} data-reveal><span>{String(index + 1).padStart(2, "0")}</span><h2>{section.title}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}</div></article>
-    <section className="shell pilot-localized-faq"><header><p className="section-kicker">FAQ</p><h2>{labels.faq}</h2></header><div>{content.faq.map((item) => <details key={item.question}><summary>{item.question}<span aria-hidden="true">+</span></summary><p>{item.answer}</p></details>)}</div></section>
+    {path === "/plantes" && <section className="shell pilot-published-identities" aria-labelledby="pilot-identities-title"><p className="section-kicker">{locale === "en" ? "Published botanical identities" : "Identidades botánicas publicadas"}</p><h2 id="pilot-identities-title">{plantEntries.length} {locale === "en" ? "profiles in the French source catalog" : "fichas en el catálogo fuente francés"}</h2><ul>{plantEntries.map((entry) => <li key={`${entry.genre}-${entry.slug}`}>{entry.botanicalName}</li>)}</ul></section>}
+    <article className="shell pilot-localized-article"><aside><span>{labels.sections}</span>{content.sections.map((section, index) => { const id = "id" in section ? section.id : `section-${index + 1}`; return <a key={section.title} href={`#${id}`}>{String(index + 1).padStart(2, "0")} · {section.title}</a>; })}</aside><div>{content.sections.map((section, index) => { const id = "id" in section ? section.id : `section-${index + 1}`; return <section id={id} data-parity-section={id} key={section.title} data-reveal><span>{String(index + 1).padStart(2, "0")}</span><h2>{section.title}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>; })}</div></article>
+    {content.faq.length > 0 && <section className="shell pilot-localized-faq"><header><p className="section-kicker">FAQ</p><h2>{labels.faq}</h2></header><div>{content.faq.map((item) => <details key={item.question}><summary>{item.question}<span aria-hidden="true">+</span></summary><p>{item.answer}</p></details>)}</div></section>}
     <section className="pilot-localized-cta"><div className="shell"><span>{labels.published}</span><h2>{content.cta}</h2><a className="button button-light" href={path === "/plantes" ? localizedPath("/plantes/cycas/revoluta", locale) : plants}>{content.cta} ↗</a></div></section>
     <LocalizedFooter locale={locale} />
   </main>;

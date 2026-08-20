@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "pages": {
+    "/": { "requiredSections": ["opening-event", "three-universes", "essential-services", "studio-lille", "expertise", "practical-information"], "faqCount": 0, "breadcrumbCount": 1 },
+    "/plantes": { "requiredSections": ["botanical-universes", "search-and-filters", "plant-sos", "genus-index", "studio-collection", "opening-event"], "faqCount": 0, "breadcrumbCount": 2 },
+    "/plantes/cycas/revoluta": { "requiredSections": ["botanical-identity", "care", "toxicity", "problems", "gallery", "studio-advice", "sources"], "faqCount": 5, "breadcrumbCount": 4 },
+    "/plantes/anthurium/clarinervium": { "requiredSections": ["botanical-identity", "care", "toxicity", "problems", "comparisons", "gallery", "studio-advice", "sources"], "faqCount": 6, "breadcrumbCount": 4 },
+    "/plantes/monstera/thai-constellation": { "requiredSections": ["botanical-identity", "care", "toxicity", "problems", "comparisons", "gallery", "studio-advice", "sources"], "faqCount": 6, "breadcrumbCount": 4 },
+    "/plantes/bananiers": { "requiredSections": ["botanical-foundations", "genera", "lille-north", "fundamentals", "four-taxa"], "faqCount": 0, "breadcrumbCount": 3 },
+    "/conseils/arroser-plantes-interieur": { "requiredSections": ["check-substrate", "water-thoroughly", "adapt-seasons", "studio-help"], "faqCount": 0, "breadcrumbCount": 3 }
+  }
+}

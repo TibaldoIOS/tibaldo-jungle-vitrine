@@ -33,15 +33,15 @@ test("localizes SEO, visible copy, FAQ, breadcrumbs and structured data", async 
   const english = await (await render("/en/plantes/cycas/revoluta")).text();
   assert.match(english, /Cycas revoluta: care, light and watering/i);
   assert.match(english, /Botanical identity/i);
-  assert.match(english, /Is Cycas revoluta a palm\?/i);
+  assert.match(english, /What light does Cycas revoluta need\?/i);
   assert.match(english, /BreadcrumbList/);
   assert.match(english, /"inLanguage":"en-GB"/);
   assert.match(english, /alt="Cycas revoluta with a crown/i);
 
   const spanish = await (await render("/es/plantes/monstera/thai-constellation")).text();
   assert.match(spanish, /guía completa de cuidados/i);
-  assert.match(spanish, /Un cultivar, una identidad/i);
-  assert.match(spanish, /¿La variegación Thai Constellation es estable\?/i);
+  assert.match(spanish, /Identidad botánica y crecimiento/i);
+  assert.match(spanish, /¿Qué luz necesita Monstera deliciosa/i);
   assert.match(spanish, /"inLanguage":"es-ES"/);
   assert.match(spanish, /Hoja crema variegada/i);
 });
@@ -91,7 +91,55 @@ test("tracks source and translation versions for every pilot page", async () => 
     assert.ok(page.sourceFiles.length > 0, path);
     for (const locale of ["en", "es"]) {
       assert.equal(page.translations[locale].status, "published", `${path} ${locale}`);
+      assert.equal(page.parity[locale], "validated", `${path} ${locale} parity`);
       assert.equal(page.translations[locale].translatedFromFingerprint, page.sourceFingerprint, `${path} ${locale}`);
+    }
+  }
+});
+
+test("enforces section and FAQ parity before a translation can be published", async () => {
+  const parity = JSON.parse(await readFile(new URL("../lib/i18n/editorial-parity.json", import.meta.url), "utf8"));
+  const status = JSON.parse(await readFile(new URL("../lib/i18n/editorial-status.json", import.meta.url), "utf8"));
+  for (const [path, contract] of Object.entries(parity.pages)) {
+    for (const locale of ["en", "es"]) {
+      const route = localized(path, locale);
+      const response = await render(route);
+      assert.equal(response.status, 200, route);
+      const html = await response.text();
+      const sectionIds = [...html.matchAll(/data-parity-section="([^"]+)"/g)].map((match) => match[1]);
+      assert.deepEqual(sectionIds, contract.requiredSections, `${route} sections`);
+      const pageDetails = Math.max(0, (html.match(/<details/g) ?? []).length - 1);
+      assert.equal(pageDetails, contract.faqCount, `${route} FAQ`);
+      assert.equal((html.match(/class="pilot-breadcrumbs/g) ?? []).length, 1, `${route} breadcrumbs`);
+      const breadcrumbHtml = html.match(/<nav class="pilot-breadcrumbs[^>]*>([\s\S]*?)<\/nav>/)?.[1] ?? "";
+      assert.equal((breadcrumbHtml.match(/<li/g) ?? []).length, contract.breadcrumbCount, `${route} breadcrumb items`);
+      assert.match(html, /<img[^>]+alt="[^"]+"/i, `${route} ALT`);
+      assert.match(html, /rel="canonical"/i, `${route} canonical`);
+      assert.match(html, /application\/ld\+json/i, `${route} JSON-LD`);
+      assert.equal(status.pages[path].translations[locale].status, "published", `${route} status`);
+      assert.equal(status.pages[path].parity[locale], "validated", `${route} parity status`);
+      if (contract.faqCount === 0) assert.doesNotMatch(html, /"@type":"FAQPage"/, `${route} JSON-LD FAQ`);
+      else assert.match(html, /"@type":"FAQPage"/, `${route} JSON-LD FAQ`);
+    }
+  }
+});
+
+test("keeps the complete Cycas editorial units and Lille context in EN and ES", async () => {
+  const expectations = {
+    en: [/seeds/i, /children and animals/i, /drainage holes/i, /Repotting/i, /Propagation/i, /Lille/i],
+    es: [/semillas/i, /niños y animales/i, /recipiente con agujeros/i, /Trasplante/i, /Multiplicación/i, /Lille/i],
+  };
+  for (const locale of ["en", "es"]) {
+    const html = await (await render(`/${locale}/plantes/cycas/revoluta`)).text();
+    for (const expected of expectations[locale]) assert.match(html, expected, `${locale} ${expected}`);
+  }
+});
+
+test("preserves every botanical identity in the translated plant collection", async () => {
+  for (const locale of ["en", "es"]) {
+    const html = await (await render(`/${locale}/plantes`)).text();
+    for (const identity of ["Cycas revoluta", "Anthurium clarinervium", "Monstera deliciosa ‘Thai Constellation’", "Musa basjoo", "Ensete ventricosum &#x27;Maurelii&#x27;"]) {
+      assert.match(html, new RegExp(identity.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")), `${locale} ${identity}`);
     }
   }
 });
