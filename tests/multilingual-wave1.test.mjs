@@ -78,3 +78,19 @@ test("projects the complete multilingual beta sitemap without touching productio
 test("fails closed outside the published multilingual perimeter", async () => {
   for (const route of ["/en/plantes/inconnu", "/es/plantes/famille/inconnue", "/en/substrats", "/es/services"]) assert.equal((await render(route)).status, 404, route);
 });
+
+test("publishes the current Jungle Cycas source with complete EN and ES media parity", async () => {
+  const expectedMedia = [
+    "/images/cycas-revoluta/cycas-revoluta-terrasse-tibaldo.webp",
+    "/images/cycas-revoluta/cycas-revoluta-port-couronne.webp",
+    "/images/cycas-revoluta/cycas-revoluta-pot-noir-exterieur.webp",
+    "/images/cycas-revoluta/cycas-revoluta-pot-bleu-frondes.webp",
+  ];
+  for (const locale of ["en", "es"]) {
+    const html = await (await render(`/${locale}/plantes/cycas/revoluta`)).text();
+    for (const media of expectedMedia) assert.match(html, new RegExp(media.replaceAll("/", "\\/")), `${locale} ${media}`);
+    assert.match(html, /15[^<]{0,20}27\s?°C/i, `${locale} temperatures`);
+    assert.match(html, locale === "en" ? /All parts are toxic; the seeds are particularly dangerous/i : /Todas las partes son tóxicas; las semillas son especialmente peligrosas/i);
+    assert.equal((html.match(/<img[^>]+cycas-revoluta[^>]+alt="[^"]+"/gi) ?? []).length >= 4, true, `${locale} ALT`);
+  }
+});

@@ -31,9 +31,9 @@ test("publishes exactly seven reciprocal FR/EN/ES pilot families", async () => {
 
 test("localizes SEO, visible copy, FAQ, breadcrumbs and structured data", async () => {
   const english = await (await render("/en/plantes/cycas/revoluta")).text();
-  assert.match(english, /Cycas revoluta: (?:care|maintenance) and (?:advice|watering)/i);
+  assert.match(english, /Cycas revoluta: (?:care|maintenance)(?:,| and) (?:advice|watering|hardiness)/i);
   assert.match(english, /Botanical identity/i);
-  assert.match(english, /What light (?:does|for) Cycas revoluta/i);
+  assert.match(english, /How hardy is Cycas revoluta\?/i);
   assert.match(english, /BreadcrumbList/);
   assert.match(english, /"inLanguage":"en-GB"/);
   assert.match(english, /alt="[^"]*Cycas revoluta/i);
@@ -128,7 +128,7 @@ test("enforces section and FAQ parity before a translation can be published", as
 test("keeps the complete Cycas editorial units and Lille context in EN and ES", async () => {
   const expectations = {
     en: [/seeds/i, /drainage holes/i, /Repotting/i, /Propagation/i, /Lille/i],
-    es: [/semillas/i, /agujeros/i, /Trasplante/i, /Multiplicación/i, /Lille/i],
+    es: [/semillas/i, /(?:agujeros|perforad[ao])/i, /Trasplante/i, /Multiplicación/i, /Lille/i],
   };
   for (const locale of ["en", "es"]) {
     const html = await (await render(`/${locale}/plantes/cycas/revoluta`)).text();
