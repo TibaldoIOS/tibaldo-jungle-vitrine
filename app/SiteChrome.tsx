@@ -7,6 +7,11 @@ const FacebookIcon = () => <svg viewBox="0 0 24 24" aria-hidden="true"><path d="
 
 export function SiteHeader({ light = false, locale = "fr", currentPath = "/" }: { light?: boolean; locale?: Locale; currentPath?: string }) {
   const translated = locale !== "fr";
+  const chrome = locale === "en"
+    ? { navigation: "Main navigation", shop: "Shop", openMenu: "Open main menu", mobileNavigation: "Mobile navigation", follow: "Follow Tibaldo Jungle", socials: "Tibaldo Jungle social media", logoAlt: "Tibaldo Jungle Plant Studio in Lille" }
+    : locale === "es"
+      ? { navigation: "Navegación principal", shop: "Tienda", openMenu: "Abrir el menú principal", mobileNavigation: "Navegación móvil", follow: "Seguir a Tibaldo Jungle", socials: "Redes sociales Tibaldo Jungle", logoAlt: "Estudio Vegetal Tibaldo Jungle en Lille" }
+      : { navigation: "Navigation principale", shop: "Boutique", openMenu: "Ouvrir le menu principal", mobileNavigation: "Navigation mobile", follow: "Suivre la Jungle", socials: "Réseaux sociaux Tibaldo Jungle", logoAlt: "Studio Végétal Tibaldo Jungle à Lille" };
   const nav = locale === "en"
     ? [{ href: localizedPath("/plantes", locale), label: "Plants" }, { href: localizedPath("/conseils/arroser-plantes-interieur", locale), label: "Watering guide" }]
     : locale === "es"
@@ -16,7 +21,7 @@ export function SiteHeader({ light = false, locale = "fr", currentPath = "/" }: 
   return (
     <header className={`site-header shell${light ? " site-header-light" : ""}`}>
       <a className="brand" href={home} aria-label={locale === "en" ? "Tibaldo Jungle Plant Studio, home" : locale === "es" ? "Estudio Vegetal Tibaldo Jungle, inicio" : "Studio Végétal Tibaldo Jungle, accueil"}>
-        <img className="brand-logo" src="/tibaldo-jungle-logo.webp" alt="Studio Végétal Tibaldo Jungle à Lille" width={72} height={72} />
+        <img className="brand-logo" src="/tibaldo-jungle-logo.webp" alt={chrome.logoAlt} width={72} height={72} />
         <span className="brand-wordmark">
           <strong><span>STUDIO VÉGÉTAL</span></strong>
           <small>Tibaldo Jungle</small>
@@ -24,14 +29,14 @@ export function SiteHeader({ light = false, locale = "fr", currentPath = "/" }: 
         </span>
       </a>
 
-      <nav className="desktop-nav" aria-label="Navigation principale">
+      <nav className="desktop-nav" aria-label={chrome.navigation}>
         {nav.map((item) => <a href={item.href} key={item.href}>{item.label}</a>)}
-        <a className="nav-shop" href="https://shop.tibaldo.fr">Boutique ↗</a>
+        <a className="nav-shop" href="https://shop.tibaldo.fr">{chrome.shop} ↗</a>
       </nav>
 
       <details className="mobile-menu">
-        <summary aria-label="Ouvrir le menu principal"><span className="menu-glyph" aria-hidden="true"><i /><i /></span><b>Menu</b></summary>
-        <div className="mobile-menu-panel" aria-label="Navigation mobile">
+        <summary aria-label={chrome.openMenu}><span className="menu-glyph" aria-hidden="true"><i /><i /></span><b>Menu</b></summary>
+        <div className="mobile-menu-panel" aria-label={chrome.mobileNavigation}>
           {translated ? <><a href={home}><span>01</span>{locale === "en" ? "Home" : "Inicio"}</a><a href={localizedPath("/plantes", locale)}><span>02</span>{locale === "en" ? "Plants" : "Plantas"}</a><a href={localizedPath("/conseils/arroser-plantes-interieur", locale)}><span>03</span>{locale === "en" ? "Watering guide" : "Guía de riego"}</a><a href="https://shop.tibaldo.fr"><span>04</span>Shop</a></> : <>
           <a href="/"><span>01</span>Accueil</a>
           <a href="/plantes"><span>02</span>Plantes</a>
@@ -48,7 +53,7 @@ export function SiteHeader({ light = false, locale = "fr", currentPath = "/" }: 
           <a href="/contact"><span>13</span>Contact</a>
           </>}
           <div className="mobile-menu-socials">
-            <span>Suivre la Jungle</span>
+            <span>{chrome.follow}</span>
             <a href="https://www.instagram.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Instagram Tibaldo Jungle"><InstagramIcon /><strong>Instagram</strong></a>
             <a href="https://www.facebook.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Facebook Tibaldo Jungle"><FacebookIcon /><strong>Facebook</strong></a>
           </div>
@@ -57,7 +62,7 @@ export function SiteHeader({ light = false, locale = "fr", currentPath = "/" }: 
 
       <div className="header-actions">
         <LanguageSwitcher initialPath={localizedPath(currentPath, locale)} />
-        <div className="header-socials" aria-label="Réseaux sociaux Tibaldo Jungle">
+        <div className="header-socials" aria-label={chrome.socials}>
           <a href="https://www.instagram.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Instagram Tibaldo Jungle"><InstagramIcon /></a>
           <a href="https://www.facebook.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Facebook Tibaldo Jungle"><FacebookIcon /></a>
         </div>

@@ -1,0 +1,1316 @@
+{
+  "generatedAt": "2026-08-20",
+  "pages": {
+    "/plantes": {
+      "kind": "hub",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "031e8bd7a13184a244854e74d6ae7c2f688422e780c789ef7a25294545b8d3a4",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "031e8bd7a13184a244854e74d6ae7c2f688422e780c789ef7a25294545b8d3a4"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "031e8bd7a13184a244854e74d6ae7c2f688422e780c789ef7a25294545b8d3a4"
+        }
+      }
+    },
+    "/plantes/bananiers": {
+      "kind": "group",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "80729cb128372b5c56ad8805a47163a4db988e7f4bfdbaca2737371036981341",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "80729cb128372b5c56ad8805a47163a4db988e7f4bfdbaca2737371036981341"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "80729cb128372b5c56ad8805a47163a4db988e7f4bfdbaca2737371036981341"
+        }
+      }
+    },
+    "/plantes/aloe": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "50a84611e440ba4a3ad9b64d76a6677508cc4e659fdba9738f082db44981846d",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "50a84611e440ba4a3ad9b64d76a6677508cc4e659fdba9738f082db44981846d"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "50a84611e440ba4a3ad9b64d76a6677508cc4e659fdba9738f082db44981846d"
+        }
+      }
+    },
+    "/plantes/chlorophytum": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "e78aa1a41c904b0852dc3e47d792f1ae45d9417df734fe8f8726298530bd5e32",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "e78aa1a41c904b0852dc3e47d792f1ae45d9417df734fe8f8726298530bd5e32"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "e78aa1a41c904b0852dc3e47d792f1ae45d9417df734fe8f8726298530bd5e32"
+        }
+      }
+    },
+    "/plantes/yucca": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "2a0e9bfc39ce28026c5080f78b22bb72256f834f68c377ef648d51ba9fdd8575",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "2a0e9bfc39ce28026c5080f78b22bb72256f834f68c377ef648d51ba9fdd8575"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "2a0e9bfc39ce28026c5080f78b22bb72256f834f68c377ef648d51ba9fdd8575"
+        }
+      }
+    },
+    "/plantes/cycas": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "35a2e3f78a0ba4c4594bc29701531e4ac953330e3664afb211f9a5d2484e16ac",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "35a2e3f78a0ba4c4594bc29701531e4ac953330e3664afb211f9a5d2484e16ac"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "35a2e3f78a0ba4c4594bc29701531e4ac953330e3664afb211f9a5d2484e16ac"
+        }
+      }
+    },
+    "/plantes/plumeria": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "1cc959b860fe7608e9303df42e97ba501f7d48660d7b72db3ec8d79164c0417e",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "1cc959b860fe7608e9303df42e97ba501f7d48660d7b72db3ec8d79164c0417e"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "1cc959b860fe7608e9303df42e97ba501f7d48660d7b72db3ec8d79164c0417e"
+        }
+      }
+    },
+    "/plantes/equisetum": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "b865b2d7fa510bf58214a1b5a36a5dd5bb44e66cfc8f262f64ce3492c0ed995a",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "b865b2d7fa510bf58214a1b5a36a5dd5bb44e66cfc8f262f64ce3492c0ed995a"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "b865b2d7fa510bf58214a1b5a36a5dd5bb44e66cfc8f262f64ce3492c0ed995a"
+        }
+      }
+    },
+    "/plantes/ficus": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "96e4b46b7556c0039e1399dfee25a3b376456902d83094de1eba63e3768257d2",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "96e4b46b7556c0039e1399dfee25a3b376456902d83094de1eba63e3768257d2"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "96e4b46b7556c0039e1399dfee25a3b376456902d83094de1eba63e3768257d2"
+        }
+      }
+    },
+    "/plantes/syngonium": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "9e2c45b5855979ff22b6f119318fbae3f4dc6c7335d97a4d41649ea1391c77fb",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "9e2c45b5855979ff22b6f119318fbae3f4dc6c7335d97a4d41649ea1391c77fb"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "9e2c45b5855979ff22b6f119318fbae3f4dc6c7335d97a4d41649ea1391c77fb"
+        }
+      }
+    },
+    "/plantes/hoya": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "d7e9b516cbe4d149272e867b8e1945fb7eb974a2cace118a14e3bf99086ab694",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "d7e9b516cbe4d149272e867b8e1945fb7eb974a2cace118a14e3bf99086ab694"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "d7e9b516cbe4d149272e867b8e1945fb7eb974a2cace118a14e3bf99086ab694"
+        }
+      }
+    },
+    "/plantes/sansevieria": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "e47a00d8955fbfa06f6b4c00b7da3c96c519ad553ee6d5b6ce024d70a624e0f0",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "e47a00d8955fbfa06f6b4c00b7da3c96c519ad553ee6d5b6ce024d70a624e0f0"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "e47a00d8955fbfa06f6b4c00b7da3c96c519ad553ee6d5b6ce024d70a624e0f0"
+        }
+      }
+    },
+    "/plantes/fougeres": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "362bfb29182324887c1918f58cdfba94c7645c6480e74560c71f7c5f6ccc3b32",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "362bfb29182324887c1918f58cdfba94c7645c6480e74560c71f7c5f6ccc3b32"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "362bfb29182324887c1918f58cdfba94c7645c6480e74560c71f7c5f6ccc3b32"
+        }
+      }
+    },
+    "/plantes/musa": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "eedc05ca87971ff78deebe5fa1820fa768e064bc13cc19db5e50ccf90c72ce95",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "eedc05ca87971ff78deebe5fa1820fa768e064bc13cc19db5e50ccf90c72ce95"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "eedc05ca87971ff78deebe5fa1820fa768e064bc13cc19db5e50ccf90c72ce95"
+        }
+      }
+    },
+    "/plantes/ensete": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "19b2151c33c5eec01316937dd8c82ac79ec6d864e8700265726df5584417262e",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "19b2151c33c5eec01316937dd8c82ac79ec6d864e8700265726df5584417262e"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "19b2151c33c5eec01316937dd8c82ac79ec6d864e8700265726df5584417262e"
+        }
+      }
+    },
+    "/plantes/alocasia": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "372258b3096be29b72155f06efa3ce6a393768d94e025f07eba5b016f8244fab",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "372258b3096be29b72155f06efa3ce6a393768d94e025f07eba5b016f8244fab"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "372258b3096be29b72155f06efa3ce6a393768d94e025f07eba5b016f8244fab"
+        }
+      }
+    },
+    "/plantes/anthurium": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "b273ed85170282c985d64ace7a033785b4c621df368a61a8ddf7e31ce853f991",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "b273ed85170282c985d64ace7a033785b4c621df368a61a8ddf7e31ce853f991"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "b273ed85170282c985d64ace7a033785b4c621df368a61a8ddf7e31ce853f991"
+        }
+      }
+    },
+    "/plantes/monstera": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "41355a50ac4122dbf7cb9a12fab8fc55dfc809d3a4d98ffe66eccb326dfd0311",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "41355a50ac4122dbf7cb9a12fab8fc55dfc809d3a4d98ffe66eccb326dfd0311"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "41355a50ac4122dbf7cb9a12fab8fc55dfc809d3a4d98ffe66eccb326dfd0311"
+        }
+      }
+    },
+    "/plantes/philodendron": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "8a4049cee392ab476f0dcea0718d8c20faed1b56c020d9d278e98a8002df8520",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "8a4049cee392ab476f0dcea0718d8c20faed1b56c020d9d278e98a8002df8520"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "8a4049cee392ab476f0dcea0718d8c20faed1b56c020d9d278e98a8002df8520"
+        }
+      }
+    },
+    "/plantes/epipremnum": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "85930345c340afca84115e0c167de1536806d090bd5b372b80d474260f86616d",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "85930345c340afca84115e0c167de1536806d090bd5b372b80d474260f86616d"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "85930345c340afca84115e0c167de1536806d090bd5b372b80d474260f86616d"
+        }
+      }
+    },
+    "/plantes/asparagus": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "3d52b60111f56c5cf2d2938f6670927f2a4850027eb04c7741046b019f4500d6",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "3d52b60111f56c5cf2d2938f6670927f2a4850027eb04c7741046b019f4500d6"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "3d52b60111f56c5cf2d2938f6670927f2a4850027eb04c7741046b019f4500d6"
+        }
+      }
+    },
+    "/plantes/colocasia": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "e2ec7d91d8dbbbfe307934670fbd3c1641aa7166b1a0faa08f8aa9c30a99d5f9",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "e2ec7d91d8dbbbfe307934670fbd3c1641aa7166b1a0faa08f8aa9c30a99d5f9"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "e2ec7d91d8dbbbfe307934670fbd3c1641aa7166b1a0faa08f8aa9c30a99d5f9"
+        }
+      }
+    },
+    "/plantes/pilea": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "f9f8791db0974fede8b71526d9f6babd90dd4041bb16da20d2380bc7c367aef1",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "f9f8791db0974fede8b71526d9f6babd90dd4041bb16da20d2380bc7c367aef1"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "f9f8791db0974fede8b71526d9f6babd90dd4041bb16da20d2380bc7c367aef1"
+        }
+      }
+    },
+    "/plantes/peperomia": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "154502f03b38fd05fda0a7f1773290809c5286fc2cc4a1a636f360294c613d4c",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "154502f03b38fd05fda0a7f1773290809c5286fc2cc4a1a636f360294c613d4c"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "154502f03b38fd05fda0a7f1773290809c5286fc2cc4a1a636f360294c613d4c"
+        }
+      }
+    },
+    "/plantes/maranta": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "0e8480fc5edffcabedd51e55e13be26611e2a2b9085c3e36cef00ef9d2f3028c",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "0e8480fc5edffcabedd51e55e13be26611e2a2b9085c3e36cef00ef9d2f3028c"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "0e8480fc5edffcabedd51e55e13be26611e2a2b9085c3e36cef00ef9d2f3028c"
+        }
+      }
+    },
+    "/plantes/calathea": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "8565de64d9c8f228728d6dd08eb89de83fa988a8a8def98bc9aa8581168edeba",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "8565de64d9c8f228728d6dd08eb89de83fa988a8a8def98bc9aa8581168edeba"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "8565de64d9c8f228728d6dd08eb89de83fa988a8a8def98bc9aa8581168edeba"
+        }
+      }
+    },
+    "/plantes/cactus": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "72e0cc3d854621a8a21fc47bba046229be5f0d5ca8e8337d6b7a0d70c12cf74c",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "72e0cc3d854621a8a21fc47bba046229be5f0d5ca8e8337d6b7a0d70c12cf74c"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "72e0cc3d854621a8a21fc47bba046229be5f0d5ca8e8337d6b7a0d70c12cf74c"
+        }
+      }
+    },
+    "/plantes/epiphyllum": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "8dc0d9c89684a7a084666bf0052f61318d573150272578fde6447e814eb3418b",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "8dc0d9c89684a7a084666bf0052f61318d573150272578fde6447e814eb3418b"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "8dc0d9c89684a7a084666bf0052f61318d573150272578fde6447e814eb3418b"
+        }
+      }
+    },
+    "/plantes/famille/araceae": {
+      "kind": "family",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "45b775d39f714c613f30e7f02a7a94accb78b03db1dcb019ad60cb12f56029e0",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "45b775d39f714c613f30e7f02a7a94accb78b03db1dcb019ad60cb12f56029e0"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "45b775d39f714c613f30e7f02a7a94accb78b03db1dcb019ad60cb12f56029e0"
+        }
+      }
+    },
+    "/plantes/famille/asparagaceae": {
+      "kind": "family",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "e0ee974c491c12cc6fa38d32d214a3cf6817e7cdefeaeb4648a9ebe6a6a9700e",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "e0ee974c491c12cc6fa38d32d214a3cf6817e7cdefeaeb4648a9ebe6a6a9700e"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "e0ee974c491c12cc6fa38d32d214a3cf6817e7cdefeaeb4648a9ebe6a6a9700e"
+        }
+      }
+    },
+    "/plantes/famille/musaceae": {
+      "kind": "family",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "5c6b45c30013b0366882f3e103cfbe227ea4673d82278fc790e3379fadd99639",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "5c6b45c30013b0366882f3e103cfbe227ea4673d82278fc790e3379fadd99639"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "5c6b45c30013b0366882f3e103cfbe227ea4673d82278fc790e3379fadd99639"
+        }
+      }
+    },
+    "/plantes/alocasia/imperial-red": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "9c24f00113855d57c6ca6801506f3e565f59f2d9052d980113bd91a9d4c86ab5",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "9c24f00113855d57c6ca6801506f3e565f59f2d9052d980113bd91a9d4c86ab5"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "9c24f00113855d57c6ca6801506f3e565f59f2d9052d980113bd91a9d4c86ab5"
+        }
+      }
+    },
+    "/plantes/anthurium/pallidiflorum": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "260fd9fb02a344da4ece86a665bab2919a0ed4ee54f08eedd08a9f3459d88357",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "260fd9fb02a344da4ece86a665bab2919a0ed4ee54f08eedd08a9f3459d88357"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "260fd9fb02a344da4ece86a665bab2919a0ed4ee54f08eedd08a9f3459d88357"
+        }
+      }
+    },
+    "/plantes/anthurium/veitchii": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "7b29a15483eb7640ffb88479fc736358bf0f64013a8f11e845176afeb3257c3b",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "7b29a15483eb7640ffb88479fc736358bf0f64013a8f11e845176afeb3257c3b"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "7b29a15483eb7640ffb88479fc736358bf0f64013a8f11e845176afeb3257c3b"
+        }
+      }
+    },
+    "/plantes/philodendron/billietiae": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "e7f72e623957d1d3cc9d37c3c5df3e4b1683649bf11050a3d2ec9a714d8ffda4",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "e7f72e623957d1d3cc9d37c3c5df3e4b1683649bf11050a3d2ec9a714d8ffda4"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "e7f72e623957d1d3cc9d37c3c5df3e4b1683649bf11050a3d2ec9a714d8ffda4"
+        }
+      }
+    },
+    "/plantes/pilea/peperomioides": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "321c5f7eb66a166d4f4339c0c674266f098365390c6f643905ed936fc3dbde12",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "321c5f7eb66a166d4f4339c0c674266f098365390c6f643905ed936fc3dbde12"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "321c5f7eb66a166d4f4339c0c674266f098365390c6f643905ed936fc3dbde12"
+        }
+      }
+    },
+    "/plantes/asparagus/plumosus": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "8fff5791788d30bd6a1efd4da64218c32abf9e341a393e51f957937b005da196",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "8fff5791788d30bd6a1efd4da64218c32abf9e341a393e51f957937b005da196"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "8fff5791788d30bd6a1efd4da64218c32abf9e341a393e51f957937b005da196"
+        }
+      }
+    },
+    "/plantes/epipremnum/marble-queen": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "d974116a63d0b8e2e450b01cf31c9e75469625cac4c406f420e3b1de01a8cb87",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "d974116a63d0b8e2e450b01cf31c9e75469625cac4c406f420e3b1de01a8cb87"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "d974116a63d0b8e2e450b01cf31c9e75469625cac4c406f420e3b1de01a8cb87"
+        }
+      }
+    },
+    "/plantes/epiphyllum/anguliger": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "5e36cea0d935606e85453afce206f06da5883af2251fd24a453bdb15cc8fc399",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "5e36cea0d935606e85453afce206f06da5883af2251fd24a453bdb15cc8fc399"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "5e36cea0d935606e85453afce206f06da5883af2251fd24a453bdb15cc8fc399"
+        }
+      }
+    },
+    "/plantes/monstera/deliciosa": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "73f490ef2b9536d3a134949e77638b8a208670e4288816033f34350319d1fe07",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "73f490ef2b9536d3a134949e77638b8a208670e4288816033f34350319d1fe07"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "73f490ef2b9536d3a134949e77638b8a208670e4288816033f34350319d1fe07"
+        }
+      }
+    },
+    "/plantes/monstera/thai-constellation": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "7c2b9e525f24bf9e06af8258f9fd76e70d5fd0a41a318c2fb5a6beb4bf5ecfb4",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "7c2b9e525f24bf9e06af8258f9fd76e70d5fd0a41a318c2fb5a6beb4bf5ecfb4"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "7c2b9e525f24bf9e06af8258f9fd76e70d5fd0a41a318c2fb5a6beb4bf5ecfb4"
+        }
+      }
+    },
+    "/plantes/monstera/mint": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "742cac0d12236fc96e3926785e0f7c4564b0e775fc5d9021458af33777854631",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "742cac0d12236fc96e3926785e0f7c4564b0e775fc5d9021458af33777854631"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "742cac0d12236fc96e3926785e0f7c4564b0e775fc5d9021458af33777854631"
+        }
+      }
+    },
+    "/plantes/monstera/adansonii": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "c71fe019364b966641842c1625c752e7a4973a9a623c86463ebb8c18251a407c",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "c71fe019364b966641842c1625c752e7a4973a9a623c86463ebb8c18251a407c"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "c71fe019364b966641842c1625c752e7a4973a9a623c86463ebb8c18251a407c"
+        }
+      }
+    },
+    "/plantes/philodendron/royal-queen": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "8c49715dd0d3012922001b7955c471597c6de48aaecf6078f50c5d2072d7bd13",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "8c49715dd0d3012922001b7955c471597c6de48aaecf6078f50c5d2072d7bd13"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "8c49715dd0d3012922001b7955c471597c6de48aaecf6078f50c5d2072d7bd13"
+        }
+      }
+    },
+    "/plantes/anthurium/delta-force": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "cc76e68082c24fb64baf5aa505134b7721ce60241cc5b532545bc00724d5a2ed",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "cc76e68082c24fb64baf5aa505134b7721ce60241cc5b532545bc00724d5a2ed"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "cc76e68082c24fb64baf5aa505134b7721ce60241cc5b532545bc00724d5a2ed"
+        }
+      }
+    },
+    "/plantes/philodendron/melanochrysum": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "2d86eab221d3034d60c49622922022d10d2223522304cebd11d3d8825b3eec52",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "2d86eab221d3034d60c49622922022d10d2223522304cebd11d3d8825b3eec52"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "2d86eab221d3034d60c49622922022d10d2223522304cebd11d3d8825b3eec52"
+        }
+      }
+    },
+    "/plantes/philodendron/brasil": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "352fc8e0fda6fe68f3d181fb52d966036327a9403c4ec9d8a5dc1a010a362c4a",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "352fc8e0fda6fe68f3d181fb52d966036327a9403c4ec9d8a5dc1a010a362c4a"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "352fc8e0fda6fe68f3d181fb52d966036327a9403c4ec9d8a5dc1a010a362c4a"
+        }
+      }
+    },
+    "/plantes/anthurium/regale": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "6912982b59992a8cf5de0d7f46f701d32289e6ca20f340378d87ae59a7ca8836",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "6912982b59992a8cf5de0d7f46f701d32289e6ca20f340378d87ae59a7ca8836"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "6912982b59992a8cf5de0d7f46f701d32289e6ca20f340378d87ae59a7ca8836"
+        }
+      }
+    },
+    "/plantes/anthurium/papillilaminum-dark-phoenix": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "0b2b4dc9f0827a3f3512b814afba2b678e3aa1702a1ea0f16eff537c085c40ad",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "0b2b4dc9f0827a3f3512b814afba2b678e3aa1702a1ea0f16eff537c085c40ad"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "0b2b4dc9f0827a3f3512b814afba2b678e3aa1702a1ea0f16eff537c085c40ad"
+        }
+      }
+    },
+    "/plantes/anthurium/forgetii-dark-form-silver-blush": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "76b7b4d17ff044cc515a9e0d97f2a6e2b0042109c7ba5f7b948ae84f764456a3",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "76b7b4d17ff044cc515a9e0d97f2a6e2b0042109c7ba5f7b948ae84f764456a3"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "76b7b4d17ff044cc515a9e0d97f2a6e2b0042109c7ba5f7b948ae84f764456a3"
+        }
+      }
+    },
+    "/plantes/philodendron/gloriosum": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "0889723558c902d65c485a9a3d047529c0bb1b794232f2e7715d4f81f91f9c51",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "0889723558c902d65c485a9a3d047529c0bb1b794232f2e7715d4f81f91f9c51"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "0889723558c902d65c485a9a3d047529c0bb1b794232f2e7715d4f81f91f9c51"
+        }
+      }
+    },
+    "/plantes/philodendron/grazielae": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "cbef9168e0d7719d675b5f82962d0c00358c4824078a0f675f45aaab75d72313",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "cbef9168e0d7719d675b5f82962d0c00358c4824078a0f675f45aaab75d72313"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "cbef9168e0d7719d675b5f82962d0c00358c4824078a0f675f45aaab75d72313"
+        }
+      }
+    },
+    "/plantes/monstera/burle-marx-flame": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "903464581f8edf7c6735488377c3f93fd38e5b2dea6d25d554e14a77cbbba8b6",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "903464581f8edf7c6735488377c3f93fd38e5b2dea6d25d554e14a77cbbba8b6"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "903464581f8edf7c6735488377c3f93fd38e5b2dea6d25d554e14a77cbbba8b6"
+        }
+      }
+    },
+    "/plantes/monstera/esqueleto": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "6e255bd5b9bd0e7d2cad1c9d93ba627a9bee3c0bc2fd7944e72ec21a018f2c4c",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "6e255bd5b9bd0e7d2cad1c9d93ba627a9bee3c0bc2fd7944e72ec21a018f2c4c"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "6e255bd5b9bd0e7d2cad1c9d93ba627a9bee3c0bc2fd7944e72ec21a018f2c4c"
+        }
+      }
+    },
+    "/plantes/pilea/cadierei": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "ecf586d3e601a4d920a011a70629acb7c256d7f9eedbda248c3224a02faf1995",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "ecf586d3e601a4d920a011a70629acb7c256d7f9eedbda248c3224a02faf1995"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "ecf586d3e601a4d920a011a70629acb7c256d7f9eedbda248c3224a02faf1995"
+        }
+      }
+    },
+    "/plantes/colocasia/esculenta-eddo": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "c5f2ce38a8463c8869737421e2021d998a1621b7b4d53617a147d5bddc9cc7d7",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "c5f2ce38a8463c8869737421e2021d998a1621b7b4d53617a147d5bddc9cc7d7"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "c5f2ce38a8463c8869737421e2021d998a1621b7b4d53617a147d5bddc9cc7d7"
+        }
+      }
+    },
+    "/plantes/yucca/rostrata": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "b56e126d36e2f298449256cc3d38e82636c4c0f537e6bbd56f87f312c69770f4",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "b56e126d36e2f298449256cc3d38e82636c4c0f537e6bbd56f87f312c69770f4"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "b56e126d36e2f298449256cc3d38e82636c4c0f537e6bbd56f87f312c69770f4"
+        }
+      }
+    },
+    "/plantes/cycas/revoluta": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "c49ce022fcd5be7cf7e11b2ed430356e63d091448cc6e588c18834b4f8958f35",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "c49ce022fcd5be7cf7e11b2ed430356e63d091448cc6e588c18834b4f8958f35"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "c49ce022fcd5be7cf7e11b2ed430356e63d091448cc6e588c18834b4f8958f35"
+        }
+      }
+    },
+    "/plantes/aloe/vera": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "814139bd508ffbe0cff0471abb0533322eaa34d0de2f4a6c4df5ff4356ebb1be",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "814139bd508ffbe0cff0471abb0533322eaa34d0de2f4a6c4df5ff4356ebb1be"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "814139bd508ffbe0cff0471abb0533322eaa34d0de2f4a6c4df5ff4356ebb1be"
+        }
+      }
+    },
+    "/plantes/chlorophytum/comosum": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "78ead6e41349be2fb76d1ac232af72d65c15484598df613be62d1e20a922ad5c",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "78ead6e41349be2fb76d1ac232af72d65c15484598df613be62d1e20a922ad5c"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "78ead6e41349be2fb76d1ac232af72d65c15484598df613be62d1e20a922ad5c"
+        }
+      }
+    },
+    "/plantes/plumeria/rubra": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "c9f4c9ab78ab0cb5e3a68e116f80d93d466df72ccce6e487deb47c2725ec274b",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "c9f4c9ab78ab0cb5e3a68e116f80d93d466df72ccce6e487deb47c2725ec274b"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "c9f4c9ab78ab0cb5e3a68e116f80d93d466df72ccce6e487deb47c2725ec274b"
+        }
+      }
+    },
+    "/plantes/equisetum/japonicum": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "bb799a4a08373c77715705bb14ae480b3f9b85d5bdef6e916ce4b50ddfd1f221",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "bb799a4a08373c77715705bb14ae480b3f9b85d5bdef6e916ce4b50ddfd1f221"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "bb799a4a08373c77715705bb14ae480b3f9b85d5bdef6e916ce4b50ddfd1f221"
+        }
+      }
+    },
+    "/plantes/maranta/lemon-lime": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "7bf85ddb0b4eac441e9c2cec2dfe3df85da522d88c33a2e056a5d9ca2ff6da01",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "7bf85ddb0b4eac441e9c2cec2dfe3df85da522d88c33a2e056a5d9ca2ff6da01"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "7bf85ddb0b4eac441e9c2cec2dfe3df85da522d88c33a2e056a5d9ca2ff6da01"
+        }
+      }
+    },
+    "/plantes/anthurium/clarinervium": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "e19af52af661ac4e381e866c2c0963610621b9d9a01b480aa0454b284e350fa0",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "e19af52af661ac4e381e866c2c0963610621b9d9a01b480aa0454b284e350fa0"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "e19af52af661ac4e381e866c2c0963610621b9d9a01b480aa0454b284e350fa0"
+        }
+      }
+    },
+    "/plantes/anthurium/warocqueanum": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "6ce55d78cded8891b68a6fda42eb44d7465568bf511775711c115b286dfa258a",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "6ce55d78cded8891b68a6fda42eb44d7465568bf511775711c115b286dfa258a"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "6ce55d78cded8891b68a6fda42eb44d7465568bf511775711c115b286dfa258a"
+        }
+      }
+    },
+    "/plantes/musa/basjoo": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "6810b956410990aeca9da767a4e37caf4cc4faa0db0860f9e4bbd1e5d9a7ab67",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "6810b956410990aeca9da767a4e37caf4cc4faa0db0860f9e4bbd1e5d9a7ab67"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "6810b956410990aeca9da767a4e37caf4cc4faa0db0860f9e4bbd1e5d9a7ab67"
+        }
+      }
+    },
+    "/plantes/musa/sikkimensis-red-tiger": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "6365db2446ffcee07b4ff82f24e43865a5bb796295edfb0cffacf4c9d8bab3cf",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "6365db2446ffcee07b4ff82f24e43865a5bb796295edfb0cffacf4c9d8bab3cf"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "6365db2446ffcee07b4ff82f24e43865a5bb796295edfb0cffacf4c9d8bab3cf"
+        }
+      }
+    },
+    "/plantes/musa/florida-variegata": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "30867954cca3514f670d4af80614ac23ec2c7c4413f4202b53f0083842d27703",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "30867954cca3514f670d4af80614ac23ec2c7c4413f4202b53f0083842d27703"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "30867954cca3514f670d4af80614ac23ec2c7c4413f4202b53f0083842d27703"
+        }
+      }
+    },
+    "/plantes/ensete/ventricosum-maurelii": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "5b9845cb94c7fefde1825bc99e9ee5081872fb4bd40021dd12c35f9a193df63d",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "5b9845cb94c7fefde1825bc99e9ee5081872fb4bd40021dd12c35f9a193df63d"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "5b9845cb94c7fefde1825bc99e9ee5081872fb4bd40021dd12c35f9a193df63d"
+        }
+      }
+    }
+  }
+}

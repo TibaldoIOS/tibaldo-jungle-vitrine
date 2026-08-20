@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { headers } from "next/headers";
 import "./globals.css";
 import ConversionDock from "./ConversionDock";
 import ConversionTracker from "./ConversionTracker";
@@ -69,17 +70,23 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale?: string }>;
 }>) {
+  const { locale } = await params;
+  const requestLocale = (await headers()).get("x-tibaldo-locale");
+  const documentLocale = locale === "en" || locale === "es" ? locale : requestLocale === "en" || requestLocale === "es" ? requestLocale : "fr";
+  const skipLabel = documentLocale === "en" ? "Skip to main content" : documentLocale === "es" ? "Ir al contenido principal" : "Aller au contenu principal";
   return (
-    <html lang="fr" suppressHydrationWarning>
+    <html lang={documentLocale} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <a className="skip-link" href="#contenu-principal">Aller au contenu principal</a>
+        <a className="skip-link" href="#contenu-principal">{skipLabel}</a>
         <div id="contenu-principal" tabIndex={-1}>{children}</div>
         <ConversionDock />
         <ConversionTracker />
