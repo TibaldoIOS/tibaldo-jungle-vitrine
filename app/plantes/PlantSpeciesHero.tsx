@@ -1,6 +1,5 @@
 import type { PlantEntry } from "@/lib/plants/types";
 import { isEditorialPlaceholder } from "@/lib/plants/types";
-import Image from "next/image";
 import Link from "next/link";
 import { SiteHeader } from "../SiteChrome";
 import ScientificName from "./ScientificName";
@@ -10,7 +9,7 @@ export default function PlantSpeciesHero({ plant }: { plant: PlantEntry }) {
   const hasPhoto = !isEditorialPlaceholder(image?.src);
   return <section className={`plant-profile-hero ${hasPhoto ? "has-photo" : "has-editorial-fallback"}`}>
     {hasPhoto
-      ? <Image className="plant-profile-hero-image" src={image.src} alt={image.alt} width={image.width} height={image.height} priority sizes="100vw" />
+      ? <img className="plant-profile-hero-image" src={image.src} alt={image.alt} width={image.width} height={image.height} loading="eager" fetchPriority="high" decoding="async" />
       : <div className="plant-profile-hero-fallback" role="img" aria-label={`Photographie de ${plant.botanicalName} à ajouter`}><span aria-hidden="true">{plant.taxonomy.genus.slice(0, 1)}<i>{plant.taxonomy.species.slice(0, 1)}</i></span><small>Photographie Tibaldo à venir</small></div>}
     <div className="plant-profile-hero-shade" aria-hidden="true" />
     <SiteHeader />

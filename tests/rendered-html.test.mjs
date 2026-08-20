@@ -209,6 +209,21 @@ test("renders Dicksonia, its hierarchy and the shared species hero fallback", as
   assert.ok(api.some((entry) => entry.encyclopediaSlug === "plantes/dicksonia/antarctica"));
 });
 
+test("serves species hero photos directly without the vinext image optimizer", async () => {
+  for (const [path, image] of [
+    ["/plantes/cycas/revoluta", "/images/cycas-revoluta/cycas-revoluta-terrasse-tibaldo.webp"],
+    ["/plantes/monstera/deliciosa", "/monstera-deliciosa-feuilles.jpg"],
+    ["/plantes/anthurium/veitchii", "/anthurium-veitchii-king.jpg"],
+  ]) {
+    const html = await (await render(path)).text();
+    assert.match(html, new RegExp(`<img[^>]+src=["']${image.replaceAll("/", "\\/")}["']`, "i"), path);
+    assert.match(html, /fetchpriority=["']high["']/i, path);
+    assert.match(html, /loading=["']eager["']/i, path);
+    assert.match(html, /decoding=["']async["']/i, path);
+    assert.doesNotMatch(html, /\/_vinext\/image/i, path);
+  }
+});
+
 test("renders the Bananiers cluster and preserves its API identities", async () => {
   for (const path of ["/plantes/bananiers", "/plantes/musa", "/plantes/ensete", "/plantes/musa/basjoo", "/plantes/musa/sikkimensis-red-tiger", "/plantes/musa/florida-variegata", "/plantes/ensete/ventricosum-maurelii"]) {
     const response = await render(path);
