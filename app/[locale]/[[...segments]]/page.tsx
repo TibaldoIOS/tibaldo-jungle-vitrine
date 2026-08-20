@@ -2,28 +2,41 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SiteHeader } from "../../SiteChrome";
 import ScrollReveal from "../../ScrollReveal";
-import { isPilotPath, isTranslatedLocale, languageTags, localizedPath, openGraphLocales, pilotPaths, type PilotPath, type TranslatedLocale } from "@/lib/i18n/config";
+import { isMultilingualPath, isPilotPath, isTranslatedLocale, languageTags, localizedPath, multilingualPaths, openGraphLocales, type PilotPath, type TranslatedLocale } from "@/lib/i18n/config";
 import { pilotTranslations } from "@/lib/i18n/pilot-content";
 import { getPlant, plants as plantEntries } from "@/lib/plants/catalog";
+import { getWave1Family, getWave1Genre, getWave1Plant, wave1KindOf } from "@/lib/i18n/wave1";
+import Wave1BotanicalPage from "./Wave1BotanicalPage";
 
 type Props = { params: Promise<{ locale: string; segments?: string[] }> };
 const origin = "https://jungle.tibaldo.fr";
 
 function resolve(params: { locale: string; segments?: string[] }) {
   if (!isTranslatedLocale(params.locale)) return null;
-  const path = (`/${params.segments?.join("/") ?? ""}`.replace(/\/$/, "") || "/") as PilotPath;
-  if (!isPilotPath(path)) return null;
-  return { locale: params.locale, path, content: pilotTranslations[params.locale][path] };
+  const path = (`/${params.segments?.join("/") ?? ""}`.replace(/\/$/, "") || "/");
+  if (!isMultilingualPath(path)) return null;
+  const content = isPilotPath(path) ? pilotTranslations[params.locale][path] : undefined;
+  return { locale: params.locale, path, content };
 }
 
 export function generateStaticParams() {
-  return (["en", "es"] as const).flatMap((locale) => pilotPaths.map((path) => ({ locale, segments: path === "/" ? [] : path.slice(1).split("/") })));
+  return (["en", "es"] as const).flatMap((locale) => multilingualPaths.map((path) => ({ locale, segments: path === "/" ? [] : path.slice(1).split("/") })));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const page = resolve(await params);
   if (!page) return {};
   const canonical = localizedPath(page.path, page.locale);
+  const plant = getWave1Plant(page.path, page.locale);
+  const genre = getWave1Genre(page.path, page.locale);
+  const family = getWave1Family(page.path, page.locale);
+  if (plant || genre || family) {
+    const title = plant?.seo.title ?? (genre ? `${genre.guide.name}: ${page.locale === "en" ? "care, species and varieties" : "cuidados, especies y variedades"}` : `${family?.family}: ${page.locale === "en" ? "plants, genera and growing advice" : "plantas, géneros y consejos de cultivo"}`);
+    const description = plant?.seo.description ?? genre?.guide.lead ?? (page.locale === "en" ? `Botanical profiles in the ${family?.family} family documented by Tibaldo Jungle.` : `Fichas botánicas de la familia ${family?.family} documentadas por Tibaldo Jungle.`);
+    const image = plant?.gallery[0] ?? (genre ? { src: genre.guide.image, alt: genre.guide.imageAlt } : family?.plants[0]?.gallery[0]);
+    return { title, description, alternates: { canonical, languages: { fr: page.path, en: localizedPath(page.path, "en"), es: localizedPath(page.path, "es"), "x-default": page.path } }, openGraph: { type: plant ? "article" : "website", locale: openGraphLocales[page.locale], alternateLocale: page.locale === "en" ? ["fr_FR", "es_ES"] : ["fr_FR", "en_GB"], url: canonical, siteName: "Studio Végétal — Tibaldo Jungle", title, description, images: image ? [{ url: image.src, alt: image.alt }] : undefined }, twitter: { card: "summary_large_image", title, description, images: image ? [image.src] : undefined } };
+  }
+  if (!page.content) return {};
   return {
     title: page.content.seoTitle,
     description: page.content.description,
@@ -51,7 +64,10 @@ function PlantFacts({ path, locale }: { path: PilotPath; locale: TranslatedLocal
 export default async function LocalizedPilotPage({ params }: Props) {
   const page = resolve(await params);
   if (!page) notFound();
-  const { locale, path, content } = page;
+  const { locale, path } = page;
+  if (wave1KindOf(path) && path !== "/plantes" && path !== "/plantes/bananiers") return <Wave1BotanicalPage path={path} locale={locale} />;
+  const content = page.content;
+  if (!content) notFound();
   const url = `${origin}${localizedPath(path, locale)}`;
   const plantMatch = path.match(/^\/plantes\/([^/]+)\/([^/]+)$/);
   const plant = plantMatch && path !== "/plantes/bananiers" ? getPlant(plantMatch[1], plantMatch[2]) : null;
@@ -74,7 +90,7 @@ export default async function LocalizedPilotPage({ params }: Props) {
     <section className="pilot-localized-hero"><img src={image} alt={content.imageAlt} width={visual?.width ?? 1200} height={visual?.height ?? 800} /><div className="pilot-localized-shade" aria-hidden="true" /><SiteHeader locale={locale} currentPath={path} /><div className="shell pilot-localized-hero-content"><p className="eyebrow"><span /> {content.eyebrow}</p><h1>{content.title}</h1><p>{content.intro}</p></div></section>
     <nav className="pilot-breadcrumbs shell" aria-label="Breadcrumb"><ol>{content.breadcrumbs.map((item, index) => <li key={`${item}-${index}`}>{index < content.breadcrumbs.length - 1 ? <a href={index === 0 ? home : plants}>{item}</a> : <span aria-current="page">{item}</span>}</li>)}</ol></nav>
     <nav className="pilot-localized-nav shell" aria-label={labels.menu}><span>{labels.pilot}</span><a href={home}>{labels.home}</a><a href={plants}>{labels.plants}</a><a href={guide}>{labels.guide}</a></nav>
-    <PlantFacts path={path} locale={locale} />
+    <PlantFacts path={path as PilotPath} locale={locale} />
     {path === "/plantes" && <section className="shell pilot-published-identities" aria-labelledby="pilot-identities-title"><p className="section-kicker">{locale === "en" ? "Published botanical identities" : "Identidades botánicas publicadas"}</p><h2 id="pilot-identities-title">{plantEntries.length} {locale === "en" ? "profiles in the French source catalog" : "fichas en el catálogo fuente francés"}</h2><ul>{plantEntries.map((entry) => <li key={`${entry.genre}-${entry.slug}`}>{entry.botanicalName}</li>)}</ul></section>}
     <article className="shell pilot-localized-article"><aside><span>{labels.sections}</span>{content.sections.map((section, index) => { const id = "id" in section ? section.id : `section-${index + 1}`; return <a key={section.title} href={`#${id}`}>{String(index + 1).padStart(2, "0")} · {section.title}</a>; })}</aside><div>{content.sections.map((section, index) => { const id = "id" in section ? section.id : `section-${index + 1}`; return <section id={id} data-parity-section={id} key={section.title} data-reveal><span>{String(index + 1).padStart(2, "0")}</span><h2>{section.title}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>; })}</div></article>
     {content.faq.length > 0 && <section className="shell pilot-localized-faq"><header><p className="section-kicker">FAQ</p><h2>{labels.faq}</h2></header><div>{content.faq.map((item) => <details key={item.question}><summary>{item.question}<span aria-hidden="true">+</span></summary><p>{item.answer}</p></details>)}</div></section>}
