@@ -63,6 +63,9 @@ const worker = {
     }
     const headers = new Headers(response.headers);
     headers.delete("content-length");
+    if (url.hostname !== "jungle.tibaldo.fr") {
+      headers.set("X-Robots-Tag", "noindex, nofollow, noarchive");
+    }
     return new Response(html, { status: response.status, statusText: response.statusText, headers });
   },
 };
