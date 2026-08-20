@@ -10,13 +10,13 @@
     "dev": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vite",
     "build": "bash scripts/build-verified.sh",
     "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
-    "test": "npm run build && node --experimental-strip-types --test tests/rendered-html.test.mjs tests/plant-contract.test.ts tests/multilingual-pilot.test.mjs tests/multilingual-wave1.test.mjs",
+    "test": "npm run build && node --experimental-strip-types --test tests/rendered-html.test.mjs tests/plant-contract.test.ts tests/multilingual-pilot.test.mjs tests/multilingual-wave1.test.mjs tests/multilingual-wave2.test.mjs",
     "validate:artifact": "bash scripts/validate-artifact.sh",
     "lint": "bash scripts/sites-env.sh -- eslint . --ignore-pattern dist --ignore-pattern .next",
     "audit:seo": "node scripts/seo-audit.mjs",
     "audit:placeholders": "node --experimental-strip-types scripts/audit-placeholders.ts",
-    "i18n:status": "node scripts/i18n-editorial-status.mjs && node scripts/i18n-wave1-status.mjs",
-    "i18n:check": "node scripts/i18n-editorial-status.mjs --check && node scripts/i18n-wave1-status.mjs --check",
+    "i18n:status": "node scripts/i18n-editorial-status.mjs && node scripts/i18n-wave1-status.mjs && node scripts/i18n-wave2-status.mjs",
+    "i18n:check": "node scripts/i18n-editorial-status.mjs --check && node scripts/i18n-wave1-status.mjs --check && node scripts/i18n-wave2-status.mjs --check",
     "db:generate": "bash scripts/sites-env.sh -- drizzle-kit generate"
   },
   "dependencies": {

@@ -19,8 +19,10 @@ export type PilotPath = (typeof pilotPaths)[number];
 export const isPilotPath = (path: string): path is PilotPath => pilotPaths.includes(path as PilotPath);
 
 import wave1Inventory from "./wave1-inventory.generated.json";
+import wave2Inventory from "./wave2-inventory.generated.json";
 export const wave1Paths = wave1Inventory.paths.map(({ path }) => path);
-export const multilingualPaths = Array.from(new Set([...pilotPaths, ...wave1Paths]));
+export const wave2Paths = wave2Inventory.paths.map(({ path }) => path);
+export const multilingualPaths = Array.from(new Set([...pilotPaths, ...wave1Paths, ...wave2Paths]));
 export const isMultilingualPath = (path: string) => multilingualPaths.includes(path);
 
 export function canonicalPath(path: string) {

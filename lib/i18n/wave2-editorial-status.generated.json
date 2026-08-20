@@ -1,0 +1,252 @@
+{
+  "generatedAt": "2026-08-20",
+  "pages": {
+    "/conseils": {
+      "kind": "guide-hub",
+      "sourceVersion": "fr-wave2-2026-08-20.1",
+      "sourceFingerprint": "2a8aaa4a7fb7720964007bf74985cd55c44121886971d7f9bc763439a8ca01eb",
+      "translations": {
+        "en": {
+          "version": "en-wave2-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "2a8aaa4a7fb7720964007bf74985cd55c44121886971d7f9bc763439a8ca01eb"
+        },
+        "es": {
+          "version": "es-wave2-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "2a8aaa4a7fb7720964007bf74985cd55c44121886971d7f9bc763439a8ca01eb"
+        }
+      }
+    },
+    "/conseils/feuilles-jaunes-plantes-interieur": {
+      "kind": "guide",
+      "sourceVersion": "fr-wave2-2026-08-20.1",
+      "sourceFingerprint": "b2c8e97b65e7356113030793adb92dfaf018ae2a4d82855cb842d157eeb8dec4",
+      "translations": {
+        "en": {
+          "version": "en-wave2-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "b2c8e97b65e7356113030793adb92dfaf018ae2a4d82855cb842d157eeb8dec4"
+        },
+        "es": {
+          "version": "es-wave2-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "b2c8e97b65e7356113030793adb92dfaf018ae2a4d82855cb842d157eeb8dec4"
+        }
+      }
+    },
+    "/conseils/thrips-plantes-interieur": {
+      "kind": "guide",
+      "sourceVersion": "fr-wave2-2026-08-20.1",
+      "sourceFingerprint": "104c16a108779e945efdd0bfde6759e92bebe135d0b5429a3cf2bc3e005ab3a3",
+      "translations": {
+        "en": {
+          "version": "en-wave2-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "104c16a108779e945efdd0bfde6759e92bebe135d0b5429a3cf2bc3e005ab3a3"
+        },
+        "es": {
+          "version": "es-wave2-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "104c16a108779e945efdd0bfde6759e92bebe135d0b5429a3cf2bc3e005ab3a3"
+        }
+      }
+    },
+    "/conseils/arroser-plantes-interieur": {
+      "kind": "guide",
+      "sourceVersion": "fr-wave2-2026-08-20.1",
+      "sourceFingerprint": "12e3888fe9545b10177d5868497b735d09bd06ac1794a8d687860788380c2c1b",
+      "translations": {
+        "en": {
+          "version": "en-wave2-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "12e3888fe9545b10177d5868497b735d09bd06ac1794a8d687860788380c2c1b"
+        },
+        "es": {
+          "version": "es-wave2-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "12e3888fe9545b10177d5868497b735d09bd06ac1794a8d687860788380c2c1b"
+        }
+      }
+    },
+    "/conseils/choisir-substrat-plante-interieur": {
+      "kind": "guide",
+      "sourceVersion": "fr-wave2-2026-08-20.1",
+      "sourceFingerprint": "9d659c8ef8531ad97ab88c9ebff88c5facf98f8a96b62598491c9439717f3800",
+      "translations": {
+        "en": {
+          "version": "en-wave2-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "9d659c8ef8531ad97ab88c9ebff88c5facf98f8a96b62598491c9439717f3800"
+        },
+        "es": {
+          "version": "es-wave2-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "9d659c8ef8531ad97ab88c9ebff88c5facf98f8a96b62598491c9439717f3800"
+        }
+      }
+    },
+    "/conseils/lumiere-plantes-interieur": {
+      "kind": "guide",
+      "sourceVersion": "fr-wave2-2026-08-20.1",
+      "sourceFingerprint": "31471f1050dc9e50da21fe1f7fcc93daffa07512ba556cb36c2bfcc2127154c0",
+      "translations": {
+        "en": {
+          "version": "en-wave2-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "31471f1050dc9e50da21fe1f7fcc93daffa07512ba556cb36c2bfcc2127154c0"
+        },
+        "es": {
+          "version": "es-wave2-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "31471f1050dc9e50da21fe1f7fcc93daffa07512ba556cb36c2bfcc2127154c0"
+        }
+      }
+    },
+    "/conseils/pot-perce-cache-pot-coupelle": {
+      "kind": "guide",
+      "sourceVersion": "fr-wave2-2026-08-20.1",
+      "sourceFingerprint": "65257e3965e4f2c7d2ce434fef4237293803a29c7646cbb853cf0a3df5a5c871",
+      "translations": {
+        "en": {
+          "version": "en-wave2-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "65257e3965e4f2c7d2ce434fef4237293803a29c7646cbb853cf0a3df5a5c871"
+        },
+        "es": {
+          "version": "es-wave2-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "65257e3965e4f2c7d2ce434fef4237293803a29c7646cbb853cf0a3df5a5c871"
+        }
+      }
+    },
+    "/conseils/engrais-plantes-interieur": {
+      "kind": "guide",
+      "sourceVersion": "fr-wave2-2026-08-20.1",
+      "sourceFingerprint": "f92b4a56a4b70a07c9f96a48a130c03ef042f1b3e9bf2d6853123582f8e2df2a",
+      "translations": {
+        "en": {
+          "version": "en-wave2-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "f92b4a56a4b70a07c9f96a48a130c03ef042f1b3e9bf2d6853123582f8e2df2a"
+        },
+        "es": {
+          "version": "es-wave2-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "f92b4a56a4b70a07c9f96a48a130c03ef042f1b3e9bf2d6853123582f8e2df2a"
+        }
+      }
+    },
+    "/conseils/plantes-interieur-hiver": {
+      "kind": "guide",
+      "sourceVersion": "fr-wave2-2026-08-20.1",
+      "sourceFingerprint": "419bcb3d56e6c7b161f01b781d66c43bb2fe6d1d93f57000035c8cc1319ebb50",
+      "translations": {
+        "en": {
+          "version": "en-wave2-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "419bcb3d56e6c7b161f01b781d66c43bb2fe6d1d93f57000035c8cc1319ebb50"
+        },
+        "es": {
+          "version": "es-wave2-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "419bcb3d56e6c7b161f01b781d66c43bb2fe6d1d93f57000035c8cc1319ebb50"
+        }
+      }
+    },
+    "/conseils/humidite-plantes-tropicales": {
+      "kind": "guide",
+      "sourceVersion": "fr-wave2-2026-08-20.1",
+      "sourceFingerprint": "ba3e10317466110cbd9d2adf61e1e89763789b7048a4f9357fe3aea5569eaeb7",
+      "translations": {
+        "en": {
+          "version": "en-wave2-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "ba3e10317466110cbd9d2adf61e1e89763789b7048a4f9357fe3aea5569eaeb7"
+        },
+        "es": {
+          "version": "es-wave2-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "ba3e10317466110cbd9d2adf61e1e89763789b7048a4f9357fe3aea5569eaeb7"
+        }
+      }
+    },
+    "/conseils/araignees-rouges-plantes": {
+      "kind": "guide",
+      "sourceVersion": "fr-wave2-2026-08-20.1",
+      "sourceFingerprint": "f5c353d033c9c8c0970e1a2e5b0102900544765917379aa477b0218a24c325e7",
+      "translations": {
+        "en": {
+          "version": "en-wave2-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "f5c353d033c9c8c0970e1a2e5b0102900544765917379aa477b0218a24c325e7"
+        },
+        "es": {
+          "version": "es-wave2-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "f5c353d033c9c8c0970e1a2e5b0102900544765917379aa477b0218a24c325e7"
+        }
+      }
+    },
+    "/conseils/choisir-plante-selon-piece": {
+      "kind": "guide",
+      "sourceVersion": "fr-wave2-2026-08-20.1",
+      "sourceFingerprint": "ed0cb9d2ea7f56bac79e1fdb9cdb399f9ad24e7c4745c163205668977c860f38",
+      "translations": {
+        "en": {
+          "version": "en-wave2-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "ed0cb9d2ea7f56bac79e1fdb9cdb399f9ad24e7c4745c163205668977c860f38"
+        },
+        "es": {
+          "version": "es-wave2-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "ed0cb9d2ea7f56bac79e1fdb9cdb399f9ad24e7c4745c163205668977c860f38"
+        }
+      }
+    },
+    "/conseils/nettoyer-feuilles-plantes": {
+      "kind": "guide",
+      "sourceVersion": "fr-wave2-2026-08-20.1",
+      "sourceFingerprint": "f1dbeb72a669db6ac1b80ac82920f7f21a55608ac527771a71f37e5866134707",
+      "translations": {
+        "en": {
+          "version": "en-wave2-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "f1dbeb72a669db6ac1b80ac82920f7f21a55608ac527771a71f37e5866134707"
+        },
+        "es": {
+          "version": "es-wave2-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "f1dbeb72a669db6ac1b80ac82920f7f21a55608ac527771a71f37e5866134707"
+        }
+      }
+    }
+  }
+}

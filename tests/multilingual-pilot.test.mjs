@@ -58,13 +58,13 @@ test("returns a real 404 for untranslated or unknown locale pages", async () => 
   for (const path of ["/en/services", "/es/contact", "/de/plantes", "/en/plantes/inconnu/inconnu"]) assert.equal((await render(path)).status, 404, path);
 });
 
-test("exposes a beta-only multilingual sitemap with all 213 published URLs", async () => {
+test("exposes a beta-only multilingual sitemap with all published URLs", async () => {
   const response = await render("/sitemap-beta-multilingue.xml");
   assert.equal(response.status, 200);
   assert.equal(response.headers.get("x-robots-tag"), "noindex");
   const xml = await response.text();
-  assert.equal((xml.match(/<url>/g) ?? []).length, 213);
-  assert.equal((xml.match(/hreflang="x-default"/g) ?? []).length, 213);
+  assert.equal((xml.match(/<url>/g) ?? []).length, 249);
+  assert.equal((xml.match(/hreflang="x-default"/g) ?? []).length, 249);
   for (const path of paths) for (const locale of ["fr", "en", "es"]) assert.match(xml, new RegExp(`<loc>${origin.replaceAll("/", "\\/")}${localized(path, locale).replaceAll("/", "\\/")}<\\/loc>`));
 });
 

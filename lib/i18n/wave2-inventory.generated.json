@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-08-20",
+  "paths": [
+    { "path": "/conseils", "kind": "guide-hub", "decision": "include", "intent": "national-informational" },
+    { "path": "/conseils/feuilles-jaunes-plantes-interieur", "kind": "guide", "decision": "include", "intent": "national-diagnostic" },
+    { "path": "/conseils/thrips-plantes-interieur", "kind": "guide", "decision": "include", "intent": "national-diagnostic" },
+    { "path": "/conseils/arroser-plantes-interieur", "kind": "guide", "decision": "include", "intent": "national-care" },
+    { "path": "/conseils/choisir-substrat-plante-interieur", "kind": "guide", "decision": "include", "intent": "national-care" },
+    { "path": "/conseils/lumiere-plantes-interieur", "kind": "guide", "decision": "include", "intent": "national-care" },
+    { "path": "/conseils/pot-perce-cache-pot-coupelle", "kind": "guide", "decision": "include", "intent": "national-care" },
+    { "path": "/conseils/engrais-plantes-interieur", "kind": "guide", "decision": "include", "intent": "national-care" },
+    { "path": "/conseils/plantes-interieur-hiver", "kind": "guide", "decision": "include", "intent": "national-care-with-lille-context" },
+    { "path": "/conseils/humidite-plantes-tropicales", "kind": "guide", "decision": "include", "intent": "national-care" },
+    { "path": "/conseils/araignees-rouges-plantes", "kind": "guide", "decision": "include", "intent": "national-diagnostic" },
+    { "path": "/conseils/choisir-plante-selon-piece", "kind": "guide", "decision": "include", "intent": "national-selection" },
+    { "path": "/conseils/nettoyer-feuilles-plantes", "kind": "guide", "decision": "include", "intent": "national-care" }
+  ],
+  "excluded": [
+    { "path": "/sos-plantes", "reason": "service local Lille" },
+    { "path": "/rempotage", "reason": "page commerciale de rempotage" },
+    { "path": "/rempotage-plantes-lille", "reason": "service local Lille" },
+    { "path": "/substrats", "reason": "univers substrats hors Vague 2" },
+    { "path": "/substrats-en-vrac-lille", "reason": "page commerciale locale" },
+    { "path": "/services", "reason": "hub commercial local" },
+    { "path": "/evenements", "reason": "événementiel local" }
+  ]
+}

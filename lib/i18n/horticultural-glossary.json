@@ -1,0 +1,23 @@
+{
+  "substrat": { "en": "growing medium", "es": "sustrato" },
+  "terreau": { "en": "potting mix", "es": "sustrato para macetas" },
+  "motte": { "en": "root ball", "es": "cepellón" },
+  "rempotage": { "en": "repotting", "es": "trasplante" },
+  "drainage": { "en": "drainage", "es": "drenaje" },
+  "bouture": { "en": "cutting", "es": "esqueje" },
+  "rejet": { "en": "offset", "es": "hijuelo" },
+  "rhizome": { "en": "rhizome", "es": "rizoma" },
+  "racines aériennes": { "en": "aerial roots", "es": "raíces aéreas" },
+  "pourriture racinaire": { "en": "root rot", "es": "podredumbre radicular" },
+  "lumière indirecte": { "en": "indirect light", "es": "luz indirecta" },
+  "soleil direct": { "en": "direct sunlight", "es": "sol directo" },
+  "humidité ambiante": { "en": "ambient humidity", "es": "humedad ambiental" },
+  "hivernage": { "en": "overwintering", "es": "invernada" },
+  "dormance": { "en": "dormancy", "es": "dormancia" },
+  "fertilisation": { "en": "fertilising", "es": "fertilización" },
+  "engrais": { "en": "fertiliser", "es": "fertilizante" },
+  "ravageurs": { "en": "pests", "es": "plagas" },
+  "acarien": { "en": "mite", "es": "ácaro" },
+  "cochenille": { "en": "scale insect", "es": "cochinilla" },
+  "thrips": { "en": "thrips", "es": "trips" }
+}
