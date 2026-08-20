@@ -95,6 +95,35 @@ test("serves a crawlable robots file and a populated XML sitemap", async () => {
   assert.doesNotMatch(xml, /\/admin\//i);
 });
 
+test("renders one accessible line-art hero system across every plant hub", async () => {
+  const hubs = [
+    "agave", "fatsia", "strelitzia", "aloe", "chlorophytum", "yucca", "cycas", "dicksonia",
+    "plumeria", "equisetum", "ficus", "syngonium", "hoya", "sansevieria", "fougeres",
+    "bananiers", "musa", "ensete", "alocasia", "anthurium", "monstera", "philodendron",
+    "epipremnum", "asparagus", "colocasia", "pilea", "peperomia", "maranta", "calathea",
+    "cactus", "epiphyllum",
+  ];
+
+  for (const hub of hubs) {
+    const response = await render(`/plantes/${hub}`);
+    assert.equal(response.status, 200, hub);
+    const html = await response.text();
+    assert.match(html, /class=["'][^"']*plant-genus-hero[^"']*["']/i, hub);
+    assert.match(html, /class=["'][^"']*plant-genus-line-art[^"']*["']/i, hub);
+    assert.match(html, /aria-hidden=["']true["']/i, hub);
+    assert.equal((html.match(/<h1\b/gi) ?? []).length, 1, hub);
+    assert.doesNotMatch(html, /family-genre-image|is-herbier/i, hub);
+  }
+});
+
+test("keeps the species hero separate from the new genus hero", async () => {
+  const response = await render("/plantes/cycas/revoluta");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /class=["'][^"']*plant-profile-hero[^"']*["']/i);
+  assert.doesNotMatch(html, /class=["'][^"']*plant-genus-hero[^"']*["']/i);
+});
+
 test("links the opening event contextually from major editorial pages", async () => {
   for (const route of ["/plantes", "/substrats", "/services"]) {
     const response = await render(route);
