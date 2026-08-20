@@ -7,6 +7,8 @@ import { pilotTranslations } from "@/lib/i18n/pilot-content";
 import { getPlant, plants as plantEntries } from "@/lib/plants/catalog";
 import { getWave1Family, getWave1Genre, getWave1Plant, wave1KindOf } from "@/lib/i18n/wave1";
 import Wave1BotanicalPage from "./Wave1BotanicalPage";
+import { isWave2Path, getWave2Guide, wave2Ui } from "@/lib/i18n/wave2";
+import Wave2GuidePage from "./Wave2GuidePage";
 
 type Props = { params: Promise<{ locale: string; segments?: string[] }> };
 const origin = "https://jungle.tibaldo.fr";
@@ -30,6 +32,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const plant = getWave1Plant(page.path, page.locale);
   const genre = getWave1Genre(page.path, page.locale);
   const family = getWave1Family(page.path, page.locale);
+  if (isWave2Path(page.path) && !isPilotPath(page.path)) {
+    const guide = getWave2Guide(page.path, page.locale);
+    const ui = wave2Ui[page.locale];
+    const title = guide ? `${guide.title} | Tibaldo Jungle` : ui.hubTitle;
+    const description = guide?.intro ?? ui.hubDescription;
+    const image = guide?.image ?? "/monstera-deliciosa-feuilles.jpg";
+    return { title, description, alternates: { canonical, languages: { fr: page.path, en: localizedPath(page.path, "en"), es: localizedPath(page.path, "es"), "x-default": page.path } }, openGraph: { type: guide ? "article" : "website", locale: openGraphLocales[page.locale], alternateLocale: page.locale === "en" ? ["fr_FR", "es_ES"] : ["fr_FR", "en_GB"], url: canonical, siteName: "Studio Végétal — Tibaldo Jungle", title, description, images: [{ url: image, alt: guide?.title ?? ui.hubTitle }] }, twitter: { card: "summary_large_image", title, description, images: [image] } };
+  }
   if (plant || genre || family) {
     const title = plant?.seo.title ?? (genre ? `${genre.guide.name}: ${page.locale === "en" ? "care, species and varieties" : "cuidados, especies y variedades"}` : `${family?.family}: ${page.locale === "en" ? "plants, genera and growing advice" : "plantas, géneros y consejos de cultivo"}`);
     const description = plant?.seo.description ?? genre?.guide.lead ?? (page.locale === "en" ? `Botanical profiles in the ${family?.family} family documented by Tibaldo Jungle.` : `Fichas botánicas de la familia ${family?.family} documentadas por Tibaldo Jungle.`);
@@ -65,6 +75,7 @@ export default async function LocalizedPilotPage({ params }: Props) {
   const page = resolve(await params);
   if (!page) notFound();
   const { locale, path } = page;
+  if (isWave2Path(path) && !isPilotPath(path)) return <Wave2GuidePage path={path} locale={locale}/>;
   if (wave1KindOf(path) && path !== "/plantes" && path !== "/plantes/bananiers") return <Wave1BotanicalPage path={path} locale={locale} />;
   const content = page.content;
   if (!content) notFound();

@@ -65,7 +65,7 @@ test("projects the complete multilingual beta sitemap without touching productio
   assert.equal(beta.status, 200);
   assert.equal(beta.headers.get("x-robots-tag"), "noindex");
   const xml = await beta.text();
-  assert.equal((xml.match(/<url>/g) ?? []).length, 213);
+  assert.equal((xml.match(/<url>/g) ?? []).length, 249);
   for (const { path } of inventory.paths) for (const locale of ["fr", "en", "es"]) {
     const route = locale === "fr" ? path : localized(path, locale);
     assert.match(xml, new RegExp(`<loc>${origin.replaceAll("/", "\\/")}${route.replaceAll("/", "\\/")}<\/loc>`), route);
