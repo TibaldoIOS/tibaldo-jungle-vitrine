@@ -68,6 +68,9 @@ const normalizeTranslation = (source, target, locale) => {
     .replace(/top few inches/gi, "top few centimetres").replace(/several inches/gi, "several centimetres")
     .replace(/pierced pot/gi, "pot with drainage holes").replace(/pot must be pierced/gi, "pot must have drainage holes").replace(/pot that must be pierced/gi, "pot that must have drainage holes").replace(/pot pierced and/gi, "pot with drainage holes, adjusted and")
     .replace(/actual photograph/gi, "real photograph")
+    .replace(/proprietary photograph/gi, "Tibaldo-owned photograph")
+    .replace(/\brusticity\b/gi, "hardiness")
+    .replace(/\bmaintenance\b/gi, "care")
     .replace(/new listing/gi, "new profile").replace(/__AVAILABILITY__/g, "subject to availability");
   if (locale === "es") value = value
     .replace(/sujeto a disponibilidad/gi, "__DISPONIBILIDAD__")
@@ -75,14 +78,25 @@ const normalizeTranslation = (source, target, locale) => {
     .replace(/\btemas\b/gi, "ejemplares").replace(/\btema\b/gi, "ejemplar")
     .replace(/hojas? de gofre/gi, "hojas corrugadas").replace(/Selva Tibaldo/gi, "Tibaldo Jungle")
     .replace(/\bolla\b/gi, "maceta").replace(/\blistado\b/gi, "ficha")
+    .replace(/fotografía patentada/gi, "fotografía propia de Tibaldo")
+    .replace(/\binvernada\b/gi, "protección invernal")
+    .replace(/\bhibernación\b/gi, "protección invernal")
+    .replace(/\be protección invernal\b/gi, "y protección invernal")
+    .replace(/\bmantenimiento\b/gi, "cuidados")
     .replace(/__DISPONIBILIDAD__/g, "según disponibilidad");
+  if (locale === "es" && source.toLowerCase().includes("rusticité")) value = value.replace(/\bresistencia\b/gi, "rusticidad");
   const cultivarReplacements = locale === "es" ? {
     "Imperial Red": [/Rojo Imperial/gi, /Roja Imperial/gi, /Imperial Roja/gi],
     "Marble Queen": [/Reina de mármol/gi, /Reina de Mármol/gi],
     "Royal Queen": [/Reina Real/gi], "Delta Force": [/Fuerza Delta/gi, /Fuerza delta/gi],
     "Dark Phoenix": [/Fénix Oscuro/gi], "Burle Marx Flame": [/Llama de Burle Marx/gi, /Llama Monstera Burle Marx/gi, /Burlé Marx Llama/gi],
     "Red Tiger": [/Tigre Rojo/gi], "Mint": [/\bMenta\b/gi], "Lemon Lime": [/Lima Limón/gi, /Lima Limon/gi, /lima limón/gi],
-  } : {};
+    "Spider’s Web": [/Spider's Web/gi, /‘?La telaraña’?/gi, /‘?Telaraña’?/gi],
+    "Variegata": [/\bvariegata\b/gi],
+  } : {
+    "Spider’s Web": [/Spider's Web/gi],
+    "Variegata": [/\bvariegata\b/gi],
+  };
   for (const [cultivar, patterns] of Object.entries(cultivarReplacements)) if (source.includes(cultivar)) for (const pattern of patterns) value = value.replace(pattern, cultivar);
   if (source.includes("3 place de l’Arbonnoise")) value = value.replace(/(?:at |en |en el número )?3 (?:place|plaza) de l['’]Arbonnoise/gi, "3 place de l’Arbonnoise");
   if (source.includes("années 1990")) value = value.replace(/años 90\b/gi, "década de 1990");

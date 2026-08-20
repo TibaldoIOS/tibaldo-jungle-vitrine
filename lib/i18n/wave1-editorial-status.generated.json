@@ -533,6 +533,82 @@
         }
       }
     },
+    "/plantes/dicksonia": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "a495997012bcb705fbf15db4479c316181c01f0516dd64b0d86085dd69c00ccb",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "a495997012bcb705fbf15db4479c316181c01f0516dd64b0d86085dd69c00ccb"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "a495997012bcb705fbf15db4479c316181c01f0516dd64b0d86085dd69c00ccb"
+        }
+      }
+    },
+    "/plantes/agave": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "b0af081ae0ea23beb1cca966d6829c20ced7803d96d1ce704bc8ebb2aea567a3",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "b0af081ae0ea23beb1cca966d6829c20ced7803d96d1ce704bc8ebb2aea567a3"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "b0af081ae0ea23beb1cca966d6829c20ced7803d96d1ce704bc8ebb2aea567a3"
+        }
+      }
+    },
+    "/plantes/fatsia": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "f5caf251b2f0c5c774e93af1277f0c510885990f9591303c3e4bec26a7628bb2",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "f5caf251b2f0c5c774e93af1277f0c510885990f9591303c3e4bec26a7628bb2"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "f5caf251b2f0c5c774e93af1277f0c510885990f9591303c3e4bec26a7628bb2"
+        }
+      }
+    },
+    "/plantes/strelitzia": {
+      "kind": "genre",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "02b93b1f6d618eac7d8b5bf64a1bdd87415bf28c7b51bf619994641ffb6cf1d6",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "02b93b1f6d618eac7d8b5bf64a1bdd87415bf28c7b51bf619994641ffb6cf1d6"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "02b93b1f6d618eac7d8b5bf64a1bdd87415bf28c7b51bf619994641ffb6cf1d6"
+        }
+      }
+    },
     "/plantes/famille/araceae": {
       "kind": "family",
       "sourceVersion": "fr-wave1-2026-08-20.1",
@@ -555,19 +631,19 @@
     "/plantes/famille/asparagaceae": {
       "kind": "family",
       "sourceVersion": "fr-wave1-2026-08-20.1",
-      "sourceFingerprint": "e0ee974c491c12cc6fa38d32d214a3cf6817e7cdefeaeb4648a9ebe6a6a9700e",
+      "sourceFingerprint": "5b98176310cb0c2d754e3b1ba38641842900961cf7514e11a7d484d065472cbf",
       "translations": {
         "en": {
           "version": "en-wave1-2026-08-20.1",
           "status": "published",
           "parity": "validated",
-          "translatedFromFingerprint": "e0ee974c491c12cc6fa38d32d214a3cf6817e7cdefeaeb4648a9ebe6a6a9700e"
+          "translatedFromFingerprint": "5b98176310cb0c2d754e3b1ba38641842900961cf7514e11a7d484d065472cbf"
         },
         "es": {
           "version": "es-wave1-2026-08-20.1",
           "status": "published",
           "parity": "validated",
-          "translatedFromFingerprint": "e0ee974c491c12cc6fa38d32d214a3cf6817e7cdefeaeb4648a9ebe6a6a9700e"
+          "translatedFromFingerprint": "5b98176310cb0c2d754e3b1ba38641842900961cf7514e11a7d484d065472cbf"
         }
       }
     },
@@ -1309,6 +1385,158 @@
           "status": "published",
           "parity": "validated",
           "translatedFromFingerprint": "5b9845cb94c7fefde1825bc99e9ee5081872fb4bd40021dd12c35f9a193df63d"
+        }
+      }
+    },
+    "/plantes/dicksonia/antarctica": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "40cbcb73cee6a5c842ab50f2b65934f7a8efab00dbf478cdb84be6f69bd9ce1f",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "40cbcb73cee6a5c842ab50f2b65934f7a8efab00dbf478cdb84be6f69bd9ce1f"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "40cbcb73cee6a5c842ab50f2b65934f7a8efab00dbf478cdb84be6f69bd9ce1f"
+        }
+      }
+    },
+    "/plantes/agave/americana-variegata": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "c4eec99863dece5245e5c7c83af4ece3a68533940973a62704ca58c5753bffb0",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "c4eec99863dece5245e5c7c83af4ece3a68533940973a62704ca58c5753bffb0"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "c4eec99863dece5245e5c7c83af4ece3a68533940973a62704ca58c5753bffb0"
+        }
+      }
+    },
+    "/plantes/fatsia/japonica-spiders-web": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "5529b58fad854c0b0b8f4e087060ef00e56f36587331e449e9fabbf1aa4b148e",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "5529b58fad854c0b0b8f4e087060ef00e56f36587331e449e9fabbf1aa4b148e"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "5529b58fad854c0b0b8f4e087060ef00e56f36587331e449e9fabbf1aa4b148e"
+        }
+      }
+    },
+    "/plantes/strelitzia/alba": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "07ad8ccf9f4ae1fbf2e9a6d17c9029004ec76fa4cf7af75f3857e4955e164c12",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "07ad8ccf9f4ae1fbf2e9a6d17c9029004ec76fa4cf7af75f3857e4955e164c12"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "07ad8ccf9f4ae1fbf2e9a6d17c9029004ec76fa4cf7af75f3857e4955e164c12"
+        }
+      }
+    },
+    "/plantes/strelitzia/caudata": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "cbf1e6b989b4a3ffd00e77fe4e15ddc3b10b72c9ee4005184ac1dcf0b2373b80",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "cbf1e6b989b4a3ffd00e77fe4e15ddc3b10b72c9ee4005184ac1dcf0b2373b80"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "cbf1e6b989b4a3ffd00e77fe4e15ddc3b10b72c9ee4005184ac1dcf0b2373b80"
+        }
+      }
+    },
+    "/plantes/strelitzia/juncea": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "df7a032f0758820590d24d72d91d6dcc6f2dd3723eb01196584b9c188e9fa394",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "df7a032f0758820590d24d72d91d6dcc6f2dd3723eb01196584b9c188e9fa394"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "df7a032f0758820590d24d72d91d6dcc6f2dd3723eb01196584b9c188e9fa394"
+        }
+      }
+    },
+    "/plantes/strelitzia/nicolai": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "c75cacaf498ddaf6fc2504077b316a1b2fcdfdd20a8f5712e72818a44d7633f7",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "c75cacaf498ddaf6fc2504077b316a1b2fcdfdd20a8f5712e72818a44d7633f7"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "c75cacaf498ddaf6fc2504077b316a1b2fcdfdd20a8f5712e72818a44d7633f7"
+        }
+      }
+    },
+    "/plantes/strelitzia/reginae": {
+      "kind": "identity",
+      "sourceVersion": "fr-wave1-2026-08-20.1",
+      "sourceFingerprint": "16118bad506d50d13deab9ee4303ec252c168bca33e78bf1848f1ffa3f28a6d4",
+      "translations": {
+        "en": {
+          "version": "en-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "16118bad506d50d13deab9ee4303ec252c168bca33e78bf1848f1ffa3f28a6d4"
+        },
+        "es": {
+          "version": "es-wave1-2026-08-20.1",
+          "status": "published",
+          "parity": "validated",
+          "translatedFromFingerprint": "16118bad506d50d13deab9ee4303ec252c168bca33e78bf1848f1ffa3f28a6d4"
         }
       }
     }

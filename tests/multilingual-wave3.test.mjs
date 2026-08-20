@@ -61,10 +61,10 @@ test("uses stable substrate terminology and preserves every numeric value", () =
   }
 });
 
-test("projects 279 beta URLs while production sitemap stays French-only", async () => {
+test("projects 315 beta URLs while production sitemap stays French-only", async () => {
   const beta = await render("/sitemap-beta-multilingue.xml"); assert.equal(beta.status, 200); assert.equal(beta.headers.get("x-robots-tag"), "noindex"); const xml = await beta.text();
-  assert.equal((xml.match(/<url>/g) ?? []).length, 279);
-  assert.equal((xml.match(/hreflang="x-default"/g) ?? []).length, 279);
+  assert.equal((xml.match(/<url>/g) ?? []).length, 315);
+  assert.equal((xml.match(/hreflang="x-default"/g) ?? []).length, 315);
   for (const { path } of inventory.paths) for (const locale of ["fr", "en", "es"]) { const route = locale === "fr" ? path : localized(path, locale); assert.match(xml, new RegExp(`<loc>${origin.replaceAll("/", "\\/")}${route.replaceAll("/", "\\/")}<\/loc>`), route); }
   const production = await (await render("/sitemap.xml")).text(); assert.doesNotMatch(production, /<loc>https:\/\/jungle\.tibaldo\.fr\/(?:en|es)\//);
 });

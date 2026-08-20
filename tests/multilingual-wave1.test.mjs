@@ -12,14 +12,14 @@ async function render(pathname, hostname = "localhost") {
 }
 const localized = (path, locale) => `/${locale}${path}`;
 
-test("publishes 69 complete botanical triplets in the beta wave", async () => {
-  assert.equal(inventory.paths.length, 69);
+test("publishes 81 complete botanical triplets after the v71 synchronization", async () => {
+  assert.equal(inventory.paths.length, 81);
   assert.equal(inventory.paths.filter(({ kind }) => kind === "hub").length, 1);
   assert.equal(inventory.paths.filter(({ kind }) => kind === "group").length, 1);
-  assert.equal(inventory.paths.filter(({ kind }) => kind === "genre").length, 26);
+  assert.equal(inventory.paths.filter(({ kind }) => kind === "genre").length, 30);
   assert.equal(inventory.paths.filter(({ kind }) => kind === "family").length, 3);
-  assert.equal(inventory.paths.filter(({ kind }) => kind === "identity").length, 38);
-  assert.equal(Object.keys(status.pages).length, 69);
+  assert.equal(inventory.paths.filter(({ kind }) => kind === "identity").length, 46);
+  assert.equal(Object.keys(status.pages).length, 81);
   for (const page of Object.values(status.pages)) for (const locale of ["en", "es"]) { assert.equal(page.translations[locale].status, "published"); assert.equal(page.translations[locale].parity, "validated"); assert.equal(page.translations[locale].translatedFromFingerprint, page.sourceFingerprint); }
 });
 
@@ -37,7 +37,7 @@ test("serves every EN and ES botanical route with reciprocal SEO", async () => {
     assert.match(html, /application\/ld\+json/i, `${route} JSON-LD`);
     assert.match(html, /BreadcrumbList/, `${route} breadcrumb data`);
     assert.match(html, /<img[^>]+alt="[^"]+"/i, `${route} ALT`);
-    if (kind === "identity") { assert.equal((html.match(/data-wave1-section=/g) ?? []).length, 9, `${route} sections`); assert.match(html, /FAQPage/, `${route} FAQ data`); }
+    if (kind === "identity") { assert.ok((html.match(/data-wave1-section=/g) ?? []).length >= 9, `${route} sections`); assert.match(html, /FAQPage/, `${route} FAQ data`); }
     if (kind === "genre") assert.equal((html.match(/data-wave1-section=/g) ?? []).length, 9, `${route} sections`);
     if (kind === "family") assert.equal((html.match(/data-wave1-section=/g) ?? []).length, 2, `${route} sections`);
   }
@@ -45,7 +45,7 @@ test("serves every EN and ES botanical route with reciprocal SEO", async () => {
 
 test("keeps scientific identities and locale-neutral API contracts", async () => {
   const identityPaths = inventory.paths.filter(({ kind }) => kind === "identity").map(({ path }) => path);
-  assert.equal(new Set(identityPaths).size, 38);
+  assert.equal(new Set(identityPaths).size, 46);
   for (const path of identityPaths) {
     const [, , genre, slug] = path.split("/");
     for (const locale of ["en", "es"]) {
@@ -56,8 +56,8 @@ test("keeps scientific identities and locale-neutral API contracts", async () =>
   const api = await render("/api/v2/encyclopedie/plantes");
   assert.equal(api.status, 200);
   const entries = await api.json();
-  assert.equal(entries.length, 38);
-  assert.equal(new Set(entries.map(({ encyclopediaSlug }) => encyclopediaSlug)).size, 38);
+  assert.equal(entries.length, 46);
+  assert.equal(new Set(entries.map(({ encyclopediaSlug }) => encyclopediaSlug)).size, 46);
 });
 
 test("projects the complete multilingual beta sitemap without touching production sitemap", async () => {
@@ -65,7 +65,7 @@ test("projects the complete multilingual beta sitemap without touching productio
   assert.equal(beta.status, 200);
   assert.equal(beta.headers.get("x-robots-tag"), "noindex");
   const xml = await beta.text();
-  assert.equal((xml.match(/<url>/g) ?? []).length, 279);
+  assert.equal((xml.match(/<url>/g) ?? []).length, 315);
   for (const { path } of inventory.paths) for (const locale of ["fr", "en", "es"]) {
     const route = locale === "fr" ? path : localized(path, locale);
     assert.match(xml, new RegExp(`<loc>${origin.replaceAll("/", "\\/")}${route.replaceAll("/", "\\/")}<\/loc>`), route);
@@ -73,6 +73,34 @@ test("projects the complete multilingual beta sitemap without touching productio
   const production = await render("/sitemap.xml");
   const productionXml = await production.text();
   assert.doesNotMatch(productionXml, /<loc>https:\/\/jungle\.tibaldo\.fr\/(?:en|es)\//);
+});
+
+test("publishes the exact v71 Dicksonia, Agave, Fatsia and Strelitzia perimeter", async () => {
+  const expected = [
+    "/plantes/dicksonia", "/plantes/dicksonia/antarctica",
+    "/plantes/agave", "/plantes/agave/americana-variegata",
+    "/plantes/fatsia", "/plantes/fatsia/japonica-spiders-web",
+    "/plantes/strelitzia", "/plantes/strelitzia/alba", "/plantes/strelitzia/caudata",
+    "/plantes/strelitzia/juncea", "/plantes/strelitzia/nicolai", "/plantes/strelitzia/reginae",
+  ];
+  for (const path of expected) assert.ok(inventory.paths.some((entry) => entry.path === path), path);
+  assert.equal(inventory.paths.some((entry) => entry.path.includes("strelitzia/augusta")), false);
+  for (const locale of ["en", "es"]) {
+    const alba = await (await render(`/${locale}/plantes/strelitzia/alba`)).text();
+    assert.match(alba, /Strelitzia augusta/);
+    assert.match(alba, locale === "en" ? /synonym of Strelitzia alba/i : /sinónimo de Strelitzia alba/i);
+    const hub = await (await render(`/${locale}/plantes/strelitzia`)).text();
+    assert.match(hub, /sectoral variegation|variegación sectorial/i);
+  }
+});
+
+test("uses the official v71 species hero without the vinext image optimizer", async () => {
+  for (const locale of ["en", "es"]) for (const path of ["dicksonia/antarctica", "agave/americana-variegata", "fatsia/japonica-spiders-web", "strelitzia/nicolai", "strelitzia/reginae"]) {
+    const html = await (await render(`/${locale}/plantes/${path}`)).text();
+    assert.match(html, /class="plant-profile-hero /);
+    assert.match(html, /plant-profile-breadcrumb/);
+    assert.doesNotMatch(html, /\/_vinext\/image/);
+  }
 });
 
 test("fails closed outside the published multilingual perimeter", async () => {

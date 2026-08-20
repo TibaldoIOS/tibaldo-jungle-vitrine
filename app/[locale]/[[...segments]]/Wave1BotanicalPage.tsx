@@ -1,5 +1,6 @@
 import { Arrow, SiteHeader } from "../../SiteChrome";
 import ScientificName from "../../plantes/ScientificName";
+import PlantSpeciesHero from "../../plantes/PlantSpeciesHero";
 import { languageTags, localizedPath, type TranslatedLocale } from "@/lib/i18n/config";
 import { getWave1Family, getWave1Genre, getWave1Plant } from "@/lib/i18n/wave1";
 
@@ -35,7 +36,7 @@ export default function Wave1BotanicalPage({ path, locale }: { path: string; loc
     ] };
     return <main className="editorial-page plant-profile-page localized-wave1-page" lang={locale}>
       <JsonLd value={structuredData} />
-      <section className="plant-profile-hero"><img className="plant-profile-hero-image" src={plant.gallery[0].src} alt={plant.gallery[0].alt} width={plant.gallery[0].width} height={plant.gallery[0].height} /><div className="plant-profile-hero-shade" aria-hidden="true" /><SiteHeader locale={locale} currentPath={path} /><div className="shell plant-profile-hero-content"><p className="eyebrow"><span /> {l.encyclopedia} · {plant.genreLabel}</p><h1><ScientificName name={plant.botanicalName} className="scientific-name-hero" /></h1><p>{plant.subtitle}</p></div></section>
+      <PlantSpeciesHero plant={plant} locale={locale} currentPath={path} copy={{ encyclopedia: l.encyclopedia, plants: l.plants, photoPending: locale === "en" ? `Tibaldo photograph of ${plant.botanicalName} to be added` : `Fotografía Tibaldo de ${plant.botanicalName} pendiente` }} />
       <Breadcrumbs locale={locale} last={plant.displayName} genre={plant.genre} />
       <article className="shell wave1-rich-profile">
         <Section id="identity" title={l.identity}><div className="wave1-copy">{plant.description.map((text) => <p key={text}>{text}</p>)}</div><dl className="plant-facts plant-taxonomy"><div><dt>{l.family}</dt><dd>{plant.taxonomy.family}</dd></div><div><dt>{l.genus}</dt><dd>{plant.taxonomy.genus}</dd></div><div><dt>{l.species}</dt><dd><ScientificName name={plant.taxonomy.species} /></dd></div>{plant.taxonomy.cultivar && <div><dt>{l.cultivar}</dt><dd>‘{plant.taxonomy.cultivar}’</dd></div>}<div><dt>{l.common}</dt><dd>{plant.taxonomy.commonNames.join(" · ")}</dd></div><div><dt>{l.synonyms}</dt><dd>{plant.synonyms.join(" · ")}</dd></div><div><dt>{l.origin}</dt><dd>{plant.origin}</dd></div><div><dt>{l.habitat}</dt><dd>{plant.habitat}</dd></div><div><dt>{l.status}</dt><dd>{plant.hybridization}</dd></div><div><dt>{l.growth}</dt><dd>{plant.growth.speed} · {plant.growth.habit}</dd></div><div><dt>{l.adult}</dt><dd>{plant.growth.adultSize}</dd></div></dl><aside className="specimen-note"><span>{l.specimen}</span><strong>{plant.specimen.observedHeight}</strong><p>{plant.specimen.note}</p></aside></Section>
@@ -45,6 +46,9 @@ export default function Wave1BotanicalPage({ path, locale }: { path: string; loc
         <Section id="comparisons" title={l.comparisons}><div className="plant-comparison-grid">{plant.comparisons.map((item) => <article key={item.name}><h3>{item.name}</h3><p>{item.difference}</p></article>)}</div></Section>
         <Section id="gallery" title={l.gallery}><div className="wave1-gallery">{gallery.map((image) => <figure key={image.src}><img src={image.src} alt={image.alt} width={image.width} height={image.height} loading="lazy" /><figcaption>{image.caption}</figcaption></figure>)}</div></Section>
         <Section id="advice" title={l.advice}><ol className="wave1-advice">{plant.tibaldoAdvice.map((advice, index) => <li key={advice}><span>{String(index + 1).padStart(2, "0")}</span><p>{advice}</p></li>)}</ol></Section>
+        {plant.localSpotlight && <Section id="local-spotlight" title={plant.localSpotlight.title}><p>{plant.localSpotlight.text}</p></Section>}
+        {plant.editorialSections?.map((section) => <Section id={section.id} title={section.title} key={section.id}><p className="section-kicker">{section.eyebrow}</p><div className="wave1-copy">{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>{section.points?.length ? <ul>{section.points.map((point) => <li key={point}>{point}</li>)}</ul> : null}</Section>)}
+        {plant.mediaNeeds?.length ? <Section id="media-needs" title={l.gallery}><div className="plant-comparison-grid">{plant.mediaNeeds.map((item) => <article key={`${item.role}-${item.description}`}><h3>{item.role}</h3><p>{item.description}</p></article>)}</div></Section> : null}
         <Section id="faq" title={l.faq}><div className="plant-faq">{plant.faq.map((item) => <details key={item.question}><summary><strong>{item.question}</strong><span>+</span></summary><p>{item.answer}</p></details>)}</div></Section>
         <Section id="sources" title={l.sources}><p>{locale === "en" ? "This profile cross-checks identified botanical and horticultural references. Conditions in each home may change the plant’s response." : "Esta ficha contrasta referencias botánicas y hortícolas identificadas. Las condiciones de cada hogar pueden modificar la respuesta de la planta."}</p><div>{plant.sources.map((source) => <a href={source.url} target="_blank" rel="noreferrer" key={source.url}>{source.label} <Arrow /></a>)}</div></Section>
       </article><Footer locale={locale} /></main>;

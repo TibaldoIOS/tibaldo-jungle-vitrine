@@ -114,6 +114,22 @@
       "kind": "genre"
     },
     {
+      "path": "/plantes/dicksonia",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/agave",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/fatsia",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/strelitzia",
+      "kind": "genre"
+    },
+    {
       "path": "/plantes/famille/araceae",
       "kind": "family"
     },
@@ -275,6 +291,38 @@
     },
     {
       "path": "/plantes/ensete/ventricosum-maurelii",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/dicksonia/antarctica",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/agave/americana-variegata",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/fatsia/japonica-spiders-web",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/strelitzia/alba",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/strelitzia/caudata",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/strelitzia/juncea",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/strelitzia/nicolai",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/strelitzia/reginae",
       "kind": "identity"
     }
   ]

@@ -14,58 +14,58 @@
       }
     },
     "/plantes": {
-      "sourceVersion": "fr-2026-08-20.2",
+      "sourceVersion": "fr-2026-08-20.3",
       "sourceUpdatedAt": "2026-08-20",
       "sourceFiles": ["app/plantes/page.tsx", "lib/plants/catalog.ts"],
-      "sourceFingerprint": "07a5d6ea7b11099a665e823ea0ad736bbcb5dbbadc04a248264a2bcbdb1f1b7d",
+      "sourceFingerprint": "5b548db5aedee1f0c719811cfca11b67e727261da795d813ef486b8fc0625cfa",
       "parity": { "en": "validated", "es": "validated" },
       "translations": {
-        "en": { "version": "en-2026-08-20.3", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "07a5d6ea7b11099a665e823ea0ad736bbcb5dbbadc04a248264a2bcbdb1f1b7d" },
-        "es": { "version": "es-2026-08-20.3", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "07a5d6ea7b11099a665e823ea0ad736bbcb5dbbadc04a248264a2bcbdb1f1b7d" }
+        "en": { "version": "en-2026-08-20.4", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "5b548db5aedee1f0c719811cfca11b67e727261da795d813ef486b8fc0625cfa" },
+        "es": { "version": "es-2026-08-20.4", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "5b548db5aedee1f0c719811cfca11b67e727261da795d813ef486b8fc0625cfa" }
       }
     },
     "/plantes/cycas/revoluta": {
-      "sourceVersion": "fr-2026-08-20.2",
+      "sourceVersion": "fr-2026-08-20.3",
       "sourceUpdatedAt": "2026-08-20",
       "sourceFiles": ["app/plantes/[genre]/[slug]/page.tsx", "lib/plants/cycas-revoluta.ts"],
-      "sourceFingerprint": "2483680dbb5a65289cbd3cc124ba22a85e86a68527b03f4d8be3da6765c1cc3b",
+      "sourceFingerprint": "445fdc5f704084b3e608ea9c06fe48f47dd9efcbb3dfbd7e15a31218ac473e1a",
       "parity": { "en": "validated", "es": "validated" },
       "translations": {
-        "en": { "version": "en-2026-08-20.3", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "2483680dbb5a65289cbd3cc124ba22a85e86a68527b03f4d8be3da6765c1cc3b" },
-        "es": { "version": "es-2026-08-20.3", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "2483680dbb5a65289cbd3cc124ba22a85e86a68527b03f4d8be3da6765c1cc3b" }
+        "en": { "version": "en-2026-08-20.4", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "445fdc5f704084b3e608ea9c06fe48f47dd9efcbb3dfbd7e15a31218ac473e1a" },
+        "es": { "version": "es-2026-08-20.4", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "445fdc5f704084b3e608ea9c06fe48f47dd9efcbb3dfbd7e15a31218ac473e1a" }
       }
     },
     "/plantes/anthurium/clarinervium": {
-      "sourceVersion": "fr-2026-08-20.1",
+      "sourceVersion": "fr-2026-08-20.2",
       "sourceUpdatedAt": "2026-08-20",
       "sourceFiles": ["app/plantes/[genre]/[slug]/page.tsx", "lib/plants/encyclopedia-v2-step1.ts"],
-      "sourceFingerprint": "dc6519751d568db075b16ef1ada61f910890a0a2e94cb85642e9b7980bfe0af1",
+      "sourceFingerprint": "108854a40560f813daa3c4a1d16ae2d49d51b0115165251097905e93eff9eefb",
       "parity": { "en": "validated", "es": "validated" },
       "translations": {
-        "en": { "version": "en-2026-08-20.2", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "dc6519751d568db075b16ef1ada61f910890a0a2e94cb85642e9b7980bfe0af1" },
-        "es": { "version": "es-2026-08-20.2", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "dc6519751d568db075b16ef1ada61f910890a0a2e94cb85642e9b7980bfe0af1" }
+        "en": { "version": "en-2026-08-20.3", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "108854a40560f813daa3c4a1d16ae2d49d51b0115165251097905e93eff9eefb" },
+        "es": { "version": "es-2026-08-20.3", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "108854a40560f813daa3c4a1d16ae2d49d51b0115165251097905e93eff9eefb" }
       }
     },
     "/plantes/monstera/thai-constellation": {
-      "sourceVersion": "fr-2026-08-20.1",
+      "sourceVersion": "fr-2026-08-20.2",
       "sourceUpdatedAt": "2026-08-20",
       "sourceFiles": ["app/plantes/[genre]/[slug]/page.tsx", "lib/plants/requested-plants.ts"],
-      "sourceFingerprint": "7ccde97265c655723bddd4f3cd043728c30f9920edea36842e9a8c3e50bfe08f",
+      "sourceFingerprint": "65394fc19a6f11b034cd4a16bf9c2608ccb570e11b3f88e11b30d8a2d4c10069",
       "parity": { "en": "validated", "es": "validated" },
       "translations": {
-        "en": { "version": "en-2026-08-20.2", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "7ccde97265c655723bddd4f3cd043728c30f9920edea36842e9a8c3e50bfe08f" },
-        "es": { "version": "es-2026-08-20.2", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "7ccde97265c655723bddd4f3cd043728c30f9920edea36842e9a8c3e50bfe08f" }
+        "en": { "version": "en-2026-08-20.3", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "65394fc19a6f11b034cd4a16bf9c2608ccb570e11b3f88e11b30d8a2d4c10069" },
+        "es": { "version": "es-2026-08-20.3", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "65394fc19a6f11b034cd4a16bf9c2608ccb570e11b3f88e11b30d8a2d4c10069" }
       }
     },
     "/plantes/bananiers": {
-      "sourceVersion": "fr-2026-08-20.1",
+      "sourceVersion": "fr-2026-08-20.2",
       "sourceUpdatedAt": "2026-08-20",
       "sourceFiles": ["app/plantes/bananiers/page.tsx", "lib/plants/banana-guides.ts"],
-      "sourceFingerprint": "3b94b90f29c7927c16313fa07e1e4381e4910dc240eb5ab7836bbfe23661b702",
+      "sourceFingerprint": "b3e5377e35e76d939d7361ae6ac1443e747cd281bae084095bdb528c817b5d3c",
       "parity": { "en": "validated", "es": "validated" },
       "translations": {
-        "en": { "version": "en-2026-08-20.2", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "3b94b90f29c7927c16313fa07e1e4381e4910dc240eb5ab7836bbfe23661b702" },
-        "es": { "version": "es-2026-08-20.2", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "3b94b90f29c7927c16313fa07e1e4381e4910dc240eb5ab7836bbfe23661b702" }
+        "en": { "version": "en-2026-08-20.3", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "b3e5377e35e76d939d7361ae6ac1443e747cd281bae084095bdb528c817b5d3c" },
+        "es": { "version": "es-2026-08-20.3", "updatedAt": "2026-08-20", "status": "published", "translatedFromFingerprint": "b3e5377e35e76d939d7361ae6ac1443e747cd281bae084095bdb528c817b5d3c" }
       }
     },
     "/conseils/arroser-plantes-interieur": {
