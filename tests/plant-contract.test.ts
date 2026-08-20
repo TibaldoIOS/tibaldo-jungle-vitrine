@@ -60,6 +60,16 @@ test("tous les encyclopedia_slug restent uniques", () => {
   assert.equal(new Set(slugs).size, slugs.length);
 });
 
+test("Dicksonia antarctica ajoute une seule identité botanique centrale", () => {
+  const dicksonia = plants.find((entry) => entry.genre === "dicksonia" && entry.slug === "antarctica");
+  assert.equal(plants.length, 39);
+  assert.equal(dicksonia?.botanicalName, "Dicksonia antarctica");
+  assert.equal(dicksonia?.taxonomy.family, "Dicksoniaceae");
+  assert.equal(dicksonia?.taxonomy.order, "Cyatheales");
+  assert.equal(encyclopediaSlugOf(dicksonia!), "plantes/dicksonia/antarctica");
+  assert.equal(plants.some((entry) => /Dictyonia/i.test(entry.botanicalName)), false);
+});
+
 test("l’étape 2 ajoute quatre identités Bananiers sans taille commerciale", () => {
   const expected = [
     ["musa", "basjoo", "Musa basjoo"],

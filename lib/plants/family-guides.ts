@@ -32,6 +32,10 @@ const simpleGuides = {
     imageAlt: "Cycas revoluta adulte cultivé en pot sur la terrasse végétalisée de Tibaldo Jungle",
     care: { difficulty: 3, light: 5, water: 2, humidity: 2, substrate: "Très minéral, aéré et drainant", nutrition: "Légère pendant une poussée active" },
   },
+  dicksonia: {
+    ...simpleGuide("Dicksonia", "Dicksonia", "Des fougères arborescentes à croissance lente dont le stipe fibreux porte une couronne de grandes frondes.", "Le genre Dicksonia appartient aux Dicksoniaceae dans l’architecture taxonomique Jungle ; Dicksonia antarctica est originaire du sud-est de l’Australie et de Tasmanie.", "Photographie propriétaire de Dicksonia antarctica à ajouter"),
+    care: { difficulty: 4, light: 3, water: 5, humidity: 5, substrate: "Humifère, frais et drainant", nutrition: "Modérée pendant la croissance" },
+  },
   plumeria: simpleGuide("Plumeria", "Plumeria", "Les frangipaniers associent branches sculpturales, repos hivernal et floraisons parfumées sous une lumière généreuse.", "Les Plumeria appartiennent aux Apocynaceae et sont originaires des régions tropicales américaines.", "Photographie réelle d’un frangipanier à ajouter"),
   equisetum: simpleGuide("Equisetum", "Equisetum", "Les prêles forment des tiges graphiques et rhizomateuses adaptées aux sols humides, à contenir soigneusement au jardin.", "Le genre Equisetum constitue une ancienne lignée de plantes vasculaires présente dans de nombreuses régions du monde.", "Photographie réelle d’une prêle japonaise à ajouter"),
   ficus: simpleGuide("Ficus", "Ficus", "Une future gamme à identifier espèce par espèce : arbres d’intérieur, formes retombantes et feuillages sculpturaux.", "Le vaste genre Ficus appartient aux Moraceae et rassemble des espèces tropicales et subtropicales très diverses.", "Photographies réelles de la gamme Ficus à ajouter"),

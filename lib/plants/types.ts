@@ -31,16 +31,20 @@ export type PlantEntry = {
   family: string; taxonomy: PlantTaxonomy; filters: PlantFilters; origin: string; habitat: string; hybridization: string; synonyms: string[]; description: string[];
   specimen: { observedHeight: string; note: string };
   growth: { adultSize: string; speed: string; habit: string };
-  care: { light: Level; water: Level; humidity: Level; difficulty: Level; lightText: string; watering: string; humidityText: string; temperature: string; substrate: string; repotting: string; fertilizing: string; propagation: string };
+  care: { light: Level; water: Level; humidity: Level; difficulty: Level; difficultyText?: string; lightText: string; watering: string; humidityText: string; temperature: string; substrate: string; repotting: string; fertilizing: string; propagation: string };
   toxicity: { level: string; summary: string; details: string };
   problems: { title: string; cause: string; advice: string }[];
   comparisons: { name: string; difference: string }[];
   faq: { question: string; answer: string }[];
   tibaldoAdvice: string[];
   localSpotlight?: { title: string; text: string };
+  editorialSections?: { id: string; eyebrow: string; title: string; paragraphs: string[]; points?: string[] }[];
+  mediaNeeds?: { role: string; description: string }[];
   gallery: { src: string; alt: string; caption: string; width: number; height: number }[];
   seo: { title: string; description: string; keywords: string[] };
   sources: { label: string; url: string }[];
   shopUrl?: string;
   publishedAt: string; updatedAt: string;
 };
+
+export const isEditorialPlaceholder = (src?: string) => !src || src.includes("photo-reelle-a-venir");
