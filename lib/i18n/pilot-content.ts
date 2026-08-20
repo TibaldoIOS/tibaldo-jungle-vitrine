@@ -1,4 +1,5 @@
 import type { PilotPath, TranslatedLocale } from "./config";
+import { pilotParityContent, type ParitySection } from "./pilot-parity-content";
 
 export type LocalizedPilotPage = {
   kind: "home" | "collection" | "plant" | "guide";
@@ -9,7 +10,7 @@ export type LocalizedPilotPage = {
   intro: string;
   image: string;
   imageAlt: string;
-  sections: { title: string; paragraphs: string[] }[];
+  sections: (ParitySection | Omit<ParitySection, "id">)[];
   faq: { question: string; answer: string }[];
   breadcrumbs: string[];
   cta: string;
@@ -199,4 +200,11 @@ const es: Record<PilotPath, LocalizedPilotPage> = {
   },
 };
 
-export const pilotTranslations: Record<TranslatedLocale, Record<PilotPath, LocalizedPilotPage>> = { en, es };
+const applyParity = (locale: TranslatedLocale, pages: Record<PilotPath, LocalizedPilotPage>) => Object.fromEntries(
+  Object.entries(pages).map(([path, page]) => [path, { ...page, ...pilotParityContent[locale][path as PilotPath] }]),
+) as Record<PilotPath, LocalizedPilotPage>;
+
+export const pilotTranslations: Record<TranslatedLocale, Record<PilotPath, LocalizedPilotPage>> = {
+  en: applyParity("en", en),
+  es: applyParity("es", es),
+};

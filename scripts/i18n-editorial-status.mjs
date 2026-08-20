@@ -24,13 +24,15 @@ for (const [path, page] of Object.entries(manifest.pages)) {
   console.log(`\n${path} · source ${page.sourceVersion}${sourceChanged ? " · MODIFIÉE" : ""}`);
   for (const locale of ["en", "es"]) {
     const translation = page.translations[locale];
+    const parityValidated = page.parity?.[locale] === "validated";
     const derivedStatus = sourceChanged || translation.translatedFromFingerprint !== current ? "outdated" : translation.status;
     if (derivedStatus === "outdated") hasOutdated = true;
-    console.log(`  ${locale.toUpperCase()} · ${derivedStatus} · ${translation.version}`);
+    if (derivedStatus === "published" && !parityValidated) hasOutdated = true;
+    console.log(`  ${locale.toUpperCase()} · ${derivedStatus} · parity ${parityValidated ? "validated" : "missing"} · ${translation.version}`);
   }
 }
 
 if (process.argv.includes("--check") && hasOutdated) {
-  console.error("\nDes traductions doivent être révisées avant publication.");
+  console.error("\nDes traductions doivent être révisées ou compléter leur parité avant publication.");
   process.exitCode = 1;
 }
