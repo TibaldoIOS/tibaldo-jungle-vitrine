@@ -6,6 +6,7 @@ import { afternoonPlants } from "./afternoon-plants.ts";
 import { encyclopediaV2Step1Plants } from "./encyclopedia-v2-step1.ts";
 import { encyclopediaV2Step2Plants } from "./encyclopedia-v2-step2.ts";
 import { cycasRevoluta } from "./cycas-revoluta.ts";
+import { dicksoniaAntarctica } from "./dicksonia-antarctica.ts";
 
 export const plantFamilies = [
   { slug: "bananiers", name: "Bananiers", eyebrow: "Nouvel univers", description: "Bananiers d’intérieur, de terrasse ou de pleine terre : découvrez les différences entre Musa et Ensete, leur croissance, leur hivernage et quatre identités documentées.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle d’un ensemble de Musa et Ensete à ajouter", available: true },
@@ -28,6 +29,7 @@ export const plantFamilies = [
   { slug: "chlorophytum", name: "Chlorophytum", eyebrow: "Nouvelle fiche locale", description: "La plante araignée et ses jeunes plants suspendus rejoignent l’encyclopédie avec une fiche dédiée à Chlorophytum comosum.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle de Chlorophytum à ajouter", available: true },
   { slug: "yucca", name: "Yucca", eyebrow: "Extérieur", description: "Les Yucca associent résistance, soleil et silhouette graphique. Yucca rostrata ouvre cet univers consacré aux végétaux extérieurs.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle de Yucca rostrata à ajouter", available: true },
   { slug: "cycas", name: "Cycas", eyebrow: "Allure préhistorique", description: "Les Cycas ne sont ni des palmiers ni des fougères. Cet univers commence avec Cycas revoluta, une espèce sculpturale à croissance lente qui demande soleil, drainage et prudence en présence d’animaux.", image: "/images/cycas-revoluta/cycas-revoluta-terrasse-tibaldo.webp", imageAlt: "Cycas revoluta adulte cultivé en pot sur la terrasse végétalisée de Tibaldo Jungle", available: true },
+  { slug: "dicksonia", name: "Dicksonia", eyebrow: "Fougère arborescente", description: "Le genre Dicksonia réunit des fougères arborescentes au stipe fibreux. Découvrez Dicksonia antarctica, son besoin d’humidité et son hivernage nuancé dans le Nord.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie propriétaire de Dicksonia antarctica à ajouter", available: true },
   { slug: "plumeria", name: "Plumeria", eyebrow: "Frangipaniers", description: "Floraisons roses ou jaunes, chaleur et repos hivernal : les frangipaniers sont regroupés sans inventer le nom de leurs cultivars.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle de frangipanier à ajouter", available: true },
   { slug: "equisetum", name: "Prêle japonaise", eyebrow: "Extérieur humide", description: "La prêle japonaise forme des tiges verticales très graphiques et demande une culture maîtrisée pour contenir ses rhizomes.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle de prêle japonaise à ajouter", available: true },
   { slug: "ficus", name: "Ficus", eyebrow: "Gamme en préparation", description: "La gamme Ficus sera documentée espèce par espèce après identification et photographie des sujets réellement proposés au Studio.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographies réelles de la gamme Ficus à ajouter", available: true },
@@ -176,7 +178,7 @@ export const plants = [{
   seo: { title: "Pilea peperomioides : entretien et plante à monnaie Lille", description: "Guide du Pilea peperomioides : lumière, arrosage, rejets, substrat et problèmes. Retrouvez la plante à monnaie chinoise à Lille.", keywords: ["Pilea peperomioides entretien", "plante monnaie chinoise Lille", "Pilea Lille", "Pilea animaux", "bouture Pilea"] },
   sources: [{ label: "Kew Science", url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:855664-1/general-information" }, { label: "NC State Extension", url: "https://plants.ces.ncsu.edu/plants/pilea-peperomioides/" }, { label: "Plantes Pour Tous — fiche consultée", url: "https://plantespourtous.co/products/pilea-peperomioides" }],
   publishedAt: "2026-08-06", updatedAt: "2026-08-06",
-}, ...newArrivalPlants, ...requestedPlants, ...afternoonPlants, ...prayerPlants, ...encyclopediaV2Step1Plants, ...encyclopediaV2Step2Plants, cycasRevoluta] satisfies PlantEntry[];
+}, ...newArrivalPlants, ...requestedPlants, ...afternoonPlants, ...prayerPlants, ...encyclopediaV2Step1Plants, ...encyclopediaV2Step2Plants, cycasRevoluta, dicksoniaAntarctica] satisfies PlantEntry[];
 
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);

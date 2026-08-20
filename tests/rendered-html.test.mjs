@@ -191,6 +191,24 @@ test("returns 404 for an unknown encyclopedia plant page", async () => {
   assert.equal(response.status, 404);
 });
 
+test("renders Dicksonia, its hierarchy and the shared species hero fallback", async () => {
+  for (const path of ["/plantes/dicksonia", "/plantes/famille/dicksoniaceae", "/plantes/dicksonia/antarctica"]) {
+    const response = await render(path);
+    assert.equal(response.status, 200, path);
+  }
+  const plantsHtml = await (await render("/plantes")).text();
+  assert.match(plantsHtml, /href=["']\/plantes\/dicksonia["']/i);
+  const speciesHtml = await (await render("/plantes/dicksonia/antarctica")).text();
+  assert.match(speciesHtml, /<h1[^>]*>[\s\S]*?Dicksonia[\s\S]*?antarctica[\s\S]*?<\/h1>/i);
+  assert.match(speciesHtml, /has-editorial-fallback/i);
+  assert.match(speciesHtml, /Cultiver Dicksonia antarctica à Lille et dans le Nord/i);
+  assert.match(speciesHtml, /rel=["']canonical["'][^>]+plantes\/dicksonia\/antarctica/i);
+  assert.doesNotMatch(speciesHtml, /Dictyonia/i);
+  const api = await (await render("/api/encyclopedie/plantes")).json();
+  assert.equal(api.length, 39);
+  assert.ok(api.some((entry) => entry.encyclopediaSlug === "plantes/dicksonia/antarctica"));
+});
+
 test("renders the Bananiers cluster and preserves its API identities", async () => {
   for (const path of ["/plantes/bananiers", "/plantes/musa", "/plantes/ensete", "/plantes/musa/basjoo", "/plantes/musa/sikkimensis-red-tiger", "/plantes/musa/florida-variegata", "/plantes/ensete/ventricosum-maurelii"]) {
     const response = await render(path);
