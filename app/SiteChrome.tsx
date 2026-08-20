@@ -1,11 +1,21 @@
+import LanguageSwitcher from "./LanguageSwitcher";
+import { localizedPath, type Locale } from "@/lib/i18n/config";
+
 const Arrow = () => <span aria-hidden="true">↗</span>;
 const InstagramIcon = () => <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4.25" /><circle className="social-icon-dot" cx="17.4" cy="6.8" r="1" /></svg>;
 const FacebookIcon = () => <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.7 21v-8h2.8l.42-3.2H13.7V7.75c0-.93.26-1.56 1.62-1.56H17V3.33c-.3-.04-1.3-.13-2.48-.13-2.46 0-4.15 1.5-4.15 4.27V9.8H7.6V13h2.77v8h3.33Z" /></svg>;
 
-export function SiteHeader({ light = false }: { light?: boolean }) {
+export function SiteHeader({ light = false, locale = "fr", currentPath = "/" }: { light?: boolean; locale?: Locale; currentPath?: string }) {
+  const translated = locale !== "fr";
+  const nav = locale === "en"
+    ? [{ href: localizedPath("/plantes", locale), label: "Plants" }, { href: localizedPath("/conseils/arroser-plantes-interieur", locale), label: "Watering guide" }]
+    : locale === "es"
+      ? [{ href: localizedPath("/plantes", locale), label: "Plantas" }, { href: localizedPath("/conseils/arroser-plantes-interieur", locale), label: "Guía de riego" }]
+      : [{ href: "/plantes", label: "Plantes" }, { href: "/substrats", label: "Substrats" }, { href: "/pots-cache-pots-lille", label: "Pots" }, { href: "/sos-plantes", label: "SOS Plantes" }, { href: "/rempotage", label: "Rempotage" }, { href: "/conseils", label: "Conseils" }, { href: "/services", label: "Services" }];
+  const home = localizedPath("/", locale);
   return (
     <header className={`site-header shell${light ? " site-header-light" : ""}`}>
-      <a className="brand" href="/" aria-label="Studio Végétal Tibaldo Jungle, accueil">
+      <a className="brand" href={home} aria-label={locale === "en" ? "Tibaldo Jungle Plant Studio, home" : locale === "es" ? "Estudio Vegetal Tibaldo Jungle, inicio" : "Studio Végétal Tibaldo Jungle, accueil"}>
         <img className="brand-logo" src="/tibaldo-jungle-logo.webp" alt="Studio Végétal Tibaldo Jungle à Lille" width={72} height={72} />
         <span className="brand-wordmark">
           <strong><span>STUDIO VÉGÉTAL</span></strong>
@@ -15,19 +25,14 @@ export function SiteHeader({ light = false }: { light?: boolean }) {
       </a>
 
       <nav className="desktop-nav" aria-label="Navigation principale">
-        <a href="/plantes">Plantes</a>
-        <a href="/substrats">Substrats</a>
-        <a href="/pots-cache-pots-lille">Pots</a>
-        <a href="/sos-plantes">SOS Plantes</a>
-        <a href="/rempotage">Rempotage</a>
-        <a href="/conseils">Conseils</a>
-        <a href="/services">Services</a>
+        {nav.map((item) => <a href={item.href} key={item.href}>{item.label}</a>)}
         <a className="nav-shop" href="https://shop.tibaldo.fr">Boutique ↗</a>
       </nav>
 
       <details className="mobile-menu">
         <summary aria-label="Ouvrir le menu principal"><span className="menu-glyph" aria-hidden="true"><i /><i /></span><b>Menu</b></summary>
         <div className="mobile-menu-panel" aria-label="Navigation mobile">
+          {translated ? <><a href={home}><span>01</span>{locale === "en" ? "Home" : "Inicio"}</a><a href={localizedPath("/plantes", locale)}><span>02</span>{locale === "en" ? "Plants" : "Plantas"}</a><a href={localizedPath("/conseils/arroser-plantes-interieur", locale)}><span>03</span>{locale === "en" ? "Watering guide" : "Guía de riego"}</a><a href="https://shop.tibaldo.fr"><span>04</span>Shop</a></> : <>
           <a href="/"><span>01</span>Accueil</a>
           <a href="/plantes"><span>02</span>Plantes</a>
           <a href="/conseils"><span>03</span>Conseils</a>
@@ -41,6 +46,7 @@ export function SiteHeader({ light = false }: { light?: boolean }) {
           <a href="/services"><span>11</span>Nos services</a>
           <a href="/coulisses"><span>12</span>Les coulisses</a>
           <a href="/contact"><span>13</span>Contact</a>
+          </>}
           <div className="mobile-menu-socials">
             <span>Suivre la Jungle</span>
             <a href="https://www.instagram.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Instagram Tibaldo Jungle"><InstagramIcon /><strong>Instagram</strong></a>
@@ -50,11 +56,12 @@ export function SiteHeader({ light = false }: { light?: boolean }) {
       </details>
 
       <div className="header-actions">
+        <LanguageSwitcher initialPath={localizedPath(currentPath, locale)} />
         <div className="header-socials" aria-label="Réseaux sociaux Tibaldo Jungle">
           <a href="https://www.instagram.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Instagram Tibaldo Jungle"><InstagramIcon /></a>
           <a href="https://www.facebook.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Facebook Tibaldo Jungle"><FacebookIcon /></a>
         </div>
-        <a className="header-cta" data-action="route" href="/contact">Nous trouver <Arrow /></a>
+        {!translated && <a className="header-cta" data-action="route" href="/contact">Nous trouver <Arrow /></a>}
       </div>
     </header>
   );

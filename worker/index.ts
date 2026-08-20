@@ -19,6 +19,16 @@ interface ExecutionContext {
   passThroughOnException(): void;
 }
 
+const multilingualPilotPaths = new Set([
+  "/", "/plantes", "/plantes/cycas/revoluta", "/plantes/anthurium/clarinervium",
+  "/plantes/monstera/thai-constellation", "/plantes/bananiers", "/conseils/arroser-plantes-interieur",
+]);
+
+function localizedRequestPath(pathname: string) {
+  const match = pathname.match(/^\/(en|es)(\/.*)?$/);
+  return { locale: match?.[1] ?? "fr", canonical: match ? match[2] || "/" : pathname.replace(/\/$/, "") || "/" };
+}
+
 // Image security config. SVG sources with .svg extension auto-skip the
 // optimization endpoint on the client side (served directly, no proxy).
 // To route SVGs through the optimizer (with security headers), set
@@ -40,7 +50,20 @@ const worker = {
       }, allowedWidths);
     }
 
-    return handler.fetch(request, env, ctx);
+    const response = await handler.fetch(request, env, ctx);
+    const type = response.headers.get("content-type") ?? "";
+    if (!type.includes("text/html")) return response;
+    const page = localizedRequestPath(url.pathname);
+    if (!multilingualPilotPaths.has(page.canonical)) return response;
+    let html = await response.text();
+    html = html.replace(/<html([^>]*?)lang=["'][^"']+["']([^>]*)>/i, `<html$1lang="${page.locale}"$2>`);
+    if (page.locale === "fr") {
+      const alternates = `<link rel="alternate" hreflang="fr" href="https://jungle.tibaldo.fr${page.canonical}"><link rel="alternate" hreflang="en" href="https://jungle.tibaldo.fr/en${page.canonical === "/" ? "" : page.canonical}"><link rel="alternate" hreflang="es" href="https://jungle.tibaldo.fr/es${page.canonical === "/" ? "" : page.canonical}"><link rel="alternate" hreflang="x-default" href="https://jungle.tibaldo.fr${page.canonical}">`;
+      html = html.replace(/<\/head>/i, `${alternates}</head>`);
+    }
+    const headers = new Headers(response.headers);
+    headers.delete("content-length");
+    return new Response(html, { status: response.status, statusText: response.statusText, headers });
   },
 };
 
