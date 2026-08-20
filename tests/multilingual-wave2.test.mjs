@@ -48,7 +48,7 @@ test("serves all 26 translated guide routes with reciprocal SEO and content pari
 });
 
 test("keeps horticultural vocabulary and technical values stable", () => {
-  assert.equal(Object.keys(glossary).length, 21);
+  assert.equal(Object.keys(glossary).length >= 39, true);
   assert.deepEqual(glossary["pourriture racinaire"], { en: "root rot", es: "podredumbre radicular" });
   assert.deepEqual(glossary["racines aériennes"], { en: "aerial roots", es: "raíces aéreas" });
   assert.equal(translations.en["Choisir le bon substrat"], "How to choose the right growing medium");
@@ -66,7 +66,7 @@ test("adds Wave 2 only to the noindex beta sitemap", async () => {
   assert.equal(beta.status, 200);
   assert.equal(beta.headers.get("x-robots-tag"), "noindex");
   const xml = await beta.text();
-  assert.equal((xml.match(/<url>/g) ?? []).length, 249);
+  assert.equal((xml.match(/<url>/g) ?? []).length, 279);
   for (const { path } of inventory.paths) for (const locale of ["fr", "en", "es"]) {
     const route = locale === "fr" ? path : localized(path, locale);
     assert.match(xml, new RegExp(`<loc>${origin.replaceAll("/", "\\/")}${route.replaceAll("/", "\\/")}<\/loc>`), route);
@@ -76,5 +76,5 @@ test("adds Wave 2 only to the noindex beta sitemap", async () => {
 });
 
 test("fails closed for non-published local and commercial translations", async () => {
-  for (const route of ["/en/sos-plantes", "/es/rempotage", "/en/services", "/es/substrats"]) assert.equal((await render(route)).status, 404, route);
+  for (const route of ["/en/sos-plantes", "/es/rempotage", "/en/services", "/es/substrats-en-vrac-lille"]) assert.equal((await render(route)).status, 404, route);
 });

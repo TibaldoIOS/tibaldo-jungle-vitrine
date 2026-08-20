@@ -65,7 +65,7 @@ test("projects the complete multilingual beta sitemap without touching productio
   assert.equal(beta.status, 200);
   assert.equal(beta.headers.get("x-robots-tag"), "noindex");
   const xml = await beta.text();
-  assert.equal((xml.match(/<url>/g) ?? []).length, 249);
+  assert.equal((xml.match(/<url>/g) ?? []).length, 279);
   for (const { path } of inventory.paths) for (const locale of ["fr", "en", "es"]) {
     const route = locale === "fr" ? path : localized(path, locale);
     assert.match(xml, new RegExp(`<loc>${origin.replaceAll("/", "\\/")}${route.replaceAll("/", "\\/")}<\/loc>`), route);
@@ -76,7 +76,7 @@ test("projects the complete multilingual beta sitemap without touching productio
 });
 
 test("fails closed outside the published multilingual perimeter", async () => {
-  for (const route of ["/en/plantes/inconnu", "/es/plantes/famille/inconnue", "/en/substrats", "/es/services"]) assert.equal((await render(route)).status, 404, route);
+  for (const route of ["/en/plantes/inconnu", "/es/plantes/famille/inconnue", "/en/substrats/inconnu", "/es/services"]) assert.equal((await render(route)).status, 404, route);
 });
 
 test("publishes the current Jungle Cycas source with complete EN and ES media parity", async () => {
