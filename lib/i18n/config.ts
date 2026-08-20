@@ -18,6 +18,11 @@ export const pilotPaths = [
 export type PilotPath = (typeof pilotPaths)[number];
 export const isPilotPath = (path: string): path is PilotPath => pilotPaths.includes(path as PilotPath);
 
+import wave1Inventory from "./wave1-inventory.generated.json";
+export const wave1Paths = wave1Inventory.paths.map(({ path }) => path);
+export const multilingualPaths = Array.from(new Set([...pilotPaths, ...wave1Paths]));
+export const isMultilingualPath = (path: string) => multilingualPaths.includes(path);
+
 export function canonicalPath(path: string) {
   const clean = `/${path}`.replace(/\/+/g, "/").replace(/\/$/, "") || "/";
   const match = clean.match(/^\/(en|es)(\/.*)?$/);
@@ -38,4 +43,3 @@ export const languageNames: Record<Locale, string> = { fr: "Français", en: "Eng
 export const languageFlags: Record<Locale, string> = { fr: "🇫🇷", en: "🇬🇧", es: "🇪🇸" };
 export const languageTags: Record<Locale, string> = { fr: "fr-FR", en: "en-GB", es: "es-ES" };
 export const openGraphLocales: Record<Locale, string> = { fr: "fr_FR", en: "en_GB", es: "es_ES" };
-

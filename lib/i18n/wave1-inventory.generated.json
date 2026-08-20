@@ -1,0 +1,281 @@
+{
+  "generatedAt": "2026-08-20",
+  "paths": [
+    {
+      "path": "/plantes",
+      "kind": "hub"
+    },
+    {
+      "path": "/plantes/bananiers",
+      "kind": "group"
+    },
+    {
+      "path": "/plantes/aloe",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/chlorophytum",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/yucca",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/cycas",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/plumeria",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/equisetum",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/ficus",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/syngonium",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/hoya",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/sansevieria",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/fougeres",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/musa",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/ensete",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/alocasia",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/anthurium",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/monstera",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/philodendron",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/epipremnum",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/asparagus",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/colocasia",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/pilea",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/peperomia",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/maranta",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/calathea",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/cactus",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/epiphyllum",
+      "kind": "genre"
+    },
+    {
+      "path": "/plantes/famille/araceae",
+      "kind": "family"
+    },
+    {
+      "path": "/plantes/famille/asparagaceae",
+      "kind": "family"
+    },
+    {
+      "path": "/plantes/famille/musaceae",
+      "kind": "family"
+    },
+    {
+      "path": "/plantes/alocasia/imperial-red",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/anthurium/pallidiflorum",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/anthurium/veitchii",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/philodendron/billietiae",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/pilea/peperomioides",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/asparagus/plumosus",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/epipremnum/marble-queen",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/epiphyllum/anguliger",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/monstera/deliciosa",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/monstera/thai-constellation",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/monstera/mint",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/monstera/adansonii",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/philodendron/royal-queen",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/anthurium/delta-force",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/philodendron/melanochrysum",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/philodendron/brasil",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/anthurium/regale",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/anthurium/papillilaminum-dark-phoenix",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/anthurium/forgetii-dark-form-silver-blush",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/philodendron/gloriosum",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/philodendron/grazielae",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/monstera/burle-marx-flame",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/monstera/esqueleto",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/pilea/cadierei",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/colocasia/esculenta-eddo",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/yucca/rostrata",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/cycas/revoluta",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/aloe/vera",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/chlorophytum/comosum",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/plumeria/rubra",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/equisetum/japonicum",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/maranta/lemon-lime",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/anthurium/clarinervium",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/anthurium/warocqueanum",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/musa/basjoo",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/musa/sikkimensis-red-tiger",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/musa/florida-variegata",
+      "kind": "identity"
+    },
+    {
+      "path": "/plantes/ensete/ventricosum-maurelii",
+      "kind": "identity"
+    }
+  ]
+}

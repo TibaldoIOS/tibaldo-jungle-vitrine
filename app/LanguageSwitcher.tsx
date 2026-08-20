@@ -1,7 +1,7 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
-import { canonicalPath, isPilotPath, languageFlags, languageNames, localeFromPath, locales, localizedPath, type Locale } from "@/lib/i18n/config";
+import { canonicalPath, isMultilingualPath, languageFlags, languageNames, localeFromPath, locales, localizedPath, type Locale } from "@/lib/i18n/config";
 
 const subscribe = () => () => {};
 
@@ -9,7 +9,7 @@ export default function LanguageSwitcher({ initialPath = "/" }: { initialPath?: 
   const pathname = useSyncExternalStore(subscribe, () => window.location.pathname, () => initialPath);
   const locale = localeFromPath(pathname);
   const canonical = canonicalPath(pathname);
-  const available = isPilotPath(canonical);
+  const available = isMultilingualPath(canonical);
   const options = locales.map((target) => ({ target, href: available ? localizedPath(canonical, target) : null }));
   const remember = (target: Locale, link: HTMLAnchorElement) => {
     window.localStorage.setItem("tibaldo_locale", target);
