@@ -205,8 +205,34 @@ test("renders Dicksonia, its hierarchy and the shared species hero fallback", as
   assert.match(speciesHtml, /rel=["']canonical["'][^>]+plantes\/dicksonia\/antarctica/i);
   assert.doesNotMatch(speciesHtml, /Dictyonia/i);
   const api = await (await render("/api/encyclopedie/plantes")).json();
-  assert.equal(api.length, 39);
+  assert.equal(api.length, 46);
   assert.ok(api.some((entry) => entry.encyclopediaSlug === "plantes/dicksonia/antarctica"));
+});
+
+test("renders the Agave, Fatsia and five-species Strelitzia cluster", async () => {
+  const paths = [
+    "/plantes/agave", "/plantes/agave/americana-variegata",
+    "/plantes/fatsia", "/plantes/fatsia/japonica-spiders-web",
+    "/plantes/strelitzia", "/plantes/strelitzia/alba", "/plantes/strelitzia/caudata",
+    "/plantes/strelitzia/juncea", "/plantes/strelitzia/nicolai", "/plantes/strelitzia/reginae",
+  ];
+  for (const path of paths) {
+    const response = await render(path);
+    assert.equal(response.status, 200, path);
+    const html = await response.text();
+    assert.match(html, /<h1/i, path);
+    assert.match(html, /rel=["']canonical["']/i, path);
+    if (path.split("/").length === 4) assert.match(html, /has-editorial-fallback/i, path);
+    assert.doesNotMatch(html, /\/_vinext\/image/i, path);
+    assert.doesNotMatch(html, /noindex/i, path);
+  }
+  const hub = await (await render("/plantes/strelitzia")).text();
+  assert.match(hub, /cinq espèces/i);
+  assert.match(hub, /synonyme de S\. alba/i);
+  assert.doesNotMatch(hub, /href=["']\/plantes\/strelitzia\/augusta/i);
+  const api = await (await render("/api/v2/encyclopedie/plantes")).json();
+  assert.equal(api.length, 46);
+  assert.equal(new Set(api.map((entry) => entry.encyclopediaSlug)).size, 46);
 });
 
 test("serves species hero photos directly without the vinext image optimizer", async () => {

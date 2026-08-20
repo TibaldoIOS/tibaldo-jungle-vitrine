@@ -7,8 +7,12 @@ import { encyclopediaV2Step1Plants } from "./encyclopedia-v2-step1.ts";
 import { encyclopediaV2Step2Plants } from "./encyclopedia-v2-step2.ts";
 import { cycasRevoluta } from "./cycas-revoluta.ts";
 import { dicksoniaAntarctica } from "./dicksonia-antarctica.ts";
+import { agaveFatsiaStrelitziaPlants } from "./agave-fatsia-strelitzia.ts";
 
 export const plantFamilies = [
+  { slug: "strelitzia", name: "Strelitzia", eyebrow: "Oiseaux de paradis", description: "Les cinq espèces acceptées du genre Strelitzia : du compact reginae aux grands alba, caudata et nicolai, avec une lecture claire des appellations « Augusta ».", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle de Strelitzia à ajouter", available: true },
+  { slug: "agave", name: "Agave", eyebrow: "Succulentes architecturales", description: "Rosettes armées, soleil et drainage : l’univers Agave commence avec le cultivar panaché Agave americana ‘Variegata’.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle d’Agave americana Variegata à ajouter", available: true },
+  { slug: "fatsia", name: "Fatsia", eyebrow: "Feuillage d’ombre", description: "Arbustes persistants aux grandes feuilles palmées, les Fatsia apportent une présence exotique aux emplacements ombragés et abrités.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle de Fatsia japonica Spider’s Web à ajouter", available: true },
   { slug: "bananiers", name: "Bananiers", eyebrow: "Nouvel univers", description: "Bananiers d’intérieur, de terrasse ou de pleine terre : découvrez les différences entre Musa et Ensete, leur croissance, leur hivernage et quatre identités documentées.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle d’un ensemble de Musa et Ensete à ajouter", available: true },
   { slug: "musa", name: "Musa", eyebrow: "Genre documenté", description: "Le genre Musa rassemble des bananiers rhizomateux aux usages et résistances très différents. Trois fiches détaillent Basjoo, Red Tiger et Florida Variegata.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle de plusieurs Musa à ajouter", available: true },
   { slug: "ensete", name: "Ensete", eyebrow: "Genre documenté", description: "Proches des Musa mais généralement solitaires, les Ensete forment de puissantes rosettes ornementales. Découvrez Ensete ventricosum Maurelii.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle d’un Ensete à ajouter", available: true },
@@ -178,7 +182,7 @@ export const plants = [{
   seo: { title: "Pilea peperomioides : entretien et plante à monnaie Lille", description: "Guide du Pilea peperomioides : lumière, arrosage, rejets, substrat et problèmes. Retrouvez la plante à monnaie chinoise à Lille.", keywords: ["Pilea peperomioides entretien", "plante monnaie chinoise Lille", "Pilea Lille", "Pilea animaux", "bouture Pilea"] },
   sources: [{ label: "Kew Science", url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:855664-1/general-information" }, { label: "NC State Extension", url: "https://plants.ces.ncsu.edu/plants/pilea-peperomioides/" }, { label: "Plantes Pour Tous — fiche consultée", url: "https://plantespourtous.co/products/pilea-peperomioides" }],
   publishedAt: "2026-08-06", updatedAt: "2026-08-06",
-}, ...newArrivalPlants, ...requestedPlants, ...afternoonPlants, ...prayerPlants, ...encyclopediaV2Step1Plants, ...encyclopediaV2Step2Plants, cycasRevoluta, dicksoniaAntarctica] satisfies PlantEntry[];
+}, ...newArrivalPlants, ...requestedPlants, ...afternoonPlants, ...prayerPlants, ...encyclopediaV2Step1Plants, ...encyclopediaV2Step2Plants, cycasRevoluta, dicksoniaAntarctica, ...agaveFatsiaStrelitziaPlants] satisfies PlantEntry[];
 
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
@@ -192,6 +196,6 @@ export const studioCollection = [
   { genre: "Philodendron", href: "/plantes/philodendron", plants: ["Philodendron billietiae", "Philodendron gloriosum", "Philodendron melanochrysum"] },
   { genre: "Epipremnum · Pothos", href: "/plantes/epipremnum", plants: ["Epipremnum aureum ‘Marble Queen’"] },
   { genre: "Asparagus", href: "/plantes/asparagus", plants: ["Asparagus setaceus · vendu comme Asparagus plumosus"] },
-  { genre: "Strelitzia", href: null, plants: ["Oiseau de paradis · espèce à confirmer"] },
+  { genre: "Strelitzia", href: "/plantes/strelitzia", plants: ["Strelitzia alba", "Strelitzia caudata", "Strelitzia juncea", "Strelitzia nicolai", "Strelitzia reginae"] },
   { genre: "Ficus", href: "/plantes/ficus", plants: ["Gamme à identifier et photographier"] },
 ] as const;

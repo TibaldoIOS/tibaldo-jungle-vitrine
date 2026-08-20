@@ -1,4 +1,19 @@
 export const familyEditorials = {
+  agave: [
+    { title: "Une rosette conçue pour la lumière", text: "Les Agave stockent l’eau dans des feuilles charnues disposées en rosette. Leur port compact dépend d’un soleil généreux, mais tout sujet cultivé sous abri doit être acclimaté pour éviter les brûlures." },
+    { title: "Le drainage avant le froid", text: "À Lille, l’humidité hivernale et l’eau stagnante autour du cœur ou des racines aggravent les dégâts du froid. Un mélange minéral, un pot percé et un abri contre la pluie comptent autant qu’une température minimale." },
+    { title: "Une plante armée à anticiper", text: "Dents marginales, épine terminale et sève irritante imposent un emplacement hors passage. Le rempotage se prépare avec gants, lunettes et contenant stable." },
+  ],
+  fatsia: [
+    { title: "Une présence exotique à l’ombre", text: "Les grandes feuilles palmées du Fatsia structurent une cour ou un jardin ombragé sans exiger le plein soleil. Les cultivars panachés demandent toutefois assez de lumière pour exprimer leurs motifs." },
+    { title: "Abriter plutôt que surprotéger", text: "Les vents froids déchirent les limbes et dessèchent un jeune sujet. À Lille, un mur, une cour ou un patio abrité offre souvent un meilleur microclimat qu’un emplacement ouvert." },
+    { title: "Un arbuste, pas seulement une plante d’intérieur", text: "Fatsia japonica peut vivre durablement dehors dans un site adapté. En pot ou en intérieur, il faut respecter son besoin d’air, de fraîcheur et d’espace plutôt que le confiner près d’un radiateur." },
+  ],
+  strelitzia: [
+    { title: "Cinq espèces acceptées", text: "Kew reconnaît alba, caudata, juncea, nicolai et reginae. Leurs ports, tailles et fleurs diffèrent suffisamment pour exclure une fiche générique répétée cinq fois." },
+    { title: "Augusta est un nom piégeux", text: "Strelitzia augusta est un synonyme botanique de S. alba, mais l’étiquette commerciale « Augusta » peut aussi être utilisée de façon imprécise. Jungle conserve cette nuance au lieu d’identifier un spécimen sur son étiquette seule." },
+    { title: "Une saison dehors à Lille", text: "Une forte lumière et une sortie estivale progressive renforcent les Strelitzia. Le vent, les nuits froides et une motte détrempée imposent cependant une rentrée anticipée et un hivernage lumineux hors gel." },
+  ],
   alocasia: [
     { title: "Une présence tropicale spectaculaire", text: "Les Alocasia sont recherchés pour leur silhouette architecturale, leurs pétioles graphiques et leurs feuilles parfois immenses. Certaines espèces restent compactes tandis que d’autres deviennent de véritables plantes XXL. Leur aspect varie beaucoup selon la variété : limbes veloutés, nervures contrastées, reflets métalliques ou tiges colorées. Cette diversité permet de choisir un Alocasia adapté à une étagère lumineuse comme à un grand séjour." },
     { title: "Réussir un Alocasia à Lille", text: "Dans un intérieur lillois, la lumière constitue le premier facteur de réussite. Une place proche d’une fenêtre lumineuse, protégée du soleil brûlant, favorise des feuilles plus solides et une croissance régulière. En hiver, la baisse de luminosité ralentit naturellement la plante : les arrosages doivent alors diminuer. Le froid contre une vitre, les courants d’air et un substrat constamment détrempé sont plus dangereux qu’une humidité ambiante imparfaite." },

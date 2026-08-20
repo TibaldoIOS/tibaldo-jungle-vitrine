@@ -62,12 +62,32 @@ test("tous les encyclopedia_slug restent uniques", () => {
 
 test("Dicksonia antarctica ajoute une seule identité botanique centrale", () => {
   const dicksonia = plants.find((entry) => entry.genre === "dicksonia" && entry.slug === "antarctica");
-  assert.equal(plants.length, 39);
+  assert.equal(plants.length, 46);
   assert.equal(dicksonia?.botanicalName, "Dicksonia antarctica");
   assert.equal(dicksonia?.taxonomy.family, "Dicksoniaceae");
   assert.equal(dicksonia?.taxonomy.order, "Cyatheales");
   assert.equal(encyclopediaSlugOf(dicksonia!), "plantes/dicksonia/antarctica");
   assert.equal(plants.some((entry) => /Dictyonia/i.test(entry.botanicalName)), false);
+});
+
+test("le lot Agave, Fatsia et Strelitzia ajoute sept identités exactes", () => {
+  const expected = [
+    ["agave", "americana-variegata", "Agave americana ‘Variegata’"],
+    ["fatsia", "japonica-spiders-web", "Fatsia japonica ‘Spider’s Web’"],
+    ["strelitzia", "alba", "Strelitzia alba"],
+    ["strelitzia", "caudata", "Strelitzia caudata"],
+    ["strelitzia", "juncea", "Strelitzia juncea"],
+    ["strelitzia", "nicolai", "Strelitzia nicolai"],
+    ["strelitzia", "reginae", "Strelitzia reginae"],
+  ];
+  for (const [genre, slug, name] of expected) {
+    const entry = plants.find((item) => item.genre === genre && item.slug === slug);
+    assert.equal(entry?.botanicalName, name);
+    assert.equal(encyclopediaSlugOf(entry!), `plantes/${genre}/${slug}`);
+  }
+  assert.equal(plants.some((item) => item.genre === "strelitzia" && item.slug === "augusta"), false);
+  assert.equal(plants.find((item) => item.genre === "agave")?.taxonomy.cultivar, "Variegata");
+  assert.equal(plants.find((item) => item.genre === "fatsia")?.taxonomy.cultivar, "Spider’s Web");
 });
 
 test("l’étape 2 ajoute quatre identités Bananiers sans taille commerciale", () => {

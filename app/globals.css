@@ -1963,3 +1963,12 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
 @keyframes openingMapTravel{0%{background-position:center,center,0 0,center}100%{background-position:center,center,70px -45px,center}}@keyframes openingDateFloat{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-22px,14px,0)}}@keyframes openingMarkerPulse{0%,100%{opacity:.52;transform:translateY(0)}50%{opacity:1;transform:translateY(-6px)}}
 @media(max-width:800px){.opening-photo::before{top:8%;right:-22%;font-size:26vw}.opening-photo::after{right:7%;bottom:7%;padding:13px 15px;font-size:6px;letter-spacing:.14em}.opening-overlay{background:linear-gradient(0deg,rgba(5,29,21,.98) 0%,rgba(5,29,21,.88) 63%,rgba(5,29,21,.35) 100%)}}
 @media(prefers-reduced-motion:reduce){.opening-photo,.opening-photo::before,.opening-photo::after{animation:none}}
+/* Strelitzia comparison keeps semantic table headers and remains scrollable on narrow screens. */
+.strelitzia-comparison { padding-top: 5rem; padding-bottom: 5rem; }
+.strelitzia-comparison h2 { margin: 1rem 0 2rem; }
+.strelitzia-comparison-scroll { overflow-x: auto; border: 1px solid rgba(20, 61, 48, .16); }
+.strelitzia-comparison table { width: 100%; min-width: 820px; border-collapse: collapse; background: #f7f3e8; }
+.strelitzia-comparison th, .strelitzia-comparison td { padding: 1rem; text-align: left; vertical-align: top; border-bottom: 1px solid rgba(20, 61, 48, .13); }
+.strelitzia-comparison thead th { background: #173e33; color: #f7f3e8; }
+.strelitzia-comparison tbody th { color: #173e33; font-style: italic; }
+@media (max-width: 600px) { .strelitzia-comparison { padding-top: 3rem; padding-bottom: 3rem; } }

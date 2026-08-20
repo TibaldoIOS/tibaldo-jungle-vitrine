@@ -114,7 +114,7 @@ export default function PlantsPage() {
       </section>
       <section className="studio-collection shell" aria-labelledby="studio-collection-title">
         <header data-reveal><p className="section-kicker">Cultivées et observées à Wattignies</p><h2 id="studio-collection-title">La collection<br /><em>du Studio.</em></h2><p>Cette liste reflète les plantes actuellement cultivées ou suivies par Tibaldo Jungle. Elle nourrit progressivement l’encyclopédie ; elle ne constitue pas un état du stock en boutique.</p></header>
-        <div className="studio-collection-list">{studioCollection.map((group, index) => <article key={group.genre} data-reveal><span>{String(index + 1).padStart(2, "0")}</span><div><h3>{group.href ? <a href={group.href}>{group.genre} <Arrow /></a> : group.genre}</h3><ul>{group.plants.map((plant) => <li key={plant}>{plant}</li>)}</ul></div></article>)}</div>
+        <div className="studio-collection-list">{studioCollection.map((group, index) => <article key={group.genre} data-reveal><span>{String(index + 1).padStart(2, "0")}</span><div><h3><a href={group.href}>{group.genre} <Arrow /></a></h3><ul>{group.plants.map((plant) => <li key={plant}>{plant}</li>)}</ul></div></article>)}</div>
         <p className="studio-collection-note">Les mentions « à confirmer » seront remplacées après vérification de l’étiquette horticole ou du fournisseur.</p>
       </section>
       <OpeningEventLink />
