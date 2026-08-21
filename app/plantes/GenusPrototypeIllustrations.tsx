@@ -30,12 +30,18 @@ function StrelitziaLeaf({ transform }: { transform: string }) {
 
 function StrelitziaIllustration() {
   return <BotanicalSvg>
-    <StrelitziaLeaf transform="translate(318 558) rotate(-44) scale(.77)" />
-    <StrelitziaLeaf transform="translate(324 558) rotate(-27) scale(.92)" />
-    <StrelitziaLeaf transform="translate(329 558) rotate(-10) scale(1.04)" />
-    <StrelitziaLeaf transform="translate(335 558) rotate(7) scale(1.12)" />
-    <StrelitziaLeaf transform="translate(341 558) rotate(23) scale(.98)" />
-    <StrelitziaLeaf transform="translate(347 558) rotate(41) scale(.82)" />
+    <g className="botanical-back botanical-back-rich">
+      <StrelitziaLeaf transform="translate(278 558) rotate(-54) scale(.68)" />
+      <StrelitziaLeaf transform="translate(292 558) rotate(-38) scale(.88)" />
+      <StrelitziaLeaf transform="translate(312 558) rotate(-20) scale(1.02)" />
+      <StrelitziaLeaf transform="translate(350 558) rotate(17) scale(1.03)" />
+      <StrelitziaLeaf transform="translate(369 558) rotate(36) scale(.88)" />
+      <StrelitziaLeaf transform="translate(382 558) rotate(53) scale(.68)" />
+    </g>
+    <StrelitziaLeaf transform="translate(306 558) rotate(-31) scale(.95)" />
+    <StrelitziaLeaf transform="translate(327 558) rotate(-9) scale(1.16)" />
+    <StrelitziaLeaf transform="translate(343 558) rotate(8) scale(1.23)" />
+    <StrelitziaLeaf transform="translate(363 558) rotate(28) scale(.98)" />
     <g transform="translate(293 250) rotate(-8)">
       <path d="M0 294C-2 205 3 112 17 25" />
       <path d="M17 25c31 9 58 8 88-4-18 22-46 32-83 28" />
@@ -67,10 +73,15 @@ function AlocasiaLeaf({ transform }: { transform: string }) {
 
 function AlocasiaIllustration() {
   return <BotanicalSvg>
-    <AlocasiaLeaf transform="translate(230 559) rotate(-25) scale(.82)" />
-    <AlocasiaLeaf transform="translate(334 559) rotate(-2) scale(1.08)" />
-    <AlocasiaLeaf transform="translate(440 559) rotate(24) scale(.8)" />
-    <path d="M185 558c82-27 226-27 303 0" />
+    <g className="botanical-back">
+      <AlocasiaLeaf transform="translate(206 559) rotate(-42) scale(.67)" />
+      <AlocasiaLeaf transform="translate(331 559) rotate(-7) scale(.92)" />
+      <AlocasiaLeaf transform="translate(469 559) rotate(39) scale(.65)" />
+    </g>
+    <AlocasiaLeaf transform="translate(256 559) rotate(-24) scale(.92)" />
+    <AlocasiaLeaf transform="translate(337 559) rotate(-1) scale(1.18)" />
+    <AlocasiaLeaf transform="translate(423 559) rotate(23) scale(.93)" />
+    <path d="M153 558c102-35 270-35 383 0" />
   </BotanicalSvg>;
 }
 
@@ -102,11 +113,15 @@ function MonsteraLeaf({ transform, mature = true }: { transform: string; mature?
 
 function MonsteraIllustration() {
   return <BotanicalSvg>
-    <MonsteraLeaf transform="translate(218 559) rotate(-24) scale(.72)" />
-    <MonsteraLeaf transform="translate(334 559) rotate(-1) scale(1.02)" />
-    <MonsteraLeaf transform="translate(448 559) rotate(22) scale(.7)" />
-    <MonsteraLeaf mature={false} transform="translate(511 558) rotate(43) scale(.48)" />
-    <path d="M177 558c84-27 250-27 340 0" />
+    <g className="botanical-back">
+      <MonsteraLeaf mature={false} transform="translate(196 559) rotate(-42) scale(.52)" />
+      <MonsteraLeaf transform="translate(328 559) rotate(-8) scale(.82)" />
+      <MonsteraLeaf mature={false} transform="translate(474 559) rotate(39) scale(.54)" />
+    </g>
+    <MonsteraLeaf transform="translate(265 559) rotate(-24) scale(.82)" />
+    <MonsteraLeaf transform="translate(340 559) rotate(-1) scale(1.08)" />
+    <MonsteraLeaf transform="translate(423 559) rotate(24) scale(.84)" />
+    <path d="M142 558c113-34 283-34 398 0" />
   </BotanicalSvg>;
 }
 
@@ -146,16 +161,21 @@ function AnthuriumLongLeaf({ transform }: { transform: string }) {
 
 function AnthuriumIllustration() {
   return <BotanicalSvg>
-    <AnthuriumHeartLeaf transform="translate(224 559) rotate(-24) scale(.82)" />
-    <AnthuriumLongLeaf transform="translate(334 559) rotate(-2) scale(1.03)" />
-    <AnthuriumHeartLeaf transform="translate(445 559) rotate(24) scale(.78)" />
+    <g className="botanical-back">
+      <AnthuriumHeartLeaf transform="translate(198 559) rotate(-43) scale(.61)" />
+      <AnthuriumLongLeaf transform="translate(330 559) rotate(-9) scale(.79)" />
+      <AnthuriumHeartLeaf transform="translate(477 559) rotate(41) scale(.59)" />
+    </g>
+    <AnthuriumHeartLeaf transform="translate(251 559) rotate(-26) scale(.86)" />
+    <AnthuriumLongLeaf transform="translate(337 559) rotate(-1) scale(1.08)" />
+    <AnthuriumHeartLeaf transform="translate(426 559) rotate(25) scale(.84)" />
     <g transform="translate(493 420) rotate(19)">
       <path d="M0 136C-2 90 3 46 13 0" />
       <path d="M13 0C38 12 51 36 43 61C22 58 9 37 13 0Z" />
       <path d="M21 8C22-19 28-38 38-54" />
       <path d="M34-47l7 4m-9 5 8 4m-11 5 8 4m-10 6 8 3" />
     </g>
-    <path d="M181 558c84-25 238-25 325 0" />
+    <path d="M145 558c109-33 278-33 392 0" />
   </BotanicalSvg>;
 }
 
