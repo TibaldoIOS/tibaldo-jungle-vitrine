@@ -124,13 +124,13 @@ test("keeps the species hero separate from the new genus hero", async () => {
   assert.doesNotMatch(html, /class=["'][^"']*plant-genus-hero[^"']*["']/i);
 });
 
-test("renders the four V1.1 botanical prototypes with detailed line art", async () => {
+test("renders the four V1.2 botanical prototypes with detailed line art", async () => {
   for (const hub of ["strelitzia", "alocasia", "monstera", "anthurium"]) {
     const response = await render(`/plantes/${hub}`);
     assert.equal(response.status, 200, hub);
     const html = await response.text();
     assert.match(html, /class=["'][^"']*plant-genus-line-art[^"']*is-detailed[^"']*["']/i, hub);
-    assert.match(html, /viewBox=["']0 0 560 560["']/i, hub);
+    assert.match(html, /viewBox=["']0 0 620 560["']/i, hub);
     assert.doesNotMatch(html, /\/_vinext\/image/i, hub);
   }
 });
