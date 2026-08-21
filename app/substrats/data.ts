@@ -130,6 +130,26 @@ export type SubstrateProfile = {
 
 export const featuredSubstrateSlugs = substrates.map((item) => item.slug);
 
+export type SubstrateReference = { label: string; url: string };
+
+const pennStateMedia = { label: "Penn State Extension — Potting Media and Plant Propagation", url: "https://extension.psu.edu/potting-media-and-plant-propagation" };
+const pennStateHouseplants = { label: "Penn State Extension — Propagating Houseplants", url: "https://extension.psu.edu/propagating-houseplants" };
+const floridaMedia = { label: "UF/IFAS Extension — Common Media Used in Hydroponics", url: "https://ask.ifas.ufl.edu/publication/EP623" };
+const connecticutMedia = { label: "University of Connecticut Extension — Potting Media", url: "https://homegarden.cahnr.uconn.edu/factsheets/potting-media/" };
+const iowaSphagnum = { label: "Iowa State University Extension — Propagation Media", url: "https://yardandgarden.extension.iastate.edu/how-to/how-propagate-houseplants-stem-tip-cuttings" };
+
+export const substrateReferences: Record<string, SubstrateReference[]> = {
+  "terreau-signature": [pennStateMedia, connecticutMedia],
+  "ecorce-de-pin": [floridaMedia, connecticutMedia],
+  "chips-coco": [floridaMedia],
+  perlite: [pennStateHouseplants, connecticutMedia],
+  "sphaigne-sechee": [iowaSphagnum, connecticutMedia],
+  "charbon-actif": [{ label: "Clemson Cooperative Extension — Repotting Your Orchid", url: "https://hgic.clemson.edu/repotting-your-orchid/" }],
+  "billes-argile": [floridaMedia],
+  vermiculite: [pennStateHouseplants, connecticutMedia],
+  zeolite: [{ label: "University of Arizona Cooperative Extension — Zeolite Application in Crop Production", url: "https://extension.arizona.edu/sites/default/files/2024-08/az1851-2020.pdf" }],
+};
+
 export const substrateProfiles: Record<string, SubstrateProfile> = {
   "terreau-signature": {
     slug: "terreau-signature", name: "Terreau Signature by Romain", shortName: "Terreau Signature", status: "soon", statusLabel: "Préparation au Studio",

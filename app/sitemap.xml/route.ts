@@ -22,7 +22,7 @@ export async function GET() {
     ...canonicalGuideSlugs.map((slug) => ({ path: `/conseils/${slug}`, modified: lastModifiedDefaults.guides })),
     ...featuredFlowerSlugs.map((slug) => ({ path: `/fleurs/${slug}`, modified: lastModifiedDefaults.flowers })),
     ...featuredSubstrateSlugs.map((slug) => ({ path: `/substrats/${slug}`, modified: lastModifiedDefaults.substrates })),
-    ...Object.keys(familyGuides).filter(isGenreIndexable).map((genre) => ({ path: `/plantes/${genre}`, modified: lastModifiedDefaults.taxonomy })),
+    ...Object.keys(familyGuides).filter(isGenreIndexable).map((genre) => ({ path: `/plantes/${genre}`, modified: genre === "strelitzia" ? "2026-08-21" : lastModifiedDefaults.taxonomy })),
     ...Array.from(new Set(plants.map((plant) => plant.taxonomy.family.toLowerCase()))).filter(isFamilyIndexable).map((family) => ({ path: `/plantes/famille/${family}`, modified: lastModifiedDefaults.taxonomy })),
     ...plants.map((plant) => ({ path: `/plantes/${plant.genre}/${plant.slug}`, modified: plant.updatedAt })),
     ...publicEvents.filter((event) => event.status === "published").map((event) => ({ path: `/evenements/${event.slug}`, modified: event.updatedAt })),

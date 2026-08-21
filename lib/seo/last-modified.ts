@@ -4,8 +4,8 @@ export const editorialLastModified = {
   "/": "2026-08-15",
   "/plantes": "2026-08-17",
   "/fleurs": "2026-08-15",
-  "/substrats": "2026-08-15",
-  "/rempotage": "2026-08-17",
+  "/substrats": "2026-08-21",
+  "/rempotage": "2026-08-21",
   "/evenements": "2026-08-17",
   "/services": "2026-08-15",
   "/coulisses": "2026-08-15",
@@ -19,13 +19,13 @@ export const editorialLastModified = {
   "/fleurs-evenement-lille": "2026-08-15",
   "/livraison-plantes-lille": "2026-08-15",
   "/mur-vegetal-naturel-lille": "2026-08-15",
-  "/sos-plantes": "2026-08-17",
+  "/sos-plantes": "2026-08-21",
   "/conseils": "2026-08-17",
 } as const;
 
 export const lastModifiedDefaults = {
   guides: "2026-08-17",
   flowers: "2026-08-12",
-  substrates: "2026-08-15",
+  substrates: "2026-08-21",
   taxonomy: "2026-08-17",
 } as const;

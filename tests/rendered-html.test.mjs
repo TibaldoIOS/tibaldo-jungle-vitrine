@@ -341,3 +341,52 @@ test("renders GEO P1 methodology, answer-first content and aligned revision date
   assert.equal(urls.length, 128);
   assert.match(sitemap, /https:\/\/jungle\.tibaldo\.fr\/methodologie-sources/);
 });
+
+test("renders SEO and GEO P1.5 contextual routes without creating URLs", async () => {
+  const diagnosticPages = [
+    "/plantes/alocasia/imperial-red",
+    "/plantes/anthurium/clarinervium",
+    "/plantes/anthurium/warocqueanum",
+    "/plantes/anthurium/veitchii",
+    "/plantes/monstera/deliciosa",
+    "/plantes/monstera/thai-constellation",
+    "/plantes/monstera/adansonii",
+    "/plantes/philodendron/billietiae",
+  ];
+  let contextualProblemLinks = 0;
+  for (const path of diagnosticPages) {
+    const html = await (await render(path)).text();
+    contextualProblemLinks += [...html.matchAll(/<a[^>]+class=["'][^"']*plant-problem-guide-link/g)].length;
+  }
+  assert.equal(contextualProblemLinks, 19);
+
+  const strelitzia = await (await render("/plantes/strelitzia")).text();
+  assert.match(strelitzia, /Quel Strelitzia choisir[\s\S]*pour l’intérieur/i);
+  for (const species of ["nicolai", "reginae", "alba"]) assert.match(strelitzia, new RegExp(`href=["']/plantes/strelitzia/${species}`));
+
+  const substratesHub = await (await render("/substrats")).text();
+  assert.match(substratesHub, /Perlite ou vermiculite/i);
+  assert.match(substratesHub, /Sphaigne ou coco/i);
+
+  for (const slug of ["terreau-signature", "ecorce-de-pin", "chips-coco", "perlite", "sphaigne-sechee", "charbon-actif", "billes-argile", "vermiculite", "zeolite"]) {
+    const html = await (await render(`/substrats/${slug}`)).text();
+    assert.match(html, /Sources horticoles/i, slug);
+    assert.match(html, /datePublished[^}]+2026-08-15/i, slug);
+    assert.match(html, /dateModified[^}]+2026-08-21/i, slug);
+    assert.match(html, /#organization/i, slug);
+  }
+
+  const repotting = await (await render("/rempotage")).text();
+  assert.match(repotting, /Quand arroser après[\s\S]*un rempotage/i);
+  assert.match(repotting, /Motte déjà très humide/i);
+  assert.match(repotting, /Racines malades ou pourries/i);
+
+  const sos = await (await render("/sos-plantes")).text();
+  for (const guide of ["feuilles-jaunes-plantes-interieur", "thrips-plantes-interieur", "araignees-rouges-plantes", "arroser-plantes-interieur", "humidite-plantes-tropicales"]) {
+    assert.match(sos, new RegExp(`href=["']/conseils/${guide}`));
+  }
+
+  const sitemap = await (await render("/sitemap.xml")).text();
+  assert.equal([...sitemap.matchAll(/<loc>/g)].length, 128);
+  assert.match(sitemap, /<loc>https:\/\/jungle\.tibaldo\.fr\/plantes\/strelitzia<\/loc><lastmod>2026-08-21/);
+});

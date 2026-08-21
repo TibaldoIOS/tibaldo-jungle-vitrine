@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
-import { featuredSubstrateSlugs, substrates, substrateProfiles } from "./data";
+import { substrates, substrateProfiles } from "./data";
 import OpeningEventLink from "../OpeningEventLink";
 
 export const metadata: Metadata = {
@@ -30,6 +30,7 @@ const structuredData = {
       name: "Substrats en vrac à Lille",
       url: "https://jungle.tibaldo.fr/substrats",
       description: "Composants horticoles en vrac et conseils de mélange pour plantes d’intérieur à Lille.",
+      dateModified: "2026-08-21",
       isPartOf: { "@id": "https://jungle.tibaldo.fr/#website" },
       about: { "@id": "https://jungle.tibaldo.fr/#store" },
       mainEntity: { "@id": "https://jungle.tibaldo.fr/substrats#list" },
@@ -122,12 +123,20 @@ export default function SubstratesPage() {
         <p className="geo-source-note">Conseil horticole : le bon dosage dépend de la plante, du contenant, de la lumière et de votre rythme d’arrosage. Révisé le <time dateTime="2026-08-21">21 août 2026</time>.</p>
       </section>
 
+      <section className="shell geo-answer substrate-comparison" data-reveal>
+        <p className="section-kicker">Réponse directe · Comparatif</p>
+        <h2>Sphaigne ou coco :<br /><em>quel support choisir ?</em></h2>
+        <p><strong>Choisissez la sphaigne pour entourer une bouture, une marcotte ou de jeunes racines avec une forte réserve d’humidité ; choisissez les chips de coco pour structurer durablement un mélange et conserver davantage de poches d’air.</strong> Aucune des deux ne remplace à elle seule un substrat complet ni une conduite d’arrosage adaptée.</p>
+        <div><article><h3>Sphaigne séchée</h3><p>Réhydratée puis essorée, elle retient beaucoup d’eau tout en restant aérée si elle n’est pas tassée. Elle convient aux propagations surveillées, mais peut rester trop humide dans un contenant peu ventilé.</p><Link href="/substrats/sphaigne-sechee">Guide de la sphaigne →</Link></article><article><h3>Chips de coco</h3><p>Leur structure grossière ouvre les mélanges pour racines épaisses. Elles retiennent une part d’humidité, doivent être rincées si leur préparation est inconnue et demandent une nutrition adaptée.</p><Link href="/substrats/chips-coco">Guide des chips de coco →</Link></article></div>
+        <p className="geo-source-note">Conseil horticole : pour une propagation, surveillez directement l’humidité ; dans un pot durable, raisonnez la structure du mélange entier. Révisé le <time dateTime="2026-08-21">21 août 2026</time>.</p>
+      </section>
+
       <section className="cross-links shell" data-reveal>
         <p className="section-kicker">Continuer l’exploration</p>
         <div className="cross-link-grid">
-          <a href="/rempotage"><span>Service</span><strong>Faire rempoter<br />une plante</strong><Arrow /></a>
-          <a href="/plantes"><span>La sélection</span><strong>Découvrir<br />nos plantes</strong><Arrow /></a>
-          <a href="/contact"><span>À Lille</span><strong>Venir au<br />Studio Végétal</strong><Arrow /></a>
+          <Link href="/rempotage"><span>Service</span><strong>Faire rempoter<br />une plante</strong><Arrow /></Link>
+          <Link href="/plantes"><span>La sélection</span><strong>Découvrir<br />nos plantes</strong><Arrow /></Link>
+          <Link href="/contact"><span>À Lille</span><strong>Venir au<br />Studio Végétal</strong><Arrow /></Link>
         </div>
       </section>
       <nav className="shell flower-service-link" data-reveal>
