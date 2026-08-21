@@ -5,6 +5,11 @@ export type BotanicalHeroProvenance =
   | "OWNER_PHOTO_DERIVED"
   | "LICENSED";
 
+export type BotanicalHeroStatus =
+  | "APPROVED_STYLE_MASTER"
+  | "APPROVED"
+  | "PROTOTYPE_REJECTED";
+
 type BotanicalHeroPlacement = {
   scale: number;
   x: string;
@@ -17,6 +22,7 @@ export type BotanicalHeroConfig = {
   asset?: string;
   prototypeId?: string;
   provenance: BotanicalHeroProvenance;
+  status: BotanicalHeroStatus;
   desktop: BotanicalHeroPlacement;
   mobile: BotanicalHeroPlacement;
 };
@@ -25,7 +31,8 @@ export const botanicalHeroRegistry = {
   strelitzia: {
     render: "strelitzia-svg",
     provenance: "OWNER_APPROVED",
-    desktop: { scale: 1, x: "0px", y: "8px", opacity: 0.74 },
+    status: "APPROVED_STYLE_MASTER",
+    desktop: { scale: 0.94, x: "3vw", y: "-6px", opacity: 0.74 },
     mobile: { scale: 1, x: "0%", y: "72px", opacity: 0.18 },
   },
   chlorophytum: {
@@ -33,6 +40,7 @@ export const botanicalHeroRegistry = {
     asset: "/images/botanical-heroes/prototypes/chlorophytum-v2.svg",
     prototypeId: "chlorophytum-v2",
     provenance: "OWNER_GENERATED_PROTOTYPE",
+    status: "APPROVED",
     desktop: { scale: 1.08, x: "-1vw", y: "14px", opacity: 0.72 },
     mobile: { scale: 0.98, x: "16%", y: "72px", opacity: 0.2 },
   },
@@ -41,6 +49,7 @@ export const botanicalHeroRegistry = {
     asset: "/images/botanical-heroes/prototypes/alocasia-prototype.svg",
     prototypeId: "alocasia-prototype",
     provenance: "OWNER_GENERATED_PROTOTYPE",
+    status: "PROTOTYPE_REJECTED",
     desktop: { scale: 1.02, x: "-1vw", y: "12px", opacity: 0.72 },
     mobile: { scale: 0.96, x: "12%", y: "72px", opacity: 0.2 },
   },
@@ -49,6 +58,7 @@ export const botanicalHeroRegistry = {
     asset: "/images/botanical-heroes/prototypes/monstera-prototype.svg",
     prototypeId: "monstera-prototype",
     provenance: "OWNER_GENERATED_PROTOTYPE",
+    status: "PROTOTYPE_REJECTED",
     desktop: { scale: 1.03, x: "-1vw", y: "12px", opacity: 0.72 },
     mobile: { scale: 0.97, x: "12%", y: "72px", opacity: 0.2 },
   },
@@ -57,6 +67,7 @@ export const botanicalHeroRegistry = {
     asset: "/images/botanical-heroes/prototypes/dicksonia-prototype.svg",
     prototypeId: "dicksonia-prototype",
     provenance: "OWNER_GENERATED_PROTOTYPE",
+    status: "PROTOTYPE_REJECTED",
     desktop: { scale: 1.02, x: "-1vw", y: "10px", opacity: 0.72 },
     mobile: { scale: 0.96, x: "14%", y: "72px", opacity: 0.2 },
   },

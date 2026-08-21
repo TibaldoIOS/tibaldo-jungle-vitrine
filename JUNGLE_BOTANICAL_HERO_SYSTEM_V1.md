@@ -12,7 +12,7 @@ Le HERO de `/plantes/strelitzia` constitue le Style Master V1. Sa composition SV
 - `lib/plants/botanical-hero-morphology.ts` : signatures morphologiques de contrôle ; ce manifeste ne génère aucun dessin.
 - `app/globals.css` : tokens et règles communes de rendu.
 
-Les hubs sans entrée dans le registre conservent leur rendu historique. V1 active uniquement Strelitzia et Chlorophytum.
+Les hubs sans entrée dans le registre conservent leur rendu historique. Sur la branche expérimentale V1.1, seuls Strelitzia et Chlorophytum sont approuvés ; les entrées Alocasia, Monstera et Dicksonia restent des prototypes rejetés conservés pour historique.
 
 ## Design tokens
 
@@ -34,13 +34,12 @@ Ordre de préférence :
 
 L’asset ne doit contenir ni fond, ni texte, ni cadre. Il reste décoratif (`aria-hidden="true"`) et n’est jamais chargé via `next/image` ou `/_vinext/image`.
 
-### Chlorophytum
+### Chlorophytum V2 approuvé
 
-- Source propriétaire intacte : `public/images/botanical-heroes/sources/chlorophytum-owner-reference.jpg`.
-- SHA-256 source : `fa9999351c2b0e2af4b73f56569e7cdeaf66e3a31b8da239c20d0043c88aa270`.
-- Dérivé transparent : `public/images/botanical-heroes/chlorophytum-owner-lineart.png`.
-- Transformation : recadrage et extraction déterministe des contours/contrastes ; aucune génération, aucun redessin.
-- Provenance registre : `OWNER_PROVIDED`.
+- Référence propriétaire conservée : `public/images/botanical-heroes/sources/chlorophytum-owner-reference.jpg`.
+- SHA-256 de la référence : `fa9999351c2b0e2af4b73f56569e7cdeaf66e3a31b8da239c20d0043c88aa270`.
+- Asset V2 approuvé : `public/images/botanical-heroes/prototypes/chlorophytum-v2.svg`.
+- Provenance registre : `OWNER_GENERATED_PROTOTYPE` ; statut propriétaire distinct : `APPROVED`.
 
 ## Registre
 
@@ -49,9 +48,22 @@ Chaque entrée fournit seulement :
 - mode de rendu ;
 - asset éventuel ;
 - provenance ;
+- statut de validation propriétaire ;
 - `scale`, `x`, `y` et opacité optionnelle pour desktop et mobile.
 
 La morphologie appartient à l’asset. Le registre ne la reconstruit pas.
+
+### Statuts validés après le test V1.1
+
+| Genre | Statut |
+|---|---|
+| Strelitzia | `APPROVED_STYLE_MASTER` |
+| Chlorophytum | `APPROVED` |
+| Alocasia | `PROTOTYPE_REJECTED` |
+| Monstera | `PROTOTYPE_REJECTED` |
+| Dicksonia | `PROTOTYPE_REJECTED` |
+
+Un asset `PROTOTYPE_REJECTED` peut rester versionné sur une branche expérimentale pour conserver l’historique du test, mais il n’est jamais prêt pour un rollout.
 
 ## Morphology manifest
 
@@ -66,8 +78,11 @@ Le manifeste décrit les caractères évidents à contrôler avant intégration 
 5. Vérifier format, transparence, poids, morphologie et provenance.
 6. Copier la source propriétaire intacte et produire seulement les dérivés techniques nécessaires.
 7. Ajouter une entrée minimale au registre.
-8. Contrôler desktop, 390 px et 360 px en BÊTA.
-9. Faire valider le propriétaire avant le genre suivant.
+8. Régler uniquement `scale`, `x` et `y` lorsque le placement l’exige.
+9. Contrôler desktop, 390 px et 360 px en BÊTA.
+10. Faire valider le propriétaire avant toute publication éventuelle et avant le genre suivant.
+
+La génération automatique d’assets botaniques par Codex n’est pas validée pour généralisation. Le système d’intégration est validé ; les dessins restent créés et approuvés individuellement en amont.
 
 ## Garde-fous
 

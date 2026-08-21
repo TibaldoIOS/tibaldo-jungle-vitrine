@@ -2,7 +2,15 @@
 
 ## Verdict technique et graphique
 
-**PASS WITH CONDITIONS.** Le système central accepte les quatre morphologies testées sans CSS propre à un genre, sans régression Strelitzia et sans modification de `/plantes`. Les prototypes restent volontairement des assets BÊTA soumis à validation visuelle propriétaire avant toute généralisation.
+**PASS WITH CONDITIONS — TEST CLÔTURÉ.** L’intégration par le système central est validée. La génération automatique d’assets botaniques par Codex n’est pas validée pour généralisation. Le workflow officiel impose désormais une création et une validation propriétaire de chaque illustration avant son intégration.
+
+Décision propriétaire finale :
+
+- Strelitzia : `APPROVED_STYLE_MASTER` ; asset conservé, cadrage desktop ajusté uniquement par `scale`, `x` et `y` ;
+- Chlorophytum V2 : `APPROVED` ; asset et placement conservés ;
+- Alocasia : `PROTOTYPE_REJECTED` ; redessin séparé requis ;
+- Monstera : `PROTOTYPE_REJECTED` ; redessin séparé requis ;
+- Dicksonia : `PROTOTYPE_REJECTED` ; redessin séparé requis.
 
 ## Grammaire du Style Master Strelitzia
 
@@ -18,7 +26,7 @@ L'asset master conserve un `viewBox` de 620 × 560. Il est construit par neuf mo
 - superpositions simples : profondeur par échelle, rotation et opacité, sans texture ni hachure ;
 - niveau d'abstraction : silhouette architecturale reconnaissable, détails limités aux nervures structurantes.
 
-Strelitzia, son composant SVG, le CSS central et ses placements sont inchangés par V1.1.
+L’asset Strelitzia, son composant SVG et le CSS central restent inchangés. Son cadrage desktop final utilise seulement le registre : `scale: 0.94`, `x: 3vw`, `y: -6px`. Le placement mobile reste inchangé.
 
 ## Prototypes
 
@@ -49,17 +57,17 @@ Stipe vertical, cicatrices simplifiées, couronne radiale de six frondes et cinq
 
 Les quatre SVG sont transparents, monochromes, locaux, sans dépendance ni référence externe. Ils répondent en HTTP 200 avec `image/svg+xml`.
 
-## Scoring interne
+## Décision propriétaire sur les prototypes
 
-| Illustration | Reconnaissance botanique | Cohérence Strelitzia | Simplicité graphique | Équilibre HERO | Mobile |
-|---|---:|---:|---:|---:|---:|
-| Strelitzia master | 5/5 | 5/5 | 5/5 | 5/5 | 5/5 |
-| Chlorophytum V2 | 5/5 | 4/5 | 4/5 | 4/5 | 4/5 |
-| Alocasia | 4/5 | 4/5 | 4/5 | 4/5 | 4/5 |
-| Monstera | 5/5 | 4/5 | 4/5 | 4/5 | 4/5 |
-| Dicksonia | 4/5 | 4/5 | 4/5 | 4/5 | 4/5 |
+| Illustration | Statut | Motif synthétique |
+|---|---|---|
+| Strelitzia master | `APPROVED_STYLE_MASTER` | Référence graphique ; composition conservée |
+| Chlorophytum V2 | `APPROVED` | Identifiable, équilibré et cohérent avec le master |
+| Alocasia | `PROTOTYPE_REJECTED` | Trop géométrique et symétrique, port peu naturel |
+| Monstera | `PROTOTYPE_REJECTED` | Fenestrations abstraites, silhouette naturelle insuffisante |
+| Dicksonia | `PROTOTYPE_REJECTED` | Couronne et frondes trop géométriques |
 
-La cohérence de collection est suffisante pour une validation propriétaire, mais pas pour une propagation automatique. Alocasia et Dicksonia doivent notamment être jugés à taille réelle avant d'être considérés comme assets définitifs.
+Les trois assets rejetés restent uniquement comme historique expérimental sur la branche BÊTA. Ils ne doivent pas être considérés comme prêts à être généralisés ou publiés.
 
 ## Responsive et clipping
 
@@ -72,6 +80,15 @@ Contrôles réalisés à 1440 × 900, 390 × 844 et 360 × 800 :
 - opacité mobile 0,18 pour le master et 0,20 pour les prototypes ;
 - H1 et introduction restent prioritaires et lisibles ;
 - aucun appel `/_vinext/image`.
+
+### Recadrage final Strelitzia
+
+Contrôle à 1440 × 900 :
+
+- avant : bounding box SVG de `x = 604,8` à `1497,6`, soit environ 57,6 px coupés à droite ; terminaison basse à `612` px, exactement sur la coupe du HERO ;
+- après : bounding box SVG de `x = 588,4` à `1427,6`, soit 12,4 px de marge à droite ; terminaison basse à `608` px, soit 4 px avant la coupe du HERO ;
+- le clipping du header reste actif ; aucun trait n’apparaît dans les 96 px du header ;
+- à 390 × 844 et 360 × 800, les paramètres mobiles sont inchangés et l’overflow horizontal reste nul.
 
 ## Tests
 
@@ -99,6 +116,23 @@ Planches :
 
 - `artifacts/botanical-style-validation-v11/comparison-desktop.png` ;
 - `artifacts/botanical-style-validation-v11/comparison-mobile.png`.
+
+Recadrage final Strelitzia :
+
+- `artifacts/botanical-style-closure-v11/strelitzia-before-1440.jpg` ;
+- `artifacts/botanical-style-closure-v11/strelitzia-after-1440.jpg` ;
+- `artifacts/botanical-style-closure-v11/strelitzia-after-390.jpg` ;
+- `artifacts/botanical-style-closure-v11/strelitzia-after-360.jpg`.
+
+## Workflow officiel retenu
+
+1. Création de l’illustration séparément.
+2. Validation propriétaire de l’asset.
+3. Fourniture de l’asset validé à Codex.
+4. Intégration dans Botanical Hero System.
+5. Réglage minimal de `scale`, `x` et `y`.
+6. Validation desktop et mobile.
+7. Publication éventuelle seulement après un GO distinct.
 
 ## Garde-fous
 
