@@ -32,6 +32,7 @@ export default function PlantExplorer({ plants }: { plants: readonly PlantEntry[
       && (!habit || plant.filters.habits.includes(habit as PlantEntry["filters"]["habits"][number]))
       && (!petSafe || !plant.filters.petToxic);
   }), [plants, query, family, genus, light, watering, difficulty, temperature, habit, petSafe]);
+  const hasActiveFilters = Boolean(query || family || genus || light || watering || difficulty !== "5" || temperature || habit || petSafe);
 
   const reset = () => { setQuery(""); setFamily(""); setGenus(""); setLight(""); setWatering(""); setDifficulty("5"); setTemperature(""); setHabit(""); setPetSafe(false); };
 
@@ -52,8 +53,8 @@ export default function PlantExplorer({ plants }: { plants: readonly PlantEntry[
         <label><span>Port</span><select value={habit} onChange={(event) => setHabit(event.target.value)}><option value="">Tous</option>{habits.map((item) => <option key={item}>{item}</option>)}</select></label>
         <label className="plant-search-check"><input type="checkbox" checked={petSafe} onChange={(event) => setPetSafe(event.target.checked)} /><span>Compatible animaux</span></label>
       </div>}
-      <div className="plant-search-status"><strong>{results.length} {results.length > 1 ? "plantes trouvées" : "plante trouvée"}</strong><button type="button" onClick={reset}>Effacer les filtres</button></div>
+      <div className="plant-search-status"><strong>{hasActiveFilters ? `${results.length} ${results.length > 1 ? "plantes trouvées" : "plante trouvée"}` : "Saisissez un nom ou choisissez un filtre"}</strong><button type="button" onClick={reset}>Effacer les filtres</button></div>
     </div>
-    <div className="plant-search-results">{results.length ? results.map((plant) => <a href={`/plantes/${plant.genre}/${plant.slug}`} key={`${plant.genre}-${plant.slug}`}><img src={plant.gallery[0].src} alt={plant.gallery[0].alt} width={plant.gallery[0].width} height={plant.gallery[0].height} loading="lazy" /><div><span>{plant.taxonomy.family} · {plant.taxonomy.genus}</span><h3>{plant.listingName ?? plant.botanicalName}</h3><p>{plant.subtitle}</p><ul><li>{"★".repeat(plant.care.difficulty)} difficulté</li><li>{plant.filters.light}</li><li>{plant.filters.temperatureMin} °C min.</li></ul></div></a>) : <div className="plant-search-empty"><h3>Aucune plante ne correspond encore.</h3><p>Élargissez un critère : l’encyclopédie s’enrichit progressivement.</p><button type="button" onClick={reset}>Réinitialiser</button></div>}</div>
+    {hasActiveFilters && <div className="plant-search-results">{results.length ? results.map((plant) => <a href={`/plantes/${plant.genre}/${plant.slug}`} key={`${plant.genre}-${plant.slug}`}><img src={plant.gallery[0].src} alt={plant.gallery[0].alt} width={plant.gallery[0].width} height={plant.gallery[0].height} loading="lazy" /><div><span>{plant.taxonomy.family} · {plant.taxonomy.genus}</span><h3>{plant.listingName ?? plant.botanicalName}</h3><p>{plant.subtitle}</p><ul><li>{"★".repeat(plant.care.difficulty)} difficulté</li><li>{plant.filters.light}</li><li>{plant.filters.temperatureMin} °C min.</li></ul></div></a>) : <div className="plant-search-empty"><h3>Aucune plante ne correspond encore.</h3><p>Élargissez un critère : l’encyclopédie s’enrichit progressivement.</p><button type="button" onClick={reset}>Réinitialiser</button></div>}</div>}
   </section>;
 }

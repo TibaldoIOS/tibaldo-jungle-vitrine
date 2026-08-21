@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 import { plantFamilies, plants, studioCollection } from "@/lib/plants/catalog";
 import PlantExplorer from "./PlantExplorer";
-import PlantUniverseCards from "./PlantUniverseCards";
-import OpeningEventLink from "../OpeningEventLink";
 
 export const metadata: Metadata = {
   title: "Encyclopédie des plantes d’intérieur et tropicales",
@@ -31,19 +30,14 @@ export const metadata: Metadata = {
 export default function PlantsPage() {
   const pageUrl = "https://jungle.tibaldo.fr/plantes";
   const primaryPlantFamilies = plantFamilies.filter((family) => !["musa", "ensete"].includes(family.slug));
-  const animatedFamilies = primaryPlantFamilies.map((family) => ({
-    slug: family.slug,
-    name: family.name,
-    image: family.image,
-    imageAlt: family.imageAlt,
-    varieties: plants
-      .filter((plant) => plant.genre === family.slug)
-      .map((plant) => {
-        const visual = plant.gallery?.[0];
-        const image = visual?.src && !visual.src.includes("photo-reelle-a-venir") ? visual.src : family.image;
-        return { name: plant.displayName, botanicalName: plant.botanicalName, image, alt: visual?.alt || family.imageAlt };
-      }),
-  }));
+  const featuredSlugs = ["monstera", "anthurium", "alocasia", "philodendron", "strelitzia", "bananiers"];
+  const featuredFamilies = featuredSlugs
+    .map((slug) => primaryPlantFamilies.find((family) => family.slug === slug))
+    .filter((family): family is (typeof primaryPlantFamilies)[number] => Boolean(family));
+  const speciesCount = (slug: string) => {
+    if (slug === "bananiers") return plants.filter((plant) => ["musa", "ensete"].includes(plant.genre)).length;
+    return plants.filter((plant) => plant.genre === slug).length;
+  };
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -53,71 +47,71 @@ export default function PlantsPage() {
     ],
   };
   return (
-    <main className="editorial-page plants-library-page">
+    <main className="editorial-page plants-library-page" id="haut-plantes">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <ScrollReveal />
-      <section className="inner-hero compact-inner-hero">
+      <section className="inner-hero compact-inner-hero plants-hub-hero">
         <div className="inner-hero-texture" />
         <div className="inner-hero-shade" />
         <SiteHeader />
         <div className="shell inner-hero-content">
-          <p className="eyebrow"><span /> Encyclopédie végétale</p>
-          <h1>
-            <span className="hero-line"><span>Comprendre</span></span>
-            <span className="hero-line"><span><em>le vivant.</em></span></span>
-          </h1>
-          <p>Explorez les grands genres végétaux, puis découvrez chaque espèce et variété dans une fiche complète.</p>
+          <div>
+            <p className="eyebrow"><span /> Encyclopédie végétale</p>
+            <h1>Les plantes.</h1>
+            <p>Explorez les grands genres végétaux et ouvrez leurs fiches botaniques.</p>
+          </div>
+          <a className="plants-hub-search-jump" href="#recherche-plantes" aria-label="Aller à la recherche de plantes">
+            <span aria-hidden="true">⌕</span>
+            Rechercher par nom
+          </a>
         </div>
       </section>
 
-      <nav className="plant-explorer plant-library-intro" aria-label="Explorer les plantes">
-        <div className="shell plant-explorer-inner">
-          <div className="plant-universe-panel">
-            <span>01 · Univers botaniques</span>
-            <PlantUniverseCards families={animatedFamilies} />
-          </div>
-          <div className="plant-species-panel">
-            <span>02 · Espèces & cultivars</span>
-            <strong>{plants.length}</strong>
-            <h2>Fiches botaniques<br /><em>à explorer.</em></h2>
-            <p>Recherchez une plante par son nom, sa famille ou ses besoins, puis ouvrez sa fiche détaillée.</p>
-            <a href="#recherche-plantes">Accéder à la recherche <Arrow /></a>
-          </div>
+      <section className="shell plants-hub-manifesto" data-reveal>
+        <p className="section-kicker">On prend le vivant au sérieux</p>
+        <div><h2>Une encyclopédie<br /><em>faite pour explorer.</em></h2><p>Chaque plante est rattachée à son genre, sa famille et ses besoins réels. Entrez par un univers ou recherchez directement un nom.</p></div>
+      </section>
+
+      <section className="shell plants-quick-explore" aria-labelledby="quick-explore-title">
+        <header data-reveal><p className="section-kicker">Explorer les plantes</p><h2 id="quick-explore-title">Les univers<br /><em>essentiels.</em></h2><p>Les grandes portes d’entrée de l’encyclopédie, accessibles en un geste.</p></header>
+        <div className="plants-featured-grid">
+          {featuredFamilies.map((family) => <a href={`/plantes/${family.slug}`} key={family.slug} data-reveal>
+            <img src={family.image} alt="" width="320" height="220" loading="lazy" />
+            <span><small>{family.eyebrow}</small><strong>{family.name}</strong><em>{speciesCount(family.slug)} {speciesCount(family.slug) > 1 ? "espèces" : "espèce"}</em></span>
+            <b aria-hidden="true">↗</b>
+          </a>)}
         </div>
-      </nav>
+      </section>
+
+      <section className="shell plant-help-bridge plants-hub-sos" data-reveal><div><p className="section-kicker">Une plante vous inquiète ?</p><h2>Un symptôme.<br/><em>Un diagnostic.</em></h2></div><div><p>Feuilles jaunes, parasites ou racines serrées : partez du problème observé pour éviter les gestes inutiles.</p><a className="button button-green" href="/sos-plantes">SOS Plantes <Arrow /></a></div></section>
+
+      <section className="shell plants-all-genera" aria-labelledby="all-genera-title">
+        <header data-reveal><p className="section-kicker">Répertoire complet</p><h2 id="all-genera-title">Tous les genres.</h2><p>{primaryPlantFamilies.length} univers botaniques, sans aucune porte d’entrée masquée.</p></header>
+        <div className="plants-genera-directory">
+          {primaryPlantFamilies.map((family) => <a href={`/plantes/${family.slug}`} key={family.slug}>
+            <img src={family.image} alt="" width="88" height="88" loading="lazy" />
+            <span><strong>{family.name}</strong><small>{speciesCount(family.slug)} {speciesCount(family.slug) > 1 ? "fiches" : "fiche"}</small></span>
+            <b aria-hidden="true">→</b>
+          </a>)}
+        </div>
+      </section>
+
+      <section className="studio-collection plants-hub-collection shell" aria-labelledby="studio-collection-title">
+        <header data-reveal><p className="section-kicker">Cultivées et observées à Wattignies</p><h2 id="studio-collection-title">La collection<br /><em>du Studio.</em></h2><p>Les plantes suivies par Tibaldo Jungle nourrissent progressivement l’encyclopédie ; cette liste n’est pas un état du stock.</p></header>
+        <details><summary>Voir la collection complète <span>{studioCollection.length} groupes</span></summary>
+          <div className="studio-collection-list">{studioCollection.map((group, index) => <article key={group.genre}><span>{String(index + 1).padStart(2, "0")}</span><div><h3><a href={group.href}>{group.genre} <Arrow /></a></h3><ul>{group.plants.map((plant) => <li key={plant}>{plant}</li>)}</ul></div></article>)}</div>
+          <p className="studio-collection-note">Les mentions « à confirmer » seront remplacées après vérification de l’étiquette horticole ou du fournisseur.</p>
+        </details>
+      </section>
 
       <PlantExplorer plants={plants} />
-      <section className="shell plant-help-bridge" data-reveal><div><p className="section-kicker">Une plante vous inquiète ?</p><h2>Feuilles jaunes,<br/><em>parasites ou racines serrées.</em></h2></div><div><p>L’encyclopédie aide à comprendre une espèce. Le parcours SOS Plantes part de votre symptôme pour éviter les gestes inutiles.</p><a className="button button-green" href="/sos-plantes">Commencer le diagnostic <Arrow /></a></div></section>
+      <div className="shell plants-back-top"><a href="#haut-plantes">↑ Retour en haut</a></div>
 
-      <section className="plant-family-index shell">
-        <header data-reveal>
-          <p className="section-kicker">L’encyclopédie Tibaldo</p>
-          <h2>Choisir un genre.<br /><em>Entrer dans son univers.</em></h2>
-          <p>Chaque univers rassemble les espèces et variétés observées, cultivées ou présentées au Studio. L’encyclopédie s’enrichira progressivement.</p>
-        </header>
-        <div className="plant-family-list">
-          {primaryPlantFamilies.map((family, index) => (
-            <a className="plant-family-card" href={`/plantes/${family.slug}`} key={family.slug} data-reveal>
-              <div className="plant-family-visual">
-                <img src={family.image} alt={family.imageAlt} width="900" height="1100" />
-                <span>{String(index + 1).padStart(2, "0")}</span>
-              </div>
-              <div className="plant-family-copy">
-                <p>{family.eyebrow}</p>
-                <h2>{family.name}</h2>
-                <span>{family.description}</span>
-                <strong>Découvrir le genre <Arrow /></strong>
-              </div>
-            </a>
-          ))}
-        </div>
-      </section>
-      <section className="studio-collection shell" aria-labelledby="studio-collection-title">
-        <header data-reveal><p className="section-kicker">Cultivées et observées à Wattignies</p><h2 id="studio-collection-title">La collection<br /><em>du Studio.</em></h2><p>Cette liste reflète les plantes actuellement cultivées ou suivies par Tibaldo Jungle. Elle nourrit progressivement l’encyclopédie ; elle ne constitue pas un état du stock en boutique.</p></header>
-        <div className="studio-collection-list">{studioCollection.map((group, index) => <article key={group.genre} data-reveal><span>{String(index + 1).padStart(2, "0")}</span><div><h3><a href={group.href}>{group.genre} <Arrow /></a></h3><ul>{group.plants.map((plant) => <li key={plant}>{plant}</li>)}</ul></div></article>)}</div>
-        <p className="studio-collection-note">Les mentions « à confirmer » seront remplacées après vérification de l’étiquette horticole ou du fournisseur.</p>
-      </section>
-      <OpeningEventLink />
+      <nav className="shell plants-practical-links" aria-label="Informations pratiques">
+        <Link href="/evenements/ouverture-tibaldo-jungle-lille"><small>Studio</small><strong>Nouvelle boutique de plantes à Lille</strong><span>→</span></Link>
+        <Link href="/contact"><small>Venir</small><strong>Accès & contact</strong><span>→</span></Link>
+        <Link href="/boutique-plantes-lille"><small>À Lille</small><strong>La boutique</strong><span>→</span></Link>
+      </nav>
       <SiteFooter />
     </main>
   );
