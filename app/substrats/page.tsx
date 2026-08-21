@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 import { featuredSubstrateSlugs, substrates, substrateProfiles } from "./data";
@@ -111,6 +112,14 @@ export default function SubstratesPage() {
           <div data-reveal><p className="section-kicker">Le conseil du Studio</p><h2>Pas de recette universelle.</h2></div>
           <div data-reveal><p>Un Anthurium n’attend pas la même chose qu’une Calathea. La taille du pot, votre manière d’arroser et la lumière changent aussi l’équilibre. Apportez une photo, votre plante ou simplement vos questions : nous vous aiderons à composer un mélange cohérent.</p><a className="button button-light" href="/contact">Demander conseil <Arrow /></a></div>
         </div>
+      </section>
+
+      <section className="shell geo-answer substrate-comparison" data-reveal>
+        <p className="section-kicker">Réponse directe · Comparatif</p>
+        <h2>Perlite ou vermiculite :<br /><em>laquelle utiliser ?</em></h2>
+        <p><strong>Choisissez surtout la perlite pour augmenter l’aération et limiter le tassement ; choisissez la vermiculite pour conserver davantage d’eau dans un mélange qui sèche trop vite.</strong> Elles peuvent être combinées en proportions mesurées lorsque les racines ont besoin à la fois d’air et d’une humidité plus régulière.</p>
+        <div><article><h3>Perlite</h3><p>Minéral expansé très léger, utile pour créer de la porosité. Une dose excessive peut rendre un petit pot trop léger et accélérer le séchage.</p><Link href="/substrats/perlite">Guide de la perlite →</Link></article><article><h3>Vermiculite</h3><p>Minéral feuilleté rétenteur. Évitez d’en ajouter beaucoup à un terreau déjà compact ou à une plante sensible à l’excès d’eau.</p><Link href="/substrats/vermiculite">Guide de la vermiculite →</Link></article></div>
+        <p className="geo-source-note">Conseil horticole : le bon dosage dépend de la plante, du contenant, de la lumière et de votre rythme d’arrosage. Révisé le <time dateTime="2026-08-21">21 août 2026</time>.</p>
       </section>
 
       <section className="cross-links shell" data-reveal>

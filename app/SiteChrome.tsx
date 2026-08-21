@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Arrow = () => <span aria-hidden="true">↗</span>;
 const InstagramIcon = () => <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4.25" /><circle className="social-icon-dot" cx="17.4" cy="6.8" r="1" /></svg>;
 const FacebookIcon = () => <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.7 21v-8h2.8l.42-3.2H13.7V7.75c0-.93.26-1.56 1.62-1.56H17V3.33c-.3-.04-1.3-.13-2.48-.13-2.46 0-4.15 1.5-4.15 4.27V9.8H7.6V13h2.77v8h3.33Z" /></svg>;
@@ -111,7 +113,7 @@ export function SiteFooter() {
       <div className="shell footer-bottom" data-reveal>
         <span>© 2026 Studio Végétal · Tibaldo Jungle · Lille</span>
         <span>Pruvost Romain EI · SIRET 518 102 603 00074 · TVA FR94 518 102 603 · RNE 518 102 603</span>
-        <nav className="footer-legal" aria-label="Informations légales"><a className="footer-legal-primary" href="/conditions-generales-de-vente">Consulter les CGV</a><a href="/programme-fidelite">Fidélité</a><a href="/cartes-cadeaux">Cartes cadeaux</a><a href="/politique-confidentialite">Confidentialité</a><a href="/mentions-legales">Mentions légales</a><a href="/credits-images">Crédits photos</a></nav>
+        <nav className="footer-legal" aria-label="Informations légales"><a className="footer-legal-primary" href="/conditions-generales-de-vente">Consulter les CGV</a><Link href="/methodologie-sources">Méthodologie & sources</Link><a href="/programme-fidelite">Fidélité</a><a href="/cartes-cadeaux">Cartes cadeaux</a><a href="/politique-confidentialite">Confidentialité</a><a href="/mentions-legales">Mentions légales</a><a href="/credits-images">Crédits photos</a></nav>
       </div>
     </footer>
   );

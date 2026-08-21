@@ -304,3 +304,40 @@ test("serves complete SEO metadata for the nine V2 pages", async () => {
     assert.doesNotMatch(html, /noindex/i, path);
   }
 });
+
+test("renders GEO P1 methodology, answer-first content and aligned revision dates", async () => {
+  const methodology = await render("/methodologie-sources");
+  assert.equal(methodology.status, 200);
+  const methodologyHtml = await methodology.text();
+  assert.match(methodologyHtml, /Méthodologie éditoriale et sources/i);
+  assert.match(methodologyHtml, /Studio Végétal [–—] Tibaldo Jungle/i);
+  assert.match(methodologyHtml, /Fait botanique/i);
+  assert.match(methodologyHtml, /Conseil horticole/i);
+  assert.match(methodologyHtml, /Observation Tibaldo/i);
+  assert.match(methodologyHtml, /dateModified[^}]+2026-08-21/i);
+
+  for (const [path, expected] of [
+    ["/plantes/cycas/revoluta", "La réponse essentielle"],
+    ["/plantes/dicksonia/antarctica", "La réponse essentielle"],
+    ["/plantes/strelitzia", "Strelitzia alba ou nicolai"],
+    ["/plantes/alocasia", "Alocasia ou Colocasia"],
+    ["/plantes/bananiers", "Musa et Ensete"],
+    ["/substrats", "Perlite ou vermiculite"],
+  ]) {
+    const response = await render(path);
+    assert.equal(response.status, 200, path);
+    const html = await response.text();
+    assert.match(html, new RegExp(expected, "i"), path);
+    assert.doesNotMatch(html, /noindex/i, path);
+  }
+
+  const cycas = await (await render("/plantes/cycas/revoluta")).text();
+  assert.match(cycas, /dateModified[^}]+2026-08-21/i);
+  assert.match(cycas, /Éditeur responsable/i);
+  assert.match(cycas, /href=["']\/methodologie-sources["']/i);
+
+  const sitemap = await (await render("/sitemap.xml")).text();
+  const urls = [...sitemap.matchAll(/<loc>/g)];
+  assert.equal(urls.length, 128);
+  assert.match(sitemap, /https:\/\/jungle\.tibaldo\.fr\/methodologie-sources/);
+});
