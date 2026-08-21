@@ -10,19 +10,19 @@ function BotanicalSvg({ children }: IllustrationProps) {
   </svg>;
 }
 
-const broadLeafVeins = [-438, -415, -392, -369, -346, -323, -300, -279];
+const broadLeafVeins = [-446, -426, -405, -384, -363, -342, -321, -300, -280, -262];
 
 function StrelitziaLeaf({ transform }: { transform: string }) {
   return <g transform={transform}>
-    <path d="M0 4C-6-82-5-171 0-252" />
-    <path d="M0-252C-48-279-66-370-9-474C42-431 48-322 0-252Z" />
-    <path d="M0-252C-1-327-4-402-9-471" />
+    <path d="M0 5C-7-78-5-171 1-252" />
+    <path d="M1-252C-47-278-67-367-12-474C37-440 52-340 20-278C14-266 7-257 1-252Z" />
+    <path d="M1-252C4-326 0-401-12-470" />
     {broadLeafVeins.map((y, index) => {
       const progress = (y + 474) / 222;
-      const spread = 11 + Math.sin(progress * Math.PI) * 40;
+      const spread = 10 + Math.sin(progress * Math.PI) * 39;
       return <g key={y}>
-        <path d={`M${-8 + progress * 8} ${y}C${-18 - spread * .25} ${y + 7} ${-spread * .78} ${y + 14} ${-spread} ${y + 22}`} />
-        <path d={`M${-8 + progress * 8} ${y}C${10 + spread * .25} ${y + 8} ${spread * .72} ${y + 16} ${spread * .9} ${y + 25}`} />
+        <path className="botanical-vein-fine" d={`M${-10 + progress * 11} ${y}C${-18 - spread * .2} ${y + 6} ${-spread * .76} ${y + 13} ${-spread} ${y + 21}`} />
+        <path className="botanical-vein-fine" d={`M${-10 + progress * 11} ${y}C${9 + spread * .2} ${y + 7} ${spread * .72} ${y + 15} ${spread * .9} ${y + 24}`} />
       </g>;
     })}
   </g>;
@@ -31,24 +31,26 @@ function StrelitziaLeaf({ transform }: { transform: string }) {
 function StrelitziaIllustration() {
   return <BotanicalSvg>
     <g className="botanical-back botanical-back-rich">
-      <StrelitziaLeaf transform="translate(278 558) rotate(-54) scale(.68)" />
-      <StrelitziaLeaf transform="translate(292 558) rotate(-38) scale(.88)" />
-      <StrelitziaLeaf transform="translate(312 558) rotate(-20) scale(1.02)" />
-      <StrelitziaLeaf transform="translate(350 558) rotate(17) scale(1.03)" />
-      <StrelitziaLeaf transform="translate(369 558) rotate(36) scale(.88)" />
-      <StrelitziaLeaf transform="translate(382 558) rotate(53) scale(.68)" />
+      <StrelitziaLeaf transform="translate(269 563) rotate(-58) scale(.60 .66)" />
+      <StrelitziaLeaf transform="translate(289 561) rotate(-43) scale(.76 .83)" />
+      <StrelitziaLeaf transform="translate(319 561) rotate(-24) scale(.88 1.01)" />
+      <StrelitziaLeaf transform="translate(365 560) rotate(9) scale(.98 1.10)" />
+      <StrelitziaLeaf transform="translate(397 561) rotate(27) scale(.87 .96)" />
+      <StrelitziaLeaf transform="translate(429 562) rotate(48) scale(.68 .76)" />
     </g>
-    <StrelitziaLeaf transform="translate(306 558) rotate(-31) scale(.95)" />
-    <StrelitziaLeaf transform="translate(327 558) rotate(-9) scale(1.16)" />
-    <StrelitziaLeaf transform="translate(343 558) rotate(8) scale(1.23)" />
-    <StrelitziaLeaf transform="translate(363 558) rotate(28) scale(.98)" />
-    <g transform="translate(293 250) rotate(-8)">
-      <path d="M0 294C-2 205 3 112 17 25" />
-      <path d="M17 25c31 9 58 8 88-4-18 22-46 32-83 28" />
-      <path d="M21 23c13-25 30-42 52-51-2 25-14 43-38 56" />
-      <path d="M42 15c22-29 45-45 70-48-7 27-25 45-55 55" />
+    <StrelitziaLeaf transform="translate(298 561) rotate(-35) scale(.88 .95)" />
+    <StrelitziaLeaf transform="translate(329 560) rotate(-12) scale(1.01 1.15)" />
+    <StrelitziaLeaf transform="translate(356 560) rotate(4) scale(1.08 1.21)" />
+    <StrelitziaLeaf transform="translate(388 561) rotate(20) scale(.98 1.07)" />
+    <StrelitziaLeaf transform="translate(421 562) rotate(39) scale(.82 .90)" />
+    <g className="strelitzia-flower" transform="translate(302 247) rotate(-7)">
+      <path d="M0 310C-3 214 2 115 16 29" />
+      <path d="M16 29C45 35 76 30 112 10C93 39 61 54 20 49Z" />
+      <path d="M20 29C29 0 43-23 64-43C65-13 55 10 33 31" />
+      <path d="M38 24C50-17 69-49 95-70C93-29 78 2 55 28" />
+      <path d="M58 18C73-16 91-42 114-57C108-23 95 2 75 23" />
+      <path className="botanical-vein-fine" d="M21 38C48 38 76 29 101 15M30 29C41 11 51-8 61-31M49 24C61-4 74-29 91-55" />
     </g>
-    <path d="M274 557c36-18 92-18 127 0" />
   </BotanicalSvg>;
 }
 
