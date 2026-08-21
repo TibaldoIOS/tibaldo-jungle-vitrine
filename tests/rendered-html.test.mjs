@@ -235,7 +235,7 @@ test("renders the Agave, Fatsia and five-species Strelitzia cluster", async () =
   assert.equal(new Set(api.map((entry) => entry.encyclopediaSlug)).size, 46);
 });
 
-test("uses the centralized Botanical Genus Hero only for the two approved pilots", async () => {
+test("uses the centralized Botanical Genus Hero for the style master and four V1.1 prototypes", async () => {
   const strelitzia = await (await render("/plantes/strelitzia")).text();
   assert.match(strelitzia, /class=["'][^"']*botanical-genus-hero[^"']*["']/i);
   assert.match(strelitzia, /data-genus=["']strelitzia["']/i);
@@ -246,12 +246,26 @@ test("uses the centralized Botanical Genus Hero only for the two approved pilots
   assert.match(chlorophytum, /class=["'][^"']*botanical-genus-hero[^"']*["']/i);
   assert.match(chlorophytum, /data-genus=["']chlorophytum["']/i);
   assert.match(chlorophytum, /class=["']botanical-genus-mask["']/i);
-  assert.match(chlorophytum, /chlorophytum-owner-lineart\.png/i);
+  assert.match(chlorophytum, /chlorophytum-v2\.svg/i);
   assert.doesNotMatch(chlorophytum, /\/_vinext\/image/i);
-  assert.ok(existsSync(new URL("../public/images/botanical-heroes/chlorophytum-owner-lineart.png", import.meta.url)));
+  assert.ok(existsSync(new URL("../public/images/botanical-heroes/prototypes/chlorophytum-v2.svg", import.meta.url)));
 
-  const alocasia = await (await render("/plantes/alocasia")).text();
-  assert.doesNotMatch(alocasia, /class=["'][^"']*botanical-genus-hero[^"']*["']/i);
+  for (const [genre, asset] of [
+    ["alocasia", "alocasia-prototype.svg"],
+    ["monstera", "monstera-prototype.svg"],
+    ["dicksonia", "dicksonia-prototype.svg"],
+  ]) {
+    const html = await (await render(`/plantes/${genre}`)).text();
+    assert.match(html, /class=["'][^"']*botanical-genus-hero[^"']*["']/i, genre);
+    assert.match(html, new RegExp(`data-genus=["']${genre}["']`, "i"), genre);
+    assert.match(html, /class=["']botanical-genus-mask["']/i, genre);
+    assert.match(html, new RegExp(asset.replace(".", "\\."), "i"), genre);
+    assert.doesNotMatch(html, /\/_vinext\/image/i, genre);
+    assert.ok(existsSync(new URL(`../public/images/botanical-heroes/prototypes/${asset}`, import.meta.url)), genre);
+  }
+
+  const anthurium = await (await render("/plantes/anthurium")).text();
+  assert.doesNotMatch(anthurium, /class=["'][^"']*botanical-genus-hero[^"']*["']/i);
 });
 
 test("preserves the approved /plantes UX V2 structure", async () => {

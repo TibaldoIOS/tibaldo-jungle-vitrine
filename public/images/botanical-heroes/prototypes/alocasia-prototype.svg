@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 560" fill="none" stroke="#fff" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <g id="alocasia-leaf">
+      <path d="M0-230C-58-198-111-137-120-72C-126-27-86 11-39-3C-22-8-10-21 0-35C10-21 22-8 39-3C86 11 126-27 120-72C111-137 58-198 0-230Z"/>
+      <path d="M0-228C-2-164-1-95 0-35"/>
+      <path d="M0-178C-33-166-64-145-91-116M0-178C33-166 64-145 91-116M0-126C-39-111-72-88-100-57M0-126C39-111 72-88 100-57M0-78C-31-63-53-44-69-20M0-78C31-63 53-44 69-20" opacity=".78" stroke-width=".82"/>
+      <path d="M0-35C-3 42-1 129 4 248"/>
+    </g>
+  </defs>
+  <g opacity=".58">
+    <use href="#alocasia-leaf" transform="translate(276 550) rotate(-29) scale(.72 .78)"/>
+    <use href="#alocasia-leaf" transform="translate(493 550) rotate(28) scale(.7 .74)"/>
+  </g>
+  <use href="#alocasia-leaf" transform="translate(316 550) rotate(-18) scale(.84 .92)"/>
+  <use href="#alocasia-leaf" transform="translate(389 550) rotate(-1) scale(.91 1.05)"/>
+  <use href="#alocasia-leaf" transform="translate(458 550) rotate(18) scale(.82 .9)"/>
+  <path d="M278 550C292 526 307 507 326 491M388 550C387 522 389 498 395 474M493 550C481 523 469 503 453 485" opacity=".72"/>
+</svg>

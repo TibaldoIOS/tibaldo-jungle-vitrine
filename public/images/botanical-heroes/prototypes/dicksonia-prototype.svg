@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 560" fill="none" stroke="#fff" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <g id="dicksonia-frond">
+      <path d="M0 0C-8-74-5-161 4-260"/>
+      <path d="M-2-47C-29-51-50-63-63-80C-39-79-18-69 1-55M2-47C29-51 50-63 63-80C39-79 18-69-1-55M-1-89C-33-94-57-107-72-126C-44-125-20-113 2-98M3-89C34-94 58-107 73-126C45-125 21-113 0-98M0-132C-32-138-55-151-69-171C-41-169-19-157 3-141M4-132C35-138 58-152 72-171C44-169 21-157 1-141M1-176C-25-181-45-193-58-210C-35-209-16-199 4-184M5-176C31-182 50-194 62-211C39-209 20-199 2-184M2-215C-18-219-34-228-45-241C-28-240-12-233 5-222M5-215C25-220 40-229 50-243C32-241 17-233 3-222" opacity=".82" stroke-width=".9"/>
+    </g>
+  </defs>
+  <g opacity=".58">
+    <use href="#dicksonia-frond" transform="translate(354 286) rotate(-58) scale(.72 .7)"/>
+    <use href="#dicksonia-frond" transform="translate(388 286) rotate(57) scale(.7 .68)"/>
+  </g>
+  <use href="#dicksonia-frond" transform="translate(359 284) rotate(-36) scale(.82 .86)"/>
+  <use href="#dicksonia-frond" transform="translate(367 282) rotate(-13) scale(.9 .96)"/>
+  <use href="#dicksonia-frond" transform="translate(377 282) rotate(13) scale(.9 .96)"/>
+  <use href="#dicksonia-frond" transform="translate(385 284) rotate(36) scale(.82 .86)"/>
+  <path d="M337 560C341 490 341 424 347 362C350 330 357 303 369 282C380 301 387 329 390 362C397 427 398 493 404 560Z"/>
+  <path d="M349 524C367 533 386 533 401 523M347 484C363 494 383 494 398 484M347 445C362 454 380 455 397 446M347 406C361 415 379 416 394 407M349 367C362 376 378 377 390 369" opacity=".78" stroke-width=".82"/>
+  <path d="M358 560C356 493 357 430 362 367C364 331 368 302 373 283" opacity=".65"/>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 560" fill="none" stroke="#fff" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <g id="ribbon-leaf">
+      <path d="M0 0C-12-74-24-174 5-278C22-184 23-82 0 0Z"/>
+      <path d="M0-2C0-85 1-179 5-274" opacity=".78" stroke-width=".82"/>
+    </g>
+    <g id="plantlet">
+      <path d="M0 0C-8-14-18-29-29-39C-18-36-7-29 0-16C5-31 14-42 25-49C17-34 11-19 9-4C20-18 32-25 46-28C34-19 23-8 15 5C25 1 35 2 45 8C30 8 18 12 9 20C4 12 1 6 0 0Z"/>
+      <path d="M0-1C0-18 2-32 7-45M2-9C-8-23-18-33-27-38M8-4C19-15 31-23 44-27" opacity=".78" stroke-width=".82"/>
+    </g>
+  </defs>
+  <g opacity=".58">
+    <use href="#ribbon-leaf" transform="translate(350 548) rotate(-70) scale(.78 .76)"/>
+    <use href="#ribbon-leaf" transform="translate(355 548) rotate(-49) scale(.92 .96)"/>
+    <use href="#ribbon-leaf" transform="translate(362 548) rotate(-27) scale(.94 1.04)"/>
+    <use href="#ribbon-leaf" transform="translate(378 548) rotate(24) scale(.92 1.02)"/>
+    <use href="#ribbon-leaf" transform="translate(385 548) rotate(48) scale(.86 .92)"/>
+    <use href="#ribbon-leaf" transform="translate(390 548) rotate(70) scale(.74 .76)"/>
+  </g>
+  <use href="#ribbon-leaf" transform="translate(358 548) rotate(-60) scale(.9 .88)"/>
+  <use href="#ribbon-leaf" transform="translate(365 548) rotate(-38) scale(1 1.05)"/>
+  <use href="#ribbon-leaf" transform="translate(371 548) rotate(-14) scale(1.02 1.12)"/>
+  <use href="#ribbon-leaf" transform="translate(377 548) rotate(8) scale(1.04 1.15)"/>
+  <use href="#ribbon-leaf" transform="translate(382 548) rotate(33) scale(.98 1.04)"/>
+  <use href="#ribbon-leaf" transform="translate(388 548) rotate(58) scale(.88 .88)"/>
+  <path d="M368 530C308 451 282 369 304 286C322 219 285 175 224 155"/>
+  <path d="M382 530C434 449 465 365 454 283C446 226 475 184 532 164"/>
+  <path d="M376 531C365 448 369 385 398 337C424 294 425 253 407 214"/>
+  <g opacity=".9">
+    <use href="#plantlet" transform="translate(224 155) rotate(-18) scale(.82)"/>
+    <use href="#plantlet" transform="translate(532 164) rotate(18) scale(.84)"/>
+    <use href="#plantlet" transform="translate(407 214) rotate(2) scale(.72)"/>
+  </g>
+  <g opacity=".82" stroke-width=".82">
+    <path d="M296 259C283 248 275 232 276 218M276 218C266 209 258 199 254 187"/>
+    <path d="M276 218l-9-7m9 7 8-10m-30-21-8-4m8 4 5-9"/>
+    <path d="M246 183c-4-8 2-15 10-12c1 8-3 13-10 12Zm21 28c-5-8 1-15 9-13c2 8-2 13-9 13Z"/>
+  </g>
+</svg>
