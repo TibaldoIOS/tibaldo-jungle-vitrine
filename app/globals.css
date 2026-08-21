@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+.jungle-beta-banner{position:relative;z-index:1200;min-height:42px;display:grid;place-items:center;padding:9px 18px;background:#f0cd32;color:#171300;text-align:center;font-size:10px;font-weight:800;line-height:1.35;letter-spacing:.12em;text-transform:uppercase}
+@media(max-width:680px){.jungle-beta-banner{min-height:52px;padding:8px 12px;font-size:8px;letter-spacing:.08em}}
+
 :root {
   --forest: #153b2c;
   --forest-dark: #09261b;

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ConversionDock from "./ConversionDock";
 import ConversionTracker from "./ConversionTracker";
+import { BetaEnvironmentBanner } from "./BetaEnvironmentBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,14 +28,13 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/" },
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
+    nocache: true,
     googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
+      index: false,
+      follow: false,
+      noimageindex: true,
     },
   },
   openGraph: {
@@ -79,6 +79,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <BetaEnvironmentBanner />
         <a className="skip-link" href="#contenu-principal">Aller au contenu principal</a>
         <div id="contenu-principal" tabIndex={-1}>{children}</div>
         <ConversionDock />

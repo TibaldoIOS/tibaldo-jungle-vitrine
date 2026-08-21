@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import LocalSeoPage from "../LocalSeoPage";
+import { shopUrl } from "@/lib/environment";
 
 export const metadata: Metadata = {
   title: "Livraison locale de plantes à Lille et métropole | Tibaldo Jungle",
@@ -39,7 +40,7 @@ export default function Page() {
       { question: "Le retrait au Studio reste-t-il possible ?", answer: "Oui. Le retrait au Studio Végétal, 3 place de l’Arbonnoise à Lille, reste proposé sans frais sur un créneau convenu." },
     ]}
     links={[
-      { href: "https://shop.tibaldo.fr", label: "Accéder au Shop", copy: "Composer votre panier et calculer automatiquement la livraison selon votre adresse." },
+      { href: shopUrl(), label: "Accéder au Shop", copy: "Composer votre panier et calculer automatiquement la livraison selon votre adresse." },
       { href: "/boutique-plantes-lille", label: "Boutique de plantes à Lille", copy: "Découvrir le Studio Végétal et préparer votre visite." },
       { href: "/contact", label: "Préparer une livraison particulière", copy: "Nous signaler un accès difficile, un étage sans ascenseur ou un végétal très volumineux." },
     ]}

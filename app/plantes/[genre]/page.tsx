@@ -7,7 +7,6 @@ import { genreHerbiers } from "@/lib/plants/genre-herbiers";
 import ScrollReveal from "../../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../../SiteChrome";
 import PlantCarePassport from "../PlantCarePassport";
-import { isGenreIndexable } from "@/lib/seo/indexability";
 import type { Level } from "@/lib/plants/types";
 import BotanicalGenusHero from "../BotanicalGenusHero";
 import { hasBotanicalHero } from "@/lib/plants/botanical-heroes";
@@ -29,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: `Guide complet des ${guide.name} : taxonomie, lumière, arrosage, humidité, substrat, rempotage, espèces et cultivars documentés.`,
     keywords: [`${guide.name}`, `${guide.name} entretien`, `${guide.name} lumière`, `${guide.name} arrosage`, `${guide.name} substrat`, `${guide.name} variétés`],
     alternates: { canonical: `/plantes/${genre}` },
-    robots: isGenreIndexable(genre) ? { index: true, follow: true } : { index: false, follow: true },
+    robots: { index: false, follow: false },
     openGraph: {
       title: `${guide.name} — Guide de culture et variétés`,
       description: guide.lead,
