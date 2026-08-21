@@ -52,7 +52,46 @@ function StrelitziaIllustration() {
   </BotanicalSvg>;
 }
 
-const alocasiaVeins = [-281, -251, -221, -191, -161, -131, -101];
+const bananaVeins = [-258, -198, -138];
+
+function BananaLeaf({ transform, split = false }: { transform: string; split?: boolean }) {
+  return <g transform={transform}>
+    <path d="M0 3C-3-15-2-32 1-49" />
+    <path d="M1-49C-76-72-102-177-18-304C62-276 94-172 34-82C24-66 12-54 1-49Z" />
+    <path d="M1-49C7-131 1-218-18-300" />
+    {bananaVeins.map((y) => {
+      const progress = (y + 304) / 255;
+      const spread = 20 + Math.sin(progress * Math.PI) * 58;
+      return <g key={y}>
+        <path className="botanical-vein-fine" d={`M${-17 + progress * 18} ${y}C${-28 - spread * .12} ${y + 9} ${-spread * .72} ${y + 22} ${-spread} ${y + 35}`} />
+        <path className="botanical-vein-fine" d={`M${-17 + progress * 18} ${y}C${14 + spread * .14} ${y + 10} ${spread * .64} ${y + 24} ${spread * .82} ${y + 38}`} />
+      </g>;
+    })}
+    {split && <path d="M-64-195C-45-184-29-172-12-155M60-165C42-155 27-142 10-126" />}
+  </g>;
+}
+
+function BananiersIllustration() {
+  return <BotanicalSvg>
+    <g className="botanical-back">
+      <BananaLeaf transform="translate(332 331) rotate(-68) scale(.67 .72)" split />
+      <BananaLeaf transform="translate(344 315) rotate(-35) scale(.78 .91)" />
+      <BananaLeaf transform="translate(363 310) rotate(31) scale(.79 .94)" />
+      <BananaLeaf transform="translate(375 330) rotate(67) scale(.66 .72)" split />
+    </g>
+    <path d="M318 559C307 495 311 411 331 310C343 297 360 297 374 311C390 408 395 495 382 559Z" />
+    <path className="botanical-vein-fine" d="M322 519C343 530 364 530 386 519M317 469C341 483 367 483 390 468M317 417C341 432 368 432 387 415M323 365C343 377 364 377 380 363" />
+    <BananaLeaf transform="translate(337 323) rotate(-53) scale(.82 .88)" />
+    <BananaLeaf transform="translate(346 308) rotate(-25) scale(.91 1.03)" split />
+    <BananaLeaf transform="translate(354 300) rotate(-2) scale(.94 1.16)" />
+    <BananaLeaf transform="translate(365 309) rotate(25) scale(.90 1.01)" />
+    <BananaLeaf transform="translate(374 325) rotate(53) scale(.80 .86)" split />
+    <path d="M354 311C348 267 352 226 362 184C375 226 375 269 363 311Z" />
+    <path className="botanical-vein-fine" d="M358 300C359 257 360 219 362 187" />
+  </BotanicalSvg>;
+}
+
+const alocasiaVeins = [-276, -226, -176, -126];
 
 function AlocasiaLeaf({ transform }: { transform: string }) {
   return <g transform={transform}>
@@ -65,7 +104,6 @@ function AlocasiaLeaf({ transform }: { transform: string }) {
       return <g key={y}>
         <path d={`M0 ${y}C${-24} ${y + 9} ${-width * .72} ${y + 23} ${-width} ${y + 42}`} />
         <path d={`M0 ${y}C${24} ${y + 9} ${width * .72} ${y + 23} ${width} ${y + 42}`} />
-        <path className="botanical-vein-fine" d={`M${-width * .38} ${y + 18}l${-width * .18} 24M${width * .38} ${y + 18}l${width * .18} 24`} />
       </g>;
     })}
   </g>;
@@ -74,18 +112,17 @@ function AlocasiaLeaf({ transform }: { transform: string }) {
 function AlocasiaIllustration() {
   return <BotanicalSvg>
     <g className="botanical-back">
-      <AlocasiaLeaf transform="translate(206 559) rotate(-42) scale(.67)" />
-      <AlocasiaLeaf transform="translate(331 559) rotate(-7) scale(.92)" />
-      <AlocasiaLeaf transform="translate(469 559) rotate(39) scale(.65)" />
+      <AlocasiaLeaf transform="translate(232 559) rotate(-42) scale(.62 .70)" />
+      <AlocasiaLeaf transform="translate(430 559) rotate(34) scale(.64 .72)" />
     </g>
-    <AlocasiaLeaf transform="translate(256 559) rotate(-24) scale(.92)" />
-    <AlocasiaLeaf transform="translate(337 559) rotate(-1) scale(1.18)" />
-    <AlocasiaLeaf transform="translate(423 559) rotate(23) scale(.93)" />
-    <path d="M153 558c102-35 270-35 383 0" />
+    <AlocasiaLeaf transform="translate(278 559) rotate(-26) scale(.84 .94)" />
+    <AlocasiaLeaf transform="translate(345 559) rotate(-3) scale(1.05 1.16)" />
+    <AlocasiaLeaf transform="translate(411 559) rotate(20) scale(.87 .98)" />
+    <AlocasiaLeaf transform="translate(463 559) rotate(43) scale(.66 .74)" />
   </BotanicalSvg>;
 }
 
-const monsteraVeins = [-292, -260, -228, -196, -164, -132, -103];
+const monsteraVeins = [-278, -218, -158, -108];
 
 function MonsteraLeaf({ transform, mature = true }: { transform: string; mature?: boolean }) {
   return <g transform={transform}>
@@ -113,15 +150,17 @@ function MonsteraLeaf({ transform, mature = true }: { transform: string; mature?
 
 function MonsteraIllustration() {
   return <BotanicalSvg>
-    <g className="botanical-back">
-      <MonsteraLeaf mature={false} transform="translate(196 559) rotate(-42) scale(.52)" />
-      <MonsteraLeaf transform="translate(328 559) rotate(-8) scale(.82)" />
-      <MonsteraLeaf mature={false} transform="translate(474 559) rotate(39) scale(.54)" />
+    <g className="botanical-back botanical-back-rich">
+      <path d="M372 560C364 503 339 464 303 426C269 390 258 344 277 301C294 263 327 237 369 219" />
+      <path d="M398 560C409 509 437 474 469 440C501 405 506 358 482 316" />
     </g>
-    <MonsteraLeaf transform="translate(265 559) rotate(-24) scale(.82)" />
-    <MonsteraLeaf transform="translate(340 559) rotate(-1) scale(1.08)" />
-    <MonsteraLeaf transform="translate(423 559) rotate(24) scale(.84)" />
-    <path d="M142 558c113-34 283-34 398 0" />
+    <g className="botanical-back">
+      <MonsteraLeaf mature={false} transform="translate(369 219) rotate(8) scale(.42 .47)" />
+      <MonsteraLeaf transform="translate(277 301) rotate(-40) scale(.62 .67)" />
+    </g>
+    <MonsteraLeaf transform="translate(303 426) rotate(-24) scale(.78 .84)" />
+    <MonsteraLeaf transform="translate(469 440) rotate(29) scale(.70 .76)" />
+    <MonsteraLeaf transform="translate(394 559) rotate(8) scale(.94 1.01)" />
   </BotanicalSvg>;
 }
 
@@ -181,6 +220,7 @@ function AnthuriumIllustration() {
 
 const prototypeIllustrations: Record<string, () => ReactNode> = {
   strelitzia: StrelitziaIllustration,
+  bananiers: BananiersIllustration,
   alocasia: AlocasiaIllustration,
   monstera: MonsteraIllustration,
   anthurium: AnthuriumIllustration,

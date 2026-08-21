@@ -1280,9 +1280,9 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
 .family-genre-breadcrumb:hover { color: #fff; }
 @keyframes explorerAura { to { opacity: .5; transform: translateY(-50%) scale(1.25); } }
 .family-genre-hero { min-height: 590px; height: 68svh; }
-.plant-genus-hero { position: relative; overflow: hidden; isolation: isolate; background: #082a1e; }
+.plant-genus-hero { --genus-header-height: 96px; position: relative; overflow: hidden; isolation: isolate; background: #082a1e; }
 .plant-genus-hero .inner-hero-shade { z-index: 0; background: radial-gradient(circle at 78% 43%, rgba(139,166,115,.18), transparent 38%), linear-gradient(90deg, rgba(4,29,20,.98) 0%, rgba(7,39,27,.9) 47%, rgba(7,34,24,.68)); }
-.plant-genus-art-field { position: absolute; z-index: 1; top: 74px; right: max(3vw, 24px); display: flex; width: min(43vw, 620px); height: calc(100% - 86px); align-items: center; justify-content: center; color: #cfdbb8; opacity: .48; pointer-events: none; }
+.plant-genus-art-field { --genus-art-top: 74px; position: absolute; z-index: 1; top: var(--genus-art-top); right: max(3vw, 24px); display: flex; width: min(43vw, 620px); height: calc(100% - 86px); align-items: center; justify-content: center; color: #cfdbb8; opacity: .48; clip-path: inset(max(0px, calc(var(--genus-header-height) - var(--genus-art-top))) 0 0); pointer-events: none; }
 .plant-genus-line-art { width: 100%; height: 100%; max-height: 540px; overflow: visible; }
 .plant-genus-line-art path { fill: none; stroke: currentColor; stroke-width: 1.45; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
 .plant-genus-line-art.is-detailed { max-height: 570px; }
@@ -1290,8 +1290,8 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
 .plant-genus-line-art.is-detailed .botanical-vein-fine { stroke-width: .82; opacity: .78; }
 .plant-genus-line-art.is-detailed .botanical-back { opacity: .28; }
 .plant-genus-line-art.is-detailed .botanical-back-rich { opacity: .58; }
-.plant-genus-hero:is([data-genus="strelitzia"], [data-genus="alocasia"], [data-genus="monstera"], [data-genus="anthurium"]) .plant-genus-art-field { top: 24px; right: -1vw; width: min(56vw, 850px); height: calc(100% - 24px); opacity: .78; }
-.plant-genus-hero[data-genus="strelitzia"] .plant-genus-art-field { top: 8px; right: -4vw; width: min(62vw, 940px); height: calc(100% - 8px); opacity: .74; clip-path: inset(88px 0 0); }
+.plant-genus-hero:is([data-genus="strelitzia"], [data-genus="bananiers"], [data-genus="alocasia"], [data-genus="monstera"], [data-genus="anthurium"]) .plant-genus-art-field { --genus-art-top: 24px; right: -1vw; width: min(56vw, 850px); height: calc(100% - 24px); opacity: .78; }
+.plant-genus-hero[data-genus="strelitzia"] .plant-genus-art-field { --genus-art-top: 8px; right: -4vw; width: min(62vw, 940px); height: calc(100% - 8px); opacity: .74; }
 .plant-genus-hero[data-genus="strelitzia"] .plant-genus-line-art { max-height: 610px; }
 .plant-genus-line-art-echo { opacity: .22; }
 .plant-genus-hero .inner-hero-content { position: relative; z-index: 2; }
@@ -1575,11 +1575,12 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
   .plant-explorer-links > a, .plant-explorer-links > span, .plant-explorer-links > strong { flex: 0 0 auto; padding-bottom: 8px; font-size: 29px; }
   .family-genre-hero { min-height: 545px; height: 68svh; }
   .family-genre-hero .inner-hero-content { padding-top: 105px; }
-  .plant-genus-art-field { top: 92px; right: -34%; width: 92vw; height: 70%; opacity: .25; }
+  .plant-genus-hero { --genus-header-height: 80px; }
+  .plant-genus-art-field { --genus-art-top: 92px; right: -34%; width: 92vw; height: 70%; opacity: .25; }
   .plant-genus-line-art { max-height: 410px; }
   .plant-genus-line-art.is-detailed { max-height: 455px; }
-  .plant-genus-hero:is([data-genus="strelitzia"], [data-genus="alocasia"], [data-genus="monstera"], [data-genus="anthurium"]) .plant-genus-art-field { top: 86px; right: -72%; width: 132vw; height: 72%; opacity: .32; }
-  .plant-genus-hero[data-genus="strelitzia"] .plant-genus-art-field { top: 72px; right: -54%; width: 138vw; height: 76%; opacity: .28; clip-path: inset(8px 0 0); }
+  .plant-genus-hero:is([data-genus="strelitzia"], [data-genus="bananiers"], [data-genus="alocasia"], [data-genus="monstera"], [data-genus="anthurium"]) .plant-genus-art-field { --genus-art-top: 86px; right: -72%; width: 132vw; height: 72%; opacity: .30; }
+  .plant-genus-hero[data-genus="strelitzia"] .plant-genus-art-field { --genus-art-top: 72px; right: -72%; width: 138vw; height: 76%; opacity: .18; }
   .plant-genus-hero .inner-hero-content h1 { max-width: 88%; }
   .plant-care-passport-inner { padding-top: 25px; padding-bottom: 28px; }
   .plant-care-levels { grid-template-columns: 1fr 1fr; gap: 22px 0; }
