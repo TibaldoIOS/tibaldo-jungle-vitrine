@@ -95,16 +95,8 @@ test("serves a crawlable robots file and a populated XML sitemap", async () => {
   assert.doesNotMatch(xml, /\/admin\//i);
 });
 
-test("renders one accessible line-art hero system across every plant hub", async () => {
-  const hubs = [
-    "agave", "fatsia", "strelitzia", "aloe", "chlorophytum", "yucca", "cycas", "dicksonia",
-    "plumeria", "equisetum", "ficus", "syngonium", "hoya", "sansevieria", "fougeres",
-    "bananiers", "musa", "ensete", "alocasia", "anthurium", "monstera", "philodendron",
-    "epipremnum", "asparagus", "colocasia", "pilea", "peperomia", "maranta", "calathea",
-    "cactus", "epiphyllum",
-  ];
-
-  for (const hub of hubs) {
+test("renders the targeted accessible line-art hero system", async () => {
+  for (const hub of ["strelitzia", "bananiers"]) {
     const response = await render(`/plantes/${hub}`);
     assert.equal(response.status, 200, hub);
     const html = await response.text();
@@ -113,6 +105,13 @@ test("renders one accessible line-art hero system across every plant hub", async
     assert.match(html, /aria-hidden=["']true["']/i, hub);
     assert.equal((html.match(/<h1\b/gi) ?? []).length, 1, hub);
     assert.doesNotMatch(html, /family-genre-image|is-herbier/i, hub);
+  }
+
+  for (const hub of ["agave", "alocasia", "monstera", "anthurium"]) {
+    const response = await render(`/plantes/${hub}`);
+    assert.equal(response.status, 200, hub);
+    const html = await response.text();
+    assert.doesNotMatch(html, /class=["'][^"']*plant-genus-hero[^"']*["']/i, hub);
   }
 });
 
@@ -124,8 +123,8 @@ test("keeps the species hero separate from the new genus hero", async () => {
   assert.doesNotMatch(html, /class=["'][^"']*plant-genus-hero[^"']*["']/i);
 });
 
-test("renders the four V1.2 botanical prototypes with detailed line art", async () => {
-  for (const hub of ["strelitzia", "alocasia", "monstera", "anthurium"]) {
+test("renders the two targeted botanical illustrations with detailed line art", async () => {
+  for (const hub of ["strelitzia", "bananiers"]) {
     const response = await render(`/plantes/${hub}`);
     assert.equal(response.status, 200, hub);
     const html = await response.text();
