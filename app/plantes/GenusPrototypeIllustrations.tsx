@@ -52,42 +52,52 @@ function StrelitziaIllustration() {
   </BotanicalSvg>;
 }
 
-const bananaVeins = [-258, -198, -138];
+const bananaVeins = [-306, -274, -242, -210, -178, -146, -114];
 
 function BananaLeaf({ transform, split = false }: { transform: string; split?: boolean }) {
   return <g transform={transform}>
-    <path d="M0 3C-3-15-2-32 1-49" />
-    <path d="M1-49C-76-72-102-177-18-304C62-276 94-172 34-82C24-66 12-54 1-49Z" />
-    <path d="M1-49C7-131 1-218-18-300" />
+    <path d="M0 4C-5-28-4-58 0-88" />
+    <path d="M0-88C-38-94-62-134-65-188C-69-246-47-302-18-337C-9-346-3-348 0-344C29-316 59-266 66-215C74-156 48-101 0-88Z" />
+    <path d="M0-88C4-166 3-256 0-340" />
     {bananaVeins.map((y) => {
-      const progress = (y + 304) / 255;
-      const spread = 20 + Math.sin(progress * Math.PI) * 58;
+      const progress = (y + 344) / 256;
+      const spread = 17 + Math.sin(progress * Math.PI) * 37;
       return <g key={y}>
-        <path className="botanical-vein-fine" d={`M${-17 + progress * 18} ${y}C${-28 - spread * .12} ${y + 9} ${-spread * .72} ${y + 22} ${-spread} ${y + 35}`} />
-        <path className="botanical-vein-fine" d={`M${-17 + progress * 18} ${y}C${14 + spread * .14} ${y + 10} ${spread * .64} ${y + 24} ${spread * .82} ${y + 38}`} />
+        <path className="botanical-vein-fine" d={`M0 ${y}C${-18} ${y + 9} ${-spread * .7} ${y + 20} ${-spread} ${y + 31}`} />
+        <path className="botanical-vein-fine" d={`M0 ${y}C${18} ${y + 9} ${spread * .7} ${y + 20} ${spread} ${y + 31}`} />
       </g>;
     })}
-    {split && <path d="M-64-195C-45-184-29-172-12-155M60-165C42-155 27-142 10-126" />}
+    {split && <path d="M-63-222C-48-210-35-195-19-176M65-204C49-191 36-174 18-153M-50-282C-38-268-27-251-14-231" />}
   </g>;
 }
 
 function BananiersIllustration() {
   return <BotanicalSvg>
     <g className="botanical-back">
-      <BananaLeaf transform="translate(332 331) rotate(-68) scale(.67 .72)" split />
-      <BananaLeaf transform="translate(344 315) rotate(-35) scale(.78 .91)" />
-      <BananaLeaf transform="translate(363 310) rotate(31) scale(.79 .94)" />
-      <BananaLeaf transform="translate(375 330) rotate(67) scale(.66 .72)" split />
+      <BananaLeaf transform="translate(301 350) rotate(-58) scale(.78 .73)" split />
+      <BananaLeaf transform="translate(326 332) rotate(-33) scale(.78 .91)" />
+      <BananaLeaf transform="translate(389 337) rotate(38) scale(.78 .88)" />
+      <BananaLeaf transform="translate(414 354) rotate(64) scale(.72 .70)" split />
     </g>
-    <path d="M318 559C307 495 311 411 331 310C343 297 360 297 374 311C390 408 395 495 382 559Z" />
-    <path className="botanical-vein-fine" d="M322 519C343 530 364 530 386 519M317 469C341 483 367 483 390 468M317 417C341 432 368 432 387 415M323 365C343 377 364 377 380 363" />
-    <BananaLeaf transform="translate(337 323) rotate(-53) scale(.82 .88)" />
-    <BananaLeaf transform="translate(346 308) rotate(-25) scale(.91 1.03)" split />
-    <BananaLeaf transform="translate(354 300) rotate(-2) scale(.94 1.16)" />
-    <BananaLeaf transform="translate(365 309) rotate(25) scale(.90 1.01)" />
-    <BananaLeaf transform="translate(374 325) rotate(53) scale(.80 .86)" split />
-    <path d="M354 311C348 267 352 226 362 184C375 226 375 269 363 311Z" />
-    <path className="botanical-vein-fine" d="M358 300C359 257 360 219 362 187" />
+    <path d="M277 560C270 487 276 411 304 337C316 326 332 328 342 341C350 416 349 492 337 560Z" />
+    <path d="M326 560C319 477 326 395 348 318C361 307 379 309 389 324C402 401 404 481 393 560Z" />
+    <path d="M378 560C377 493 384 424 410 354C422 345 438 349 446 362C455 427 455 495 448 560Z" />
+    <path className="botanical-vein-fine" d="M280 516C299 528 319 529 339 518M281 463C302 476 324 477 346 466M332 508C352 521 375 521 398 510M335 450C355 463 381 463 401 452M385 510C404 520 427 521 450 511M390 456C409 466 433 467 452 458" />
+    <BananaLeaf transform="translate(310 344) rotate(-47) scale(.82 .88)" split />
+    <BananaLeaf transform="translate(337 324) rotate(-24) scale(.85 1.03)" />
+    <BananaLeaf transform="translate(365 313) rotate(-3) scale(.88 1.14)" />
+    <BananaLeaf transform="translate(393 327) rotate(24) scale(.84 1.00)" split />
+    <BananaLeaf transform="translate(421 349) rotate(50) scale(.80 .84)" />
+    <path d="M367 319C361 271 365 224 378 177C393 224 394 273 381 321Z" />
+    <path className="botanical-vein-fine" d="M373 309C375 261 377 219 378 180" />
+    <g transform="translate(469 385) rotate(7)">
+      <path d="M0 174C4 116 7 60 2 0" />
+      <path d="M2 0C26 12 43 31 49 54C25 57 8 39 2 0Z" />
+      {[62, 79, 96, 113].map((y, row) => <g key={y}>
+        {[-18, 0, 18].map((x) => <path key={x} d={`M${x} ${y}c-9 7-9 19 0 27c9-8 9-20 0-27Z`} transform={`rotate(${x / 2 + row * 2} ${x} ${y})`} />)}
+      </g>)}
+      <path d="M0 139C-10 151-14 164-12 177M0 139C10 151 14 164 12 177" />
+    </g>
   </BotanicalSvg>;
 }
 
