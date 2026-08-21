@@ -235,6 +235,35 @@ test("renders the Agave, Fatsia and five-species Strelitzia cluster", async () =
   assert.equal(new Set(api.map((entry) => entry.encyclopediaSlug)).size, 46);
 });
 
+test("uses the centralized Botanical Genus Hero only for the two approved pilots", async () => {
+  const strelitzia = await (await render("/plantes/strelitzia")).text();
+  assert.match(strelitzia, /class=["'][^"']*botanical-genus-hero[^"']*["']/i);
+  assert.match(strelitzia, /data-genus=["']strelitzia["']/i);
+  assert.match(strelitzia, /class=["']botanical-genus-svg["']/i);
+  assert.match(strelitzia, /aria-hidden=["']true["']/i);
+
+  const chlorophytum = await (await render("/plantes/chlorophytum")).text();
+  assert.match(chlorophytum, /class=["'][^"']*botanical-genus-hero[^"']*["']/i);
+  assert.match(chlorophytum, /data-genus=["']chlorophytum["']/i);
+  assert.match(chlorophytum, /class=["']botanical-genus-mask["']/i);
+  assert.match(chlorophytum, /chlorophytum-owner-lineart\.png/i);
+  assert.doesNotMatch(chlorophytum, /\/_vinext\/image/i);
+  assert.ok(existsSync(new URL("../public/images/botanical-heroes/chlorophytum-owner-lineart.png", import.meta.url)));
+
+  const alocasia = await (await render("/plantes/alocasia")).text();
+  assert.doesNotMatch(alocasia, /class=["'][^"']*botanical-genus-hero[^"']*["']/i);
+});
+
+test("preserves the approved /plantes UX V2 structure", async () => {
+  const html = await (await render("/plantes")).text();
+  assert.match(html, /class=["'][^"']*plants-hub-hero[^"']*["']/i);
+  assert.match(html, /href=["']#recherche-plantes["']/i);
+  assert.match(html, /id=["']recherche-plantes["']/i);
+  assert.match(html, /class=["'][^"']*plants-featured-grid[^"']*["']/i);
+  assert.match(html, /class=["'][^"']*plants-genera-directory[^"']*["']/i);
+  assert.match(html, /<details[^>]*>[\s\S]*Collection/i);
+});
+
 test("serves species hero photos directly without the vinext image optimizer", async () => {
   for (const [path, image] of [
     ["/plantes/cycas/revoluta", "/images/cycas-revoluta/cycas-revoluta-terrasse-tibaldo.webp"],
