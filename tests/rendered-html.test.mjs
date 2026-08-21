@@ -72,27 +72,17 @@ test("renders the substrates collection with local SEO metadata", async () => {
   assert.match(html, /src=["']\/substrats\/sphaigne-sechee-substrat-plantes-lille-v2\.png["']/i);
 });
 
-test("serves a crawlable robots file and a populated XML sitemap", async () => {
+test("blocks beta crawling and exposes no beta sitemap", async () => {
   const robots = await render("/robots.txt");
   assert.equal(robots.status, 200);
   assert.match(robots.headers.get("content-type") ?? "", /^text\/plain\b/i);
-  assert.match(await robots.text(), /Sitemap: https:\/\/jungle\.tibaldo\.fr\/sitemap\.xml/i);
+  const robotsText = await robots.text();
+  assert.match(robotsText, /Disallow: \/$/im);
+  assert.doesNotMatch(robotsText, /Sitemap:/i);
 
   const sitemap = await render("/sitemap.xml");
-  assert.equal(sitemap.status, 200);
-  assert.match(sitemap.headers.get("content-type") ?? "", /application\/xml/i);
-  const xml = await sitemap.text();
-  assert.match(xml, /<urlset xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9">/i);
-  assert.match(xml, /https:\/\/jungle\.tibaldo\.fr\/evenements\//i);
-  assert.match(xml, /https:\/\/jungle\.tibaldo\.fr\/evenements\/ouverture-tibaldo-jungle-lille/i);
-  assert.match(xml, /https:\/\/jungle\.tibaldo\.fr\/plantes\/alocasia\//i);
-  for (const guide of ["lumiere-plantes-interieur", "choisir-plante-selon-piece", "engrais-plantes-interieur", "plantes-interieur-hiver", "humidite-plantes-tropicales", "nettoyer-feuilles-plantes", "araignees-rouges-plantes", "pot-perce-cache-pot-coupelle"]) {
-    assert.match(xml, new RegExp(`https://jungle\\.tibaldo\\.fr/conseils/${guide}`));
-  }
-  for (const redirected of ["creation-boutique", "diagnostic-plante-lille", "traitement-thrips-lille", "rempotage-monstera-lille", "substrat-alocasia-lille", "livraison-fleurs-coupees-lille", "bouquets-fleurs-livraison-lille", "conseils/thrips-plantes-interieur-lille", "conseils/rempoter-plante-quand-comment"]) {
-    assert.doesNotMatch(xml, new RegExp(`<loc>https://jungle\\.tibaldo\\.fr/${redirected}</loc>`));
-  }
-  assert.doesNotMatch(xml, /\/admin\//i);
+  assert.equal(sitemap.status, 404);
+  assert.equal(sitemap.headers.get("x-robots-tag"), "noindex, nofollow");
 });
 
 test("links the opening event contextually from major editorial pages", async () => {
@@ -224,7 +214,7 @@ test("renders the Agave, Fatsia and five-species Strelitzia cluster", async () =
     assert.match(html, /rel=["']canonical["']/i, path);
     if (path.split("/").length === 4) assert.match(html, /has-editorial-fallback/i, path);
     assert.doesNotMatch(html, /\/_vinext\/image/i, path);
-    assert.doesNotMatch(html, /noindex/i, path);
+    assert.match(html, /noindex/i, path);
   }
   const hub = await (await render("/plantes/strelitzia")).text();
   assert.match(hub, /cinq espèces/i);
@@ -301,6 +291,6 @@ test("serves complete SEO metadata for the nine V2 pages", async () => {
     assert.match(html, /<meta[^>]+property=["']og:image["']/i, path);
     assert.match(html, /"@type":"BreadcrumbList"/i, path);
     assert.match(html, /<link[^>]+rel=["']canonical["']/i, path);
-    assert.doesNotMatch(html, /noindex/i, path);
+    assert.match(html, /noindex/i, path);
   }
 });

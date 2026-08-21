@@ -8,6 +8,7 @@ import { encyclopediaV2Step2Plants } from "./encyclopedia-v2-step2.ts";
 import { cycasRevoluta } from "./cycas-revoluta.ts";
 import { dicksoniaAntarctica } from "./dicksonia-antarctica.ts";
 import { agaveFatsiaStrelitziaPlants } from "./agave-fatsia-strelitzia.ts";
+import { shopUrl } from "../environment.ts";
 
 export const plantFamilies = [
   { slug: "strelitzia", name: "Strelitzia", eyebrow: "Oiseaux de paradis", description: "Les cinq espèces acceptées du genre Strelitzia : du compact reginae aux grands alba, caudata et nicolai, avec une lecture claire des appellations « Augusta ».", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle de Strelitzia à ajouter", available: true },
@@ -120,7 +121,7 @@ export const plants = [{
   gallery: [{ src: "/anthurium-pallidiflorum-cascade.webp", alt: "Anthurium pallidiflorum mature en suspension avec ses longues feuilles rubanées retombant en cascade", caption: "Port en cascade caractéristique d’un Anthurium pallidiflorum adulte cultivé en hauteur.", width: 1122, height: 1402 }],
   seo: { title: "Anthurium pallidiflorum : entretien et achat à Lille", description: "Guide complet de l’Anthurium pallidiflorum : lumière, arrosage, humidité, substrat et toxicité. Disponibilité au Studio Végétal Tibaldo Jungle à Lille.", keywords: ["Anthurium pallidiflorum", "Anthurium pallidiflorum entretien", "Anthurium rare Lille", "Anthurium ruban", "plante rare Lille"] },
   sources: [{ label: "Kew Science — Plants of the World Online", url: "https://powo.science.kew.org/" }, { label: "International Aroid Society", url: "https://www.aroid.org/" }],
-  shopUrl: "https://shop.tibaldo.fr/plantes/anthurium/pallidiflorum", publishedAt: "2026-08-13", updatedAt: "2026-08-14",
+  shopUrl: shopUrl("/plantes/anthurium/pallidiflorum"), publishedAt: "2026-08-13", updatedAt: "2026-08-14",
 }, {
   slug: "veitchii", genre: "anthurium", genreLabel: "Anthurium", botanicalName: "Anthurium veitchii", displayName: "Veitchii",
   subtitle: "Le King Anthurium, sculpté de longues feuilles profondément gaufrées.", family: "Araceae", origin: "Colombie · Chocó et Antioquia",
@@ -161,7 +162,7 @@ export const plants = [{
   gallery: [{ src: "/philodendron-billietiae-feuilles-ondulees.jpg", alt: "Philodendron billietiae botanique aux longues feuilles vertes ondulées", caption: "Silhouette foliaire authentique de Philodendron billietiae au Fairchild Tropical Botanic Garden. Photo David J. Stang, CC BY-SA 4.0.", width: 1280, height: 1920 }, { src: "/philodendron-billietiae-petioles-orange.jpg", alt: "Pétioles jaune orangé caractéristiques du Philodendron billietiae", caption: "Détail des pétioles orangés et du port grimpant. Photo David J. Stang, CC BY-SA 4.0.", width: 1920, height: 1280 }, { src: "/philodendron-billietiae-revers-feuille.jpg", alt: "Revers nervuré d’une feuille de Philodendron billietiae avec pétiole orange", caption: "Revers du limbe et nervation du Philodendron billietiae. Photo David J. Stang, CC BY-SA 4.0.", width: 1920, height: 1280 }],
   seo: { title: "Philodendron billietiae : entretien et achat à Lille", description: "Guide du Philodendron billietiae : pétioles orange, lumière, arrosage, substrat, tuteur et toxicité. Disponibilité chez Tibaldo Jungle à Lille.", keywords: ["Philodendron billietiae", "Philodendron billietiae entretien", "Philodendron orange Lille", "Philodendron rare Lille", "plante rare Lille"] },
   sources: [{ label: "Kew Science — Plants of the World Online", url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:982462-1/general-information" }, { label: "IPNI — Philodendron billietiae Croat", url: "https://www.ipni.org/n/982462-1" }, { label: "Wikimedia Commons — photographies David J. Stang", url: "https://commons.wikimedia.org/wiki/Category:Philodendron_billietiae" }],
-  shopUrl: "https://shop.tibaldo.fr/plantes/philodendron/billietiae", publishedAt: "2026-08-13", updatedAt: "2026-08-13",
+  shopUrl: shopUrl("/plantes/philodendron/billietiae"), publishedAt: "2026-08-13", updatedAt: "2026-08-13",
 }, {
   slug: "peperomioides", genre: "pilea", genreLabel: "Pilea", botanicalName: "Pilea peperomioides", displayName: "Peperomioides",
   subtitle: "La plante à monnaie chinoise, graphique, généreuse et facile à partager.", family: "Urticaceae", origin: "Sud-ouest de la Chine · Sichuan et Yunnan",
