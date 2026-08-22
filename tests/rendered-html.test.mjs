@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import test from "node:test";
 
 async function render(pathname = "/") {
@@ -266,6 +266,31 @@ test("uses the centralized Botanical Genus Hero for the style master and four V1
 
   const anthurium = await (await render("/plantes/anthurium")).text();
   assert.doesNotMatch(anthurium, /class=["'][^"']*botanical-genus-hero[^"']*["']/i);
+});
+
+test("renders the three V2.1 genus pilots with crawlable one-time motion primitives", async () => {
+  const signatures = new Map([
+    ["alocasia", /Humide ne veut pas dire détrempé/i],
+    ["chlorophytum", /Des stolons aux jeunes plants/i],
+    ["dicksonia", /Humidifier sans enfermer/i],
+  ]);
+
+  for (const [genre, signature] of signatures) {
+    const html = await (await render(`/plantes/${genre}`)).text();
+    assert.match(html, new RegExp(`genus-pilot-${genre}`, "i"), genre);
+    assert.match(html, /genus-motion-v1/i, genre);
+    assert.match(html, /data-motion=["'](?:metric|editorial|process|composition|service|section)["']/i, genre);
+    assert.match(html, signature, genre);
+    assert.match(html, /application\/ld\+json/i, genre);
+    assert.match(html, new RegExp(`rel=["']canonical["'][^>]+plantes/${genre}`, "i"), genre);
+  }
+
+  const anthurium = await (await render("/plantes/anthurium")).text();
+  assert.doesNotMatch(anthurium, /genus-motion-v1/i);
+
+  const css = readFileSync(new URL("../app/globals.css", import.meta.url), "utf8");
+  assert.match(css, /\.genus-motion-v1 \[data-motion/i);
+  assert.match(css, /@media\(prefers-reduced-motion:reduce\)[\s\S]*\.genus-motion-v1/i);
 });
 
 test("preserves the approved /plantes UX V2 structure", async () => {

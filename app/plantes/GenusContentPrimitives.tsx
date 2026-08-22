@@ -8,6 +8,7 @@ type FeatureBase = {
   label: string;
   className?: string;
   tone?: FeatureTone;
+  motion?: "metric" | "editorial" | "process" | "composition" | "service";
 };
 
 function featureClass(kind: string, tone: FeatureTone, className?: string) {
@@ -23,9 +24,10 @@ export function MetricFeature({
   copy,
   tone = "forest",
   className,
+  motion,
 }: FeatureBase & { value: string; title: string; copy?: string }) {
   return (
-    <article className={featureClass("metric-feature", tone, className)} data-reveal>
+    <article className={featureClass("metric-feature", tone, className)} data-motion={motion} data-reveal>
       <span className="genus-feature-label">{label}</span>
       <strong className="genus-metric-value">{value}</strong>
       <h3>{title}</h3>
@@ -41,9 +43,10 @@ export function EditorialFeature({
   children,
   tone = "cream",
   className,
+  motion,
 }: FeatureBase & { title: string; copy: string; children?: ReactNode }) {
   return (
-    <article className={featureClass("editorial-feature", tone, className)} data-reveal>
+    <article className={featureClass("editorial-feature", tone, className)} data-motion={motion} data-reveal>
       <span className="genus-feature-label">{label}</span>
       <div className="genus-editorial-copy">
         <h3>{title}</h3>
@@ -61,13 +64,14 @@ export function ProcessFeature({
   steps,
   tone = "cream",
   className,
+  motion,
 }: FeatureBase & {
   title: string;
   copy: string;
   steps: readonly { title: string; text: string }[];
 }) {
   return (
-    <article className={featureClass("process-feature", tone, className)} data-reveal>
+    <article className={featureClass("process-feature", tone, className)} data-motion={motion} data-reveal>
       <header>
         <span className="genus-feature-label">{label}</span>
         <h3>{title}</h3>
@@ -94,6 +98,7 @@ export function CompositionFeature({
   result,
   tone = "sage",
   className,
+  motion,
 }: FeatureBase & {
   title: string;
   copy: string;
@@ -101,7 +106,7 @@ export function CompositionFeature({
   result: string;
 }) {
   return (
-    <article className={featureClass("composition-feature", tone, className)} data-reveal>
+    <article className={featureClass("composition-feature", tone, className)} data-motion={motion} data-reveal>
       <header>
         <span className="genus-feature-label">{label}</span>
         <h3>{title}</h3>
@@ -132,6 +137,7 @@ export function ServiceBridge({
   cta,
   tone = "rose",
   className,
+  motion,
 }: FeatureBase & {
   title: string;
   advice: string;
@@ -141,7 +147,7 @@ export function ServiceBridge({
   cta: string;
 }) {
   return (
-    <aside className={featureClass("service-bridge", tone, className)} data-reveal>
+    <aside className={featureClass("service-bridge", tone, className)} data-motion={motion} data-reveal>
       <div className="genus-service-advice">
         <span className="genus-feature-label">{label}</span>
         <p>{advice}</p>
