@@ -2051,6 +2051,85 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
 @media(max-width:600px){.home-hub{padding-top:75px;padding-bottom:75px}.home-hub-grid{display:flex;overflow-x:auto;margin-right:-16px;padding-right:16px;scroll-snap-type:x mandatory;scrollbar-width:none}.home-hub-grid>a,.home-hub-grid>a:last-child{flex:0 0 82vw;min-height:500px;grid-column:auto;scroll-snap-align:start}.home-hub-grid p{min-height:0}.home-core-services{padding:75px 0}.home-core-services-inner{gap:48px}.home-core-services-inner>div>a{grid-template-columns:38px 1fr auto;gap:12px;min-height:125px}.home-core-services h3{font-size:27px}.home-studio-compact{min-height:0;margin-top:75px;margin-bottom:75px}.home-studio-compact figure{min-height:370px}.home-studio-compact>div{padding:52px 24px}.home-studio-facts{grid-template-columns:1fr}.home-expertise-strip{padding:80px 0}.home-expertise-strip nav{grid-template-columns:1fr}.home-expertise-strip nav a{border-right:0;border-bottom:1px solid rgba(255,255,255,.22)}.home-expertise-strip nav a:last-child{border-bottom:0}}
 @media(prefers-reduced-motion:reduce){.home-hub-grid img,.home-core-services-inner>div>a,.home-expertise-strip nav a{transition:none}.home-hub-grid>a:hover img{transform:none}}
 
+/* Genus Hub Content System V2.1 — primitives activated only on Anthurium. */
+.anth-v21-compositions{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px;margin-top:12px}
+.genus-feature{position:relative;min-width:0;overflow:hidden;color:var(--forest)}
+.genus-feature h3,.genus-feature p{position:relative;z-index:1}
+.genus-feature h3{margin:0;font:400 clamp(33px,3.4vw,51px)/.96 Georgia,serif;letter-spacing:-.04em}
+.genus-feature p{margin:0;color:#536158;font-size:13px;line-height:1.78}
+.genus-feature-label{position:relative;z-index:1;display:block;color:#66756c;font-size:8px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.genus-tone-cream{background:#f0ece2}.genus-tone-sage{background:#dfe6d5}.genus-tone-rose{background:#9b716c;color:#fff}.genus-tone-forest{background:#173e30;color:#fff}
+.genus-tone-forest .genus-feature-label,.genus-tone-forest p{color:rgba(255,255,255,.66)}
+.genus-tone-rose .genus-feature-label,.genus-tone-rose p{color:rgba(255,255,255,.72)}
+
+.anth-v21-light{grid-column:span 7;display:flex;min-height:390px;align-items:flex-end;padding:42px}
+.anth-v21-light::before,.anth-v21-light::after{content:"";position:absolute;pointer-events:none;border-radius:50%}
+.anth-v21-light::before{top:-33%;right:-9%;width:430px;height:430px;background:radial-gradient(circle,rgba(223,189,112,.28) 0 2%,rgba(223,189,112,.13) 3% 31%,rgba(223,189,112,.05) 32% 48%,transparent 49%)}
+.anth-v21-light::after{right:11%;bottom:24%;width:34%;height:1px;background:rgba(21,59,44,.26);box-shadow:0 18px 0 rgba(21,59,44,.12),0 36px 0 rgba(21,59,44,.07)}
+.anth-v21-light .genus-editorial-copy{display:grid;grid-template-columns:minmax(230px,.8fr) minmax(230px,1fr);gap:38px;align-items:end;width:100%}
+.anth-v21-light h3{font-size:clamp(43px,4.2vw,64px)}
+.anth-v21-light p{padding-top:18px;border-top:1px solid rgba(21,59,44,.24)}
+.anth-v21-light>.genus-feature-label{position:absolute;top:38px;left:42px}
+
+.anth-v21-temperature{grid-column:span 5;display:flex;min-height:390px;flex-direction:column;padding:38px}
+.anth-v21-temperature::after{content:"";position:absolute;right:-22%;bottom:-40%;width:310px;height:310px;border:1px solid rgba(185,216,141,.14);border-radius:50%}
+.anth-v21-temperature .genus-metric-value{display:block;margin:auto 0 22px;color:var(--sage);font:italic 400 clamp(70px,7.5vw,110px)/.76 Georgia,serif;letter-spacing:-.07em;white-space:nowrap}
+.anth-v21-temperature h3{color:#fff;font-size:35px}
+.anth-v21-temperature p{max-width:420px;margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,.18)}
+
+.anth-v21-humidity{grid-column:1/5;grid-row:2;display:flex;min-height:209px;flex-direction:column;padding:28px}
+.anth-v21-humidity .genus-metric-value{margin:auto 0 3px;color:#173e30;font:italic 400 clamp(47px,5vw,72px)/.78 Georgia,serif;letter-spacing:-.06em}
+.anth-v21-humidity h3{color:#5f7662;font-size:clamp(28px,3vw,42px);font-style:italic}
+.anth-v21-humidity::after{content:"";position:absolute;top:50%;right:28px;left:28px;height:1px;background:rgba(21,59,44,.18)}
+
+.anth-v21-watering{grid-column:5/13;grid-row:2/4;display:grid;grid-template-columns:4fr 8fr;gap:38px;min-height:430px;padding:36px}
+.anth-v21-watering header{display:flex;flex-direction:column}
+.anth-v21-watering header h3{margin-top:auto}
+.anth-v21-watering header p{margin-top:22px;padding-top:18px;border-top:1px solid rgba(21,59,44,.22)}
+.anth-v21-watering ol{display:grid;grid-template-columns:repeat(2,1fr);margin:0;padding:0;border-top:1px solid rgba(21,59,44,.18);border-left:1px solid rgba(21,59,44,.18);list-style:none}
+.anth-v21-watering li{display:flex;min-height:153px;flex-direction:column;padding:22px;border-right:1px solid rgba(21,59,44,.18);border-bottom:1px solid rgba(21,59,44,.18);transition:opacity .45s ease,transform .55s cubic-bezier(.2,.8,.2,1)}
+.anth-v21-watering li>span{color:#9b716c;font:italic 12px Georgia,serif}.anth-v21-watering li>strong{margin:auto 0 8px;font:400 22px/1 Georgia,serif}.anth-v21-watering li>small{color:#66736b;font-size:9px;line-height:1.55}
+
+.anth-v21-substrate{grid-column:1/8;grid-row:4;display:grid;grid-template-columns:1fr;gap:30px;min-height:410px;padding:36px}
+.anth-v21-substrate header{display:grid;grid-template-columns:.8fr 1.2fr;gap:28px;align-items:end}.anth-v21-substrate header>.genus-feature-label{grid-column:1/-1}.anth-v21-substrate header h3{font-size:40px}.anth-v21-substrate header p{padding-top:15px;border-top:1px solid rgba(21,59,44,.2)}
+.genus-composition-equation{align-self:center}.genus-composition-equation>div{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(21,59,44,.2);border-left:1px solid rgba(21,59,44,.2)}
+.genus-composition-equation>div>span{position:relative;display:block;min-width:0;border-right:1px solid rgba(21,59,44,.2);border-bottom:1px solid rgba(21,59,44,.2)}
+.genus-composition-equation a,.genus-composition-equation b{display:block;min-height:72px;padding:21px 18px;color:var(--forest);font:400 clamp(22px,2.2vw,32px)/1 Georgia,serif;transition:background .3s ease,color .3s ease}
+.genus-composition-equation a:hover{background:#173e30;color:#fff}
+.genus-composition-equation span>i{position:absolute;z-index:2;top:50%;left:0;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:#dfe6d5;color:#788c70;font:400 18px/22px Georgia,serif;text-align:center}
+.genus-composition-equation>strong{display:flex;justify-content:flex-end;align-items:center;gap:18px;margin-top:16px;color:#173e30;font:italic 400 clamp(31px,3.2vw,45px)/1 Georgia,serif}.genus-composition-equation>strong i{font-style:normal}
+
+.anth-v21-nutrition{grid-column:1/5;grid-row:3;display:flex;min-height:209px;flex-direction:column;padding:28px}
+.anth-v21-nutrition .genus-editorial-copy{margin-top:auto}.anth-v21-nutrition h3{font-size:30px}.anth-v21-nutrition p{margin-top:13px;font-size:11px;line-height:1.6}
+.anth-v21-repotting{grid-column:8/13;grid-row:4;display:grid;grid-template-columns:1fr;min-height:410px}
+.genus-service-advice,.genus-service-action{padding:34px}
+.genus-service-advice{display:flex;min-height:132px;flex-direction:column;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.2)}
+.genus-service-action{background:#173e30}.genus-service-action>small{color:var(--sage);font-size:7px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}.genus-service-action h3{margin:24px 0 14px;color:#fff;font-size:38px}.genus-service-action>strong{display:block;color:var(--sage);font:400 18px Georgia,serif}.genus-service-action p{margin:10px 0 22px}.genus-service-action .button{width:fit-content;min-height:52px;padding:0 18px;font-size:8px}
+
+.reveal-ready .anth-v21-watering:not(.is-visible) li,.reveal-ready .anth-v21-substrate:not(.is-visible) .genus-composition-equation span{opacity:0;transform:translateY(13px)}
+.anth-v21-watering.is-visible li,.anth-v21-substrate.is-visible .genus-composition-equation span{opacity:1;transform:translateY(0)}
+.anth-v21-watering li:nth-child(2),.anth-v21-substrate .genus-composition-equation span:nth-child(2){transition-delay:.08s}.anth-v21-watering li:nth-child(3),.anth-v21-substrate .genus-composition-equation span:nth-child(3){transition-delay:.16s}.anth-v21-watering li:nth-child(4),.anth-v21-substrate .genus-composition-equation span:nth-child(4){transition-delay:.24s}
+.anth-v21-substrate .genus-composition-equation span{transition:opacity .45s ease,transform .55s cubic-bezier(.2,.8,.2,1)}
+
+@media(max-width:980px){
+  .anth-v21-light,.anth-v21-temperature{grid-column:span 6}.anth-v21-light .genus-editorial-copy{grid-template-columns:1fr}.anth-v21-humidity{grid-column:1/6}.anth-v21-watering{grid-column:6/13;grid-template-columns:1fr;gap:30px}.anth-v21-nutrition{grid-column:1/6}.anth-v21-substrate{grid-column:1/8}.anth-v21-repotting{grid-column:8/13}.genus-service-advice{min-height:145px}
+}
+@media(max-width:620px){
+  .anth-v21-compositions{display:block;margin-top:9px}.anth-v21-compositions>.genus-feature{margin-bottom:9px}
+  .anth-v21-light,.anth-v21-temperature,.anth-v21-humidity,.anth-v21-watering,.anth-v21-substrate,.anth-v21-nutrition,.anth-v21-repotting{min-height:0;padding:22px}
+  .anth-v21-light{display:block;padding-top:82px}.anth-v21-light>.genus-feature-label{top:22px;left:22px}.anth-v21-light::before{top:-34%;right:-46%;width:310px;height:310px}.anth-v21-light::after{display:none}.anth-v21-light .genus-editorial-copy{display:block}.anth-v21-light h3{font-size:40px}.anth-v21-light p{margin-top:22px;padding-top:15px;font-size:12px;line-height:1.68}
+  .anth-v21-temperature{min-height:305px}.anth-v21-temperature .genus-metric-value{margin:auto 0 18px;font-size:66px}.anth-v21-temperature h3{font-size:29px}.anth-v21-temperature p{margin-top:14px;padding-top:14px;font-size:11px;line-height:1.62}
+  .anth-v21-humidity{display:flex;min-height:210px;flex-direction:column;align-items:flex-start}.anth-v21-humidity .genus-metric-value{margin:auto 0 5px;font-size:63px}.anth-v21-humidity h3{margin:0;font-size:38px;text-align:left}.anth-v21-humidity::after{top:31%;right:22px;left:22px}
+  .anth-v21-watering{display:block}.anth-v21-watering header h3{margin-top:34px;font-size:36px}.anth-v21-watering header p{margin-top:16px;padding-top:14px;font-size:11px;line-height:1.62}.anth-v21-watering ol{margin-top:22px}.anth-v21-watering li{min-height:104px;padding:13px}.anth-v21-watering li>strong{font-size:16px}.anth-v21-watering li>small{font-size:7px}
+  .anth-v21-substrate{display:block}.anth-v21-substrate header{display:block}.anth-v21-substrate header h3{margin-top:34px;font-size:36px}.anth-v21-substrate header p{margin-top:16px;padding-top:14px;font-size:11px;line-height:1.62}.anth-v21-substrate .genus-composition-equation{margin-top:22px}.genus-composition-equation a,.genus-composition-equation b{min-height:62px;padding:19px 12px;font-size:21px}.genus-composition-equation>strong{font-size:29px}
+  .anth-v21-nutrition{min-height:220px}.anth-v21-nutrition .genus-editorial-copy{margin-top:38px}.anth-v21-nutrition h3{font-size:32px}
+  .anth-v21-repotting{display:block;padding:0}.genus-service-advice,.genus-service-action{padding:22px}.genus-service-advice{min-height:118px}.genus-service-action h3{margin-top:18px;font-size:32px}.genus-service-action p{margin-bottom:16px}.genus-service-action .button{width:100%;justify-content:space-between}
+}
+@media(max-width:380px){.anth-v21-temperature .genus-metric-value{font-size:58px}}
+@media(prefers-reduced-motion:reduce){
+  .anth-v21-watering li,.anth-v21-substrate .genus-composition-equation span{opacity:1!important;transform:none!important;transition:none!important}.genus-composition-equation a{transition:none}
+}
+
 /* Bloc final — date et itinéraire abstrait animés */
 .opening-photo{overflow:hidden;background:radial-gradient(circle at 78% 60%,rgba(185,216,141,.22) 0 5px,transparent 6px),radial-gradient(circle at 78% 60%,transparent 0 48px,rgba(185,216,141,.12) 49px 50px,transparent 51px),repeating-linear-gradient(108deg,transparent 0 95px,rgba(185,216,141,.04) 96px 98px),linear-gradient(118deg,#06281d 0%,#0e3b2b 58%,#193f31 100%);background-size:auto,auto,130% 130%,auto;animation:openingMapTravel 18s ease-in-out infinite alternate}.opening-photo::before{content:"26 · 09 · 2026";position:absolute;right:4vw;top:9%;color:rgba(241,237,227,.075);font:italic 400 clamp(86px,12vw,190px)/.85 Georgia,serif;letter-spacing:-.07em;white-space:nowrap;animation:openingDateFloat 9s ease-in-out infinite alternate}.opening-photo::after{content:"LILLE  ·  PLACE DE L’ARBONNOISE  ↗";position:absolute;right:7vw;bottom:13%;padding:17px 22px;border-top:1px solid rgba(185,216,141,.42);border-bottom:1px solid rgba(185,216,141,.22);color:rgba(241,237,227,.68);font-size:8px;font-weight:800;letter-spacing:.2em;white-space:nowrap;animation:openingMarkerPulse 3.8s ease-in-out infinite}.opening-overlay{background:linear-gradient(90deg,rgba(5,29,21,.98) 0%,rgba(5,29,21,.9) 42%,rgba(5,29,21,.42) 68%,rgba(5,29,21,.14)),linear-gradient(0deg,rgba(5,29,21,.5),transparent 58%)}
 @keyframes openingMapTravel{0%{background-position:center,center,0 0,center}100%{background-position:center,center,70px -45px,center}}@keyframes openingDateFloat{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-22px,14px,0)}}@keyframes openingMarkerPulse{0%,100%{opacity:.52;transform:translateY(0)}50%{opacity:1;transform:translateY(-6px)}}

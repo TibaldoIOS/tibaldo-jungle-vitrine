@@ -1,6 +1,13 @@
 import type { PlantEntry } from "@/lib/plants/types";
 import Link from "next/link";
 import { Arrow } from "../SiteChrome";
+import {
+  CompositionFeature,
+  EditorialFeature,
+  MetricFeature,
+  ProcessFeature,
+  ServiceBridge,
+} from "./GenusContentPrimitives";
 import StudioAccessCompact from "./StudioAccessCompact";
 
 type Guide = {
@@ -16,6 +23,7 @@ type Guide = {
 
 export default function AnthuriumGenusV2({ guide, editorials, plants }: { guide: Guide; editorials: readonly { title: string; text: string }[]; plants: PlantEntry[] }) {
   const gallery = plants.slice(0, 3);
+  const [light, temperature, watering, substrate, nutrition, repotting] = guide.sections;
   return <>
     <article className="anthurium-genus-v2">
       <section className="shell anth-v2-intro" data-reveal>
@@ -30,10 +38,47 @@ export default function AnthuriumGenusV2({ guide, editorials, plants }: { guide:
       <section className="anth-v2-culture"><div className="shell">
         <header data-reveal><p className="section-kicker">Les équilibres essentiels</p><h2>Lire la plante.<br /><em>Ajuster le geste.</em></h2></header>
         <div className="anth-v2-facts">{guide.facts.map((fact) => <article key={fact.label} data-reveal><span>{fact.label}</span><strong>{fact.value}</strong></article>)}</div>
-        <div className="anth-v2-care-grid">
-          {guide.sections.map((section, index) => <article className={`anth-v2-care-${index + 1}`} key={section.title} data-reveal><span>{String(index + 1).padStart(2, "0")}</span><h3>{section.title}</h3><p>{section.text}</p>{section.title.toLowerCase().includes("substrat") && <nav aria-label="Composants de substrat"><Link href="/substrats/ecorce-de-pin">Écorce</Link><Link href="/substrats/chips-coco">Coco</Link><Link href="/substrats/sphaigne-sechee">Sphaigne</Link><Link href="/substrats/perlite">Perlite</Link></nav>}</article>)}
+        <div className="anth-v21-compositions">
+          <EditorialFeature className="anth-v21-light" label="Exposition" title="Lumière vive · indirecte" copy={light.text} />
+          <MetricFeature className="anth-v21-temperature" label="Température" value={guide.facts[1].value} title="Chaleur stable." copy={temperature.text} />
+          <MetricFeature className="anth-v21-humidity" label="Humidité" value="Élevée" title="mais ventilée." tone="sage" />
+          <ProcessFeature
+            className="anth-v21-watering"
+            label="Arrosage"
+            title="Observer avant d’arroser."
+            copy={watering.text}
+            steps={[
+              { title: "Observer", text: "La surface commence à sécher." },
+              { title: "Arroser", text: "Maintenir une humidité régulière." },
+              { title: "Égoutter", text: "Laisser l’excédent quitter le contenant." },
+              { title: "Laisser respirer", text: "Éviter l’asphyxie racinaire." },
+            ]}
+          />
+          <CompositionFeature
+            className="anth-v21-substrate"
+            label="Substrat"
+            title="De l’air autour des racines."
+            copy={substrate.text}
+            items={[
+              { label: "Écorce", href: "/substrats/ecorce-de-pin" },
+              { label: "Coco", href: "/substrats/chips-coco" },
+              { label: "Sphaigne", href: "/substrats/sphaigne-sechee" },
+              { label: "Minéral", href: "/substrats/perlite" },
+            ]}
+            result="Mélange aéré"
+          />
+          <EditorialFeature className="anth-v21-nutrition" label="Nutrition" title="Nourrir, sans forcer." copy={nutrition.text} tone="cream" />
+          <ServiceBridge
+            className="anth-v21-repotting"
+            label="Conseil botanique"
+            title="Besoin d’un coup de main ?"
+            advice={repotting.text}
+            serviceTitle="Bar à rempotage · Tibaldo Jungle"
+            serviceCopy="Confiez votre plante au Bar à rempotage du Studio."
+            href="/rempotage-plantes-lille"
+            cta="Découvrir le Bar à rempotage"
+          />
         </div>
-        <aside className="anth-v2-repotting" data-reveal><div><span>Service distinct du guide</span><h3>Besoin d’un coup de main ?</h3><p>Confiez votre plante au Bar à rempotage du Studio.</p></div><a className="button button-light" href="/rempotage-plantes-lille">Découvrir le Bar à rempotage <Arrow /></a></aside>
       </div></section>
 
       <section className="shell anth-v2-species" aria-labelledby="anth-v2-species-title">
