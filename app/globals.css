@@ -1327,6 +1327,9 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
 .botanical-genus-hero .inner-hero-content { position: relative; z-index: 2; }
 .botanical-genus-hero .inner-hero-content h1 { max-width: 760px; }
 .botanical-genus-hero .inner-hero-content > p:not(.eyebrow) { max-width: 560px; }
+@media (min-width: 601px) and (max-width: 980px) {
+  .botanical-genus-hero[data-genus="alocasia"] .botanical-genus-art-field { right: -12vw; opacity: .54; }
+}
 @media (max-width: 600px) {
   .botanical-genus-hero { --botanical-header-height: 80px; }
   .botanical-genus-art-field {

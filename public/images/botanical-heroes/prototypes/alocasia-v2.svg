@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" fill="none" stroke="#fff" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <g id="alocasia-wide">
+      <path d="M0 0C-18-113-9-222 0-319"/>
+      <path d="M0-640C-92-584-157-493-169-401C-177-338-151-281-104-250C-68-226-31-257 0-319C31-257 68-226 104-250C151-281 177-338 169-401C157-493 92-584 0-640Z"/>
+      <path d="M0-638C-3-546-2-424 0-319"/>
+      <path d="M-1-562C-43-548-82-521-116-486M1-562C43-548 82-521 116-486M-1-498C-57-480-104-446-143-401M1-498C57-480 104-446 143-401M-1-430C-55-410-99-376-137-334M1-430C55-410 99-376 137-334M-1-368C-39-350-70-324-96-287M1-368C39-350 70-324 96-287" opacity=".78" stroke-width=".82"/>
+    </g>
+    <g id="alocasia-tall">
+      <path d="M0 0C6-118 1-239 0-337"/>
+      <path d="M0-665C-69-610-119-522-129-426C-136-359-117-300-76-267C-47-244-20-272 0-337C20-272 47-244 76-267C117-300 136-359 129-426C119-522 69-610 0-665Z"/>
+      <path d="M0-663C-2-565-1-446 0-337"/>
+      <path d="M-1-582C-34-568-66-542-94-510M1-582C34-568 66-542 94-510M-1-514C-43-495-78-463-108-424M1-514C43-495 78-463 108-424M-1-443C-42-423-77-392-105-351M1-443C42-423 77-392 105-351M-1-382C-30-363-54-340-73-303M1-382C30-363 54-340 73-303" opacity=".78" stroke-width=".82"/>
+    </g>
+    <g id="alocasia-turned">
+      <path d="M0 0C-8-106-4-211 0-300"/>
+      <path d="M0-602C-72-551-126-471-139-387C-149-326-131-272-92-244C-61-223-27-247 0-300C24-261 49-240 76-247C118-258 145-306 143-365C140-453 82-545 0-602Z"/>
+      <path d="M0-600C-3-516-2-402 0-300"/>
+      <path d="M-1-526C-34-513-68-488-99-456M1-526C37-513 70-490 101-459M-1-464C-45-447-82-418-115-381M1-464C47-449 88-421 119-383M-1-400C-43-382-79-354-108-318M1-400C45-384 83-358 113-326M-1-345C-31-329-57-305-78-273M1-345C31-331 57-309 80-279" opacity=".78" stroke-width=".82"/>
+    </g>
+  </defs>
+  <g opacity=".42">
+    <use href="#alocasia-turned" transform="translate(430 700) rotate(-49) scale(.66 .69)"/>
+    <use href="#alocasia-tall" transform="translate(508 700) rotate(-28) scale(.71 .76)"/>
+    <use href="#alocasia-wide" transform="translate(598 700) rotate(38) scale(.66 .68)"/>
+  </g>
+  <g opacity=".62">
+    <use href="#alocasia-wide" transform="translate(438 700) rotate(-38) scale(.81 .84)"/>
+    <use href="#alocasia-turned" transform="translate(584 700) rotate(28) scale(.82 .86)"/>
+    <use href="#alocasia-tall" transform="translate(530 700) rotate(13) scale(.83 .89)"/>
+  </g>
+  <use href="#alocasia-turned" transform="translate(438 700) rotate(-24) scale(.94 .98)"/>
+  <use href="#alocasia-tall" transform="translate(520 700) rotate(-3) scale(.91 .98)"/>
+  <use href="#alocasia-wide" transform="translate(595 700) rotate(20) scale(.9 .93)"/>
+  <use href="#alocasia-turned" transform="translate(478 700) rotate(-57) scale(.58 .61)" opacity=".82"/>
+  <path d="M429 700C449 660 466 626 484 599M519 700C519 647 521 611 528 572M608 700C590 650 577 616 563 588M381 700C412 666 438 641 464 623M658 700C627 665 605 638 582 615" opacity=".72"/>
+</svg>
