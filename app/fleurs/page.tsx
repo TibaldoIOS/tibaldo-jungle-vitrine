@@ -1,12 +1,129 @@
 import type { Metadata } from "next";
 import { flowers } from "@/lib/flowers/catalog";
 import ScrollReveal from "../ScrollReveal";
-import { SiteFooter, SiteHeader } from "../SiteChrome";
+import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 import FlowerExplorer from "./FlowerExplorer";
 
-export const metadata: Metadata = { title: "Catalogue de fleurs sur commande à Lille | Tibaldo Jungle", description: "Explorez roses, pivoines, gypsophile, hortensias et fleurs coupées disponibles sur commande à Lille. Sélection, devis, retrait au Studio ou livraison.", alternates: { canonical: "/fleurs" }, openGraph: { title: "Fleurs coupées sur commande à Lille", description: "Un herbier d’inspiration pour préparer votre mariage, réception ou événement avec Tibaldo Jungle.", url: "/fleurs", type: "website" } };
+export const metadata: Metadata = {
+  title: "Catalogue de fleurs sur commande à Lille | Tibaldo Jungle",
+  description:
+    "Explorez roses, pivoines, gypsophile, hortensias et fleurs coupées disponibles sur commande à Lille. Sélection, devis, retrait au Studio ou livraison.",
+  alternates: { canonical: "/fleurs" },
+  openGraph: {
+    title: "Fleurs coupées sur commande à Lille",
+    description:
+      "Un herbier d’inspiration pour préparer votre mariage, réception ou événement avec Tibaldo Jungle.",
+    url: "/fleurs",
+    type: "website",
+  },
+};
 
 export default function FlowersPage() {
-  const schema = { "@context": "https://schema.org", "@type": "CollectionPage", name: "Fleurs coupées sur commande à Lille", description: "Catalogue éditorial de fleurs coupées proposées sur devis par Tibaldo Jungle à Lille.", url: "https://jungle.tibaldo.fr/fleurs", isPartOf: { "@type": "WebSite", name: "Studio Végétal — Tibaldo Jungle", url: "https://jungle.tibaldo.fr" }, mainEntity: { "@type": "ItemList", numberOfItems: flowers.length, itemListElement: flowers.map((flower, index) => ({ "@type": "ListItem", position: index + 1, name: `${flower.name} — ${flower.botanicalName}` })) } };
-  return <main className="editorial-page flowers-index"><ScrollReveal /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} /><section className="inner-hero compact-inner-hero flowers-index-hero"><div className="inner-hero-texture" aria-hidden="true" /><div className="inner-hero-shade" aria-hidden="true" /><SiteHeader /><div className="shell inner-hero-content"><p className="eyebrow"><span /> Fleurs coupées · Sur commande · Lille</p><h1><span className="hero-line"><span>L’herbier</span></span><span className="hero-line"><span><em>des possibles.</em></span></span></h1><p>Découvrez les fleurs que nous pouvons rechercher auprès de fournisseurs professionnels pour vos mariages, réceptions et projets. Cette sélection est une source d’inspiration, jamais une promesse de stock immédiat.</p><a className="button button-light" href="#explorer-les-fleurs">Explorer les fleurs <span>↓</span></a></div></section><div id="explorer-les-fleurs"><FlowerExplorer flowers={flowers} /></div><section className="flower-trust"><div className="shell"><article data-reveal><span>01</span><h2>Pas de faux stock</h2><p>Chaque disponibilité est contrôlée au moment de votre demande auprès de nos fournisseurs professionnels.</p></article><article data-reveal><span>02</span><h2>Un devis avant achat</h2><p>Variétés, couleurs, quantités, retrait ou livraison : tout est validé avant le versement de l’acompte.</p></article><article data-reveal><span>03</span><h2>Une sélection personnelle</h2><p>Votre liste est un point de départ. Nous proposons aussi des alternatives selon la saison et votre budget.</p></article></div></section><nav className="shell flower-service-link" aria-label="Projets floraux" data-reveal><a href="/fleurs-mariage-lille">Préparer les fleurs de votre mariage <span>↗</span></a><a href="/fleurs-evenement-lille">Préparer les fleurs de votre événement <span>↗</span></a><a href="/fleurs-sur-commande-lille">Comprendre le service Fleurs sur commande <span>↗</span></a></nav><SiteFooter /></main>;
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Fleurs coupées sur commande à Lille",
+    description:
+      "Catalogue éditorial de fleurs coupées proposées sur devis par Tibaldo Jungle à Lille.",
+    url: "https://jungle.tibaldo.fr/fleurs",
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Studio Végétal — Tibaldo Jungle",
+      url: "https://jungle.tibaldo.fr",
+    },
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: flowers.length,
+      itemListElement: flowers.map((flower, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: `${flower.name} — ${flower.botanicalName}`,
+      })),
+    },
+  };
+  return (
+    <main className="editorial-page flowers-index">
+      <ScrollReveal />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <section className="inner-hero compact-inner-hero flowers-index-hero">
+        <div className="inner-hero-texture" aria-hidden="true" />
+        <div className="inner-hero-shade" aria-hidden="true" />
+        <SiteHeader />
+        <div className="shell inner-hero-content">
+          <p className="eyebrow">
+            <span /> Fleurs coupées · Sur commande · Lille
+          </p>
+          <h1>
+            <span className="hero-line">
+              <span>L’herbier</span>
+            </span>
+            <span className="hero-line">
+              <span>
+                <em>des possibles.</em>
+              </span>
+            </span>
+          </h1>
+          <p>
+            Découvrez les fleurs que nous pouvons rechercher auprès de
+            fournisseurs professionnels pour vos mariages, réceptions et
+            projets. Cette sélection est une source d’inspiration, jamais une
+            promesse de stock immédiat.
+          </p>
+          <a className="button button-light" href="#explorer-les-fleurs">
+            Explorer les fleurs <span>↓</span>
+          </a>
+        </div>
+      </section>
+      <div id="explorer-les-fleurs">
+        <FlowerExplorer flowers={flowers} />
+      </div>
+      <section className="flower-trust">
+        <div className="shell">
+          <article data-reveal>
+            <span>01</span>
+            <h2>Pas de faux stock</h2>
+            <p>
+              Chaque disponibilité est contrôlée au moment de votre demande
+              auprès de nos fournisseurs professionnels.
+            </p>
+          </article>
+          <article data-reveal>
+            <span>02</span>
+            <h2>Un devis avant achat</h2>
+            <p>
+              Variétés, couleurs, quantités, retrait ou livraison : tout est
+              validé avant le versement de l’acompte.
+            </p>
+          </article>
+          <article data-reveal>
+            <span>03</span>
+            <h2>Une sélection personnelle</h2>
+            <p>
+              Votre liste est un point de départ. Nous proposons aussi des
+              alternatives selon la saison et votre budget.
+            </p>
+          </article>
+        </div>
+      </section>
+      <nav
+        className="shell flower-service-link"
+        aria-label="Projets floraux"
+        data-reveal
+      >
+        <a href="/fleurs-mariage-lille">
+          Préparer les fleurs de votre mariage <Arrow />
+        </a>
+        <a href="/fleurs-evenement-lille">
+          Préparer les fleurs de votre événement <Arrow />
+        </a>
+        <a href="/fleurs-sur-commande-lille">
+          Comprendre le service Fleurs sur commande <Arrow />
+        </a>
+      </nav>
+      <SiteFooter />
+    </main>
+  );
 }

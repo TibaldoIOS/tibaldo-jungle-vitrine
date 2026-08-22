@@ -85,6 +85,34 @@ test("blocks beta crawling and exposes no beta sitemap", async () => {
   assert.equal(sitemap.headers.get("x-robots-tag"), "noindex, nofollow");
 });
 
+test("Visual P1 target routes expose no internal production placeholders", async () => {
+  const routes = [
+    "/plantes/bananiers",
+    "/plantes/cycas/revoluta",
+    "/plantes/dicksonia/antarctica",
+    "/fleurs",
+  ];
+  const internalCopy = /PHOTO RÉELLE DU SPÉCIMEN|AJOUTER AVANT PUBLICATION|Photographie Tibaldo à venir|Photographies propriétaires à préparer|reportage botanique\s*à compléter|\?>\+/i;
+  for (const route of routes) {
+    const response = await render(route);
+    assert.equal(response.status, 200, route);
+    const html = await response.text();
+    assert.doesNotMatch(html, internalCopy, route);
+    assert.match(html, /<meta name="robots" content="noindex, nofollow/i, route);
+    assert.match(html, /https:\/\/beta-shop\.tibaldo\.fr/i, route);
+  }
+});
+
+test("Visual P1 preserves the three approved beta pilots", async () => {
+  for (const route of ["/plantes", "/plantes/monstera", "/plantes/monstera/thai-constellation"]) {
+    const response = await render(route);
+    assert.equal(response.status, 200, route);
+    const html = await response.text();
+    assert.match(html, /<meta name="robots" content="noindex, nofollow/i, route);
+    assert.match(html, /https:\/\/beta-shop\.tibaldo\.fr/i, route);
+  }
+});
+
 test("links the opening event contextually from major editorial pages", async () => {
   for (const route of ["/plantes", "/substrats", "/services"]) {
     const response = await render(route);

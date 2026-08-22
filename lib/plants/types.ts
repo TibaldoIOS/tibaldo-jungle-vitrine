@@ -47,4 +47,4 @@ export type PlantEntry = {
   publishedAt: string; updatedAt: string;
 };
 
-export const isEditorialPlaceholder = (src?: string) => !src || src.includes("photo-reelle-a-venir");
+export const isEditorialPlaceholder = (src?: string) => !src || src.includes("photo-reelle-a-venir") || src.includes("dicksonia-prototype.svg");

@@ -2496,3 +2496,108 @@ body:has(.conversion-dock){padding-bottom:calc(76px + env(safe-area-inset-bottom
 }
 
 @media(prefers-reduced-motion:reduce){.photo-genus-hero-image,.plants-v3-essential-grid>a,.plants-v3-essential-grid .botanical-motif,.directory-chevron,.botanical-directory-mobile-panel,.jungle-arrow-icon,.thai-v3-score-track i,.thai-v3-problems summary svg{animation:none!important;transition:none!important;transform:none!important}.reveal-ready [data-reveal] .thai-v3-score-track i{transform:none!important}}
+
+/* Visual P1 — scoped species compacting and honest botanical fallback. */
+.plant-profile-hero-botanical-fallback{background:radial-gradient(circle at 75% 42%,rgba(203,224,178,.2),transparent 28%),linear-gradient(118deg,#06271d 0%,#164b37 58%,#6f8d72 100%)}
+.plant-profile-hero-botanical-fallback::before,.plant-profile-hero-botanical-fallback::after{display:none}
+.plant-profile-hero-botanical-fallback img{position:absolute;right:-2%;bottom:-22%;width:min(62vw,840px);height:105%;object-fit:contain;filter:brightness(0) saturate(100%) invert(91%) sepia(18%) saturate(451%) hue-rotate(33deg) brightness(94%);opacity:.48}
+.p1-species-compact .plant-profile-layout{padding-top:72px;padding-bottom:88px}
+.p1-species-compact .plant-profile-section{padding-bottom:64px}
+.p1-species-compact .plant-identity-signature article{min-height:210px}
+.p1-species-compact .plant-facts>div{padding-top:20px;padding-bottom:21px}
+.p1-species-compact .care-meter{min-height:185px;padding:22px}
+.p1-species-compact .care-meter p{margin-top:18px;font-size:14px;line-height:1.62}
+.p1-species-compact .care-details article{padding-top:20px;padding-bottom:21px}
+.p1-species-compact .plant-local-spotlight{padding:42px}
+.p1-editorial-chapters>header{margin-bottom:28px}
+.p1-editorial-chapters>div{border-top:1px solid rgba(21,59,44,.2)}
+.p1-editorial-chapters details{border-bottom:1px solid rgba(21,59,44,.2)}
+.p1-editorial-chapters summary{display:grid;grid-template-columns:42px minmax(0,1fr) 38px;align-items:center;gap:14px;padding:21px 4px;color:var(--forest);cursor:pointer;list-style:none}
+.p1-editorial-chapters summary::-webkit-details-marker{display:none}
+.p1-editorial-chapters summary>span{color:#9c726e;font:italic 12px Georgia,serif}
+.p1-editorial-chapters summary strong{font:400 clamp(19px,2.3vw,27px)/1.25 Georgia,serif}
+.p1-editorial-chapters summary i,.p1-faq-indicator{position:relative;display:block;width:34px;height:34px;border:1px solid rgba(21,59,44,.2);border-radius:50%}
+.p1-editorial-chapters summary i::before,.p1-editorial-chapters summary i::after,.p1-faq-indicator::before,.p1-faq-indicator::after{content:"";position:absolute;top:50%;left:50%;width:11px;height:1px;background:currentColor;transform:translate(-50%,-50%);transition:transform .2s ease}
+.p1-editorial-chapters summary i::after,.p1-faq-indicator::after{transform:translate(-50%,-50%) rotate(90deg)}
+.p1-editorial-chapters details[open] summary i::after,.p1-species-compact .plant-faq details[open] .p1-faq-indicator::after{transform:translate(-50%,-50%) rotate(0)}
+.p1-editorial-chapters details>div{padding:0 52px 28px 56px}
+.p1-editorial-chapters p{color:#5d6b62;font:400 16px/1.72 Georgia,serif}
+.p1-editorial-chapters ul{display:grid;grid-template-columns:1fr 1fr;margin:25px 0 0;padding:0;border-top:1px solid rgba(21,59,44,.16);list-style:none}
+.p1-editorial-chapters li{padding:14px 14px 14px 0;border-bottom:1px solid rgba(21,59,44,.16);font-size:11px;line-height:1.55}
+.p1-editorial-chapters li:nth-child(even){padding-left:14px;border-left:1px solid rgba(21,59,44,.16)}
+.p1-species-compact .plant-faq details{padding:0}
+.p1-species-compact .plant-faq summary{display:grid;grid-template-columns:minmax(0,1fr) 38px;align-items:center;gap:15px;padding:18px 3px;list-style:none}
+.p1-species-compact .plant-faq summary::-webkit-details-marker{display:none}
+.p1-species-compact .plant-faq p{margin:0;padding:0 48px 20px 3px}
+.p1-species-compact .plant-gallery>div{display:flex;gap:10px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory;scrollbar-width:none}
+.p1-species-compact .plant-gallery figure{flex:0 0 min(48%,360px);scroll-snap-align:start}
+
+/* Flowers P1 — editorial directory rhythm and collision-safe mobile end. */
+.flowers-index .flower-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;border:0;background:transparent}
+.flowers-index .flower-grid article{grid-template-columns:minmax(120px,.72fr) 1.28fr;grid-template-rows:1fr;min-height:410px;overflow:hidden}
+.flowers-index .flower-grid article.is-featured{grid-column:1/-1;grid-template-columns:1.05fr .95fr;min-height:430px;background:#e8e8dc}
+.flowers-index .flower-grid article:nth-child(4n+2){background:#e5eadf}.flowers-index .flower-grid article:nth-child(4n+3){background:#ead9d4}
+.flowers-index .flower-art{min-height:100%;border-radius:0}
+.flowers-index .flower-card-copy{display:flex;min-width:0;flex-direction:column;padding:25px}
+.flowers-index .flower-card-copy h3{margin:15px 0 3px;font-size:clamp(25px,2.5vw,35px)}
+.flowers-index .flower-card-copy p{min-height:0;margin:16px 0;font-size:11px;line-height:1.65}
+.flowers-index .flower-card-copy ul{min-height:0;margin-bottom:14px}
+.flowers-index .flower-card-copy button{display:flex;justify-content:space-between;margin-top:auto}
+.flowers-index .flower-card-detail{display:inline-flex;align-items:center;gap:7px;margin-bottom:14px;color:var(--forest);font-size:8px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.flowers-index .flower-card-detail svg{width:15px;fill:none;stroke:currentColor;stroke-width:1.3}
+.flowers-index .flower-trust .shell{gap:1px;background:rgba(255,255,255,.16)}
+.flowers-index .flower-trust article,.flowers-index .flower-trust article:first-child{min-height:220px;padding:28px;background:var(--forest);border:0}
+.flowers-index .flower-trust h2{margin:38px 0 12px;font-size:25px}
+.flowers-index .flower-service-link{padding-top:60px;padding-bottom:72px}
+.flowers-index .flower-service-link a{align-items:center;padding:22px 0;font-size:20px}
+.flowers-index .flower-service-link svg{width:18px;fill:none;stroke:currentColor;stroke-width:1.3}
+
+@media(max-width:900px){
+  .plant-profile-hero-botanical-fallback img{right:-28%;bottom:-8%;width:112%;height:88%;opacity:.2}
+  .p1-species-compact .plant-profile-layout{padding-top:0;padding-bottom:55px}
+  .p1-species-compact .plant-profile-section{padding-bottom:52px}
+  .p1-species-compact .plant-identity-section{padding-top:48px}
+  .p1-species-compact .plant-identity-signature article{min-height:150px;padding:22px}
+  .p1-species-compact .care-meter-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+  .p1-species-compact .care-meter{min-height:0;padding:18px}
+  .p1-species-compact .care-meter p{font-size:12px}
+  .p1-species-compact .plant-local-spotlight{padding:30px 24px}
+  .p1-editorial-chapters summary{grid-template-columns:32px minmax(0,1fr) 34px;padding:17px 2px}
+  .p1-editorial-chapters summary strong{font-size:18px}
+  .p1-editorial-chapters details>div{padding:0 3px 22px 46px}
+  .p1-editorial-chapters p{font-size:13px;line-height:1.68}
+  .p1-editorial-chapters ul{grid-template-columns:1fr}
+  .p1-editorial-chapters li:nth-child(even){padding-left:0;border-left:0}
+  .p1-species-compact .plant-faq summary{padding:15px 2px}
+  .p1-species-compact .plant-faq summary strong{font-size:17px;line-height:1.3}
+  .p1-species-compact .plant-faq p{padding:0 40px 18px 2px;font-size:12px;line-height:1.68}
+  .p1-species-compact .plant-gallery>div{margin-right:-5vw;padding-right:5vw}
+  .p1-species-compact .plant-gallery figure{flex-basis:min(78vw,290px)}
+}
+
+@media(max-width:620px){
+  .flowers-index .flower-explorer{padding-top:58px;padding-bottom:62px}
+  .flowers-index .flower-explorer>header{margin-bottom:35px}
+  .flowers-index .flower-filter-panel{padding:20px 16px}
+  .flowers-index .flower-filters{gap:14px}
+  .flowers-index .flower-grid{grid-template-columns:1fr;gap:7px;margin-top:32px}
+  .flowers-index .flower-grid article,.flowers-index .flower-grid article.is-featured{grid-column:auto;grid-template-columns:92px minmax(0,1fr);min-height:0}
+  .flowers-index .flower-art{min-height:100%;height:auto}
+  .flowers-index .flower-art::before,.flowers-index .flower-art::after{width:62px;height:92px}
+  .flowers-index .flower-art span{font-size:48px}
+  .flowers-index .flower-card-copy{padding:18px 16px}
+  .flowers-index .flower-card-copy h3{margin-top:10px;font-size:25px}
+  .flowers-index .flower-card-copy p{display:-webkit-box;margin:12px 0;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:3}
+  .flowers-index .flower-card-copy ul{font-size:8px}
+  .flowers-index .flower-selection{bottom:calc(62px + env(safe-area-inset-bottom));width:calc(100% - 20px);padding:10px 10px 10px 15px}
+  .flowers-index .flower-selection a{padding:11px 14px}
+  .flowers-index .flower-explorer-quote{padding-top:60px;padding-bottom:58px}
+  .flowers-index .flower-trust article,.flowers-index .flower-trust article:first-child{min-height:0;padding:26px 5vw}
+  .flowers-index .flower-trust h2{margin-top:24px}
+  .flowers-index .flower-service-link{padding-top:45px;padding-bottom:50px}
+  .flowers-index .flower-service-link a{gap:20px;padding:19px 0;font-size:17px;line-height:1.25}
+  .flowers-index .footer-bottom{padding-bottom:calc(102px + env(safe-area-inset-bottom))}
+  .p1-species-compact .care-meter-grid{grid-template-columns:1fr}
+}
+
+@media(prefers-reduced-motion:reduce){.p1-editorial-chapters summary i::after,.p1-faq-indicator::after,.flowers-index .flower-grid article,.flowers-index .flower-card-detail svg{transition:none!important}}
