@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Crédits photographiques | Tibaldo Jungle",
   description: "Crédits et licences des photographies botaniques utilisées dans l’encyclopédie Tibaldo Jungle.",
   alternates: { canonical: "/credits-images" },
-  robots: { index: false, follow: true },
+  robots: { index: false, follow: false },
 };
 
 const credits = [

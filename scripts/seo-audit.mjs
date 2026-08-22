@@ -5,6 +5,27 @@ const env = { ASSETS: { fetch: async () => new Response("Not found", { status: 4
 const ctx = { waitUntil() {}, passThroughOnException() {} };
 const fetchRoute = (path) => worker.fetch(new Request(`${origin}${path}`, { redirect: "manual" }), env, ctx);
 const sitemapResponse = await fetchRoute("/sitemap.xml");
+const betaMode = process.env.JUNGLE_ENV === "beta";
+if (betaMode) {
+  const errors = [];
+  if (sitemapResponse.status !== 404) errors.push(`Sitemap HTTP ${sitemapResponse.status}, attendu 404 en BÊTA`);
+  if (sitemapResponse.headers.get("x-robots-tag") !== "noindex, nofollow") errors.push("Sitemap BÊTA sans X-Robots-Tag noindex, nofollow");
+  const robots = await fetchRoute("/robots.txt");
+  const robotsText = await robots.text();
+  if (robots.status !== 200) errors.push(`robots.txt HTTP ${robots.status}`);
+  if (!/^Disallow: \/$/im.test(robotsText)) errors.push("robots.txt BÊTA ne bloque pas la racine");
+  if (/Sitemap:/i.test(robotsText)) errors.push("robots.txt BÊTA déclare encore un sitemap");
+  for (const path of ["/", "/plantes", "/plantes/alocasia", "/plantes/chlorophytum", "/plantes/dicksonia", "/plantes/anthurium/veitchii"]) {
+    const response = await fetchRoute(path);
+    const html = await response.text();
+    if (response.status !== 200) errors.push(`${path}: HTTP ${response.status}`);
+    if (response.headers.get("x-robots-tag") !== "noindex, nofollow") errors.push(`${path}: en-tête X-Robots-Tag incorrect`);
+    if (!/<meta[^>]+name=["']robots["'][^>]+content=["'][^"']*noindex[^"']*nofollow/i.test(html)) errors.push(`${path}: meta robots BÊTA absente`);
+  }
+  if (errors.length) { console.error(errors.join("\n")); process.exitCode = 1; }
+  else console.log("Audit SEO BÊTA validé : noindex,nofollow global, robots fermé et sitemap absent.");
+  process.exit();
+}
 if (sitemapResponse.status !== 200) throw new Error(`Sitemap HTTP ${sitemapResponse.status}`);
 const xml = await sitemapResponse.text();
 const paths = [...xml.matchAll(/<loc>https:\/\/jungle\.tibaldo\.fr([^<]*)<\/loc>/g)].map((match) => match[1] || "/");

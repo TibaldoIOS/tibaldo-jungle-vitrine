@@ -15,6 +15,27 @@ test("Jungle beta sends shop CTAs exclusively to Shop beta", async () => {
   for (const source of files) assert.doesNotMatch(source, /https:\/\/shop\.tibaldo\.fr/);
 });
 
+test("approved Botanical Heroes are active and rejected prototypes stay disabled", async () => {
+  const { botanicalHeroRegistry, hasBotanicalHero } = await import("../lib/plants/botanical-heroes.ts");
+  for (const genre of ["strelitzia", "chlorophytum", "alocasia", "dicksonia"]) {
+    assert.equal(hasBotanicalHero(genre), true, genre);
+  }
+  assert.equal(botanicalHeroRegistry.alocasia.status, "APPROVED");
+  assert.equal(botanicalHeroRegistry.dicksonia.status, "APPROVED");
+  assert.equal(botanicalHeroRegistry.monstera.status, "PROTOTYPE_REJECTED");
+  assert.equal(hasBotanicalHero("monstera"), false);
+});
+
+test("editorial motion always provides a reduced-motion fallback", async () => {
+  const [styles, reveal] = await Promise.all([
+    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
+    readFile(new URL("../app/ScrollReveal.tsx", import.meta.url), "utf8"),
+  ]);
+  assert.match(styles, /prefers-reduced-motion:\s*reduce/i);
+  assert.match(reveal, /prefers-reduced-motion:\s*reduce/i);
+  assert.match(reveal, /classList\.add\("is-visible"\)/);
+});
+
 test("Jungle beta is globally marked and excluded from indexing", async () => {
   const [layout, robots, sitemap] = await Promise.all([
     readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),

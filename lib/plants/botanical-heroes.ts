@@ -50,7 +50,7 @@ export const botanicalHeroRegistry = {
     asset: "/images/botanical-heroes/prototypes/alocasia-v32.svg",
     prototypeId: "alocasia-v32",
     provenance: "OWNER_GENERATED_PROTOTYPE",
-    status: "AWAITING_OWNER_VISUAL_VALIDATION",
+    status: "APPROVED",
     desktop: { scale: 1, x: "1vw", y: "72px", opacity: 0.72 },
     mobile: { scale: 0.92, x: "19%", y: "72px", opacity: 0.2 },
   },
@@ -68,7 +68,7 @@ export const botanicalHeroRegistry = {
     asset: "/images/botanical-heroes/prototypes/dicksonia-prototype.svg",
     prototypeId: "dicksonia-prototype",
     provenance: "OWNER_GENERATED_PROTOTYPE",
-    status: "PROTOTYPE_REJECTED",
+    status: "APPROVED",
     desktop: { scale: 1.25, x: "-1vw", y: "96px", opacity: 0.72 },
     mobile: { scale: 0.86, x: "35%", y: "96px", opacity: 0.2 },
   },
@@ -77,5 +77,6 @@ export const botanicalHeroRegistry = {
 export type BotanicalHeroKey = keyof typeof botanicalHeroRegistry;
 
 export function hasBotanicalHero(genre: string): genre is BotanicalHeroKey {
-  return genre in botanicalHeroRegistry;
+  if (!(genre in botanicalHeroRegistry)) return false;
+  return botanicalHeroRegistry[genre as BotanicalHeroKey].status !== "PROTOTYPE_REJECTED";
 }

@@ -225,7 +225,7 @@ test("renders the Agave, Fatsia and five-species Strelitzia cluster", async () =
   assert.equal(new Set(api.map((entry) => entry.encyclopediaSlug)).size, 46);
 });
 
-test("uses the centralized Botanical Genus Hero for the style master and four V1.1 prototypes", async () => {
+test("uses only owner-approved Botanical Genus Heroes and excludes rejected prototypes", async () => {
   const strelitzia = await (await render("/plantes/strelitzia")).text();
   assert.match(strelitzia, /class=["'][^"']*botanical-genus-hero[^"']*["']/i);
   assert.match(strelitzia, /data-genus=["']strelitzia["']/i);
@@ -242,7 +242,6 @@ test("uses the centralized Botanical Genus Hero for the style master and four V1
 
   for (const [genre, asset] of [
     ["alocasia", "alocasia-v32.svg"],
-    ["monstera", "monstera-prototype.svg"],
     ["dicksonia", "dicksonia-prototype.svg"],
   ]) {
     const html = await (await render(`/plantes/${genre}`)).text();
@@ -253,6 +252,10 @@ test("uses the centralized Botanical Genus Hero for the style master and four V1
     assert.doesNotMatch(html, /\/_vinext\/image/i, genre);
     assert.ok(existsSync(new URL(`../public/images/botanical-heroes/prototypes/${asset}`, import.meta.url)), genre);
   }
+
+  const monstera = await (await render("/plantes/monstera")).text();
+  assert.doesNotMatch(monstera, /class=["'][^"']*botanical-genus-hero[^"']*["']/i);
+  assert.doesNotMatch(monstera, /monstera-prototype\.svg/i);
 
   const anthurium = await (await render("/plantes/anthurium")).text();
   assert.doesNotMatch(anthurium, /class=["'][^"']*botanical-genus-hero[^"']*["']/i);
