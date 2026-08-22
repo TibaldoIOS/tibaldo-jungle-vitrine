@@ -34,24 +34,22 @@ test("renders the homepage SEO signals and editorial content", async () => {
     /^text\/html\b/i,
   );
   const html = await response.text();
-  assert.match(html, /<title>Tibaldo Jungle — Studio Végétal à Lille<\/title>/i);
+  assert.match(html, /<title>Quelque chose pousse par ici \| Tibaldo Jungle Lille<\/title>/i);
   assert.match(
     html,
-    /<meta(?=[^>]*name=["']description["'])(?=[^>]*content=["'][^"']*Nouveauté à Lille[^"']*26 septembre 2026[^"']*["'])[^>]*>/i,
+    /<meta(?=[^>]*name=["']description["'])(?=[^>]*content=["'][^"']*Studio Végétal Tibaldo Jungle se prépare[^"']*26 septembre 2026[^"']*["'])[^>]*>/i,
   );
   assert.match(html, /<link(?=[^>]*rel=["']canonical["'])(?=[^>]*href=["']https:\/\/jungle\.tibaldo\.fr\/?["'])[^>]*>/i);
   assert.match(html, /application\/ld\+json/i);
-  assert.match(html, /Plantes rares[\s\S]*&amp; tropicales[\s\S]*à Lille\./i);
-  assert.match(html, /Plantes d’intérieur et d’extérieur, espèces exotiques, pépites rares et conseils passionnés\./i);
-  assert.match(html, /class=["']hero-line["']/i);
-  assert.match(html, /data-parallax=["']18["']/i);
-  assert.match(html, /Trois univers/i);
-  assert.match(html, /href=["']\/substrats["']/i);
-  assert.match(html, /Conseiller sans sur-vendre/i);
-  assert.match(html, /Grande ouverture · 26 septembre 2026 · Lille/i);
-  assert.match(html, /Rempotage gratuit toute l’année/i);
-  assert.match(html, /href=["']\/evenements\/ouverture-tibaldo-jungle-lille["']/i);
-  assert.doesNotMatch(html, /Lille · Nord · France/i);
+  assert.match(html, /QUELQUE CHOSE[\s\S]*POUSSE PAR ICI\./i);
+  assert.match(html, /Le Studio Végétal Tibaldo Jungle se prépare\./i);
+  assert.match(html, /26 SEPTEMBRE 2026/i);
+  assert.match(html, /href=["']\/plantes["']/i);
+  assert.match(html, /contact@tibaldo\.fr/i);
+  assert.match(html, /3 place de l’Arbonnoise/i);
+  assert.match(html, /https:\/\/shop\.tibaldo\.fr/i);
+  assert.doesNotMatch(html, /beta(?:-jungle|-shop)?\.tibaldo\.fr|localhost|192\.168\./i);
+  assert.doesNotMatch(html, /Mardi|Mercredi|Dimanche|Horaires/i);
   assert.match(html, /href=["'](?:https:\/\/jungle\.tibaldo\.fr)?\/favicon\.png["']/i);
 });
 
