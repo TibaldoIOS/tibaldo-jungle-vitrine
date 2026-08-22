@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 import { plantFamilies, plants, studioCollection } from "@/lib/plants/catalog";
 import PlantExplorer from "./PlantExplorer";
+import StudioAccessCompact from "./StudioAccessCompact";
 
 export const metadata: Metadata = {
   title: "Encyclopédie des plantes d’intérieur et tropicales",
@@ -75,22 +75,25 @@ export default function PlantsPage() {
       <section className="shell plants-quick-explore" aria-labelledby="quick-explore-title">
         <header data-reveal><p className="section-kicker">Explorer les plantes</p><h2 id="quick-explore-title">Les univers<br /><em>essentiels.</em></h2><p>Les grandes portes d’entrée de l’encyclopédie, accessibles en un geste.</p></header>
         <div className="plants-featured-grid">
-          {featuredFamilies.map((family) => <a href={`/plantes/${family.slug}`} key={family.slug} data-reveal>
-            <img src={family.image} alt="" width="320" height="220" loading="lazy" />
+          {featuredFamilies.map((family, index) => <a href={`/plantes/${family.slug}`} key={family.slug} data-reveal>
+            <i aria-hidden="true">{String(index + 1).padStart(2, "0")}</i>
             <span><small>{family.eyebrow}</small><strong>{family.name}</strong><em>{speciesCount(family.slug)} {speciesCount(family.slug) > 1 ? "espèces" : "espèce"}</em></span>
             <b aria-hidden="true">↗</b>
           </a>)}
         </div>
       </section>
 
-      <section className="shell plant-help-bridge plants-hub-sos" data-reveal><div><p className="section-kicker">Une plante vous inquiète ?</p><h2>Un symptôme.<br/><em>Un diagnostic.</em></h2></div><div><p>Feuilles jaunes, parasites ou racines serrées : partez du problème observé pour éviter les gestes inutiles.</p><a className="button button-green" href="/sos-plantes">SOS Plantes <Arrow /></a></div></section>
+      <section className="shell plant-help-bridge plants-hub-sos" data-reveal>
+        <div><p className="section-kicker">Une plante vous inquiète ?</p><h2>Observer.<br/><em>Puis agir.</em></h2></div>
+        <div className="plants-sos-actions"><p>Partez du signe réellement observé pour éviter les gestes inutiles.</p><ul><li>Feuilles jaunes</li><li>Parasites</li><li>Racines · rempotage</li></ul><a className="button button-green" href="/sos-plantes">SOS Plantes <Arrow /></a></div>
+      </section>
 
       <section className="shell plants-all-genera" aria-labelledby="all-genera-title">
         <header data-reveal><p className="section-kicker">Répertoire complet</p><h2 id="all-genera-title">Tous les genres.</h2><p>{primaryPlantFamilies.length} univers botaniques, sans aucune porte d’entrée masquée.</p></header>
         <div className="plants-genera-directory">
-          {primaryPlantFamilies.map((family) => <a href={`/plantes/${family.slug}`} key={family.slug}>
-            <img src={family.image} alt="" width="88" height="88" loading="lazy" />
-            <span><strong>{family.name}</strong><small>{speciesCount(family.slug)} {speciesCount(family.slug) > 1 ? "fiches" : "fiche"}</small></span>
+          {primaryPlantFamilies.map((family, index) => <a href={`/plantes/${family.slug}`} key={family.slug}>
+            <i aria-hidden="true">{String(index + 1).padStart(2, "0")}</i>
+            <span><strong>{family.name}</strong><small>{family.eyebrow} · {speciesCount(family.slug)} {speciesCount(family.slug) > 1 ? "fiches" : "fiche"}</small></span>
             <b aria-hidden="true">→</b>
           </a>)}
         </div>
@@ -107,12 +110,8 @@ export default function PlantsPage() {
       <PlantExplorer plants={plants} />
       <div className="shell plants-back-top"><a href="#haut-plantes">↑ Retour en haut</a></div>
 
-      <nav className="shell plants-practical-links" aria-label="Informations pratiques">
-        <Link href="/evenements/ouverture-tibaldo-jungle-lille"><small>Studio</small><strong>Nouvelle boutique de plantes à Lille</strong><span>→</span></Link>
-        <Link href="/contact"><small>Venir</small><strong>Accès & contact</strong><span>→</span></Link>
-        <Link href="/boutique-plantes-lille"><small>À Lille</small><strong>La boutique</strong><span>→</span></Link>
-      </nav>
-      <SiteFooter />
+      <StudioAccessCompact showOpeningEvent />
+      <SiteFooter compactTransit />
     </main>
   );
 }

@@ -6,12 +6,17 @@ import PlantCarePassport from "./PlantCarePassport";
 import ScientificName from "./ScientificName";
 import PlantShopBar from "./PlantShopBar";
 import PlantSpeciesHero from "./PlantSpeciesHero";
+import VeitchiiProfileV2 from "./VeitchiiProfileV2";
 
 function Meter({ label, value, copy }: { label: string; value: Level; copy: string }) { return <article className="care-meter" data-reveal><header><span>{label}</span><strong><b>{value}</b>/5</strong></header><div className="care-meter-track" aria-label={`${label} : ${value} sur 5`}>{[1,2,3,4,5].map((level) => <i className={level <= value ? "is-filled" : ""} key={level} />)}</div><p>{copy}</p></article>; }
 
 export default function PlantProfile({ plant }: { plant: PlantEntry }) {
   const difficultyLabels = ["", "Très facile", "Facile", "Intermédiaire", "Difficile", "Expert"];
   const gallery = plant.gallery.filter((image, index, images) => images.findIndex((candidate) => candidate.src === image.src) === index);
+  if (plant.genre === "anthurium" && plant.slug === "veitchii") return <main className="editorial-page plant-profile-page veitchii-profile-v2"><ScrollReveal />
+    <PlantSpeciesHero plant={plant} />
+    <PlantCarePassport indicators={[{ label: `Difficulté · ${difficultyLabels[plant.care.difficulty]}`, value: plant.care.difficulty, tone: "coral" }, { label: "Lumière", value: plant.care.light, tone: "gold" }, { label: "Arrosage", value: plant.care.water, tone: "blue" }, { label: "Humidité", value: plant.care.humidity, tone: "sage" }]} substrate={plant.care.substrate} nutrition={plant.care.fertilizing} />
+    <VeitchiiProfileV2 plant={plant} gallery={gallery} /><SiteFooter compactTransit />{plant.shopUrl && <PlantShopBar shopUrl={plant.shopUrl} plantName={plant.botanicalName} />}</main>;
   return <main className="editorial-page plant-profile-page"><ScrollReveal />
     <PlantSpeciesHero plant={plant} />
     <PlantCarePassport indicators={[{ label: `Difficulté · ${difficultyLabels[plant.care.difficulty]}`, value: plant.care.difficulty, tone: "coral" }, { label: "Lumière", value: plant.care.light, tone: "gold" }, { label: "Arrosage", value: plant.care.water, tone: "blue" }, { label: "Humidité", value: plant.care.humidity, tone: "sage" }]} substrate={plant.care.substrate} nutrition={plant.care.fertilizing} />

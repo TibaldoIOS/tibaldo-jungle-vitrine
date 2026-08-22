@@ -60,10 +60,10 @@ export function SiteHeader({ light = false }: { light?: boolean }) {
   );
 }
 
-export function SiteFooter() {
+export function SiteFooter({ compactTransit = false }: { compactTransit?: boolean } = {}) {
   return (
     <footer>
-      <section className="shell footer-transit" aria-labelledby="footer-transit-title" data-reveal>
+      {!compactTransit && <section className="shell footer-transit" aria-labelledby="footer-transit-title" data-reveal>
         <header><span>Venir sans voiture</span><h2 id="footer-transit-title">Le Studio est à quelques pas<br />de <em>Cormontaigne.</em></h2><p>3 place de l’Arbonnoise · 59000 Lille</p></header>
         <div className="footer-transit-visual">
           <figure><img src="/transports/cormontaigne-1.jpg" alt="Place et accès de la station de métro Cormontaigne à Lille" width="1280" height="960" loading="lazy" /><figcaption><span>Repère photographique réel</span><strong>Place Cormontaigne</strong><small>Accès au métro M2, dans le quartier Vauban-Esquermes.</small></figcaption></figure>
@@ -92,7 +92,7 @@ export function SiteFooter() {
             <a href="https://www.lille.fr/content/download/335492/3624784/file/Stationnement%2Bpayant%2BLille%2B2025.pdf" target="_blank" rel="noreferrer">Voir le plan officiel de Lille <Arrow /></a>
           </div>
         </section>
-      </section>
+      </section>}
       <div className="shell footer-main" data-reveal>
         <div className="footer-brand">
           <a className="brand footer-brand-mark" href="/" aria-label="Studio Végétal Tibaldo Jungle, accueil">
