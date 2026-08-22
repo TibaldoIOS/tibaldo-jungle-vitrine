@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Petioles: a small number of long, readable structural lines. -->
+  <g stroke-width="1.2" opacity=".9">
+    <path d="M524 700C510 582 476 425 438 309"/>
+    <path d="M572 700C590 563 634 420 681 332"/>
+    <path d="M548 700C572 616 637 555 704 520"/>
+    <path d="M493 700C449 618 378 539 324 489"/>
+  </g>
+
+  <!-- Rear leaf: narrow, upright and deliberately quieter. -->
+  <g opacity=".48" stroke-width=".94">
+    <path d="M681 332C660 311 648 326 623 344C589 369 551 337 552 284C554 194 646 103 790 43C852 137 860 243 808 316C777 360 726 373 701 342C694 334 688 328 681 332Z" fill="#fff" fill-opacity=".04"/>
+    <path d="M681 332C714 249 750 151 790 43"/>
+    <path d="M699 287C672 274 647 253 626 228M717 242C690 226 667 204 650 179M736 194C712 178 692 158 677 134M752 151C731 136 716 120 704 101M699 286C733 277 764 263 791 243M716 240C749 229 780 213 806 192M735 193C764 180 790 164 814 143M753 151C777 139 796 126 813 111" opacity=".72" stroke-width=".74"/>
+  </g>
+
+  <!-- Dominant high leaf: broad shield, clear sinus and large negative spaces. -->
+  <g stroke-width="1.12">
+    <path d="M438 309C411 283 384 303 349 325C291 362 224 316 201 250C165 148 258 76 385 38C521 82 598 169 568 259C548 320 493 355 458 321C451 313 445 306 438 309Z" fill="#fff" fill-opacity=".04"/>
+    <path d="M438 309C420 226 403 128 385 38"/>
+    <path d="M426 258C386 247 347 227 311 199M415 205C367 191 324 168 286 139M402 145C359 134 320 117 285 96M429 261C465 247 499 226 528 199M416 207C459 191 498 168 532 139M404 147C446 134 484 116 516 95" opacity=".78" stroke-width=".8"/>
+    <path d="M350 325C356 297 373 276 403 259M458 321C461 291 451 270 428 255" opacity=".62" stroke-width=".76"/>
+  </g>
+
+  <!-- Lateral leaf: separated from the main mass to preserve breathing room. -->
+  <g opacity=".82" stroke-width="1.04">
+    <path d="M324 489C306 470 291 480 271 493C235 518 191 488 186 444C178 376 235 324 333 292C402 346 426 408 397 455C379 485 344 505 331 493C328 490 326 487 324 489Z" fill="#fff" fill-opacity=".04"/>
+    <path d="M324 489C330 430 332 359 333 292"/>
+    <path d="M327 453C299 443 273 428 251 408M329 414C299 403 274 388 253 370M331 373C305 365 283 352 264 337M327 453C353 443 377 429 398 412M329 414C355 404 378 391 399 375M331 373C355 365 376 354 393 341" opacity=".72" stroke-width=".75"/>
+  </g>
+
+  <!-- Foreground leaf: the largest low leaf, partially cropped on the right. -->
+  <g stroke-width="1.16">
+    <path d="M704 520C683 497 660 507 631 530C584 568 529 530 531 470C534 380 662 308 875 270C949 371 948 472 878 529C835 564 766 574 726 536C717 527 710 517 704 520Z" fill="#fff" fill-opacity=".04"/>
+    <path d="M704 520C753 447 814 356 875 270"/>
+    <path d="M728 484C691 474 655 456 624 431M753 447C708 436 668 416 634 389M781 404C735 392 695 374 660 349M812 357C771 349 735 337 703 321M729 484C768 474 806 458 839 438M754 447C798 437 838 422 874 402M782 404C825 395 865 381 900 363M813 357C850 350 882 340 910 328" opacity=".8" stroke-width=".82"/>
+    <path d="M631 530C646 502 671 487 706 482M726 536C730 508 720 490 699 477" opacity=".64" stroke-width=".78"/>
+  </g>
+</svg>

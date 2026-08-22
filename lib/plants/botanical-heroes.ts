@@ -8,6 +8,7 @@ export type BotanicalHeroProvenance =
 export type BotanicalHeroStatus =
   | "APPROVED_STYLE_MASTER"
   | "APPROVED"
+  | "AWAITING_OWNER_VISUAL_VALIDATION"
   | "PROTOTYPE_REJECTED";
 
 type BotanicalHeroPlacement = {
@@ -46,12 +47,12 @@ export const botanicalHeroRegistry = {
   },
   alocasia: {
     render: "alpha-mask",
-    asset: "/images/botanical-heroes/prototypes/alocasia-v2.svg",
-    prototypeId: "alocasia-v2",
+    asset: "/images/botanical-heroes/prototypes/alocasia-v3.svg",
+    prototypeId: "alocasia-v3",
     provenance: "OWNER_GENERATED_PROTOTYPE",
-    status: "PROTOTYPE_REJECTED",
-    desktop: { scale: 0.98, x: "1vw", y: "72px", opacity: 0.72 },
-    mobile: { scale: 0.9, x: "20%", y: "72px", opacity: 0.18 },
+    status: "AWAITING_OWNER_VISUAL_VALIDATION",
+    desktop: { scale: 1, x: "1vw", y: "72px", opacity: 0.72 },
+    mobile: { scale: 0.92, x: "19%", y: "72px", opacity: 0.2 },
   },
   monstera: {
     render: "alpha-mask",
@@ -68,8 +69,8 @@ export const botanicalHeroRegistry = {
     prototypeId: "dicksonia-prototype",
     provenance: "OWNER_GENERATED_PROTOTYPE",
     status: "PROTOTYPE_REJECTED",
-    desktop: { scale: 1, x: "-1vw", y: "96px", opacity: 0.72 },
-    mobile: { scale: 0.78, x: "37%", y: "96px", opacity: 0.2 },
+    desktop: { scale: 1.25, x: "-1vw", y: "96px", opacity: 0.72 },
+    mobile: { scale: 0.86, x: "35%", y: "96px", opacity: 0.2 },
   },
 } satisfies Record<string, BotanicalHeroConfig>;
 
