@@ -2203,6 +2203,116 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
   .genus-motion-v1 [data-motion],.genus-motion-v1 [data-motion]::after,.genus-motion-v1 [data-motion] *{opacity:1!important;transform:none!important;transition:none!important}.genus-motion-v1 .genus-feature:hover,.genus-motion-v1 .pilot-v21-diagnostic article:hover{transform:none}
 }
 
+/* Editorial Rhythm V1 — functional color, secondary compositions and compact interactions. */
+.genus-pilot-v21{
+  --rhythm-deep:#173e30;
+  --rhythm-cream:#f3eee3;
+  --rhythm-sage:#dce5d4;
+  --rhythm-rose:#d0aaa3;
+  --rhythm-rose-ink:#6e4846;
+  --rhythm-line:rgba(21,59,44,.2);
+}
+.genus-pilot-alocasia{--rhythm-sage:#d3dfd0;--rhythm-rose:#cc9e98}
+.genus-pilot-chlorophytum{--rhythm-sage:#e3ead9;--rhythm-rose:#dfbbb3}
+.genus-pilot-dicksonia{--rhythm-deep:#11372a;--rhythm-sage:#cad8c8;--rhythm-rose:#cda8a1}
+
+.pilot-rhythm-secondary{position:relative;overflow:hidden;background:var(--rhythm-cream)}
+.pilot-rhythm-grid{display:grid;grid-template-columns:5fr 7fr;gap:12px;padding-top:16px;padding-bottom:92px}
+.pilot-rhythm-grid>article,.pilot-rhythm-strip>article{position:relative;min-width:0;overflow:hidden;padding:46px}
+.pilot-rhythm-grid article>span,.pilot-rhythm-strip article>span{display:block;margin-bottom:42px;color:#7f5956;font-size:8px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.pilot-rhythm-grid h2,.pilot-rhythm-strip h2{max-width:760px;margin:0 0 24px;font:400 clamp(34px,3.7vw,58px)/.96 Georgia,serif;letter-spacing:-.045em}
+.pilot-rhythm-grid p,.pilot-rhythm-strip p{max-width:760px;margin:0;color:#53645a;font-size:12px;line-height:1.78}
+
+.pilot-rhythm-alocasia .rhythm-lead{grid-column:1;min-height:420px;background:var(--rhythm-cream);border-top:1px solid var(--rhythm-line)}
+.pilot-rhythm-alocasia .rhythm-lead h2{font-size:clamp(42px,4.6vw,70px)}
+.pilot-rhythm-alocasia .rhythm-local{grid-column:2;grid-row:1/3;min-height:760px;background:var(--rhythm-deep);color:#fff}
+.pilot-rhythm-alocasia .rhythm-local>span,.pilot-rhythm-alocasia .rhythm-local p{color:rgba(255,255,255,.7)}
+.pilot-rhythm-alocasia .rhythm-local h2{max-width:520px;margin-top:120px}
+.pilot-rhythm-alocasia .rhythm-local p{position:relative;z-index:1;max-width:560px}
+.pilot-rhythm-alocasia .rhythm-local ul{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);margin:52px 0 0;padding:0;border-top:1px solid rgba(255,255,255,.22);border-left:1px solid rgba(255,255,255,.22);list-style:none}
+.pilot-rhythm-alocasia .rhythm-local li{display:flex;min-height:112px;flex-direction:column;justify-content:flex-end;padding:18px;border-right:1px solid rgba(255,255,255,.22);border-bottom:1px solid rgba(255,255,255,.22)}
+.pilot-rhythm-alocasia .rhythm-local li strong{font:400 20px/1 Georgia,serif}.pilot-rhythm-alocasia .rhythm-local li small{margin-top:8px;color:rgba(255,255,255,.6);font-size:8px;line-height:1.4}
+.pilot-rhythm-alocasia .rhythm-roots{grid-column:1;min-height:328px;background:var(--rhythm-rose);color:#3d2928}
+.pilot-rhythm-alocasia .rhythm-roots>span,.pilot-rhythm-alocasia .rhythm-roots p{color:#5e4140}
+.pilot-rhythm-alocasia .rhythm-roots h2{font-size:38px}.pilot-rhythm-alocasia .rhythm-roots ol{display:grid;grid-template-columns:repeat(3,1fr);margin:28px 0 0;padding:0;border-top:1px solid rgba(62,41,40,.24);list-style:none}
+.pilot-rhythm-alocasia .rhythm-roots li{display:flex;min-height:82px;flex-direction:column;justify-content:space-between;padding:14px 10px 0 0}.pilot-rhythm-alocasia .rhythm-roots li b{font:italic 11px Georgia,serif}.pilot-rhythm-alocasia .rhythm-roots li strong{font:400 15px/1.1 Georgia,serif}
+
+.pilot-rhythm-chlorophytum{background:var(--rhythm-sage)}
+.pilot-rhythm-strip{position:relative;display:grid;grid-template-columns:1.25fr .85fr .9fr;padding-top:32px;padding-bottom:76px}
+.pilot-rhythm-strip>article{z-index:1;padding:36px;border-top:1px solid rgba(21,59,44,.25);border-right:1px solid rgba(21,59,44,.16)}.pilot-rhythm-strip>article:last-child{border-right:0}
+.pilot-rhythm-strip>article:first-of-type{padding-left:0}.pilot-rhythm-strip>article:first-of-type h2{font-size:clamp(42px,4.4vw,68px)}
+.pilot-rhythm-strip>article:last-child{padding-right:0}.pilot-rhythm-strip h2{font-size:33px}.pilot-rhythm-strip p{font-size:11px}
+
+.pilot-rhythm-dicksonia{background:var(--rhythm-deep)}
+.pilot-rhythm-dicksonia .pilot-rhythm-grid{grid-template-columns:7fr 5fr}
+.pilot-rhythm-dicksonia .rhythm-identity{min-height:440px;background:var(--rhythm-cream);border-left:10px solid var(--rhythm-rose)}
+.pilot-rhythm-dicksonia .rhythm-identity h2{font-size:clamp(46px,5vw,74px)}
+.pilot-rhythm-dicksonia .rhythm-moisture{min-height:440px;background:var(--rhythm-deep);color:#fff;border:1px solid rgba(255,255,255,.16)}
+.pilot-rhythm-dicksonia .rhythm-moisture>span,.pilot-rhythm-dicksonia .rhythm-moisture p{color:rgba(255,255,255,.7)}
+.pilot-rhythm-dicksonia .rhythm-winter{grid-column:1/3;display:grid;grid-template-columns:.7fr 1.3fr;gap:42px;min-height:330px;background:var(--rhythm-sage)}
+.pilot-rhythm-dicksonia .rhythm-winter>span{grid-column:1/3}.pilot-rhythm-dicksonia .rhythm-winter>strong{align-self:end;color:var(--rhythm-deep);font:400 clamp(44px,5.2vw,78px)/.82 Georgia,serif;letter-spacing:-.055em}.pilot-rhythm-dicksonia .rhythm-winter>strong em{color:var(--rhythm-rose-ink);font-weight:400}
+.pilot-rhythm-dicksonia .rhythm-winter h2{align-self:end;margin:0;font-size:39px}.pilot-rhythm-dicksonia .rhythm-winter p{grid-column:2}
+
+.pilot-botanical-fragment{position:absolute;z-index:0;display:block;width:360px;height:520px;background:currentColor;opacity:.1;pointer-events:none;-webkit-mask-position:center;-webkit-mask-repeat:no-repeat;-webkit-mask-size:contain;mask-position:center;mask-repeat:no-repeat;mask-size:contain}
+.pilot-botanical-fragment-alocasia{top:-46px;right:-56px;color:var(--rhythm-sage);-webkit-mask-image:url('/images/botanical-heroes/prototypes/alocasia-prototype.svg');mask-image:url('/images/botanical-heroes/prototypes/alocasia-prototype.svg')}
+.pilot-botanical-fragment-chlorophytum{right:-40px;bottom:-190px;width:470px;height:520px;color:var(--rhythm-deep);opacity:.07;-webkit-mask-image:url('/images/botanical-heroes/prototypes/chlorophytum-v2.svg');mask-image:url('/images/botanical-heroes/prototypes/chlorophytum-v2.svg')}
+.pilot-botanical-fragment-dicksonia{right:-112px;bottom:-150px;width:420px;height:560px;color:var(--rhythm-sage);opacity:.1;-webkit-mask-image:url('/images/botanical-heroes/prototypes/dicksonia-prototype.svg');mask-image:url('/images/botanical-heroes/prototypes/dicksonia-prototype.svg')}
+
+.pilot-v21-diagnostic>div>.rhythm-symptoms{display:grid;grid-template-columns:minmax(260px,.72fr) minmax(0,1.28fr);margin-top:42px;border:0}
+.rhythm-symptom-index{border-top:1px solid rgba(255,255,255,.25);border-left:1px solid rgba(255,255,255,.25)}
+.rhythm-symptom-index button{display:grid;width:100%;min-height:76px;grid-template-columns:36px 1fr 24px;align-items:center;padding:12px 18px;border:0;border-right:1px solid rgba(255,255,255,.25);border-bottom:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;text-align:left;cursor:pointer}
+.rhythm-symptom-index button span{color:var(--rhythm-sage);font:italic 11px Georgia,serif}.rhythm-symptom-index button strong{font:400 17px/1.12 Georgia,serif}.rhythm-symptom-index button i{font:400 22px Georgia,serif;text-align:right}.rhythm-symptom-index button.is-active{background:var(--rhythm-rose);color:#3e2928}.rhythm-symptom-index button.is-active span{color:#684745}
+.rhythm-symptom-index button:focus-visible,.rhythm-faq-list button:focus-visible{position:relative;z-index:4;outline:3px solid #f5d679;outline-offset:-4px}
+.rhythm-symptom-panels{min-width:0;background:var(--rhythm-rose)}
+.pilot-v21-diagnostic .rhythm-symptom-panels article{display:none;min-height:304px;padding:0;border:0;color:var(--rhythm-deep)}
+.pilot-v21-diagnostic .rhythm-symptom-panels article.is-active{display:grid;grid-template-columns:.78fr 1.11fr 1.11fr;animation:rhythmPanelIn .32s cubic-bezier(.2,.8,.2,1) both}
+.pilot-v21-diagnostic .rhythm-symptom-panels article>div{display:flex;min-width:0;flex-direction:column;justify-content:flex-end;padding:28px;border-right:1px solid rgba(21,59,44,.2)}
+.pilot-v21-diagnostic .rhythm-symptom-panels article>div:nth-child(2){background:var(--rhythm-cream)}.pilot-v21-diagnostic .rhythm-symptom-panels article>div:nth-child(3){background:var(--rhythm-sage);border-right:0}
+.pilot-v21-diagnostic .rhythm-symptom-panels article span{color:#6e4d4a;font-size:7px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
+.pilot-v21-diagnostic .rhythm-symptom-panels h3{margin:54px 0 0;font:400 31px/.96 Georgia,serif}.pilot-v21-diagnostic .rhythm-symptom-panels p{margin:42px 0 0;color:#43564b;font-size:10px;line-height:1.7}
+.genus-pilot-chlorophytum .pilot-v21-diagnostic{background:var(--rhythm-cream);color:var(--rhythm-deep)}.genus-pilot-chlorophytum .pilot-v21-diagnostic h2{color:var(--rhythm-deep)}
+.genus-pilot-chlorophytum .rhythm-symptom-index{border-color:var(--rhythm-line)}.genus-pilot-chlorophytum .rhythm-symptom-index button{border-color:var(--rhythm-line);color:var(--rhythm-deep)}.genus-pilot-chlorophytum .rhythm-symptom-index button span{color:#79534f}
+.genus-pilot-chlorophytum .pilot-v21-diagnostic>div>a{background:var(--rhythm-deep);color:#fff}
+.genus-pilot-dicksonia .pilot-v21-diagnostic{background:#0d2f25}
+
+.pilot-v21-faq{position:relative;padding-top:82px;padding-bottom:72px}
+.genus-pilot-chlorophytum .pilot-v21-faq{background:var(--rhythm-sage);box-shadow:0 0 0 100vmax var(--rhythm-sage);clip-path:inset(0 -100vmax)}
+.genus-pilot-dicksonia .pilot-v21-faq{background:#e4eadf;box-shadow:0 0 0 100vmax #e4eadf;clip-path:inset(0 -100vmax)}
+.rhythm-faq-list{margin-top:36px;border-top:1px solid var(--rhythm-line)}
+.rhythm-faq-list>article{border-bottom:1px solid var(--rhythm-line);transition:background .25s ease}.rhythm-faq-list>article.is-active{background:rgba(208,170,163,.24)}
+.rhythm-faq-list h3{margin:0}.rhythm-faq-list button{display:grid;width:100%;min-height:72px;grid-template-columns:46px 1fr 30px;align-items:center;padding:12px 18px;border:0;background:transparent;color:var(--rhythm-deep);text-align:left;cursor:pointer}
+.rhythm-faq-list button span{color:#8a615d;font:italic 11px Georgia,serif}.rhythm-faq-list button strong{font:400 clamp(17px,1.6vw,22px)/1.15 Georgia,serif}.rhythm-faq-list button i{font:400 24px Georgia,serif;text-align:right}
+.rhythm-faq-panel{display:grid;grid-template-rows:0fr;opacity:0;transition:grid-template-rows .28s ease,opacity .2s ease}.rhythm-faq-panel[data-open="true"]{grid-template-rows:1fr;opacity:1}.rhythm-faq-panel>div{overflow:hidden}.rhythm-faq-panel p{max-width:780px;margin:0;padding:0 78px 24px;color:#4f6257;font-size:11px;line-height:1.75}
+.rhythm-faq-list>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+.genus-motion-v1 [data-motion="fragment"]{transition:opacity .52s ease,transform .62s cubic-bezier(.2,.8,.2,1)}
+.reveal-ready .genus-motion-v1 [data-motion="fragment"]:not(.is-visible){opacity:0;transform:translateY(18px)}
+.genus-motion-v1 [data-motion="fragment"].is-visible{transform:none}
+@keyframes rhythmPanelIn{from{opacity:.4;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(hover:hover) and (pointer:fine){.rhythm-symptom-index button,.rhythm-faq-list button{transition:background .24s ease,transform .24s ease}.rhythm-symptom-index button:not(.is-active):hover,.rhythm-faq-list button:hover{background:rgba(208,170,163,.16)}.rhythm-symptom-index button:hover strong,.rhythm-faq-list button:hover strong{transform:translateX(3px)}.rhythm-symptom-index button strong,.rhythm-faq-list button strong{transition:transform .24s ease}}
+
+@media(max-width:980px){
+  .pilot-rhythm-grid{grid-template-columns:1fr 1fr}.pilot-rhythm-grid>article{padding:34px}
+  .pilot-rhythm-alocasia .rhythm-local{min-height:680px}.pilot-rhythm-alocasia .rhythm-local h2{margin-top:80px}.pilot-rhythm-alocasia .rhythm-local ul{grid-template-columns:1fr}.pilot-rhythm-alocasia .rhythm-local li{min-height:76px}
+  .pilot-rhythm-strip{grid-template-columns:1.1fr .95fr .95fr}.pilot-rhythm-strip>article{padding:28px 24px}.pilot-rhythm-strip h2{font-size:29px}
+  .pilot-rhythm-dicksonia .pilot-rhythm-grid{grid-template-columns:1fr 1fr}.pilot-rhythm-dicksonia .rhythm-winter{grid-column:1/3}
+  .pilot-v21-diagnostic>div>.rhythm-symptoms{grid-template-columns:.85fr 1.15fr}.pilot-v21-diagnostic .rhythm-symptom-panels article.is-active{grid-template-columns:1fr}.pilot-v21-diagnostic .rhythm-symptom-panels article>div{min-height:116px}.pilot-v21-diagnostic .rhythm-symptom-panels h3,.pilot-v21-diagnostic .rhythm-symptom-panels p{margin-top:20px}
+}
+@media(max-width:620px){
+  .pilot-rhythm-grid,.pilot-rhythm-strip{display:block;padding-top:8px;padding-bottom:52px}.pilot-rhythm-grid>article,.pilot-rhythm-strip>article{min-height:0;padding:28px 22px}.pilot-rhythm-grid h2,.pilot-rhythm-strip h2{font-size:35px}.pilot-rhythm-grid p,.pilot-rhythm-strip p{font-size:11px}.pilot-rhythm-grid article>span,.pilot-rhythm-strip article>span{margin-bottom:25px}
+  .pilot-rhythm-alocasia .rhythm-lead,.pilot-rhythm-alocasia .rhythm-local,.pilot-rhythm-alocasia .rhythm-roots{min-height:0;margin-top:9px}.pilot-rhythm-alocasia .rhythm-lead{margin-top:0}.pilot-rhythm-alocasia .rhythm-lead h2{font-size:41px}.pilot-rhythm-alocasia .rhythm-local h2{margin-top:72px}.pilot-rhythm-alocasia .rhythm-local ul{margin-top:32px}.pilot-rhythm-alocasia .rhythm-roots h2{font-size:34px}.pilot-rhythm-alocasia .rhythm-roots ol{gap:8px}.pilot-rhythm-alocasia .rhythm-roots li{min-height:68px}.pilot-rhythm-alocasia .rhythm-roots li strong{font-size:13px}
+  .pilot-rhythm-strip>article{padding-right:0;padding-left:0;border-right:0}.pilot-rhythm-strip>article:first-of-type h2{font-size:41px}.pilot-rhythm-strip>article p{max-width:330px}.pilot-botanical-fragment-chlorophytum{right:-55%;bottom:5%;width:360px;height:410px}
+  .genus-pilot-chlorophytum .pilot-rhythm-strip{padding-top:0;padding-bottom:0}.genus-pilot-chlorophytum .pilot-rhythm-strip>article{padding-top:20px;padding-bottom:20px}.genus-pilot-chlorophytum .pilot-rhythm-strip article>span{margin-bottom:17px}.genus-pilot-chlorophytum .pilot-rhythm-strip h2{margin-bottom:16px}.genus-pilot-chlorophytum .pilot-rhythm-strip p{line-height:1.62}.genus-pilot-chlorophytum .pilot-compositions .genus-editorial-feature{min-height:180px}.genus-pilot-chlorophytum .pilot-chlorophytum-watering,.genus-pilot-chlorophytum .pilot-chlorophytum-substrate{min-height:160px}
+  .pilot-rhythm-dicksonia .rhythm-identity,.pilot-rhythm-dicksonia .rhythm-moisture,.pilot-rhythm-dicksonia .rhythm-winter{min-height:0;margin-top:9px}.pilot-rhythm-dicksonia .rhythm-identity{margin-top:0;border-left-width:7px}.pilot-rhythm-dicksonia .rhythm-identity h2{font-size:41px}.pilot-rhythm-dicksonia .rhythm-winter{display:block}.pilot-rhythm-dicksonia .rhythm-winter>strong{display:block;margin:16px 0 28px;font-size:48px}.pilot-rhythm-dicksonia .rhythm-winter h2{font-size:33px}.pilot-rhythm-dicksonia .rhythm-winter p{margin-top:20px}
+  .pilot-botanical-fragment{width:280px;height:400px}.pilot-botanical-fragment-alocasia{right:-42%;top:-18px}.pilot-botanical-fragment-dicksonia{right:-45%;bottom:-120px}
+  .pilot-v21-diagnostic{padding-top:56px;padding-bottom:56px}.pilot-v21-diagnostic>div>.rhythm-symptoms{display:block;margin-top:30px}.rhythm-symptom-index{display:grid;grid-template-columns:1fr 1fr}.rhythm-symptom-index button{min-height:84px;grid-template-columns:26px 1fr 18px;padding:10px}.rhythm-symptom-index button strong{font-size:14px}.rhythm-symptom-panels{min-height:0}.pilot-v21-diagnostic .rhythm-symptom-panels article.is-active{display:block}.pilot-v21-diagnostic .rhythm-symptom-panels article>div{min-height:0;padding:18px 20px}.pilot-v21-diagnostic .rhythm-symptom-panels h3{margin-top:16px;font-size:28px}.pilot-v21-diagnostic .rhythm-symptom-panels p{margin-top:12px;font-size:10px}.pilot-v21-diagnostic>div>a{min-height:64px;padding:0 18px;font-size:8px}
+  .pilot-v21-faq{padding-top:56px;padding-bottom:52px}.pilot-v21-faq header h2{font-size:39px}.rhythm-faq-list{margin-top:26px}.rhythm-faq-list button{min-height:66px;grid-template-columns:33px 1fr 22px;padding:10px 8px}.rhythm-faq-list button strong{font-size:16px}.rhythm-faq-panel p{padding:0 40px 18px;font-size:10px}.family-guide-sources{margin-top:26px}
+}
+@media(max-width:380px){.rhythm-symptom-index button{min-height:80px}.pilot-rhythm-grid h2,.pilot-rhythm-strip h2{font-size:32px}.pilot-rhythm-alocasia .rhythm-lead h2,.pilot-rhythm-strip>article:first-of-type h2,.pilot-rhythm-dicksonia .rhythm-identity h2{font-size:38px}}
+@media(prefers-reduced-motion:reduce){
+  .rhythm-symptom-panels article.is-active{animation:none!important}.rhythm-faq-panel,.rhythm-symptom-index button,.rhythm-faq-list button,.rhythm-symptom-index button strong,.rhythm-faq-list button strong{transition:none!important}
+}
+
 /* Bloc final — date et itinéraire abstrait animés */
 .opening-photo{overflow:hidden;background:radial-gradient(circle at 78% 60%,rgba(185,216,141,.22) 0 5px,transparent 6px),radial-gradient(circle at 78% 60%,transparent 0 48px,rgba(185,216,141,.12) 49px 50px,transparent 51px),repeating-linear-gradient(108deg,transparent 0 95px,rgba(185,216,141,.04) 96px 98px),linear-gradient(118deg,#06281d 0%,#0e3b2b 58%,#193f31 100%);background-size:auto,auto,130% 130%,auto;animation:openingMapTravel 18s ease-in-out infinite alternate}.opening-photo::before{content:"26 · 09 · 2026";position:absolute;right:4vw;top:9%;color:rgba(241,237,227,.075);font:italic 400 clamp(86px,12vw,190px)/.85 Georgia,serif;letter-spacing:-.07em;white-space:nowrap;animation:openingDateFloat 9s ease-in-out infinite alternate}.opening-photo::after{content:"LILLE  ·  PLACE DE L’ARBONNOISE  ↗";position:absolute;right:7vw;bottom:13%;padding:17px 22px;border-top:1px solid rgba(185,216,141,.42);border-bottom:1px solid rgba(185,216,141,.22);color:rgba(241,237,227,.68);font-size:8px;font-weight:800;letter-spacing:.2em;white-space:nowrap;animation:openingMarkerPulse 3.8s ease-in-out infinite}.opening-overlay{background:linear-gradient(90deg,rgba(5,29,21,.98) 0%,rgba(5,29,21,.9) 42%,rgba(5,29,21,.42) 68%,rgba(5,29,21,.14)),linear-gradient(0deg,rgba(5,29,21,.5),transparent 58%)}
 @keyframes openingMapTravel{0%{background-position:center,center,0 0,center}100%{background-position:center,center,70px -45px,center}}@keyframes openingDateFloat{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-22px,14px,0)}}@keyframes openingMarkerPulse{0%,100%{opacity:.52;transform:translateY(0)}50%{opacity:1;transform:translateY(-6px)}}

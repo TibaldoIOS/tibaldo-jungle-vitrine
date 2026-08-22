@@ -10,6 +10,7 @@ import {
   ProcessFeature,
   ServiceBridge,
 } from "./GenusContentPrimitives";
+import { CompactFaq, SymptomIndex, type SymptomItem } from "./GenusRhythmInteractions";
 
 type PilotGenre = "alocasia" | "chlorophytum" | "dicksonia";
 
@@ -23,6 +24,119 @@ type Guide = {
   faq: readonly { question: string; answer: string }[];
   sources: readonly { label: string; url: string }[];
 };
+
+function BotanicalFragment({ genre }: { genre: PilotGenre }) {
+  return <span className={`pilot-botanical-fragment pilot-botanical-fragment-${genre}`} aria-hidden="true" data-motion="fragment" data-reveal />;
+}
+
+function SecondaryRhythm({ genre, guide, editorials }: {
+  genre: PilotGenre;
+  guide: Guide;
+  editorials: readonly { title: string; text: string }[];
+}) {
+  if (genre === "alocasia") {
+    const [portrait, local, roots] = editorials;
+    if (!portrait || !local || !roots) return null;
+    return (
+      <section className="pilot-rhythm-secondary pilot-rhythm-alocasia" aria-label="Repères éditoriaux Alocasia">
+        <div className="shell pilot-rhythm-grid">
+          <article className="rhythm-lead" data-reveal data-motion="section">
+            <span>01 · Architecture</span>
+            <h2>{portrait.title}</h2>
+            <p>{portrait.text}</p>
+          </article>
+          <article className="rhythm-local" data-reveal data-motion="composition">
+            <BotanicalFragment genre={genre} />
+            <span>02 · Lille</span>
+            <h2>{local.title}</h2>
+            <p>{local.text}</p>
+            <ul aria-label="Trois facteurs à surveiller">
+              <li><strong>Lumière</strong><small>Près d’une fenêtre</small></li>
+              <li><strong>Hiver</strong><small>Arrosages réduits</small></li>
+              <li><strong>Racines</strong><small>Sans eau stagnante</small></li>
+            </ul>
+          </article>
+          <article className="rhythm-roots" data-reveal data-motion="process">
+            <span>03 · Sous la surface</span>
+            <h2>{roots.title}</h2>
+            <p>{roots.text}</p>
+            <ol>
+              <li><b>01</b><strong>Pot percé</strong></li>
+              <li><b>02</b><strong>Mélange aéré</strong></li>
+              <li><b>03</b><strong>Nutrition mesurée</strong></li>
+            </ol>
+          </article>
+        </div>
+      </section>
+    );
+  }
+
+  if (genre === "chlorophytum") {
+    const [identity, , watering, substrate] = guide.sections;
+    return (
+      <section className="pilot-rhythm-secondary pilot-rhythm-chlorophytum" aria-label="Repères éditoriaux Chlorophytum">
+        <div className="shell pilot-rhythm-strip">
+          <BotanicalFragment genre={genre} />
+          {[identity, watering, substrate].map((item, index) => item && (
+            <article key={item.title} data-reveal data-motion="section">
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <h2>{item.title}</h2>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+    );
+  }
+
+  const [identity, moisture, winter] = editorials;
+  if (!identity || !moisture || !winter) return null;
+  return (
+    <section className="pilot-rhythm-secondary pilot-rhythm-dicksonia" aria-label="Repères éditoriaux Dicksonia">
+      <div className="shell pilot-rhythm-grid">
+        <article className="rhythm-identity" data-reveal data-motion="section">
+          <span>01 · Identité</span>
+          <h2>{identity.title}</h2>
+          <p>{identity.text}</p>
+        </article>
+        <article className="rhythm-moisture" data-reveal data-motion="composition">
+          <BotanicalFragment genre={genre} />
+          <span>02 · Tissu vivant</span>
+          <h2>{moisture.title}</h2>
+          <p>{moisture.text}</p>
+        </article>
+        <article className="rhythm-winter" data-reveal data-motion="metric">
+          <span>03 · Hiver</span>
+          <strong>Le lieu<br /><em>avant le chiffre.</em></strong>
+          <h2>{winter.title}</h2>
+          <p>{winter.text}</p>
+        </article>
+      </div>
+    </section>
+  );
+}
+
+function symptomItemsFor(genre: PilotGenre, guide: Guide, plants: PlantEntry[]): SymptomItem[] {
+  if (genre !== "alocasia" && plants[0]?.problems.length) {
+    return plants[0].problems.slice(0, 4).map((problem) => ({
+      title: problem.title,
+      causes: problem.cause,
+      reflex: problem.advice,
+    }));
+  }
+
+  const reflexes = [
+    "Contrôlez d’abord les racines et les conditions réelles avant de fertiliser.",
+    "Stabilisez la culture et observez l’évolution des nouvelles feuilles.",
+    "Isolez la plante et inspectez les jeunes pousses ainsi que le revers des feuilles.",
+    "Retirez les parties atteintes et rempotez dans un mélange plus aéré.",
+  ];
+  return guide.problems.map((problem, index) => ({
+    title: problem.title,
+    causes: problem.text,
+    reflex: reflexes[index] ?? "Observez les conditions réelles avant de modifier la culture.",
+  }));
+}
 
 function AlocasiaCulture({ guide }: { guide: Guide }) {
   const [light, temperature, watering, humidity, substrate, nutrition] = guide.sections;
@@ -59,7 +173,7 @@ function AlocasiaCulture({ guide }: { guide: Guide }) {
       result="Racines aérées"
       tone="sage"
     />
-    <EditorialFeature motion="editorial" className="pilot-alocasia-season" label="Nutrition" title="Accompagner la saison." copy={nutrition.text} tone="cream" />
+    <EditorialFeature motion="editorial" className="pilot-alocasia-season" label="Nutrition" title="Accompagner la saison." copy={nutrition.text} tone="rose" />
     <ServiceBridge
       motion="service"
       className="pilot-alocasia-service"
@@ -141,7 +255,7 @@ function DicksoniaCulture({ plant }: { plant: PlantEntry }) {
       result="Motte vivante"
       tone="sage"
     />
-    <EditorialFeature motion="editorial" className="pilot-dicksonia-winter" label="Hiver à Lille" title="Protéger le lieu, pas un chiffre." copy={plant.care.temperature} tone="forest" />
+    <EditorialFeature motion="editorial" className="pilot-dicksonia-winter" label="Hiver à Lille" title="Protéger le lieu, pas un chiffre." copy={plant.care.temperature} tone="rose" />
     <ServiceBridge
       motion="service"
       className="pilot-dicksonia-service"
@@ -169,6 +283,7 @@ export default function GenusPilotV21({ genre, guide, editorials, plants }: {
   editorials: readonly { title: string; text: string }[];
   plants: PlantEntry[];
 }) {
+  const symptoms = symptomItemsFor(genre, guide, plants);
   return <>
     <article className={`genus-pilot-v21 genus-motion-v1 genus-pilot-${genre}`}>
       <section className="shell pilot-v21-intro" data-reveal data-motion="section">
@@ -176,9 +291,7 @@ export default function GenusPilotV21({ genre, guide, editorials, plants }: {
         <div className="pilot-v21-intro-copy"><p>{guide.lead}</p><p>{guide.origin}</p><strong>{plants.length}</strong><small>{plants.length > 1 ? "fiches documentées" : "fiche documentée"}</small></div>
       </section>
 
-      {editorials.length > 0 && <section className="shell pilot-v21-principles" aria-label={`Principes de culture des ${guide.name}`}>
-        {editorials.map((item, index) => <article key={item.title} data-reveal data-motion="section"><span>0{index + 1}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}
-      </section>}
+      <SecondaryRhythm genre={genre} guide={guide} editorials={editorials} />
 
       <section className="pilot-v21-culture"><div className="shell">
         <header data-reveal data-motion="section"><p className="section-kicker">Les équilibres du genre</p><h2>Observer le milieu.<br /><em>Adapter le geste.</em></h2></header>
@@ -188,13 +301,13 @@ export default function GenusPilotV21({ genre, guide, editorials, plants }: {
 
       <section className="pilot-v21-diagnostic"><div className="shell">
         <header data-reveal data-motion="section"><p className="section-kicker">Diagnostic rapide</p><h2>Observer avant d’agir.</h2></header>
-        <div>{guide.problems.map((problem) => <article key={problem.title} data-reveal data-motion="section"><span>Signe observé</span><h3>{problem.title}</h3><p>{problem.text}</p></article>)}</div>
+        <SymptomIndex items={symptoms} />
         <Link href="/sos-plantes">Vous hésitez ? Ouvrir SOS Plantes <Arrow /></Link>
       </div></section>
 
       <section className="family-guide-faq shell pilot-v21-faq">
         <header data-reveal data-motion="section"><p className="section-kicker">Questions fréquentes</p><h2>{guide.name} : les réponses essentielles.</h2></header>
-        {guide.faq.map((item) => <details key={item.question} data-reveal><summary>{item.question}</summary><p>{item.answer}</p></details>)}
+        <CompactFaq items={guide.faq} name={guide.name} />
         <p className="family-guide-sources">Sources botaniques : {guide.sources.map((source, index) => <span key={source.url}>{index > 0 && " · "}<a href={source.url} target="_blank" rel="noreferrer">{source.label}</a></span>)}</p>
       </section>
     </article>

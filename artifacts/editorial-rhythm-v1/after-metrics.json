@@ -1,0 +1,14 @@
+[
+  {"genre":"alocasia","width":360,"height":800,"scrollHeight":13396,"scrollWidth":360,"overflow":false,"secondaryHeight":1561,"diagnosticHeight":812,"faqHeight":696},
+  {"genre":"chlorophytum","width":360,"height":800,"scrollHeight":10746,"scrollWidth":360,"overflow":false,"secondaryHeight":583,"diagnosticHeight":812,"faqHeight":679},
+  {"genre":"dicksonia","width":360,"height":800,"scrollHeight":12142,"scrollWidth":360,"overflow":false,"secondaryHeight":1006,"diagnosticHeight":827,"faqHeight":675},
+  {"genre":"alocasia","width":390,"height":844,"scrollHeight":13241,"scrollWidth":390,"overflow":false,"secondaryHeight":1556,"diagnosticHeight":830,"faqHeight":696},
+  {"genre":"chlorophytum","width":390,"height":844,"scrollHeight":10751,"scrollWidth":390,"overflow":false,"secondaryHeight":598,"diagnosticHeight":830,"faqHeight":679},
+  {"genre":"dicksonia","width":390,"height":844,"scrollHeight":12077,"scrollWidth":390,"overflow":false,"secondaryHeight":958,"diagnosticHeight":830,"faqHeight":675},
+  {"genre":"alocasia","width":820,"height":1180,"scrollHeight":11778,"scrollWidth":820,"overflow":false,"secondaryHeight":1060,"diagnosticHeight":778,"faqHeight":689},
+  {"genre":"chlorophytum","width":820,"height":1180,"scrollHeight":10224,"scrollWidth":820,"overflow":false,"secondaryHeight":405,"diagnosticHeight":774,"faqHeight":733},
+  {"genre":"dicksonia","width":820,"height":1180,"scrollHeight":11272,"scrollWidth":820,"overflow":false,"secondaryHeight":938,"diagnosticHeight":783,"faqHeight":689},
+  {"genre":"alocasia","width":1440,"height":900,"scrollHeight":10521,"scrollWidth":1440,"overflow":false,"secondaryHeight":1135,"diagnosticHeight":825,"faqHeight":818},
+  {"genre":"chlorophytum","width":1440,"height":900,"scrollHeight":9423,"scrollWidth":1440,"overflow":false,"secondaryHeight":439,"diagnosticHeight":825,"faqHeight":818},
+  {"genre":"dicksonia","width":1440,"height":900,"scrollHeight":10215,"scrollWidth":1440,"overflow":false,"secondaryHeight":1017,"diagnosticHeight":825,"faqHeight":818}
+]

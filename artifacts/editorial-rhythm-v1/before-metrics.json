@@ -1,0 +1,14 @@
+[
+  {"genre":"alocasia","width":360,"height":800,"scrollHeight":13602,"scrollWidth":360,"overflow":false,"principlesHeight":1040,"diagnosticHeight":1296,"faqHeight":940},
+  {"genre":"chlorophytum","width":360,"height":800,"scrollHeight":10799,"scrollWidth":360,"overflow":false,"principlesHeight":0,"diagnosticHeight":1221,"faqHeight":835},
+  {"genre":"dicksonia","width":360,"height":800,"scrollHeight":12396,"scrollWidth":360,"overflow":false,"principlesHeight":771,"diagnosticHeight":1189,"faqHeight":803},
+  {"genre":"alocasia","width":390,"height":844,"scrollHeight":13355,"scrollWidth":390,"overflow":false,"principlesHeight":970,"diagnosticHeight":1286,"faqHeight":940},
+  {"genre":"chlorophytum","width":390,"height":844,"scrollHeight":10756,"scrollWidth":390,"overflow":false,"principlesHeight":0,"diagnosticHeight":1203,"faqHeight":835},
+  {"genre":"dicksonia","width":390,"height":844,"scrollHeight":12258,"scrollWidth":390,"overflow":false,"principlesHeight":701,"diagnosticHeight":1171,"faqHeight":773},
+  {"genre":"alocasia","width":820,"height":1180,"scrollHeight":11582,"scrollWidth":820,"overflow":false,"principlesHeight":659,"diagnosticHeight":959,"faqHeight":742},
+  {"genre":"chlorophytum","width":820,"height":1180,"scrollHeight":9973,"scrollWidth":820,"overflow":false,"principlesHeight":0,"diagnosticHeight":903,"faqHeight":786},
+  {"genre":"dicksonia","width":820,"height":1180,"scrollHeight":10989,"scrollWidth":820,"overflow":false,"principlesHeight":483,"diagnosticHeight":903,"faqHeight":742},
+  {"genre":"alocasia","width":1440,"height":900,"scrollHeight":10073,"scrollWidth":1440,"overflow":false,"principlesHeight":497,"diagnosticHeight":989,"faqHeight":871},
+  {"genre":"chlorophytum","width":1440,"height":900,"scrollHeight":9130,"scrollWidth":1440,"overflow":false,"principlesHeight":0,"diagnosticHeight":946,"faqHeight":871},
+  {"genre":"dicksonia","width":1440,"height":900,"scrollHeight":9756,"scrollWidth":1440,"overflow":false,"principlesHeight":413,"diagnosticHeight":946,"faqHeight":871}
+]

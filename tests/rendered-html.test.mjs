@@ -293,6 +293,30 @@ test("renders the three V2.1 genus pilots with crawlable one-time motion primiti
   assert.match(css, /@media\(prefers-reduced-motion:reduce\)[\s\S]*\.genus-motion-v1/i);
 });
 
+test("renders Editorial Rhythm V1 only on the three pilots with accessible compact interactions", async () => {
+  for (const genre of ["alocasia", "chlorophytum", "dicksonia"]) {
+    const html = await (await render(`/plantes/${genre}`)).text();
+    assert.match(html, /class=["'][^"']*pilot-rhythm-secondary[^"']*["']/i, genre);
+    assert.match(html, new RegExp(`pilot-botanical-fragment-${genre}`, "i"), genre);
+    assert.match(html, /aria-hidden=["']true["'][^>]+data-motion=["']fragment["']/i, genre);
+    assert.match(html, /class=["']rhythm-symptom-index["']/i, genre);
+    assert.match(html, /Causes possibles/i, genre);
+    assert.match(html, /Bon réflexe/i, genre);
+    assert.match(html, /class=["']rhythm-faq-list["']/i, genre);
+    assert.match(html, /aria-expanded=["']false["']/i, genre);
+    assert.match(html, /aria-controls=/i, genre);
+  }
+
+  for (const untouched of ["/plantes", "/plantes/anthurium", "/plantes/anthurium/veitchii"]) {
+    const html = await (await render(untouched)).text();
+    assert.doesNotMatch(html, /pilot-rhythm-secondary|rhythm-symptom-index|rhythm-faq-list/i, untouched);
+  }
+
+  const css = readFileSync(new URL("../app/globals.css", import.meta.url), "utf8");
+  assert.match(css, /Editorial Rhythm V1/i);
+  assert.match(css, /@media\(prefers-reduced-motion:reduce\)[\s\S]*\.rhythm-faq-panel/i);
+});
+
 test("preserves the approved /plantes UX V2 structure", async () => {
   const html = await (await render("/plantes")).text();
   assert.match(html, /class=["'][^"']*plants-hub-hero[^"']*["']/i);
