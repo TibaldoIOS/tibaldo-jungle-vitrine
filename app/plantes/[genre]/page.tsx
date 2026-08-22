@@ -12,6 +12,8 @@ import BotanicalGenusHero from "../BotanicalGenusHero";
 import { hasBotanicalHero } from "@/lib/plants/botanical-heroes";
 import AnthuriumGenusV2 from "../AnthuriumGenusV2";
 import GenusPilotV21 from "../GenusPilotV21";
+import PhotoGenusHero from "../PhotoGenusHero";
+import { hasPhotoGenusHero } from "@/lib/plants/photo-genus-heroes";
 
 type Props = { params: Promise<{ genre: string }> };
 type GuideKey = keyof typeof familyGuides;
@@ -114,7 +116,9 @@ export default async function Page({ params }: Props) {
     <main className="editorial-page">
       <ScrollReveal />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      {hasBotanicalHero(genre) ? (
+      {hasPhotoGenusHero(genre) ? (
+        <PhotoGenusHero genre={genre} label="Genre végétal" title={guide.name} subtitle={guide.heroSubtitle} />
+      ) : hasBotanicalHero(genre) ? (
         <BotanicalGenusHero genre={genre} label="Genre végétal" title={genre === "strelitzia" ? "Oiseaux de paradis" : isFamily ? botanicalName : guide.name} titleLead={genre === "strelitzia" ? "Strelitzia" : "Les"} subtitle={guide.heroSubtitle} isFamily={isFamily} />
       ) : (
         <section className="inner-hero compact-inner-hero family-genre-hero">
@@ -189,7 +193,7 @@ export default async function Page({ params }: Props) {
                     <img src={portrait.src} alt={portrait.alt} width="900" height="1100" />
                     <span>0{index + 1}</span>
                     <strong>{portrait.name}</strong>
-                    {portrait.href && <small>Voir la fiche ↗</small>}
+                    {portrait.href && <small>Voir la fiche <Arrow /></small>}
                   </>
                 );
                 return portrait.href ? (
@@ -428,7 +432,7 @@ export default async function Page({ params }: Props) {
           </nav>
         </>
       )}
-      <SiteFooter compactTransit={genre === "anthurium"} />
+      <SiteFooter compactTransit={genre === "anthurium" || hasPhotoGenusHero(genre)} />
     </main>
   );
 }

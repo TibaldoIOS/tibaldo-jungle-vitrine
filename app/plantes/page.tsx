@@ -4,6 +4,11 @@ import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 import { plantFamilies, plants, studioCollection } from "@/lib/plants/catalog";
 import PlantExplorer from "./PlantExplorer";
 import StudioAccessCompact from "./StudioAccessCompact";
+import EssentialUniversesV3 from "./EssentialUniversesV3";
+import BotanicalDirectoryV3 from "./BotanicalDirectoryV3";
+import BotanicalMotif from "./BotanicalMotif";
+
+const SearchIcon = () => <svg className="plants-search-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="4.75"/><path d="m12 12 4 4"/></svg>;
 
 export const metadata: Metadata = {
   title: "Encyclopédie des plantes d’intérieur et tropicales",
@@ -29,7 +34,7 @@ export const metadata: Metadata = {
 
 export default function PlantsPage() {
   const pageUrl = "https://jungle.tibaldo.fr/plantes";
-  const primaryPlantFamilies = plantFamilies.filter((family) => !["musa", "ensete"].includes(family.slug));
+  const primaryPlantFamilies = plantFamilies;
   const featuredSlugs = ["monstera", "anthurium", "alocasia", "philodendron", "strelitzia", "bananiers"];
   const featuredFamilies = featuredSlugs
     .map((slug) => primaryPlantFamilies.find((family) => family.slug === slug))
@@ -38,6 +43,8 @@ export default function PlantsPage() {
     if (slug === "bananiers") return plants.filter((plant) => ["musa", "ensete"].includes(plant.genre)).length;
     return plants.filter((plant) => plant.genre === slug).length;
   };
+  const essentialUniverses = featuredFamilies.map((family) => ({ slug: family.slug, name: family.name, descriptor: family.eyebrow, count: speciesCount(family.slug) }));
+  const directoryItems = primaryPlantFamilies.map((family) => ({ slug: family.slug, name: family.name, descriptor: family.eyebrow, description: family.description, count: speciesCount(family.slug) }));
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -60,10 +67,10 @@ export default function PlantsPage() {
             <h1>Les plantes.</h1>
             <p>Explorez les grands genres végétaux et ouvrez leurs fiches botaniques.</p>
           </div>
-          <a className="plants-hub-search-jump" href="#recherche-plantes" aria-label="Aller à la recherche de plantes">
-            <span aria-hidden="true">⌕</span>
-            Rechercher par nom
-          </a>
+          <div className="plants-hub-hero-actions">
+            <a className="plants-hub-search-jump" href="#recherche-plantes" aria-label="Aller à la recherche de plantes"><SearchIcon />Rechercher par nom</a>
+            <a className="plants-hub-index-jump" href="#index-botanique">31 genres · index botanique <Arrow /></a>
+          </div>
         </div>
       </section>
 
@@ -74,29 +81,16 @@ export default function PlantsPage() {
 
       <section className="shell plants-quick-explore" aria-labelledby="quick-explore-title">
         <header data-reveal><p className="section-kicker">Explorer les plantes</p><h2 id="quick-explore-title">Les univers<br /><em>essentiels.</em></h2><p>Les grandes portes d’entrée de l’encyclopédie, accessibles en un geste.</p></header>
-        <div className="plants-featured-grid">
-          {featuredFamilies.map((family, index) => <a href={`/plantes/${family.slug}`} key={family.slug} data-reveal>
-            <i aria-hidden="true">{String(index + 1).padStart(2, "0")}</i>
-            <span><small>{family.eyebrow}</small><strong>{family.name}</strong><em>{speciesCount(family.slug)} {speciesCount(family.slug) > 1 ? "espèces" : "espèce"}</em></span>
-            <b aria-hidden="true">↗</b>
-          </a>)}
-        </div>
+        <EssentialUniversesV3 items={essentialUniverses} />
       </section>
 
-      <section className="shell plant-help-bridge plants-hub-sos" data-reveal>
-        <div><p className="section-kicker">Une plante vous inquiète ?</p><h2>Observer.<br/><em>Puis agir.</em></h2></div>
-        <div className="plants-sos-actions"><p>Partez du signe réellement observé pour éviter les gestes inutiles.</p><ul><li>Feuilles jaunes</li><li>Parasites</li><li>Racines · rempotage</li></ul><a className="button button-green" href="/sos-plantes">SOS Plantes <Arrow /></a></div>
+      <section className="plants-hub-sos-v3" data-reveal>
+        <BotanicalMotif genre="chlorophytum" />
+        <div className="shell plants-hub-sos-v3-inner"><div><p className="section-kicker">Une plante vous inquiète ?</p><h2>Observer.<br/><em>Puis agir.</em></h2><p>Partez du signe réellement observé pour éviter les gestes inutiles.</p></div><div className="plants-sos-signs"><span>01 · Feuilles jaunes</span><span>02 · Parasites</span><span>03 · Racines</span></div><a className="button button-light" href="/sos-plantes">Ouvrir SOS Plantes <Arrow /></a></div>
       </section>
 
-      <section className="shell plants-all-genera" aria-labelledby="all-genera-title">
-        <header data-reveal><p className="section-kicker">Répertoire complet</p><h2 id="all-genera-title">Tous les genres.</h2><p>{primaryPlantFamilies.length} univers botaniques, sans aucune porte d’entrée masquée.</p></header>
-        <div className="plants-genera-directory">
-          {primaryPlantFamilies.map((family, index) => <a href={`/plantes/${family.slug}`} key={family.slug}>
-            <i aria-hidden="true">{String(index + 1).padStart(2, "0")}</i>
-            <span><strong>{family.name}</strong><small>{family.eyebrow} · {speciesCount(family.slug)} {speciesCount(family.slug) > 1 ? "fiches" : "fiche"}</small></span>
-            <b aria-hidden="true">→</b>
-          </a>)}
-        </div>
+      <section className="plants-all-genera-v3" id="index-botanique" aria-labelledby="all-genera-title">
+        <div className="shell"><header data-reveal><p className="section-kicker">Botanical Directory</p><h2 id="all-genera-title">Trente et un genres.<br/><em>Un index vivant.</em></h2><p>Tous les univers restent présents dans le HTML et accessibles sans mosaïque répétitive.</p></header><BotanicalDirectoryV3 items={directoryItems} /></div>
       </section>
 
       <section className="studio-collection plants-hub-collection shell" aria-labelledby="studio-collection-title">

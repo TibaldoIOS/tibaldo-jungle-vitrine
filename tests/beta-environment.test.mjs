@@ -47,3 +47,27 @@ test("Jungle beta is globally marked and excluded from indexing", async () => {
   assert.match(robots, /Disallow: \/|noindex, nofollow/);
   assert.match(sitemap, /status:\s*404/);
 });
+
+test("Editorial Experience V3 keeps the visual and environment guardrails", async () => {
+  const [styles, photoRegistry, directory, profile, chrome] = await Promise.all([
+    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
+    readFile(new URL("../lib/plants/photo-genus-heroes.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/plantes/BotanicalDirectoryV3.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/plantes/PlantProfile.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/SiteChrome.tsx", import.meta.url), "utf8"),
+  ]);
+  assert.match(photoRegistry, /monstera[\s\S]*OWNER_AUTHORIZED/);
+  assert.doesNotMatch(photoRegistry, /https?:\/\//);
+  assert.match(styles, /word-break:normal/);
+  assert.match(styles, /overflow-wrap:normal/);
+  assert.match(styles, /body:has\(\.conversion-dock\)/);
+  assert.match(styles, /env\(safe-area-inset-bottom\)/);
+  assert.match(styles, /footer-parking-grid[\s\S]*overflow-x:auto/);
+  assert.match(styles, /@media\(prefers-reduced-motion:reduce\)/);
+  assert.match(directory, /aria-expanded/);
+  assert.match(directory, /aria-controls/);
+  assert.match(directory, /tabIndex=\{open \? 0 : -1\}/);
+  assert.match(profile, /thai-constellation/);
+  assert.match(profile, /ThaiConstellationProfileV3/);
+  assert.doesNotMatch(chrome, /↗️/);
+});

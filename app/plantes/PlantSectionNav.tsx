@@ -8,5 +8,5 @@ export default function PlantSectionNav() {
     sections.forEach(([id]) => { const element = document.getElementById(id); if (element) observer.observe(element); });
     return () => observer.disconnect();
   }, []);
-  return <div className="plant-section-nav-shell"><p>Dans cette fiche</p><nav className="plant-section-nav" aria-label="Sommaire de la fiche plante">{sections.map(([id, label], index) => <a className={active === id ? "is-active" : ""} href={`#${id}`} key={id}><span>0{index + 1}</span><strong>{label}</strong><i aria-hidden="true">↘</i></a>)}</nav></div>;
+  return <div className="plant-section-nav-shell"><p>Dans cette fiche</p><nav className="plant-section-nav" aria-label="Sommaire de la fiche plante">{sections.map(([id, label], index) => <a className={active === id ? "is-active" : ""} href={`#${id}`} key={id}><span>0{index + 1}</span><strong>{label}</strong><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M5 5h10v10M15 5 5 15" /></svg></a>)}</nav></div>;
 }

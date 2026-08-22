@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ScrollReveal from "../ScrollReveal";
-import { SiteFooter, SiteHeader } from "../SiteChrome";
+import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 import SosPlantDiagnostic from "./SosPlantDiagnostic";
 
 export const metadata: Metadata = {
@@ -43,7 +43,7 @@ export default function Page() {
 
     <section className="sos-method"><div className="shell"><header data-reveal><p className="section-kicker">La méthode Tibaldo</p><h2>Observer.<br/><em>Comprendre. Agir.</em></h2></header><div className="sos-method-steps"><article data-reveal><span>01</span><h3>Vous photographiez</h3><p>Une vue entière, le symptôme de près, le revers des feuilles et la surface du pot.</p></article><article data-reveal><span>02</span><h3>On croise les indices</h3><p>Symptômes, lumière, fréquence d’arrosage et changements récents sont mis en relation.</p></article><article data-reveal><span>03</span><h3>Vous intervenez juste</h3><p>Une priorité claire et des gestes mesurés, sans traitement ni rempotage systématique.</p></article></div></div></section>
 
-    <section id="diagnostic" className="shell sos-service-paths"><article data-reveal><span>SOS Plantes</span><h2>Comprendre un problème.</h2><p>Diagnostic, parasites, feuilles abîmées ou croissance anormale : nous cherchons d’abord la cause.</p><a href="/sos-plantes#diagnostic">Faire examiner ma plante ↗</a></article><article data-reveal><span>Bar à rempotage</span><h2>Intervenir sur le pot.</h2><p>Changement de contenant, mélange adapté et travail des racines : un service distinct quand il est réellement nécessaire.</p><a href="/rempotage">Découvrir le rempotage ↗</a></article></section>
+    <section className="shell sos-service-paths"><article data-reveal><span>SOS Plantes</span><h2>Comprendre un problème.</h2><p>Diagnostic, parasites, feuilles abîmées ou croissance anormale : nous cherchons d’abord la cause.</p><a href="/sos-plantes#diagnostic">Faire examiner ma plante <Arrow /></a></article><article data-reveal><span>Bar à rempotage</span><h2>Intervenir sur le pot.</h2><p>Changement de contenant, mélange adapté et travail des racines : un service distinct quand il est réellement nécessaire.</p><a href="/rempotage-plantes-lille">Découvrir le rempotage <Arrow /></a></article></section>
 
     <section className="local-topic-links shell"><a href="/sos-plantes#diagnostic"><span>Examen au Studio</span><strong>Faire diagnostiquer une plante à Lille</strong></a><Link href="/conseils/thrips-plantes-interieur"><span>Parasites</span><strong>Reconnaître les thrips sur vos plantes</strong></Link><a href="/rempotage-plantes-lille"><span>Autre univers</span><strong>Découvrir le Bar à rempotage</strong></a></section>
     <section className="shell local-seo-faq flowers-faq"><header><p className="section-kicker">Questions fréquentes</p><h2>Sauver une plante sans précipitation.</h2></header>{faq.map((item) => <details key={item.q}><summary>{item.q}<span>+</span></summary><p>{item.a}</p></details>)}</section>

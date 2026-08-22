@@ -256,6 +256,9 @@ test("uses only owner-approved Botanical Genus Heroes and excludes rejected prot
   const monstera = await (await render("/plantes/monstera")).text();
   assert.doesNotMatch(monstera, /class=["'][^"']*botanical-genus-hero[^"']*["']/i);
   assert.doesNotMatch(monstera, /monstera-prototype\.svg/i);
+  assert.match(monstera, /class=["'][^"']*photo-genus-hero[^"']*["']/i);
+  assert.match(monstera, /monstera-deliciosa-feuilles\.jpg/i);
+  assert.match(monstera, /fetchpriority=["']high["']/i);
 
   const anthurium = await (await render("/plantes/anthurium")).text();
   assert.doesNotMatch(anthurium, /class=["'][^"']*botanical-genus-hero[^"']*["']/i);
@@ -310,14 +313,37 @@ test("renders Editorial Rhythm V1 only on the three pilots with accessible compa
   assert.match(css, /@media\(prefers-reduced-motion:reduce\)[\s\S]*\.rhythm-faq-panel/i);
 });
 
-test("preserves the approved /plantes UX V2 structure", async () => {
+test("renders /plantes V3 as a crawlable editorial mosaic and Botanical Directory", async () => {
   const html = await (await render("/plantes")).text();
   assert.match(html, /class=["'][^"']*plants-hub-hero[^"']*["']/i);
   assert.match(html, /href=["']#recherche-plantes["']/i);
   assert.match(html, /id=["']recherche-plantes["']/i);
-  assert.match(html, /class=["'][^"']*plants-featured-grid[^"']*["']/i);
-  assert.match(html, /class=["'][^"']*plants-genera-directory[^"']*["']/i);
+  assert.match(html, /class=["'][^"']*plants-v3-essential-grid[^"']*["']/i);
+  assert.match(html, /class=["'][^"']*botanical-directory-v3[^"']*["']/i);
+  assert.match(html, /aria-expanded=["']true["']/i);
+  assert.match(html, /aria-controls=/i);
+  assert.match(html, /Trente et un genres/i);
+  for (const name of ["Monstera", "Anthurium", "Philodendron", "Chlorophytum", "Sansevieria"]) {
+    assert.match(html, new RegExp(`>${name}<`, "i"), name);
+  }
   assert.match(html, /<details[^>]*>[\s\S]*Collection/i);
+});
+
+test("renders Thai Constellation as the only Species Editorial V3 prototype", async () => {
+  const thai = await (await render("/plantes/monstera/thai-constellation")).text();
+  assert.match(thai, /thai-profile-v3/i);
+  assert.match(thai, /thai-v3-identity-sheet/i);
+  assert.match(thai, /thai-v3-care-grid/i);
+  assert.match(thai, /thai-v3-substrate/i);
+  assert.match(thai, /Causes possibles/i);
+  assert.match(thai, /aria-expanded=["']false["']/i);
+  assert.match(thai, /Thai Constellation[\s\S]*Albo Variegata/i);
+  assert.doesNotMatch(thai, /\/\_vinext\/image/i);
+
+  for (const path of ["/plantes/anthurium/veitchii", "/plantes/monstera/deliciosa"]) {
+    const html = await (await render(path)).text();
+    assert.doesNotMatch(html, /thai-profile-v3|thai-v3-identity-sheet/i, path);
+  }
 });
 
 test("serves species hero photos directly without the vinext image optimizer", async () => {
