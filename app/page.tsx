@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 
 const address = "3 place de l’Arbonnoise, 59000 Lille";
 const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
@@ -116,9 +115,6 @@ export default function Home() {
             <small>Studio végétal · Lille</small>
           </span>
         </a>
-        <Link className="pause-home__header-link" href="/plantes">
-          Encyclopédie <ArrowIcon />
-        </Link>
       </header>
 
       <section className="pause-home__hero" aria-labelledby="pause-title">
@@ -148,9 +144,6 @@ export default function Home() {
           </div>
 
           <div className="pause-home__actions">
-            <Link className="pause-home__button pause-home__button--primary" href="/plantes">
-              Découvrir l’encyclopédie <ArrowIcon />
-            </Link>
             <a className="pause-home__button pause-home__button--quiet" href={mapsUrl} target="_blank" rel="noopener noreferrer">
               Nous trouver <ArrowIcon />
             </a>

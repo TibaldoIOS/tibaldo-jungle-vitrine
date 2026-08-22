@@ -44,7 +44,7 @@ test("renders the homepage SEO signals and editorial content", async () => {
   assert.match(html, /QUELQUE CHOSE[\s\S]*POUSSE PAR ICI\./i);
   assert.match(html, /Le Studio Végétal Tibaldo Jungle se prépare\./i);
   assert.match(html, /26 SEPTEMBRE 2026/i);
-  assert.match(html, /href=["']\/plantes["']/i);
+  assert.doesNotMatch(html, /href=["']\/plantes["']/i);
   assert.match(html, /contact@tibaldo\.fr/i);
   assert.match(html, /3 place de l’Arbonnoise/i);
   assert.match(html, /https:\/\/shop\.tibaldo\.fr/i);
