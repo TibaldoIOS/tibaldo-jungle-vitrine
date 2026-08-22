@@ -47,8 +47,8 @@ export const botanicalHeroRegistry = {
   },
   alocasia: {
     render: "alpha-mask",
-    asset: "/images/botanical-heroes/prototypes/alocasia-v3.svg",
-    prototypeId: "alocasia-v3",
+    asset: "/images/botanical-heroes/prototypes/alocasia-v31.svg",
+    prototypeId: "alocasia-v31",
     provenance: "OWNER_GENERATED_PROTOTYPE",
     status: "AWAITING_OWNER_VISUAL_VALIDATION",
     desktop: { scale: 1, x: "1vw", y: "72px", opacity: 0.72 },

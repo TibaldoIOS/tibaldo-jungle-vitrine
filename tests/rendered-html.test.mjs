@@ -251,7 +251,7 @@ test("uses the centralized Botanical Genus Hero for the style master and four V1
   assert.ok(existsSync(new URL("../public/images/botanical-heroes/prototypes/chlorophytum-v2.svg", import.meta.url)));
 
   for (const [genre, asset] of [
-    ["alocasia", "alocasia-v3.svg"],
+    ["alocasia", "alocasia-v31.svg"],
     ["monstera", "monstera-prototype.svg"],
     ["dicksonia", "dicksonia-prototype.svg"],
   ]) {
