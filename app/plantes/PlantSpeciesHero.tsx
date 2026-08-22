@@ -35,11 +35,12 @@ export default function PlantSpeciesHero({ plant }: { plant: PlantEntry }) {
           />
         </div>
       ) : (
-        <div className="plant-profile-hero-fallback" aria-hidden="true">
-          <span>
+        <div className="plant-profile-hero-fallback" role="img" aria-label={`Photographie de ${plant.botanicalName} à ajouter`}>
+          <span aria-hidden="true">
             {plant.taxonomy.genus.slice(0, 1)}
             <i>{plant.taxonomy.species.slice(0, 1)}</i>
           </span>
+          <small>Photographie Tibaldo à venir</small>
         </div>
       )}
       <div className="plant-profile-hero-shade" aria-hidden="true" />
