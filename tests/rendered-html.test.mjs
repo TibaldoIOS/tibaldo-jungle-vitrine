@@ -424,6 +424,48 @@ test("renders Thai Constellation as the only Species Editorial V3 prototype", as
   }
 });
 
+test("renders Species UX NEXT only for Monstera deliciosa", async () => {
+  const response = await render("/plantes/monstera/deliciosa");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+
+  assert.match(html, /species-next-page/i);
+  assert.match(html, /Sommaire de la fiche Monstera deliciosa/i);
+  for (const id of ["apercu", "identite", "comprendre", "cultiver", "racines", "diagnostic", "comparer", "regard", "faq", "sources", "explorer"]) {
+    assert.match(html, new RegExp(`id=["']${id}["']`, "i"), id);
+  }
+  assert.equal((html.match(/class=["'][^"']*species-next-nav[^"']*["']/gi) ?? []).length >= 1, true);
+  for (const href of ["#apercu", "#identite", "#cultiver", "#diagnostic", "#comparer", "#faq"]) {
+    assert.match(html, new RegExp(`href=["']${href}["']`, "i"), href);
+  }
+  assert.doesNotMatch(html, /plant-care-passport|plant-identity-signature|plant-taxonomy|care-meter-grid|plant-gallery/i);
+  assert.match(html, /Monstera borsigiana[\s\S]*synonyme/i);
+  assert.match(html, /Rhaphidophora tetrasperma/i);
+  assert.match(html, /Causes possibles[\s\S]*Comment vérifier[\s\S]*Action conseillée/i);
+  assert.match(html, /Conseil du Studio/i);
+  assert.doesNotMatch(html, /Observation Tibaldo Jungle/i);
+  assert.match(html, /aria-expanded=["']false["']/i);
+  assert.match(html, /"@type":"FAQPage"/i);
+  assert.match(html, /Pourquoi les nouvelles feuilles n’ont-elles pas de trous/i);
+  assert.match(html, /monstera-deliciosa-feuilles\.jpg/i);
+  assert.doesNotMatch(html, /botanix\.com/i);
+  assert.match(html, /<meta name="robots" content="noindex, nofollow/i);
+  assert.match(html, /rel=["']canonical["'][^>]+plantes\/monstera\/deliciosa/i);
+
+  for (const untouched of [
+    "/plantes/monstera",
+    "/plantes/monstera/thai-constellation",
+    "/plantes/monstera/mint",
+    "/plantes/monstera/adansonii",
+    "/plantes/monstera/burle-marx-flame",
+    "/plantes/monstera/esqueleto",
+    "/plantes/anthurium/veitchii",
+  ]) {
+    const untouchedHtml = await (await render(untouched)).text();
+    assert.doesNotMatch(untouchedHtml, /species-next-page/i, untouched);
+  }
+});
+
 test("serves species hero photos directly without the vinext image optimizer", async () => {
   for (const [path, image] of [
     ["/plantes/cycas/revoluta", "/images/cycas-revoluta/cycas-revoluta-terrasse-tibaldo.webp"],

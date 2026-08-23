@@ -12,6 +12,7 @@ import PlantShopBar from "./PlantShopBar";
 import PlantSpeciesHero from "./PlantSpeciesHero";
 import VeitchiiProfileV2 from "./VeitchiiProfileV2";
 import ThaiConstellationProfileV3 from "./ThaiConstellationProfileV3";
+import DeliciosaProfileNext from "./DeliciosaProfileNext";
 
 function Meter({
   label,
@@ -85,6 +86,8 @@ export default function PlantProfile({ plant }: { plant: PlantEntry }) {
   const isVisualP1Species =
     (plant.genre === "cycas" && plant.slug === "revoluta") ||
     (plant.genre === "dicksonia" && plant.slug === "antarctica");
+  if (plant.genre === "monstera" && plant.slug === "deliciosa")
+    return <DeliciosaProfileNext />;
   if (plant.genre === "monstera" && plant.slug === "thai-constellation")
     return (
       <main className="editorial-page plant-profile-page thai-profile-v3">
