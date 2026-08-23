@@ -87,6 +87,35 @@ test("blocks beta crawling and exposes no beta sitemap", async () => {
   assert.equal(sitemap.headers.get("x-robots-tag"), "noindex, nofollow");
 });
 
+test("keeps Jungle Scroll Story D isolated, server rendered and non-indexable", async () => {
+  const response = await render("/lab/deliciosa/d");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+
+  assert.match(html, /LAB D/);
+  assert.match(html, /data-story-sequence="facts"/);
+  assert.match(html, /data-story-sequence="identity"/);
+  assert.match(html, /data-story-sequence="morphology"/);
+  assert.match(html, /data-story-sequence="cultivate"/);
+  assert.match(html, /Monstera[\s\S]*deliciosa[\s\S]*Liebm\./);
+  assert.match(html, /Observer[\s\S]*Arroser[\s\S]*Égoutter/);
+  assert.match(html, /<meta name="robots" content="noindex, nofollow, nocache"/i);
+  assert.doesNotMatch(html, /botanix\.com/i);
+
+  const servedProfile = await render("/plantes/monstera/deliciosa");
+  assert.equal(servedProfile.status, 200);
+  assert.doesNotMatch(await servedProfile.text(), /Jungle Scroll Story|LAB D/i);
+
+  const motionSource = readFileSync(
+    new URL("../app/__lab/deliciosa/ScrollStoryController.tsx", import.meta.url),
+    "utf8",
+  );
+  assert.equal((motionSource.match(/addEventListener\("scroll"/g) ?? []).length, 1);
+  assert.match(motionSource, /requestAnimationFrame/);
+  assert.match(motionSource, /prefers-reduced-motion: reduce/);
+  assert.match(motionSource, /\{ passive: true \}/);
+});
+
 test("Visual P1 target routes expose no internal production placeholders", async () => {
   const routes = [
     "/plantes/bananiers",
