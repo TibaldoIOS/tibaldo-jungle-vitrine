@@ -6,7 +6,7 @@ const clamp = (value: number) => Math.min(1, Math.max(0, value));
 
 export default function ScrollStoryController() {
   useEffect(() => {
-    const root = document.querySelector<HTMLElement>(".deliciosa-scroll-story-d");
+    const root = document.querySelector<HTMLElement>(":is(.deliciosa-scroll-story-d,.deliciosa-scroll-story-d2)");
     if (!root) return;
 
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");

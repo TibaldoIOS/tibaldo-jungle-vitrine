@@ -116,6 +116,27 @@ test("keeps Jungle Scroll Story D isolated, server rendered and non-indexable", 
   assert.match(motionSource, /\{ passive: true \}/);
 });
 
+test("keeps Cinematic Botanical D2 isolated while preserving D V1", async () => {
+  const response = await render("/lab/deliciosa/d2");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+
+  assert.match(html, /LAB D2 — Jungle Cinematic Botanical/);
+  assert.equal((html.match(/data-story-sequence=/g) ?? []).length, 4);
+  assert.match(html, /SPECIMEN · 001/);
+  assert.match(html, /Schéma de lecture · interprétation éditoriale/i);
+  assert.match(html, /Observer[\s\S]*Arroser[\s\S]*Égoutter/);
+  assert.match(html, /<meta name="robots" content="noindex, nofollow, nocache"/i);
+  assert.doesNotMatch(html, /botanix\.com|pinterest|willemse|moai/i);
+
+  const dV1 = await render("/lab/deliciosa/d");
+  assert.equal(dV1.status, 200);
+  assert.match(await dV1.text(), /Jungle Scroll Story/);
+
+  const servedProfile = await render("/plantes/monstera/deliciosa");
+  assert.doesNotMatch(await servedProfile.text(), /Cinematic Botanical|LAB D2/i);
+});
+
 test("Visual P1 target routes expose no internal production placeholders", async () => {
   const routes = [
     "/plantes/bananiers",
