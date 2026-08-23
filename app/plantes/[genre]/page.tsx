@@ -8,6 +8,10 @@ import ScrollReveal from "../../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../../SiteChrome";
 import PlantCarePassport from "../PlantCarePassport";
 import type { Level } from "@/lib/plants/types";
+import {
+  isInternalPhotoProductionCopy,
+  publicPlantImageAlt,
+} from "@/lib/plants/types";
 import BotanicalGenusHero from "../BotanicalGenusHero";
 import { hasBotanicalHero } from "@/lib/plants/botanical-heroes";
 import AnthuriumGenusV2 from "../AnthuriumGenusV2";
@@ -50,11 +54,28 @@ export default async function Page({ params }: Props) {
   const editorials = familyEditorials[genre as keyof typeof familyEditorials] ?? [];
   const herbier = genreHerbiers[genre as keyof typeof genreHerbiers];
   const list = getPlantsByGenre(genre);
+  const publicFacts = guide.facts.filter(
+    (fact) => !isInternalPhotoProductionCopy(`${fact.label} ${fact.value}`),
+  );
+  const publicSections = guide.sections.filter(
+    (section) =>
+      !isInternalPhotoProductionCopy(section.title) &&
+      !isInternalPhotoProductionCopy(section.text),
+  );
+  const publicFaq = guide.faq.filter(
+    (item) =>
+      !isInternalPhotoProductionCopy(item.question) &&
+      !isInternalPhotoProductionCopy(item.answer),
+  );
   const isV21Pilot = genre === "alocasia" || genre === "chlorophytum" || genre === "dicksonia";
   const genrePortraits = list
     .map((plant) => ({
       src: plant.gallery[0].src,
-      alt: plant.gallery[0].alt,
+      alt: publicPlantImageAlt(
+        plant.gallery[0].src,
+        plant.botanicalName,
+        plant.gallery[0].alt,
+      ),
       name: ("listingName" in plant ? plant.listingName : undefined) ?? plant.botanicalName,
       href: `/plantes/${genre}/${plant.slug}`,
     }))
@@ -81,7 +102,7 @@ export default async function Page({ params }: Props) {
       },
       {
         "@type": "FAQPage",
-        mainEntity: guide.faq.map((item) => ({
+        mainEntity: publicFaq.map((item) => ({
           "@type": "Question",
           name: item.question,
           acceptedAnswer: { "@type": "Answer", text: item.answer },
@@ -229,7 +250,17 @@ export default async function Page({ params }: Props) {
       {genre === "anthurium" ? (
         <AnthuriumGenusV2 guide={guide} editorials={editorials} plants={list} />
       ) : isV21Pilot ? (
-        <GenusPilotV21 genre={genre} guide={guide} editorials={editorials} plants={list} />
+        <GenusPilotV21
+          genre={genre}
+          guide={{
+            ...guide,
+            facts: publicFacts,
+            sections: publicSections,
+            faq: publicFaq,
+          }}
+          editorials={editorials}
+          plants={list}
+        />
       ) : (
         <>
           <article className="family-guide">
@@ -257,7 +288,7 @@ export default async function Page({ params }: Props) {
               ))}
             </section>
             <section className="family-guide-facts shell">
-              {guide.facts.map((fact) => (
+              {publicFacts.map((fact) => (
                 <div key={fact.label} data-reveal>
                   <span>{fact.label}</span>
                   <strong>{fact.value}</strong>
@@ -331,7 +362,7 @@ export default async function Page({ params }: Props) {
               </section>
             )}
             <section className="family-guide-sections shell">
-              {guide.sections.map((section, index) => (
+              {publicSections.map((section, index) => (
                 <article key={section.title} data-reveal>
                   <span>{String(index + 1).padStart(2, "0")}</span>
                   <div>
@@ -370,7 +401,7 @@ export default async function Page({ params }: Props) {
                 <p className="section-kicker">Questions fréquentes</p>
                 <h2>{guide.name} : les réponses essentielles.</h2>
               </header>
-              {guide.faq.map((item) => (
+              {publicFaq.map((item) => (
                 <details key={item.question} data-reveal>
                   <summary>{item.question}</summary>
                   <p>{item.answer}</p>
@@ -413,9 +444,9 @@ export default async function Page({ params }: Props) {
               <div className="plant-index-grid">
                 {list.map((plant) => (
                   <a href={`/plantes/${genre}/${plant.slug}`} key={plant.slug} data-reveal>
-                    <img src={plant.gallery[0].src} alt={plant.gallery[0].alt} width={plant.gallery[0].width} height={plant.gallery[0].height} />
+                    <img src={plant.gallery[0].src} alt={publicPlantImageAlt(plant.gallery[0].src, plant.botanicalName, plant.gallery[0].alt)} width={plant.gallery[0].width} height={plant.gallery[0].height} />
                     <span>
-                      {plant.family} · {plant.specimen.observedHeight}
+                      {plant.family} · {isInternalPhotoProductionCopy(plant.specimen.observedHeight) ? plant.growth.habit : plant.specimen.observedHeight}
                     </span>
                     <h2>{listingNameOf(plant)}</h2>
                     <p>{plant.subtitle}</p>

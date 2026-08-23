@@ -1,9 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-labelledby="title desc">
-  <title id="title">Photographie réelle à venir</title>
-  <desc id="desc">Emplacement réservé à la photographie réelle du spécimen Tibaldo Jungle.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" aria-hidden="true">
   <rect width="1200" height="1500" fill="#0d3d2d"/>
   <path d="M225 1150C400 900 365 555 635 250c145 250 149 595-20 785-96 108-223 153-390 115Z" fill="none" stroke="#b8d88b" stroke-width="10" opacity=".7"/>
   <path d="M340 1080c135-220 235-410 295-830" fill="none" stroke="#b8d88b" stroke-width="7" opacity=".65"/>
-  <text x="80" y="1300" fill="#f5f0e6" font-family="Arial, sans-serif" font-size="42" letter-spacing="7">PHOTO RÉELLE DU SPÉCIMEN</text>
-  <text x="80" y="1370" fill="#b8d88b" font-family="Arial, sans-serif" font-size="31" letter-spacing="4">À AJOUTER AVANT PUBLICATION</text>
 </svg>

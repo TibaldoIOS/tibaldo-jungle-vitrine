@@ -1,5 +1,8 @@
 import type { PlantEntry } from "@/lib/plants/types";
-import { isEditorialPlaceholder } from "@/lib/plants/types";
+import {
+  isEditorialPlaceholder,
+  isInternalPhotoProductionCopy,
+} from "@/lib/plants/types";
 import Link from "next/link";
 import { SiteHeader } from "../SiteChrome";
 import ScientificName from "./ScientificName";
@@ -11,7 +14,7 @@ export default function PlantSpeciesHero({ plant }: { plant: PlantEntry }) {
     plant.genre === "dicksonia" && plant.slug === "antarctica";
   return (
     <section
-      className={`plant-profile-hero ${hasPhoto ? "has-photo" : "has-editorial-fallback"}`}
+      className={`plant-profile-hero plant-profile-hero-${plant.genre}-${plant.slug} ${hasPhoto ? "has-photo" : "has-editorial-fallback"}`}
     >
       {hasPhoto ? (
         <img
@@ -35,12 +38,11 @@ export default function PlantSpeciesHero({ plant }: { plant: PlantEntry }) {
           />
         </div>
       ) : (
-        <div className="plant-profile-hero-fallback" role="img" aria-label={`Photographie de ${plant.botanicalName} à ajouter`}>
+        <div className="plant-profile-hero-fallback" aria-hidden="true">
           <span aria-hidden="true">
             {plant.taxonomy.genus.slice(0, 1)}
             <i>{plant.taxonomy.species.slice(0, 1)}</i>
           </span>
-          <small>Photographie Tibaldo à venir</small>
         </div>
       )}
       <div className="plant-profile-hero-shade" aria-hidden="true" />
@@ -70,7 +72,9 @@ export default function PlantSpeciesHero({ plant }: { plant: PlantEntry }) {
             {plant.taxonomy.family}
           </Link>
           <Link href={`/plantes/${plant.genre}`}>{plant.taxonomy.genus}</Link>
-          <span>{plant.specimen.observedHeight}</span>
+          {!isInternalPhotoProductionCopy(plant.specimen.observedHeight) && (
+            <span>{plant.specimen.observedHeight}</span>
+          )}
         </div>
       </div>
     </section>

@@ -1453,6 +1453,8 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
 .plant-profile-hero-content { min-height: inherit; display: flex; flex-direction: column; justify-content: flex-end; padding-top: 160px; padding-bottom: 70px; }
 .plant-profile-breadcrumb{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px;color:rgba(255,255,255,.62);font-size:8px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}.plant-profile-breadcrumb a{border-bottom:1px solid rgba(255,255,255,.3)}.plant-profile-breadcrumb strong{color:rgba(255,255,255,.84)}
 .plant-profile-hero h1 { max-width: 980px; margin: 20px 0 25px; font: 400 clamp(62px, 9vw, 138px)/.82 Georgia, serif; letter-spacing: -.065em; }
+.plant-profile-hero-anthurium-warocqueanum h1{max-width:min(1050px,92vw);font-size:clamp(60px,7.2vw,104px);line-height:.86}
+.plant-profile-hero-anthurium-warocqueanum .scientific-binomial{display:flex;flex-direction:column;white-space:normal}
 .plant-profile-hero h1 em { color: var(--sage); font-weight: 400; }
 .plant-profile-hero-content > p { max-width: 650px; margin: 0; color: rgba(255,255,255,.78); font: 400 clamp(17px, 2vw, 23px)/1.55 Georgia, serif; }
 .plant-profile-hero-meta { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 38px; color: rgba(255,255,255,.7); font-size: 9px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }

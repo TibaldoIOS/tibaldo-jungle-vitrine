@@ -1,6 +1,8 @@
 import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
 import test from "node:test";
+import { plants } from "../lib/plants/catalog.ts";
+import { isPhotoProductionPlaceholder } from "../lib/plants/types.ts";
 
 async function render(pathname = "/") {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
@@ -101,6 +103,53 @@ test("Visual P1 target routes expose no internal production placeholders", async
     assert.match(html, /<meta name="robots" content="noindex, nofollow/i, route);
     assert.match(html, /https:\/\/beta-shop\.tibaldo\.fr/i, route);
   }
+});
+
+test("photo-debt routes expose no internal production copy to visitors", async () => {
+  const photoDebtPlants = plants.filter((plant) =>
+    isPhotoProductionPlaceholder(plant.gallery[0]?.src),
+  );
+  const photoDebtRoutes = [
+    ...new Set([
+      ...photoDebtPlants.map((plant) => `/plantes/${plant.genre}`),
+      ...photoDebtPlants.map(
+        (plant) => `/plantes/${plant.genre}/${plant.slug}`,
+      ),
+    ]),
+  ];
+  const internalCopy = /PHOTO RÉELLE DU SPÉCIMEN|AJOUTER AVANT PUBLICATION|Photographie Tibaldo à venir|Photographies propriétaires à préparer|reportage botanique\s*à compléter|photographier avant de publier|pourquoi (?:certaines fiches n['’]ont-elles pas encore de photo|la photographie manque-t-elle)|(?:photo|photographie|photographies|spécimen)[^.<>\"]*?(?:à venir|à ajouter|à réaliser|à préparer|à compléter|à relever|encore nécessaire|avant publication)|(?:dimension|dimensions|mesure|mesures)[^.<>\"]*?(?:à venir|à ajouter|à compléter|à relever|encore nécessaire)|gamme à identifier et photographier/i;
+
+  for (const route of photoDebtRoutes) {
+    const response = await render(route);
+    assert.equal(response.status, 200, route);
+    const html = await response.text();
+    const visitorContent = html
+      .replace(/<script\b[\s\S]*?<\/script>/gi, " ")
+      .replace(/<style\b[\s\S]*?<\/style>/gi, " ")
+      .replace(/<[^>]+>/g, " ");
+    const imageAlts = [...html.matchAll(/\balt=["']([^"']*)["']/gi)]
+      .map((match) => match[1])
+      .join(" ");
+    assert.doesNotMatch(`${visitorContent} ${imageAlts}`, internalCopy, route);
+  }
+});
+
+test("Warocqueanum uses a scoped multiline species hero without changing its H1", async () => {
+  const response = await render("/plantes/anthurium/warocqueanum");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /plant-profile-hero-anthurium-warocqueanum/i);
+  assert.match(html, /<h1[^>]*>[\s\S]*?Anthurium[\s\S]*?warocqueanum[\s\S]*?<\/h1>/i);
+
+  const css = readFileSync(new URL("../app/globals.css", import.meta.url), "utf8");
+  assert.match(css, /\.plant-profile-hero-anthurium-warocqueanum h1\{[^}]*font-size:clamp\(60px,7\.2vw,104px\)/i);
+  assert.match(css, /\.plant-profile-hero-anthurium-warocqueanum \.scientific-binomial\{[^}]*flex-direction:column[^}]*white-space:normal/i);
+});
+
+test("the photo fallback remains trackable but contains no visitor-facing production note", () => {
+  const fallback = readFileSync(new URL("../public/photo-reelle-a-venir.svg", import.meta.url), "utf8");
+  assert.match(fallback, /viewBox=["']0 0 1200 1500["']/i);
+  assert.doesNotMatch(fallback, /PHOTO RÉELLE DU SPÉCIMEN|AJOUTER AVANT PUBLICATION|Photographie réelle à venir/i);
 });
 
 test("Visual P1 preserves the three approved beta pilots", async () => {

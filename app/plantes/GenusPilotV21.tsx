@@ -1,6 +1,10 @@
 /* Native editorial assets are kept to preserve the vinext image-pipeline contract. */
 /* eslint-disable @next/next/no-img-element */
 import type { PlantEntry } from "@/lib/plants/types";
+import {
+  isInternalPhotoProductionCopy,
+  publicPlantImageAlt,
+} from "@/lib/plants/types";
 import Link from "next/link";
 import { Arrow } from "../SiteChrome";
 import {
@@ -314,7 +318,7 @@ export default function GenusPilotV21({ genre, guide, editorials, plants }: {
 
     <section className="plant-index shell pilot-v21-index">
       <div data-reveal data-motion="section"><p className="section-kicker">Espèces et variétés documentées</p><h2>{plants.length ? <>Une famille.<br />Des caractères singuliers.</> : <>La collection<br />se prépare.</>}</h2><p>{plants.length ? "Chaque fiche repose sur l’observation, la culture et des sources botaniques identifiées." : `Les premières fiches ${guide.name} seront ajoutées au fil des plantes observées et proposées au Studio.`}</p></div>
-      {plants.length > 0 && <div className="plant-index-grid">{plants.map((plant) => <Link href={`/plantes/${genre}/${plant.slug}`} key={plant.slug} data-reveal><img src={plant.gallery[0].src} alt={plant.gallery[0].alt} width={plant.gallery[0].width} height={plant.gallery[0].height} /><span>{plant.family} · {plant.specimen.observedHeight}</span><h2>{plant.listingName ?? plant.botanicalName}</h2><p>{plant.subtitle}</p><strong>Lire la fiche <Arrow /></strong></Link>)}</div>}
+      {plants.length > 0 && <div className="plant-index-grid">{plants.map((plant) => <Link href={`/plantes/${genre}/${plant.slug}`} key={plant.slug} data-reveal><img src={plant.gallery[0].src} alt={publicPlantImageAlt(plant.gallery[0].src, plant.botanicalName, plant.gallery[0].alt)} width={plant.gallery[0].width} height={plant.gallery[0].height} /><span>{plant.family} · {isInternalPhotoProductionCopy(plant.specimen.observedHeight) ? plant.growth.habit : plant.specimen.observedHeight}</span><h2>{plant.listingName ?? plant.botanicalName}</h2><p>{plant.subtitle}</p><strong>Lire la fiche <Arrow /></strong></Link>)}</div>}
     </section>
     <nav className="shell plant-back-link"><Link href="/plantes">← Tous les genres</Link></nav>
   </>;

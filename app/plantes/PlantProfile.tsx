@@ -1,4 +1,8 @@
 import type { Level, PlantEntry } from "@/lib/plants/types";
+import {
+  isInternalPhotoProductionCopy,
+  isPhotoProductionPlaceholder,
+} from "@/lib/plants/types";
 import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter } from "../SiteChrome";
 import PlantSectionNav from "./PlantSectionNav";
@@ -50,8 +54,34 @@ export default function PlantProfile({ plant }: { plant: PlantEntry }) {
   ];
   const gallery = plant.gallery.filter(
     (image, index, images) =>
+      !isPhotoProductionPlaceholder(image.src) &&
       images.findIndex((candidate) => candidate.src === image.src) === index,
   );
+  const publicDescription = plant.description.filter(
+    (text) => !isInternalPhotoProductionCopy(text),
+  );
+  const publicEditorialSections = plant.editorialSections
+    ?.filter((section) => !isInternalPhotoProductionCopy(section.title))
+    .map((section) => ({
+      ...section,
+      paragraphs: section.paragraphs.filter(
+        (paragraph) => !isInternalPhotoProductionCopy(paragraph),
+      ),
+      points: section.points?.filter(
+        (point) => !isInternalPhotoProductionCopy(point),
+      ),
+    }));
+  const publicAdvice = plant.tibaldoAdvice.filter(
+    (advice) => !isInternalPhotoProductionCopy(advice),
+  );
+  const publicFaq = plant.faq.filter(
+    (item) =>
+      !isInternalPhotoProductionCopy(item.question) &&
+      !isInternalPhotoProductionCopy(item.answer),
+  );
+  const hasPublicSpecimenObservation =
+    !isInternalPhotoProductionCopy(plant.specimen.observedHeight) ||
+    !isInternalPhotoProductionCopy(plant.specimen.note);
   const isVisualP1Species =
     (plant.genre === "cycas" && plant.slug === "revoluta") ||
     (plant.genre === "dicksonia" && plant.slug === "antarctica");
@@ -139,7 +169,7 @@ export default function PlantProfile({ plant }: { plant: PlantEntry }) {
                 </h2>
               </div>
               <div>
-                {plant.description.map((text) => (
+                {publicDescription.map((text) => (
                   <p key={text}>{text}</p>
                 ))}
               </div>
@@ -216,11 +246,17 @@ export default function PlantProfile({ plant }: { plant: PlantEntry }) {
                 <dd>{plant.growth.adultSize}</dd>
               </div>
             </dl>
-            <aside className="specimen-note">
-              <span>Observation Tibaldo Jungle</span>
-              <strong>{plant.specimen.observedHeight}</strong>
-              <p>{plant.specimen.note}</p>
-            </aside>
+            {hasPublicSpecimenObservation && (
+              <aside className="specimen-note">
+                <span>Observation Tibaldo Jungle</span>
+                {!isInternalPhotoProductionCopy(plant.specimen.observedHeight) && (
+                  <strong>{plant.specimen.observedHeight}</strong>
+                )}
+                {!isInternalPhotoProductionCopy(plant.specimen.note) && (
+                  <p>{plant.specimen.note}</p>
+                )}
+              </aside>
+            )}
           </section>
           <section className="plant-profile-section" id="entretien">
             <header className="plant-section-heading" data-reveal>
@@ -281,7 +317,7 @@ export default function PlantProfile({ plant }: { plant: PlantEntry }) {
               <p>{plant.localSpotlight.text}</p>
             </aside>
           )}
-          {plant.editorialSections &&
+          {publicEditorialSections &&
             (isVisualP1Species ? (
               <section
                 className="plant-profile-section p1-editorial-chapters"
@@ -296,7 +332,7 @@ export default function PlantProfile({ plant }: { plant: PlantEntry }) {
                   </h2>
                 </header>
                 <div>
-                  {plant.editorialSections.map((section, index) => (
+                  {publicEditorialSections.map((section, index) => (
                     <details id={section.id} key={section.id} data-reveal>
                       <summary>
                         <span>0{index + 1}</span>
@@ -320,7 +356,7 @@ export default function PlantProfile({ plant }: { plant: PlantEntry }) {
                 </div>
               </section>
             ) : (
-              plant.editorialSections.map((section) => (
+              publicEditorialSections.map((section) => (
                 <section
                   className="plant-profile-section plant-editorial-deep-dive"
                   id={section.id}
@@ -408,29 +444,6 @@ export default function PlantProfile({ plant }: { plant: PlantEntry }) {
               </div>
             </section>
           )}
-          {!isVisualP1Species && plant.mediaNeeds && (
-            <section
-              className="plant-media-needs plant-profile-section"
-              data-reveal
-            >
-              <p className="section-kicker">
-                Photographies propriétaires à préparer
-              </p>
-              <h2>
-                Un reportage botanique
-                <br />
-                <em>à compléter.</em>
-              </h2>
-              <div>
-                {plant.mediaNeeds.map((item) => (
-                  <article key={item.role}>
-                    <span>{item.role}</span>
-                    <p>{item.description}</p>
-                  </article>
-                ))}
-              </div>
-            </section>
-          )}
           <section
             className="tibaldo-advice plant-profile-section"
             id="conseils"
@@ -443,7 +456,7 @@ export default function PlantProfile({ plant }: { plant: PlantEntry }) {
               au Studio.
             </h2>
             <ol>
-              {plant.tibaldoAdvice.map((advice, index) => (
+              {publicAdvice.map((advice, index) => (
                 <li key={advice}>
                   <span>0{index + 1}</span>
                   <p>{advice}</p>
@@ -478,7 +491,7 @@ export default function PlantProfile({ plant }: { plant: PlantEntry }) {
               <h2>Tout savoir avant de l’accueillir.</h2>
             </header>
             <div>
-              {plant.faq.map((item) => (
+              {publicFaq.map((item) => (
                 <details key={item.question} data-reveal>
                   <summary>
                     <strong>{item.question}</strong>

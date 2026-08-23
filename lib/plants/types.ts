@@ -48,3 +48,27 @@ export type PlantEntry = {
 };
 
 export const isEditorialPlaceholder = (src?: string) => !src || src.includes("photo-reelle-a-venir") || src.includes("dicksonia-prototype.svg");
+
+export const isPhotoProductionPlaceholder = (src?: string) =>
+  !src || src.includes("photo-reelle-a-venir");
+
+export const publicPlantImageAlt = (
+  src: string | undefined,
+  botanicalName: string,
+  alt: string,
+) =>
+  isPhotoProductionPlaceholder(src)
+    ? `Illustration botanique décorative de ${botanicalName}`
+    : alt;
+
+const productionCopyPatterns = [
+  /photographier avant de publier/i,
+  /pourquoi (?:certaines fiches n['’]ont-elles pas encore de photo|la photographie manque-t-elle)/i,
+  /(?:photo|photographie|photographies|spécimen)[^.]*?(?:à venir|à ajouter|à réaliser|à préparer|à compléter|à relever|encore nécessaire|avant publication)/i,
+  /(?:dimension|dimensions|mesure|mesures)[^.]*?(?:à venir|à ajouter|à compléter|à relever|encore nécessaire)/i,
+  /gamme à identifier et photographier/i,
+  /fiche (?:préparée|reste locale)[^.]*photograph/i,
+];
+
+export const isInternalPhotoProductionCopy = (value?: string) =>
+  Boolean(value && productionCopyPatterns.some((pattern) => pattern.test(value)));
