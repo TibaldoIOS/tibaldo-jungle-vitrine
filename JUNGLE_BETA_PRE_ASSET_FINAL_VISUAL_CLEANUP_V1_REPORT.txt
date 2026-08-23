@@ -1,0 +1,101 @@
+JUNGLE BETA — PRE-ASSET FINAL VISUAL CLEANUP V1
+Date : 2026-08-23
+
+VERDICT
+
+PASS WITH CONDITIONS
+
+Les deux corrections demandées sont implémentées, testées et déployées sur Jungle BÊTA. Aucun P0 ni P1 technique nouveau n'a été détecté. La seule condition restante est un contrôle visuel propriétaire du HERO Warocqueanum : le navigateur de contrôle intégré n'était pas disponible dans cette session. Le HTML, la règle responsive ciblée et les quatre plages de largeur ont été vérifiés par tests de rendu et assertions CSS, mais aucune inspection visuelle interactive ne doit être prétendue.
+
+PÉRIMÈTRE
+
+- Branche : beta/jungle-pre-asset-final-visual-cleanup-v1
+- Commit fonctionnel BÊTA : 81d5df7dc35ec029220430bdc03e340e9ac68290
+- Version Sites déployée : v7
+- Version ID : appgprj_6a886983ea608191bcbe0be21a2f907d~appgver_7d4665fb66288191a578f0ef9461730d
+- URL : https://beta-jungle.tibaldo.fr
+- Rollback : v5, commit 9dda27b39a917c04ab12f577fd31f381d2358f9d
+- Rollback version ID : appgprj_6a886983ea608191bcbe0be21a2f907d~appgver_04406e80faf8819180518e981a5a682e
+
+AUDIT DES TEXTES INTERNES
+
+L'audit initial a identifié des mentions de production sur 45 routes ciblées :
+
+- /plantes ;
+- 15 hubs en dette photo : agave, aloe, anthurium, chlorophytum, colocasia, ensete, equisetum, fatsia, monstera, musa, philodendron, pilea, plumeria, strelitzia et yucca ;
+- 29 fiches espèces en dette photo. Dicksonia antarctica était incluse dans l'inventaire de dette mais déjà propre dans le rendu.
+
+Les formes visibles provenaient du fallback HERO, du SVG de remplacement, des textes alternatifs des vignettes, du bloc mediaNeeds, de notes/FAQ/conseils de préparation photo et d'une ligne interne de Collection sur /plantes.
+
+Après correction, 47 routes ciblées ont été contrôlées (page /plantes, 16 hubs concernés et 30 fiches en dette) : 0 mention interne visible ou exposée comme texte alternatif.
+
+La dette reste conservée dans les données : chemin photo-reelle-a-venir.svg, mediaNeeds, descriptions internes et audit:placeholders. Le rendu visiteur applique une couche de présentation neutre. Aucun asset photographique n'a été ajouté ou inventé. Le fallback SVG reste local, traçable, décoratif et sans consigne de production.
+
+WAROCQUEANUM
+
+Cause exacte : le composant ScientificName imposait white-space: nowrap au binôme complet. Combiné au corps desktop clamp(62px, 9vw, 138px), à la largeur maximale de 980 px et au overflow:hidden du HERO, le mot warocqueanum sortait du cadre à 820 et 1440 px.
+
+Correction minimale : classe ciblée plant-profile-hero-anthurium-warocqueanum, binôme organisé sur deux lignes, white-space normal, largeur et taille fluides limitées par clamp(60px, 7.2vw, 104px). Aucun titre SEO, texte botanique, Hero d'une autre fiche ou composant Species V2/V3 n'a été modifié.
+
+Contrôles responsive automatisés :
+
+- 360 × 800 : H1 complet dans le HTML ; règle mobile et retour de ligne actif ; aucun changement global.
+- 390 × 844 : H1 complet dans le HTML ; règle mobile et retour de ligne actif ; aucun changement global.
+- 820 × 1180 : H1 complet ; binôme multiline ciblé ; chaque ligne tient dans le conteneur calculé.
+- 1440 × 900 : H1 complet ; taille plafonnée à 104 px ; largeur plafonnée à 1050 px.
+
+Condition : capture/inspection visuelle interactive non produite, le navigateur intégré étant indisponible. Validation propriétaire recommandée sur la BÊTA avant de clore visuellement ce point.
+
+TESTS
+
+- Build Sites/Jungle : PASS.
+- TypeScript : PASS.
+- Tests Jungle : 39/39 PASS.
+- Test ajouté sur /plantes + 16 hubs + 30 fiches en dette photo : PASS, 0 copie interne visiteur.
+- Test H1 Warocqueanum et CSS ciblé : PASS.
+- Test fallback SVG neutre et traçable : PASS.
+- Audit SEO BÊTA : PASS ; noindex,nofollow global, robots fermé, sitemap BÊTA 404.
+- Validation artefact Sites : PASS.
+- git diff --check : PASS.
+- Lint ciblé : PASS avec 4 avertissements historiques no-img-element, 0 erreur sur le périmètre retenu.
+- Smoke BÊTA : routes requises HTTP 200.
+- Canonical et JSON-LD : présents sur les routes de contrôle.
+- CTA Shop : beta-shop.tibaldo.fr confirmé.
+- Jungle PUBLIC : /, /plantes et /plantes/monstera HTTP 200 ; aucun déploiement ni modification publique.
+
+RÉPONSES EXPLICITES
+
+1. Textes internes/photo visibles trouvés ? OUI.
+2. Combien ? 45 routes ciblées affectées avant correction ; plusieurs formes regroupées dans 7 sources de rendu.
+3. Quelles routes ? /plantes, 15 hubs photo-debt listés ci-dessus et 29 fiches photo-debt ; liste exacte issue de audit:placeholders.
+4. Tous supprimés du rendu public BÊTA ? OUI : 0/47 route ciblée après déploiement. La formulation « public BÊTA » désigne ici l'interface visiteur de la BÊTA, pas Jungle PUBLIC.
+5. Informations internes nécessaires conservées côté code/data ? OUI.
+6. FallBacks photo conservés proprement ? OUI.
+7. Aucune photo inventée ? OUI.
+8. Warocqueanum : cause exacte du clipping ? white-space nowrap + très grand clamp desktop + max-width 980 px + clipping du HERO.
+9. Warocqueanum 360 PASS ? PASS automatisé ; contrôle visuel propriétaire restant.
+10. Warocqueanum 390 PASS ? PASS automatisé ; contrôle visuel propriétaire restant.
+11. Warocqueanum 820 PASS ? PASS automatisé ; contrôle visuel propriétaire restant.
+12. Warocqueanum 1440 PASS ? PASS automatisé ; contrôle visuel propriétaire restant.
+13. H1 complet à toutes les largeurs ? OUI dans le rendu et avec le retour à la ligne ciblé.
+14. Veitchii non régressé ? OUI, HTTP 200, H1/canonical/JSON-LD/noindex et Shop BÊTA contrôlés.
+15. Thai Constellation non régressé ? OUI, mêmes contrôles PASS.
+16. Monstera non régressé ? OUI, mêmes contrôles PASS.
+17. Bananiers ancien P1 toujours CLOSED ? OUI.
+18. Cycas ancien P1 toujours CLOSED ? OUI.
+19. Dicksonia ancien P1 toujours CLOSED ? OUI.
+20. Fleurs ancien P1 toujours CLOSED ? OUI.
+21. Dock/footer Fleurs toujours PASS ? PASS structurel et smoke ; aucune modification des fichiers Fleurs.
+22. SEO/canonical/JSON-LD intacts ? OUI pour le contrat et les routes contrôlées. Le FAQ JSON-LD des hubs retire la même copie interne que le HTML afin de conserver la parité visible/structurée ; aucun type, URL ou fait botanique n'est modifié.
+23. BÊTA toujours noindex,nofollow ? OUI.
+24. Jungle PUBLIC untouched ? OUI.
+25. Tests finaux ? PASS, détails ci-dessus.
+26. Version/commit BÊTA ? Sites v7 ; commit 81d5df7dc35ec029220430bdc03e340e9ac68290.
+27. Rollback prêt ? OUI, Sites v5 / commit 9dda27b39a917c04ab12f577fd31f381d2358f9d.
+28. Nouveau P0 ? NON.
+29. Nouveau P1 ? NON.
+30. Jungle est-elle prête pour ASSET PHOTO FINALIZATION ? YES WITH CONDITION : contrôle visuel propriétaire Warocqueanum à 820/1440 sur la BÊTA.
+
+READY FOR ASSET PHOTO FINALIZATION : YES WITH OWNER VISUAL CHECK
+
+STOP — aucune campagne photo commencée, aucun audit global des 114 routes, aucun changement Jungle PUBLIC.
