@@ -466,6 +466,24 @@ test("renders Species UX NEXT only for Monstera deliciosa", async () => {
   }
 });
 
+test("keeps Deliciosa visual directions isolated, noindex and document-identical", async () => {
+  const original = await (await render("/plantes/monstera/deliciosa")).text();
+  for (const direction of ["a", "b", "c"]) {
+    const response = await render(`/lab/deliciosa/${direction}`);
+    assert.equal(response.status, 200);
+    const html = await response.text();
+    assert.match(html, /Monstera deliciosa/i);
+    assert.match(html, /noindex, nofollow/i);
+    assert.match(html, new RegExp(`direction-${direction}`, "i"));
+    assert.doesNotMatch(html, /botanix\.com|cdn\.shopify/i);
+    assert.doesNotMatch(html, /href=["'][^"']*lab\/deliciosa/i);
+    for (const fact of ["Lumière", "Arrosage", "Humidité", "Difficulté", "Toxicité", "Croissance"]) assert.match(html, new RegExp(fact, "i"));
+    for (const stage of ["Juvénile", "Grimpante", "Adulte"]) assert.match(html, new RegExp(stage, "i"));
+  }
+  assert.match(original, /species-next-page/i);
+  assert.doesNotMatch(original, /deliciosa-visual-lab|direction-a|direction-b|direction-c/i);
+});
+
 test("serves species hero photos directly without the vinext image optimizer", async () => {
   for (const [path, image] of [
     ["/plantes/cycas/revoluta", "/images/cycas-revoluta/cycas-revoluta-terrasse-tibaldo.webp"],
