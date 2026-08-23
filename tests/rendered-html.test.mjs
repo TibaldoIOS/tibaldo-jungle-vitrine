@@ -111,6 +111,7 @@ test("photo-debt routes expose no internal production copy to visitors", async (
   );
   const photoDebtRoutes = [
     ...new Set([
+      "/plantes",
       ...photoDebtPlants.map((plant) => `/plantes/${plant.genre}`),
       ...photoDebtPlants.map(
         (plant) => `/plantes/${plant.genre}/${plant.slug}`,

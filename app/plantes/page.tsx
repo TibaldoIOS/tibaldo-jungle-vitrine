@@ -7,6 +7,7 @@ import StudioAccessCompact from "./StudioAccessCompact";
 import EssentialUniversesV3 from "./EssentialUniversesV3";
 import BotanicalDirectoryV3 from "./BotanicalDirectoryV3";
 import BotanicalMotif from "./BotanicalMotif";
+import { isInternalPhotoProductionCopy } from "@/lib/plants/types";
 
 const SearchIcon = () => <svg className="plants-search-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="4.75"/><path d="m12 12 4 4"/></svg>;
 
@@ -45,6 +46,12 @@ export default function PlantsPage() {
   };
   const essentialUniverses = featuredFamilies.map((family) => ({ slug: family.slug, name: family.name, descriptor: family.eyebrow, count: speciesCount(family.slug) }));
   const directoryItems = primaryPlantFamilies.map((family) => ({ slug: family.slug, name: family.name, descriptor: family.eyebrow, description: family.description, count: speciesCount(family.slug) }));
+  const publicStudioCollection = studioCollection.map((group) => ({
+    ...group,
+    plants: group.plants.filter(
+      (plant) => !isInternalPhotoProductionCopy(plant),
+    ),
+  }));
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -96,8 +103,7 @@ export default function PlantsPage() {
       <section className="studio-collection plants-hub-collection shell" aria-labelledby="studio-collection-title">
         <header data-reveal><p className="section-kicker">Cultivées et observées à Wattignies</p><h2 id="studio-collection-title">La collection<br /><em>du Studio.</em></h2><p>Les plantes suivies par Tibaldo Jungle nourrissent progressivement l’encyclopédie ; cette liste n’est pas un état du stock.</p></header>
         <details><summary>Voir la collection complète <span>{studioCollection.length} groupes</span></summary>
-          <div className="studio-collection-list">{studioCollection.map((group, index) => <article key={group.genre}><span>{String(index + 1).padStart(2, "0")}</span><div><h3><a href={group.href}>{group.genre} <Arrow /></a></h3><ul>{group.plants.map((plant) => <li key={plant}>{plant}</li>)}</ul></div></article>)}</div>
-          <p className="studio-collection-note">Les mentions « à confirmer » seront remplacées après vérification de l’étiquette horticole ou du fournisseur.</p>
+          <div className="studio-collection-list">{publicStudioCollection.map((group, index) => <article key={group.genre}><span>{String(index + 1).padStart(2, "0")}</span><div><h3><a href={group.href}>{group.genre} <Arrow /></a></h3>{group.plants.length > 0 && <ul>{group.plants.map((plant) => <li key={plant}>{plant}</li>)}</ul>}</div></article>)}</div>
         </details>
       </section>
 
