@@ -72,6 +72,7 @@ SAFE_PREVIEW_TARGET_PROVEN=YES
 SOURCE_BRANCH=beta/deliciosa-art-direction-lab-v1
 SOURCE_HEAD=738d107074f4b8febae312dc31d419977b7f8041
 PREVIEW_BRANCH=beta/deliciosa-art-direction-remote-review-v1
+SOURCE_REVIEW_COMMIT=53a0eb4950c7fe2c974a81ef1c3ca590de8e3862
 STANDALONE_PREVIEW_BRANCH=main
 PREVIEW_COMMIT=4b2574875be161c456574854fcd094f05d62c661
 REMOTE_UPSTREAM=Sites source repository dedicated to the isolated preview

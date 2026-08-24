@@ -39,6 +39,7 @@
     "source_branch": "beta/deliciosa-art-direction-lab-v1",
     "source_head": "738d107074f4b8febae312dc31d419977b7f8041",
     "preview_branch": "beta/deliciosa-art-direction-remote-review-v1",
+    "source_review_commit": "53a0eb4950c7fe2c974a81ef1c3ca590de8e3862",
     "standalone_preview_branch": "main",
     "preview_commit": "4b2574875be161c456574854fcd094f05d62c661"
   },
