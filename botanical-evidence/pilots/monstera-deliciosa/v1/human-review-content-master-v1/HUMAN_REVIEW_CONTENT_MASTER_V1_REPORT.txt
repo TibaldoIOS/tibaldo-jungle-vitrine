@@ -1,0 +1,1702 @@
+MONSTERA DELICIOSA — HUMAN REVIEW + CONTENT MASTER V1 — RAPPORT COMPLET
+Date : 2026-08-24
+Mission : Human Review éditoriale Owner-compatible + Content Master V1
+Autorité : MONSTERA DELICIOSA — EVIDENCE PACK V1
+
+1. EXECUTIVE SUMMARY
+
+Le Content Master V1 dérivé est construit sans modifier le produit. Les 45 claims ont tous reçu une décision traçable. Aucun OWNER_APPROVED, aucune Taxonomy Review humaine et aucune Safety Review humaine n’ont été simulés. Le résultat est exploitable pour préparer une future Species Experience V4 uniquement avec exclusions et décisions Owner explicites.
+
+VERDICT : READY_WITH_EXPLICIT_REVIEW_GAPS
+
+Peut entrer après décision Owner : contenu botanique/horticole non Safety éligible, qualifiers obligatoires, diagnostics prudents éligibles, FAQ non Safety, Conseil du Studio si approuvé.
+
+Ne peut pas entrer : formulation Safety non revue ; authorship/synonymie si l’Owner exige une Taxonomy Review préalable ; 50–75 % RH ; minimum universel 15 °C ; 18–28 °C universel ; scores Jungle ; règle universelle sur les racines aériennes ; thrips comme fait spécifique ; causalité support→fenestrations ; comparaison Rhaphidophora sans addendum ; fréquence/dilution de fertilisation non arbitrées.
+
+2. SCOPE ET STOP COMPLIANCE
+
+- Dossier de sortie isolé : botanical-evidence/pilots/monstera-deliciosa/v1/human-review-content-master-v1/
+- Produit/UI/routes/styles/metadata/JSON-LD : INTACTS.
+- PlantEntry, Species UX, D3/D4/V4 : INTACTS.
+- Supabase, BÊTA, PUBLIC, Shop, backend : INTACTS.
+- SEO, Search Console, sitemap, robots : INTACTS.
+- Photo Botanix : TO_VERIFY, hors Evidence, non intégrée.
+- Déploiement, commit, push, merge, PR : AUCUN.
+- Nouvelle recherche Web : AUCUNE.
+
+3. ÉTAT D’ENTRÉE ET INTÉGRITÉ
+
+Comptage réel des JSON : 45 claims ; 97 EvidenceLinks ; 15 sources ; 13 Review records ; 7 conflits ; 8 diagnostics ; 34 entrées Legacy. Aucun claim initialement APPROVED.
+
+Note documentaire : le FILE_MANIFEST.txt parent historique mentionne encore 43 claims et 93 EvidenceLinks, alors que les JSON autoritaires contiennent 45/97. Cette incohérence préexistante n’a pas été corrigée afin de respecter l’intégrité du pack ; elle est signalée comme amélioration système future.
+
+4. MÉTHODE
+
+1) Lecture des 11 fichiers Evidence autoritaires. 2) Vérification des identifiants et relations. 3) Décision éditoriale claim par claim sans augmenter la confiance. 4) Exclusion des claims WITHHELD/PROHIBITED et isolation des candidats Safety/spécialistes. 5) Génération d’un Content Master humain et structuré à partir des mêmes unités. 6) Construction des diagnostics, FAQ, matrice Legacy et interface Knowledge Scroll sémantique. 7) Contrôles anti-réintroduction et 21 Quality Gates.
+
+5. VOCABULAIRE DE DÉCISION
+
+OWNER_APPROVED / OWNER_APPROVED_QUALIFIED : réservés à une décision Owner réelle, donc non attribués ici.
+QUALIFIED : soutenu uniquement avec limites explicites.
+SPECIALIST_REVIEW_REQUIRED : compétence réelle requise avant approbation.
+TAXONOMY_REVIEW_REQUIRED / HORTICULTURAL_REVIEW_REQUIRED / SAFETY_REVIEW_REQUIRED : flags spécialisés.
+OWNER_DECISION_REQUIRED : arbitrage éditorial restant.
+WITHHELD / NO_EVIDENCE_FOUND : non publiables.
+SUPERSEDED / REJECTED_AS_CERTAINTY / NOT_APPLICABLE : vocabulaire conservé pour compatibilité et futures décisions.
+
+Répartition actuelle : {"TAXONOMY_REVIEW_REQUIRED":4,"QUALIFIED":15,"OWNER_DECISION_REQUIRED":15,"NO_EVIDENCE_FOUND":7,"SPECIALIST_REVIEW_REQUIRED":3,"WITHHELD":1}.
+
+6. SYNTHÈSE PAR DOMAINE A–Z
+
+A_IDENTITY_TAXONOMY: 4 claim(s) — claim.md.taxonomy.accepted-name=TAXONOMY_REVIEW_REQUIRED; claim.md.taxonomy.classification=TAXONOMY_REVIEW_REQUIRED; claim.md.taxonomy.borsigiana=TAXONOMY_REVIEW_REQUIRED; claim.md.taxonomy.philodendron-pertusum=TAXONOMY_REVIEW_REQUIRED
+B_DISTRIBUTION_ORIGIN: 2 claim(s) — claim.md.distribution.native-range=QUALIFIED; claim.md.distribution.biome=OWNER_DECISION_REQUIRED
+C_HABITAT_ECOLOGY: 2 claim(s) — claim.md.ecology.climbing-liana=OWNER_DECISION_REQUIRED; claim.md.ecology.secondary-hemiepiphyte=QUALIFIED
+D_MORPHOLOGY: 2 claim(s) — claim.md.morphology.heteroblasty=OWNER_DECISION_REQUIRED; claim.md.morphology.adult-fenestrations=OWNER_DECISION_REQUIRED
+E_FENESTRATIONS: 2 claim(s) — claim.md.fenestration.function=QUALIFIED; claim.md.fenestration.drivers=QUALIFIED
+F_LIGHT: 1 claim(s) — claim.md.light.indoor-preference=OWNER_DECISION_REQUIRED
+G_WATERING: 2 claim(s) — claim.md.watering.substrate-state=OWNER_DECISION_REQUIRED; claim.md.watering.standing-water=OWNER_DECISION_REQUIRED
+H_HUMIDITY: 2 claim(s) — claim.md.humidity.qualitative-preference=OWNER_DECISION_REQUIRED; claim.md.humidity.legacy-50-75=NO_EVIDENCE_FOUND
+I_TEMPERATURE: 2 claim(s) — claim.md.temperature.indoor-guidance=QUALIFIED; claim.md.temperature.legacy-minimum-15=NO_EVIDENCE_FOUND
+J_SUBSTRATE_ROOT_ZONE: 1 claim(s) — claim.md.substrate.properties=OWNER_DECISION_REQUIRED
+K_POT_CONTAINER: 1 claim(s) — claim.md.pot.drainage=OWNER_DECISION_REQUIRED
+L_REPOTTING: 1 claim(s) — claim.md.repotting.trigger=OWNER_DECISION_REQUIRED
+M_FERTILISATION: 1 claim(s) — claim.md.fertilisation.growing-season=QUALIFIED
+N_PROPAGATION: 1 claim(s) — claim.md.propagation.node=OWNER_DECISION_REQUIRED
+O_SUPPORT: 1 claim(s) — claim.md.support.role=QUALIFIED
+P_AERIAL_ROOTS: 2 claim(s) — claim.md.aerial-roots.role=OWNER_DECISION_REQUIRED; claim.md.aerial-roots.cut-or-guide=NO_EVIDENCE_FOUND
+Q_GROWTH_DIMENSIONS: 2 claim(s) — claim.md.dimensions.context=QUALIFIED; claim.md.growth.rate-context=QUALIFIED
+R_TOXICITY_SAFETY: 3 claim(s) — claim.md.safety.mechanism=SPECIALIST_REVIEW_REQUIRED; claim.md.safety.humans-children=SPECIALIST_REVIEW_REQUIRED; claim.md.safety.pets=SPECIALIST_REVIEW_REQUIRED
+S_PESTS: 2 claim(s) — claim.md.pests.documented=QUALIFIED; claim.md.pests.spider-mite-check=QUALIFIED
+T_YELLOW_LEAVES: 1 claim(s) — claim.md.diagnostic.yellow-leaves=QUALIFIED
+U_BROWN_TIPS_PATCHES: 1 claim(s) — claim.md.diagnostic.brown-areas=QUALIFIED
+V_SLOW_GROWTH_SMALL_LEAVES: 1 claim(s) — claim.md.diagnostic.slow-growth-small-leaves=QUALIFIED
+W_NO_FENESTRATIONS: 1 claim(s) — claim.md.diagnostic.no-fenestrations=QUALIFIED
+X_PRUNING_CLEANING: 2 claim(s) — claim.md.pruning.size-control=OWNER_DECISION_REQUIRED; claim.md.cleaning.leaf-dust=OWNER_DECISION_REQUIRED
+Y_DIFFICULTY_EDITORIAL_SCORES: 4 claim(s) — claim.md.editorial-score.light-4-of-5=NO_EVIDENCE_FOUND; claim.md.editorial-score.watering-2-of-5=NO_EVIDENCE_FOUND; claim.md.editorial-score.humidity-3-of-5=NO_EVIDENCE_FOUND; claim.md.editorial-score.difficulty-2-of-5=NO_EVIDENCE_FOUND
+Z_FREQUENT_QUESTIONS: 1 claim(s) — claim.md.faq.required-claim-set=WITHHELD
+
+7. HUMAN REVIEW — 45 CLAIMS
+
+1. claim.md.taxonomy.accepted-name
+Domaine / champ : A_IDENTITY_TAXONOMY / accepted_scientific_name
+Claim original : The accepted scientific name is Monstera deliciosa Liebm.
+Type : BOTANICAL_FACT
+Contexte : {"population_scope":"taxon","cultivation_environment":"GENERAL"}
+EvidenceLinks : ev.md.powo.accepted, ev.md.ipni.authorship
+Sources : source.kew.powo.monstera-deliciosa, source.kew.ipni.monstera-deliciosa
+Proximité : DIRECT
+Evidence / confiance : VERIFIED / VERIFIED
+Conflits : aucun
+Legacy lié : legacy.md.name
+Reviews : review.taxonomy.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : TAXONOMY_REVIEW_REQUIRED
+Éligibilité : CANDIDATE_ONLY
+Qualifier requis : aucun
+Wording interdit : aucun spécifique
+Wording candidat : Nom accepté : Monstera deliciosa Liebm.
+Review spécialisée : TAXONOMY_REVIEW_REQUIRED
+Décision Owner : requise
+Rationale : POWO directly records the species as accepted; IPNI independently confirms the nomenclatural name, authorship and original publication. Publication Evidence V1: REVIEW_REQUIRED.
+Question ouverte : aucune ajoutée
+Sections aval : 01_IDENTITE
+Safety flag : NO
+
+2. claim.md.taxonomy.classification
+Domaine / champ : A_IDENTITY_TAXONOMY / family_genus_order
+Claim original : Monstera deliciosa belongs to genus Monstera, family Araceae, order Alismatales.
+Type : BOTANICAL_FACT
+Contexte : {"population_scope":"taxon","cultivation_environment":"GENERAL"}
+EvidenceLinks : ev.md.powo.classification, ev.md.ipni.family
+Sources : source.kew.powo.monstera-deliciosa, source.kew.ipni.monstera-deliciosa
+Proximité : DIRECT
+Evidence / confiance : VERIFIED / VERIFIED
+Conflits : aucun
+Legacy lié : legacy.md.classification
+Reviews : review.taxonomy.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : TAXONOMY_REVIEW_REQUIRED
+Éligibilité : CANDIDATE_ONLY
+Qualifier requis : aucun
+Wording interdit : aucun spécifique
+Wording candidat : Araceae · Monstera · Alismatales.
+Review spécialisée : TAXONOMY_REVIEW_REQUIRED
+Décision Owner : requise
+Rationale : Direct POWO classification; IPNI confirms family as entered. Publication Evidence V1: REVIEW_REQUIRED.
+Question ouverte : aucune ajoutée
+Sections aval : 01_IDENTITE
+Safety flag : NO
+
+3. claim.md.taxonomy.borsigiana
+Domaine / champ : A_IDENTITY_TAXONOMY / monstera_borsigiana_status
+Claim original : Monstera borsigiana K.Koch is treated by POWO as a synonym of Monstera deliciosa, not as a separate accepted species.
+Type : BOTANICAL_FACT
+Contexte : {"population_scope":"taxon","cultivation_environment":"GENERAL"}
+EvidenceLinks : ev.md.powo.borsigiana
+Sources : source.kew.powo.monstera-deliciosa
+Proximité : DIRECT
+Evidence / confiance : VERIFIED / VERIFIED
+Conflits : aucun
+Legacy lié : legacy.md.borsigiana
+Reviews : review.taxonomy.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : TAXONOMY_REVIEW_REQUIRED
+Éligibilité : CANDIDATE_ONLY
+Qualifier requis : aucun
+Wording interdit : Monstera borsigiana est une espèce acceptée distincte
+Wording candidat : « Monstera borsigiana » est aujourd'hui traité par POWO comme un synonyme de Monstera deliciosa, et non comme une espèce distincte.
+Review spécialisée : TAXONOMY_REVIEW_REQUIRED
+Décision Owner : requise
+Rationale : Direct synonymy entry in the authoritative taxonomic backbone. Publication Evidence V1: REVIEW_REQUIRED.
+Question ouverte : aucune ajoutée
+Sections aval : 01_IDENTITE, 20_COMPARAISON
+Safety flag : NO
+
+4. claim.md.taxonomy.philodendron-pertusum
+Domaine / champ : A_IDENTITY_TAXONOMY / philodendron_pertusum_status
+Claim original : Philodendron pertusum is listed by POWO among the synonyms of Monstera deliciosa.
+Type : BOTANICAL_FACT
+Contexte : {"population_scope":"taxon","cultivation_environment":"GENERAL"}
+EvidenceLinks : ev.md.powo.philodendron-pertusum
+Sources : source.kew.powo.monstera-deliciosa
+Proximité : DIRECT
+Evidence / confiance : VERIFIED / VERIFIED
+Conflits : aucun
+Legacy lié : legacy.md.philodendron-pertusum
+Reviews : review.taxonomy.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : TAXONOMY_REVIEW_REQUIRED
+Éligibilité : CANDIDATE_ONLY
+Qualifier requis : aucun
+Wording interdit : aucun spécifique
+Wording candidat : Philodendron pertusum est un nom historique placé en synonymie, pas le nom accepté actuel.
+Review spécialisée : TAXONOMY_REVIEW_REQUIRED
+Décision Owner : requise
+Rationale : Direct POWO synonymy record. Publication Evidence V1: REVIEW_REQUIRED.
+Question ouverte : aucune ajoutée
+Sections aval : 01_IDENTITE
+Safety flag : NO
+
+5. claim.md.distribution.native-range
+Domaine / champ : B_DISTRIBUTION_ORIGIN / native_range
+Claim original : POWO records the native range as southern Mexico (Veracruz, Oaxaca and Chiapas) to Guatemala.
+Type : BOTANICAL_FACT
+Contexte : {"population_scope":"taxon","cultivation_environment":"WILD","geography_or_climate":"NATIVE_RANGE"}
+EvidenceLinks : ev.md.powo.native-range, ev.md.rhs.range-context, ev.md.uf.range-context
+Sources : source.kew.powo.monstera-deliciosa, source.rhs.monstera-deliciosa-profile, source.uf-ifas.monstera-landscape
+Proximité : DIRECT
+Evidence / confiance : VERIFIED / VERIFIED
+Conflits : conflict.md.native-range
+Legacy lié : legacy.md.origin
+Reviews : review.conflict.native-range.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : QUALIFIED
+Éligibilité : ALLOWED_WITH_QUALIFIER
+Qualifier requis : aucun
+Wording interdit : aucun spécifique
+Wording candidat : Aire native documentée par POWO : sud du Mexique — notamment Veracruz, Oaxaca et Chiapas — jusqu'au Guatemala.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : Direct native-range record from POWO. Publication Evidence V1: REVIEW_REQUIRED.
+Question ouverte : aucune ajoutée
+Sections aval : 02_ORIGINE_HABITAT
+Safety flag : NO
+
+6. claim.md.distribution.biome
+Domaine / champ : B_DISTRIBUTION_ORIGIN / biome
+Claim original : Monstera deliciosa primarily grows in the wet tropical biome.
+Type : BOTANICAL_FACT
+Contexte : {"population_scope":"taxon","cultivation_environment":"WILD"}
+EvidenceLinks : ev.md.powo.biome
+Sources : source.kew.powo.monstera-deliciosa
+Proximité : DIRECT
+Evidence / confiance : VERIFIED / VERIFIED
+Conflits : aucun
+Legacy lié : legacy.md.habitat
+Reviews : review.research.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : OWNER_DECISION_REQUIRED
+Éligibilité : ALLOWED
+Qualifier requis : aucun
+Wording interdit : aucun spécifique
+Wording candidat : Biome principal : tropical humide.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : Direct POWO biome field. Publication Evidence V1: DRAFT.
+Question ouverte : aucune ajoutée
+Sections aval : 02_ORIGINE_HABITAT
+Safety flag : NO
+
+7. claim.md.ecology.climbing-liana
+Domaine / champ : C_HABITAT_ECOLOGY / growth_habit
+Claim original : Monstera deliciosa is a climbing liana that uses supports in forest habitats.
+Type : BOTANICAL_FACT
+Contexte : {"population_scope":"taxon","cultivation_environment":"WILD"}
+EvidenceLinks : ev.md.powo.liana, ev.md.ncsu.climbing, ev.md.uf.climbing
+Sources : source.kew.powo.monstera-deliciosa, source.ncsu.monstera-deliciosa, source.uf-ifas.monstera-landscape
+Proximité : DIRECT
+Evidence / confiance : CORROBORATED / CORROBORATED
+Conflits : aucun
+Legacy lié : aucun
+Reviews : review.research.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : OWNER_DECISION_REQUIRED
+Éligibilité : ALLOWED
+Qualifier requis : aucun
+Wording interdit : aucun spécifique
+Wording candidat : C'est une liane grimpante : dans son milieu, elle progresse en s'appuyant sur des supports végétaux.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : POWO identifies a liana; RHS, NC State and UF/IFAS independently describe climbing habit/support use. Publication Evidence V1: DRAFT.
+Question ouverte : aucune ajoutée
+Sections aval : 02_ORIGINE_HABITAT
+Safety flag : NO
+
+8. claim.md.ecology.secondary-hemiepiphyte
+Domaine / champ : C_HABITAT_ECOLOGY / hemiepiphytism
+Claim original : Monstera is described in botanical literature as a secondary hemiepiphytic climbing lineage; applying that label to M. deliciosa is supported but should retain context.
+Type : BOTANICAL_FACT
+Contexte : {"population_scope":"taxon","cultivation_environment":"WILD"}
+EvidenceLinks : ev.md.muir.hemiepiphyte, ev.md.croat.monstera-lifeform, ev.md.ncsu.life-cycle
+Sources : source.muir.2013.fenestration, source.croat.1988.araceae-ecology, source.ncsu.monstera-deliciosa
+Proximité : DIRECT
+Evidence / confiance : QUALIFIED / QUALIFIED
+Conflits : aucun
+Legacy lié : legacy.md.hemiepiphyte
+Reviews : review.research.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : QUALIFIED
+Éligibilité : ALLOWED_WITH_QUALIFIER
+Qualifier requis : Muir and Croat support the life form mainly at genus level; NC State describes the species starting terrestrially then becoming epiphytic upon reaching a support.
+Wording interdit : aucun spécifique
+Wording candidat : Son développement est souvent décrit comme secondairement hémiépiphyte : elle débute au sol puis grimpe sur un support, tout en conservant une relation avec le sol selon son stade et son milieu.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : Muir and Croat support the life form mainly at genus level; NC State describes the species starting terrestrially then becoming epiphytic upon reaching a support. Publication Evidence V1: REVIEW_REQUIRED.
+Question ouverte : aucune ajoutée
+Sections aval : 02_ORIGINE_HABITAT
+Safety flag : NO
+
+9. claim.md.morphology.heteroblasty
+Domaine / champ : D_MORPHOLOGY / heteroblasty
+Claim original : Monstera exhibits marked ontogenetic changes in leaf form (heteroblasty), with juvenile and mature leaves differing substantially.
+Type : BOTANICAL_FACT
+Contexte : {"population_scope":"taxon","life_stage":"GENERAL","cultivation_environment":"GENERAL"}
+EvidenceLinks : ev.md.croat.heteroblasty, ev.md.muir.heteroblasty, ev.md.ncsu.mature-leaves
+Sources : source.croat.1988.araceae-ecology, source.muir.2013.fenestration, source.ncsu.monstera-deliciosa
+Proximité : DIRECT
+Evidence / confiance : CORROBORATED / CORROBORATED
+Conflits : aucun
+Legacy lié : aucun
+Reviews : review.research.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : OWNER_DECISION_REQUIRED
+Éligibilité : ALLOWED
+Qualifier requis : aucun
+Wording interdit : aucun spécifique
+Wording candidat : La forme des feuilles change avec le développement : les feuilles juvéniles et adultes ne présentent pas la même découpe.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : Croat and Muir explicitly discuss heteroblasty in Monstera; NC State independently distinguishes mature perforated leaves. Publication Evidence V1: DRAFT.
+Question ouverte : aucune ajoutée
+Sections aval : 03_MORPHOLOGIE
+Safety flag : NO
+
+10. claim.md.morphology.adult-fenestrations
+Domaine / champ : D_MORPHOLOGY / adult_leaf_fenestrations
+Claim original : Mature Monstera deliciosa leaves can develop both margin-reaching divisions and internal perforations.
+Type : BOTANICAL_FACT
+Contexte : {"population_scope":"taxon","life_stage":"MATURE","cultivation_environment":"GENERAL"}
+EvidenceLinks : ev.md.ncsu.mature-leaves.adult, ev.md.uf.adult-leaf, ev.md.muir.adult-fenestration
+Sources : source.ncsu.monstera-deliciosa, source.uf-ifas.monstera-landscape, source.muir.2013.fenestration
+Proximité : DIRECT
+Evidence / confiance : CORROBORATED / CORROBORATED
+Conflits : aucun
+Legacy lié : aucun
+Reviews : review.research.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : OWNER_DECISION_REQUIRED
+Éligibilité : ALLOWED
+Qualifier requis : aucun
+Wording interdit : aucun spécifique
+Wording candidat : À maturité, les feuilles peuvent présenter à la fois des découpes atteignant le bord et des perforations internes.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : Specific descriptions from NC State and UF/IFAS converge; Muir treats adult fenestration as the defining trait under study. Publication Evidence V1: DRAFT.
+Question ouverte : aucune ajoutée
+Sections aval : 03_MORPHOLOGIE
+Safety flag : NO
+
+11. claim.md.fenestration.function
+Domaine / champ : E_FENESTRATIONS / adaptive_function
+Claim original : The adaptive function of Monstera leaf fenestration is not established as a single proven fact; Muir proposes a model-based growth-variance hypothesis for patchy understory light.
+Type : BOTANICAL_FACT
+Contexte : {"population_scope":"genus","cultivation_environment":"WILD"}
+EvidenceLinks : ev.md.muir.function-hypothesis, ev.md.rhs.function-popular-claim
+Sources : source.muir.2013.fenestration, source.rhs.monstera-growing-guide
+Proximité : RELATED_TAXON
+Evidence / confiance : QUALIFIED / QUALIFIED
+Conflits : conflict.md.fenestration-function
+Legacy lié : legacy.md.fenestration-function
+Reviews : review.conflict.fenestration-function.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : QUALIFIED
+Éligibilité : ALLOWED_WITH_QUALIFIER
+Qualifier requis : Peer-reviewed modeling paper explicitly frames the result as a testable hypothesis and reviews competing conjectures.
+Wording interdit : les fenestrations servent certainement à laisser passer la lumière
+Wording candidat : La fonction évolutive des fenestrations n'est pas démontrée par une explication unique. Une hypothèse scientifique propose qu'elles répartissent mieux la lumière intermittente du sous-bois, mais elle reste à tester.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : Peer-reviewed modeling paper explicitly frames the result as a testable hypothesis and reviews competing conjectures. Publication Evidence V1: REVIEW_REQUIRED.
+Question ouverte : aucune ajoutée
+Sections aval : 03_MORPHOLOGIE
+Safety flag : NO
+
+12. claim.md.fenestration.drivers
+Domaine / champ : E_FENESTRATIONS / developmental_drivers
+Claim original : Maturity is clearly associated with fenestration; brighter filtered light and climbing support are horticulturally associated with more mature leaf form, but neither should be presented as a guaranteed single trigger.
+Type : HORTICULTURAL_GUIDANCE
+Contexte : {"population_scope":"taxon","life_stage":"GENERAL","cultivation_environment":"INDOOR"}
+EvidenceLinks : ev.md.ncsu.mature-leaves.drivers, ev.md.rhs.low-light-holes, ev.md.rhs.support-holes, ev.md.uconn.support-leaf-size
+Sources : source.ncsu.monstera-deliciosa, source.rhs.monstera-growing-guide, source.uconn.monstera-deliciosa
+Proximité : DIRECT
+Evidence / confiance : QUALIFIED / QUALIFIED
+Conflits : aucun
+Legacy lié : legacy.md.juvenile-adult
+Reviews : review.research.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : QUALIFIED
+Éligibilité : ALLOWED_WITH_QUALIFIER
+Qualifier requis : Maturity is corroborated by morphology sources; RHS and UConn give horticultural associations for light/support without controlled causal proof.
+Wording interdit : un tuteur fera apparaître les trous
+Wording candidat : L'absence de fenestrations est d'abord compatible avec un stade juvénile. Une lumière filtrée suffisante et un support adapté favorisent une croissance plus mature, sans garantir à eux seuls l'apparition de découpes.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : Maturity is corroborated by morphology sources; RHS and UConn give horticultural associations for light/support without controlled causal proof. Publication Evidence V1: REVIEW_REQUIRED.
+Question ouverte : aucune ajoutée
+Sections aval : 03_MORPHOLOGIE
+Safety flag : NO
+
+13. claim.md.light.indoor-preference
+Domaine / champ : F_LIGHT / indoor_light_preference
+Claim original : For indoor cultivation, bright or moderate indirect/filtered light is consistently recommended; strong direct sun can scorch leaves.
+Type : HORTICULTURAL_GUIDANCE
+Contexte : {"population_scope":"taxon","cultivation_environment":"INDOOR","acclimation":"QUALIFY_DIRECT_SUN"}
+EvidenceLinks : ev.md.rhs.light, ev.md.ncsu.light, ev.md.uconn.light-context
+Sources : source.rhs.monstera-growing-guide, source.ncsu.monstera-deliciosa, source.uconn.monstera-deliciosa
+Proximité : DIRECT
+Evidence / confiance : CORROBORATED / CORROBORATED
+Conflits : aucun
+Legacy lié : legacy.md.light-guidance
+Reviews : review.research.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : OWNER_DECISION_REQUIRED
+Éligibilité : ALLOWED
+Qualifier requis : aucun
+Wording interdit : aucun spécifique
+Wording candidat : Placez-la dans une lumière lumineuse à modérée, filtrée ou indirecte. Un soleil direct intense peut brûler le feuillage ; toute exposition plus forte demande une acclimatation progressive.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : RHS profile/guide and NC State independently converge; UConn's regional partial-sun guidance reinforces the need for acclimation/context rather than a universal direct-sun prohibition. Publication Evidence V1: DRAFT.
+Question ouverte : aucune ajoutée
+Sections aval : 04_LUMIERE, 21_CONSEIL_STUDIO
+Safety flag : NO
+
+14. claim.md.watering.substrate-state
+Domaine / champ : G_WATERING / watering_trigger
+Claim original : Water thoroughly after the upper portion of the potting medium has dried appreciably; do not use a fixed calendar interval.
+Type : HORTICULTURAL_GUIDANCE
+Contexte : {"population_scope":"taxon","cultivation_environment":"INDOOR","substrate_or_container_context":"DRAINED_CONTAINER"}
+EvidenceLinks : ev.md.rhs.watering, ev.md.ncsu.watering, ev.md.uconn.watering
+Sources : source.rhs.monstera-growing-guide, source.ncsu.monstera-deliciosa, source.uconn.monstera-deliciosa
+Proximité : DIRECT
+Evidence / confiance : CORROBORATED / CORROBORATED
+Conflits : conflict.md.watering-threshold
+Legacy lié : legacy.md.watering-guidance, legacy.md.watering-frequency
+Reviews : review.conflict.watering-threshold.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : OWNER_DECISION_REQUIRED
+Éligibilité : ALLOWED
+Qualifier requis : aucun
+Wording interdit : aucun spécifique
+Wording candidat : Contrôlez le substrat plutôt que le calendrier : laissez sa partie supérieure sécher nettement, puis arrosez à fond et laissez l'excédent s'écouler.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : RHS says allow compost to become almost dry; NC State specifies the upper quarter to third; UConn gives 2–3 inches. They converge on substrate state but differ in operational threshold. Publication Evidence V1: DRAFT.
+Question ouverte : aucune ajoutée
+Sections aval : 05_ARROSAGE, 21_CONSEIL_STUDIO
+Safety flag : NO
+
+15. claim.md.watering.standing-water
+Domaine / champ : G_WATERING / standing_water_risk
+Claim original : Prolonged saturation or standing water increases the risk of root and stem rot.
+Type : HORTICULTURAL_GUIDANCE
+Contexte : {"population_scope":"taxon","cultivation_environment":"INDOOR","substrate_or_container_context":"CONTAINER"}
+EvidenceLinks : ev.md.rhs.standing-water, ev.md.uconn.root-rot
+Sources : source.rhs.monstera-growing-guide, source.uconn.monstera-deliciosa
+Proximité : DIRECT
+Evidence / confiance : CORROBORATED / CORROBORATED
+Conflits : aucun
+Legacy lié : aucun
+Reviews : review.research.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : OWNER_DECISION_REQUIRED
+Éligibilité : ALLOWED
+Qualifier requis : aucun
+Wording interdit : aucun spécifique
+Wording candidat : Ne laissez pas le pot baigner durablement dans l'eau : un milieu constamment saturé augmente le risque de pourriture racinaire.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : RHS and UConn independently connect persistent wetness/standing water with rot risk. Publication Evidence V1: DRAFT.
+Question ouverte : aucune ajoutée
+Sections aval : 05_ARROSAGE
+Safety flag : NO
+
+16. claim.md.humidity.qualitative-preference
+Domaine / champ : H_HUMIDITY / humidity_preference
+Claim original : Monstera deliciosa prefers moderate-to-high or humid air, but the evidence reviewed does not establish a universal required relative-humidity range.
+Type : HORTICULTURAL_GUIDANCE
+Contexte : {"population_scope":"taxon","cultivation_environment":"INDOOR"}
+EvidenceLinks : ev.md.rhs.humidity, ev.md.ncsu.humidity
+Sources : source.rhs.monstera-deliciosa-profile, source.ncsu.monstera-deliciosa
+Proximité : DIRECT
+Evidence / confiance : CORROBORATED / CORROBORATED
+Conflits : aucun
+Legacy lié : legacy.md.humidity-guidance
+Reviews : review.research.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : OWNER_DECISION_REQUIRED
+Éligibilité : ALLOWED
+Qualifier requis : aucun
+Wording interdit : aucun spécifique
+Wording candidat : Elle apprécie un air modérément à assez humide, mais ce n'est pas une raison pour présenter une plage universelle obligatoire.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : RHS and NC State independently state a qualitative preference; no opened authoritative source validates the historical 50–75% band as a species requirement. Publication Evidence V1: DRAFT.
+Question ouverte : aucune ajoutée
+Sections aval : 06_HUMIDITE
+Safety flag : NO
+
+17. claim.md.humidity.legacy-50-75
+Domaine / champ : H_HUMIDITY / legacy_numeric_range
+Claim original : The historical Jungle range 50–75% RH is not sufficiently supported as a universal Monstera deliciosa requirement.
+Type : HORTICULTURAL_GUIDANCE
+Contexte : {"population_scope":"taxon","cultivation_environment":"INDOOR"}
+EvidenceLinks : ev.md.rhs.humidity.range-audit, ev.md.ncsu.humidity.range-audit
+Sources : source.rhs.monstera-deliciosa-profile, source.ncsu.monstera-deliciosa
+Proximité : DIRECT
+Evidence / confiance : UNVERIFIED / UNVERIFIED
+Conflits : conflict.md.humidity-50-75
+Legacy lié : legacy.md.humidity-range
+Reviews : review.conflict.humidity-range.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : NO_EVIDENCE_FOUND
+Éligibilité : PROHIBITED
+Qualifier requis : aucun
+Wording interdit : plage d’humidité obligatoire chiffrée
+Wording candidat : AUCUN — claim non publiable
+Review spécialisée : non
+Décision Owner : non requise pour maintenir l’exclusion
+Rationale : Opened institutional sources use qualitative terms; none supports both bounds in the same context. Publication Evidence V1: WITHHELD.
+Question ouverte : Nouvelle preuve ou décision explicitement prévue par le pack requise avant réexamen.
+Sections aval : aucune — exclusion ou usage non retenu
+Safety flag : NO
+
+18. claim.md.temperature.indoor-guidance
+Domaine / champ : I_TEMPERATURE / indoor_temperature
+Claim original : Institutional indoor guidance consistently favors warm conditions, but exact bands vary: RHS gives 18–25°C while NC State gives 60–85°F (about 15.6–29.4°C).
+Type : HORTICULTURAL_GUIDANCE
+Contexte : {"population_scope":"taxon","cultivation_environment":"INDOOR"}
+EvidenceLinks : ev.md.rhs.temperature, ev.md.ncsu.temperature
+Sources : source.rhs.monstera-growing-guide, source.ncsu.monstera-deliciosa
+Proximité : DIRECT
+Evidence / confiance : QUALIFIED / QUALIFIED
+Conflits : conflict.md.temperature
+Legacy lié : legacy.md.temperature-range
+Reviews : review.conflict.temperature.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : QUALIFIED
+Éligibilité : ALLOWED_WITH_QUALIFIER
+Qualifier requis : Reliable sources converge qualitatively but not on identical numeric bounds.
+Wording interdit : plage universelle Jungle fusionnée
+Wording candidat : Conservez-la au chaud et à l'écart des courants d'air froids. Les guides institutionnels consultés donnent des plages différentes selon leur contexte ; évitez d'en faire une limite universelle.
+Review spécialisée : HORTICULTURAL_REVIEW_REQUIRED
+Décision Owner : requise
+Rationale : Reliable sources converge qualitatively but not on identical numeric bounds. Publication Evidence V1: REVIEW_REQUIRED.
+Question ouverte : aucune ajoutée
+Sections aval : 07_TEMPERATURE
+Safety flag : NO
+
+19. claim.md.temperature.legacy-minimum-15
+Domaine / champ : I_TEMPERATURE / legacy_minimum
+Claim original : A universal minimum of 15°C is not established by the reviewed evidence; sources distinguish preferred indoor warmth, outdoor handling and cold-damage thresholds.
+Type : HORTICULTURAL_GUIDANCE
+Contexte : {"population_scope":"taxon","cultivation_environment":"GENERAL"}
+EvidenceLinks : ev.md.rhs.temperature.minimum-audit, ev.md.ncsu.temperature.minimum-audit, ev.md.uconn.cold-context, ev.md.uf.cold-damage
+Sources : source.rhs.monstera-growing-guide, source.ncsu.monstera-deliciosa, source.uconn.monstera-deliciosa, source.uf-ifas.monstera-landscape
+Proximité : DIRECT
+Evidence / confiance : UNVERIFIED / UNVERIFIED
+Conflits : conflict.md.temperature
+Legacy lié : legacy.md.temperature-min
+Reviews : review.conflict.temperature.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : NO_EVIDENCE_FOUND
+Éligibilité : PROHIBITED
+Qualifier requis : aucun
+Wording interdit : seuil minimum universel
+Wording candidat : AUCUN — claim non publiable
+Review spécialisée : non
+Décision Owner : non requise pour maintenir l’exclusion
+Rationale : NC State's lower preferred bound approximates 15.6°C, RHS gives 18°C or 18–25°C, UConn uses 45°F/7.2°C for summer outdoor handling, and UF/IFAS gives freeze-damage thresholds; these are not equivalent endpoints. Publication Evidence V1: WITHHELD.
+Question ouverte : Nouvelle preuve ou décision explicitement prévue par le pack requise avant réexamen.
+Sections aval : aucune — exclusion ou usage non retenu
+Safety flag : NO
+
+20. claim.md.substrate.properties
+Domaine / champ : J_SUBSTRATE_ROOT_ZONE / substrate_properties
+Claim original : Container media should be open/aerated, well drained and retain some organic matter/moisture without remaining saturated.
+Type : HORTICULTURAL_GUIDANCE
+Contexte : {"population_scope":"taxon","cultivation_environment":"INDOOR","substrate_or_container_context":"CONTAINER"}
+EvidenceLinks : ev.md.rhs.substrate, ev.md.uconn.substrate
+Sources : source.rhs.monstera-growing-guide, source.uconn.monstera-deliciosa
+Proximité : DIRECT
+Evidence / confiance : CORROBORATED / CORROBORATED
+Conflits : aucun
+Legacy lié : legacy.md.substrate
+Reviews : review.research.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : OWNER_DECISION_REQUIRED
+Éligibilité : ALLOWED
+Qualifier requis : aucun
+Wording interdit : aucun spécifique
+Wording candidat : Visez un substrat ouvert, aéré et drainant, contenant de la matière organique mais ne restant pas saturé.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : RHS and UConn converge on open/well-drained and organic-rich media; rot guidance supports avoiding persistent saturation. Publication Evidence V1: DRAFT.
+Question ouverte : aucune ajoutée
+Sections aval : 08_ROOT_ZONE
+Safety flag : NO
+
+21. claim.md.pot.drainage
+Domaine / champ : K_POT_CONTAINER / drainage_and_size
+Claim original : Use a container that permits drainage and increase size incrementally rather than overpotting.
+Type : HORTICULTURAL_GUIDANCE
+Contexte : {"population_scope":"taxon","cultivation_environment":"INDOOR","substrate_or_container_context":"CONTAINER"}
+EvidenceLinks : ev.md.rhs.pot-size, ev.md.uconn.repotting
+Sources : source.rhs.monstera-growing-guide, source.uconn.monstera-deliciosa
+Proximité : DIRECT
+Evidence / confiance : CORROBORATED / CORROBORATED
+Conflits : aucun
+Legacy lié : legacy.md.pot-drainage
+Reviews : review.research.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : OWNER_DECISION_REQUIRED
+Éligibilité : ALLOWED
+Qualifier requis : aucun
+Wording interdit : aucun spécifique
+Wording candidat : Choisissez un contenant drainant, seulement un peu plus grand que la motte ; un pot surdimensionné reste humide plus longtemps.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : RHS and UConn independently warn against disproportionate container size and persistent wetness. Publication Evidence V1: DRAFT.
+Question ouverte : aucune ajoutée
+Sections aval : 09_CONTENANT
+Safety flag : NO
+
+22. claim.md.repotting.trigger
+Domaine / champ : L_REPOTTING / repotting_trigger
+Claim original : Repotting is justified by rootball/container fit and stability, not a rigid annual schedule; roots reaching the pot's bottom and sides are a direct check.
+Type : HORTICULTURAL_GUIDANCE
+Contexte : {"population_scope":"taxon","cultivation_environment":"INDOOR","substrate_or_container_context":"CONTAINER"}
+EvidenceLinks : ev.md.uconn.repotting.trigger, ev.md.rhs.repotting
+Sources : source.uconn.monstera-deliciosa, source.rhs.monstera-growing-guide
+Proximité : DIRECT
+Evidence / confiance : CORROBORATED / CORROBORATED
+Conflits : aucun
+Legacy lié : legacy.md.repotting
+Reviews : review.conflict.repotting-frequency.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : OWNER_DECISION_REQUIRED
+Éligibilité : ALLOWED
+Qualifier requis : aucun
+Wording interdit : aucun spécifique
+Wording candidat : Rempotez lorsque les racines occupent réellement le contenant — notamment lorsqu'elles atteignent le fond et les côtés — ou lorsque la stabilité devient insuffisante, plutôt que selon un calendrier rigide.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : UConn gives a direct root inspection criterion; RHS discusses rootball fit and top-heaviness while providing only a broad timing tendency. Publication Evidence V1: DRAFT.
+Question ouverte : aucune ajoutée
+Sections aval : 10_REMPOTAGE
+Safety flag : NO
+
+23. claim.md.fertilisation.growing-season
+Domaine / champ : M_FERTILISATION / fertilisation_timing
+Claim original : Balanced fertiliser is recommended during active growth; exact frequency differs among institutional sources.
+Type : HORTICULTURAL_GUIDANCE
+Contexte : {"population_scope":"taxon","cultivation_environment":"INDOOR","season":"ACTIVE_GROWTH"}
+EvidenceLinks : ev.md.rhs.feeding, ev.md.rhs.monthly-feeding, ev.md.uconn.fertilisation
+Sources : source.rhs.monstera-growing-guide, source.rhs.monstera-deliciosa-profile, source.uconn.monstera-deliciosa
+Proximité : DIRECT
+Evidence / confiance : QUALIFIED / QUALIFIED
+Conflits : conflict.md.fertilisation
+Legacy lié : legacy.md.fertilising
+Reviews : review.conflict.fertilisation.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : QUALIFIED
+Éligibilité : ALLOWED_WITH_QUALIFIER
+Qualifier requis : RHS guide/profile converge on balanced feed in growth, with one specifying monthly; UConn cautions about salts and gives regional active-growth months.
+Wording interdit : aucun spécifique
+Wording candidat : Fertilisez modérément pendant la croissance active avec un engrais équilibré, en suivant le dosage du produit et en évitant l'accumulation de sels. La fréquence dépend du produit et des conditions réelles.
+Review spécialisée : HORTICULTURAL_REVIEW_REQUIRED
+Décision Owner : requise
+Rationale : RHS guide/profile converge on balanced feed in growth, with one specifying monthly; UConn cautions about salts and gives regional active-growth months. Publication Evidence V1: REVIEW_REQUIRED.
+Question ouverte : aucune ajoutée
+Sections aval : 11_FERTILISATION
+Safety flag : NO
+
+24. claim.md.propagation.node
+Domaine / champ : N_PROPAGATION / stem_cutting_node
+Claim original : Vegetative propagation by stem cutting requires stem tissue containing at least one node; a detached leaf without a node is not supported as a method for producing a complete new plant.
+Type : HORTICULTURAL_GUIDANCE
+Contexte : {"population_scope":"taxon","cultivation_environment":"INDOOR"}
+EvidenceLinks : ev.md.uconn.node-cutting, ev.md.iastate.node-cutting
+Sources : source.uconn.monstera-deliciosa, source.iastate.houseplant-cuttings
+Proximité : DIRECT
+Evidence / confiance : CORROBORATED / CORROBORATED
+Conflits : aucun
+Legacy lié : legacy.md.propagation
+Reviews : review.research.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : OWNER_DECISION_REQUIRED
+Éligibilité : ALLOWED
+Qualifier requis : aucun
+Wording interdit : aucun spécifique
+Wording candidat : Pour obtenir une nouvelle plante par bouture de tige, conservez au moins un nœud. Une feuille isolée sans nœud ne constitue pas une bouture de tige viable pour reformer une plante complète.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : UConn's species-specific cutting instruction locates the cut below a node; Iowa State's protocol requires nodes and explicitly lists M. deliciosa as suitable for stem cuttings. Publication Evidence V1: DRAFT.
+Question ouverte : aucune ajoutée
+Sections aval : 12_MULTIPLICATION
+Safety flag : NO
+
+25. claim.md.support.role
+Domaine / champ : O_SUPPORT / support_role
+Claim original : A support helps manage the natural climbing habit and physical stability; associations with larger, more mature leaves are documented horticulturally but are not a guaranteed fenestration switch.
+Type : HORTICULTURAL_GUIDANCE
+Contexte : {"population_scope":"taxon","cultivation_environment":"INDOOR"}
+EvidenceLinks : ev.md.ncsu.support, ev.md.rhs.support-holes.role, ev.md.uconn.support-leaf-size.role
+Sources : source.ncsu.monstera-deliciosa, source.rhs.monstera-growing-guide, source.uconn.monstera-deliciosa
+Proximité : DIRECT
+Evidence / confiance : QUALIFIED / QUALIFIED
+Conflits : aucun
+Legacy lié : legacy.md.support
+Reviews : review.research.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : QUALIFIED
+Éligibilité : ALLOWED_WITH_QUALIFIER
+Qualifier requis : NC State directly supports physical stability; RHS and UConn associate climbing with mature/larger leaves; controlled causality is not established.
+Wording interdit : aucun spécifique
+Wording candidat : Un support accompagne son port grimpant et stabilise les tiges. Il peut favoriser l'expression d'une croissance plus mature, sans garantir à lui seul de grandes feuilles ou des fenestrations.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : NC State directly supports physical stability; RHS and UConn associate climbing with mature/larger leaves; controlled causality is not established. Publication Evidence V1: DRAFT.
+Question ouverte : aucune ajoutée
+Sections aval : 13_SUPPORT, 21_CONSEIL_STUDIO
+Safety flag : NO
+
+26. claim.md.aerial-roots.role
+Domaine / champ : P_AERIAL_ROOTS / aerial_root_role
+Claim original : Aerial roots arise from vine nodes and contribute to anchorage/climbing; they may continue growing and can root on contacting suitable ground or substrate.
+Type : BOTANICAL_FACT
+Contexte : {"population_scope":"taxon","cultivation_environment":"GENERAL"}
+EvidenceLinks : ev.md.uf.aerial-roots, ev.md.rhs.aerial-root-support, ev.md.frontiers.aerial-root
+Sources : source.uf-ifas.monstera-landscape, source.rhs.monstera-growing-guide, source.frontiers.2022.aerial-roots
+Proximité : DIRECT
+Evidence / confiance : CORROBORATED / CORROBORATED
+Conflits : aucun
+Legacy lié : aucun
+Reviews : review.research.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : OWNER_DECISION_REQUIRED
+Éligibilité : ALLOWED
+Qualifier requis : aucun
+Wording interdit : aucun spécifique
+Wording candidat : Les racines aériennes participent à l'ancrage et à la progression de la liane ; au contact d'un milieu favorable, certaines peuvent s'y enraciner.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : UF/IFAS specifically describes emergence and rooting on ground contact; RHS describes rooting into a moist support; peer-reviewed work confirms distinct aerial-root growth/anatomy. Publication Evidence V1: DRAFT.
+Question ouverte : aucune ajoutée
+Sections aval : 14_RACINES_AERIENNES
+Safety flag : NO
+
+27. claim.md.aerial-roots.cut-or-guide
+Domaine / champ : P_AERIAL_ROOTS / home_handling
+Claim original : The reviewed direct evidence is insufficient to issue a universal rule that aerial roots should always be cut, never cut, or always guided into the pot.
+Type : HORTICULTURAL_GUIDANCE
+Contexte : {"population_scope":"taxon","cultivation_environment":"INDOOR"}
+EvidenceLinks : ev.md.frontiers.aerial-root.handling, ev.md.uf.aerial-roots.handling
+Sources : source.frontiers.2022.aerial-roots, source.uf-ifas.monstera-landscape
+Proximité : DIRECT
+Evidence / confiance : UNVERIFIED / UNVERIFIED
+Conflits : aucun
+Legacy lié : legacy.md.aerial-roots
+Reviews : review.research.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : NO_EVIDENCE_FOUND
+Éligibilité : PROHIBITED
+Qualifier requis : aucun
+Wording interdit : toujours couper | toujours guider | toujours enterrer
+Wording candidat : AUCUN — claim non publiable
+Review spécialisée : non
+Décision Owner : non requise pour maintenir l’exclusion
+Rationale : Opened sources document role/anatomy but not a controlled universal home-practice rule. Publication Evidence V1: WITHHELD.
+Question ouverte : Nouvelle preuve ou décision explicitement prévue par le pack requise avant réexamen.
+Sections aval : aucune — exclusion ou usage non retenu
+Safety flag : NO
+
+28. claim.md.dimensions.context
+Domaine / champ : Q_GROWTH_DIMENSIONS / size_by_context
+Claim original : Reported dimensions depend strongly on context: outdoor/wild-like vines may exceed 21 m in length, RHS gives 4–8 m under its horticultural profile, and NC State gives about 1.8–2.4 m in most home environments.
+Type : BOTANICAL_FACT
+Contexte : {"population_scope":"taxon","cultivation_environment":"MIXED_CONTEXTS"}
+EvidenceLinks : ev.md.uf.dimensions, ev.md.rhs.dimensions, ev.md.ncsu.dimensions
+Sources : source.uf-ifas.monstera-landscape, source.rhs.monstera-deliciosa-profile, source.ncsu.monstera-deliciosa
+Proximité : DIRECT
+Evidence / confiance : QUALIFIED / QUALIFIED
+Conflits : conflict.md.dimensions
+Legacy lié : legacy.md.dimensions
+Reviews : review.conflict.dimensions.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : QUALIFIED
+Éligibilité : ALLOWED_WITH_QUALIFIER
+Qualifier requis : Institutional sources directly give values but for non-equivalent settings.
+Wording interdit : taille unique sans contexte
+Wording candidat : La liane peut dépasser 20 m dans des conditions extérieures favorables ; en intérieur, elle reste généralement bien plus contenue, souvent autour de quelques mètres selon l'espace, le support et la taille.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : Institutional sources directly give values but for non-equivalent settings. Publication Evidence V1: REVIEW_REQUIRED.
+Question ouverte : aucune ajoutée
+Sections aval : 15_CROISSANCE_DIMENSIONS
+Safety flag : NO
+
+29. claim.md.growth.rate-context
+Domaine / champ : Q_GROWTH_DIMENSIONS / growth_rate
+Claim original : Monstera deliciosa is described as vigorous or fast growing in favorable horticultural/outdoor contexts, but no universal indoor growth rate is established.
+Type : HORTICULTURAL_GUIDANCE
+Contexte : {"population_scope":"taxon","cultivation_environment":"MIXED_CONTEXTS"}
+EvidenceLinks : ev.md.rhs.vigorous-growth, ev.md.uf.fast-growth
+Sources : source.rhs.monstera-growing-guide, source.uf-ifas.monstera-landscape
+Proximité : DIRECT
+Evidence / confiance : QUALIFIED / QUALIFIED
+Conflits : aucun
+Legacy lié : aucun
+Reviews : review.research.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : QUALIFIED
+Éligibilité : ALLOWED_WITH_QUALIFIER
+Qualifier requis : RHS describes vigorous plants and UF/IFAS fast outdoor vine growth; neither defines a transferable indoor rate.
+Wording interdit : croissance toujours rapide
+Wording candidat : Sa croissance peut être vigoureuse lorsque les conditions sont favorables, mais sa vitesse réelle en intérieur varie fortement avec la lumière, la chaleur, l'espace racinaire et le support.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : RHS describes vigorous plants and UF/IFAS fast outdoor vine growth; neither defines a transferable indoor rate. Publication Evidence V1: REVIEW_REQUIRED.
+Question ouverte : aucune ajoutée
+Sections aval : 15_CROISSANCE_DIMENSIONS
+Safety flag : NO
+
+30. claim.md.safety.mechanism
+Domaine / champ : R_TOXICITY_SAFETY / toxic_principle
+Claim original : Monstera deliciosa contains insoluble needle-like calcium oxalate crystals associated with oral and contact irritation.
+Type : SAFETY_INFORMATION
+Contexte : {"population_scope":"taxon","cultivation_environment":"GENERAL"}
+EvidenceLinks : ev.md.aspca.oxalates, ev.md.ncsu.oxalates
+Sources : source.aspca.monstera-deliciosa, source.ncsu.monstera-deliciosa
+Proximité : DIRECT
+Evidence / confiance : CORROBORATED / CORROBORATED
+Conflits : aucun
+Legacy lié : legacy.md.toxicity
+Reviews : review.safety.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : SPECIALIST_REVIEW_REQUIRED
+Éligibilité : CANDIDATE_ONLY
+Qualifier requis : aucun
+Wording interdit : sans danger | mortel
+Wording candidat : La plante contient des cristaux insolubles d'oxalate de calcium pouvant irriter la bouche, les muqueuses et, chez certaines personnes, la peau.
+Review spécialisée : SAFETY_REVIEW_REQUIRED
+Décision Owner : requise
+Rationale : ASPCA directly identifies insoluble calcium oxalates in the species; NC State independently identifies needle-like calcium oxalate crystals and contact dermatitis. Publication Evidence V1: REVIEW_REQUIRED.
+Question ouverte : aucune ajoutée
+Sections aval : 17_SAFETY
+Safety flag : YES
+
+31. claim.md.safety.humans-children
+Domaine / champ : R_TOXICITY_SAFETY / human_child_safety
+Claim original : Chewing oxalate-containing plant tissue can cause acute oral pain, irritation, swelling and difficulty swallowing; keep Monstera deliciosa out of children's reach and seek professional poison-control/medical advice for concerning exposure.
+Type : SAFETY_INFORMATION
+Contexte : {"population_scope":"taxon","cultivation_environment":"INDOOR","population":"HUMANS_CHILDREN"}
+EvidenceLinks : ev.md.ncsu.human-symptoms, ev.md.chop.oxalate-effects, ev.md.rhs.keep-away
+Sources : source.ncsu.monstera-deliciosa, source.chop.oxalate-irritants, source.rhs.monstera-growing-guide
+Proximité : DIRECT
+Evidence / confiance : QUALIFIED / QUALIFIED
+Conflits : aucun
+Legacy lié : aucun
+Reviews : review.safety.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : SPECIALIST_REVIEW_REQUIRED
+Éligibilité : CANDIDATE_ONLY
+Qualifier requis : NC State is species-specific; CHOP provides direct institutional mechanism and symptom guidance for oxalate plants generally; RHS advises keeping the species away from children.
+Wording interdit : diagnostic ou protocole médical
+Wording candidat : Gardez la plante hors de portée des enfants. En cas de mastication ou d'irritation importante — notamment gonflement ou difficulté à avaler — contactez un centre antipoison ou un professionnel de santé.
+Review spécialisée : SAFETY_REVIEW_REQUIRED
+Décision Owner : requise
+Rationale : NC State is species-specific; CHOP provides direct institutional mechanism and symptom guidance for oxalate plants generally; RHS advises keeping the species away from children. Publication Evidence V1: REVIEW_REQUIRED.
+Question ouverte : aucune ajoutée
+Sections aval : 17_SAFETY
+Safety flag : YES
+
+32. claim.md.safety.pets
+Domaine / champ : R_TOXICITY_SAFETY / dog_cat_safety
+Claim original : ASPCA classifies Monstera deliciosa as toxic to dogs and cats; chewing can cause oral irritation, drooling, vomiting and difficulty swallowing.
+Type : SAFETY_INFORMATION
+Contexte : {"population_scope":"taxon","cultivation_environment":"INDOOR","population":"DOGS_CATS"}
+EvidenceLinks : ev.md.aspca.pets
+Sources : source.aspca.monstera-deliciosa
+Proximité : DIRECT
+Evidence / confiance : VERIFIED / VERIFIED
+Conflits : aucun
+Legacy lié : aucun
+Reviews : review.safety.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : SPECIALIST_REVIEW_REQUIRED
+Éligibilité : CANDIDATE_ONLY
+Qualifier requis : aucun
+Wording interdit : diagnostic ou protocole vétérinaire
+Wording candidat : Toxique pour les chiens et les chats en cas de mastication. Une irritation buccale, une salivation excessive, des vomissements ou une difficulté à avaler peuvent survenir ; contactez un vétérinaire ou un centre antipoison vétérinaire si une exposition est suspectée.
+Review spécialisée : SAFETY_REVIEW_REQUIRED
+Décision Owner : requise
+Rationale : Direct species-specific ASPCA Animal Poison Control profile. Publication Evidence V1: REVIEW_REQUIRED.
+Question ouverte : aucune ajoutée
+Sections aval : 17_SAFETY
+Safety flag : YES
+
+33. claim.md.pests.documented
+Domaine / champ : S_PESTS / documented_pests
+Claim original : Scale insects and spider mites are directly documented for Monstera deliciosa; UConn additionally documents mealybugs and aphids. Thrips are plausible houseplant pests but were not directly documented for this species in the opened species-specific sources.
+Type : DIAGNOSTIC_GUIDANCE
+Contexte : {"population_scope":"taxon","cultivation_environment":"INDOOR"}
+EvidenceLinks : ev.md.rhs.pests, ev.md.uconn.pests, ev.md.umn.thrips-general
+Sources : source.rhs.monstera-deliciosa-profile, source.uconn.monstera-deliciosa, source.umn.thrips-general
+Proximité : DIRECT
+Evidence / confiance : QUALIFIED / QUALIFIED
+Conflits : aucun
+Legacy lié : legacy.md.thrips-mites
+Reviews : review.research.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : QUALIFIED
+Éligibilité : ALLOWED_WITH_QUALIFIER
+Qualifier requis : RHS/UConn provide species-specific pest records; the opened thrips source is general-domain only.
+Wording interdit : thrips établi spécifiquement pour Monstera deliciosa
+Wording candidat : Surveillez surtout les cochenilles et les acariens, directement documentés sur cette espèce. Les cochenilles farineuses sont également signalées. Les thrips restent une hypothèse à confirmer par inspection, pas un diagnostic automatique.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : RHS/UConn provide species-specific pest records; the opened thrips source is general-domain only. Publication Evidence V1: REVIEW_REQUIRED.
+Question ouverte : aucune ajoutée
+Sections aval : 18_RAVAGEURS
+Safety flag : NO
+
+34. claim.md.pests.spider-mite-check
+Domaine / champ : S_PESTS / spider_mite_verification
+Claim original : Fine stippling, bronzing/bleaching and webbing are compatible with spider mites; inspect leaf undersides with magnification or tap over white paper.
+Type : DIAGNOSTIC_GUIDANCE
+Contexte : {"population_scope":"related_domain","cultivation_environment":"INDOOR"}
+EvidenceLinks : ev.md.uconn.spider-mites, ev.md.umn.mite-check
+Sources : source.uconn.monstera-deliciosa, source.umn.twospotted-mites
+Proximité : DIRECT
+Evidence / confiance : CORROBORATED / CORROBORATED
+Conflits : aucun
+Legacy lié : aucun
+Reviews : review.research.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : QUALIFIED
+Éligibilité : ALLOWED_WITH_QUALIFIER
+Qualifier requis : aucun
+Wording interdit : aucun spécifique
+Wording candidat : De fines ponctuations claires et des toiles peuvent évoquer des acariens. Vérifiez le revers des feuilles à la loupe ou secouez une feuille au-dessus d'un papier blanc avant d'agir.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : UConn gives species-specific signs; UMN provides independent diagnostic procedure for twospotted mites. Publication Evidence V1: REVIEW_REQUIRED.
+Question ouverte : aucune ajoutée
+Sections aval : 18_RAVAGEURS
+Safety flag : NO
+
+35. claim.md.diagnostic.yellow-leaves
+Domaine / champ : T_YELLOW_LEAVES / yellow_leaves
+Claim original : Yellow leaves are non-specific. Possible causes include root-zone saturation/rot, pest feeding, disease, cold or natural leaf senescence; diagnosis requires checking substrate, roots, temperature history and pests.
+Type : DIAGNOSTIC_GUIDANCE
+Contexte : {"population_scope":"taxon","cultivation_environment":"INDOOR"}
+EvidenceLinks : ev.md.uconn.yellowing-pests, ev.md.uconn.root-rot.yellow, ev.md.rhs.standing-water.yellow
+Sources : source.uconn.monstera-deliciosa, source.rhs.monstera-growing-guide
+Proximité : DIRECT
+Evidence / confiance : QUALIFIED / QUALIFIED
+Conflits : aucun
+Legacy lié : legacy.md.yellow-leaves
+Reviews : review.research.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : QUALIFIED
+Éligibilité : ALLOWED_WITH_QUALIFIER
+Qualifier requis : UConn directly documents yellowing from scale/mealybugs and root/stem rot signs; RHS supports wet-root risk. Natural senescence is general plant biology but was not found in a species-specific source during this pilot.
+Wording interdit : aucun spécifique
+Wording candidat : Une feuille jaune ne suffit pas à conclure. Contrôlez d'abord l'humidité du substrat, l'état des racines, les températures récentes et la présence de ravageurs ; une vieille feuille isolée peut aussi simplement terminer son cycle.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : UConn directly documents yellowing from scale/mealybugs and root/stem rot signs; RHS supports wet-root risk. Natural senescence is general plant biology but was not found in a species-specific source during this pilot. Publication Evidence V1: REVIEW_REQUIRED.
+Question ouverte : aucune ajoutée
+Sections aval : aucune — exclusion ou usage non retenu
+Safety flag : NO
+
+36. claim.md.diagnostic.brown-areas
+Domaine / champ : U_BROWN_TIPS_PATCHES / brown_tips_or_patches
+Claim original : Brown edges or patches are non-specific; dry air or direct-sun scorch are supported possibilities, while patterned lesions, yellow margins or ooze require disease assessment.
+Type : DIAGNOSTIC_GUIDANCE
+Contexte : {"population_scope":"taxon","cultivation_environment":"INDOOR"}
+EvidenceLinks : ev.md.rhs.brown-edges, ev.md.uconn.leaf-spots
+Sources : source.rhs.monstera-growing-guide, source.uconn.monstera-deliciosa
+Proximité : DIRECT
+Evidence / confiance : QUALIFIED / QUALIFIED
+Conflits : aucun
+Legacy lié : legacy.md.brown-areas
+Reviews : review.research.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : QUALIFIED
+Éligibilité : ALLOWED_WITH_QUALIFIER
+Qualifier requis : RHS links dry air and direct sun to browning/scorch; UConn describes bacterial/anthracnose lesion patterns.
+Wording interdit : aucun spécifique
+Wording candidat : Des bords bruns peuvent être compatibles avec un air très sec ou une brûlure lumineuse. Si les taches s'étendent, présentent un halo jaune ou un suintement, isolez la plante et faites préciser le diagnostic.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : RHS links dry air and direct sun to browning/scorch; UConn describes bacterial/anthracnose lesion patterns. Publication Evidence V1: REVIEW_REQUIRED.
+Question ouverte : aucune ajoutée
+Sections aval : aucune — exclusion ou usage non retenu
+Safety flag : NO
+
+37. claim.md.diagnostic.slow-growth-small-leaves
+Domaine / champ : V_SLOW_GROWTH_SMALL_LEAVES / slow_growth_small_leaves
+Claim original : Slow growth or smaller leaves may reflect low light, seasonal/temperature context, root-zone constraint or a return to less mature growth after pruning; support is an association, not a guaranteed cure.
+Type : DIAGNOSTIC_GUIDANCE
+Contexte : {"population_scope":"taxon","cultivation_environment":"INDOOR"}
+EvidenceLinks : ev.md.rhs.low-light-holes.slow, ev.md.rhs.pruning-maturity.slow, ev.md.uconn.support-leaf-size.slow, ev.md.uconn.repotting.slow
+Sources : source.rhs.monstera-growing-guide, source.uconn.monstera-deliciosa
+Proximité : DIRECT
+Evidence / confiance : QUALIFIED / QUALIFIED
+Conflits : aucun
+Legacy lié : legacy.md.slow-growth
+Reviews : review.research.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : QUALIFIED
+Éligibilité : ALLOWED_WITH_QUALIFIER
+Qualifier requis : RHS links low light and post-pruning growth to less mature leaves; UConn links support attachment with leaf-size increase; root constraints and temperature need contextual inspection.
+Wording interdit : aucun spécifique
+Wording candidat : Une croissance ralentie ou de petites feuilles demandent de vérifier ensemble la lumière, la saison, la température, l'espace racinaire et le port de la plante. Un support peut accompagner la maturité, mais ne constitue pas une correction garantie.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : RHS links low light and post-pruning growth to less mature leaves; UConn links support attachment with leaf-size increase; root constraints and temperature need contextual inspection. Publication Evidence V1: REVIEW_REQUIRED.
+Question ouverte : aucune ajoutée
+Sections aval : aucune — exclusion ou usage non retenu
+Safety flag : NO
+
+38. claim.md.diagnostic.no-fenestrations
+Domaine / champ : W_NO_FENESTRATIONS / absence_of_fenestrations
+Claim original : Lack of fenestrations is compatible with juvenile stage and can also be associated with insufficient light or non-climbing growth; it is not evidence of a single fault.
+Type : DIAGNOSTIC_GUIDANCE
+Contexte : {"population_scope":"taxon","cultivation_environment":"INDOOR","life_stage":"GENERAL"}
+EvidenceLinks : ev.md.ncsu.mature-leaves.no-fen, ev.md.rhs.low-light-holes.no-fen, ev.md.rhs.support-holes.no-fen
+Sources : source.ncsu.monstera-deliciosa, source.rhs.monstera-growing-guide
+Proximité : DIRECT
+Evidence / confiance : QUALIFIED / QUALIFIED
+Conflits : aucun
+Legacy lié : aucun
+Reviews : review.research.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : QUALIFIED
+Éligibilité : ALLOWED_WITH_QUALIFIER
+Qualifier requis : Stage is corroborated; light/support associations come from institutional horticultural guidance.
+Wording interdit : aucun spécifique
+Wording candidat : Des feuilles sans fenestrations peuvent être normales sur une plante jeune. Vérifiez aussi si la lumière est suffisante et si la liane peut grimper, sans promettre qu'un tuteur fera apparaître les découpes.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : Stage is corroborated; light/support associations come from institutional horticultural guidance. Publication Evidence V1: REVIEW_REQUIRED.
+Question ouverte : aucune ajoutée
+Sections aval : aucune — exclusion ou usage non retenu
+Safety flag : NO
+
+39. claim.md.pruning.size-control
+Domaine / champ : X_PRUNING_CLEANING / pruning_for_size
+Claim original : Stems can be pruned to control size; pruning may be followed by smaller, less mature leaves during regrowth.
+Type : HORTICULTURAL_GUIDANCE
+Contexte : {"population_scope":"taxon","cultivation_environment":"INDOOR"}
+EvidenceLinks : ev.md.rhs.pruning-maturity, ev.md.uf.pruning
+Sources : source.rhs.monstera-growing-guide, source.uf-ifas.monstera-landscape
+Proximité : DIRECT
+Evidence / confiance : CORROBORATED / CORROBORATED
+Conflits : aucun
+Legacy lié : aucun
+Reviews : review.research.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : OWNER_DECISION_REQUIRED
+Éligibilité : ALLOWED
+Qualifier requis : aucun
+Wording interdit : aucun spécifique
+Wording candidat : Vous pouvez raccourcir les tiges pour contenir la plante. La repousse peut d'abord produire des feuilles plus petites et moins matures.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : RHS and UF/IFAS independently support stem pruning for size; RHS supplies the regrowth qualifier. Publication Evidence V1: DRAFT.
+Question ouverte : aucune ajoutée
+Sections aval : 16_TAILLE_NETTOYAGE
+Safety flag : NO
+
+40. claim.md.cleaning.leaf-dust
+Domaine / champ : X_PRUNING_CLEANING / leaf_cleaning
+Claim original : Wiping accumulated dust from leaves is recommended as routine care and also provides an opportunity to inspect for pests.
+Type : HORTICULTURAL_GUIDANCE
+Contexte : {"population_scope":"taxon","cultivation_environment":"INDOOR"}
+EvidenceLinks : ev.md.rhs.leaf-wiping, ev.md.ncsu.leaf-wiping
+Sources : source.rhs.monstera-growing-guide, source.ncsu.monstera-deliciosa
+Proximité : DIRECT
+Evidence / confiance : CORROBORATED / CORROBORATED
+Conflits : aucun
+Legacy lié : aucun
+Reviews : review.research.monstera-deliciosa.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : OWNER_DECISION_REQUIRED
+Éligibilité : ALLOWED
+Qualifier requis : aucun
+Wording interdit : aucun spécifique
+Wording candidat : Essuyez doucement la poussière avec un support propre et profitez-en pour examiner le revers des feuilles. Aucun produit lustrant n'est nécessaire.
+Review spécialisée : non
+Décision Owner : requise
+Rationale : RHS recommends regular wiping for dust/insect inspection; NC State independently recommends wiping dust from leaves. Publication Evidence V1: DRAFT.
+Question ouverte : aucune ajoutée
+Sections aval : 16_TAILLE_NETTOYAGE
+Safety flag : NO
+
+41. claim.md.editorial-score.light-4-of-5
+Domaine / champ : Y_DIFFICULTY_EDITORIAL_SCORES / light_score
+Claim original : The Jungle light score 4/5 is an editorial construct, not a botanical measurement.
+Type : JUNGLE_EDITORIAL_SCORE
+Contexte : {"population_scope":"taxon","cultivation_environment":"INDOOR"}
+EvidenceLinks : aucun
+Sources : aucune
+Proximité : NO_DIRECT_EVIDENCE
+Evidence / confiance : UNVERIFIED / UNVERIFIED
+Conflits : aucun
+Legacy lié : legacy.md.light-score
+Reviews : review.editorial.scores.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : NO_EVIDENCE_FOUND
+Éligibilité : PROHIBITED
+Qualifier requis : aucun
+Wording interdit : score présenté comme fait botanique
+Wording candidat : AUCUN — claim non publiable
+Review spécialisée : non
+Décision Owner : non requise pour maintenir l’exclusion
+Rationale : No scoring rubric is present in Evidence V1. Publication Evidence V1: WITHHELD.
+Question ouverte : Nouvelle preuve ou décision explicitement prévue par le pack requise avant réexamen.
+Sections aval : aucune — exclusion ou usage non retenu
+Safety flag : NO
+
+42. claim.md.editorial-score.watering-2-of-5
+Domaine / champ : Y_DIFFICULTY_EDITORIAL_SCORES / watering_score
+Claim original : The Jungle watering score 2/5 is an editorial construct, not a botanical measurement.
+Type : JUNGLE_EDITORIAL_SCORE
+Contexte : {"population_scope":"taxon","cultivation_environment":"INDOOR"}
+EvidenceLinks : aucun
+Sources : aucune
+Proximité : NO_DIRECT_EVIDENCE
+Evidence / confiance : UNVERIFIED / UNVERIFIED
+Conflits : aucun
+Legacy lié : legacy.md.watering-score
+Reviews : review.editorial.scores.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : NO_EVIDENCE_FOUND
+Éligibilité : PROHIBITED
+Qualifier requis : aucun
+Wording interdit : score présenté comme fait botanique
+Wording candidat : AUCUN — claim non publiable
+Review spécialisée : non
+Décision Owner : non requise pour maintenir l’exclusion
+Rationale : No scoring rubric is present in Evidence V1. Publication Evidence V1: WITHHELD.
+Question ouverte : Nouvelle preuve ou décision explicitement prévue par le pack requise avant réexamen.
+Sections aval : aucune — exclusion ou usage non retenu
+Safety flag : NO
+
+43. claim.md.editorial-score.humidity-3-of-5
+Domaine / champ : Y_DIFFICULTY_EDITORIAL_SCORES / humidity_score
+Claim original : The Jungle humidity score 3/5 is an editorial construct, not a botanical measurement.
+Type : JUNGLE_EDITORIAL_SCORE
+Contexte : {"population_scope":"taxon","cultivation_environment":"INDOOR"}
+EvidenceLinks : aucun
+Sources : aucune
+Proximité : NO_DIRECT_EVIDENCE
+Evidence / confiance : UNVERIFIED / UNVERIFIED
+Conflits : aucun
+Legacy lié : legacy.md.humidity-score
+Reviews : review.editorial.scores.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : NO_EVIDENCE_FOUND
+Éligibilité : PROHIBITED
+Qualifier requis : aucun
+Wording interdit : score présenté comme fait botanique
+Wording candidat : AUCUN — claim non publiable
+Review spécialisée : non
+Décision Owner : non requise pour maintenir l’exclusion
+Rationale : No scoring rubric is present in Evidence V1. Publication Evidence V1: WITHHELD.
+Question ouverte : Nouvelle preuve ou décision explicitement prévue par le pack requise avant réexamen.
+Sections aval : aucune — exclusion ou usage non retenu
+Safety flag : NO
+
+44. claim.md.editorial-score.difficulty-2-of-5
+Domaine / champ : Y_DIFFICULTY_EDITORIAL_SCORES / difficulty_score
+Claim original : The Jungle difficulty score 2/5 is an editorial construct, not a botanical fact.
+Type : JUNGLE_EDITORIAL_SCORE
+Contexte : {"population_scope":"taxon","cultivation_environment":"INDOOR"}
+EvidenceLinks : aucun
+Sources : aucune
+Proximité : NO_DIRECT_EVIDENCE
+Evidence / confiance : UNVERIFIED / UNVERIFIED
+Conflits : aucun
+Legacy lié : legacy.md.difficulty-score
+Reviews : review.editorial.scores.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : NO_EVIDENCE_FOUND
+Éligibilité : PROHIBITED
+Qualifier requis : aucun
+Wording interdit : score présenté comme fait botanique
+Wording candidat : AUCUN — claim non publiable
+Review spécialisée : non
+Décision Owner : non requise pour maintenir l’exclusion
+Rationale : No explicit documented scoring criteria have been applied. Publication Evidence V1: WITHHELD.
+Question ouverte : Nouvelle preuve ou décision explicitement prévue par le pack requise avant réexamen.
+Sections aval : aucune — exclusion ou usage non retenu
+Safety flag : NO
+
+45. claim.md.faq.required-claim-set
+Domaine / champ : Z_FREQUENT_QUESTIONS / faq_evidence_coverage
+Claim original : Evidence exists to answer placement, watering trigger, lack of fenestrations, repotting trigger, drained-container and toxicity questions cautiously; universal aerial-root cutting guidance remains unsupported.
+Type : HORTICULTURAL_GUIDANCE
+Contexte : {"population_scope":"taxon","cultivation_environment":"INDOOR"}
+EvidenceLinks : aucun
+Sources : aucune
+Proximité : NO_DIRECT_EVIDENCE
+Evidence / confiance : QUALIFIED / QUALIFIED
+Conflits : aucun
+Legacy lié : aucun
+Reviews : review.editorial.content-master-readiness.v1 [REVIEW_REQUIRED; reviewer=null]
+Décision Human Review V1 : WITHHELD
+Éligibilité : PROHIBITED
+Qualifier requis : This is a coverage assessment derived from the atomic claims, not a final FAQ.
+Wording interdit : aucun spécifique
+Wording candidat : AUCUN — claim non publiable
+Review spécialisée : non
+Décision Owner : non requise pour maintenir l’exclusion
+Rationale : This is a coverage assessment derived from the atomic claims, not a final FAQ. Publication Evidence V1: WITHHELD.
+Question ouverte : Nouvelle preuve ou décision explicitement prévue par le pack requise avant réexamen.
+Sections aval : aucune — exclusion ou usage non retenu
+Safety flag : NO
+
+8. REVIEWS HUMAINES / SPÉCIALISÉES
+
+- review.research.monstera-deliciosa.v1 — RESEARCH_REVIEW — REVIEW_REQUIRED
+  reviewer=null; reviewed_at=null; decision=PENDING_HUMAN_REVIEW
+  Cibles: taxon.monstera-deliciosa
+  Findings: Research assistant assembled and cross-checked opened sources. This record is not a human approval.
+- review.taxonomy.monstera-deliciosa.v1 — TAXONOMY_REVIEW — REVIEW_REQUIRED
+  reviewer=null; reviewed_at=null; decision=PROPOSED_ACCEPT_POWO_BACKBONE_PENDING_HUMAN
+  Cibles: taxon.monstera-deliciosa, claim.md.taxonomy.accepted-name, claim.md.taxonomy.classification, claim.md.taxonomy.borsigiana, claim.md.taxonomy.philodendron-pertusum
+  Findings: POWO accepts Monstera deliciosa Liebm.; IPNI confirms authorship/publication. POWO places M. borsigiana and Philodendron pertusum in synonymy.
+- review.safety.monstera-deliciosa.v1 — SAFETY_REVIEW — REVIEW_REQUIRED
+  reviewer=null; reviewed_at=null; decision=PENDING_HUMAN_SAFETY_REVIEW
+  Cibles: claim.md.safety.mechanism, claim.md.safety.humans-children, claim.md.safety.pets
+  Findings: Species-specific institutional evidence supports insoluble calcium oxalates, human oral/contact irritation, and toxicity to dogs/cats. Severity wording must stay measured.
+- review.conflict.native-range.v1 — CONFLICT_REVIEW — REVIEW_REQUIRED
+  reviewer=null; reviewed_at=null; decision=PROPOSED_USE_POWO_NATIVE_RANGE
+  Cibles: claim.md.distribution.native-range
+  Findings: POWO is narrower than RHS/NC State/UF horticultural profiles. Likely mixing native, regional and cultivated/introduced concepts.
+- review.conflict.fenestration-function.v1 — CONFLICT_REVIEW — REVIEW_REQUIRED
+  reviewer=null; reviewed_at=null; decision=PROPOSED_PUBLISH_AS_HYPOTHESIS_ONLY
+  Cibles: claim.md.fenestration.function
+  Findings: Muir presents a model-based hypothesis and rejects/qualifies older conjectures; consumer horticultural copy overstates one function.
+- review.conflict.humidity-range.v1 — CONFLICT_REVIEW — REVIEW_REQUIRED
+  reviewer=null; reviewed_at=null; decision=PROPOSED_DEPRECATE_NUMERIC_RANGE
+  Cibles: claim.md.humidity.legacy-50-75
+  Findings: No opened authoritative source supplies the historical 50–75% range. Qualitative preference is supportable.
+- review.conflict.temperature.v1 — CONFLICT_REVIEW — REVIEW_REQUIRED
+  reviewer=null; reviewed_at=null; decision=PROPOSED_QUALITATIVE_WARM_GUIDANCE
+  Cibles: claim.md.temperature.indoor-guidance, claim.md.temperature.legacy-minimum-15
+  Findings: 18–25°C (RHS) and 60–85°F/15.6–29.4°C (NC State) are preferred ranges; outdoor handling and freeze-damage values are different claim types.
+- review.conflict.watering-threshold.v1 — CONFLICT_REVIEW — REVIEW_REQUIRED
+  reviewer=null; reviewed_at=null; decision=PROPOSED_QUALITATIVE_SUBSTRATE_CHECK
+  Cibles: claim.md.watering.substrate-state
+  Findings: RHS, NC State and UConn converge on checking upper substrate but use different thresholds.
+- review.conflict.repotting-frequency.v1 — CONFLICT_REVIEW — REVIEW_REQUIRED
+  reviewer=null; reviewed_at=null; decision=PROPOSED_USE_OBSERVED_TRIGGERS
+  Cibles: claim.md.repotting.trigger
+  Findings: RHS offers broad time tendencies; UConn provides observable root/container criteria.
+- review.conflict.fertilisation.v1 — CONFLICT_REVIEW — REVIEW_REQUIRED
+  reviewer=null; reviewed_at=null; decision=PROPOSED_BALANCED_ACTIVE_GROWTH_ONLY
+  Cibles: claim.md.fertilisation.growing-season
+  Findings: Sources converge on balanced fertiliser in active growth but differ in frequency and local calendar; UConn flags salt sensitivity.
+- review.conflict.dimensions.v1 — CONFLICT_REVIEW — REVIEW_REQUIRED
+  reviewer=null; reviewed_at=null; decision=PROPOSED_SEPARATE_WILD_OUTDOOR_INDOOR
+  Cibles: claim.md.dimensions.context
+  Findings: Values differ materially because they describe vine length outdoors, horticultural potential and typical home height.
+- review.editorial.scores.v1 — EDITORIAL_REVIEW — REVIEW_REQUIRED
+  reviewer=null; reviewed_at=null; decision=PENDING_OWNER_RUBRIC
+  Cibles: claim.md.editorial-score.light-4-of-5, claim.md.editorial-score.watering-2-of-5, claim.md.editorial-score.humidity-3-of-5, claim.md.editorial-score.difficulty-2-of-5
+  Findings: Scores are UI/editorial outputs, not evidence-backed botanical values.
+- review.editorial.content-master-readiness.v1 — FINAL_OWNER_REVIEW — REVIEW_REQUIRED
+  reviewer=null; reviewed_at=null; decision=NOT_STARTED
+  Cibles: taxon.monstera-deliciosa
+  Findings: Evidence Pack is not a Content Master and cannot self-approve readiness.
+
+Conclusion : tous les reviewers restent null et toutes les reviews humaines restent pending. L’exécution Codex n’est pas une review humaine.
+
+9. CONFLITS ET DIVERGENCES
+
+- conflict.md.native-range [MINOR_VARIATION]
+  Claims: claim.md.distribution.native-range
+  Valeurs/contextes: [{"source_id":"source.kew.powo.monstera-deliciosa","value":"South/southeast Mexico to Guatemala","context":"native range"},{"source_id":"source.rhs.monstera-deliciosa-profile","value":"Mexico to Panama","context":"horticultural plant range"},{"source_id":"source.uf-ifas.monstera-landscape","value":"Mexico, Guatemala, Costa Rica, Panama","context":"Florida extension origin statement"}]
+  Hypothèse: Broader profiles likely conflate historical regional range concepts or cultivation with POWO's current native backbone.
+  Décision éditoriale Evidence V1: Use POWO for native range; do not silently merge.
+  Human review required: true
+- conflict.md.fenestration-function [UNRESOLVED]
+  Claims: claim.md.fenestration.function
+  Valeurs/contextes: [{"source_id":"source.muir.2013.fenestration","value":"growth-variance hypothesis under stochastic sunflecks","context":"peer-reviewed model; testable hypothesis"},{"source_id":"source.rhs.monstera-growing-guide","value":"holes evolved to let light reach lower leaves","context":"consumer horticultural explanation"}]
+  Hypothèse: RHS compresses a debated evolutionary question into popular copy.
+  Décision éditoriale Evidence V1: Publish only as hypothesis/unknown; never as settled function.
+  Human review required: true
+- conflict.md.watering-threshold [MINOR_VARIATION]
+  Claims: claim.md.watering.substrate-state
+  Valeurs/contextes: [{"source_id":"source.rhs.monstera-growing-guide","value":"compost almost dry","context":"indoor guide"},{"source_id":"source.ncsu.monstera-deliciosa","value":"top quarter to one-third dry","context":"home environment"},{"source_id":"source.uconn.monstera-deliciosa","value":"top 2–3 inches dry","context":"New England houseplant"}]
+  Hypothèse: Different container sizes/media/climates produce different operational checks.
+  Décision éditoriale Evidence V1: Use qualitative substrate-state guidance; no calendar interval.
+  Human review required: false
+- conflict.md.humidity-50-75 [UNRESOLVED]
+  Claims: claim.md.humidity.legacy-50-75
+  Valeurs/contextes: [{"source_id":"LEGACY_JUNGLE","value":"50–75% RH","context":"generic aroid filter"},{"source_id":"source.rhs.monstera-deliciosa-profile","value":"moderate to high humidity","context":"under glass"},{"source_id":"source.ncsu.monstera-deliciosa","value":"high humidity","context":"home environment"}]
+  Hypothèse: Legacy numeric range appears editorially invented or inherited without a traceable source.
+  Décision éditoriale Evidence V1: Withhold range; retain qualitative preference.
+  Human review required: true
+- conflict.md.temperature [CONTEXT_DEPENDENT]
+  Claims: claim.md.temperature.indoor-guidance, claim.md.temperature.legacy-minimum-15
+  Valeurs/contextes: [{"source_id":"source.rhs.monstera-growing-guide","value":"18–25°C","context":"year-round indoor preference"},{"source_id":"source.ncsu.monstera-deliciosa","value":"60–85°F / 15.6–29.4°C","context":"average warm home preference"},{"source_id":"source.uconn.monstera-deliciosa","value":"not below 45°F / 7.2°C","context":"temporary outdoor summer placement"},{"source_id":"source.uf-ifas.monstera-landscape","value":"leaf damage −1–0°C; stem damage −3 to −2°C","context":"Florida landscape freeze damage"}]
+  Hypothèse: Preference, outdoor handling and tissue damage are different claim types.
+  Décision éditoriale Evidence V1: Do not average; withhold universal 15°C minimum.
+  Human review required: true
+- conflict.md.fertilisation [CONTEXT_DEPENDENT]
+  Claims: claim.md.fertilisation.growing-season
+  Valeurs/contextes: [{"source_id":"source.rhs.monstera-deliciosa-profile","value":"balanced liquid fertiliser monthly when in growth","context":"under glass"},{"source_id":"source.rhs.monstera-growing-guide","value":"balanced liquid fertiliser April–September","context":"UK growing-season guide"},{"source_id":"source.uconn.monstera-deliciosa","value":"regular fertilisation May–September; high-salt burn caution","context":"New England"}]
+  Hypothèse: Product strength, climate and growth rate determine frequency.
+  Décision éditoriale Evidence V1: Publish active-growth principle and salt caution only; no universal frequency.
+  Human review required: true
+- conflict.md.dimensions [CONTEXT_DEPENDENT]
+  Claims: claim.md.dimensions.context
+  Valeurs/contextes: [{"source_id":"source.uf-ifas.monstera-landscape","value":">21 m vine length","context":"Florida outdoor landscape"},{"source_id":"source.rhs.monstera-deliciosa-profile","value":"4–8 m height","context":"horticultural profile"},{"source_id":"source.ncsu.monstera-deliciosa","value":"1.8–2.4 m most homes","context":"indoor"}]
+  Hypothèse: Values measure different environments and sometimes different dimensions (vine length vs displayed height).
+  Décision éditoriale Evidence V1: Separate wild/outdoor potential from indoor expectation.
+  Human review required: true
+
+Aucune valeur divergente n’a été moyennée. Chaque conflit conserve son contexte et sa décision éditoriale candidate.
+
+10. CONTENT MASTER — UNITÉS
+
+- content.identity.name | 01_IDENTITE | Monstera deliciosa | CANDIDATE_PENDING_SPECIALIST_REVIEW | VERIFIED | claims=claim.md.taxonomy.accepted-name, claim.md.taxonomy.classification | qualifier=aucun
+- content.identity.synonyms | 01_IDENTITE | Synonymes à contextualiser | CANDIDATE_PENDING_SPECIALIST_REVIEW | VERIFIED | claims=claim.md.taxonomy.borsigiana, claim.md.taxonomy.philodendron-pertusum | qualifier=aucun
+- content.origin.range | 02_ORIGINE_HABITAT | Aire native | CANDIDATE_PENDING_OWNER_DECISION | VERIFIED | claims=claim.md.distribution.native-range | qualifier=Aire native POWO, distincte des introductions et cultures.
+- content.origin.habitat | 02_ORIGINE_HABITAT | Biome et port | CANDIDATE_PENDING_OWNER_DECISION | QUALIFIED | claims=claim.md.distribution.biome, claim.md.ecology.climbing-liana, claim.md.ecology.secondary-hemiepiphyte | qualifier=Hémiépiphytisme qualifié ; ne pas généraliser au-delà du contexte sauvage.
+- content.morphology.heteroblasty | 03_MORPHOLOGIE | Une plante qui change de forme | CANDIDATE_PENDING_OWNER_DECISION | CORROBORATED | claims=claim.md.morphology.heteroblasty, claim.md.morphology.adult-fenestrations | qualifier=aucun
+- content.morphology.fenestrations | 03_MORPHOLOGIE | Fenestrations : ce que l’on sait | CANDIDATE_PENDING_OWNER_DECISION | QUALIFIED | claims=claim.md.fenestration.drivers, claim.md.fenestration.function | qualifier=Hypothèse scientifique attribuée ; causalité non établie.
+- content.care.light | 04_LUMIERE | Lumière | CANDIDATE_PENDING_OWNER_DECISION | CORROBORATED | claims=claim.md.light.indoor-preference | qualifier=aucun
+- content.care.watering | 05_ARROSAGE | Arrosage | CANDIDATE_PENDING_OWNER_DECISION | CORROBORATED | claims=claim.md.watering.substrate-state, claim.md.watering.standing-water | qualifier=aucun
+- content.care.humidity | 06_HUMIDITE | Humidité | CANDIDATE_PENDING_OWNER_DECISION | CORROBORATED | claims=claim.md.humidity.qualitative-preference | qualifier=Préférence, pas nécessité chiffrée.
+- content.care.temperature | 07_TEMPERATURE | Température | CANDIDATE_PENDING_SPECIALIST_REVIEW | QUALIFIED | claims=claim.md.temperature.indoor-guidance | qualifier=Guidance qualitative en attente d’un arbitrage horticole/Owner sur toute valeur chiffrée.
+- content.rootzone.substrate | 08_ROOT_ZONE | Substrat | CANDIDATE_PENDING_OWNER_DECISION | CORROBORATED | claims=claim.md.substrate.properties | qualifier=aucun
+- content.rootzone.pot | 09_CONTENANT | Pot et drainage | CANDIDATE_PENDING_OWNER_DECISION | CORROBORATED | claims=claim.md.pot.drainage | qualifier=aucun
+- content.rootzone.repotting | 10_REMPOTAGE | Quand rempoter | CANDIDATE_PENDING_OWNER_DECISION | CORROBORATED | claims=claim.md.repotting.trigger | qualifier=Les fréquences générales restent secondaires.
+- content.care.fertilisation | 11_FERTILISATION | Fertilisation | CANDIDATE_PENDING_HORTICULTURAL_REVIEW | QUALIFIED | claims=claim.md.fertilisation.growing-season | qualifier=Aucune fréquence ni dilution universelle.
+- content.propagation.node | 12_MULTIPLICATION | Bouture | CANDIDATE_PENDING_OWNER_DECISION | CORROBORATED | claims=claim.md.propagation.node | qualifier=aucun
+- content.support.role | 13_SUPPORT | Support | CANDIDATE_PENDING_OWNER_DECISION | QUALIFIED | claims=claim.md.support.role | qualifier=Association horticole, pas causalité garantie.
+- content.aerial-roots.role | 14_RACINES_AERIENNES | Racines aériennes | CANDIDATE_PENDING_OWNER_DECISION | CORROBORATED | claims=claim.md.aerial-roots.role | qualifier=aucun
+- content.dimensions.context | 15_CROISSANCE_DIMENSIONS | Dimensions | CANDIDATE_PENDING_OWNER_DECISION | QUALIFIED | claims=claim.md.dimensions.context, claim.md.growth.rate-context | qualifier=Toujours afficher la source et le contexte de mesure.
+- content.pruning.cleaning | 16_TAILLE_NETTOYAGE | Taille et nettoyage | CANDIDATE_PENDING_OWNER_DECISION | CORROBORATED | claims=claim.md.pruning.size-control, claim.md.cleaning.leaf-dust | qualifier=aucun
+- content.safety.candidate | 17_SAFETY | Précaution — formulation candidate | CANDIDATE_PENDING_SAFETY_REVIEW | QUALIFIED | claims=claim.md.safety.mechanism, claim.md.safety.humans-children, claim.md.safety.pets | qualifier=INTERNAL_ONLY jusqu’à Safety Review humaine compétente si l’Owner retient cette option.
+- content.pests.documented | 18_RAVAGEURS | Ravageurs documentés | CANDIDATE_PENDING_OWNER_DECISION | QUALIFIED | claims=claim.md.pests.documented, claim.md.pests.spider-mite-check | qualifier=Thrips spécifique WITHHELD.
+- content.comparison.borsigiana | 20_COMPARAISON | « borsigiana » | CANDIDATE_PENDING_SPECIALIST_REVIEW | VERIFIED | claims=claim.md.taxonomy.borsigiana | qualifier=aucun
+- content.comparison.rhaphidophora-gap | 20_COMPARAISON | Rhaphidophora tetrasperma | INTERNAL_ONLY | UNVERIFIED | claims=GAP | qualifier=aucun
+- content.studio.observation | 21_CONSEIL_STUDIO | Conseil du Studio — candidat | CANDIDATE_PENDING_OWNER_DECISION | QUALIFIED | claims=claim.md.watering.substrate-state, claim.md.light.indoor-preference, claim.md.support.role | qualifier=Conseil éditorial, jamais fait botanique autonome.
+
+11. DIAGNOSTICS
+
+- diagnostic.md.yellow-leaves — Feuille(s) jaune(s)
+  Causes possibles: substrat durablement saturé ou racines altérées; cochenilles/cochenilles farineuses; maladie foliaire; froid récent; sénescence d'une vieille feuille isolée
+  Vérifier: vérifier l'humidité en profondeur et l'écoulement; inspecter racines visibles et collet sans conclure sur la seule couleur; examiner dessous des feuilles, pétioles et nœuds; reconstituer l'historique de froid et d'arrosage; distinguer une feuille âgée isolée d'un jaunissement généralisé
+  Action prudente: cesser tout arrosage automatique jusqu'au contrôle du substrat; isoler si ravageurs suspectés; corriger seulement la cause observée
+  Limite: Escalade recommandée si : racines noires/molles; tige molle au collet; progression rapide; suintement ou lésions à halo.
+  Statut: CANDIDATE_PENDING_OWNER_DECISION; confiance=QUALIFIED; EvidenceLinks=ev.md.uconn.yellowing-pests, ev.md.uconn.root-rot.yellow, ev.md.rhs.standing-water.yellow
+- diagnostic.md.brown-tips-patches — Pointes, bords ou plages brunes
+  Causes possibles: air très sec ou proximité d'une source de chaleur; brûlure par lumière directe intense; tache bactérienne ou anthracnose si motif compatible; dommage mécanique
+  Vérifier: observer si la lésion est sèche et marginale ou humide/progressive; chercher halo jaune ou suintement; vérifier exposition et source de chaleur; contrôler plusieurs feuilles et la vitesse d'évolution
+  Action prudente: éloigner progressivement d'un soleil brûlant/radiateur si concordant; isoler et éviter de mouiller le feuillage si lésions suspectes; demander un diagnostic si progression
+  Limite: Escalade recommandée si : extension rapide; suintement; taches humides; cankers de tige.
+  Statut: CANDIDATE_PENDING_OWNER_DECISION; confiance=QUALIFIED; EvidenceLinks=ev.md.rhs.brown-edges, ev.md.uconn.leaf-spots
+- diagnostic.md.slow-growth-small-leaves — Croissance ralentie ou petites feuilles
+  Causes possibles: lumière insuffisante; saison ou température moins favorables; espace racinaire à vérifier; repousse juvénile après taille; absence de support pour une liane en croissance
+  Vérifier: comparer l'emplacement et la saison; vérifier la température récente; inspecter si les racines atteignent fond et côtés; identifier une taille récente; observer si la tige peut grimper
+  Action prudente: corriger un seul facteur observé à la fois; améliorer progressivement la lumière filtrée; ajouter un support stable si le port l'exige
+  Limite: Escalade recommandée si : flétrissement avec racines molles; ravageurs visibles; arrêt brutal accompagné de lésions.
+  Statut: CANDIDATE_PENDING_OWNER_DECISION; confiance=QUALIFIED; EvidenceLinks=ev.md.rhs.low-light-holes.slow, ev.md.rhs.pruning-maturity.slow, ev.md.uconn.support-leaf-size.slow, ev.md.uconn.repotting.slow
+- diagnostic.md.no-fenestrations — Feuilles sans fenestrations
+  Causes possibles: stade juvénile normal; lumière insuffisante; croissance non grimpante ou support absent; repousse moins mature après taille
+  Vérifier: évaluer l'âge relatif et la succession des feuilles; vérifier lumière filtrée disponible; observer le port et l'attache au support; noter une taille récente
+  Action prudente: patienter si plante juvénile; améliorer progressivement la lumière; proposer un support sans promesse de résultat
+  Limite: Demander un avis si le signe progresse ou reste inexpliqué.
+  Statut: CANDIDATE_PENDING_OWNER_DECISION; confiance=QUALIFIED; EvidenceLinks=ev.md.ncsu.mature-leaves.no-fen, ev.md.rhs.low-light-holes.no-fen, ev.md.rhs.support-holes.no-fen
+- diagnostic.md.spider-mites — Ponctuations claires, aspect bronzé ou fines toiles
+  Causes possibles: acariens tétranyques; stress hydrique pouvant imiter certaines ponctuations
+  Vérifier: loupe sur le revers des feuilles; papier blanc sous la feuille puis tapotement; rechercher mobilité et toiles
+  Action prudente: isoler la plante; rincer soigneusement dessus et dessous; identifier avant tout pesticide; suivre uniquement un produit homologué et son étiquette si nécessaire
+  Limite: Escalade recommandée si : défoliation rapide; infestation généralisée; échec des mesures mécaniques.
+  Statut: CANDIDATE_PENDING_OWNER_DECISION; confiance=CORROBORATED; EvidenceLinks=ev.md.uconn.spider-mites, ev.md.umn.mite-check
+- diagnostic.md.scale-mealybugs — Bosses brunes, amas blancs cotonneux ou miellat collant
+  Causes possibles: cochenilles à carapace/molles; cochenilles farineuses
+  Vérifier: inspecter nœuds, pétioles et revers; distinguer bosses fixées et amas cireux blancs; chercher miellat et fumagine
+  Action prudente: isoler; retirer manuellement les individus accessibles; rincer; n'utiliser qu'un traitement homologué après identification
+  Limite: Escalade recommandée si : forte colonisation des crevasses; déclin rapide; plusieurs plantes touchées.
+  Statut: CANDIDATE_PENDING_OWNER_DECISION; confiance=CORROBORATED; EvidenceLinks=ev.md.rhs.pests, ev.md.uconn.pests
+- diagnostic.md.thrips — Stries argentées, ponctuations et petits dépôts noirs
+  Causes possibles: thrips; autres ravageurs ou dommages pouvant produire des marques proches
+  Vérifier: observer les jeunes feuilles et le revers; chercher insectes fins et déjections noires; utiliser une loupe; faire confirmer si doute
+  Action prudente: isoler; retirer les parties très atteintes si raisonnable; ne pas appliquer de pesticide sans identification
+  Limite: Escalade recommandée si : atteinte rapide des nouvelles pousses; infestation multi-plantes.
+  Statut: INTERNAL_ONLY; confiance=UNVERIFIED; EvidenceLinks=ev.md.umn.thrips-general
+- diagnostic.md.root-rot — Flétrissement avec racines ou collet altérés
+  Causes possibles: pourriture racinaire ou de tige associée à un milieu durablement humide; stress de sécheresse ayant lésé les racines; autre maladie racinaire
+  Vérifier: examiner odeur et texture du substrat; inspecter prudemment les racines : brunes/noires, molles, se détachant facilement; vérifier collet et drainage
+  Action prudente: stopper la saturation; retirer l'eau stagnante; faire confirmer l'atteinte avant intervention racinaire importante
+  Limite: Escalade recommandée si : tige ceinturée au niveau du sol; racines molles généralisées; effondrement rapide.
+  Statut: CANDIDATE_PENDING_OWNER_DECISION; confiance=CORROBORATED; EvidenceLinks=ev.md.uconn.root-rot, ev.md.rhs.standing-water
+
+12. FAQ ANSWER-FIRST
+
+- faq.md.placement — Où placer Monstera deliciosa ?
+  Réponse courte: Dans une lumière lumineuse à modérée, filtrée ou indirecte.
+  Développement: Le soleil direct intense peut brûler les feuilles. Acclimatez progressivement toute exposition plus forte et n’utilisez pas de durée ou lux universels.
+  Statut: CANDIDATE_PENDING_OWNER_DECISION; claims=claim.md.light.indoor-preference; EvidenceLinks=ev.md.rhs.light, ev.md.ncsu.light, ev.md.uconn.light-context
+- faq.md.watering — Quand l’arroser ?
+  Réponse courte: Quand la partie supérieure du substrat a nettement séché.
+  Développement: Arrosez complètement puis laissez égoutter. Le calendrier ne remplace pas l’observation du substrat.
+  Statut: CANDIDATE_PENDING_OWNER_DECISION; claims=claim.md.watering.substrate-state, claim.md.watering.standing-water; EvidenceLinks=ev.md.rhs.watering, ev.md.ncsu.watering, ev.md.uconn.watering, ev.md.rhs.standing-water, ev.md.uconn.root-rot
+- faq.md.fenestrations — Pourquoi les nouvelles feuilles n’ont-elles pas de trous ?
+  Réponse courte: Une plante jeune peut produire des feuilles entières.
+  Développement: La maturité est le facteur le mieux soutenu. Lumière filtrée suffisante et support accompagnent une croissance plus mature sans garantir les fenestrations.
+  Statut: CANDIDATE_PENDING_OWNER_DECISION; claims=claim.md.diagnostic.no-fenestrations, claim.md.fenestration.drivers; EvidenceLinks=ev.md.ncsu.mature-leaves.no-fen, ev.md.rhs.low-light-holes.no-fen, ev.md.rhs.support-holes.no-fen, ev.md.ncsu.mature-leaves.drivers, ev.md.rhs.low-light-holes, ev.md.rhs.support-holes, ev.md.uconn.support-leaf-size
+- faq.md.repotting — Quand rempoter ?
+  Réponse courte: Quand les racines occupent réellement le contenant ou que la stabilité devient insuffisante.
+  Développement: Inspectez fond, côtés et motte. Augmentez seulement progressivement le volume du pot.
+  Statut: CANDIDATE_PENDING_OWNER_DECISION; claims=claim.md.repotting.trigger, claim.md.pot.drainage; EvidenceLinks=ev.md.uconn.repotting.trigger, ev.md.rhs.repotting, ev.md.rhs.pot-size, ev.md.uconn.repotting
+- faq.md.drainage — Faut-il un pot drainant ?
+  Réponse courte: Oui, l’excédent d’eau doit pouvoir s’évacuer.
+  Développement: Évitez la saturation persistante et le surpotage, qui maintient le substrat humide plus longtemps.
+  Statut: CANDIDATE_PENDING_OWNER_DECISION; claims=claim.md.pot.drainage, claim.md.watering.standing-water; EvidenceLinks=ev.md.rhs.pot-size, ev.md.uconn.repotting, ev.md.rhs.standing-water, ev.md.uconn.root-rot
+- faq.md.safety — Est-elle toxique pour les enfants et les animaux ?
+  Réponse courte: La mastication expose à des cristaux d’oxalate de calcium irritants.
+  Développement: Gardez-la hors de portée. La formulation détaillée reste candidate et nécessite une Safety Review humaine avant publication.
+  Statut: CANDIDATE_PENDING_SAFETY_REVIEW; claims=claim.md.safety.mechanism, claim.md.safety.humans-children, claim.md.safety.pets; EvidenceLinks=ev.md.aspca.oxalates, ev.md.ncsu.oxalates, ev.md.ncsu.human-symptoms, ev.md.chop.oxalate-effects, ev.md.rhs.keep-away, ev.md.aspca.pets
+
+La FAQ Safety reste candidate non publiable ; toutes les autres FAQ restent soumises à décision Owner. Le corps et la FAQ partagent les mêmes claim IDs et consistency keys.
+
+13. SOURCES ET PROXIMITÉ
+
+- source.kew.powo.monstera-deliciosa — Monstera deliciosa Liebm. — Plants of the World Online — Royal Botanic Gardens, Kew
+  URL: https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:87478-1
+  Accès: OPENED_VERIFIED; quality flags=aucun
+  Domaines: taxonomy, native_range, biome, synonymy
+  Locators vérifiés dans le pack: Taxon header; status and accepted name | Classification | Synonyms, line 83 | Synonyms list | Native range and distribution | Ecology / biome field | Description / life form
+  Limites: Autorité principale du pilote pour acceptation, synonymie, aire native et biome.
+- source.kew.ipni.monstera-deliciosa — Monstera deliciosa — International Plant Names Index — Royal Botanic Gardens, Kew; Harvard University Herbaria; Australian National Herbarium
+  URL: https://www.ipni.org/n/87478-1
+  Accès: OPENED_VERIFIED; quality flags=aucun
+  Domaines: nomenclature, authorship, publication
+  Locators vérifiés dans le pack: Lines 5-20 | Lines 21-22
+  Limites: Complément nomenclatural; ne vaut pas seul comme opinion d'acceptation.
+- source.rhs.monstera-growing-guide — How to grow Swiss cheese plants — Royal Horticultural Society
+  URL: https://www.rhs.org.uk/plants/swiss-cheese-plants/how-to-grow-swiss-cheese-plants
+  Accès: OPENED_VERIFIED; quality flags=GENUS_LEVEL_GUIDANCE
+  Domaines: light, temperature, humidity, watering, substrate, repotting, fertilisation, support, pruning, propagation, safety
+  Locators vérifiés dans le pack: Plant guide lines 23-26 | Lines 107-115 | Lines 148-151 | Lines 128-145 | Line 136 | Lines 113-115 | Lines 92-102 | Lines 85-102 | Lines 85-97 | Lines 137-145 | Lines 148-150 | Lines 107-110 | Plant guide lines 21-26; growing guide lines 116-124 | Lines 148-159 | Lines 160-167 | Lines 125-127
+  Limites: Guide Monstera/Swiss cheese plants; qualifier les énoncés non spécifiques à l'espèce.
+- source.rhs.monstera-deliciosa-profile — Monstera deliciosa (F) — Swiss cheese plant — Royal Horticultural Society
+  URL: https://www.rhs.org.uk/plants/11192/monstera-deliciosa-f/details
+  Accès: OPENED_VERIFIED; quality flags=RANGE_STATEMENT_BROADER_THAN_POWO
+  Domaines: morphology, dimensions, light, humidity, temperature, watering, fertilisation, propagation, pests, safety
+  Locators vérifiés dans le pack: Lines 173-180 | Profile lines 176-180; guide lines 116-124 | Lines 176-180 | Plant guide lines 47-55 | Lines 195-201
+  Limites: Profil spécifique; l'aire 'Mexico to Panama' n'est pas retenue face à POWO.
+- source.ncsu.monstera-deliciosa — Monstera deliciosa — Extension Gardener Plant Toolbox — North Carolina State University Extension
+  URL: https://plants.ces.ncsu.edu/plants/monstera-deliciosa/
+  Accès: OPENED_VERIFIED; quality flags=RANGE_STATEMENT_BROADER_THAN_POWO
+  Domaines: habit, morphology, indoor_dimensions, light, temperature, humidity, watering, support, repotting, propagation, human_safety
+  Locators vérifiés dans le pack: Lines 16-20 | Lines 17-20 | Lines 143-154 | Line 18 | Line 17 | Lines 167-182
+  Limites: Conseils intérieurs contextualisés en Caroline du Nord; l'aire native n'est pas retenue contre POWO.
+- source.uconn.monstera-deliciosa — Monstera deliciosa — University of Connecticut Home Garden Education Office
+  URL: https://homegarden.cahnr.uconn.edu/factsheets/monstera-deliciosa/
+  Accès: OPENED_VERIFIED; quality flags=REGIONAL_NEW_ENGLAND_CONTEXT
+  Domaines: substrate, watering, light, temperature, fertilisation, support, propagation, pests, diseases, repotting
+  Locators vérifiés dans le pack: Lines 159-165 | Lines 159-164 | Lines 159-163 | Lines 192-196 | Lines 161-163 | Lines 159-160 | Lines 195-196 | Lines 174-176 | Lines 178-188 | Lines 180-184 | Lines 180-188 | Lines 192-195
+  Limites: Utile pour vérification pratique et diagnostic; plusieurs recommandations sont régionales.
+- source.croat.1988.araceae-ecology — Ecology and Life Forms of Araceae — Missouri Botanical Garden / International Aroid Society
+  URL: https://www.missouribotanicalgarden.org/Portals/0/staff/PDFs/croat/Ecology-LifeForms-Araceae-.pdf
+  Accès: OPENED_VERIFIED; quality flags=GENUS_LEVEL_CONTEXT
+  Domaines: ecology, life_form, hemiepiphytism, heteroblasty, support
+  Locators vérifiés dans le pack: PDF page 22, lines 1202-1213 | PDF pages 10-11, lines 737-744
+  Limites: La discussion porte largement sur Araceae et Monstera au niveau du genre; pas toujours spécifique à M. deliciosa.
+- source.muir.2013.fenestration — How Did the Swiss Cheese Plant Get Its Holes? — The American Naturalist / University of Chicago Press
+  URL: https://www.journals.uchicago.edu/doi/10.1086/668819
+  Accès: OPENED_VERIFIED; quality flags=MODEL_HYPOTHESIS_NOT_EXPERIMENTAL_PROOF, GENUS_LEVEL_INFERENCE
+  Domaines: fenestration, heteroblasty, ecology
+  Locators vérifiés dans le pack: Abstract lines 48-50; PDF page 1 | Abstract lines 48-50; PDF page 1 lines 62-68 | PDF page 1 lines 62-68 | Abstract lines 48-50; PDF pages 1-2 lines 62-88
+  Limites: Le PDF intégral a été lu via le miroir institutionnel UBC; la fonction adaptative proposée reste une hypothèse testable.
+- source.uf-ifas.monstera-landscape — Monstera Growing in the Florida Home Landscape — University of Florida IFAS Extension
+  URL: https://ask.ifas.ufl.edu/publication/hs311
+  Accès: OPENED_VERIFIED; quality flags=FLORIDA_OUTDOOR_CONTEXT, RANGE_STATEMENT_BROADER_THAN_POWO
+  Domaines: outdoor_morphology, wild_or_landscape_dimensions, aerial_roots, light, cold_damage, propagation, pruning
+  Locators vérifiés dans le pack: Lines 39-48 | Lines 55-57 | Lines 58-60 | Lines 71-75 | Lines 64-66 | Lines 80-82 | Lines 52-57
+  Limites: Ne pas convertir les seuils de dommage extérieur en recommandation intérieure.
+- source.iastate.houseplant-cuttings — How to Propagate Houseplants by Stem Tip Cuttings — Iowa State University Extension and Outreach
+  URL: https://yardandgarden.extension.iastate.edu/how-to/how-propagate-houseplants-stem-tip-cuttings
+  Accès: OPENED_VERIFIED; quality flags=GENERAL_HOUSEPLANT_PROTOCOL_WITH_SPECIES_LIST
+  Domaines: propagation, node_requirement, rooting_medium
+  Locators vérifiés dans le pack: Lines 120-140 and 147-164
+  Limites: M. deliciosa est explicitement listée comme adaptée aux boutures de tige.
+- source.frontiers.2022.aerial-roots — Cellular Growth in Aerial Roots Differs From That in Typical Substrate Roots — Frontiers in Plant Science
+  URL: https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2022.894647/full
+  Accès: OPENED_VERIFIED; quality flags=DOES_NOT_SUPPORT_HOME_PRUNING_ADVICE
+  Domaines: aerial_root_anatomy, aerial_root_growth
+  Locators vérifiés dans le pack: Results lines 461-488; references lines 692-755 | Results lines 461-488
+  Limites: Preuve directe sur l'anatomie/croissance, pas sur la conduite domestique des racines aériennes.
+- source.aspca.monstera-deliciosa — Toxic and Non-toxic Plants: Mexican Breadfruit — ASPCA Animal Poison Control Center
+  URL: https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/mexican-breadfruit
+  Accès: OPENED_VERIFIED; quality flags=aucun
+  Domaines: animal_safety, toxic_principle, clinical_signs
+  Locators vérifiés dans le pack: Lines 44-54
+  Limites: Source directe pour chiens et chats.
+- source.chop.oxalate-irritants — Plants That Irritate — Children's Hospital of Philadelphia Poison Control Center
+  URL: https://www.chop.edu/centers-programs/poison-control-center/plants-irritate
+  Accès: OPENED_VERIFIED; quality flags=GENERAL_OXALATE_PLANT_GUIDANCE, MONSTERA_NOT_EXPLICITLY_LISTED
+  Domaines: human_safety, oxalate_mechanism, children
+  Locators vérifiés dans le pack: Mouth irritants section
+  Limites: Contexte général des plantes à oxalates; utilisé seulement avec une source spécifique établissant les oxalates chez M. deliciosa.
+- source.umn.twospotted-mites — Twospotted spider mites in home gardens — University of Minnesota Extension
+  URL: https://extension.umn.edu/garden-and-home/yard-and-garden/yard-and-garden-insects/spider-mites
+  Accès: OPENED_VERIFIED; quality flags=GENERAL_DOMAIN_NOT_SPECIES_SPECIFIC
+  Domaines: spider_mites, diagnosis, low_risk_action
+  Locators vérifiés dans le pack: Lines 267-295
+  Limites: Sert à qualifier les signes et la vérification; la susceptibilité de M. deliciosa vient de RHS/UConn.
+- source.umn.thrips-general — How to spot and stop late summer garden pests — University of Minnesota Extension
+  URL: https://extension.umn.edu/yard-and-garden-news/how-spot-and-stop-late-summer-garden-pests
+  Accès: OPENED_VERIFIED; quality flags=GENERAL_DOMAIN_NOT_SPECIES_SPECIFIC, OUTDOOR_CONTEXT
+  Domaines: thrips, diagnosis
+  Locators vérifiés dans le pack: Lines 248-257
+  Limites: Signes généraux de thrips uniquement; ne prouve pas à elle seule la présence sur M. deliciosa.
+
+Les locators et limites viennent exclusivement de l’Evidence Pack V1. Aucune source nouvelle n’a été ajoutée.
+
+14. MATRICE LEGACY → EVIDENCE → CONTENT MASTER
+
+1. legacy.md.name | lib/plants/requested-plants.ts:68,lib/plants/deliciosa-next.ts:11 | Monstera deliciosa / Monstera deliciosa Liebm. | REBUILT → RETAIN | claims=claim.md.taxonomy.accepted-name | contenu=content.identity.name | risque=CONTROLLED
+2. legacy.md.classification | lib/plants/requested-plants.ts:68,lib/plants/deliciosa-next.ts:13-15 | Araceae / Monstera / Alismatales | REBUILT → RETAIN | claims=claim.md.taxonomy.classification | contenu=content.identity.name | risque=CONTROLLED
+3. legacy.md.borsigiana | lib/plants/requested-plants.ts:72,lib/plants/deliciosa-next.ts:19,app/plantes/DeliciosaProfileNext.tsx:169 | Comparison name; elsewhere treated generally in M. deliciosa | SUPERSEDED → SUPERSEDE | claims=claim.md.taxonomy.borsigiana | contenu=content.identity.synonyms, content.comparison.borsigiana | risque=CONTROLLED
+4. legacy.md.philodendron-pertusum | lib/plants/requested-plants.ts:69,lib/plants/deliciosa-next.ts:19 | Philodendron pertusum / hort. | REBUILT → RETAIN | claims=claim.md.taxonomy.philodendron-pertusum | contenu=content.identity.synonyms | risque=CONTROLLED
+5. legacy.md.origin | lib/plants/requested-plants.ts:68,lib/plants/deliciosa-next.ts:16 | Mexique à Amérique centrale / Sud et est du Mexique jusqu'au Guatemala | REBUILT_QUALIFIED → REWRITE_QUALIFIED | claims=claim.md.distribution.native-range | contenu=content.origin.range | risque=CONTROLLED
+6. legacy.md.habitat | lib/plants/requested-plants.ts:69,lib/plants/deliciosa-next.ts:17 | Liane des forêts tropicales humides | REBUILT → RETAIN | claims=claim.md.distribution.biome | contenu=content.origin.habitat | risque=CONTROLLED
+7. legacy.md.hemiepiphyte | lib/plants/requested-plants.ts:69,72,lib/plants/deliciosa-next.ts:18 | Grimpante · hémiepiphyte secondaire | REBUILT_QUALIFIED → REWRITE_QUALIFIED | claims=claim.md.ecology.secondary-hemiepiphyte | contenu=content.origin.habitat | risque=CONTROLLED
+8. legacy.md.juvenile-adult | lib/plants/requested-plants.ts:69,lib/plants/deliciosa-next.ts:34-36,app/plantes/DeliciosaProfileNext.tsx:136-146 | Découpes et perforations with maturity, light and support | REBUILT_QUALIFIED → REWRITE_QUALIFIED | claims=claim.md.fenestration.drivers | contenu=content.morphology.fenestrations | risque=CONTROLLED
+9. legacy.md.fenestration-function | external RHS linked source; no explicit product sentence located | Implicit/popular light explanation in source corpus | REJECTED_AS_CERTAINTY → WITHHOLD | claims=claim.md.fenestration.function | contenu=content.morphology.fenestrations | risque=HIGH
+10. legacy.md.light-score | lib/plants/requested-plants.ts:71,lib/plants/deliciosa-next.ts:2 | 4/5 | LEGACY_UNVERIFIED → WITHHOLD | claims=claim.md.editorial-score.light-4-of-5 | contenu=aucun | risque=HIGH
+11. legacy.md.watering-score | lib/plants/requested-plants.ts:71,lib/plants/deliciosa-next.ts:3 | 2/5 | LEGACY_UNVERIFIED → WITHHOLD | claims=claim.md.editorial-score.watering-2-of-5 | contenu=aucun | risque=HIGH
+12. legacy.md.humidity-score | lib/plants/requested-plants.ts:71,lib/plants/deliciosa-next.ts:4 | 3/5 | LEGACY_UNVERIFIED → WITHHOLD | claims=claim.md.editorial-score.humidity-3-of-5 | contenu=aucun | risque=HIGH
+13. legacy.md.difficulty-score | lib/plants/requested-plants.ts:71,lib/plants/deliciosa-next.ts:5 | 2/5 | LEGACY_UNVERIFIED → WITHHOLD | claims=claim.md.editorial-score.difficulty-2-of-5 | contenu=aucun | risque=HIGH
+14. legacy.md.light-guidance | lib/plants/requested-plants.ts:71,lib/plants/deliciosa-next.ts:24-26 | Lumière vive indirecte, soleil doux après acclimatation | REBUILT_QUALIFIED → REWRITE_QUALIFIED | claims=claim.md.light.indoor-preference | contenu=content.care.light, content.studio.observation | risque=CONTROLLED
+15. legacy.md.watering-guidance | lib/plants/requested-plants.ts:71,lib/plants/deliciosa-next.ts:29-31 | Several centimeters dry / upper part dry | REBUILT_QUALIFIED → REWRITE_QUALIFIED | claims=claim.md.watering.substrate-state | contenu=content.care.watering, content.studio.observation | risque=CONTROLLED
+16. legacy.md.watering-frequency | legacy content inventory; not in current requested-plants Deliciosa line | Tous les 10–15 jours in legacy/generic wording | REJECTED → WITHHOLD | claims=claim.md.watering.substrate-state | contenu=content.care.watering, content.studio.observation | risque=HIGH
+17. legacy.md.humidity-guidance | lib/plants/requested-plants.ts:71,lib/plants/deliciosa-next.ts:4 | Moyenne à élevée / stabilité over misting | REBUILT_QUALIFIED → REWRITE_QUALIFIED | claims=claim.md.humidity.qualitative-preference | contenu=content.care.humidity | risque=CONTROLLED
+18. legacy.md.humidity-range | lib/plants/requested-plants.ts:54 via aroidFilters | 50–75% | REJECTED → WITHHOLD | claims=claim.md.humidity.legacy-50-75 | contenu=aucun | risque=HIGH
+19. legacy.md.temperature-range | lib/plants/requested-plants.ts:54,71 | 18–28°C | REBUILT_QUALIFIED → REWRITE_QUALIFIED | claims=claim.md.temperature.indoor-guidance | contenu=content.care.temperature | risque=CONTROLLED
+20. legacy.md.temperature-min | lib/plants/requested-plants.ts:54,71 | 15°C | REJECTED → WITHHOLD | claims=claim.md.temperature.legacy-minimum-15 | contenu=aucun | risque=HIGH
+21. legacy.md.substrate | lib/plants/requested-plants.ts:54,71 | Mélange aroïdes grossier/aéré/drainant/organique | REBUILT_PROPERTIES_ONLY → SUPERSEDE | claims=claim.md.substrate.properties | contenu=content.rootzone.substrate | risque=CONTROLLED
+22. legacy.md.pot-drainage | lib/plants/requested-plants.ts:27,43,45 | Pot percé, slightly larger | REBUILT → RETAIN | claims=claim.md.pot.drainage | contenu=content.rootzone.pot | risque=CONTROLLED
+23. legacy.md.repotting | lib/plants/requested-plants.ts:27,45,lib/plants/deliciosa-next.ts:44-46 | Roots colonized / mix dries abnormally fast | REBUILT_QUALIFIED → REWRITE_QUALIFIED | claims=claim.md.repotting.trigger | contenu=content.rootzone.repotting | risque=CONTROLLED
+24. legacy.md.fertilising | lib/plants/requested-plants.ts:28 | Complete diluted feed in bright period on moist substrate | REBUILT_QUALIFIED → REWRITE_QUALIFIED | claims=claim.md.fertilisation.growing-season | contenu=content.care.fertilisation | risque=CONTROLLED
+25. legacy.md.propagation | lib/plants/requested-plants.ts:29,app/plantes/DeliciosaProfileNext.tsx:67 | Cutting with active node or division | REBUILT_PARTIAL → REWRITE_QUALIFIED | claims=claim.md.propagation.node | contenu=content.propagation.node | risque=CONTROLLED
+26. legacy.md.support | lib/plants/requested-plants.ts:69,72 | Stable support; fix stem back to support | REBUILT_QUALIFIED → REWRITE_QUALIFIED | claims=claim.md.support.role | contenu=content.support.role, content.studio.observation | risque=CONTROLLED
+27. legacy.md.aerial-roots | lib/plants/deliciosa-next.ts:39-41,app/plantes/DeliciosaProfileNext.tsx:141 | Guide to support/substrate; avoid systematic removal | PARTIAL_WITHHELD → REWRITE_QUALIFIED | claims=claim.md.aerial-roots.cut-or-guide | contenu=aucun | risque=CONTROLLED
+28. legacy.md.dimensions | lib/plants/requested-plants.ts:72 | Several metres / large indoor vine | REBUILT_QUALIFIED → REWRITE_QUALIFIED | claims=claim.md.dimensions.context | contenu=content.dimensions.context | risque=CONTROLLED
+29. legacy.md.toxicity | lib/plants/requested-plants.ts:15,31,44,lib/plants/deliciosa-next.ts:49-51,app/plantes/DeliciosaProfileNext.tsx:152 | Calcium oxalate irritant; keep away children/cats/dogs | REBUILT_REVIEW_REQUIRED → SUPERSEDE | claims=claim.md.safety.mechanism | contenu=content.safety.candidate | risque=CONTROLLED
+30. legacy.md.yellow-leaves | lib/plants/requested-plants.ts:33,lib/plants/deliciosa-next.ts:54-63 | Excess water, cold, low light, roots, natural aging | REBUILT_QUALIFIED → REWRITE_QUALIFIED | claims=claim.md.diagnostic.yellow-leaves | contenu=aucun | risque=CONTROLLED
+31. legacy.md.brown-areas | lib/plants/requested-plants.ts:34,lib/plants/deliciosa-next.ts:65-73 | Sun, irregular watering, salts, dry air, mechanical damage | REBUILT_PARTIAL → REWRITE_QUALIFIED | claims=claim.md.diagnostic.brown-areas | contenu=aucun | risque=CONTROLLED
+32. legacy.md.slow-growth | lib/plants/requested-plants.ts:35,lib/plants/deliciosa-next.ts:75-83 | Low light, temperature, support, season, roots | REBUILT_QUALIFIED → REWRITE_QUALIFIED | claims=claim.md.diagnostic.slow-growth-small-leaves | contenu=aucun | risque=CONTROLLED
+33. legacy.md.thrips-mites | lib/plants/requested-plants.ts:36,lib/plants/deliciosa-next.ts:85-93 | Both presented as possible Deliciosa pests | PARTIAL → REWRITE_QUALIFIED | claims=claim.md.pests.documented | contenu=content.pests.documented | risque=CONTROLLED
+34. legacy.md.sources | lib/plants/requested-plants.ts:72,lib/plants/deliciosa-next.ts:97-118 | 4 page-level URLs; one generic POWO search URL in PlantEntry | SUPERSEDED_BY_FIELD_LINKS → REMOVE_FROM_FUTURE_CONTENT | claims=aucun | contenu=aucun | risque=HIGH
+
+Résultat : 34/34 entrées cartographiées. Les valeurs rejetées ou non vérifiées ne réentrent pas dans le contenu candidat.
+
+15. KNOWLEDGE SCROLL CONTENT INTERFACE
+
+24 unités sémantiques sérialisables exposent content_id, short_answer, long_answer, section, priority, display_role, knowledge_type, confidence, qualifier, safety_flag, source proximity, provenance, motion_priority, visual_story_opportunity et consistency_key. motion_priority et visual_story_opportunity sont des métadonnées éditoriales ; aucun composant, layout, asset, timing ou mouvement n’est conçu.
+
+16. SAFETY
+
+La formulation existe comme candidate CANDIDATE_PENDING_SAFETY_REVIEW. Les trois claims Safety restent SPECIALIST_REVIEW_REQUIRED/SAFETY_REVIEW_REQUIRED. Aucun wording n’est déclaré approuvé. La FAQ Safety hérite du même statut et n’est pas éligible au futur structured data public.
+
+17. TAXONOMIE
+
+Le pack retient POWO comme backbone : Monstera deliciosa est le nom accepté ; Monstera borsigiana et Philodendron pertusum relèvent de la synonymie dans ce backbone. L’usage public de l’authorship et de la synonymie détaillée reste candidat jusqu’à la décision Owner sur la Taxonomy Review humaine.
+
+18. DONNÉES WITHHELD / INTERDITES
+
+- 50–75 % RH universel ;
+- minimum universel 15 °C ;
+- 18–28 °C comme vérité universelle ;
+- scores Jungle 4/5, 2/5, 3/5, 2/5 comme faits ;
+- arrosage à fréquence universelle ;
+- support garantissant trous/fenestrations ;
+- règle universelle couper/guider/enterrer les racines aériennes ;
+- thrips établi spécifiquement pour M. deliciosa ;
+- borsigiana comme espèce acceptée distincte ;
+- Safety présentée comme approuvée ;
+- dimensions sans contexte ;
+- comparaison Rhaphidophora sans Evidence addendum.
+
+19. CONSISTENCY AUDIT
+
+Les unités de contenu, FAQ et futur structured data conceptuel partagent des consistency keys. Toute unité INTERNAL_ONLY, Safety pending ou specialist pending est NOT_ELIGIBLE au futur structured data. Les contrôles de parité humain/structuré et les recherches anti-réintroduction passent.
+
+20. SYSTEM V1 FINDINGS
+
+- Le manifest parent doit ultérieurement être régénéré pour refléter 45 claims / 97 EvidenceLinks, sans altérer rétroactivement ce pilote.
+- La notion publication_eligibility dérivée est utile pour séparer preuve, décision Owner et review spécialisée.
+- Une relation explicite content_id ↔ claim_id ↔ evidence_link_id simplifie la cohérence corps/FAQ/structured data.
+- Les lacunes doivent être des objets explicites plutôt que du texte plausible : Rhaphidophora, conduite universelle des racines aériennes et thrips spécifique en sont les exemples.
+
+21. QUALITY GATES
+
+QG-01 — Scope: PASS
+Preuve: Le générateur écrit exclusivement dans human-review-content-master-v1/ ; aucun chemin produit, UI, SEO, Supabase ou déploiement.
+
+QG-02 — Pack integrity: PASS
+Preuve: Les 11 fichiers Evidence autoritaires du dossier parent sont lus uniquement ; aucune écriture parent.
+
+QG-03 — Counts and referential integrity: PASS
+Preuve: 45/45 décisions ; liens claim/source/evidence/review/conflict résolus ; 34/34 Legacy.
+
+QG-04 — No simulated specialist review: PASS
+Preuve: 13/13 reviewers et reviewed_at restent null ; aucune approbation Owner/spécialiste inventée.
+
+QG-05 — Safety: PASS
+Preuve: Corps et FAQ Safety restent candidates ; 3 claims portent SAFETY_REVIEW_REQUIRED.
+
+QG-06 — Withheld numeric claims: PASS
+Preuve: 50–75 %, minimum universel 15 °C et 18–28 °C universel absents du contenu candidat.
+
+QG-07 — Jungle scores: PASS
+Preuve: 4 scores séparés, WITHHELD/PROHIBITED et absents du contenu candidat.
+
+QG-08 — Fenestration epistemic precision: PASS
+Preuve: Maturité, associations lumière/support et hypothèse de Muir sont distinguées ; aucune garantie.
+
+QG-09 — Aerial roots: PASS
+Preuve: Aucune règle universelle couper/guider/enterrer dans le contenu candidat.
+
+QG-10 — Pests: PASS
+Preuve: Thrips spécifique à M. deliciosa reste WITHHELD ; les limites sont explicites.
+
+QG-11 — Taxonomy: PASS
+Preuve: borsigiana est traité comme synonyme POWO candidat ; Taxonomy Review reste pending.
+
+QG-12 — Diagnostics: PASS
+Preuve: 8/8 diagnostics multicausaux, vérifiables, prudents et traçables.
+
+QG-13 — Source proximity: PASS
+Preuve: Chaque unité candidate remonte à des claims/EvidenceLinks ; la lacune Rhaphidophora est INTERNAL_ONLY.
+
+QG-14 — Legacy non-reentry: PASS
+Preuve: 34/34 entrées cartographiées ; 10 recherches anti-réintroduction PASS.
+
+QG-15 — Human/structured parity: PASS
+Preuve: Chaque unité structurée est présente dans le Content Master humain avec wording et statut.
+
+QG-16 — Content completeness: PASS
+Preuve: Toutes les sections obligatoires sont présentes ; lacunes marquées explicitement.
+
+QG-17 — FAQ consistency: PASS
+Preuve: 6/6 FAQ answer-first, traçables ; Safety séparée.
+
+QG-18 — Future structured-data restraint: PASS
+Preuve: Aucune donnée future n’est plus affirmative ; Safety/spécialiste restent NOT_ELIGIBLE.
+
+QG-19 — Design independence: PASS
+Preuve: Interface sémantique uniquement ; aucune prescription de composant, layout, asset, durée ou animation.
+
+QG-20 — Validation: PASS
+Preuve: Tous les JSON parsés ; intégrité référentielle et scans Legacy PASS ; générateur reproductible conservé.
+
+QG-21 — Stop compliance: PASS
+Preuve: Aucun produit, UI, route, Supabase, BÊTA, PUBLIC, SEO, photo, déploiement, commit, push ou PR touché.
+
+22. VALIDATION TECHNIQUE
+
+- JSON parse : PASS.
+- Intégrité référentielle : PASS.
+- Décisions : 45/45.
+- Content units : 24.
+- Diagnostics : 8/8.
+- FAQ : 6/6.
+- Legacy matrix : 34/34.
+- Scans anti-réintroduction : legacy_humidity_numeric=PASS, legacy_temp_min=PASS, legacy_temp_range=PASS, scores=PASS, watering_frequency=PASS, borsigiana_distinct=PASS, support_guarantee=PASS, aerial_root_universal=PASS, thrips_specific=PASS, safety_approved=PASS.
+- Générateur reproductible : generate-content-master.cjs.
+
+23. READINESS
+
+VERDICT : READY_WITH_EXPLICIT_REVIEW_GAPS
+
+Le Content Master peut servir d’autorité documentaire candidate pour concevoir une future V4, seulement après arbitrage Owner des contenus éligibles et en conservant les exclusions. Il ne doit pas être qualifié de scientifiquement validé ni de Safety approved. Aucune construction V4 n’est autorisée par cette mission.
+
+24. QUESTIONS OWNER
+
+1. Approuvez-vous l’usage éditorial des claims candidats non Safety et non spécialisés, avec leurs qualifiers imposés, sans les présenter comme specialist-reviewed ?
+Options: APPROUVER / AJUSTER / REFUSER
+Recommandation: APPROUVER les unités CANDIDATE_PENDING_OWNER_DECISION sans modifier leur niveau de confiance.
+Impact Content Master: Débloque le corps botanique et horticole non Safety.
+Impact readiness: Nécessaire avant tout usage dans V4.
+Claims concernés: claim.md.distribution.native-range, claim.md.distribution.biome, claim.md.ecology.climbing-liana, claim.md.ecology.secondary-hemiepiphyte, claim.md.morphology.heteroblasty, claim.md.morphology.adult-fenestrations, claim.md.fenestration.function, claim.md.fenestration.drivers, claim.md.light.indoor-preference, claim.md.watering.substrate-state, claim.md.watering.standing-water, claim.md.humidity.qualitative-preference, claim.md.substrate.properties, claim.md.pot.drainage, claim.md.repotting.trigger, claim.md.propagation.node, claim.md.support.role, claim.md.aerial-roots.role, claim.md.dimensions.context, claim.md.growth.rate-context, claim.md.pests.documented, claim.md.pests.spider-mite-check, claim.md.diagnostic.yellow-leaves, claim.md.diagnostic.brown-areas, claim.md.diagnostic.slow-growth-small-leaves, claim.md.diagnostic.no-fenestrations, claim.md.pruning.size-control, claim.md.cleaning.leaf-dust
+
+2. Confirmez-vous que les scores Jungle restent hors Content Master publiable jusqu’à définition d’une rubrique éditoriale séparée ?
+Options: RESTENT HORS CONTENU / DÉFINIR PLUS TARD
+Recommandation: RESTENT HORS CONTENU.
+Impact Content Master: Aucun score 4/5, 2/5 ou 3/5 dans les faits botaniques.
+Impact readiness: Aucun blocage si exclus.
+Claims concernés: claim.md.editorial-score.light-4-of-5, claim.md.editorial-score.watering-2-of-5, claim.md.editorial-score.humidity-3-of-5, claim.md.editorial-score.difficulty-2-of-5
+
+3. Qui effectuera la Safety Review humaine compétente, et la formulation candidate doit-elle rester entièrement INTERNAL_ONLY jusque-là ?
+Options: NOMMER UN REVIEWER COMPÉTENT / GARDER INTERNAL_ONLY SANS DATE
+Recommandation: GARDER INTERNAL_ONLY jusqu’à review compétente documentée.
+Impact Content Master: Safety et FAQ Safety restent candidates non publiables.
+Impact readiness: N’empêche pas V4 hors Safety ; bloque toute publication Safety.
+Claims concernés: claim.md.safety.mechanism, claim.md.safety.humans-children, claim.md.safety.pets
+
+4. Exigez-vous une Taxonomy Review humaine avant V4 pour afficher authorship et synonymie, ou ces détails restent-ils internes ?
+Options: REVIEW AVANT V4 / DÉTAILS INTERNES EN ATTENDANT
+Recommandation: DÉTAILS INTERNES EN ATTENDANT ; afficher seulement Monstera deliciosa si nécessaire.
+Impact Content Master: Authorship et synonymie publique restent candidats.
+Impact readiness: Le reste du contenu peut avancer.
+Claims concernés: claim.md.taxonomy.accepted-name, claim.md.taxonomy.classification, claim.md.taxonomy.borsigiana, claim.md.taxonomy.philodendron-pertusum
+
+5. La fertilisation doit-elle rester minimale et qualitative, sans fréquence ni dilution, jusqu’à Horticultural Review ?
+Options: OUI / REVIEW AVANT TOUTE PUBLICATION / RETIRER LA SECTION
+Recommandation: OUI, formulation minimale qualitative.
+Impact Content Master: Principe croissance active seulement.
+Impact readiness: Section exploitable avec gap explicite.
+Claims concernés: claim.md.fertilisation.growing-season
+
+6. Confirmez-vous qu’aucune règle universelle couper, guider ou enterrer ne doit être publiée dans V1 ?
+Options: CONFIRMER / COMMANDER UNE RECHERCHE FUTURE
+Recommandation: CONFIRMER.
+Impact Content Master: Rôle botanique conservé ; conduite universelle exclue.
+Impact readiness: Aucun blocage.
+Claims concernés: claim.md.aerial-roots.role, claim.md.aerial-roots.cut-or-guide
+
+7. Souhaitez-vous inclure l’hypothèse scientifique attribuée sur la fonction des fenestrations, ou la garder interne ?
+Options: INCLURE COMME HYPOTHÈSE / GARDER INTERNE
+Recommandation: INCLURE uniquement comme hypothèse attribuée et séparée de la guidance.
+Impact Content Master: Ajoute une nuance scientifique sans causalité certaine.
+Impact readiness: Optionnel.
+Claims concernés: claim.md.fenestration.function, claim.md.fenestration.drivers
+
+8. La comparaison doit-elle être reportée ou faire l’objet d’un futur Evidence addendum ?
+Options: REPORTER / COMMANDER UN ADDENDUM
+Recommandation: REPORTER dans V1.
+Impact Content Master: Aucune comparaison non prouvée.
+Impact readiness: La section Comparer reste partielle.
+Claims concernés: aucun claim actuel — gap explicite
+
+9. Approuvez-vous le Conseil du Studio comme guidance éditoriale séparée, et non comme fait botanique ?
+Options: APPROUVER / AJUSTER / RETIRER
+Recommandation: APPROUVER avec label JUNGLE_EDITORIAL_GUIDANCE.
+Impact Content Master: Débloque la voix Tibaldo avec traçabilité.
+Impact readiness: Optionnel mais différenciant.
+Claims concernés: claim.md.watering.substrate-state, claim.md.light.indoor-preference, claim.md.support.role
+
+10. Autorisez-vous le passage futur à Species Experience V4 / Knowledge Scroll uniquement avec les contenus rendus éligibles après vos décisions ?
+Options: AUTORISER AVEC EXCLUSIONS / ATTENDRE TOUTES LES REVIEWS / REFUSER
+Recommandation: AUTORISER AVEC EXCLUSIONS explicites Safety, taxonomie détaillée, scores, Rhaphidophora et autres gaps listés.
+Impact Content Master: Fige le périmètre de connaissance utilisable.
+Impact readiness: Verdict proposé : READY_WITH_EXPLICIT_REVIEW_GAPS.
+Claims concernés: claim.md.taxonomy.accepted-name, claim.md.taxonomy.classification, claim.md.taxonomy.borsigiana, claim.md.taxonomy.philodendron-pertusum, claim.md.distribution.native-range, claim.md.distribution.biome, claim.md.ecology.climbing-liana, claim.md.ecology.secondary-hemiepiphyte, claim.md.morphology.heteroblasty, claim.md.morphology.adult-fenestrations, claim.md.fenestration.drivers, claim.md.fenestration.function, claim.md.light.indoor-preference, claim.md.watering.substrate-state, claim.md.watering.standing-water, claim.md.humidity.qualitative-preference, claim.md.temperature.indoor-guidance, claim.md.substrate.properties, claim.md.pot.drainage, claim.md.repotting.trigger, claim.md.fertilisation.growing-season, claim.md.propagation.node, claim.md.support.role, claim.md.aerial-roots.role, claim.md.dimensions.context, claim.md.growth.rate-context, claim.md.pruning.size-control, claim.md.cleaning.leaf-dust, claim.md.safety.mechanism, claim.md.safety.humans-children, claim.md.safety.pets, claim.md.pests.documented, claim.md.pests.spider-mite-check, claim.md.taxonomy.borsigiana, claim.md.watering.substrate-state, claim.md.light.indoor-preference, claim.md.support.role
+
+25. FINAL STATUS
+
+READY_WITH_EXPLICIT_REVIEW_GAPS
+
+STOP. Attente de la validation explicite du propriétaire. Aucun enchaînement vers V4/D4, produit, BÊTA, PUBLIC, Supabase, SEO, photo ou déploiement.

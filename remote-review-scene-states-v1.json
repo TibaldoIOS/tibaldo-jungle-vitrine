@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0",
+  "base_url": "https://tibaldo-jungle-deliciosa-art-review.tibaldo.chatgpt.site/lab/deliciosa/art-direction-v1",
+  "syntax": "?review=1&scene={origin|leaf|climb|subsurface}&progress={0|25|50|75|100}",
+  "implementation": "Same DOM, CSS and components as normal scroll; the selected --art-p value is frozen after hydration.",
+  "states": {
+    "origin": {"0":"PASS","25":"PASS","50":"PASS","75":"PASS","100":"PASS"},
+    "leaf": {"0":"PASS","25":"PASS","50":"PASS","75":"PASS","100":"PASS"},
+    "climb": {"0":"PASS","25":"PASS","50":"PASS","75":"PASS","100":"PASS"},
+    "subsurface": {"0":"PASS","25":"PASS","50":"PASS","75":"PASS","100":"PASS"}
+  },
+  "badge": "LAB REVIEW / scene / progress",
+  "normal_scroll_unchanged_without_review_query": true
+}

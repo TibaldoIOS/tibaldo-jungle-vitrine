@@ -1,0 +1,36 @@
+TIBALDO JUNGLE — DELICIOSA ART DIRECTION REMOTE REVIEW ROUTES V1
+
+NORMAL SCROLL
+https://tibaldo-jungle-deliciosa-art-review.tibaldo.chatgpt.site/lab/deliciosa/art-direction-v1
+
+REVIEW MODE SYNTAX
+https://tibaldo-jungle-deliciosa-art-review.tibaldo.chatgpt.site/lab/deliciosa/art-direction-v1?review=1&scene={SCENE}&progress={PROGRESS}
+
+SCENE
+origin
+leaf
+climb
+subsurface
+
+PROGRESS
+0
+25
+50
+75
+100
+
+EXAMPLES
+https://tibaldo-jungle-deliciosa-art-review.tibaldo.chatgpt.site/lab/deliciosa/art-direction-v1?review=1&scene=origin&progress=50
+https://tibaldo-jungle-deliciosa-art-review.tibaldo.chatgpt.site/lab/deliciosa/art-direction-v1?review=1&scene=leaf&progress=50
+https://tibaldo-jungle-deliciosa-art-review.tibaldo.chatgpt.site/lab/deliciosa/art-direction-v1?review=1&scene=climb&progress=50
+https://tibaldo-jungle-deliciosa-art-review.tibaldo.chatgpt.site/lab/deliciosa/art-direction-v1?review=1&scene=subsurface&progress=50
+
+INDEXATION
+Meta robots: noindex,nofollow,nocache
+robots.txt: Disallow /
+Sitemap: absent (HTTP 404)
+Canonical: absent
+
+ROLLBACK
+Disable or delete the isolated Sites project appgprj_6a8ca5e104208191bb5c745c4ce555ff.
+No product deployment and no data rollback are required.

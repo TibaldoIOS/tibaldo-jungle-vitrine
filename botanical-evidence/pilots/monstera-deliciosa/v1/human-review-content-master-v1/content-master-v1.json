@@ -1,0 +1,2077 @@
+{
+  "schema_version": "1.0.0",
+  "taxon_id": "taxon.monstera-deliciosa",
+  "authority": "MONSTERA DELICIOSA — EVIDENCE PACK V1",
+  "status": "CONTENT_MASTER_V1_CANDIDATE_PENDING_OWNER_AND_SPECIALIST_REVIEWS",
+  "content_units": [
+    {
+      "content_id": "content.identity.name",
+      "linked_claim_ids": [
+        "claim.md.taxonomy.accepted-name",
+        "claim.md.taxonomy.classification"
+      ],
+      "linked_evidence_link_ids": [
+        "ev.md.powo.accepted",
+        "ev.md.ipni.authorship",
+        "ev.md.powo.classification",
+        "ev.md.ipni.family"
+      ],
+      "section": "01_IDENTITE",
+      "subsection": null,
+      "title": "Monstera deliciosa",
+      "short_answer": "Monstera deliciosa est le nom accepté retenu par POWO.",
+      "long_answer": "Le nom complet candidat est Monstera deliciosa Liebm. L’affichage de l’authorship reste candidat tant que la Taxonomy Review humaine est pending.",
+      "priority": "CORE",
+      "display_role": "CORE_ANSWER",
+      "knowledge_type": "TAXONOMIC_NOTE",
+      "confidence": "VERIFIED",
+      "qualifier": null,
+      "publication_status": "CANDIDATE_PENDING_SPECIALIST_REVIEW",
+      "safety_flag": false,
+      "source_proximity": "DIRECT",
+      "primary_source_ids": [
+        "source.kew.powo.monstera-deliciosa",
+        "source.kew.ipni.monstera-deliciosa"
+      ],
+      "supporting_source_ids": [
+        "source.kew.powo.monstera-deliciosa",
+        "source.kew.ipni.monstera-deliciosa"
+      ],
+      "conflict_ids": [],
+      "motion_priority": "NONE",
+      "visual_story_opportunity": null,
+      "consistency_key": "identity.accepted-name",
+      "notes_internal": null,
+      "prohibited_wording": []
+    },
+    {
+      "content_id": "content.identity.synonyms",
+      "linked_claim_ids": [
+        "claim.md.taxonomy.borsigiana",
+        "claim.md.taxonomy.philodendron-pertusum"
+      ],
+      "linked_evidence_link_ids": [
+        "ev.md.powo.borsigiana",
+        "ev.md.powo.philodendron-pertusum"
+      ],
+      "section": "01_IDENTITE",
+      "subsection": null,
+      "title": "Synonymes à contextualiser",
+      "short_answer": "« Monstera borsigiana » n’est pas une espèce acceptée distincte dans POWO.",
+      "long_answer": "POWO place Monstera borsigiana et Philodendron pertusum en synonymie sous Monstera deliciosa. Cette note reste candidate jusqu’à Taxonomy Review humaine.",
+      "priority": "CORE",
+      "display_role": "CORE_ANSWER",
+      "knowledge_type": "TAXONOMIC_NOTE",
+      "confidence": "VERIFIED",
+      "qualifier": null,
+      "publication_status": "CANDIDATE_PENDING_SPECIALIST_REVIEW",
+      "safety_flag": false,
+      "source_proximity": "DIRECT",
+      "primary_source_ids": [
+        "source.kew.powo.monstera-deliciosa"
+      ],
+      "supporting_source_ids": [
+        "source.kew.powo.monstera-deliciosa"
+      ],
+      "conflict_ids": [],
+      "motion_priority": "NONE",
+      "visual_story_opportunity": null,
+      "consistency_key": "identity.synonymy",
+      "notes_internal": null,
+      "prohibited_wording": [
+        "Monstera borsigiana est une espèce acceptée distincte"
+      ]
+    },
+    {
+      "content_id": "content.origin.range",
+      "linked_claim_ids": [
+        "claim.md.distribution.native-range"
+      ],
+      "linked_evidence_link_ids": [
+        "ev.md.powo.native-range",
+        "ev.md.rhs.range-context",
+        "ev.md.uf.range-context"
+      ],
+      "section": "02_ORIGINE_HABITAT",
+      "subsection": null,
+      "title": "Aire native",
+      "short_answer": "Son aire native documentée par POWO s’étend du sud et sud-est du Mexique jusqu’au Guatemala.",
+      "long_answer": "Les profils horticoles plus larges ne sont pas fusionnés avec l’aire native POWO ; ils restent documentés comme divergence de contexte.",
+      "priority": "CORE",
+      "display_role": "CORE_ANSWER",
+      "knowledge_type": "BOTANICAL_FACT",
+      "confidence": "VERIFIED",
+      "qualifier": "Aire native POWO, distincte des introductions et cultures.",
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "safety_flag": false,
+      "source_proximity": "DIRECT",
+      "primary_source_ids": [
+        "source.kew.powo.monstera-deliciosa",
+        "source.rhs.monstera-deliciosa-profile",
+        "source.uf-ifas.monstera-landscape"
+      ],
+      "supporting_source_ids": [
+        "source.kew.powo.monstera-deliciosa",
+        "source.rhs.monstera-deliciosa-profile",
+        "source.uf-ifas.monstera-landscape"
+      ],
+      "conflict_ids": [
+        "conflict.md.native-range"
+      ],
+      "motion_priority": "NONE",
+      "visual_story_opportunity": null,
+      "consistency_key": "origin.native-range",
+      "notes_internal": null,
+      "prohibited_wording": []
+    },
+    {
+      "content_id": "content.origin.habitat",
+      "linked_claim_ids": [
+        "claim.md.distribution.biome",
+        "claim.md.ecology.climbing-liana",
+        "claim.md.ecology.secondary-hemiepiphyte"
+      ],
+      "linked_evidence_link_ids": [
+        "ev.md.powo.biome",
+        "ev.md.powo.liana",
+        "ev.md.ncsu.climbing",
+        "ev.md.uf.climbing",
+        "ev.md.muir.hemiepiphyte",
+        "ev.md.croat.monstera-lifeform",
+        "ev.md.ncsu.life-cycle"
+      ],
+      "section": "02_ORIGINE_HABITAT",
+      "subsection": null,
+      "title": "Biome et port",
+      "short_answer": "C’est une liane des régions tropicales humides.",
+      "long_answer": "Le port grimpant est corroboré. La qualification « secondairement hémiépiphyte » est utilisable seulement avec contexte, car une partie de la preuve est au niveau du genre.",
+      "priority": "CORE",
+      "display_role": "CORE_ANSWER",
+      "knowledge_type": "QUALIFIED_ASSOCIATION",
+      "confidence": "QUALIFIED",
+      "qualifier": "Hémiépiphytisme qualifié ; ne pas généraliser au-delà du contexte sauvage.",
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "safety_flag": false,
+      "source_proximity": "DIRECT",
+      "primary_source_ids": [
+        "source.kew.powo.monstera-deliciosa",
+        "source.ncsu.monstera-deliciosa",
+        "source.uf-ifas.monstera-landscape"
+      ],
+      "supporting_source_ids": [
+        "source.kew.powo.monstera-deliciosa",
+        "source.ncsu.monstera-deliciosa",
+        "source.uf-ifas.monstera-landscape",
+        "source.muir.2013.fenestration",
+        "source.croat.1988.araceae-ecology"
+      ],
+      "conflict_ids": [],
+      "motion_priority": "NONE",
+      "visual_story_opportunity": "progression terrestre puis grimpante",
+      "consistency_key": "content.origin.habitat",
+      "notes_internal": null,
+      "prohibited_wording": []
+    },
+    {
+      "content_id": "content.morphology.heteroblasty",
+      "linked_claim_ids": [
+        "claim.md.morphology.heteroblasty",
+        "claim.md.morphology.adult-fenestrations"
+      ],
+      "linked_evidence_link_ids": [
+        "ev.md.croat.heteroblasty",
+        "ev.md.muir.heteroblasty",
+        "ev.md.ncsu.mature-leaves",
+        "ev.md.ncsu.mature-leaves.adult",
+        "ev.md.uf.adult-leaf",
+        "ev.md.muir.adult-fenestration"
+      ],
+      "section": "03_MORPHOLOGIE",
+      "subsection": null,
+      "title": "Une plante qui change de forme",
+      "short_answer": "Les feuilles juvéniles et adultes n’ont pas la même morphologie.",
+      "long_answer": "Avec le développement, les feuilles peuvent acquérir des découpes atteignant le bord et des perforations internes : c’est une expression de l’hétéroblastie.",
+      "priority": "CORE",
+      "display_role": "CORE_ANSWER",
+      "knowledge_type": "BOTANICAL_FACT",
+      "confidence": "CORROBORATED",
+      "qualifier": null,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "safety_flag": false,
+      "source_proximity": "DIRECT",
+      "primary_source_ids": [
+        "source.ncsu.monstera-deliciosa",
+        "source.uf-ifas.monstera-landscape"
+      ],
+      "supporting_source_ids": [
+        "source.croat.1988.araceae-ecology",
+        "source.muir.2013.fenestration",
+        "source.ncsu.monstera-deliciosa",
+        "source.uf-ifas.monstera-landscape"
+      ],
+      "conflict_ids": [],
+      "motion_priority": "HIGH",
+      "visual_story_opportunity": "développement juvénile vers adulte",
+      "consistency_key": "morphology.development",
+      "notes_internal": null,
+      "prohibited_wording": []
+    },
+    {
+      "content_id": "content.morphology.fenestrations",
+      "linked_claim_ids": [
+        "claim.md.fenestration.drivers",
+        "claim.md.fenestration.function"
+      ],
+      "linked_evidence_link_ids": [
+        "ev.md.ncsu.mature-leaves.drivers",
+        "ev.md.rhs.low-light-holes",
+        "ev.md.rhs.support-holes",
+        "ev.md.uconn.support-leaf-size",
+        "ev.md.muir.function-hypothesis",
+        "ev.md.rhs.function-popular-claim"
+      ],
+      "section": "03_MORPHOLOGIE",
+      "subsection": null,
+      "title": "Fenestrations : ce que l’on sait",
+      "short_answer": "La maturité compte ; lumière et support sont des associations, pas des garanties.",
+      "long_answer": "Une hypothèse de Muir propose que les fenestrations puissent réduire la variabilité de croissance sous la lumière intermittente du sous-bois. Cette fonction n’est pas démontrée comme explication unique.",
+      "priority": "CORE",
+      "display_role": "CORE_ANSWER",
+      "knowledge_type": "SCIENTIFIC_HYPOTHESIS",
+      "confidence": "QUALIFIED",
+      "qualifier": "Hypothèse scientifique attribuée ; causalité non établie.",
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "safety_flag": false,
+      "source_proximity": "DIRECT",
+      "primary_source_ids": [
+        "source.ncsu.monstera-deliciosa",
+        "source.uconn.monstera-deliciosa"
+      ],
+      "supporting_source_ids": [
+        "source.ncsu.monstera-deliciosa",
+        "source.rhs.monstera-growing-guide",
+        "source.uconn.monstera-deliciosa",
+        "source.muir.2013.fenestration"
+      ],
+      "conflict_ids": [
+        "conflict.md.fenestration-function"
+      ],
+      "motion_priority": "HIGH",
+      "visual_story_opportunity": "distinction maturité, association et hypothèse",
+      "consistency_key": "morphology.fenestrations",
+      "notes_internal": null,
+      "prohibited_wording": [
+        "un tuteur fera apparaître les trous",
+        "les fenestrations servent certainement à laisser passer la lumière"
+      ]
+    },
+    {
+      "content_id": "content.care.light",
+      "linked_claim_ids": [
+        "claim.md.light.indoor-preference"
+      ],
+      "linked_evidence_link_ids": [
+        "ev.md.rhs.light",
+        "ev.md.ncsu.light",
+        "ev.md.uconn.light-context"
+      ],
+      "section": "04_LUMIERE",
+      "subsection": null,
+      "title": "Lumière",
+      "short_answer": "Une lumière lumineuse à modérée, filtrée ou indirecte, constitue la recommandation la mieux soutenue.",
+      "long_answer": "Le soleil direct intense peut brûler le feuillage. Toute exposition plus forte doit être introduite progressivement. Aucun nombre universel d’heures ou de lux n’est justifié.",
+      "priority": "CORE",
+      "display_role": "CORE_ANSWER",
+      "knowledge_type": "HORTICULTURAL_GUIDANCE",
+      "confidence": "CORROBORATED",
+      "qualifier": null,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "safety_flag": false,
+      "source_proximity": "DIRECT",
+      "primary_source_ids": [
+        "source.ncsu.monstera-deliciosa",
+        "source.uconn.monstera-deliciosa"
+      ],
+      "supporting_source_ids": [
+        "source.rhs.monstera-growing-guide",
+        "source.ncsu.monstera-deliciosa",
+        "source.uconn.monstera-deliciosa"
+      ],
+      "conflict_ids": [],
+      "motion_priority": "MEDIUM",
+      "visual_story_opportunity": "gradient de lumière filtrée",
+      "consistency_key": "care.light",
+      "notes_internal": null,
+      "prohibited_wording": []
+    },
+    {
+      "content_id": "content.care.watering",
+      "linked_claim_ids": [
+        "claim.md.watering.substrate-state",
+        "claim.md.watering.standing-water"
+      ],
+      "linked_evidence_link_ids": [
+        "ev.md.rhs.watering",
+        "ev.md.ncsu.watering",
+        "ev.md.uconn.watering",
+        "ev.md.rhs.standing-water",
+        "ev.md.uconn.root-rot"
+      ],
+      "section": "05_ARROSAGE",
+      "subsection": null,
+      "title": "Arrosage",
+      "short_answer": "Observez le substrat avant d’arroser.",
+      "long_answer": "Laissez sa partie supérieure sécher nettement, puis arrosez complètement et laissez l’excédent s’écouler. Les sources utilisent des seuils différents ; aucune fréquence en jours ne doit remplacer l’observation.",
+      "priority": "CORE",
+      "display_role": "CORE_ANSWER",
+      "knowledge_type": "HORTICULTURAL_GUIDANCE",
+      "confidence": "CORROBORATED",
+      "qualifier": null,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "safety_flag": false,
+      "source_proximity": "DIRECT",
+      "primary_source_ids": [
+        "source.ncsu.monstera-deliciosa",
+        "source.uconn.monstera-deliciosa"
+      ],
+      "supporting_source_ids": [
+        "source.rhs.monstera-growing-guide",
+        "source.ncsu.monstera-deliciosa",
+        "source.uconn.monstera-deliciosa"
+      ],
+      "conflict_ids": [
+        "conflict.md.watering-threshold"
+      ],
+      "motion_priority": "HIGH",
+      "visual_story_opportunity": "observer, arroser, égoutter",
+      "consistency_key": "care.watering",
+      "notes_internal": null,
+      "prohibited_wording": []
+    },
+    {
+      "content_id": "content.care.humidity",
+      "linked_claim_ids": [
+        "claim.md.humidity.qualitative-preference"
+      ],
+      "linked_evidence_link_ids": [
+        "ev.md.rhs.humidity",
+        "ev.md.ncsu.humidity"
+      ],
+      "section": "06_HUMIDITE",
+      "subsection": null,
+      "title": "Humidité",
+      "short_answer": "Elle préfère un air modérément à assez humide.",
+      "long_answer": "Cette préférence reste qualitative. Aucune plage chiffrée universelle n’est autorisée par le pack.",
+      "priority": "CORE",
+      "display_role": "CORE_ANSWER",
+      "knowledge_type": "HORTICULTURAL_GUIDANCE",
+      "confidence": "CORROBORATED",
+      "qualifier": "Préférence, pas nécessité chiffrée.",
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "safety_flag": false,
+      "source_proximity": "DIRECT",
+      "primary_source_ids": [
+        "source.rhs.monstera-deliciosa-profile",
+        "source.ncsu.monstera-deliciosa"
+      ],
+      "supporting_source_ids": [
+        "source.rhs.monstera-deliciosa-profile",
+        "source.ncsu.monstera-deliciosa"
+      ],
+      "conflict_ids": [],
+      "motion_priority": "NONE",
+      "visual_story_opportunity": null,
+      "consistency_key": "care.humidity",
+      "notes_internal": null,
+      "prohibited_wording": []
+    },
+    {
+      "content_id": "content.care.temperature",
+      "linked_claim_ids": [
+        "claim.md.temperature.indoor-guidance"
+      ],
+      "linked_evidence_link_ids": [
+        "ev.md.rhs.temperature",
+        "ev.md.ncsu.temperature"
+      ],
+      "section": "07_TEMPERATURE",
+      "subsection": null,
+      "title": "Température",
+      "short_answer": "Conservez-la dans des conditions chaudes et évitez les froids prolongés.",
+      "long_answer": "Les sources institutionnelles donnent des plages différentes selon leur contexte. Le Content Master n’en fabrique pas une plage universelle et ne publie pas de minimum universel.",
+      "priority": "CORE",
+      "display_role": "CORE_ANSWER",
+      "knowledge_type": "HORTICULTURAL_GUIDANCE",
+      "confidence": "QUALIFIED",
+      "qualifier": "Guidance qualitative en attente d’un arbitrage horticole/Owner sur toute valeur chiffrée.",
+      "publication_status": "CANDIDATE_PENDING_SPECIALIST_REVIEW",
+      "safety_flag": false,
+      "source_proximity": "DIRECT",
+      "primary_source_ids": [
+        "source.ncsu.monstera-deliciosa"
+      ],
+      "supporting_source_ids": [
+        "source.rhs.monstera-growing-guide",
+        "source.ncsu.monstera-deliciosa"
+      ],
+      "conflict_ids": [
+        "conflict.md.temperature"
+      ],
+      "motion_priority": "NONE",
+      "visual_story_opportunity": null,
+      "consistency_key": "care.temperature",
+      "notes_internal": null,
+      "prohibited_wording": [
+        "plage universelle Jungle fusionnée"
+      ]
+    },
+    {
+      "content_id": "content.rootzone.substrate",
+      "linked_claim_ids": [
+        "claim.md.substrate.properties"
+      ],
+      "linked_evidence_link_ids": [
+        "ev.md.rhs.substrate",
+        "ev.md.uconn.substrate"
+      ],
+      "section": "08_ROOT_ZONE",
+      "subsection": null,
+      "title": "Substrat",
+      "short_answer": "Le milieu racinaire doit rester ouvert, aéré et drainant.",
+      "long_answer": "Un substrat contenant de la matière organique peut retenir une humidité utile sans rester saturé. Le pack ne valide aucune recette Tibaldo en pourcentages.",
+      "priority": "CORE",
+      "display_role": "CORE_ANSWER",
+      "knowledge_type": "HORTICULTURAL_GUIDANCE",
+      "confidence": "CORROBORATED",
+      "qualifier": null,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "safety_flag": false,
+      "source_proximity": "DIRECT",
+      "primary_source_ids": [
+        "source.uconn.monstera-deliciosa"
+      ],
+      "supporting_source_ids": [
+        "source.rhs.monstera-growing-guide",
+        "source.uconn.monstera-deliciosa"
+      ],
+      "conflict_ids": [],
+      "motion_priority": "MEDIUM",
+      "visual_story_opportunity": "propriétés aération, drainage, matière organique",
+      "consistency_key": "rootzone.substrate",
+      "notes_internal": null,
+      "prohibited_wording": []
+    },
+    {
+      "content_id": "content.rootzone.pot",
+      "linked_claim_ids": [
+        "claim.md.pot.drainage"
+      ],
+      "linked_evidence_link_ids": [
+        "ev.md.rhs.pot-size",
+        "ev.md.uconn.repotting"
+      ],
+      "section": "09_CONTENANT",
+      "subsection": null,
+      "title": "Pot et drainage",
+      "short_answer": "Utilisez un contenant drainant et augmentez son volume progressivement.",
+      "long_answer": "Un pot nettement surdimensionné peut rester humide trop longtemps. Le nouveau contenant doit seulement accompagner la motte.",
+      "priority": "CORE",
+      "display_role": "CORE_ANSWER",
+      "knowledge_type": "HORTICULTURAL_GUIDANCE",
+      "confidence": "CORROBORATED",
+      "qualifier": null,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "safety_flag": false,
+      "source_proximity": "DIRECT",
+      "primary_source_ids": [
+        "source.uconn.monstera-deliciosa"
+      ],
+      "supporting_source_ids": [
+        "source.rhs.monstera-growing-guide",
+        "source.uconn.monstera-deliciosa"
+      ],
+      "conflict_ids": [],
+      "motion_priority": "NONE",
+      "visual_story_opportunity": null,
+      "consistency_key": "rootzone.container",
+      "notes_internal": null,
+      "prohibited_wording": []
+    },
+    {
+      "content_id": "content.rootzone.repotting",
+      "linked_claim_ids": [
+        "claim.md.repotting.trigger"
+      ],
+      "linked_evidence_link_ids": [
+        "ev.md.uconn.repotting.trigger",
+        "ev.md.rhs.repotting"
+      ],
+      "section": "10_REMPOTAGE",
+      "subsection": null,
+      "title": "Quand rempoter",
+      "short_answer": "Fiez-vous aux racines et à la stabilité, pas à un calendrier rigide.",
+      "long_answer": "Les racines atteignant le fond et les côtés, une motte qui occupe réellement le contenant ou un manque de stabilité sont des déclencheurs observables.",
+      "priority": "CORE",
+      "display_role": "CORE_ANSWER",
+      "knowledge_type": "HORTICULTURAL_GUIDANCE",
+      "confidence": "CORROBORATED",
+      "qualifier": "Les fréquences générales restent secondaires.",
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "safety_flag": false,
+      "source_proximity": "DIRECT",
+      "primary_source_ids": [
+        "source.uconn.monstera-deliciosa"
+      ],
+      "supporting_source_ids": [
+        "source.uconn.monstera-deliciosa",
+        "source.rhs.monstera-growing-guide"
+      ],
+      "conflict_ids": [],
+      "motion_priority": "NONE",
+      "visual_story_opportunity": null,
+      "consistency_key": "rootzone.repotting",
+      "notes_internal": null,
+      "prohibited_wording": []
+    },
+    {
+      "content_id": "content.care.fertilisation",
+      "linked_claim_ids": [
+        "claim.md.fertilisation.growing-season"
+      ],
+      "linked_evidence_link_ids": [
+        "ev.md.rhs.feeding",
+        "ev.md.rhs.monthly-feeding",
+        "ev.md.uconn.fertilisation"
+      ],
+      "section": "11_FERTILISATION",
+      "subsection": null,
+      "title": "Fertilisation",
+      "short_answer": "Un engrais équilibré peut accompagner la croissance active.",
+      "long_answer": "Fréquence et dilution ne sont pas fermées : elles restent exclues du contenu publiable tant qu’une Horticultural Review n’a pas tranché. Éviter l’accumulation de sels selon le contexte documenté.",
+      "priority": "CORE",
+      "display_role": "CORE_ANSWER",
+      "knowledge_type": "HORTICULTURAL_GUIDANCE",
+      "confidence": "QUALIFIED",
+      "qualifier": "Aucune fréquence ni dilution universelle.",
+      "publication_status": "CANDIDATE_PENDING_HORTICULTURAL_REVIEW",
+      "safety_flag": false,
+      "source_proximity": "DIRECT",
+      "primary_source_ids": [
+        "source.rhs.monstera-deliciosa-profile",
+        "source.uconn.monstera-deliciosa"
+      ],
+      "supporting_source_ids": [
+        "source.rhs.monstera-growing-guide",
+        "source.rhs.monstera-deliciosa-profile",
+        "source.uconn.monstera-deliciosa"
+      ],
+      "conflict_ids": [
+        "conflict.md.fertilisation"
+      ],
+      "motion_priority": "NONE",
+      "visual_story_opportunity": null,
+      "consistency_key": "care.fertilisation",
+      "notes_internal": null,
+      "prohibited_wording": []
+    },
+    {
+      "content_id": "content.propagation.node",
+      "linked_claim_ids": [
+        "claim.md.propagation.node"
+      ],
+      "linked_evidence_link_ids": [
+        "ev.md.uconn.node-cutting",
+        "ev.md.iastate.node-cutting"
+      ],
+      "section": "12_MULTIPLICATION",
+      "subsection": null,
+      "title": "Bouture",
+      "short_answer": "Une bouture de tige doit conserver au moins un nœud.",
+      "long_answer": "Une feuille isolée sans nœud n’est pas soutenue pour reformer une plante complète. Aucun protocole détaillé supplémentaire n’est ajouté.",
+      "priority": "CORE",
+      "display_role": "CORE_ANSWER",
+      "knowledge_type": "HORTICULTURAL_GUIDANCE",
+      "confidence": "CORROBORATED",
+      "qualifier": null,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "safety_flag": false,
+      "source_proximity": "DIRECT",
+      "primary_source_ids": [
+        "source.uconn.monstera-deliciosa",
+        "source.iastate.houseplant-cuttings"
+      ],
+      "supporting_source_ids": [
+        "source.uconn.monstera-deliciosa",
+        "source.iastate.houseplant-cuttings"
+      ],
+      "conflict_ids": [],
+      "motion_priority": "NONE",
+      "visual_story_opportunity": "repérer un nœud sur une tige",
+      "consistency_key": "propagation.node",
+      "notes_internal": null,
+      "prohibited_wording": []
+    },
+    {
+      "content_id": "content.support.role",
+      "linked_claim_ids": [
+        "claim.md.support.role"
+      ],
+      "linked_evidence_link_ids": [
+        "ev.md.ncsu.support",
+        "ev.md.rhs.support-holes.role",
+        "ev.md.uconn.support-leaf-size.role"
+      ],
+      "section": "13_SUPPORT",
+      "subsection": null,
+      "title": "Support",
+      "short_answer": "Un support accompagne le port grimpant et stabilise les tiges.",
+      "long_answer": "Il peut être associé à un feuillage plus mature, mais ne garantit ni grandes feuilles ni fenestrations.",
+      "priority": "CORE",
+      "display_role": "CORE_ANSWER",
+      "knowledge_type": "QUALIFIED_ASSOCIATION",
+      "confidence": "QUALIFIED",
+      "qualifier": "Association horticole, pas causalité garantie.",
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "safety_flag": false,
+      "source_proximity": "DIRECT",
+      "primary_source_ids": [
+        "source.ncsu.monstera-deliciosa",
+        "source.uconn.monstera-deliciosa"
+      ],
+      "supporting_source_ids": [
+        "source.ncsu.monstera-deliciosa",
+        "source.rhs.monstera-growing-guide",
+        "source.uconn.monstera-deliciosa"
+      ],
+      "conflict_ids": [],
+      "motion_priority": "NONE",
+      "visual_story_opportunity": null,
+      "consistency_key": "support.role",
+      "notes_internal": null,
+      "prohibited_wording": []
+    },
+    {
+      "content_id": "content.aerial-roots.role",
+      "linked_claim_ids": [
+        "claim.md.aerial-roots.role"
+      ],
+      "linked_evidence_link_ids": [
+        "ev.md.uf.aerial-roots",
+        "ev.md.rhs.aerial-root-support",
+        "ev.md.frontiers.aerial-root"
+      ],
+      "section": "14_RACINES_AERIENNES",
+      "subsection": null,
+      "title": "Racines aériennes",
+      "short_answer": "Elles participent à l’ancrage et à la progression de la liane.",
+      "long_answer": "Certaines peuvent s’enraciner au contact d’un milieu favorable. Le pack ne permet aucune règle universelle sur leur coupe, guidage ou enfouissement.",
+      "priority": "CORE",
+      "display_role": "CORE_ANSWER",
+      "knowledge_type": "BOTANICAL_FACT",
+      "confidence": "CORROBORATED",
+      "qualifier": null,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "safety_flag": false,
+      "source_proximity": "DIRECT",
+      "primary_source_ids": [
+        "source.uf-ifas.monstera-landscape",
+        "source.frontiers.2022.aerial-roots"
+      ],
+      "supporting_source_ids": [
+        "source.uf-ifas.monstera-landscape",
+        "source.rhs.monstera-growing-guide",
+        "source.frontiers.2022.aerial-roots"
+      ],
+      "conflict_ids": [],
+      "motion_priority": "NONE",
+      "visual_story_opportunity": null,
+      "consistency_key": "aerial-roots.role",
+      "notes_internal": null,
+      "prohibited_wording": []
+    },
+    {
+      "content_id": "content.dimensions.context",
+      "linked_claim_ids": [
+        "claim.md.dimensions.context",
+        "claim.md.growth.rate-context"
+      ],
+      "linked_evidence_link_ids": [
+        "ev.md.uf.dimensions",
+        "ev.md.rhs.dimensions",
+        "ev.md.ncsu.dimensions",
+        "ev.md.rhs.vigorous-growth",
+        "ev.md.uf.fast-growth"
+      ],
+      "section": "15_CROISSANCE_DIMENSIONS",
+      "subsection": null,
+      "title": "Dimensions",
+      "short_answer": "La taille dépend entièrement du contexte.",
+      "long_answer": "Des sources décrivent une liane dépassant 21 m en extérieur favorable, 4–8 m dans un profil horticole et environ 1,8–2,4 m dans de nombreux intérieurs. Ces mesures ne sont pas fusionnées.",
+      "priority": "CORE",
+      "display_role": "CORE_ANSWER",
+      "knowledge_type": "BOTANICAL_FACT",
+      "confidence": "QUALIFIED",
+      "qualifier": "Toujours afficher la source et le contexte de mesure.",
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "safety_flag": false,
+      "source_proximity": "DIRECT",
+      "primary_source_ids": [
+        "source.uf-ifas.monstera-landscape",
+        "source.rhs.monstera-deliciosa-profile",
+        "source.ncsu.monstera-deliciosa"
+      ],
+      "supporting_source_ids": [
+        "source.uf-ifas.monstera-landscape",
+        "source.rhs.monstera-deliciosa-profile",
+        "source.ncsu.monstera-deliciosa",
+        "source.rhs.monstera-growing-guide"
+      ],
+      "conflict_ids": [
+        "conflict.md.dimensions"
+      ],
+      "motion_priority": "NONE",
+      "visual_story_opportunity": "échelles intérieur, horticulture, extérieur",
+      "consistency_key": "growth.dimensions",
+      "notes_internal": null,
+      "prohibited_wording": [
+        "taille unique sans contexte",
+        "croissance toujours rapide"
+      ]
+    },
+    {
+      "content_id": "content.pruning.cleaning",
+      "linked_claim_ids": [
+        "claim.md.pruning.size-control",
+        "claim.md.cleaning.leaf-dust"
+      ],
+      "linked_evidence_link_ids": [
+        "ev.md.rhs.pruning-maturity",
+        "ev.md.uf.pruning",
+        "ev.md.rhs.leaf-wiping",
+        "ev.md.ncsu.leaf-wiping"
+      ],
+      "section": "16_TAILLE_NETTOYAGE",
+      "subsection": null,
+      "title": "Taille et nettoyage",
+      "short_answer": "La taille peut contenir la liane ; l’essuyage doux facilite l’inspection.",
+      "long_answer": "Après une taille, la repousse peut d’abord être moins mature. Essuyer la poussière permet aussi d’examiner le revers des feuilles. Aucun protocole d’hygiène d’outil non sourcé n’est ajouté.",
+      "priority": "CORE",
+      "display_role": "CORE_ANSWER",
+      "knowledge_type": "HORTICULTURAL_GUIDANCE",
+      "confidence": "CORROBORATED",
+      "qualifier": null,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "safety_flag": false,
+      "source_proximity": "DIRECT",
+      "primary_source_ids": [
+        "source.uf-ifas.monstera-landscape",
+        "source.ncsu.monstera-deliciosa"
+      ],
+      "supporting_source_ids": [
+        "source.rhs.monstera-growing-guide",
+        "source.uf-ifas.monstera-landscape",
+        "source.ncsu.monstera-deliciosa"
+      ],
+      "conflict_ids": [],
+      "motion_priority": "NONE",
+      "visual_story_opportunity": null,
+      "consistency_key": "care.pruning-cleaning",
+      "notes_internal": null,
+      "prohibited_wording": []
+    },
+    {
+      "content_id": "content.safety.candidate",
+      "linked_claim_ids": [
+        "claim.md.safety.mechanism",
+        "claim.md.safety.humans-children",
+        "claim.md.safety.pets"
+      ],
+      "linked_evidence_link_ids": [
+        "ev.md.aspca.oxalates",
+        "ev.md.ncsu.oxalates",
+        "ev.md.ncsu.human-symptoms",
+        "ev.md.chop.oxalate-effects",
+        "ev.md.rhs.keep-away",
+        "ev.md.aspca.pets"
+      ],
+      "section": "17_SAFETY",
+      "subsection": null,
+      "title": "Précaution — formulation candidate",
+      "short_answer": "La mastication peut exposer à des cristaux insolubles d’oxalate de calcium irritants.",
+      "long_answer": "Gardez la plante hors de portée des enfants, chiens et chats. Pour une exposition préoccupante, contactez un centre antipoison, un professionnel de santé ou un vétérinaire selon la situation. Cette formulation attend une Safety Review humaine.",
+      "priority": "CORE",
+      "display_role": "CAUTION",
+      "knowledge_type": "SAFETY_INFORMATION",
+      "confidence": "QUALIFIED",
+      "qualifier": "INTERNAL_ONLY jusqu’à Safety Review humaine compétente si l’Owner retient cette option.",
+      "publication_status": "CANDIDATE_PENDING_SAFETY_REVIEW",
+      "safety_flag": true,
+      "source_proximity": "DIRECT",
+      "primary_source_ids": [
+        "source.aspca.monstera-deliciosa",
+        "source.ncsu.monstera-deliciosa"
+      ],
+      "supporting_source_ids": [
+        "source.aspca.monstera-deliciosa",
+        "source.ncsu.monstera-deliciosa",
+        "source.chop.oxalate-irritants",
+        "source.rhs.monstera-growing-guide"
+      ],
+      "conflict_ids": [],
+      "motion_priority": "NONE",
+      "visual_story_opportunity": null,
+      "consistency_key": "safety.oxalates",
+      "notes_internal": null,
+      "prohibited_wording": [
+        "sans danger",
+        "mortel",
+        "diagnostic ou protocole médical",
+        "diagnostic ou protocole vétérinaire"
+      ]
+    },
+    {
+      "content_id": "content.pests.documented",
+      "linked_claim_ids": [
+        "claim.md.pests.documented",
+        "claim.md.pests.spider-mite-check"
+      ],
+      "linked_evidence_link_ids": [
+        "ev.md.rhs.pests",
+        "ev.md.uconn.pests",
+        "ev.md.umn.thrips-general",
+        "ev.md.uconn.spider-mites",
+        "ev.md.umn.mite-check"
+      ],
+      "section": "18_RAVAGEURS",
+      "subsection": null,
+      "title": "Ravageurs documentés",
+      "short_answer": "Cochenilles et acariens sont directement documentés ; les cochenilles farineuses sont aussi signalées.",
+      "long_answer": "Inspectez revers, pétioles et nœuds avant d’agir. Les thrips ne sont pas présentés comme un fait spécifique à cette espèce dans V1.",
+      "priority": "CORE",
+      "display_role": "CORE_ANSWER",
+      "knowledge_type": "DIAGNOSTIC_GUIDANCE",
+      "confidence": "QUALIFIED",
+      "qualifier": "Thrips spécifique WITHHELD.",
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "safety_flag": false,
+      "source_proximity": "DIRECT",
+      "primary_source_ids": [
+        "source.rhs.monstera-deliciosa-profile",
+        "source.uconn.monstera-deliciosa"
+      ],
+      "supporting_source_ids": [
+        "source.rhs.monstera-deliciosa-profile",
+        "source.uconn.monstera-deliciosa",
+        "source.umn.thrips-general",
+        "source.umn.twospotted-mites"
+      ],
+      "conflict_ids": [],
+      "motion_priority": "NONE",
+      "visual_story_opportunity": null,
+      "consistency_key": "diagnostic.pests",
+      "notes_internal": null,
+      "prohibited_wording": [
+        "thrips établi spécifiquement pour Monstera deliciosa"
+      ]
+    },
+    {
+      "content_id": "content.comparison.borsigiana",
+      "linked_claim_ids": [
+        "claim.md.taxonomy.borsigiana"
+      ],
+      "linked_evidence_link_ids": [
+        "ev.md.powo.borsigiana"
+      ],
+      "section": "20_COMPARAISON",
+      "subsection": null,
+      "title": "« borsigiana »",
+      "short_answer": "Ce nom relève ici de la synonymie POWO, pas d’une comparaison entre deux espèces acceptées.",
+      "long_answer": "Aucune règle morphologique absolue n’est utilisée pour créer une fausse séparation taxonomique.",
+      "priority": "CORE",
+      "display_role": "COMPARISON",
+      "knowledge_type": "TAXONOMIC_NOTE",
+      "confidence": "VERIFIED",
+      "qualifier": null,
+      "publication_status": "CANDIDATE_PENDING_SPECIALIST_REVIEW",
+      "safety_flag": false,
+      "source_proximity": "DIRECT",
+      "primary_source_ids": [
+        "source.kew.powo.monstera-deliciosa"
+      ],
+      "supporting_source_ids": [
+        "source.kew.powo.monstera-deliciosa"
+      ],
+      "conflict_ids": [],
+      "motion_priority": "NONE",
+      "visual_story_opportunity": null,
+      "consistency_key": "comparison.borsigiana",
+      "notes_internal": null,
+      "prohibited_wording": [
+        "Monstera borsigiana est une espèce acceptée distincte"
+      ]
+    },
+    {
+      "content_id": "content.comparison.rhaphidophora-gap",
+      "linked_claim_ids": [],
+      "linked_evidence_link_ids": [],
+      "section": "20_COMPARAISON",
+      "subsection": null,
+      "title": "Rhaphidophora tetrasperma",
+      "short_answer": "Comparaison reportée : le pack actuel ne contient pas de claims ni d’EvidenceLinks suffisamment proches.",
+      "long_answer": "Créer un Evidence addendum avant toute matrice comparative. Aucun critère n’est complété depuis la mémoire du modèle.",
+      "priority": "INTERNAL_ONLY",
+      "display_role": "INTERNAL_ONLY",
+      "knowledge_type": "TAXONOMIC_NOTE",
+      "confidence": "UNVERIFIED",
+      "qualifier": null,
+      "publication_status": "INTERNAL_ONLY",
+      "safety_flag": false,
+      "source_proximity": "NO_DIRECT_EVIDENCE",
+      "primary_source_ids": [],
+      "supporting_source_ids": [],
+      "conflict_ids": [],
+      "motion_priority": "NONE",
+      "visual_story_opportunity": null,
+      "consistency_key": "comparison.rhaphidophora",
+      "notes_internal": "EVIDENCE_GAP",
+      "prohibited_wording": []
+    },
+    {
+      "content_id": "content.studio.observation",
+      "linked_claim_ids": [
+        "claim.md.watering.substrate-state",
+        "claim.md.light.indoor-preference",
+        "claim.md.support.role"
+      ],
+      "linked_evidence_link_ids": [
+        "ev.md.rhs.watering",
+        "ev.md.ncsu.watering",
+        "ev.md.uconn.watering",
+        "ev.md.rhs.light",
+        "ev.md.ncsu.light",
+        "ev.md.uconn.light-context",
+        "ev.md.ncsu.support",
+        "ev.md.rhs.support-holes.role",
+        "ev.md.uconn.support-leaf-size.role"
+      ],
+      "section": "21_CONSEIL_STUDIO",
+      "subsection": null,
+      "title": "Conseil du Studio — candidat",
+      "short_answer": "Observez d’abord la motte, la lumière et le port avant de corriger plusieurs paramètres.",
+      "long_answer": "Ce conseil synthétise des gestes à faible risque : vérifier le substrat avant l’arrosage, ajuster progressivement la lumière et proposer un support stable sans promettre de fenestrations.",
+      "priority": "CORE",
+      "display_role": "CORE_ANSWER",
+      "knowledge_type": "JUNGLE_EDITORIAL_GUIDANCE",
+      "confidence": "QUALIFIED",
+      "qualifier": "Conseil éditorial, jamais fait botanique autonome.",
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "safety_flag": false,
+      "source_proximity": "DIRECT",
+      "primary_source_ids": [
+        "source.ncsu.monstera-deliciosa",
+        "source.uconn.monstera-deliciosa"
+      ],
+      "supporting_source_ids": [
+        "source.rhs.monstera-growing-guide",
+        "source.ncsu.monstera-deliciosa",
+        "source.uconn.monstera-deliciosa"
+      ],
+      "conflict_ids": [
+        "conflict.md.watering-threshold"
+      ],
+      "motion_priority": "NONE",
+      "visual_story_opportunity": null,
+      "consistency_key": "studio.observe-first",
+      "notes_internal": null,
+      "prohibited_wording": []
+    }
+  ],
+  "diagnostics": [
+    {
+      "diagnostic_id": "diagnostic.md.yellow-leaves",
+      "symptom_label": "Feuille(s) jaune(s)",
+      "short_answer": "Ce signe est compatible avec plusieurs causes : vérifiez avant de conclure.",
+      "possible_causes": [
+        "substrat durablement saturé ou racines altérées",
+        "cochenilles/cochenilles farineuses",
+        "maladie foliaire",
+        "froid récent",
+        "sénescence d'une vieille feuille isolée"
+      ],
+      "what_to_check": [
+        "vérifier l'humidité en profondeur et l'écoulement",
+        "inspecter racines visibles et collet sans conclure sur la seule couleur",
+        "examiner dessous des feuilles, pétioles et nœuds",
+        "reconstituer l'historique de froid et d'arrosage",
+        "distinguer une feuille âgée isolée d'un jaunissement généralisé"
+      ],
+      "prudent_action": [
+        "cesser tout arrosage automatique jusqu'au contrôle du substrat",
+        "isoler si ravageurs suspectés",
+        "corriger seulement la cause observée"
+      ],
+      "avoid": [
+        "affirmer une cause unique à partir du seul symptôme",
+        "appliquer un pesticide sans identification suffisante"
+      ],
+      "escalation_or_limit": "Escalade recommandée si : racines noires/molles; tige molle au collet; progression rapide; suintement ou lésions à halo.",
+      "linked_claim_ids": [
+        "claim.md.diagnostic.yellow-leaves"
+      ],
+      "evidence_link_ids": [
+        "ev.md.uconn.yellowing-pests",
+        "ev.md.uconn.root-rot.yellow",
+        "ev.md.rhs.standing-water.yellow"
+      ],
+      "confidence": "QUALIFIED",
+      "qualifier": "Diagnostic probabiliste ; causes non ordonnées par probabilité.",
+      "safety_flag": false,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "prohibited_inference": "Le symptôme prouve une cause unique.",
+      "source_proximity": "DIRECT"
+    },
+    {
+      "diagnostic_id": "diagnostic.md.brown-tips-patches",
+      "symptom_label": "Pointes, bords ou plages brunes",
+      "short_answer": "Ce signe est compatible avec plusieurs causes : vérifiez avant de conclure.",
+      "possible_causes": [
+        "air très sec ou proximité d'une source de chaleur",
+        "brûlure par lumière directe intense",
+        "tache bactérienne ou anthracnose si motif compatible",
+        "dommage mécanique"
+      ],
+      "what_to_check": [
+        "observer si la lésion est sèche et marginale ou humide/progressive",
+        "chercher halo jaune ou suintement",
+        "vérifier exposition et source de chaleur",
+        "contrôler plusieurs feuilles et la vitesse d'évolution"
+      ],
+      "prudent_action": [
+        "éloigner progressivement d'un soleil brûlant/radiateur si concordant",
+        "isoler et éviter de mouiller le feuillage si lésions suspectes",
+        "demander un diagnostic si progression"
+      ],
+      "avoid": [
+        "affirmer une cause unique à partir du seul symptôme",
+        "appliquer un pesticide sans identification suffisante"
+      ],
+      "escalation_or_limit": "Escalade recommandée si : extension rapide; suintement; taches humides; cankers de tige.",
+      "linked_claim_ids": [
+        "claim.md.diagnostic.brown-areas"
+      ],
+      "evidence_link_ids": [
+        "ev.md.rhs.brown-edges",
+        "ev.md.uconn.leaf-spots"
+      ],
+      "confidence": "QUALIFIED",
+      "qualifier": "Diagnostic probabiliste ; causes non ordonnées par probabilité.",
+      "safety_flag": false,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "prohibited_inference": "Le symptôme prouve une cause unique.",
+      "source_proximity": "DIRECT"
+    },
+    {
+      "diagnostic_id": "diagnostic.md.slow-growth-small-leaves",
+      "symptom_label": "Croissance ralentie ou petites feuilles",
+      "short_answer": "Ce signe est compatible avec plusieurs causes : vérifiez avant de conclure.",
+      "possible_causes": [
+        "lumière insuffisante",
+        "saison ou température moins favorables",
+        "espace racinaire à vérifier",
+        "repousse juvénile après taille",
+        "absence de support pour une liane en croissance"
+      ],
+      "what_to_check": [
+        "comparer l'emplacement et la saison",
+        "vérifier la température récente",
+        "inspecter si les racines atteignent fond et côtés",
+        "identifier une taille récente",
+        "observer si la tige peut grimper"
+      ],
+      "prudent_action": [
+        "corriger un seul facteur observé à la fois",
+        "améliorer progressivement la lumière filtrée",
+        "ajouter un support stable si le port l'exige"
+      ],
+      "avoid": [
+        "affirmer une cause unique à partir du seul symptôme",
+        "appliquer un pesticide sans identification suffisante"
+      ],
+      "escalation_or_limit": "Escalade recommandée si : flétrissement avec racines molles; ravageurs visibles; arrêt brutal accompagné de lésions.",
+      "linked_claim_ids": [
+        "claim.md.diagnostic.slow-growth-small-leaves"
+      ],
+      "evidence_link_ids": [
+        "ev.md.rhs.low-light-holes.slow",
+        "ev.md.rhs.pruning-maturity.slow",
+        "ev.md.uconn.support-leaf-size.slow",
+        "ev.md.uconn.repotting.slow"
+      ],
+      "confidence": "QUALIFIED",
+      "qualifier": "Diagnostic probabiliste ; causes non ordonnées par probabilité.",
+      "safety_flag": false,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "prohibited_inference": "Le symptôme prouve une cause unique.",
+      "source_proximity": "DIRECT"
+    },
+    {
+      "diagnostic_id": "diagnostic.md.no-fenestrations",
+      "symptom_label": "Feuilles sans fenestrations",
+      "short_answer": "Ce signe est compatible avec plusieurs causes : vérifiez avant de conclure.",
+      "possible_causes": [
+        "stade juvénile normal",
+        "lumière insuffisante",
+        "croissance non grimpante ou support absent",
+        "repousse moins mature après taille"
+      ],
+      "what_to_check": [
+        "évaluer l'âge relatif et la succession des feuilles",
+        "vérifier lumière filtrée disponible",
+        "observer le port et l'attache au support",
+        "noter une taille récente"
+      ],
+      "prudent_action": [
+        "patienter si plante juvénile",
+        "améliorer progressivement la lumière",
+        "proposer un support sans promesse de résultat"
+      ],
+      "avoid": [
+        "affirmer une cause unique à partir du seul symptôme",
+        "appliquer un pesticide sans identification suffisante"
+      ],
+      "escalation_or_limit": "Demander un avis si le signe progresse ou reste inexpliqué.",
+      "linked_claim_ids": [
+        "claim.md.diagnostic.no-fenestrations"
+      ],
+      "evidence_link_ids": [
+        "ev.md.ncsu.mature-leaves.no-fen",
+        "ev.md.rhs.low-light-holes.no-fen",
+        "ev.md.rhs.support-holes.no-fen"
+      ],
+      "confidence": "QUALIFIED",
+      "qualifier": "Diagnostic probabiliste ; causes non ordonnées par probabilité.",
+      "safety_flag": false,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "prohibited_inference": "Le symptôme prouve une cause unique.",
+      "source_proximity": "DIRECT"
+    },
+    {
+      "diagnostic_id": "diagnostic.md.spider-mites",
+      "symptom_label": "Ponctuations claires, aspect bronzé ou fines toiles",
+      "short_answer": "Ce signe est compatible avec plusieurs causes : vérifiez avant de conclure.",
+      "possible_causes": [
+        "acariens tétranyques",
+        "stress hydrique pouvant imiter certaines ponctuations"
+      ],
+      "what_to_check": [
+        "loupe sur le revers des feuilles",
+        "papier blanc sous la feuille puis tapotement",
+        "rechercher mobilité et toiles"
+      ],
+      "prudent_action": [
+        "isoler la plante",
+        "rincer soigneusement dessus et dessous",
+        "identifier avant tout pesticide",
+        "suivre uniquement un produit homologué et son étiquette si nécessaire"
+      ],
+      "avoid": [
+        "affirmer une cause unique à partir du seul symptôme",
+        "appliquer un pesticide sans identification suffisante"
+      ],
+      "escalation_or_limit": "Escalade recommandée si : défoliation rapide; infestation généralisée; échec des mesures mécaniques.",
+      "linked_claim_ids": [
+        "claim.md.pests.spider-mite-check"
+      ],
+      "evidence_link_ids": [
+        "ev.md.uconn.spider-mites",
+        "ev.md.umn.mite-check"
+      ],
+      "confidence": "CORROBORATED",
+      "qualifier": "Diagnostic probabiliste ; causes non ordonnées par probabilité.",
+      "safety_flag": false,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "prohibited_inference": "Le symptôme prouve une cause unique.",
+      "source_proximity": "DIRECT"
+    },
+    {
+      "diagnostic_id": "diagnostic.md.scale-mealybugs",
+      "symptom_label": "Bosses brunes, amas blancs cotonneux ou miellat collant",
+      "short_answer": "Ce signe est compatible avec plusieurs causes : vérifiez avant de conclure.",
+      "possible_causes": [
+        "cochenilles à carapace/molles",
+        "cochenilles farineuses"
+      ],
+      "what_to_check": [
+        "inspecter nœuds, pétioles et revers",
+        "distinguer bosses fixées et amas cireux blancs",
+        "chercher miellat et fumagine"
+      ],
+      "prudent_action": [
+        "isoler",
+        "retirer manuellement les individus accessibles",
+        "rincer",
+        "n'utiliser qu'un traitement homologué après identification"
+      ],
+      "avoid": [
+        "affirmer une cause unique à partir du seul symptôme",
+        "appliquer un pesticide sans identification suffisante"
+      ],
+      "escalation_or_limit": "Escalade recommandée si : forte colonisation des crevasses; déclin rapide; plusieurs plantes touchées.",
+      "linked_claim_ids": [
+        "claim.md.pests.documented"
+      ],
+      "evidence_link_ids": [
+        "ev.md.rhs.pests",
+        "ev.md.uconn.pests"
+      ],
+      "confidence": "CORROBORATED",
+      "qualifier": "Diagnostic probabiliste ; causes non ordonnées par probabilité.",
+      "safety_flag": false,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "prohibited_inference": "Le symptôme prouve une cause unique.",
+      "source_proximity": "DIRECT"
+    },
+    {
+      "diagnostic_id": "diagnostic.md.thrips",
+      "symptom_label": "Stries argentées, ponctuations et petits dépôts noirs",
+      "short_answer": "Ce signe est compatible avec plusieurs causes : vérifiez avant de conclure.",
+      "possible_causes": [
+        "thrips",
+        "autres ravageurs ou dommages pouvant produire des marques proches"
+      ],
+      "what_to_check": [
+        "observer les jeunes feuilles et le revers",
+        "chercher insectes fins et déjections noires",
+        "utiliser une loupe",
+        "faire confirmer si doute"
+      ],
+      "prudent_action": [
+        "isoler",
+        "retirer les parties très atteintes si raisonnable",
+        "ne pas appliquer de pesticide sans identification"
+      ],
+      "avoid": [
+        "affirmer une cause unique à partir du seul symptôme",
+        "appliquer un pesticide sans identification suffisante"
+      ],
+      "escalation_or_limit": "Escalade recommandée si : atteinte rapide des nouvelles pousses; infestation multi-plantes.",
+      "linked_claim_ids": [
+        "claim.md.pests.documented"
+      ],
+      "evidence_link_ids": [
+        "ev.md.umn.thrips-general"
+      ],
+      "confidence": "UNVERIFIED",
+      "qualifier": "Les signes sont documentés au niveau général, mais aucune source spécifique à M. deliciosa ouverte dans ce pilote ne confirme directement les thrips.",
+      "safety_flag": false,
+      "publication_status": "INTERNAL_ONLY",
+      "prohibited_inference": "Le symptôme prouve une cause unique.",
+      "source_proximity": "GENERAL_DOMAIN"
+    },
+    {
+      "diagnostic_id": "diagnostic.md.root-rot",
+      "symptom_label": "Flétrissement avec racines ou collet altérés",
+      "short_answer": "Ce signe est compatible avec plusieurs causes : vérifiez avant de conclure.",
+      "possible_causes": [
+        "pourriture racinaire ou de tige associée à un milieu durablement humide",
+        "stress de sécheresse ayant lésé les racines",
+        "autre maladie racinaire"
+      ],
+      "what_to_check": [
+        "examiner odeur et texture du substrat",
+        "inspecter prudemment les racines : brunes/noires, molles, se détachant facilement",
+        "vérifier collet et drainage"
+      ],
+      "prudent_action": [
+        "stopper la saturation",
+        "retirer l'eau stagnante",
+        "faire confirmer l'atteinte avant intervention racinaire importante"
+      ],
+      "avoid": [
+        "affirmer une cause unique à partir du seul symptôme",
+        "appliquer un pesticide sans identification suffisante"
+      ],
+      "escalation_or_limit": "Escalade recommandée si : tige ceinturée au niveau du sol; racines molles généralisées; effondrement rapide.",
+      "linked_claim_ids": [
+        "claim.md.watering.standing-water"
+      ],
+      "evidence_link_ids": [
+        "ev.md.uconn.root-rot",
+        "ev.md.rhs.standing-water"
+      ],
+      "confidence": "CORROBORATED",
+      "qualifier": "Diagnostic probabiliste ; causes non ordonnées par probabilité.",
+      "safety_flag": false,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "prohibited_inference": "Le symptôme prouve une cause unique.",
+      "source_proximity": "DIRECT"
+    }
+  ],
+  "faq": [
+    {
+      "faq_id": "faq.md.placement",
+      "question": "Où placer Monstera deliciosa ?",
+      "short_answer": "Dans une lumière lumineuse à modérée, filtrée ou indirecte.",
+      "long_answer": "Le soleil direct intense peut brûler les feuilles. Acclimatez progressivement toute exposition plus forte et n’utilisez pas de durée ou lux universels.",
+      "linked_claim_ids": [
+        "claim.md.light.indoor-preference"
+      ],
+      "evidence_link_ids": [
+        "ev.md.rhs.light",
+        "ev.md.ncsu.light",
+        "ev.md.uconn.light-context"
+      ],
+      "confidence": "CORROBORATED",
+      "qualifier": null,
+      "safety_flag": false,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "consistency_keys": [
+        "care.light"
+      ]
+    },
+    {
+      "faq_id": "faq.md.watering",
+      "question": "Quand l’arroser ?",
+      "short_answer": "Quand la partie supérieure du substrat a nettement séché.",
+      "long_answer": "Arrosez complètement puis laissez égoutter. Le calendrier ne remplace pas l’observation du substrat.",
+      "linked_claim_ids": [
+        "claim.md.watering.substrate-state",
+        "claim.md.watering.standing-water"
+      ],
+      "evidence_link_ids": [
+        "ev.md.rhs.watering",
+        "ev.md.ncsu.watering",
+        "ev.md.uconn.watering",
+        "ev.md.rhs.standing-water",
+        "ev.md.uconn.root-rot"
+      ],
+      "confidence": "CORROBORATED",
+      "qualifier": null,
+      "safety_flag": false,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "consistency_keys": [
+        "care.watering"
+      ]
+    },
+    {
+      "faq_id": "faq.md.fenestrations",
+      "question": "Pourquoi les nouvelles feuilles n’ont-elles pas de trous ?",
+      "short_answer": "Une plante jeune peut produire des feuilles entières.",
+      "long_answer": "La maturité est le facteur le mieux soutenu. Lumière filtrée suffisante et support accompagnent une croissance plus mature sans garantir les fenestrations.",
+      "linked_claim_ids": [
+        "claim.md.diagnostic.no-fenestrations",
+        "claim.md.fenestration.drivers"
+      ],
+      "evidence_link_ids": [
+        "ev.md.ncsu.mature-leaves.no-fen",
+        "ev.md.rhs.low-light-holes.no-fen",
+        "ev.md.rhs.support-holes.no-fen",
+        "ev.md.ncsu.mature-leaves.drivers",
+        "ev.md.rhs.low-light-holes",
+        "ev.md.rhs.support-holes",
+        "ev.md.uconn.support-leaf-size"
+      ],
+      "confidence": "QUALIFIED",
+      "qualifier": null,
+      "safety_flag": false,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "consistency_keys": [
+        "morphology.fenestrations"
+      ]
+    },
+    {
+      "faq_id": "faq.md.repotting",
+      "question": "Quand rempoter ?",
+      "short_answer": "Quand les racines occupent réellement le contenant ou que la stabilité devient insuffisante.",
+      "long_answer": "Inspectez fond, côtés et motte. Augmentez seulement progressivement le volume du pot.",
+      "linked_claim_ids": [
+        "claim.md.repotting.trigger",
+        "claim.md.pot.drainage"
+      ],
+      "evidence_link_ids": [
+        "ev.md.uconn.repotting.trigger",
+        "ev.md.rhs.repotting",
+        "ev.md.rhs.pot-size",
+        "ev.md.uconn.repotting"
+      ],
+      "confidence": "CORROBORATED",
+      "qualifier": null,
+      "safety_flag": false,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "consistency_keys": [
+        "rootzone.repotting"
+      ]
+    },
+    {
+      "faq_id": "faq.md.drainage",
+      "question": "Faut-il un pot drainant ?",
+      "short_answer": "Oui, l’excédent d’eau doit pouvoir s’évacuer.",
+      "long_answer": "Évitez la saturation persistante et le surpotage, qui maintient le substrat humide plus longtemps.",
+      "linked_claim_ids": [
+        "claim.md.pot.drainage",
+        "claim.md.watering.standing-water"
+      ],
+      "evidence_link_ids": [
+        "ev.md.rhs.pot-size",
+        "ev.md.uconn.repotting",
+        "ev.md.rhs.standing-water",
+        "ev.md.uconn.root-rot"
+      ],
+      "confidence": "CORROBORATED",
+      "qualifier": null,
+      "safety_flag": false,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "consistency_keys": [
+        "rootzone.container"
+      ]
+    },
+    {
+      "faq_id": "faq.md.safety",
+      "question": "Est-elle toxique pour les enfants et les animaux ?",
+      "short_answer": "La mastication expose à des cristaux d’oxalate de calcium irritants.",
+      "long_answer": "Gardez-la hors de portée. La formulation détaillée reste candidate et nécessite une Safety Review humaine avant publication.",
+      "linked_claim_ids": [
+        "claim.md.safety.mechanism",
+        "claim.md.safety.humans-children",
+        "claim.md.safety.pets"
+      ],
+      "evidence_link_ids": [
+        "ev.md.aspca.oxalates",
+        "ev.md.ncsu.oxalates",
+        "ev.md.ncsu.human-symptoms",
+        "ev.md.chop.oxalate-effects",
+        "ev.md.rhs.keep-away",
+        "ev.md.aspca.pets"
+      ],
+      "confidence": "QUALIFIED",
+      "qualifier": "CANDIDATE_PENDING_SAFETY_REVIEW",
+      "safety_flag": true,
+      "publication_status": "CANDIDATE_PENDING_SAFETY_REVIEW",
+      "consistency_keys": [
+        "safety.oxalates"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "source.kew.powo.monstera-deliciosa",
+      "title": "Monstera deliciosa Liebm. — Plants of the World Online",
+      "authors": null,
+      "organisation": "Royal Botanic Gardens, Kew",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:87478-1",
+      "published_at": null,
+      "source_type": "TAXONOMIC_BACKBONE",
+      "subject_domains": [
+        "taxonomy",
+        "native_range",
+        "biome",
+        "synonymy"
+      ],
+      "access_status": "OPENED_VERIFIED",
+      "quality_flags": [],
+      "limits": "Autorité principale du pilote pour acceptation, synonymie, aire native et biome.",
+      "locators": [
+        "Taxon header; status and accepted name",
+        "Classification",
+        "Synonyms, line 83",
+        "Synonyms list",
+        "Native range and distribution",
+        "Ecology / biome field",
+        "Description / life form"
+      ]
+    },
+    {
+      "source_id": "source.kew.ipni.monstera-deliciosa",
+      "title": "Monstera deliciosa — International Plant Names Index",
+      "authors": null,
+      "organisation": "Royal Botanic Gardens, Kew; Harvard University Herbaria; Australian National Herbarium",
+      "url": "https://www.ipni.org/n/87478-1",
+      "published_at": null,
+      "source_type": "NOMENCLATURAL_INDEX",
+      "subject_domains": [
+        "nomenclature",
+        "authorship",
+        "publication"
+      ],
+      "access_status": "OPENED_VERIFIED",
+      "quality_flags": [],
+      "limits": "Complément nomenclatural; ne vaut pas seul comme opinion d'acceptation.",
+      "locators": [
+        "Lines 5-20",
+        "Lines 21-22"
+      ]
+    },
+    {
+      "source_id": "source.rhs.monstera-growing-guide",
+      "title": "How to grow Swiss cheese plants",
+      "authors": null,
+      "organisation": "Royal Horticultural Society",
+      "url": "https://www.rhs.org.uk/plants/swiss-cheese-plants/how-to-grow-swiss-cheese-plants",
+      "published_at": null,
+      "source_type": "INSTITUTIONAL_HORTICULTURAL_GUIDE",
+      "subject_domains": [
+        "light",
+        "temperature",
+        "humidity",
+        "watering",
+        "substrate",
+        "repotting",
+        "fertilisation",
+        "support",
+        "pruning",
+        "propagation",
+        "safety"
+      ],
+      "access_status": "OPENED_VERIFIED",
+      "quality_flags": [
+        "GENUS_LEVEL_GUIDANCE"
+      ],
+      "limits": "Guide Monstera/Swiss cheese plants; qualifier les énoncés non spécifiques à l'espèce.",
+      "locators": [
+        "Plant guide lines 23-26",
+        "Lines 107-115",
+        "Lines 148-151",
+        "Lines 128-145",
+        "Line 136",
+        "Lines 113-115",
+        "Lines 92-102",
+        "Lines 85-102",
+        "Lines 85-97",
+        "Lines 137-145",
+        "Lines 148-150",
+        "Lines 107-110",
+        "Plant guide lines 21-26; growing guide lines 116-124",
+        "Lines 148-159",
+        "Lines 160-167",
+        "Lines 125-127"
+      ]
+    },
+    {
+      "source_id": "source.rhs.monstera-deliciosa-profile",
+      "title": "Monstera deliciosa (F) — Swiss cheese plant",
+      "authors": null,
+      "organisation": "Royal Horticultural Society",
+      "url": "https://www.rhs.org.uk/plants/11192/monstera-deliciosa-f/details",
+      "published_at": null,
+      "source_type": "INSTITUTIONAL_PLANT_PROFILE",
+      "subject_domains": [
+        "morphology",
+        "dimensions",
+        "light",
+        "humidity",
+        "temperature",
+        "watering",
+        "fertilisation",
+        "propagation",
+        "pests",
+        "safety"
+      ],
+      "access_status": "OPENED_VERIFIED",
+      "quality_flags": [
+        "RANGE_STATEMENT_BROADER_THAN_POWO"
+      ],
+      "limits": "Profil spécifique; l'aire 'Mexico to Panama' n'est pas retenue face à POWO.",
+      "locators": [
+        "Lines 173-180",
+        "Profile lines 176-180; guide lines 116-124",
+        "Lines 176-180",
+        "Plant guide lines 47-55",
+        "Lines 195-201"
+      ]
+    },
+    {
+      "source_id": "source.ncsu.monstera-deliciosa",
+      "title": "Monstera deliciosa — Extension Gardener Plant Toolbox",
+      "authors": null,
+      "organisation": "North Carolina State University Extension",
+      "url": "https://plants.ces.ncsu.edu/plants/monstera-deliciosa/",
+      "published_at": null,
+      "source_type": "UNIVERSITY_EXTENSION_PROFILE",
+      "subject_domains": [
+        "habit",
+        "morphology",
+        "indoor_dimensions",
+        "light",
+        "temperature",
+        "humidity",
+        "watering",
+        "support",
+        "repotting",
+        "propagation",
+        "human_safety"
+      ],
+      "access_status": "OPENED_VERIFIED",
+      "quality_flags": [
+        "RANGE_STATEMENT_BROADER_THAN_POWO"
+      ],
+      "limits": "Conseils intérieurs contextualisés en Caroline du Nord; l'aire native n'est pas retenue contre POWO.",
+      "locators": [
+        "Lines 16-20",
+        "Lines 17-20",
+        "Lines 143-154",
+        "Line 18",
+        "Line 17",
+        "Lines 167-182"
+      ]
+    },
+    {
+      "source_id": "source.uconn.monstera-deliciosa",
+      "title": "Monstera deliciosa",
+      "authors": null,
+      "organisation": "University of Connecticut Home Garden Education Office",
+      "url": "https://homegarden.cahnr.uconn.edu/factsheets/monstera-deliciosa/",
+      "published_at": "2020",
+      "source_type": "UNIVERSITY_EXTENSION_FACTSHEET",
+      "subject_domains": [
+        "substrate",
+        "watering",
+        "light",
+        "temperature",
+        "fertilisation",
+        "support",
+        "propagation",
+        "pests",
+        "diseases",
+        "repotting"
+      ],
+      "access_status": "OPENED_VERIFIED",
+      "quality_flags": [
+        "REGIONAL_NEW_ENGLAND_CONTEXT"
+      ],
+      "limits": "Utile pour vérification pratique et diagnostic; plusieurs recommandations sont régionales.",
+      "locators": [
+        "Lines 159-165",
+        "Lines 159-164",
+        "Lines 159-163",
+        "Lines 192-196",
+        "Lines 161-163",
+        "Lines 159-160",
+        "Lines 195-196",
+        "Lines 174-176",
+        "Lines 178-188",
+        "Lines 180-184",
+        "Lines 180-188",
+        "Lines 192-195"
+      ]
+    },
+    {
+      "source_id": "source.croat.1988.araceae-ecology",
+      "title": "Ecology and Life Forms of Araceae",
+      "authors": [
+        "Thomas B. Croat"
+      ],
+      "organisation": "Missouri Botanical Garden / International Aroid Society",
+      "url": "https://www.missouribotanicalgarden.org/Portals/0/staff/PDFs/croat/Ecology-LifeForms-Araceae-.pdf",
+      "published_at": "1988",
+      "source_type": "BOTANICAL_MONOGRAPH_ARTICLE",
+      "subject_domains": [
+        "ecology",
+        "life_form",
+        "hemiepiphytism",
+        "heteroblasty",
+        "support"
+      ],
+      "access_status": "OPENED_VERIFIED",
+      "quality_flags": [
+        "GENUS_LEVEL_CONTEXT"
+      ],
+      "limits": "La discussion porte largement sur Araceae et Monstera au niveau du genre; pas toujours spécifique à M. deliciosa.",
+      "locators": [
+        "PDF page 22, lines 1202-1213",
+        "PDF pages 10-11, lines 737-744"
+      ]
+    },
+    {
+      "source_id": "source.muir.2013.fenestration",
+      "title": "How Did the Swiss Cheese Plant Get Its Holes?",
+      "authors": [
+        "Christopher D. Muir"
+      ],
+      "organisation": "The American Naturalist / University of Chicago Press",
+      "url": "https://www.journals.uchicago.edu/doi/10.1086/668819",
+      "published_at": "2013-02-01",
+      "source_type": "PEER_REVIEWED_MODELING_PAPER",
+      "subject_domains": [
+        "fenestration",
+        "heteroblasty",
+        "ecology"
+      ],
+      "access_status": "OPENED_VERIFIED",
+      "quality_flags": [
+        "MODEL_HYPOTHESIS_NOT_EXPERIMENTAL_PROOF",
+        "GENUS_LEVEL_INFERENCE"
+      ],
+      "limits": "Le PDF intégral a été lu via le miroir institutionnel UBC; la fonction adaptative proposée reste une hypothèse testable.",
+      "locators": [
+        "Abstract lines 48-50; PDF page 1",
+        "Abstract lines 48-50; PDF page 1 lines 62-68",
+        "PDF page 1 lines 62-68",
+        "Abstract lines 48-50; PDF pages 1-2 lines 62-88"
+      ]
+    },
+    {
+      "source_id": "source.uf-ifas.monstera-landscape",
+      "title": "Monstera Growing in the Florida Home Landscape",
+      "authors": [
+        "Jonathan H. Crane",
+        "Carlos F. Balerdi"
+      ],
+      "organisation": "University of Florida IFAS Extension",
+      "url": "https://ask.ifas.ufl.edu/publication/hs311",
+      "published_at": null,
+      "source_type": "UNIVERSITY_EXTENSION_GUIDE",
+      "subject_domains": [
+        "outdoor_morphology",
+        "wild_or_landscape_dimensions",
+        "aerial_roots",
+        "light",
+        "cold_damage",
+        "propagation",
+        "pruning"
+      ],
+      "access_status": "OPENED_VERIFIED",
+      "quality_flags": [
+        "FLORIDA_OUTDOOR_CONTEXT",
+        "RANGE_STATEMENT_BROADER_THAN_POWO"
+      ],
+      "limits": "Ne pas convertir les seuils de dommage extérieur en recommandation intérieure.",
+      "locators": [
+        "Lines 39-48",
+        "Lines 55-57",
+        "Lines 58-60",
+        "Lines 71-75",
+        "Lines 64-66",
+        "Lines 80-82",
+        "Lines 52-57"
+      ]
+    },
+    {
+      "source_id": "source.iastate.houseplant-cuttings",
+      "title": "How to Propagate Houseplants by Stem Tip Cuttings",
+      "authors": [
+        "Aaron Steil"
+      ],
+      "organisation": "Iowa State University Extension and Outreach",
+      "url": "https://yardandgarden.extension.iastate.edu/how-to/how-propagate-houseplants-stem-tip-cuttings",
+      "published_at": null,
+      "source_type": "UNIVERSITY_EXTENSION_GUIDE",
+      "subject_domains": [
+        "propagation",
+        "node_requirement",
+        "rooting_medium"
+      ],
+      "access_status": "OPENED_VERIFIED",
+      "quality_flags": [
+        "GENERAL_HOUSEPLANT_PROTOCOL_WITH_SPECIES_LIST"
+      ],
+      "limits": "M. deliciosa est explicitement listée comme adaptée aux boutures de tige.",
+      "locators": [
+        "Lines 120-140 and 147-164"
+      ]
+    },
+    {
+      "source_id": "source.frontiers.2022.aerial-roots",
+      "title": "Cellular Growth in Aerial Roots Differs From That in Typical Substrate Roots",
+      "authors": [
+        "A. K. Eskov",
+        "V. A. Viktorova",
+        "E. Abakumov",
+        "G. Zotz"
+      ],
+      "organisation": "Frontiers in Plant Science",
+      "url": "https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2022.894647/full",
+      "published_at": "2022-05-26",
+      "source_type": "PEER_REVIEWED_RESEARCH_ARTICLE",
+      "subject_domains": [
+        "aerial_root_anatomy",
+        "aerial_root_growth"
+      ],
+      "access_status": "OPENED_VERIFIED",
+      "quality_flags": [
+        "DOES_NOT_SUPPORT_HOME_PRUNING_ADVICE"
+      ],
+      "limits": "Preuve directe sur l'anatomie/croissance, pas sur la conduite domestique des racines aériennes.",
+      "locators": [
+        "Results lines 461-488; references lines 692-755",
+        "Results lines 461-488"
+      ]
+    },
+    {
+      "source_id": "source.aspca.monstera-deliciosa",
+      "title": "Toxic and Non-toxic Plants: Mexican Breadfruit",
+      "authors": null,
+      "organisation": "ASPCA Animal Poison Control Center",
+      "url": "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/mexican-breadfruit",
+      "published_at": null,
+      "source_type": "VETERINARY_POISON_CONTROL_PROFILE",
+      "subject_domains": [
+        "animal_safety",
+        "toxic_principle",
+        "clinical_signs"
+      ],
+      "access_status": "OPENED_VERIFIED",
+      "quality_flags": [],
+      "limits": "Source directe pour chiens et chats.",
+      "locators": [
+        "Lines 44-54"
+      ]
+    },
+    {
+      "source_id": "source.chop.oxalate-irritants",
+      "title": "Plants That Irritate",
+      "authors": null,
+      "organisation": "Children's Hospital of Philadelphia Poison Control Center",
+      "url": "https://www.chop.edu/centers-programs/poison-control-center/plants-irritate",
+      "published_at": null,
+      "source_type": "HUMAN_POISON_CONTROL_GUIDANCE",
+      "subject_domains": [
+        "human_safety",
+        "oxalate_mechanism",
+        "children"
+      ],
+      "access_status": "OPENED_VERIFIED",
+      "quality_flags": [
+        "GENERAL_OXALATE_PLANT_GUIDANCE",
+        "MONSTERA_NOT_EXPLICITLY_LISTED"
+      ],
+      "limits": "Contexte général des plantes à oxalates; utilisé seulement avec une source spécifique établissant les oxalates chez M. deliciosa.",
+      "locators": [
+        "Mouth irritants section"
+      ]
+    },
+    {
+      "source_id": "source.umn.twospotted-mites",
+      "title": "Twospotted spider mites in home gardens",
+      "authors": [
+        "Jeffrey Hahn",
+        "Suzanne Wold-Burkness"
+      ],
+      "organisation": "University of Minnesota Extension",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/yard-and-garden-insects/spider-mites",
+      "published_at": null,
+      "source_type": "UNIVERSITY_EXTENSION_PEST_GUIDE",
+      "subject_domains": [
+        "spider_mites",
+        "diagnosis",
+        "low_risk_action"
+      ],
+      "access_status": "OPENED_VERIFIED",
+      "quality_flags": [
+        "GENERAL_DOMAIN_NOT_SPECIES_SPECIFIC"
+      ],
+      "limits": "Sert à qualifier les signes et la vérification; la susceptibilité de M. deliciosa vient de RHS/UConn.",
+      "locators": [
+        "Lines 267-295"
+      ]
+    },
+    {
+      "source_id": "source.umn.thrips-general",
+      "title": "How to spot and stop late summer garden pests",
+      "authors": null,
+      "organisation": "University of Minnesota Extension",
+      "url": "https://extension.umn.edu/yard-and-garden-news/how-spot-and-stop-late-summer-garden-pests",
+      "published_at": "2026-08-12",
+      "source_type": "UNIVERSITY_EXTENSION_PEST_GUIDE",
+      "subject_domains": [
+        "thrips",
+        "diagnosis"
+      ],
+      "access_status": "OPENED_VERIFIED",
+      "quality_flags": [
+        "GENERAL_DOMAIN_NOT_SPECIES_SPECIFIC",
+        "OUTDOOR_CONTEXT"
+      ],
+      "limits": "Signes généraux de thrips uniquement; ne prouve pas à elle seule la présence sur M. deliciosa.",
+      "locators": [
+        "Lines 248-257"
+      ]
+    }
+  ],
+  "open_questions": [
+    {
+      "question_id": "open.md.aerial-root-handling",
+      "question": "Peut-on recommander universellement de couper, guider ou enterrer les racines aériennes ?",
+      "importance": "P1",
+      "research_attempted": "RHS, UF/IFAS and peer-reviewed aerial-root anatomy reviewed.",
+      "result": "NO_EVIDENCE_FOUND for a universal indoor rule.",
+      "next_action": "Seek a directly relevant institutional cultivation protocol or label as Tibaldo practice after owner documentation."
+    },
+    {
+      "question_id": "open.md.thrips-direct",
+      "question": "Les thrips sont-ils directement documentés comme ravageur de Monstera deliciosa par une source institutionnelle ouverte ?",
+      "importance": "P1",
+      "research_attempted": "UConn, RHS, NC State and general UMN pest guidance reviewed.",
+      "result": "General signs found; species-specific direct record not found in opened sources.",
+      "next_action": "Search plant-protection/greenhouse production literature before public species-specific wording."
+    },
+    {
+      "question_id": "open.md.humidity-range",
+      "question": "Existe-t-il une plage RH spécifique et directement validée pour la culture intérieure de M. deliciosa ?",
+      "importance": "P1",
+      "research_attempted": "RHS, NC State and UConn reviewed.",
+      "result": "Qualitative preference only; historical 50–75% unsupported.",
+      "next_action": "Keep numeric range withheld unless a directly relevant controlled/institutional source is found."
+    },
+    {
+      "question_id": "open.md.temperature-owner",
+      "question": "Publier la plage RHS 18–25°C avec attribution/contexte, ou rester qualitatif ?",
+      "importance": "OWNER_DECISION",
+      "research_attempted": "RHS, NC State, UConn, UF/IFAS ranges compared.",
+      "result": "Context-dependent divergence.",
+      "next_action": "Owner/editorial decision after Conflict Review."
+    },
+    {
+      "question_id": "open.md.fenestration-causality",
+      "question": "Quel poids éditorial donner aux liens lumière/support–maturité sans causalité expérimentale directe ?",
+      "importance": "P1",
+      "research_attempted": "Muir, Croat, RHS, UConn, NC State reviewed.",
+      "result": "Maturity strong; light/support are horticultural associations.",
+      "next_action": "Retain non-guarantee wording and consider further primary literature."
+    },
+    {
+      "question_id": "open.md.fertiliser-protocol",
+      "question": "Une prescription de fréquence/dilution peut-elle être défendue pour le contexte France/Lille ?",
+      "importance": "P2",
+      "research_attempted": "RHS and UConn guidance compared.",
+      "result": "No universal protocol; product and growth context matter.",
+      "next_action": "If needed, create a separate France/Lille guidance claim tied to a product and owner practice."
+    },
+    {
+      "question_id": "open.md.common-names",
+      "question": "Quels noms communs français doivent être retenus sans confusion avec Philodendron/Rhaphidophora ?",
+      "importance": "P2",
+      "research_attempted": "English institutional common names observed; French authoritative source not established.",
+      "result": "UNVERIFIED for final French common-name policy.",
+      "next_action": "French editorial/taxonomic review."
+    },
+    {
+      "question_id": "open.md.photo-botanix",
+      "question": "Droits d'utilisation de la photo candidate Botanix ?",
+      "importance": "OUT_OF_SCOPE_PHOTO_RIGHTS",
+      "research_attempted": "None; explicitly excluded.",
+      "result": "TO_VERIFY unchanged.",
+      "next_action": "Separate Photo Rights mission only."
+    }
+  ],
+  "publication_prohibitions": [
+    {
+      "claim_id": "claim.md.taxonomy.accepted-name",
+      "decision": "TAXONOMY_REVIEW_REQUIRED",
+      "specialist_review_required": "TAXONOMY_REVIEW_REQUIRED",
+      "reason": "POWO directly records the species as accepted; IPNI independently confirms the nomenclatural name, authorship and original publication. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.taxonomy.classification",
+      "decision": "TAXONOMY_REVIEW_REQUIRED",
+      "specialist_review_required": "TAXONOMY_REVIEW_REQUIRED",
+      "reason": "Direct POWO classification; IPNI confirms family as entered. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.taxonomy.borsigiana",
+      "decision": "TAXONOMY_REVIEW_REQUIRED",
+      "specialist_review_required": "TAXONOMY_REVIEW_REQUIRED",
+      "reason": "Direct synonymy entry in the authoritative taxonomic backbone. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.taxonomy.philodendron-pertusum",
+      "decision": "TAXONOMY_REVIEW_REQUIRED",
+      "specialist_review_required": "TAXONOMY_REVIEW_REQUIRED",
+      "reason": "Direct POWO synonymy record. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.humidity.legacy-50-75",
+      "decision": "NO_EVIDENCE_FOUND",
+      "specialist_review_required": null,
+      "reason": "Opened institutional sources use qualitative terms; none supports both bounds in the same context. Publication Evidence V1: WITHHELD."
+    },
+    {
+      "claim_id": "claim.md.temperature.indoor-guidance",
+      "decision": "QUALIFIED",
+      "specialist_review_required": "HORTICULTURAL_REVIEW_REQUIRED",
+      "reason": "Reliable sources converge qualitatively but not on identical numeric bounds. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.temperature.legacy-minimum-15",
+      "decision": "NO_EVIDENCE_FOUND",
+      "specialist_review_required": null,
+      "reason": "NC State's lower preferred bound approximates 15.6°C, RHS gives 18°C or 18–25°C, UConn uses 45°F/7.2°C for summer outdoor handling, and UF/IFAS gives freeze-damage thresholds; these are not equivalent endpoints. Publication Evidence V1: WITHHELD."
+    },
+    {
+      "claim_id": "claim.md.fertilisation.growing-season",
+      "decision": "QUALIFIED",
+      "specialist_review_required": "HORTICULTURAL_REVIEW_REQUIRED",
+      "reason": "RHS guide/profile converge on balanced feed in growth, with one specifying monthly; UConn cautions about salts and gives regional active-growth months. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.aerial-roots.cut-or-guide",
+      "decision": "NO_EVIDENCE_FOUND",
+      "specialist_review_required": null,
+      "reason": "Opened sources document role/anatomy but not a controlled universal home-practice rule. Publication Evidence V1: WITHHELD."
+    },
+    {
+      "claim_id": "claim.md.safety.mechanism",
+      "decision": "SPECIALIST_REVIEW_REQUIRED",
+      "specialist_review_required": "SAFETY_REVIEW_REQUIRED",
+      "reason": "ASPCA directly identifies insoluble calcium oxalates in the species; NC State independently identifies needle-like calcium oxalate crystals and contact dermatitis. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.safety.humans-children",
+      "decision": "SPECIALIST_REVIEW_REQUIRED",
+      "specialist_review_required": "SAFETY_REVIEW_REQUIRED",
+      "reason": "NC State is species-specific; CHOP provides direct institutional mechanism and symptom guidance for oxalate plants generally; RHS advises keeping the species away from children. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.safety.pets",
+      "decision": "SPECIALIST_REVIEW_REQUIRED",
+      "specialist_review_required": "SAFETY_REVIEW_REQUIRED",
+      "reason": "Direct species-specific ASPCA Animal Poison Control profile. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.editorial-score.light-4-of-5",
+      "decision": "NO_EVIDENCE_FOUND",
+      "specialist_review_required": null,
+      "reason": "No scoring rubric is present in Evidence V1. Publication Evidence V1: WITHHELD."
+    },
+    {
+      "claim_id": "claim.md.editorial-score.watering-2-of-5",
+      "decision": "NO_EVIDENCE_FOUND",
+      "specialist_review_required": null,
+      "reason": "No scoring rubric is present in Evidence V1. Publication Evidence V1: WITHHELD."
+    },
+    {
+      "claim_id": "claim.md.editorial-score.humidity-3-of-5",
+      "decision": "NO_EVIDENCE_FOUND",
+      "specialist_review_required": null,
+      "reason": "No scoring rubric is present in Evidence V1. Publication Evidence V1: WITHHELD."
+    },
+    {
+      "claim_id": "claim.md.editorial-score.difficulty-2-of-5",
+      "decision": "NO_EVIDENCE_FOUND",
+      "specialist_review_required": null,
+      "reason": "No explicit documented scoring criteria have been applied. Publication Evidence V1: WITHHELD."
+    },
+    {
+      "claim_id": "claim.md.faq.required-claim-set",
+      "decision": "WITHHELD",
+      "specialist_review_required": null,
+      "reason": "This is a coverage assessment derived from the atomic claims, not a final FAQ. Publication Evidence V1: WITHHELD."
+    }
+  ],
+  "explicit_gaps": [
+    {
+      "gap_id": "gap.rhaphidophora-comparison",
+      "status": "NO_EVIDENCE_FOUND",
+      "impact": "Comparison excluded pending Evidence addendum."
+    },
+    {
+      "gap_id": "gap.aerial-root-universal-handling",
+      "status": "WITHHELD",
+      "impact": "No universal care rule."
+    },
+    {
+      "gap_id": "gap.thrips-species-specific",
+      "status": "WITHHELD",
+      "impact": "General diagnostic signs only."
+    }
+  ]
+}

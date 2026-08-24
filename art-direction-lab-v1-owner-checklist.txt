@@ -1,0 +1,26 @@
+TIBALDO JUNGLE — ART DIRECTION LAB V1
+OWNER REVIEW CHECKLIST
+
+URL Mac : http://localhost:4175/lab/deliciosa/art-direction-v1
+URL iPhone même Wi-Fi : http://192.168.1.125:4175/lab/deliciosa/art-direction-v1
+
+Répondre YES / NO / ADJUST, puis ajouter une note libre.
+
+1. Première impression après Hero : __________  Note : ______________________________
+2. Origine / liane : __________  Note : _____________________________________________
+3. Feuille juvénile → adulte : __________  Note : __________________________________
+4. Elle grimpe : __________  Note : _________________________________________________
+5. Sous la surface : __________  Note : _____________________________________________
+6. Transitions entre scènes : __________  Note : ___________________________________
+7. Sensation premium : __________  Note : __________________________________________
+8. Trop d’animation ? YES / NO  Note : ______________________________________________
+9. Trop de vide ? YES / NO  Note : __________________________________________________
+10. Dock gênant ? YES / NO  Note : __________________________________________________
+11. Envie de continuer ce langage visuel ? YES / NO / ADJUST  Note : ________________
+
+TEST IPHONE COURT
+- Descendre puis remonter dans la scène Feuille.
+- Vérifier si le passage « Elle change / Elle grimpe » paraît fluide.
+- Observer le dock pendant une scène sticky.
+- Activer « Réduire les animations », recharger et vérifier la lecture statique.
+- Noter tout saut, texte coupé, grand vide ou image qui semble fausse.

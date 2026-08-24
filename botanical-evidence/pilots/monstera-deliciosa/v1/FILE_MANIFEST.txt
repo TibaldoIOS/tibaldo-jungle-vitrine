@@ -1,0 +1,67 @@
+MONSTERA DELICIOSA — EVIDENCE PACK V1 — FILE MANIFEST
+Date: 2026-08-24
+Root: botanical-evidence/pilots/monstera-deliciosa/v1/
+
+CREATED
+
+taxon.json
+  Taxon record and current POWO/IPNI taxonomic decision.
+  Product wiring: NONE.
+
+sources.json
+  Deduplicated register of 15 opened sources used as Evidence, plus one inaccessible candidate explicitly excluded.
+  Product wiring: NONE.
+
+claims.json
+  43 atomic/editorially useful claims covering domains A–Z.
+  Product wiring: NONE.
+
+evidence-links.json
+  93 claim-to-source relationships with relevance, strength, dependency, summary and locator.
+  Product wiring: NONE.
+
+reviews.json
+  13 Review records, including mandatory Taxonomy and Safety reviews. All human reviewer fields remain null/TBD.
+  Product wiring: NONE.
+
+legacy-claim-audit.json
+  34 current Jungle claim/value/location records with Legacy status and replacement mapping.
+  Product wiring: NONE.
+
+conflicts.json
+  7 explicit contextual/material divergences; no averaged recommendations.
+  Product wiring: NONE.
+
+diagnostic-guidance.json
+  8 probabilistic symptom pathways with checks, low-risk actions, red flags and evidence references.
+  Product wiring: NONE.
+
+open-questions.json
+  8 unresolved research/Owner questions, including Photo Botanix scope note.
+  Product wiring: NONE.
+
+validation-report.json
+  Syntax, reference and P0/P1/P2 gate results.
+  Product wiring: NONE.
+
+MONSTERA_DELICIOSA_EVIDENCE_PACK_V1_REPORT.txt
+  Owner-readable report in the required 20-section order.
+  Product wiring: NONE.
+
+MODIFIED OUTSIDE THIS DIRECTORY
+
+NONE.
+
+EXPLICITLY NOT CREATED
+
+- Content Master
+- D4 or motion/page prototype
+- public FAQ or SEO copy
+- product schema/JSON-LD
+- UI/component/route changes
+- Supabase migration/data
+- photo asset or Photo Rights record
+
+GIT
+
+No commit, push or PR created.

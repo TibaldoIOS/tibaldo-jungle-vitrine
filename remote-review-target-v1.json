@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "created_at": "2026-08-24T22:20:00+02:00",
+  "jungle_public_target": "https://jungle.tibaldo.fr",
+  "jungle_beta_target": {
+    "url": "https://beta-jungle.tibaldo.fr",
+    "sites_version": 8,
+    "modified": false
+  },
+  "jungle_lab_target": {
+    "provider": "OpenAI Sites",
+    "project_id": "appgprj_6a8ca5e104208191bb5c745c4ce555ff",
+    "version_number": 1,
+    "deployment_id": "appgdep_6a8ca662c6248191b970f290de848e8b",
+    "base_url": "https://tibaldo-jungle-deliciosa-art-review.tibaldo.chatgpt.site",
+    "review_url": "https://tibaldo-jungle-deliciosa-art-review.tibaldo.chatgpt.site/lab/deliciosa/art-direction-v1",
+    "access_mode": "public",
+    "authentication_required": false,
+    "purpose": "TEMPORARY_REMOTE_OWNER_ART_DIRECTION_REVIEW",
+    "distinct_from_public": true,
+    "distinct_from_beta_product": true,
+    "d1_binding": null,
+    "r2_binding": null,
+    "supabase": false,
+    "search_console": false
+  },
+  "isolation": {
+    "standalone_site": true,
+    "product_routes_packaged": false,
+    "api_routes_packaged": false,
+    "sitemap_present": false,
+    "robots_meta": "noindex,nofollow,nocache",
+    "robots_txt": "User-agent: * / Disallow: /",
+    "canonical_present": false,
+    "public_links_to_lab": 0,
+    "beta_links_to_lab": 0
+  },
+  "source": {
+    "source_branch": "beta/deliciosa-art-direction-lab-v1",
+    "source_head": "738d107074f4b8febae312dc31d419977b7f8041",
+    "preview_branch": "beta/deliciosa-art-direction-remote-review-v1",
+    "standalone_preview_branch": "main",
+    "preview_commit": "4b2574875be161c456574854fcd094f05d62c661"
+  },
+  "safe_preview_target_proven": true
+}

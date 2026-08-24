@@ -1,0 +1,305 @@
+{
+  "schema_version": "1.0.0",
+  "records": [
+    {
+      "consistency_key": "identity.accepted-name",
+      "visible_content_ids": [
+        "content.identity.name"
+      ],
+      "faq_ids": [],
+      "future_structured_data_eligibility": "NOT_ELIGIBLE",
+      "canonical_fact_or_qualified_wording": "Monstera deliciosa est le nom accepté retenu par POWO.",
+      "safety_review_constraint": null,
+      "result": "NOT_ELIGIBLE",
+      "notes": "FAQ et corps dérivent des mêmes claim IDs."
+    },
+    {
+      "consistency_key": "identity.synonymy",
+      "visible_content_ids": [
+        "content.identity.synonyms"
+      ],
+      "faq_ids": [],
+      "future_structured_data_eligibility": "NOT_ELIGIBLE",
+      "canonical_fact_or_qualified_wording": "« Monstera borsigiana » n’est pas une espèce acceptée distincte dans POWO.",
+      "safety_review_constraint": null,
+      "result": "NOT_ELIGIBLE",
+      "notes": "FAQ et corps dérivent des mêmes claim IDs."
+    },
+    {
+      "consistency_key": "origin.native-range",
+      "visible_content_ids": [
+        "content.origin.range"
+      ],
+      "faq_ids": [],
+      "future_structured_data_eligibility": "CANDIDATE_AFTER_OWNER_DECISION",
+      "canonical_fact_or_qualified_wording": "Son aire native documentée par POWO s’étend du sud et sud-est du Mexique jusqu’au Guatemala.",
+      "safety_review_constraint": null,
+      "result": "PASS",
+      "notes": "FAQ et corps dérivent des mêmes claim IDs."
+    },
+    {
+      "consistency_key": "content.origin.habitat",
+      "visible_content_ids": [
+        "content.origin.habitat"
+      ],
+      "faq_ids": [],
+      "future_structured_data_eligibility": "CANDIDATE_AFTER_OWNER_DECISION",
+      "canonical_fact_or_qualified_wording": "C’est une liane des régions tropicales humides.",
+      "safety_review_constraint": null,
+      "result": "PASS",
+      "notes": "FAQ et corps dérivent des mêmes claim IDs."
+    },
+    {
+      "consistency_key": "morphology.development",
+      "visible_content_ids": [
+        "content.morphology.heteroblasty"
+      ],
+      "faq_ids": [],
+      "future_structured_data_eligibility": "CANDIDATE_AFTER_OWNER_DECISION",
+      "canonical_fact_or_qualified_wording": "Les feuilles juvéniles et adultes n’ont pas la même morphologie.",
+      "safety_review_constraint": null,
+      "result": "PASS",
+      "notes": "FAQ et corps dérivent des mêmes claim IDs."
+    },
+    {
+      "consistency_key": "morphology.fenestrations",
+      "visible_content_ids": [
+        "content.morphology.fenestrations"
+      ],
+      "faq_ids": [
+        "faq.md.fenestrations"
+      ],
+      "future_structured_data_eligibility": "CANDIDATE_AFTER_OWNER_DECISION",
+      "canonical_fact_or_qualified_wording": "La maturité compte ; lumière et support sont des associations, pas des garanties.",
+      "safety_review_constraint": null,
+      "result": "PASS",
+      "notes": "FAQ et corps dérivent des mêmes claim IDs."
+    },
+    {
+      "consistency_key": "care.light",
+      "visible_content_ids": [
+        "content.care.light"
+      ],
+      "faq_ids": [
+        "faq.md.placement"
+      ],
+      "future_structured_data_eligibility": "CANDIDATE_AFTER_OWNER_DECISION",
+      "canonical_fact_or_qualified_wording": "Une lumière lumineuse à modérée, filtrée ou indirecte, constitue la recommandation la mieux soutenue.",
+      "safety_review_constraint": null,
+      "result": "PASS",
+      "notes": "FAQ et corps dérivent des mêmes claim IDs."
+    },
+    {
+      "consistency_key": "care.watering",
+      "visible_content_ids": [
+        "content.care.watering"
+      ],
+      "faq_ids": [
+        "faq.md.watering"
+      ],
+      "future_structured_data_eligibility": "CANDIDATE_AFTER_OWNER_DECISION",
+      "canonical_fact_or_qualified_wording": "Observez le substrat avant d’arroser.",
+      "safety_review_constraint": null,
+      "result": "PASS",
+      "notes": "FAQ et corps dérivent des mêmes claim IDs."
+    },
+    {
+      "consistency_key": "care.humidity",
+      "visible_content_ids": [
+        "content.care.humidity"
+      ],
+      "faq_ids": [],
+      "future_structured_data_eligibility": "CANDIDATE_AFTER_OWNER_DECISION",
+      "canonical_fact_or_qualified_wording": "Elle préfère un air modérément à assez humide.",
+      "safety_review_constraint": null,
+      "result": "PASS",
+      "notes": "FAQ et corps dérivent des mêmes claim IDs."
+    },
+    {
+      "consistency_key": "care.temperature",
+      "visible_content_ids": [
+        "content.care.temperature"
+      ],
+      "faq_ids": [],
+      "future_structured_data_eligibility": "NOT_ELIGIBLE",
+      "canonical_fact_or_qualified_wording": "Conservez-la dans des conditions chaudes et évitez les froids prolongés.",
+      "safety_review_constraint": null,
+      "result": "NOT_ELIGIBLE",
+      "notes": "FAQ et corps dérivent des mêmes claim IDs."
+    },
+    {
+      "consistency_key": "rootzone.substrate",
+      "visible_content_ids": [
+        "content.rootzone.substrate"
+      ],
+      "faq_ids": [],
+      "future_structured_data_eligibility": "CANDIDATE_AFTER_OWNER_DECISION",
+      "canonical_fact_or_qualified_wording": "Le milieu racinaire doit rester ouvert, aéré et drainant.",
+      "safety_review_constraint": null,
+      "result": "PASS",
+      "notes": "FAQ et corps dérivent des mêmes claim IDs."
+    },
+    {
+      "consistency_key": "rootzone.container",
+      "visible_content_ids": [
+        "content.rootzone.pot"
+      ],
+      "faq_ids": [
+        "faq.md.drainage"
+      ],
+      "future_structured_data_eligibility": "CANDIDATE_AFTER_OWNER_DECISION",
+      "canonical_fact_or_qualified_wording": "Utilisez un contenant drainant et augmentez son volume progressivement.",
+      "safety_review_constraint": null,
+      "result": "PASS",
+      "notes": "FAQ et corps dérivent des mêmes claim IDs."
+    },
+    {
+      "consistency_key": "rootzone.repotting",
+      "visible_content_ids": [
+        "content.rootzone.repotting"
+      ],
+      "faq_ids": [
+        "faq.md.repotting"
+      ],
+      "future_structured_data_eligibility": "CANDIDATE_AFTER_OWNER_DECISION",
+      "canonical_fact_or_qualified_wording": "Fiez-vous aux racines et à la stabilité, pas à un calendrier rigide.",
+      "safety_review_constraint": null,
+      "result": "PASS",
+      "notes": "FAQ et corps dérivent des mêmes claim IDs."
+    },
+    {
+      "consistency_key": "care.fertilisation",
+      "visible_content_ids": [
+        "content.care.fertilisation"
+      ],
+      "faq_ids": [],
+      "future_structured_data_eligibility": "CANDIDATE_AFTER_OWNER_DECISION",
+      "canonical_fact_or_qualified_wording": "Un engrais équilibré peut accompagner la croissance active.",
+      "safety_review_constraint": null,
+      "result": "PASS",
+      "notes": "FAQ et corps dérivent des mêmes claim IDs."
+    },
+    {
+      "consistency_key": "propagation.node",
+      "visible_content_ids": [
+        "content.propagation.node"
+      ],
+      "faq_ids": [],
+      "future_structured_data_eligibility": "CANDIDATE_AFTER_OWNER_DECISION",
+      "canonical_fact_or_qualified_wording": "Une bouture de tige doit conserver au moins un nœud.",
+      "safety_review_constraint": null,
+      "result": "PASS",
+      "notes": "FAQ et corps dérivent des mêmes claim IDs."
+    },
+    {
+      "consistency_key": "support.role",
+      "visible_content_ids": [
+        "content.support.role"
+      ],
+      "faq_ids": [],
+      "future_structured_data_eligibility": "CANDIDATE_AFTER_OWNER_DECISION",
+      "canonical_fact_or_qualified_wording": "Un support accompagne le port grimpant et stabilise les tiges.",
+      "safety_review_constraint": null,
+      "result": "PASS",
+      "notes": "FAQ et corps dérivent des mêmes claim IDs."
+    },
+    {
+      "consistency_key": "aerial-roots.role",
+      "visible_content_ids": [
+        "content.aerial-roots.role"
+      ],
+      "faq_ids": [],
+      "future_structured_data_eligibility": "CANDIDATE_AFTER_OWNER_DECISION",
+      "canonical_fact_or_qualified_wording": "Elles participent à l’ancrage et à la progression de la liane.",
+      "safety_review_constraint": null,
+      "result": "PASS",
+      "notes": "FAQ et corps dérivent des mêmes claim IDs."
+    },
+    {
+      "consistency_key": "growth.dimensions",
+      "visible_content_ids": [
+        "content.dimensions.context"
+      ],
+      "faq_ids": [],
+      "future_structured_data_eligibility": "CANDIDATE_AFTER_OWNER_DECISION",
+      "canonical_fact_or_qualified_wording": "La taille dépend entièrement du contexte.",
+      "safety_review_constraint": null,
+      "result": "PASS",
+      "notes": "FAQ et corps dérivent des mêmes claim IDs."
+    },
+    {
+      "consistency_key": "care.pruning-cleaning",
+      "visible_content_ids": [
+        "content.pruning.cleaning"
+      ],
+      "faq_ids": [],
+      "future_structured_data_eligibility": "CANDIDATE_AFTER_OWNER_DECISION",
+      "canonical_fact_or_qualified_wording": "La taille peut contenir la liane ; l’essuyage doux facilite l’inspection.",
+      "safety_review_constraint": null,
+      "result": "PASS",
+      "notes": "FAQ et corps dérivent des mêmes claim IDs."
+    },
+    {
+      "consistency_key": "safety.oxalates",
+      "visible_content_ids": [
+        "content.safety.candidate"
+      ],
+      "faq_ids": [
+        "faq.md.safety"
+      ],
+      "future_structured_data_eligibility": "NOT_ELIGIBLE",
+      "canonical_fact_or_qualified_wording": "La mastication peut exposer à des cristaux insolubles d’oxalate de calcium irritants.",
+      "safety_review_constraint": "SAFETY_REVIEW_REQUIRED",
+      "result": "NOT_ELIGIBLE",
+      "notes": "FAQ et corps dérivent des mêmes claim IDs."
+    },
+    {
+      "consistency_key": "diagnostic.pests",
+      "visible_content_ids": [
+        "content.pests.documented"
+      ],
+      "faq_ids": [],
+      "future_structured_data_eligibility": "CANDIDATE_AFTER_OWNER_DECISION",
+      "canonical_fact_or_qualified_wording": "Cochenilles et acariens sont directement documentés ; les cochenilles farineuses sont aussi signalées.",
+      "safety_review_constraint": null,
+      "result": "PASS",
+      "notes": "FAQ et corps dérivent des mêmes claim IDs."
+    },
+    {
+      "consistency_key": "comparison.borsigiana",
+      "visible_content_ids": [
+        "content.comparison.borsigiana"
+      ],
+      "faq_ids": [],
+      "future_structured_data_eligibility": "NOT_ELIGIBLE",
+      "canonical_fact_or_qualified_wording": "Ce nom relève ici de la synonymie POWO, pas d’une comparaison entre deux espèces acceptées.",
+      "safety_review_constraint": null,
+      "result": "NOT_ELIGIBLE",
+      "notes": "FAQ et corps dérivent des mêmes claim IDs."
+    },
+    {
+      "consistency_key": "comparison.rhaphidophora",
+      "visible_content_ids": [
+        "content.comparison.rhaphidophora-gap"
+      ],
+      "faq_ids": [],
+      "future_structured_data_eligibility": "NOT_ELIGIBLE",
+      "canonical_fact_or_qualified_wording": "Comparaison reportée : le pack actuel ne contient pas de claims ni d’EvidenceLinks suffisamment proches.",
+      "safety_review_constraint": null,
+      "result": "NOT_ELIGIBLE",
+      "notes": "FAQ et corps dérivent des mêmes claim IDs."
+    },
+    {
+      "consistency_key": "studio.observe-first",
+      "visible_content_ids": [
+        "content.studio.observation"
+      ],
+      "faq_ids": [],
+      "future_structured_data_eligibility": "CANDIDATE_AFTER_OWNER_DECISION",
+      "canonical_fact_or_qualified_wording": "Observez d’abord la motte, la lumière et le port avant de corriger plusieurs paramètres.",
+      "safety_review_constraint": null,
+      "result": "PASS",
+      "notes": "FAQ et corps dérivent des mêmes claim IDs."
+    }
+  ]
+}

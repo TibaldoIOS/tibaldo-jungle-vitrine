@@ -1,0 +1,37 @@
+MONSTERA DELICIOSA — SPECIES EXPERIENCE V4 / KNOWLEDGE SCROLL V1
+ART DIRECTION PLAN — 24 AOÛT 2026
+
+PRINCIPE
+Le scroll ne simule pas la croissance. Il révèle une connaissance, puis laisse un temps de lecture. La photographie reste limitée au Hero frozen. Le reste emploie typographie, lignes, surfaces, diagrammes CSS éditoriaux et données du Content Master.
+
+ACTES / RYTHME
+I. Identité & origine — LEVEL 4, sticky 2,2 viewports. Une ligne de nomenclature devient l’axe géographique puis l’axe de liane. Point acquis : liane tropicale, aire native POWO, hémiépiphytisme qualifié.
+II. Une feuille qui change — LEVEL 5, sticky 3 viewports. Une silhouette CSS éditoriale passe d’un contour entier à une lecture adulte annotée. Point acquis : hétéroblastie, découpes et perforations ; aucune fausse croissance photographique.
+III. Pourquoi ces trous ? — LEVEL 3, calme éditorial. Fait / association / hypothèse Muir clairement séparés.
+IV. Environnement — LEVEL 3. Un seul champ atmosphérique compose lumière, humidité et température qualitatives.
+V. Eau & substrat — LEVEL 4, sticky 2,4 viewports. Observer → arroser → égoutter ; le niveau conceptuel descend puis traverse la coupe.
+VI. Sous la surface — LEVEL 5, sticky 2,6 viewports. Coupe racinaire abstraite ; substrat, drainage, pot, rempotage et fertilisation minimale se révèlent ensemble.
+VII. Grimper — LEVEL 4, sticky 2,2 viewports. Axe vertical, nœud et racines aériennes ; support sans promesse de fenestration.
+VIII. Prendre de l’ampleur — LEVEL 3. Trois contextes de dimensions non fusionnés, puis taille/nettoyage.
+IX. Diagnostic — LEVEL 1 + interaction. Six symptômes ; une investigation ouverte maximum.
+X. Conseil du Studio — LEVEL 2. Changement de voix explicite JUNGLE_EDITORIAL_GUIDANCE.
+XI. FAQ — LEVEL 1. Cinq questions éligibles ; Safety absente.
+XII. Sources — LEVEL 0. Regroupement par rôle et source proximity.
+
+SCÈNES FORTES
+Feuille/hétéroblastie et Sous la surface. Deux LEVEL 5 maximum.
+
+SCÈNES CALMES
+Fenestrations, environnement, dimensions, diagnostic, FAQ et sources.
+
+TRANSITIONS
+Hero→ligne de nomenclature→axe géographique→nervure de feuille→rayon lumineux→ligne d’eau→coupe du substrat→racines→axe de support→échelle de dimensions→ligne d’investigation.
+
+ASSETS
+Hero local existant uniquement : /monstera-deliciosa-feuilles.jpg. Aucun nouvel asset externe. Diagrammes créés en CSS et explicitement étiquetés « schéma éditorial ».
+
+RISQUES MOBILE / SAFARI
+Sticky limité en durée ; 100svh avec fallback ; transforms uniquement ; aucune animation width/height/top/left ; un listener scroll passif et un requestAnimationFrame ; masques décoratifs dégradables ; état statique par défaut ; reduced-motion et no-JS complets.
+
+EXCLUSIONS
+Safety, scores, Rhaphidophora, thrips spécifique, valeurs RH/température universelles, arrosage calendaire, borsigiana distincte, règle universelle racines aériennes, support garantissant les fenestrations.

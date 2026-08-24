@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "taxon_id": "monstera-deliciosa",
+  "status": "EXPLICIT_REVIEW_GAPS_RETAINED",
+  "gaps": [
+    {
+      "gap_id": "gap.taxonomy-human-review",
+      "status": "PENDING_SPECIALIST_REVIEW",
+      "description": "Taxonomie détaillée, authorship, synonymie et borsigiana restent internes.",
+      "next_action": "TAXONOMY_REVIEW_REQUIRED",
+      "owner_action_required": false
+    },
+    {
+      "gap_id": "gap.safety-human-review",
+      "status": "PENDING_SPECIALIST_REVIEW",
+      "description": "Safety et FAQ Safety restent INTERNAL_ONLY.",
+      "next_action": "SAFETY_REVIEW_REQUIRED",
+      "owner_action_required": false
+    },
+    {
+      "gap_id": "gap.editorial-score-rubric",
+      "status": "WITHHELD",
+      "description": "Les scores 4/5, 2/5, 3/5, 2/5 n’ont pas de rubric documentée.",
+      "next_action": "OWNER_OR_SYSTEM_DESIGN_FUTURE",
+      "owner_action_required": false
+    },
+    {
+      "gap_id": "gap.rhaphidophora-evidence",
+      "status": "DEFERRED",
+      "description": "Comparaison Rhaphidophora reportée jusqu’à un Evidence Addendum.",
+      "next_action": "EVIDENCE_ADDENDUM_REQUIRED",
+      "owner_action_required": false
+    },
+    {
+      "gap_id": "gap.numeric-humidity",
+      "status": "WITHHELD",
+      "description": "La plage historique 50–75 % n’est pas soutenue.",
+      "next_action": "NEW_EVIDENCE_REQUIRED",
+      "owner_action_required": false
+    },
+    {
+      "gap_id": "gap.numeric-temperature",
+      "status": "QUALITATIVE_ONLY",
+      "description": "18–28 °C et minimum universel 15 °C restent exclus ; guidance qualitative seulement.",
+      "next_action": "HORTICULTURAL_REVIEW_IF_NUMERIC_WANTED",
+      "owner_action_required": false
+    },
+    {
+      "gap_id": "gap.aerial-root-universal-rule",
+      "status": "WITHHELD",
+      "description": "Aucune règle universelle de coupe, guidage ou enfouissement.",
+      "next_action": "NEW_EVIDENCE_OR_STUDIO_PRACTICE_LABEL_REQUIRED",
+      "owner_action_required": false
+    },
+    {
+      "gap_id": "gap.thrips-species-specific",
+      "status": "WITHHELD",
+      "description": "Thrips non présenté comme ravageur spécifiquement démontré de M. deliciosa.",
+      "next_action": "SPECIES_SPECIFIC_EVIDENCE_REQUIRED",
+      "owner_action_required": false
+    },
+    {
+      "gap_id": "gap.hero-taxonomy-meta",
+      "status": "OWNER_FROZEN_EXCEPTION_P2",
+      "description": "Le Hero frozen affiche Araceae · Monstera alors que la taxonomie détaillée reste pending. Le Hero n’est pas modifié dans cette mission.",
+      "next_action": "OWNER_DECISION_REQUIRED_BEFORE_PRODUCT_INTEGRATION",
+      "owner_action_required": true
+    },
+    {
+      "gap_id": "gap.pest-source-proximity",
+      "status": "P2_EDITORIAL_REFINEMENT",
+      "description": "La proximité source V4 groupe RHS · UConn · UMN alors que le rendu exclut les thrips ; préciser la portée lors d’une future correction V4.",
+      "next_action": "NOT_BLOCKING_OWNER_INTERACTIVE_REVIEW",
+      "owner_action_required": false
+    }
+  ]
+}

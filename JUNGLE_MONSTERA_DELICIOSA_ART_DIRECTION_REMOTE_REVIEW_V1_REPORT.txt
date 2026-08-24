@@ -1,0 +1,355 @@
+TIBALDO JUNGLE — MONSTERA DELICIOSA
+ART DIRECTION LAB V1 — REMOTE REVIEW PREVIEW + SCENE STATE INSPECTOR V1
+FINAL REPORT
+Date : 24 août 2026
+
+======================================================================
+1. EXECUTIVE SUMMARY
+======================================================================
+
+Le prototype Art Direction LAB est accessible sur une cible HTTPS entièrement
+distincte de Jungle PUBLIC et de Jungle BÊTA :
+
+https://tibaldo-jungle-deliciosa-art-review.tibaldo.chatgpt.site/lab/deliciosa/art-direction-v1
+
+La cible est un mini-site Sites autonome. Elle ne contient que la route LAB et
+une redirection racine vers cette route. Elle ne contient ni route produit
+Jungle, ni API métier, ni D1, ni R2, ni Supabase.
+
+Le scroll normal reste disponible. Un Scene State Inspector permet de figer
+chacune des quatre scènes à 0, 25, 50, 75 ou 100 % en conservant exactement le
+même DOM, les mêmes composants et les mêmes règles CSS.
+
+L’asset /plant-monstera.jpg, classé PHOTO_ORIGIN_UNCERTAIN, n’est pas présent
+sur la cible distante (HTTP 404). La scène Grimper utilise temporairement un
+crop de /monstera-deliciosa-feuilles.jpg, asset Jungle déjà servi.
+
+Tests source Jungle : 57/57 PASS.
+Tests standalone preview : 5/5 PASS.
+Build source et build preview : PASS.
+Console distante : 0 erreur.
+Images cassées : 0.
+Overflow horizontal : 0 aux quatre viewports.
+
+READY_FOR_REMOTE_ART_DIRECTION_REVIEW = YES
+READY_FOR_BETA_INTEGRATION = NO
+
+======================================================================
+2. TARGET AUDIT / SAFETY GATE
+======================================================================
+
+JUNGLE_PUBLIC_TARGET=https://jungle.tibaldo.fr
+HTTP=200
+MODIFIED=NO
+
+JUNGLE_BETA_TARGET=https://beta-jungle.tibaldo.fr
+Sites project actuel : Tibaldo Jungle — BÊTA Testeurs
+Sites version : 8
+HTTP=200
+MODIFIED=NO
+
+JUNGLE_LAB_TARGET=https://tibaldo-jungle-deliciosa-art-review.tibaldo.chatgpt.site
+Route : /lab/deliciosa/art-direction-v1
+Provider : OpenAI Sites
+Projet Sites isolé : appgprj_6a8ca5e104208191bb5c745c4ce555ff
+Version preview : 1
+Accès : public par URL, sans authentification
+D1 : null
+R2 : null
+Supabase : absent
+Routes produit/API Jungle : absentes
+
+AVAILABLE_PREVIEW_TARGETS :
+- beta-jungle.tibaldo.fr : REJECTED comme cible, car il s’agit de la BÊTA produit Sites v8.
+- nouveau mini-site Sites isolé : SELECTED.
+
+SAFE_PREVIEW_TARGET_PROVEN=YES
+
+======================================================================
+3. GIT / SOURCE / DEPLOYMENT
+======================================================================
+
+SOURCE_BRANCH=beta/deliciosa-art-direction-lab-v1
+SOURCE_HEAD=738d107074f4b8febae312dc31d419977b7f8041
+PREVIEW_BRANCH=beta/deliciosa-art-direction-remote-review-v1
+STANDALONE_PREVIEW_BRANCH=main
+PREVIEW_COMMIT=4b2574875be161c456574854fcd094f05d62c661
+REMOTE_UPSTREAM=Sites source repository dedicated to the isolated preview
+DIVERGENCE=0 at deployment
+SITES_VERSION=1
+DEPLOYMENT_STATUS=SUCCEEDED
+
+Le projet Jungle source n’a pas été déployé. Le commit déployé appartient au
+mini-site standalone de preview, pas au projet Jungle BÊTA.
+
+======================================================================
+4. HERO / CONTENT / NON-REGRESSION
+======================================================================
+
+HERO_HASH_BEFORE=7eb2e9200b51e2fd16662f963a52b086e79bef94c23cf7485a909fd66115d7fc
+HERO_HASH_AFTER=7eb2e9200b51e2fd16662f963a52b086e79bef94c23cf7485a909fd66115d7fc
+HERO_FROZEN=PASS
+
+V4 SHA-256 : ff01b404b0d5c227c51d03690e46856e634c162ea46e5afdf80029f99c7b21e4
+V4_MODIFIED=NO
+
+Content Master FINAL SHA-256 :
+8754a1ce17ab42323b30d831c0d6700a4766808f419750a4098adc89971fb372
+CONTENT_MASTER_MODIFIED=NO
+
+Nouvelle recherche botanique : NO.
+Complétion Species : NO.
+Redesign artistique : NO.
+
+======================================================================
+5. ASSET RIGHTS AUDIT
+======================================================================
+
+1. /monstera-deliciosa-feuilles.jpg
+Source : asset existant du dépôt Jungle, déjà utilisé et servi par Jungle.
+Statut preview : EXISTING_JUNGLE_PUBLISHED_ASSET.
+Usage distant : Hero frozen, Origine, Feuille, crop temporaire Grimper.
+REMOTE_PREVIEW_ALLOWED=YES.
+
+2. /tibaldo-jungle-logo.webp
+Source : identité propriétaire Tibaldo Jungle.
+REMOTE_PREVIEW_ALLOWED=YES.
+
+3. Sous la surface
+Source : illustration CSS/DOM locale originale.
+REMOTE_PREVIEW_ALLOWED=YES.
+
+4. /plant-monstera.jpg
+Statut : PHOTO_ORIGIN_UNCERTAIN / LAB_LOCAL_REFERENCE_ONLY.
+REMOTE_PREVIEW_ALLOWED=NO.
+Présence sur preview : NO ; HTTP 404 confirmé.
+Remplacement preview : crop de /monstera-deliciosa-feuilles.jpg.
+
+Hotlink photo : 0.
+Botanix : non utilisée.
+UNVERIFIED_EXTERNAL_ASSET_PUBLISHED=NO.
+
+======================================================================
+6. REVIEW MODE — SCENE STATE INSPECTOR
+======================================================================
+
+REVIEW_MODE=IMPLEMENTED
+
+Syntaxe :
+?review=1&scene={origin|leaf|climb|subsurface}&progress={0|25|50|75|100}
+
+Exemple :
+https://tibaldo-jungle-deliciosa-art-review.tibaldo.chatgpt.site/lab/deliciosa/art-direction-v1?review=1&scene=leaf&progress=50
+
+Fonctionnement :
+- même DOM et même contenu que le scroll normal ;
+- même variable de progression --art-p ;
+- état demandé figé après hydratation ;
+- scène automatiquement amenée dans le viewport ;
+- badge discret LAB REVIEW / scène / progression ;
+- aucun listener scroll actif dans le mode review ;
+- aucune mutation du comportement normal sans review=1.
+
+ORIGIN 0/25/50/75/100 : PASS / PASS / PASS / PASS / PASS
+LEAF 0/25/50/75/100 : PASS / PASS / PASS / PASS / PASS
+CLIMB 0/25/50/75/100 : PASS / PASS / PASS / PASS / PASS
+SUBSURFACE 0/25/50/75/100 : PASS / PASS / PASS / PASS / PASS
+
+Chaque état a été ouvert dans le navigateur distant, sa valeur CSS vérifiée et
+une capture 390×844 produite.
+
+======================================================================
+7. SCROLL / MOTION OBSERVABILITY
+======================================================================
+
+SCENE       STICKY  0   25  50  75  100  REVERSE  TRANSITION OUT  ISSUE
+ORIGIN      PASS    PASS PASS PASS PASS PASS PASS     PASS            none
+LEAF        PASS    PASS PASS PASS PASS PASS PASS     PASS            none
+CLIMB       PASS    PASS PASS PASS PASS PASS PASS     PASS            safe crop differs from local-only source asset
+SUBSURFACE  PASS    PASS PASS PASS PASS PASS PASS     PASS            none
+
+Scroll normal : PASS.
+Scroll natif : YES.
+Scroll-jacking : NO.
+Sticky/pinned : conservé.
+Reverse scroll : PASS.
+
+Mesure de retour dans Leaf :
+- progression après scroll descendant : 0.5189 ;
+- progression après retour montant : 0.2227 ;
+- la progression diminue correctement : YES.
+
+Reduced motion : PASS par test source/CSS ; états finaux visibles, hauteur
+narrative neutralisée, aucun contenu critique masqué.
+
+======================================================================
+8. REMOTE VALIDATION
+======================================================================
+
+HTTP_STATUS=200
+HTTPS=PASS
+REMOTE_REVIEW_ACCESSIBLE=YES
+AUTH_REQUIRED=NO
+NOINDEX=PASS
+NOFOLLOW=PASS
+NOCACHE_META=PASS
+ROBOTS_TXT=User-agent:* / Disallow:/
+SITEMAP_EXCLUDED=PASS (HTTP 404)
+CANONICAL_COUNT=0
+PUBLIC_LINKS_TO_LAB=0
+BETA_LINKS_TO_LAB=0
+H1_COUNT=1
+BROKEN_IMAGES=0
+CONSOLE_CRITICAL_ERRORS=0
+
+Responsive browser distant :
+- 360×800 : PASS ; scrollWidth 360 = clientWidth 360 ; scrollHeight 11 381.
+- 390×844 : PASS ; scrollWidth 390 = clientWidth 390 ; scrollHeight 11 997.
+- 820×1180 : PASS ; scrollWidth 820 = clientWidth 820 ; scrollHeight 17 903.
+- 1440×900 : PASS ; scrollWidth 1440 = clientWidth 1440 ; scrollHeight 13 826.
+
+Images chargées : 7/7 à chaque viewport.
+Largeur naturelle photo : 1800 px.
+Largeur naturelle logo : 700 px.
+
+No-JS : PASS documentaire. Le HTML serveur contient le H1, les quatre scènes,
+les textes, les images et les états finaux ; le JS améliore uniquement la
+progression motion.
+
+======================================================================
+9. TESTS / CAPTURES
+======================================================================
+
+Jungle source :
+- tests complets : 57/57 PASS ;
+- TypeScript : PASS ;
+- lint ciblé : PASS ;
+- build Sites/Jungle : PASS ;
+- validation artifact : PASS ;
+- git diff --check : PASS.
+
+Standalone preview :
+- tests ciblés : 5/5 PASS ;
+- lint : PASS avec 1 warning non bloquant no-img-element sur logo ;
+- build : PASS ;
+- route normale distante : PASS ;
+- 20 états de scène distants : PASS.
+
+Captures produites : 24.
+- normal : 360, 390, 820, 1440 ;
+- review : 4 scènes × 5 progressions.
+
+Dossier :
+artifacts/deliciosa-art-direction-remote-review-v1/
+
+======================================================================
+10. ISSUES
+======================================================================
+
+P0 : 0.
+P1 : 0.
+P2 : 0 bloquant pour la revue distante.
+P3-01 : la preview standalone réutilise le CSS global Jungle complet ; le build
+signale des références CSS inutilisées vers des assets non empaquetés, mais
+aucune de ces ressources n’est demandée par la route et aucune image rendue
+n’est cassée.
+
+Les problèmes artistiques éventuels de position photo ou de timing ne sont pas
+corrigés ici : le Review Mode sert précisément à les observer et à les arbitrer.
+
+======================================================================
+11. ROLLBACK
+======================================================================
+
+Rollback immédiat : désactiver ou supprimer uniquement le projet Sites isolé
+appgprj_6a8ca5e104208191bb5c745c4ce555ff.
+
+Alternative : repasser son accès en custom/owner-only pour retirer l’accès
+public sans supprimer la version.
+
+La BÊTA Sites v8 n’a pas été redéployée. Jungle PUBLIC n’a pas été touchée.
+Aucune donnée n’a été créée ou mutée.
+
+ROLLBACK_DATA_REQUIRED=NO.
+
+======================================================================
+12. RÉPONSES OBLIGATOIRES
+======================================================================
+
+1. Cible PUBLIC Jungle ? https://jungle.tibaldo.fr
+2. Cible BÊTA Jungle ? https://beta-jungle.tibaldo.fr — Sites v8, intacte.
+3. Cible LAB/preview ? Site Sites autonome tibaldo-jungle-deliciosa-art-review.
+4. Cible distincte et sûre ? YES.
+5. URL HTTPS exacte ? https://tibaldo-jungle-deliciosa-art-review.tibaldo.chatgpt.site/lab/deliciosa/art-direction-v1
+6. Accessible Internet ? YES.
+7. Auth requise ? NO.
+8. noindex ? YES.
+9. nofollow ? YES.
+10. sitemap exclu ? YES, HTTP 404.
+11. liens publics vers LAB ? 0.
+12. Hero hash avant ? 7eb2e9200b51e2fd16662f963a52b086e79bef94c23cf7485a909fd66115d7fc.
+13. Hero hash après ? Identique.
+14. Hero frozen PASS ? YES.
+15. V4 modifiée ? NO.
+16. Content Master modifié ? NO.
+17. BÊTA produit modifiée ? NO.
+18. PUBLIC modifié ? NO.
+19. Supabase modifié ? NO.
+20. Search Console utilisée ? NO.
+21. /plant-monstera.jpg publiée ? NO ; HTTP 404.
+22. Remplacement ? Crop de /monstera-deliciosa-feuilles.jpg.
+23. Assets distants autorisés ? YES selon le registre de périmètre ; aucun asset externe incertain.
+24. Review Mode implémenté ? YES.
+25. Syntaxe ? ?review=1&scene={origin|leaf|climb|subsurface}&progress={0|25|50|75|100}.
+26. Origin 0/25/50/75/100 ? YES.
+27. Leaf 0/25/50/75/100 ? YES.
+28. Climb 0/25/50/75/100 ? YES.
+29. Subsurface 0/25/50/75/100 ? YES.
+30. Scroll normal conservé ? YES.
+31. Sticky conservé ? YES.
+32. Reverse scroll ? PASS.
+33. Reduced motion ? PASS.
+34. 360 ? PASS.
+35. 390 ? PASS.
+36. 820 ? PASS.
+37. 1440 ? PASS.
+38. Overflow horizontal ? 0.
+39. Images cassées ? 0.
+40. Console critique ? 0.
+41. H1 unique ? YES, 1.
+42. Branche preview ? beta/deliciosa-art-direction-remote-review-v1 ; standalone main.
+43. Commit preview ? 4b2574875be161c456574854fcd094f05d62c661.
+44. Rollback ? YES.
+45. READY_FOR_REMOTE_ART_DIRECTION_REVIEW ? YES.
+46. READY_FOR_BETA_INTEGRATION ? NO.
+47. URL reviewer ? https://tibaldo-jungle-deliciosa-art-review.tibaldo.chatgpt.site/lab/deliciosa/art-direction-v1
+
+======================================================================
+13. VERDICTS
+======================================================================
+
+SAFE_PREVIEW_TARGET_PROVEN=YES
+REMOTE_PREVIEW_DEPLOYED=YES
+REMOTE_REVIEW_ACCESSIBLE=YES
+REMOTE_REVIEW_URL=https://tibaldo-jungle-deliciosa-art-review.tibaldo.chatgpt.site/lab/deliciosa/art-direction-v1
+NOINDEX=PASS
+NOFOLLOW=PASS
+SITEMAP_EXCLUDED=PASS
+HERO_FROZEN=PASS
+V4_MODIFIED=NO
+CONTENT_MASTER_MODIFIED=NO
+BETA_PRODUCT_MODIFIED=NO
+PUBLIC_MODIFIED=NO
+SUPABASE_MODIFIED=NO
+SEARCH_CONSOLE_USED=NO
+UNVERIFIED_EXTERNAL_ASSET_PUBLISHED=NO
+REVIEW_MODE=IMPLEMENTED
+NORMAL_SCROLL_AVAILABLE=YES
+READY_FOR_REMOTE_ART_DIRECTION_REVIEW=YES
+READY_FOR_BETA_INTEGRATION=NO
+
+FINAL VERDICT
+TIBALDO JUNGLE — MONSTERA DELICIOSA ART DIRECTION REMOTE REVIEW V1 —
+READY FOR REMOTE OWNER ART DIRECTION REVIEW
+
+STOP.

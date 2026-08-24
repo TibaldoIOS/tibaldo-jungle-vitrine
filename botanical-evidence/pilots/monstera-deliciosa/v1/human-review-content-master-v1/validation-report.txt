@@ -1,0 +1,64 @@
+MONSTERA DELICIOSA — HUMAN REVIEW + CONTENT MASTER V1 — VALIDATION
+
+Input: 45 claims, 97 EvidenceLinks, 15 sources, 13 reviews, 7 conflicts, 8 diagnostics, 34 Legacy.
+Output: 45 decisions, 24 content units, 8 diagnostics, 6 FAQ, 34 Legacy mappings.
+
+JSON PARSE: PASS
+REFERENTIAL INTEGRITY: PASS
+LEGACY REENTRY SCAN:
+- legacy_humidity_numeric: PASS
+- legacy_temp_min: PASS
+- legacy_temp_range: PASS
+- scores: PASS
+- watering_frequency: PASS
+- borsigiana_distinct: PASS
+- support_guarantee: PASS
+- aerial_root_universal: PASS
+- thrips_specific: PASS
+- safety_approved: PASS
+
+QUALITY GATES:
+- QG-01 — Scope: PASS
+  Le générateur écrit exclusivement dans human-review-content-master-v1/ ; aucun chemin produit, UI, SEO, Supabase ou déploiement.
+- QG-02 — Pack integrity: PASS
+  Les 11 fichiers Evidence autoritaires du dossier parent sont lus uniquement ; aucune écriture parent.
+- QG-03 — Counts and referential integrity: PASS
+  45/45 décisions ; liens claim/source/evidence/review/conflict résolus ; 34/34 Legacy.
+- QG-04 — No simulated specialist review: PASS
+  13/13 reviewers et reviewed_at restent null ; aucune approbation Owner/spécialiste inventée.
+- QG-05 — Safety: PASS
+  Corps et FAQ Safety restent candidates ; 3 claims portent SAFETY_REVIEW_REQUIRED.
+- QG-06 — Withheld numeric claims: PASS
+  50–75 %, minimum universel 15 °C et 18–28 °C universel absents du contenu candidat.
+- QG-07 — Jungle scores: PASS
+  4 scores séparés, WITHHELD/PROHIBITED et absents du contenu candidat.
+- QG-08 — Fenestration epistemic precision: PASS
+  Maturité, associations lumière/support et hypothèse de Muir sont distinguées ; aucune garantie.
+- QG-09 — Aerial roots: PASS
+  Aucune règle universelle couper/guider/enterrer dans le contenu candidat.
+- QG-10 — Pests: PASS
+  Thrips spécifique à M. deliciosa reste WITHHELD ; les limites sont explicites.
+- QG-11 — Taxonomy: PASS
+  borsigiana est traité comme synonyme POWO candidat ; Taxonomy Review reste pending.
+- QG-12 — Diagnostics: PASS
+  8/8 diagnostics multicausaux, vérifiables, prudents et traçables.
+- QG-13 — Source proximity: PASS
+  Chaque unité candidate remonte à des claims/EvidenceLinks ; la lacune Rhaphidophora est INTERNAL_ONLY.
+- QG-14 — Legacy non-reentry: PASS
+  34/34 entrées cartographiées ; 10 recherches anti-réintroduction PASS.
+- QG-15 — Human/structured parity: PASS
+  Chaque unité structurée est présente dans le Content Master humain avec wording et statut.
+- QG-16 — Content completeness: PASS
+  Toutes les sections obligatoires sont présentes ; lacunes marquées explicitement.
+- QG-17 — FAQ consistency: PASS
+  6/6 FAQ answer-first, traçables ; Safety séparée.
+- QG-18 — Future structured-data restraint: PASS
+  Aucune donnée future n’est plus affirmative ; Safety/spécialiste restent NOT_ELIGIBLE.
+- QG-19 — Design independence: PASS
+  Interface sémantique uniquement ; aucune prescription de composant, layout, asset, durée ou animation.
+- QG-20 — Validation: PASS
+  Tous les JSON parsés ; intégrité référentielle et scans Legacy PASS ; générateur reproductible conservé.
+- QG-21 — Stop compliance: PASS
+  Aucun produit, UI, route, Supabase, BÊTA, PUBLIC, SEO, photo, déploiement, commit, push ou PR touché.
+
+VERDICT: READY_WITH_EXPLICIT_REVIEW_GAPS

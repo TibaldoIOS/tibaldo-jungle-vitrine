@@ -1,0 +1,155 @@
+JUNGLE — MONSTERA DELICIOSA
+OWNER DECISIONS FREEZE + CONTENT MASTER V1 FINAL
++ V4 KNOWLEDGE CONTRACT RECONCILIATION V1
+Date : 24 août 2026
+
+EXECUTIVE VERDICT
+
+OWNER_DECISIONS_RECORDED = YES
+CONTENT_MASTER_V1_FINAL_CREATED = YES
+CONTENT_CONTRACT_FROZEN = YES
+EVIDENCE_TRACEABILITY = PASS
+SAFETY_EXCLUDED = PASS
+LEGACY_REJECTED_VALUES_EXCLUDED = PASS
+V4_CONTENT_RECONCILIATION = PASS_WITH_GAPS
+HERO_FROZEN = PASS
+V4_MODIFIED = NO
+BETA_MODIFIED = NO
+PUBLIC_MODIFIED = NO
+READY_FOR_V4_OWNER_INTERACTIVE_REVIEW = YES
+
+1. SCOPE ET BASE
+
+Branche : beta/deliciosa-art-direction-lab-v1
+HEAD : 738d107074f4b8febae312dc31d419977b7f8041
+Mode : génération documentaire + audit V4 READ-ONLY.
+Aucune nouvelle recherche botanique. Aucun commit, push, merge ou déploiement.
+Le travail V4 et Evidence préexistant non suivi a été préservé.
+
+2. DÉCISIONS OWNER
+
+Les 10 décisions explicites du 24 août 2026 sont enregistrées séparément avec portée, claims, content IDs, conditions, date et source OWNER_EXPLICIT_DECISION_2026_08_24.
+
+3. CONTENT MASTER FINAL
+
+24 unités de contenu, 8 diagnostics, 6 FAQ et le registre Source existant sont conservés. Les statuts evidence_confidence, specialist_review_status, owner_decision et publication_eligibility sont distincts.
+CLASS A : usage V4 direct.
+CLASS B : usage V4 uniquement avec qualifier contractuel.
+CLASS C : INTERNAL_ONLY / WITHHELD / SPECIALIST_PENDING.
+
+4. FREEZE
+
+Le manifest fige les IDs, consistency keys, exclusions, claims spécialistes pending et Safety pending pour DELICIOSA_SPECIES_EXPERIENCE_V4_OWNER_INTERACTIVE_REVIEW. Tout changement sémantique futur exige une nouvelle version et une décision traçable.
+
+5. RÉCONCILIATION V4
+
+Matrice totale : 38 lignes.
+PASS : 9
+PASS_WITH_QUALIFIER : 21
+FAIL : 0
+NOT_APPLICABLE : 8
+P0 : 0
+P1 : 0
+P2 : 2 gaps explicites.
+
+Gap P2 1 — Hero frozen : le nom Monstera deliciosa est conforme, mais la métadonnée Araceae · Monstera dépasse l’exception NAME_ONLY. Le Hero est frozen et n’a pas été modifié. Arbitrage Owner requis avant intégration produit, pas avant la revue interactive LAB.
+Gap P2 2 — source proximity ravageurs : le groupe RHS · UConn · UMN gagnerait à préciser la portée de UMN. Aucun thrips n’est rendu.
+
+6. ANTI-RÉINTRODUCTION
+
+PASS : Safety et FAQ Safety absentes du rendu V4.
+PASS : 50–75 %, minimum universel 15 °C, plage universelle 18–28 °C absents.
+PASS : scores 4/5, 2/5, 3/5 absents.
+PASS : arrosage calendaire universel absent.
+PASS : règle universelle racines aériennes absente.
+PASS : support garantissant les fenestrations absent.
+PASS : thrips spécifique absent.
+PASS : borsigiana distincte absent.
+PASS : Rhaphidophora absente.
+PASS : Muir est explicitement HYPOTHÈSE SCIENTIFIQUE.
+PASS : Conseil Studio est JUNGLE_EDITORIAL_GUIDANCE.
+PASS : température, fertilisation et dimensions restent contextualisées.
+PASS : diagnostics restent probabilistes.
+
+7. HERO FROZEN
+
+Référence : 7eb2e9200b51e2fd16662f963a52b086e79bef94c23cf7485a909fd66115d7fc
+Mesuré : 7eb2e9200b51e2fd16662f963a52b086e79bef94c23cf7485a909fd66115d7fc
+Méthode : section JSX Hero, espaces normalisés, SHA-256.
+Verdict : PASS
+
+8. QUALITY GATES
+
+P0 = PASS (0).
+P1 = PASS (0).
+P2 = PARTIAL (2 gaps documentés, non bloquants pour la revue interactive).
+JSON parse = PASS.
+IDs uniques = PASS.
+Claim refs = PASS.
+Evidence refs = PASS.
+Source refs = PASS.
+Consistency keys = PASS.
+Diagnostics = PASS.
+FAQ = PASS.
+Anti-réintroduction = PASS.
+Matrice complète = PASS.
+
+9. RÉPONSES OBLIGATOIRES
+
+1. 10 décisions Owner enregistrées ? YES.
+2. Content Master V1 FINAL créé ? YES.
+3. Content IDs stables ? YES — IDs V1 conservés ; diagnostics et FAQ également conservés.
+4. Qualifiers contractuels ? YES — figés ; leur suppression est une régression.
+5. Safety exclue ? YES — INTERNAL_ONLY, FAQ Safety exclue.
+6. Scores exclus ? YES.
+7. Rhaphidophora exclue ? YES — reportée.
+8. Valeurs numériques rejetées exclues ? YES.
+9. Muir correctement qualifié ? YES — HYPOTHÈSE SCIENTIFIQUE.
+10. Conseil Studio correctement typé ? YES — JUNGLE_EDITORIAL_GUIDANCE.
+11. Diagnostics prudents ? YES — symptôme, causes possibles, vérification, action prudente, escalade.
+12. FAQ cohérente ? YES — cinq FAQ éligibles partagent claims et consistency keys ; Safety absente.
+13. Taxonomie détaillée pending ? YES.
+14. Fertilisation minimale ? YES — qualitative, sans fréquence/dilution/calendrier universels.
+15. Racines aériennes sans règle universelle ? YES.
+16. V4 auditée contre FINAL ? YES — READ-ONLY.
+17. Nombre unités PASS ? 9.
+18. Nombre PASS_WITH_QUALIFIER ? 21.
+19. Nombre FAIL ? 0.
+20. P0 ? 0.
+21. P1 ? 0.
+22. Hero frozen PASS ? YES.
+23. V4 modifiée ? NO.
+24. BÊTA modifiée ? NO.
+25. PUBLIC modifié ? NO.
+26. Supabase modifié ? NO.
+27. Search Console utilisée ? NO.
+28. READY FOR V4 OWNER INTERACTIVE REVIEW ? YES — avec deux gaps P2 explicitement documentés.
+
+10. FICHIERS LIVRÉS
+
+- owner-decisions-v1.json
+- content-master-v1-final.json
+- content-master-v1-final.txt
+- v4-content-reconciliation-v1.json
+- owner-review-gaps-v1.json
+- freeze-manifest-v1.json
+- JUNGLE_MONSTERA_DELICIOSA_OWNER_DECISIONS_CONTENT_MASTER_FREEZE_V1_REPORT.txt
+
+11. PROHIBITED ACTIONS CONFIRMATION
+
+V4_MODIFIED = NO
+BETA_MODIFIED = NO
+PUBLIC_MODIFIED = NO
+SUPABASE_MODIFIED = NO
+SEARCH_CONSOLE_USED = NO
+NEW_BOTANICAL_RESEARCH = NO
+DEPLOYMENT = NO
+COMMIT = NO
+
+FINAL STATUS
+
+CONTENT CONTRACT FROZEN.
+V4 reconciliation PASS_WITH_GAPS, P0=0, P1=0.
+READY FOR V4 OWNER INTERACTIVE REVIEW = YES.
+
+STOP.

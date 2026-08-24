@@ -1,0 +1,93 @@
+MONSTERA DELICIOSA — HUMAN REVIEW + CONTENT MASTER V1 — FILE MANIFEST
+
+generate-content-master.cjs
+  role: Reproducible local generator/validator
+  status: CREATED_ISOLATED_NOT_PRODUCT
+  sha256: 354138d557dac0b2847a736f3892455fc13befc4e1ff12afd1d5d7e1a2bfcd4b
+  authority: Evidence Pack V1
+
+HUMAN_REVIEW_CONTENT_MASTER_V1_REPORT.txt
+  role: Derived Human Review / Content Master deliverable
+  status: CREATED_ISOLATED_NOT_PRODUCT
+  sha256: a6d56f51950a6c1e0c9e6dcecc9b0ef79a37986e976471d7d087a3ef0f513dc9
+  authority: Evidence Pack V1
+
+human-review-decisions.json
+  role: Derived Human Review / Content Master deliverable
+  status: CREATED_ISOLATED_NOT_PRODUCT
+  sha256: 59c571e1e0cfa30fce6eea11ad6c8bb25470600fb0687447749b33c2d1666f9a
+  authority: Evidence Pack V1
+
+MONSTERA_DELICIOSA_CONTENT_MASTER_V1.md
+  role: Derived Human Review / Content Master deliverable
+  status: CREATED_ISOLATED_NOT_PRODUCT
+  sha256: d94af92bc4b1f0cd2068cb9f3249e28a5cb05b0b5fda1088101cc29261744a1e
+  authority: Evidence Pack V1
+
+content-master-v1.json
+  role: Derived Human Review / Content Master deliverable
+  status: CREATED_ISOLATED_NOT_PRODUCT
+  sha256: cb40a8131613fb8ded0af5757f4510a980d2a443a5bce856370c6bc6194b76d3
+  authority: Evidence Pack V1
+
+knowledge-scroll-content-interface-v1.json
+  role: Derived Human Review / Content Master deliverable
+  status: CREATED_ISOLATED_NOT_PRODUCT
+  sha256: 947086fe4b8f9897d47ffd14042a8c94c1b2272f7882b49d8464f5fe4ed40780
+  authority: Evidence Pack V1
+
+knowledge-scroll-content-interface-schema-v1.md
+  role: Derived Human Review / Content Master deliverable
+  status: CREATED_ISOLATED_NOT_PRODUCT
+  sha256: 27d09f65b785fd71b2d88546f08eed301f6229df5456d974e5ab0351c554d2d2
+  authority: Evidence Pack V1
+
+diagnostics-v1.json
+  role: Derived Human Review / Content Master deliverable
+  status: CREATED_ISOLATED_NOT_PRODUCT
+  sha256: 7652112548e08c016d838bee2b296549260707b7d0bb5540218de100ec023023
+  authority: Evidence Pack V1
+
+faq-v1.json
+  role: Derived Human Review / Content Master deliverable
+  status: CREATED_ISOLATED_NOT_PRODUCT
+  sha256: dc353720b5bd92bfd07f8967214b440e73b34dc411e3642b679f8073f5cdde1a
+  authority: Evidence Pack V1
+
+legacy-evidence-content-master-matrix.json
+  role: Derived Human Review / Content Master deliverable
+  status: CREATED_ISOLATED_NOT_PRODUCT
+  sha256: d509ced032e5b2ed03a654f72018f4878e393dd5a702dd4121dea86f2f12b5b8
+  authority: Evidence Pack V1
+
+publication-prohibitions-and-review-required.json
+  role: Derived Human Review / Content Master deliverable
+  status: CREATED_ISOLATED_NOT_PRODUCT
+  sha256: 96023623e60d0608e2e5d870f58ca44baadcad639c6d5d8ee70370c286000279
+  authority: Evidence Pack V1
+
+consistency-audit-v1.json
+  role: Derived Human Review / Content Master deliverable
+  status: CREATED_ISOLATED_NOT_PRODUCT
+  sha256: d41b130ffda9d703da26d34a517368348843cd8870f5479d049ccfdd1196780e
+  authority: Evidence Pack V1
+
+OPEN_QUESTIONS_OWNER_DECISIONS.txt
+  role: Derived Human Review / Content Master deliverable
+  status: CREATED_ISOLATED_NOT_PRODUCT
+  sha256: e8a99a6e18bf028da1da43b681199c1d7c90c029f3e71ca5d741f86fd3d88ef5
+  authority: Evidence Pack V1
+
+validation-report.txt
+  role: Derived Human Review / Content Master deliverable
+  status: CREATED_ISOLATED_NOT_PRODUCT
+  sha256: 048e0a2d79b5ae11934296a13264169f66a49f6cabfba67a3b5a17eab4c5650d
+  authority: Evidence Pack V1
+
+FILE_MANIFEST_HUMAN_REVIEW_CONTENT_MASTER_V1.txt
+  role: Self-describing manifest for all 15 derived files
+  status: CREATED_ISOLATED_NOT_PRODUCT
+  sha256: NOT_APPLICABLE_SELF_REFERENTIAL
+  authority: Evidence Pack V1
+
+Evidence Pack parent files modified: NONE. Product files modified: NONE. Commit/push/deployment: NONE.

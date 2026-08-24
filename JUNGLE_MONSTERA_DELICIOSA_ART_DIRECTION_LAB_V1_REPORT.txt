@@ -1,0 +1,258 @@
+TIBALDO JUNGLE — MONSTERA DELICIOSA
+ART DIRECTION LAB V1 — MOTION × BOTANICAL VISUAL PROTOTYPE
+Date : 24 août 2026
+
+FINAL STATUS
+
+ART_DIRECTION_LAB_CREATED=YES
+V4_MODIFIED=NO
+HERO_FROZEN=PASS
+CONTENT_MASTER_MODIFIED=NO
+BETA_MODIFIED=NO
+PUBLIC_MODIFIED=NO
+SUPABASE_MODIFIED=NO
+SEARCH_CONSOLE_USED=NO
+NEW_BOTANICAL_RESEARCH=NO
+EXTERNAL_REFERENCE_ASSETS_PUBLISHED=NO
+MOTION_WIX_PRINCIPLES_PROTOTYPED=YES
+MOTION_SOBHA_PRINCIPLES_PROTOTYPED=YES
+MOTION_DVIGA_PRINCIPLES_PROTOTYPED=YES
+SCENE_ORIGIN_READY=YES
+SCENE_LEAF_READY=YES
+SCENE_CLIMB_READY=YES_WITH_OWNER_ASSET_REVIEW
+SCENE_SUBSURFACE_READY=YES
+MOBILE_390_READY=YES_WITH_OWNER_IPHONE_CHECK
+REDUCED_MOTION_READY=YES
+READY_FOR_OWNER_ART_DIRECTION_REVIEW=YES_WITH_CONDITIONS
+READY_FOR_BETA_INTEGRATION=NO
+
+======================================================================
+1. PÉRIMÈTRE / GIT
+======================================================================
+
+Branche : beta/deliciosa-art-direction-lab-v1
+HEAD de base : 738d107074f4b8febae312dc31d419977b7f8041
+Route : /lab/deliciosa/art-direction-v1
+Déploiement : aucun.
+Commit / push / merge : aucun.
+
+Le prototype est composé uniquement de fichiers LAB isolés, d’un test ciblé, du storyboard, de la checklist, du rapport et de ce dossier d’artefacts. Il est supprimable sans activer une autre Species.
+
+Travail préexistant préservé : V4 LAB, Content Master/Evidence et artefacts antérieurs non suivis.
+
+======================================================================
+2. HERO FROZEN / NON-RÉGRESSION
+======================================================================
+
+HERO_HASH_BEFORE : 7eb2e9200b51e2fd16662f963a52b086e79bef94c23cf7485a909fd66115d7fc
+HERO_HASH_AFTER  : 7eb2e9200b51e2fd16662f963a52b086e79bef94c23cf7485a909fd66115d7fc
+HERO_FROZEN : PASS
+
+Méthode : section JSX species-next-hero, espaces normalisés, SHA-256.
+
+V4 source SHA-256 : ff01b404b0d5c227c51d03690e46856e634c162ea46e5afdf80029f99c7b21e4
+V4 route locale : HTTP 200.
+Species Deliciosa locale : HTTP 200.
+V4_MODIFIED : NO.
+
+======================================================================
+3. CONTENT MASTER FINAL
+======================================================================
+
+Le LAB consomme directement :
+botanical-evidence/pilots/monstera-deliciosa/v1/owner-decisions-content-master-final-v1/content-master-v1-final.json
+
+SHA-256 du Content Master FINAL utilisé :
+8754a1ce17ab42323b30d831c0d6700a4766808f419750a4098adc89971fb372
+
+Unités utilisées :
+- content.origin.range
+- content.origin.habitat
+- content.morphology.heteroblasty
+- content.support.role
+- content.aerial-roots.role
+- content.rootzone.substrate
+- content.rootzone.pot
+- content.rootzone.repotting
+- content.care.fertilisation
+
+Les condensations visuelles portent data-lab-visual-excerpt / LAB_VISUAL_EXCERPT. Les qualifiers de l’hémiépiphytisme, du support, des racines aériennes, du rempotage et de la fertilisation restent visibles.
+
+Anti-réintroduction rendu/HTML : PASS.
+Absents : 50–75 %, minimum 15 °C, 18–28 °C universel, scores 2/5–4/5, arrosage calendaire, Rhaphidophora, borsigiana distincte, thrips spécifique, Safety approuvée, Botanix et règles universelles de racines aériennes.
+
+======================================================================
+4. STORYBOARD / DIRECTION ARTISTIQUE
+======================================================================
+
+Storyboard : art-direction-lab-v1-storyboard.txt
+
+SCÈNE 1 — ORIGINE / LIANE
+Une photographie verticale devient la matière principale. Le texte et la géographie arrivent après l’impact visuel. Aucune carte dashboard ni tracé croisé.
+
+SCÈNE 2 — UNE FEUILLE QUI CHANGE
+Scène prioritaire. Trois crops photographiques du même asset local se recomposent : feuille entière, état intermédiaire, feuille adulte. Le dernier crop gagne le plein cadre. La scène est explicitement une lecture morphologique et non une fausse séquence de croissance.
+
+SCÈNE 3 — ELLE GRIMPE
+Une plante entière est rapprochée progressivement vers tige/support/racine aérienne. Le support accompagne le port sans garantir les fenestrations. Aucune règle universelle de conduite des racines aériennes.
+
+SCÈNE 4 — SOUS LA SURFACE
+Une coupe verticale unique remplace les quatre rectangles V4. Contenant, milieu racinaire, racines, drainage, rempotage et nutrition sont révélés dans le même objet pédagogique. Mention explicite : schéma éditorial et aucune recette universelle.
+
+Transitions :
+- OBJECT CONTINUITY : axe végétal/feuille, puis racine/coupe.
+- CHAPTER PORTAL : rideau Hero→Origine et sas typographique « Elle change / Elle grimpe ».
+
+CARD SOUP : NO.
+Cercle/triangles génériques comme feuille : NO.
+Grande dépendance motion : NO.
+
+======================================================================
+5. MOTION TECHNIQUE
+======================================================================
+
+Scroll natif : YES.
+Scroll-jacking : NO.
+Zones sticky : 4.
+Zone de transition progressive supplémentaire : 1.
+Listener scroll : 1, passif.
+requestAnimationFrame : 1 partagé.
+Listeners resize/pageshow : 1 chacun.
+
+Techniques : position:sticky, transform, opacity, clip-path, crops photographiques, variables CSS.
+GSAP / Lenis / Locomotive / Three.js / WebGL / vidéo : NO.
+Nouvelle dépendance : 0.
+
+Contrôleur client : 2 365 octets bruts ; 845 octets gzip du source.
+CSS LAB : 17 638 octets.
+
+Le dock mobile conserve ses liens et touch targets. Pendant une scène sticky, il se met en retrait par opacité/translation légère ; focus ou hover restaure immédiatement sa pleine présence.
+
+======================================================================
+6. ASSETS / DROITS
+======================================================================
+
+1. /monstera-deliciosa-feuilles.jpg
+Statut : asset local déjà utilisé par le Hero frozen et par V4/D3 ; réutilisé en crops LAB.
+Usage : Hero, Origine et Morphologie.
+Publication externe nouvelle : NO.
+
+2. /plant-monstera.jpg
+Statut : PHOTO_ORIGIN_UNCERTAIN / LAB_LOCAL_REFERENCE_ONLY.
+Usage : scène Elle grimpe uniquement dans ce LAB local.
+Condition : remplacement ou validation de droits obligatoire avant toute intégration produit/BÊTA.
+
+3. Illustration Sous la surface
+Statut : CSS/DOM local créé pour le LAB ; schéma éditorial, non simulation scientifique.
+
+Nouvel asset externe : 0.
+Hotlink : 0.
+Botanix : non utilisée ; statut TO_VERIFY inchangé.
+Références Wix/Sobha/Dviga : principes uniquement, aucun asset ou composant copié.
+
+======================================================================
+7. RESPONSIVE / ROBUSTESSE
+======================================================================
+
+Route Mac : HTTP 200.
+Route réseau Wi-Fi : HTTP 200.
+HTML serveur : 118 656 octets.
+H1 : 1.
+Robots : noindex,nofollow PASS.
+Route absente du sitemap : PASS.
+Assets image locaux : HTTP 200.
+Asset externe rendu : 0.
+Erreur serveur/Vite observée : 0.
+
+360×800 : règles mobile dédiées présentes ; OWNER_VISUAL_CHECK_REQUIRED.
+390×844 : composition mobile autoritaire implémentée ; OWNER_IPHONE_CHECK_REQUIRED.
+820×1180 : composition responsive desktop/tablette ; OWNER_VISUAL_CHECK_REQUIRED.
+1440×900 : composition latérale et crops desktop ; OWNER_VISUAL_CHECK_REQUIRED.
+
+scrollHeight, overflow calculé, images cassées après layout et console navigateur : NOT_MEASURED dans cette session. La politique de sécurité du navigateur intégré bloque l’ouverture/capture automatisée des URL locales/private-network. Aucune valeur n’est inventée.
+
+CAPTURES_AUTOMATED : BLOCKED_BY_LOCAL_BROWSER_POLICY.
+Owner preview interactive : disponible.
+
+======================================================================
+8. REDUCED MOTION / NO-JS / ACCESSIBILITÉ
+======================================================================
+
+REDUCED_MOTION_READY : YES au niveau source/test.
+- sticky narratif neutralisé ;
+- hauteurs de timeline supprimées ;
+- états finaux et textes visibles ;
+- transitions/animations désactivées.
+
+NO_JS : PASS_STRUCTUREL.
+- contenu principal serveur ;
+- photos et illustration présentes ;
+- aucune opacity:0 critique par défaut ;
+- le JS améliore la progression mais ne crée pas la connaissance.
+
+Accessibilité : H1 unique, H2 logiques, nav de scènes, ordre DOM narratif, texte réel, images décoratives alt vide, illustration en role img avec libellé, reduced-motion. Aucune certification WCAG revendiquée.
+
+======================================================================
+9. TESTS
+======================================================================
+
+TypeScript : PASS.
+Lint ciblé : PASS, 0 warning.
+Build Sites/Jungle : PASS.
+Artefact Sites : PASS.
+Tests Jungle + V4 + Art Direction : 56/56 PASS.
+Tests ciblés Art Direction : 6/6 PASS.
+Audit placeholders : PASS.
+git diff --check : PASS.
+HTTP Mac / Wi-Fi : 200 / 200.
+
+Tests ciblés : Hero hash, isolation/noindex, Content Master FINAL, moteur natif/reduced-motion, anti-réintroduction, absence de card soup/dépendance lourde.
+
+======================================================================
+10. ISSUES
+======================================================================
+
+P0 : 0.
+P1 : 0 technique détecté.
+P2-01 : validation visuelle automatisée et captures bloquées par la politique navigateur locale ; Owner iPhone review obligatoire.
+P2-02 : /plant-monstera.jpg reste PHOTO_ORIGIN_UNCERTAIN et ne peut pas passer en BÊTA sans validation/remplacement.
+P3-01 : timing, longueur et niveau de retrait du dock à arbitrer après ressenti iPhone réel.
+
+======================================================================
+11. FICHIERS CRÉÉS
+======================================================================
+
+- app/__lab/deliciosa/art-direction-v1/ArtDirectionScrollController.tsx
+- app/__lab/deliciosa/art-direction-v1/DeliciosaArtDirectionLabV1.tsx
+- app/__lab/deliciosa/art-direction-v1/art-direction-content.ts
+- app/__lab/deliciosa/art-direction-v1/art-direction-v1.css
+- app/lab/deliciosa/art-direction-v1/layout.tsx
+- app/lab/deliciosa/art-direction-v1/page.tsx
+- tests/art-direction-lab-v1.test.mjs
+- art-direction-lab-v1-storyboard.txt
+- art-direction-lab-v1-owner-checklist.txt
+- artifacts/deliciosa-art-direction-lab-v1/CAPTURE_STATUS.txt
+- JUNGLE_MONSTERA_DELICIOSA_ART_DIRECTION_LAB_V1_REPORT.txt
+
+Aucun fichier V4, Species produit, BÊTA ou PUBLIC modifié.
+
+======================================================================
+12. OWNER REVIEW
+======================================================================
+
+Mac : http://localhost:4175/lab/deliciosa/art-direction-v1
+iPhone même Wi-Fi : http://192.168.1.125:4175/lab/deliciosa/art-direction-v1
+
+Checklist : art-direction-lab-v1-owner-checklist.txt
+Serveur local laissé actif.
+
+Décision attendue : OUI / NON / AJUSTER sur le langage visuel uniquement.
+Ne pas intégrer en BÊTA avant validation Owner et résolution de l’asset /plant-monstera.jpg.
+
+VERDICT
+
+TIBALDO JUNGLE — MONSTERA DELICIOSA ART DIRECTION LAB V1 —
+READY FOR OWNER ART DIRECTION REVIEW WITH CONDITIONS
+
+READY_FOR_BETA_INTEGRATION=NO
+STOP.

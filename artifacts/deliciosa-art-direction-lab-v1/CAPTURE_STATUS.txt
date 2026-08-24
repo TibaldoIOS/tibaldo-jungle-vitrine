@@ -1,0 +1,15 @@
+TIBALDO JUNGLE — ART DIRECTION LAB V1
+CAPTURE STATUS
+
+La route locale est disponible et répond HTTP 200 sur Mac et sur le réseau Wi-Fi.
+La politique de sécurité de l’outil de navigation bloque la capture automatisée des URL locales/private-network dans cette session.
+
+CAPTURES_AUTOMATED = BLOCKED_BY_LOCAL_BROWSER_POLICY
+CAPTURES_FABRICATED = NO
+OWNER_INTERACTIVE_PREVIEW = AVAILABLE
+
+Mac : http://localhost:4175/lab/deliciosa/art-direction-v1
+iPhone : http://192.168.1.125:4175/lab/deliciosa/art-direction-v1
+
+Les captures devront être réalisées après ouverture de la preview par le Owner, ou lors d’une session disposant d’un navigateur local autorisé.
+

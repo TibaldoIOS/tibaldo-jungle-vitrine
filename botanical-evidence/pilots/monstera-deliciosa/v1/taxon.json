@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0-pilot",
+  "taxon": {
+    "taxon_id": "taxon.monstera-deliciosa",
+    "canonical_scientific_name": "Monstera deliciosa Liebm.",
+    "accepted_scientific_name": "Monstera deliciosa",
+    "authorship": "Liebm.",
+    "family": "Araceae",
+    "genus": "Monstera",
+    "specific_epithet": "deliciosa",
+    "order": "Alismatales",
+    "rank": "SPECIES",
+    "taxonomic_status": "ACCEPTED",
+    "powo_id": "urn:lsid:ipni.org:names:87478-1",
+    "powo_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:87478-1",
+    "ipni_id": "urn:lsid:ipni.org:names:87478-1",
+    "ipni_url": "https://www.ipni.org/n/87478-1",
+    "synonyms": [
+      {"name": "Monstera borsigiana K.Koch", "status": "SYNONYM_ACCEPTED_BY_POWO", "note": "Ne pas présenter comme une espèce concurrente dans le futur contenu."},
+      {"name": "Monstera deliciosa var. borsigiana (K.Koch) Engl.", "status": "SYNONYM_ACCEPTED_BY_POWO", "note": null},
+      {"name": "Monstera deliciosa var. sierrana G.S.Bunting", "status": "SYNONYM_ACCEPTED_BY_POWO", "note": null},
+      {"name": "Monstera lennea K.Koch", "status": "SYNONYM_ACCEPTED_BY_POWO", "note": null},
+      {"name": "Philodendron pertusum Kunth & C.D.Bouché", "status": "SYNONYM_ACCEPTED_BY_POWO", "note": "Nom historique, pas le genre accepté."}
+    ],
+    "name_notes": "POWO est retenu pour l'acceptation et la synonymie. IPNI confirme la publication nomenclaturale et l'identifiant, sans être utilisé seul comme opinion taxonomique.",
+    "verified_at": "2026-08-24",
+    "review_status": "REVIEW_REQUIRED",
+    "review_id": "review.taxonomy.monstera-deliciosa.v1"
+  }
+}

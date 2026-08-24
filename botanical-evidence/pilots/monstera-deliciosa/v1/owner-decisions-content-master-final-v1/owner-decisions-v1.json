@@ -1,0 +1,303 @@
+{
+  "schema_version": "1.0.0",
+  "taxon_id": "monstera-deliciosa",
+  "status": "OWNER_DECISIONS_RECORDED",
+  "decisions": [
+    {
+      "decision_id": "owner-decision-01",
+      "question": "Autoriser l’usage éditorial des claims candidats non Safety et non spécialisés ?",
+      "decision": "APPROVED",
+      "scope": "NON_SAFETY_NON_SPECIALIST_CONTENT",
+      "affected_content_ids": [
+        "content.origin.range",
+        "content.origin.habitat",
+        "content.morphology.heteroblasty",
+        "content.morphology.fenestrations",
+        "content.care.light",
+        "content.care.watering",
+        "content.care.humidity",
+        "content.care.temperature",
+        "content.rootzone.substrate",
+        "content.rootzone.pot",
+        "content.rootzone.repotting",
+        "content.care.fertilisation",
+        "content.propagation.node",
+        "content.support.role",
+        "content.aerial-roots.role",
+        "content.dimensions.context",
+        "content.pruning.cleaning",
+        "content.pests.documented",
+        "content.studio.observation"
+      ],
+      "conditions": [
+        "Conserver tous les qualifiers obligatoires",
+        "Ne pas augmenter evidence_confidence"
+      ],
+      "affected_claim_ids": [
+        "claim.md.distribution.native-range",
+        "claim.md.distribution.biome",
+        "claim.md.ecology.climbing-liana",
+        "claim.md.ecology.secondary-hemiepiphyte",
+        "claim.md.morphology.heteroblasty",
+        "claim.md.morphology.adult-fenestrations",
+        "claim.md.fenestration.drivers",
+        "claim.md.fenestration.function",
+        "claim.md.light.indoor-preference",
+        "claim.md.watering.substrate-state",
+        "claim.md.watering.standing-water",
+        "claim.md.humidity.qualitative-preference",
+        "claim.md.temperature.indoor-guidance",
+        "claim.md.substrate.properties",
+        "claim.md.pot.drainage",
+        "claim.md.repotting.trigger",
+        "claim.md.fertilisation.growing-season",
+        "claim.md.propagation.node",
+        "claim.md.support.role",
+        "claim.md.aerial-roots.role",
+        "claim.md.dimensions.context",
+        "claim.md.growth.rate-context",
+        "claim.md.pruning.size-control",
+        "claim.md.cleaning.leaf-dust",
+        "claim.md.pests.documented",
+        "claim.md.pests.spider-mite-check"
+      ],
+      "decided_at": "2026-08-24T15:56:13+02:00",
+      "decision_source": "OWNER_EXPLICIT_DECISION_2026_08_24"
+    },
+    {
+      "decision_id": "owner-decision-02",
+      "question": "Publier les scores Jungle historiques ?",
+      "decision": "EXCLUDED",
+      "scope": "JUNGLE_EDITORIAL_SCORES",
+      "affected_content_ids": [],
+      "affected_claim_ids": [
+        "claim.md.editorial-score.light-4-of-5",
+        "claim.md.editorial-score.watering-2-of-5",
+        "claim.md.editorial-score.humidity-3-of-5",
+        "claim.md.editorial-score.difficulty-2-of-5"
+      ],
+      "conditions": [
+        "Hors contenu publiable tant qu’aucune rubric n’est définie"
+      ],
+      "decided_at": "2026-08-24T15:56:13+02:00",
+      "decision_source": "OWNER_EXPLICIT_DECISION_2026_08_24"
+    },
+    {
+      "decision_id": "owner-decision-03",
+      "question": "Publier Safety et la FAQ Safety ?",
+      "decision": "INTERNAL_ONLY",
+      "scope": "SAFETY",
+      "affected_content_ids": [
+        "content.safety.candidate",
+        "faq.md.safety"
+      ],
+      "conditions": [
+        "Safety Review humaine compétente obligatoire avant toute publication"
+      ],
+      "affected_claim_ids": [
+        "claim.md.safety.mechanism",
+        "claim.md.safety.humans-children",
+        "claim.md.safety.pets"
+      ],
+      "decided_at": "2026-08-24T15:56:13+02:00",
+      "decision_source": "OWNER_EXPLICIT_DECISION_2026_08_24"
+    },
+    {
+      "decision_id": "owner-decision-04",
+      "question": "Publier la taxonomie détaillée ?",
+      "decision": "NAME_ONLY_APPROVED_DETAILED_TAXONOMY_PENDING",
+      "scope": "TAXONOMY",
+      "affected_content_ids": [
+        "content.identity.name",
+        "content.identity.synonyms",
+        "content.comparison.borsigiana"
+      ],
+      "conditions": [
+        "Monstera deliciosa autorisé comme identité principale",
+        "Authorship, synonymie détaillée et borsigiana restent internes"
+      ],
+      "affected_claim_ids": [
+        "claim.md.taxonomy.accepted-name",
+        "claim.md.taxonomy.classification",
+        "claim.md.taxonomy.borsigiana",
+        "claim.md.taxonomy.philodendron-pertusum"
+      ],
+      "decided_at": "2026-08-24T15:56:13+02:00",
+      "decision_source": "OWNER_EXPLICIT_DECISION_2026_08_24"
+    },
+    {
+      "decision_id": "owner-decision-05",
+      "question": "Quelle guidance de fertilisation publier ?",
+      "decision": "APPROVED_QUALIFIED",
+      "scope": "FERTILISATION",
+      "affected_content_ids": [
+        "content.care.fertilisation"
+      ],
+      "conditions": [
+        "Fertilisation modérée pendant la croissance active avec un engrais équilibré",
+        "Aucune fréquence, dilution ou calendrier universels"
+      ],
+      "affected_claim_ids": [
+        "claim.md.fertilisation.growing-season"
+      ],
+      "decided_at": "2026-08-24T15:56:13+02:00",
+      "decision_source": "OWNER_EXPLICIT_DECISION_2026_08_24"
+    },
+    {
+      "decision_id": "owner-decision-06",
+      "question": "Publier une règle universelle pour les racines aériennes ?",
+      "decision": "ROLE_APPROVED_UNIVERSAL_RULE_EXCLUDED",
+      "scope": "AERIAL_ROOTS",
+      "affected_content_ids": [
+        "content.aerial-roots.role"
+      ],
+      "conditions": [
+        "Expliquer le rôle",
+        "Ne jamais prescrire toujours couper, ne jamais couper, toujours guider, toujours enterrer ou toujours remettre dans le pot"
+      ],
+      "affected_claim_ids": [
+        "claim.md.aerial-roots.role"
+      ],
+      "decided_at": "2026-08-24T15:56:13+02:00",
+      "decision_source": "OWNER_EXPLICIT_DECISION_2026_08_24"
+    },
+    {
+      "decision_id": "owner-decision-07",
+      "question": "Inclure l’hypothèse scientifique de Muir ?",
+      "decision": "APPROVED_AS_SCIENTIFIC_HYPOTHESIS",
+      "scope": "FENESTRATIONS",
+      "affected_content_ids": [
+        "content.morphology.fenestrations"
+      ],
+      "conditions": [
+        "Identifier explicitement HYPOTHÈSE SCIENTIFIQUE",
+        "Séparer maturité, associations horticoles lumière/support et hypothèse",
+        "Ne pas présenter une fonction évolutive comme définitivement démontrée"
+      ],
+      "affected_claim_ids": [
+        "claim.md.fenestration.drivers",
+        "claim.md.fenestration.function"
+      ],
+      "decided_at": "2026-08-24T15:56:13+02:00",
+      "decision_source": "OWNER_EXPLICIT_DECISION_2026_08_24"
+    },
+    {
+      "decision_id": "owner-decision-08",
+      "question": "Comparer Rhaphidophora tetrasperma ?",
+      "decision": "DEFERRED",
+      "scope": "COMPARISON",
+      "affected_content_ids": [
+        "content.comparison.rhaphidophora-gap"
+      ],
+      "conditions": [
+        "Evidence Addendum futur requis avant comparaison"
+      ],
+      "affected_claim_ids": [],
+      "decided_at": "2026-08-24T15:56:13+02:00",
+      "decision_source": "OWNER_EXPLICIT_DECISION_2026_08_24"
+    },
+    {
+      "decision_id": "owner-decision-09",
+      "question": "Autoriser le Conseil du Studio ?",
+      "decision": "APPROVED_AS_JUNGLE_EDITORIAL_GUIDANCE",
+      "scope": "STUDIO_GUIDANCE",
+      "affected_content_ids": [
+        "content.studio.observation"
+      ],
+      "conditions": [
+        "Rester distinct des faits botaniques",
+        "Ne pas devenir un fait botanique autonome"
+      ],
+      "affected_claim_ids": [
+        "claim.md.watering.substrate-state",
+        "claim.md.light.indoor-preference",
+        "claim.md.support.role"
+      ],
+      "decided_at": "2026-08-24T15:56:13+02:00",
+      "decision_source": "OWNER_EXPLICIT_DECISION_2026_08_24"
+    },
+    {
+      "decision_id": "owner-decision-10",
+      "question": "Autoriser Species Experience V4 / Knowledge Scroll ?",
+      "decision": "APPROVED_WITH_EXCLUSIONS",
+      "scope": "V4_KNOWLEDGE_SCROLL",
+      "affected_content_ids": [
+        "content.identity.name",
+        "content.identity.synonyms",
+        "content.origin.range",
+        "content.origin.habitat",
+        "content.morphology.heteroblasty",
+        "content.morphology.fenestrations",
+        "content.care.light",
+        "content.care.watering",
+        "content.care.humidity",
+        "content.care.temperature",
+        "content.rootzone.substrate",
+        "content.rootzone.pot",
+        "content.rootzone.repotting",
+        "content.care.fertilisation",
+        "content.propagation.node",
+        "content.support.role",
+        "content.aerial-roots.role",
+        "content.dimensions.context",
+        "content.pruning.cleaning",
+        "content.safety.candidate",
+        "content.pests.documented",
+        "content.comparison.borsigiana",
+        "content.comparison.rhaphidophora-gap",
+        "content.studio.observation"
+      ],
+      "conditions": [
+        "Safety pending",
+        "Taxonomie détaillée pending",
+        "Scores Jungle exclus",
+        "Rhaphidophora exclue",
+        "50–75 % RH exclu",
+        "Minimum universel 15 °C exclu",
+        "18–28 °C universel exclu",
+        "Fréquence universelle d’arrosage exclue",
+        "Causalité support → fenestrations exclue",
+        "Règle universelle racines aériennes exclue",
+        "Thrips spécifique exclu",
+        "Toute donnée WITHHELD / PROHIBITED exclue"
+      ],
+      "affected_claim_ids": [
+        "claim.md.taxonomy.accepted-name",
+        "claim.md.taxonomy.classification",
+        "claim.md.taxonomy.borsigiana",
+        "claim.md.taxonomy.philodendron-pertusum",
+        "claim.md.distribution.native-range",
+        "claim.md.distribution.biome",
+        "claim.md.ecology.climbing-liana",
+        "claim.md.ecology.secondary-hemiepiphyte",
+        "claim.md.morphology.heteroblasty",
+        "claim.md.morphology.adult-fenestrations",
+        "claim.md.fenestration.drivers",
+        "claim.md.fenestration.function",
+        "claim.md.light.indoor-preference",
+        "claim.md.watering.substrate-state",
+        "claim.md.watering.standing-water",
+        "claim.md.humidity.qualitative-preference",
+        "claim.md.temperature.indoor-guidance",
+        "claim.md.substrate.properties",
+        "claim.md.pot.drainage",
+        "claim.md.repotting.trigger",
+        "claim.md.fertilisation.growing-season",
+        "claim.md.propagation.node",
+        "claim.md.support.role",
+        "claim.md.aerial-roots.role",
+        "claim.md.dimensions.context",
+        "claim.md.growth.rate-context",
+        "claim.md.pruning.size-control",
+        "claim.md.cleaning.leaf-dust",
+        "claim.md.safety.mechanism",
+        "claim.md.safety.humans-children",
+        "claim.md.safety.pets",
+        "claim.md.pests.documented",
+        "claim.md.pests.spider-mite-check"
+      ],
+      "decided_at": "2026-08-24T15:56:13+02:00",
+      "decision_source": "OWNER_EXPLICIT_DECISION_2026_08_24"
+    }
+  ]
+}

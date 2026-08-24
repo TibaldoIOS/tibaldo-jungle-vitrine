@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0-pilot",
+  "reviews": [
+    {
+      "review_id": "review.research.monstera-deliciosa.v1",
+      "review_type": "RESEARCH_REVIEW", "target_type": "EVIDENCE_PACK", "target_ids": ["taxon.monstera-deliciosa"],
+      "reviewer": null, "reviewed_at": null, "decision": "PENDING_HUMAN_REVIEW",
+      "findings": "Research assistant assembled and cross-checked opened sources. This record is not a human approval.",
+      "required_changes": [], "open_questions": ["Human domain review of publishable wording."], "status": "REVIEW_REQUIRED"
+    },
+    {
+      "review_id": "review.taxonomy.monstera-deliciosa.v1",
+      "review_type": "TAXONOMY_REVIEW", "target_type": "TAXON_AND_CLAIMS",
+      "target_ids": ["taxon.monstera-deliciosa", "claim.md.taxonomy.accepted-name", "claim.md.taxonomy.classification", "claim.md.taxonomy.borsigiana", "claim.md.taxonomy.philodendron-pertusum"],
+      "reviewer": null, "reviewed_at": null, "decision": "PROPOSED_ACCEPT_POWO_BACKBONE_PENDING_HUMAN",
+      "findings": "POWO accepts Monstera deliciosa Liebm.; IPNI confirms authorship/publication. POWO places M. borsigiana and Philodendron pertusum in synonymy.",
+      "required_changes": ["Remove any future presentation of borsigiana as a separate accepted species."],
+      "open_questions": ["Should all POWO synonyms be exposed publicly or only editorially relevant names?"], "status": "REVIEW_REQUIRED"
+    },
+    {
+      "review_id": "review.safety.monstera-deliciosa.v1",
+      "review_type": "SAFETY_REVIEW", "target_type": "CLAIMS",
+      "target_ids": ["claim.md.safety.mechanism", "claim.md.safety.humans-children", "claim.md.safety.pets"],
+      "reviewer": null, "reviewed_at": null, "decision": "PENDING_HUMAN_SAFETY_REVIEW",
+      "findings": "Species-specific institutional evidence supports insoluble calcium oxalates, human oral/contact irritation, and toxicity to dogs/cats. Severity wording must stay measured.",
+      "required_changes": ["Human approval of French safety wording before publication.", "Retain poison-control/veterinary referral for concerning exposure."],
+      "required_qualifiers": ["Irritant/toxic on chewing or ingestion; do not imply airborne toxicity.", "Do not equate common oral irritation with inevitable severe poisoning."],
+      "prohibited_wording": ["mortel", "sans danger", "guérit", "traitement à domicile garanti"],
+      "open_questions": ["Select French public-facing poison-control contact policy at Content Master stage."],
+      "publication_status": "REVIEW_REQUIRED", "status": "REVIEW_REQUIRED"
+    },
+    {
+      "review_id": "review.conflict.native-range.v1", "review_type": "CONFLICT_REVIEW", "target_type": "CLAIM", "target_ids": ["claim.md.distribution.native-range"],
+      "reviewer": null, "reviewed_at": null, "decision": "PROPOSED_USE_POWO_NATIVE_RANGE", "findings": "POWO is narrower than RHS/NC State/UF horticultural profiles. Likely mixing native, regional and cultivated/introduced concepts.",
+      "required_changes": ["Keep native range and introduced/cultivated distribution separate."], "open_questions": [], "status": "REVIEW_REQUIRED"
+    },
+    {
+      "review_id": "review.conflict.fenestration-function.v1", "review_type": "CONFLICT_REVIEW", "target_type": "CLAIM", "target_ids": ["claim.md.fenestration.function"],
+      "reviewer": null, "reviewed_at": null, "decision": "PROPOSED_PUBLISH_AS_HYPOTHESIS_ONLY", "findings": "Muir presents a model-based hypothesis and rejects/qualifies older conjectures; consumer horticultural copy overstates one function.",
+      "required_changes": ["Never state a single proven adaptive function."], "open_questions": ["Whether to include this scientific nuance in the future public page."], "status": "REVIEW_REQUIRED"
+    },
+    {
+      "review_id": "review.conflict.humidity-range.v1", "review_type": "CONFLICT_REVIEW", "target_type": "CLAIM", "target_ids": ["claim.md.humidity.legacy-50-75"],
+      "reviewer": null, "reviewed_at": null, "decision": "PROPOSED_DEPRECATE_NUMERIC_RANGE", "findings": "No opened authoritative source supplies the historical 50–75% range. Qualitative preference is supportable.",
+      "required_changes": ["Withhold the exact range from future Content Master unless new direct evidence is found."], "open_questions": [], "status": "REVIEW_REQUIRED"
+    },
+    {
+      "review_id": "review.conflict.temperature.v1", "review_type": "CONFLICT_REVIEW", "target_type": "CLAIMS", "target_ids": ["claim.md.temperature.indoor-guidance", "claim.md.temperature.legacy-minimum-15"],
+      "reviewer": null, "reviewed_at": null, "decision": "PROPOSED_QUALITATIVE_WARM_GUIDANCE", "findings": "18–25°C (RHS) and 60–85°F/15.6–29.4°C (NC State) are preferred ranges; outdoor handling and freeze-damage values are different claim types.",
+      "required_changes": ["Do not average ranges.", "Do not publish 15°C as a universal minimum."], "open_questions": ["Owner decision: publish RHS 18–25°C with explicit indoor/RHS context or remain qualitative?"], "status": "REVIEW_REQUIRED"
+    },
+    {
+      "review_id": "review.conflict.watering-threshold.v1", "review_type": "CONFLICT_REVIEW", "target_type": "CLAIM", "target_ids": ["claim.md.watering.substrate-state"],
+      "reviewer": null, "reviewed_at": null, "decision": "PROPOSED_QUALITATIVE_SUBSTRATE_CHECK", "findings": "RHS, NC State and UConn converge on checking upper substrate but use different thresholds.",
+      "required_changes": ["Avoid fixed days and false precision."], "open_questions": [], "status": "REVIEW_REQUIRED"
+    },
+    {
+      "review_id": "review.conflict.repotting-frequency.v1", "review_type": "CONFLICT_REVIEW", "target_type": "CLAIM", "target_ids": ["claim.md.repotting.trigger"],
+      "reviewer": null, "reviewed_at": null, "decision": "PROPOSED_USE_OBSERVED_TRIGGERS", "findings": "RHS offers broad time tendencies; UConn provides observable root/container criteria.",
+      "required_changes": ["Prefer rootball/stability signs over a fixed frequency."], "open_questions": [], "status": "REVIEW_REQUIRED"
+    },
+    {
+      "review_id": "review.conflict.fertilisation.v1", "review_type": "CONFLICT_REVIEW", "target_type": "CLAIM", "target_ids": ["claim.md.fertilisation.growing-season"],
+      "reviewer": null, "reviewed_at": null, "decision": "PROPOSED_BALANCED_ACTIVE_GROWTH_ONLY", "findings": "Sources converge on balanced fertiliser in active growth but differ in frequency and local calendar; UConn flags salt sensitivity.",
+      "required_changes": ["No universal frequency or dilution."], "open_questions": ["Whether a product-specific Tibaldo recipe will be documented separately."], "status": "REVIEW_REQUIRED"
+    },
+    {
+      "review_id": "review.conflict.dimensions.v1", "review_type": "CONFLICT_REVIEW", "target_type": "CLAIM", "target_ids": ["claim.md.dimensions.context"],
+      "reviewer": null, "reviewed_at": null, "decision": "PROPOSED_SEPARATE_WILD_OUTDOOR_INDOOR", "findings": "Values differ materially because they describe vine length outdoors, horticultural potential and typical home height.",
+      "required_changes": ["Never present one context-free maximum."], "open_questions": [], "status": "REVIEW_REQUIRED"
+    },
+    {
+      "review_id": "review.editorial.scores.v1", "review_type": "EDITORIAL_REVIEW", "target_type": "CLAIMS", "target_ids": ["claim.md.editorial-score.light-4-of-5", "claim.md.editorial-score.watering-2-of-5", "claim.md.editorial-score.humidity-3-of-5", "claim.md.editorial-score.difficulty-2-of-5"],
+      "reviewer": null, "reviewed_at": null, "decision": "PENDING_OWNER_RUBRIC", "findings": "Scores are UI/editorial outputs, not evidence-backed botanical values.",
+      "required_changes": ["Define a documented rubric before reuse."], "open_questions": ["Owner approval of score rubric."], "status": "REVIEW_REQUIRED"
+    },
+    {
+      "review_id": "review.editorial.content-master-readiness.v1", "review_type": "FINAL_OWNER_REVIEW", "target_type": "EVIDENCE_PACK", "target_ids": ["taxon.monstera-deliciosa"],
+      "reviewer": null, "reviewed_at": null, "decision": "NOT_STARTED", "findings": "Evidence Pack is not a Content Master and cannot self-approve readiness.",
+      "required_changes": ["Resolve or accept listed Owner decisions.", "Complete human Taxonomy, Safety and Editorial reviews."],
+      "open_questions": ["Authorize a later Content Master mission only after review."], "status": "REVIEW_REQUIRED"
+    }
+  ]
+}

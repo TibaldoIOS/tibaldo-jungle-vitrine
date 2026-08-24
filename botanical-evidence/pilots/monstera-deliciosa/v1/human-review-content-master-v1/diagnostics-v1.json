@@ -1,0 +1,324 @@
+{
+  "schema_version": "1.0.0",
+  "diagnostics": [
+    {
+      "diagnostic_id": "diagnostic.md.yellow-leaves",
+      "symptom_label": "Feuille(s) jaune(s)",
+      "short_answer": "Ce signe est compatible avec plusieurs causes : vérifiez avant de conclure.",
+      "possible_causes": [
+        "substrat durablement saturé ou racines altérées",
+        "cochenilles/cochenilles farineuses",
+        "maladie foliaire",
+        "froid récent",
+        "sénescence d'une vieille feuille isolée"
+      ],
+      "what_to_check": [
+        "vérifier l'humidité en profondeur et l'écoulement",
+        "inspecter racines visibles et collet sans conclure sur la seule couleur",
+        "examiner dessous des feuilles, pétioles et nœuds",
+        "reconstituer l'historique de froid et d'arrosage",
+        "distinguer une feuille âgée isolée d'un jaunissement généralisé"
+      ],
+      "prudent_action": [
+        "cesser tout arrosage automatique jusqu'au contrôle du substrat",
+        "isoler si ravageurs suspectés",
+        "corriger seulement la cause observée"
+      ],
+      "avoid": [
+        "affirmer une cause unique à partir du seul symptôme",
+        "appliquer un pesticide sans identification suffisante"
+      ],
+      "escalation_or_limit": "Escalade recommandée si : racines noires/molles; tige molle au collet; progression rapide; suintement ou lésions à halo.",
+      "linked_claim_ids": [
+        "claim.md.diagnostic.yellow-leaves"
+      ],
+      "evidence_link_ids": [
+        "ev.md.uconn.yellowing-pests",
+        "ev.md.uconn.root-rot.yellow",
+        "ev.md.rhs.standing-water.yellow"
+      ],
+      "confidence": "QUALIFIED",
+      "qualifier": "Diagnostic probabiliste ; causes non ordonnées par probabilité.",
+      "safety_flag": false,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "prohibited_inference": "Le symptôme prouve une cause unique.",
+      "source_proximity": "DIRECT"
+    },
+    {
+      "diagnostic_id": "diagnostic.md.brown-tips-patches",
+      "symptom_label": "Pointes, bords ou plages brunes",
+      "short_answer": "Ce signe est compatible avec plusieurs causes : vérifiez avant de conclure.",
+      "possible_causes": [
+        "air très sec ou proximité d'une source de chaleur",
+        "brûlure par lumière directe intense",
+        "tache bactérienne ou anthracnose si motif compatible",
+        "dommage mécanique"
+      ],
+      "what_to_check": [
+        "observer si la lésion est sèche et marginale ou humide/progressive",
+        "chercher halo jaune ou suintement",
+        "vérifier exposition et source de chaleur",
+        "contrôler plusieurs feuilles et la vitesse d'évolution"
+      ],
+      "prudent_action": [
+        "éloigner progressivement d'un soleil brûlant/radiateur si concordant",
+        "isoler et éviter de mouiller le feuillage si lésions suspectes",
+        "demander un diagnostic si progression"
+      ],
+      "avoid": [
+        "affirmer une cause unique à partir du seul symptôme",
+        "appliquer un pesticide sans identification suffisante"
+      ],
+      "escalation_or_limit": "Escalade recommandée si : extension rapide; suintement; taches humides; cankers de tige.",
+      "linked_claim_ids": [
+        "claim.md.diagnostic.brown-areas"
+      ],
+      "evidence_link_ids": [
+        "ev.md.rhs.brown-edges",
+        "ev.md.uconn.leaf-spots"
+      ],
+      "confidence": "QUALIFIED",
+      "qualifier": "Diagnostic probabiliste ; causes non ordonnées par probabilité.",
+      "safety_flag": false,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "prohibited_inference": "Le symptôme prouve une cause unique.",
+      "source_proximity": "DIRECT"
+    },
+    {
+      "diagnostic_id": "diagnostic.md.slow-growth-small-leaves",
+      "symptom_label": "Croissance ralentie ou petites feuilles",
+      "short_answer": "Ce signe est compatible avec plusieurs causes : vérifiez avant de conclure.",
+      "possible_causes": [
+        "lumière insuffisante",
+        "saison ou température moins favorables",
+        "espace racinaire à vérifier",
+        "repousse juvénile après taille",
+        "absence de support pour une liane en croissance"
+      ],
+      "what_to_check": [
+        "comparer l'emplacement et la saison",
+        "vérifier la température récente",
+        "inspecter si les racines atteignent fond et côtés",
+        "identifier une taille récente",
+        "observer si la tige peut grimper"
+      ],
+      "prudent_action": [
+        "corriger un seul facteur observé à la fois",
+        "améliorer progressivement la lumière filtrée",
+        "ajouter un support stable si le port l'exige"
+      ],
+      "avoid": [
+        "affirmer une cause unique à partir du seul symptôme",
+        "appliquer un pesticide sans identification suffisante"
+      ],
+      "escalation_or_limit": "Escalade recommandée si : flétrissement avec racines molles; ravageurs visibles; arrêt brutal accompagné de lésions.",
+      "linked_claim_ids": [
+        "claim.md.diagnostic.slow-growth-small-leaves"
+      ],
+      "evidence_link_ids": [
+        "ev.md.rhs.low-light-holes.slow",
+        "ev.md.rhs.pruning-maturity.slow",
+        "ev.md.uconn.support-leaf-size.slow",
+        "ev.md.uconn.repotting.slow"
+      ],
+      "confidence": "QUALIFIED",
+      "qualifier": "Diagnostic probabiliste ; causes non ordonnées par probabilité.",
+      "safety_flag": false,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "prohibited_inference": "Le symptôme prouve une cause unique.",
+      "source_proximity": "DIRECT"
+    },
+    {
+      "diagnostic_id": "diagnostic.md.no-fenestrations",
+      "symptom_label": "Feuilles sans fenestrations",
+      "short_answer": "Ce signe est compatible avec plusieurs causes : vérifiez avant de conclure.",
+      "possible_causes": [
+        "stade juvénile normal",
+        "lumière insuffisante",
+        "croissance non grimpante ou support absent",
+        "repousse moins mature après taille"
+      ],
+      "what_to_check": [
+        "évaluer l'âge relatif et la succession des feuilles",
+        "vérifier lumière filtrée disponible",
+        "observer le port et l'attache au support",
+        "noter une taille récente"
+      ],
+      "prudent_action": [
+        "patienter si plante juvénile",
+        "améliorer progressivement la lumière",
+        "proposer un support sans promesse de résultat"
+      ],
+      "avoid": [
+        "affirmer une cause unique à partir du seul symptôme",
+        "appliquer un pesticide sans identification suffisante"
+      ],
+      "escalation_or_limit": "Demander un avis si le signe progresse ou reste inexpliqué.",
+      "linked_claim_ids": [
+        "claim.md.diagnostic.no-fenestrations"
+      ],
+      "evidence_link_ids": [
+        "ev.md.ncsu.mature-leaves.no-fen",
+        "ev.md.rhs.low-light-holes.no-fen",
+        "ev.md.rhs.support-holes.no-fen"
+      ],
+      "confidence": "QUALIFIED",
+      "qualifier": "Diagnostic probabiliste ; causes non ordonnées par probabilité.",
+      "safety_flag": false,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "prohibited_inference": "Le symptôme prouve une cause unique.",
+      "source_proximity": "DIRECT"
+    },
+    {
+      "diagnostic_id": "diagnostic.md.spider-mites",
+      "symptom_label": "Ponctuations claires, aspect bronzé ou fines toiles",
+      "short_answer": "Ce signe est compatible avec plusieurs causes : vérifiez avant de conclure.",
+      "possible_causes": [
+        "acariens tétranyques",
+        "stress hydrique pouvant imiter certaines ponctuations"
+      ],
+      "what_to_check": [
+        "loupe sur le revers des feuilles",
+        "papier blanc sous la feuille puis tapotement",
+        "rechercher mobilité et toiles"
+      ],
+      "prudent_action": [
+        "isoler la plante",
+        "rincer soigneusement dessus et dessous",
+        "identifier avant tout pesticide",
+        "suivre uniquement un produit homologué et son étiquette si nécessaire"
+      ],
+      "avoid": [
+        "affirmer une cause unique à partir du seul symptôme",
+        "appliquer un pesticide sans identification suffisante"
+      ],
+      "escalation_or_limit": "Escalade recommandée si : défoliation rapide; infestation généralisée; échec des mesures mécaniques.",
+      "linked_claim_ids": [
+        "claim.md.pests.spider-mite-check"
+      ],
+      "evidence_link_ids": [
+        "ev.md.uconn.spider-mites",
+        "ev.md.umn.mite-check"
+      ],
+      "confidence": "CORROBORATED",
+      "qualifier": "Diagnostic probabiliste ; causes non ordonnées par probabilité.",
+      "safety_flag": false,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "prohibited_inference": "Le symptôme prouve une cause unique.",
+      "source_proximity": "DIRECT"
+    },
+    {
+      "diagnostic_id": "diagnostic.md.scale-mealybugs",
+      "symptom_label": "Bosses brunes, amas blancs cotonneux ou miellat collant",
+      "short_answer": "Ce signe est compatible avec plusieurs causes : vérifiez avant de conclure.",
+      "possible_causes": [
+        "cochenilles à carapace/molles",
+        "cochenilles farineuses"
+      ],
+      "what_to_check": [
+        "inspecter nœuds, pétioles et revers",
+        "distinguer bosses fixées et amas cireux blancs",
+        "chercher miellat et fumagine"
+      ],
+      "prudent_action": [
+        "isoler",
+        "retirer manuellement les individus accessibles",
+        "rincer",
+        "n'utiliser qu'un traitement homologué après identification"
+      ],
+      "avoid": [
+        "affirmer une cause unique à partir du seul symptôme",
+        "appliquer un pesticide sans identification suffisante"
+      ],
+      "escalation_or_limit": "Escalade recommandée si : forte colonisation des crevasses; déclin rapide; plusieurs plantes touchées.",
+      "linked_claim_ids": [
+        "claim.md.pests.documented"
+      ],
+      "evidence_link_ids": [
+        "ev.md.rhs.pests",
+        "ev.md.uconn.pests"
+      ],
+      "confidence": "CORROBORATED",
+      "qualifier": "Diagnostic probabiliste ; causes non ordonnées par probabilité.",
+      "safety_flag": false,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "prohibited_inference": "Le symptôme prouve une cause unique.",
+      "source_proximity": "DIRECT"
+    },
+    {
+      "diagnostic_id": "diagnostic.md.thrips",
+      "symptom_label": "Stries argentées, ponctuations et petits dépôts noirs",
+      "short_answer": "Ce signe est compatible avec plusieurs causes : vérifiez avant de conclure.",
+      "possible_causes": [
+        "thrips",
+        "autres ravageurs ou dommages pouvant produire des marques proches"
+      ],
+      "what_to_check": [
+        "observer les jeunes feuilles et le revers",
+        "chercher insectes fins et déjections noires",
+        "utiliser une loupe",
+        "faire confirmer si doute"
+      ],
+      "prudent_action": [
+        "isoler",
+        "retirer les parties très atteintes si raisonnable",
+        "ne pas appliquer de pesticide sans identification"
+      ],
+      "avoid": [
+        "affirmer une cause unique à partir du seul symptôme",
+        "appliquer un pesticide sans identification suffisante"
+      ],
+      "escalation_or_limit": "Escalade recommandée si : atteinte rapide des nouvelles pousses; infestation multi-plantes.",
+      "linked_claim_ids": [
+        "claim.md.pests.documented"
+      ],
+      "evidence_link_ids": [
+        "ev.md.umn.thrips-general"
+      ],
+      "confidence": "UNVERIFIED",
+      "qualifier": "Les signes sont documentés au niveau général, mais aucune source spécifique à M. deliciosa ouverte dans ce pilote ne confirme directement les thrips.",
+      "safety_flag": false,
+      "publication_status": "INTERNAL_ONLY",
+      "prohibited_inference": "Le symptôme prouve une cause unique.",
+      "source_proximity": "GENERAL_DOMAIN"
+    },
+    {
+      "diagnostic_id": "diagnostic.md.root-rot",
+      "symptom_label": "Flétrissement avec racines ou collet altérés",
+      "short_answer": "Ce signe est compatible avec plusieurs causes : vérifiez avant de conclure.",
+      "possible_causes": [
+        "pourriture racinaire ou de tige associée à un milieu durablement humide",
+        "stress de sécheresse ayant lésé les racines",
+        "autre maladie racinaire"
+      ],
+      "what_to_check": [
+        "examiner odeur et texture du substrat",
+        "inspecter prudemment les racines : brunes/noires, molles, se détachant facilement",
+        "vérifier collet et drainage"
+      ],
+      "prudent_action": [
+        "stopper la saturation",
+        "retirer l'eau stagnante",
+        "faire confirmer l'atteinte avant intervention racinaire importante"
+      ],
+      "avoid": [
+        "affirmer une cause unique à partir du seul symptôme",
+        "appliquer un pesticide sans identification suffisante"
+      ],
+      "escalation_or_limit": "Escalade recommandée si : tige ceinturée au niveau du sol; racines molles généralisées; effondrement rapide.",
+      "linked_claim_ids": [
+        "claim.md.watering.standing-water"
+      ],
+      "evidence_link_ids": [
+        "ev.md.uconn.root-rot",
+        "ev.md.rhs.standing-water"
+      ],
+      "confidence": "CORROBORATED",
+      "qualifier": "Diagnostic probabiliste ; causes non ordonnées par probabilité.",
+      "safety_flag": false,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "prohibited_inference": "Le symptôme prouve une cause unique.",
+      "source_proximity": "DIRECT"
+    }
+  ]
+}

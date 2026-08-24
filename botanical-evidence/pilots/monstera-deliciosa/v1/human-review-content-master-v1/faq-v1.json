@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0.0",
+  "faq": [
+    {
+      "faq_id": "faq.md.placement",
+      "question": "Où placer Monstera deliciosa ?",
+      "short_answer": "Dans une lumière lumineuse à modérée, filtrée ou indirecte.",
+      "long_answer": "Le soleil direct intense peut brûler les feuilles. Acclimatez progressivement toute exposition plus forte et n’utilisez pas de durée ou lux universels.",
+      "linked_claim_ids": [
+        "claim.md.light.indoor-preference"
+      ],
+      "evidence_link_ids": [
+        "ev.md.rhs.light",
+        "ev.md.ncsu.light",
+        "ev.md.uconn.light-context"
+      ],
+      "confidence": "CORROBORATED",
+      "qualifier": null,
+      "safety_flag": false,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "consistency_keys": [
+        "care.light"
+      ]
+    },
+    {
+      "faq_id": "faq.md.watering",
+      "question": "Quand l’arroser ?",
+      "short_answer": "Quand la partie supérieure du substrat a nettement séché.",
+      "long_answer": "Arrosez complètement puis laissez égoutter. Le calendrier ne remplace pas l’observation du substrat.",
+      "linked_claim_ids": [
+        "claim.md.watering.substrate-state",
+        "claim.md.watering.standing-water"
+      ],
+      "evidence_link_ids": [
+        "ev.md.rhs.watering",
+        "ev.md.ncsu.watering",
+        "ev.md.uconn.watering",
+        "ev.md.rhs.standing-water",
+        "ev.md.uconn.root-rot"
+      ],
+      "confidence": "CORROBORATED",
+      "qualifier": null,
+      "safety_flag": false,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "consistency_keys": [
+        "care.watering"
+      ]
+    },
+    {
+      "faq_id": "faq.md.fenestrations",
+      "question": "Pourquoi les nouvelles feuilles n’ont-elles pas de trous ?",
+      "short_answer": "Une plante jeune peut produire des feuilles entières.",
+      "long_answer": "La maturité est le facteur le mieux soutenu. Lumière filtrée suffisante et support accompagnent une croissance plus mature sans garantir les fenestrations.",
+      "linked_claim_ids": [
+        "claim.md.diagnostic.no-fenestrations",
+        "claim.md.fenestration.drivers"
+      ],
+      "evidence_link_ids": [
+        "ev.md.ncsu.mature-leaves.no-fen",
+        "ev.md.rhs.low-light-holes.no-fen",
+        "ev.md.rhs.support-holes.no-fen",
+        "ev.md.ncsu.mature-leaves.drivers",
+        "ev.md.rhs.low-light-holes",
+        "ev.md.rhs.support-holes",
+        "ev.md.uconn.support-leaf-size"
+      ],
+      "confidence": "QUALIFIED",
+      "qualifier": null,
+      "safety_flag": false,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "consistency_keys": [
+        "morphology.fenestrations"
+      ]
+    },
+    {
+      "faq_id": "faq.md.repotting",
+      "question": "Quand rempoter ?",
+      "short_answer": "Quand les racines occupent réellement le contenant ou que la stabilité devient insuffisante.",
+      "long_answer": "Inspectez fond, côtés et motte. Augmentez seulement progressivement le volume du pot.",
+      "linked_claim_ids": [
+        "claim.md.repotting.trigger",
+        "claim.md.pot.drainage"
+      ],
+      "evidence_link_ids": [
+        "ev.md.uconn.repotting.trigger",
+        "ev.md.rhs.repotting",
+        "ev.md.rhs.pot-size",
+        "ev.md.uconn.repotting"
+      ],
+      "confidence": "CORROBORATED",
+      "qualifier": null,
+      "safety_flag": false,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "consistency_keys": [
+        "rootzone.repotting"
+      ]
+    },
+    {
+      "faq_id": "faq.md.drainage",
+      "question": "Faut-il un pot drainant ?",
+      "short_answer": "Oui, l’excédent d’eau doit pouvoir s’évacuer.",
+      "long_answer": "Évitez la saturation persistante et le surpotage, qui maintient le substrat humide plus longtemps.",
+      "linked_claim_ids": [
+        "claim.md.pot.drainage",
+        "claim.md.watering.standing-water"
+      ],
+      "evidence_link_ids": [
+        "ev.md.rhs.pot-size",
+        "ev.md.uconn.repotting",
+        "ev.md.rhs.standing-water",
+        "ev.md.uconn.root-rot"
+      ],
+      "confidence": "CORROBORATED",
+      "qualifier": null,
+      "safety_flag": false,
+      "publication_status": "CANDIDATE_PENDING_OWNER_DECISION",
+      "consistency_keys": [
+        "rootzone.container"
+      ]
+    },
+    {
+      "faq_id": "faq.md.safety",
+      "question": "Est-elle toxique pour les enfants et les animaux ?",
+      "short_answer": "La mastication expose à des cristaux d’oxalate de calcium irritants.",
+      "long_answer": "Gardez-la hors de portée. La formulation détaillée reste candidate et nécessite une Safety Review humaine avant publication.",
+      "linked_claim_ids": [
+        "claim.md.safety.mechanism",
+        "claim.md.safety.humans-children",
+        "claim.md.safety.pets"
+      ],
+      "evidence_link_ids": [
+        "ev.md.aspca.oxalates",
+        "ev.md.ncsu.oxalates",
+        "ev.md.ncsu.human-symptoms",
+        "ev.md.chop.oxalate-effects",
+        "ev.md.rhs.keep-away",
+        "ev.md.aspca.pets"
+      ],
+      "confidence": "QUALIFIED",
+      "qualifier": "CANDIDATE_PENDING_SAFETY_REVIEW",
+      "safety_flag": true,
+      "publication_status": "CANDIDATE_PENDING_SAFETY_REVIEW",
+      "consistency_keys": [
+        "safety.oxalates"
+      ]
+    }
+  ]
+}

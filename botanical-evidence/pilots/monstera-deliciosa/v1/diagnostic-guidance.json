@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0.0-pilot",
+  "taxon_id": "taxon.monstera-deliciosa",
+  "guidance": [
+    {
+      "diagnostic_id": "diagnostic.md.yellow-leaves",
+      "symptom": "Feuille(s) jaune(s)",
+      "possible_causes": ["substrat durablement saturé ou racines altérées", "cochenilles/cochenilles farineuses", "maladie foliaire", "froid récent", "sénescence d'une vieille feuille isolée"],
+      "supporting_evidence_link_ids": ["ev.md.uconn.yellowing-pests", "ev.md.uconn.root-rot.yellow", "ev.md.rhs.standing-water.yellow"],
+      "how_to_check": ["vérifier l'humidité en profondeur et l'écoulement", "inspecter racines visibles et collet sans conclure sur la seule couleur", "examiner dessous des feuilles, pétioles et nœuds", "reconstituer l'historique de froid et d'arrosage", "distinguer une feuille âgée isolée d'un jaunissement généralisé"],
+      "low_risk_action": ["cesser tout arrosage automatique jusqu'au contrôle du substrat", "isoler si ravageurs suspectés", "corriger seulement la cause observée"],
+      "red_flags": ["racines noires/molles", "tige molle au collet", "progression rapide", "suintement ou lésions à halo"],
+      "confidence": "QUALIFIED", "publication_status": "REVIEW_REQUIRED", "claim_id": "claim.md.diagnostic.yellow-leaves"
+    },
+    {
+      "diagnostic_id": "diagnostic.md.brown-tips-patches",
+      "symptom": "Pointes, bords ou plages brunes",
+      "possible_causes": ["air très sec ou proximité d'une source de chaleur", "brûlure par lumière directe intense", "tache bactérienne ou anthracnose si motif compatible", "dommage mécanique"],
+      "supporting_evidence_link_ids": ["ev.md.rhs.brown-edges", "ev.md.uconn.leaf-spots"],
+      "how_to_check": ["observer si la lésion est sèche et marginale ou humide/progressive", "chercher halo jaune ou suintement", "vérifier exposition et source de chaleur", "contrôler plusieurs feuilles et la vitesse d'évolution"],
+      "low_risk_action": ["éloigner progressivement d'un soleil brûlant/radiateur si concordant", "isoler et éviter de mouiller le feuillage si lésions suspectes", "demander un diagnostic si progression"],
+      "red_flags": ["extension rapide", "suintement", "taches humides", "cankers de tige"],
+      "confidence": "QUALIFIED", "publication_status": "REVIEW_REQUIRED", "claim_id": "claim.md.diagnostic.brown-areas"
+    },
+    {
+      "diagnostic_id": "diagnostic.md.slow-growth-small-leaves",
+      "symptom": "Croissance ralentie ou petites feuilles",
+      "possible_causes": ["lumière insuffisante", "saison ou température moins favorables", "espace racinaire à vérifier", "repousse juvénile après taille", "absence de support pour une liane en croissance"],
+      "supporting_evidence_link_ids": ["ev.md.rhs.low-light-holes.slow", "ev.md.rhs.pruning-maturity.slow", "ev.md.uconn.support-leaf-size.slow", "ev.md.uconn.repotting.slow"],
+      "how_to_check": ["comparer l'emplacement et la saison", "vérifier la température récente", "inspecter si les racines atteignent fond et côtés", "identifier une taille récente", "observer si la tige peut grimper"],
+      "low_risk_action": ["corriger un seul facteur observé à la fois", "améliorer progressivement la lumière filtrée", "ajouter un support stable si le port l'exige"],
+      "red_flags": ["flétrissement avec racines molles", "ravageurs visibles", "arrêt brutal accompagné de lésions"],
+      "confidence": "QUALIFIED", "publication_status": "REVIEW_REQUIRED", "claim_id": "claim.md.diagnostic.slow-growth-small-leaves"
+    },
+    {
+      "diagnostic_id": "diagnostic.md.no-fenestrations",
+      "symptom": "Feuilles sans fenestrations",
+      "possible_causes": ["stade juvénile normal", "lumière insuffisante", "croissance non grimpante ou support absent", "repousse moins mature après taille"],
+      "supporting_evidence_link_ids": ["ev.md.ncsu.mature-leaves.no-fen", "ev.md.rhs.low-light-holes.no-fen", "ev.md.rhs.support-holes.no-fen"],
+      "how_to_check": ["évaluer l'âge relatif et la succession des feuilles", "vérifier lumière filtrée disponible", "observer le port et l'attache au support", "noter une taille récente"],
+      "low_risk_action": ["patienter si plante juvénile", "améliorer progressivement la lumière", "proposer un support sans promesse de résultat"],
+      "red_flags": [],
+      "confidence": "QUALIFIED", "publication_status": "REVIEW_REQUIRED", "claim_id": "claim.md.diagnostic.no-fenestrations"
+    },
+    {
+      "diagnostic_id": "diagnostic.md.spider-mites",
+      "symptom": "Ponctuations claires, aspect bronzé ou fines toiles",
+      "possible_causes": ["acariens tétranyques", "stress hydrique pouvant imiter certaines ponctuations"],
+      "supporting_evidence_link_ids": ["ev.md.uconn.spider-mites", "ev.md.umn.mite-check"],
+      "how_to_check": ["loupe sur le revers des feuilles", "papier blanc sous la feuille puis tapotement", "rechercher mobilité et toiles"],
+      "low_risk_action": ["isoler la plante", "rincer soigneusement dessus et dessous", "identifier avant tout pesticide", "suivre uniquement un produit homologué et son étiquette si nécessaire"],
+      "red_flags": ["défoliation rapide", "infestation généralisée", "échec des mesures mécaniques"],
+      "confidence": "CORROBORATED", "publication_status": "REVIEW_REQUIRED", "claim_id": "claim.md.pests.spider-mite-check"
+    },
+    {
+      "diagnostic_id": "diagnostic.md.scale-mealybugs",
+      "symptom": "Bosses brunes, amas blancs cotonneux ou miellat collant",
+      "possible_causes": ["cochenilles à carapace/molles", "cochenilles farineuses"],
+      "supporting_evidence_link_ids": ["ev.md.rhs.pests", "ev.md.uconn.pests"],
+      "how_to_check": ["inspecter nœuds, pétioles et revers", "distinguer bosses fixées et amas cireux blancs", "chercher miellat et fumagine"],
+      "low_risk_action": ["isoler", "retirer manuellement les individus accessibles", "rincer", "n'utiliser qu'un traitement homologué après identification"],
+      "red_flags": ["forte colonisation des crevasses", "déclin rapide", "plusieurs plantes touchées"],
+      "confidence": "CORROBORATED", "publication_status": "REVIEW_REQUIRED", "claim_id": "claim.md.pests.documented"
+    },
+    {
+      "diagnostic_id": "diagnostic.md.thrips",
+      "symptom": "Stries argentées, ponctuations et petits dépôts noirs",
+      "possible_causes": ["thrips", "autres ravageurs ou dommages pouvant produire des marques proches"],
+      "supporting_evidence_link_ids": ["ev.md.umn.thrips-general"],
+      "how_to_check": ["observer les jeunes feuilles et le revers", "chercher insectes fins et déjections noires", "utiliser une loupe", "faire confirmer si doute"],
+      "low_risk_action": ["isoler", "retirer les parties très atteintes si raisonnable", "ne pas appliquer de pesticide sans identification"],
+      "red_flags": ["atteinte rapide des nouvelles pousses", "infestation multi-plantes"],
+      "confidence": "UNVERIFIED", "publication_status": "WITHHELD", "claim_id": "claim.md.pests.documented",
+      "notes": "Les signes sont documentés au niveau général, mais aucune source spécifique à M. deliciosa ouverte dans ce pilote ne confirme directement les thrips."
+    },
+    {
+      "diagnostic_id": "diagnostic.md.root-rot",
+      "symptom": "Flétrissement avec racines ou collet altérés",
+      "possible_causes": ["pourriture racinaire ou de tige associée à un milieu durablement humide", "stress de sécheresse ayant lésé les racines", "autre maladie racinaire"],
+      "supporting_evidence_link_ids": ["ev.md.uconn.root-rot", "ev.md.rhs.standing-water"],
+      "how_to_check": ["examiner odeur et texture du substrat", "inspecter prudemment les racines : brunes/noires, molles, se détachant facilement", "vérifier collet et drainage"],
+      "low_risk_action": ["stopper la saturation", "retirer l'eau stagnante", "faire confirmer l'atteinte avant intervention racinaire importante"],
+      "red_flags": ["tige ceinturée au niveau du sol", "racines molles généralisées", "effondrement rapide"],
+      "confidence": "CORROBORATED", "publication_status": "REVIEW_REQUIRED", "claim_id": "claim.md.watering.standing-water"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0.0-pilot",
+  "validated_at": "2026-08-24",
+  "validators": {
+    "json_parse": "PASS",
+    "unique_ids": "PASS",
+    "claim_to_evidence_references": "PASS",
+    "evidence_to_claim_references": "PASS",
+    "evidence_to_source_references": "PASS",
+    "claim_to_review_references": "PASS",
+    "opened_source_only_for_evidence": "PASS",
+    "source_deduplication": "PASS"
+  },
+  "counts": {
+    "taxa": 1,
+    "sources_opened_and_used": 15,
+    "source_candidates_blocked_not_used": 1,
+    "claims": 45,
+    "evidence_links": 97,
+    "reviews": 13,
+    "conflicts": 7,
+    "diagnostic_guidance_records": 8,
+    "legacy_claim_records": 34,
+    "open_questions": 8,
+    "domains_covered": 26
+  },
+  "confidence_counts": {"VERIFIED": 7, "CORROBORATED": 16, "QUALIFIED": 15, "CONFLICTING": 0, "UNVERIFIED": 7},
+  "publication_counts": {"DRAFT": 16, "REVIEW_REQUIRED": 21, "APPROVED": 0, "WITHHELD": 8, "DEPRECATED": 0},
+  "quality_gates": {
+    "P0": {
+      "status": "PASS",
+      "evidence": [
+        "Accepted name opened and verified in POWO; authorship complemented by IPNI.",
+        "Taxonomy Review and Safety Review records exist with reviewer=null and REVIEW_REQUIRED.",
+        "All 97 EvidenceLinks use OPENED_VERIFIED source records.",
+        "No search URL/snippet is used as Evidence; one 403 candidate is isolated and unused.",
+        "Confidence and publication status are separate fields.",
+        "Material/contextual divergences are recorded without averaging.",
+        "No product, Supabase, Beta/Public, deployment, Search Console or photo-rights state was touched.",
+        "All JSON parses and all internal references resolve."
+      ],
+      "remaining_action": null
+    },
+    "P1": {
+      "status": "PASS",
+      "evidence": [
+        "Domains A through Z each have at least one Claim record.",
+        "All 45 claims have context, confidence and publication status.",
+        "All numeric claims preserve units/context; conversions are documented.",
+        "Source dependency is recorded per EvidenceLink.",
+        "34 Legacy records are compared and traced to locations.",
+        "Taxon, Source, Claim, EvidenceLink and Review references validate.",
+        "Open questions and Owner decisions are explicit."
+      ],
+      "remaining_action": null
+    },
+    "P2": {
+      "status": "PARTIAL",
+      "evidence": [
+        "Locators are section/line precise for all retained sources.",
+        "Publishable wording is deliberately sober and qualified.",
+        "Freshness policy is described in the report.",
+        "No protected PDF or image was archived locally."
+      ],
+      "remaining_action": "Human reviews and one last manual URL recheck are required before any Content Master handoff; several evidence gaps remain intentionally open."
+    }
+  },
+  "final_status": "EVIDENCE_PACK_COMPLETE_PENDING_HUMAN_REVIEWS"
+}

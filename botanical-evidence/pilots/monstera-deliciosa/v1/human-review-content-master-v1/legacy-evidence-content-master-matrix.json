@@ -1,0 +1,944 @@
+{
+  "schema_version": "1.0.0",
+  "records": [
+    {
+      "legacy_id": "legacy.md.name",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:68",
+        "lib/plants/deliciosa-next.ts:11"
+      ],
+      "legacy_wording_or_value": "Monstera deliciosa / Monstera deliciosa Liebm.",
+      "legacy_status": "REBUILT",
+      "mapped_claim_ids": [
+        "claim.md.taxonomy.accepted-name"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.powo.accepted",
+        "ev.md.ipni.authorship"
+      ],
+      "evidence_decision": "VERIFIED",
+      "human_review_v1_decision": "TAXONOMY_REVIEW_REQUIRED",
+      "content_master_action": "RETAIN",
+      "final_candidate_wording": "Nom accepté : Monstera deliciosa Liebm.",
+      "content_master_content_ids": [
+        "content.identity.name"
+      ],
+      "faq_ids": [],
+      "consistency_key": "identity.accepted-name",
+      "silent_reentry_risk": "CONTROLLED",
+      "rationale": "Legacy status REBUILT; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.classification",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:68",
+        "lib/plants/deliciosa-next.ts:13-15"
+      ],
+      "legacy_wording_or_value": "Araceae / Monstera / Alismatales",
+      "legacy_status": "REBUILT",
+      "mapped_claim_ids": [
+        "claim.md.taxonomy.classification"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.powo.classification",
+        "ev.md.ipni.family"
+      ],
+      "evidence_decision": "VERIFIED",
+      "human_review_v1_decision": "TAXONOMY_REVIEW_REQUIRED",
+      "content_master_action": "RETAIN",
+      "final_candidate_wording": "Araceae · Monstera · Alismatales.",
+      "content_master_content_ids": [
+        "content.identity.name"
+      ],
+      "faq_ids": [],
+      "consistency_key": "identity.accepted-name",
+      "silent_reentry_risk": "CONTROLLED",
+      "rationale": "Legacy status REBUILT; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.borsigiana",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:72",
+        "lib/plants/deliciosa-next.ts:19",
+        "app/plantes/DeliciosaProfileNext.tsx:169"
+      ],
+      "legacy_wording_or_value": "Comparison name; elsewhere treated generally in M. deliciosa",
+      "legacy_status": "SUPERSEDED",
+      "mapped_claim_ids": [
+        "claim.md.taxonomy.borsigiana"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.powo.borsigiana"
+      ],
+      "evidence_decision": "VERIFIED",
+      "human_review_v1_decision": "TAXONOMY_REVIEW_REQUIRED",
+      "content_master_action": "SUPERSEDE",
+      "final_candidate_wording": "« Monstera borsigiana » est aujourd'hui traité par POWO comme un synonyme de Monstera deliciosa, et non comme une espèce distincte.",
+      "content_master_content_ids": [
+        "content.identity.synonyms",
+        "content.comparison.borsigiana"
+      ],
+      "faq_ids": [],
+      "consistency_key": "identity.synonymy",
+      "silent_reentry_risk": "CONTROLLED",
+      "rationale": "Legacy status SUPERSEDED; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.philodendron-pertusum",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:69",
+        "lib/plants/deliciosa-next.ts:19"
+      ],
+      "legacy_wording_or_value": "Philodendron pertusum / hort.",
+      "legacy_status": "REBUILT",
+      "mapped_claim_ids": [
+        "claim.md.taxonomy.philodendron-pertusum"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.powo.philodendron-pertusum"
+      ],
+      "evidence_decision": "VERIFIED",
+      "human_review_v1_decision": "TAXONOMY_REVIEW_REQUIRED",
+      "content_master_action": "RETAIN",
+      "final_candidate_wording": "Philodendron pertusum est un nom historique placé en synonymie, pas le nom accepté actuel.",
+      "content_master_content_ids": [
+        "content.identity.synonyms"
+      ],
+      "faq_ids": [],
+      "consistency_key": "identity.synonymy",
+      "silent_reentry_risk": "CONTROLLED",
+      "rationale": "Legacy status REBUILT; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.origin",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:68",
+        "lib/plants/deliciosa-next.ts:16"
+      ],
+      "legacy_wording_or_value": "Mexique à Amérique centrale / Sud et est du Mexique jusqu'au Guatemala",
+      "legacy_status": "REBUILT_QUALIFIED",
+      "mapped_claim_ids": [
+        "claim.md.distribution.native-range"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.powo.native-range",
+        "ev.md.rhs.range-context",
+        "ev.md.uf.range-context"
+      ],
+      "evidence_decision": "VERIFIED",
+      "human_review_v1_decision": "QUALIFIED",
+      "content_master_action": "REWRITE_QUALIFIED",
+      "final_candidate_wording": "Aire native documentée par POWO : sud du Mexique — notamment Veracruz, Oaxaca et Chiapas — jusqu'au Guatemala.",
+      "content_master_content_ids": [
+        "content.origin.range"
+      ],
+      "faq_ids": [],
+      "consistency_key": "origin.native-range",
+      "silent_reentry_risk": "CONTROLLED",
+      "rationale": "Legacy status REBUILT_QUALIFIED; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.habitat",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:69",
+        "lib/plants/deliciosa-next.ts:17"
+      ],
+      "legacy_wording_or_value": "Liane des forêts tropicales humides",
+      "legacy_status": "REBUILT",
+      "mapped_claim_ids": [
+        "claim.md.distribution.biome"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.powo.biome"
+      ],
+      "evidence_decision": "VERIFIED",
+      "human_review_v1_decision": "OWNER_DECISION_REQUIRED",
+      "content_master_action": "RETAIN",
+      "final_candidate_wording": "Biome principal : tropical humide.",
+      "content_master_content_ids": [
+        "content.origin.habitat"
+      ],
+      "faq_ids": [],
+      "consistency_key": "content.origin.habitat",
+      "silent_reentry_risk": "CONTROLLED",
+      "rationale": "Legacy status REBUILT; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.hemiepiphyte",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:69,72",
+        "lib/plants/deliciosa-next.ts:18"
+      ],
+      "legacy_wording_or_value": "Grimpante · hémiepiphyte secondaire",
+      "legacy_status": "REBUILT_QUALIFIED",
+      "mapped_claim_ids": [
+        "claim.md.ecology.secondary-hemiepiphyte"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.muir.hemiepiphyte",
+        "ev.md.croat.monstera-lifeform",
+        "ev.md.ncsu.life-cycle"
+      ],
+      "evidence_decision": "QUALIFIED",
+      "human_review_v1_decision": "QUALIFIED",
+      "content_master_action": "REWRITE_QUALIFIED",
+      "final_candidate_wording": "Son développement est souvent décrit comme secondairement hémiépiphyte : elle débute au sol puis grimpe sur un support, tout en conservant une relation avec le sol selon son stade et son milieu.",
+      "content_master_content_ids": [
+        "content.origin.habitat"
+      ],
+      "faq_ids": [],
+      "consistency_key": "content.origin.habitat",
+      "silent_reentry_risk": "CONTROLLED",
+      "rationale": "Legacy status REBUILT_QUALIFIED; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.juvenile-adult",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:69",
+        "lib/plants/deliciosa-next.ts:34-36",
+        "app/plantes/DeliciosaProfileNext.tsx:136-146"
+      ],
+      "legacy_wording_or_value": "Découpes et perforations with maturity, light and support",
+      "legacy_status": "REBUILT_QUALIFIED",
+      "mapped_claim_ids": [
+        "claim.md.fenestration.drivers"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.ncsu.mature-leaves.drivers",
+        "ev.md.rhs.low-light-holes",
+        "ev.md.rhs.support-holes",
+        "ev.md.uconn.support-leaf-size"
+      ],
+      "evidence_decision": "QUALIFIED",
+      "human_review_v1_decision": "QUALIFIED",
+      "content_master_action": "REWRITE_QUALIFIED",
+      "final_candidate_wording": "L'absence de fenestrations est d'abord compatible avec un stade juvénile. Une lumière filtrée suffisante et un support adapté favorisent une croissance plus mature, sans garantir à eux seuls l'apparition de découpes.",
+      "content_master_content_ids": [
+        "content.morphology.fenestrations"
+      ],
+      "faq_ids": [
+        "faq.md.fenestrations"
+      ],
+      "consistency_key": "morphology.fenestrations",
+      "silent_reentry_risk": "CONTROLLED",
+      "rationale": "Legacy status REBUILT_QUALIFIED; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.fenestration-function",
+      "legacy_location": [
+        "external RHS linked source; no explicit product sentence located"
+      ],
+      "legacy_wording_or_value": "Implicit/popular light explanation in source corpus",
+      "legacy_status": "REJECTED_AS_CERTAINTY",
+      "mapped_claim_ids": [
+        "claim.md.fenestration.function"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.muir.function-hypothesis",
+        "ev.md.rhs.function-popular-claim"
+      ],
+      "evidence_decision": "QUALIFIED",
+      "human_review_v1_decision": "QUALIFIED",
+      "content_master_action": "WITHHOLD",
+      "final_candidate_wording": "La fonction évolutive des fenestrations n'est pas démontrée par une explication unique. Une hypothèse scientifique propose qu'elles répartissent mieux la lumière intermittente du sous-bois, mais elle reste à tester.",
+      "content_master_content_ids": [
+        "content.morphology.fenestrations"
+      ],
+      "faq_ids": [],
+      "consistency_key": "morphology.fenestrations",
+      "silent_reentry_risk": "HIGH",
+      "rationale": "Legacy status REJECTED_AS_CERTAINTY; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.light-score",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:71",
+        "lib/plants/deliciosa-next.ts:2"
+      ],
+      "legacy_wording_or_value": "4/5",
+      "legacy_status": "LEGACY_UNVERIFIED",
+      "mapped_claim_ids": [
+        "claim.md.editorial-score.light-4-of-5"
+      ],
+      "mapped_evidence_link_ids": [],
+      "evidence_decision": "UNVERIFIED",
+      "human_review_v1_decision": "NO_EVIDENCE_FOUND",
+      "content_master_action": "WITHHOLD",
+      "final_candidate_wording": null,
+      "content_master_content_ids": [],
+      "faq_ids": [],
+      "consistency_key": null,
+      "silent_reentry_risk": "HIGH",
+      "rationale": "Legacy status LEGACY_UNVERIFIED; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.watering-score",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:71",
+        "lib/plants/deliciosa-next.ts:3"
+      ],
+      "legacy_wording_or_value": "2/5",
+      "legacy_status": "LEGACY_UNVERIFIED",
+      "mapped_claim_ids": [
+        "claim.md.editorial-score.watering-2-of-5"
+      ],
+      "mapped_evidence_link_ids": [],
+      "evidence_decision": "UNVERIFIED",
+      "human_review_v1_decision": "NO_EVIDENCE_FOUND",
+      "content_master_action": "WITHHOLD",
+      "final_candidate_wording": null,
+      "content_master_content_ids": [],
+      "faq_ids": [],
+      "consistency_key": null,
+      "silent_reentry_risk": "HIGH",
+      "rationale": "Legacy status LEGACY_UNVERIFIED; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.humidity-score",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:71",
+        "lib/plants/deliciosa-next.ts:4"
+      ],
+      "legacy_wording_or_value": "3/5",
+      "legacy_status": "LEGACY_UNVERIFIED",
+      "mapped_claim_ids": [
+        "claim.md.editorial-score.humidity-3-of-5"
+      ],
+      "mapped_evidence_link_ids": [],
+      "evidence_decision": "UNVERIFIED",
+      "human_review_v1_decision": "NO_EVIDENCE_FOUND",
+      "content_master_action": "WITHHOLD",
+      "final_candidate_wording": null,
+      "content_master_content_ids": [],
+      "faq_ids": [],
+      "consistency_key": null,
+      "silent_reentry_risk": "HIGH",
+      "rationale": "Legacy status LEGACY_UNVERIFIED; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.difficulty-score",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:71",
+        "lib/plants/deliciosa-next.ts:5"
+      ],
+      "legacy_wording_or_value": "2/5",
+      "legacy_status": "LEGACY_UNVERIFIED",
+      "mapped_claim_ids": [
+        "claim.md.editorial-score.difficulty-2-of-5"
+      ],
+      "mapped_evidence_link_ids": [],
+      "evidence_decision": "UNVERIFIED",
+      "human_review_v1_decision": "NO_EVIDENCE_FOUND",
+      "content_master_action": "WITHHOLD",
+      "final_candidate_wording": null,
+      "content_master_content_ids": [],
+      "faq_ids": [],
+      "consistency_key": null,
+      "silent_reentry_risk": "HIGH",
+      "rationale": "Legacy status LEGACY_UNVERIFIED; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.light-guidance",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:71",
+        "lib/plants/deliciosa-next.ts:24-26"
+      ],
+      "legacy_wording_or_value": "Lumière vive indirecte, soleil doux après acclimatation",
+      "legacy_status": "REBUILT_QUALIFIED",
+      "mapped_claim_ids": [
+        "claim.md.light.indoor-preference"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.rhs.light",
+        "ev.md.ncsu.light",
+        "ev.md.uconn.light-context"
+      ],
+      "evidence_decision": "CORROBORATED",
+      "human_review_v1_decision": "OWNER_DECISION_REQUIRED",
+      "content_master_action": "REWRITE_QUALIFIED",
+      "final_candidate_wording": "Placez-la dans une lumière lumineuse à modérée, filtrée ou indirecte. Un soleil direct intense peut brûler le feuillage ; toute exposition plus forte demande une acclimatation progressive.",
+      "content_master_content_ids": [
+        "content.care.light",
+        "content.studio.observation"
+      ],
+      "faq_ids": [
+        "faq.md.placement"
+      ],
+      "consistency_key": "care.light",
+      "silent_reentry_risk": "CONTROLLED",
+      "rationale": "Legacy status REBUILT_QUALIFIED; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.watering-guidance",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:71",
+        "lib/plants/deliciosa-next.ts:29-31"
+      ],
+      "legacy_wording_or_value": "Several centimeters dry / upper part dry",
+      "legacy_status": "REBUILT_QUALIFIED",
+      "mapped_claim_ids": [
+        "claim.md.watering.substrate-state"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.rhs.watering",
+        "ev.md.ncsu.watering",
+        "ev.md.uconn.watering"
+      ],
+      "evidence_decision": "CORROBORATED",
+      "human_review_v1_decision": "OWNER_DECISION_REQUIRED",
+      "content_master_action": "REWRITE_QUALIFIED",
+      "final_candidate_wording": "Contrôlez le substrat plutôt que le calendrier : laissez sa partie supérieure sécher nettement, puis arrosez à fond et laissez l'excédent s'écouler.",
+      "content_master_content_ids": [
+        "content.care.watering",
+        "content.studio.observation"
+      ],
+      "faq_ids": [
+        "faq.md.watering"
+      ],
+      "consistency_key": "care.watering",
+      "silent_reentry_risk": "CONTROLLED",
+      "rationale": "Legacy status REBUILT_QUALIFIED; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.watering-frequency",
+      "legacy_location": [
+        "legacy content inventory; not in current requested-plants Deliciosa line"
+      ],
+      "legacy_wording_or_value": "Tous les 10–15 jours in legacy/generic wording",
+      "legacy_status": "REJECTED",
+      "mapped_claim_ids": [
+        "claim.md.watering.substrate-state"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.rhs.watering",
+        "ev.md.ncsu.watering",
+        "ev.md.uconn.watering"
+      ],
+      "evidence_decision": "CORROBORATED",
+      "human_review_v1_decision": "OWNER_DECISION_REQUIRED",
+      "content_master_action": "WITHHOLD",
+      "final_candidate_wording": "Contrôlez le substrat plutôt que le calendrier : laissez sa partie supérieure sécher nettement, puis arrosez à fond et laissez l'excédent s'écouler.",
+      "content_master_content_ids": [
+        "content.care.watering",
+        "content.studio.observation"
+      ],
+      "faq_ids": [
+        "faq.md.watering"
+      ],
+      "consistency_key": "care.watering",
+      "silent_reentry_risk": "HIGH",
+      "rationale": "Legacy status REJECTED; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.humidity-guidance",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:71",
+        "lib/plants/deliciosa-next.ts:4"
+      ],
+      "legacy_wording_or_value": "Moyenne à élevée / stabilité over misting",
+      "legacy_status": "REBUILT_QUALIFIED",
+      "mapped_claim_ids": [
+        "claim.md.humidity.qualitative-preference"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.rhs.humidity",
+        "ev.md.ncsu.humidity"
+      ],
+      "evidence_decision": "CORROBORATED",
+      "human_review_v1_decision": "OWNER_DECISION_REQUIRED",
+      "content_master_action": "REWRITE_QUALIFIED",
+      "final_candidate_wording": "Elle apprécie un air modérément à assez humide, mais ce n'est pas une raison pour présenter une plage universelle obligatoire.",
+      "content_master_content_ids": [
+        "content.care.humidity"
+      ],
+      "faq_ids": [],
+      "consistency_key": "care.humidity",
+      "silent_reentry_risk": "CONTROLLED",
+      "rationale": "Legacy status REBUILT_QUALIFIED; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.humidity-range",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:54 via aroidFilters"
+      ],
+      "legacy_wording_or_value": "50–75%",
+      "legacy_status": "REJECTED",
+      "mapped_claim_ids": [
+        "claim.md.humidity.legacy-50-75"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.rhs.humidity.range-audit",
+        "ev.md.ncsu.humidity.range-audit"
+      ],
+      "evidence_decision": "UNVERIFIED",
+      "human_review_v1_decision": "NO_EVIDENCE_FOUND",
+      "content_master_action": "WITHHOLD",
+      "final_candidate_wording": null,
+      "content_master_content_ids": [],
+      "faq_ids": [],
+      "consistency_key": null,
+      "silent_reentry_risk": "HIGH",
+      "rationale": "Legacy status REJECTED; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.temperature-range",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:54,71"
+      ],
+      "legacy_wording_or_value": "18–28°C",
+      "legacy_status": "REBUILT_QUALIFIED",
+      "mapped_claim_ids": [
+        "claim.md.temperature.indoor-guidance"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.rhs.temperature",
+        "ev.md.ncsu.temperature"
+      ],
+      "evidence_decision": "QUALIFIED",
+      "human_review_v1_decision": "QUALIFIED",
+      "content_master_action": "REWRITE_QUALIFIED",
+      "final_candidate_wording": "Conservez-la au chaud et à l'écart des courants d'air froids. Les guides institutionnels consultés donnent des plages différentes selon leur contexte ; évitez d'en faire une limite universelle.",
+      "content_master_content_ids": [
+        "content.care.temperature"
+      ],
+      "faq_ids": [],
+      "consistency_key": "care.temperature",
+      "silent_reentry_risk": "CONTROLLED",
+      "rationale": "Legacy status REBUILT_QUALIFIED; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.temperature-min",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:54,71"
+      ],
+      "legacy_wording_or_value": "15°C",
+      "legacy_status": "REJECTED",
+      "mapped_claim_ids": [
+        "claim.md.temperature.legacy-minimum-15"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.rhs.temperature.minimum-audit",
+        "ev.md.ncsu.temperature.minimum-audit",
+        "ev.md.uconn.cold-context",
+        "ev.md.uf.cold-damage"
+      ],
+      "evidence_decision": "UNVERIFIED",
+      "human_review_v1_decision": "NO_EVIDENCE_FOUND",
+      "content_master_action": "WITHHOLD",
+      "final_candidate_wording": null,
+      "content_master_content_ids": [],
+      "faq_ids": [],
+      "consistency_key": null,
+      "silent_reentry_risk": "HIGH",
+      "rationale": "Legacy status REJECTED; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.substrate",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:54,71"
+      ],
+      "legacy_wording_or_value": "Mélange aroïdes grossier/aéré/drainant/organique",
+      "legacy_status": "REBUILT_PROPERTIES_ONLY",
+      "mapped_claim_ids": [
+        "claim.md.substrate.properties"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.rhs.substrate",
+        "ev.md.uconn.substrate"
+      ],
+      "evidence_decision": "CORROBORATED",
+      "human_review_v1_decision": "OWNER_DECISION_REQUIRED",
+      "content_master_action": "SUPERSEDE",
+      "final_candidate_wording": "Visez un substrat ouvert, aéré et drainant, contenant de la matière organique mais ne restant pas saturé.",
+      "content_master_content_ids": [
+        "content.rootzone.substrate"
+      ],
+      "faq_ids": [],
+      "consistency_key": "rootzone.substrate",
+      "silent_reentry_risk": "CONTROLLED",
+      "rationale": "Legacy status REBUILT_PROPERTIES_ONLY; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.pot-drainage",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:27,43,45"
+      ],
+      "legacy_wording_or_value": "Pot percé, slightly larger",
+      "legacy_status": "REBUILT",
+      "mapped_claim_ids": [
+        "claim.md.pot.drainage"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.rhs.pot-size",
+        "ev.md.uconn.repotting"
+      ],
+      "evidence_decision": "CORROBORATED",
+      "human_review_v1_decision": "OWNER_DECISION_REQUIRED",
+      "content_master_action": "RETAIN",
+      "final_candidate_wording": "Choisissez un contenant drainant, seulement un peu plus grand que la motte ; un pot surdimensionné reste humide plus longtemps.",
+      "content_master_content_ids": [
+        "content.rootzone.pot"
+      ],
+      "faq_ids": [
+        "faq.md.repotting",
+        "faq.md.drainage"
+      ],
+      "consistency_key": "rootzone.container",
+      "silent_reentry_risk": "CONTROLLED",
+      "rationale": "Legacy status REBUILT; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.repotting",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:27,45",
+        "lib/plants/deliciosa-next.ts:44-46"
+      ],
+      "legacy_wording_or_value": "Roots colonized / mix dries abnormally fast",
+      "legacy_status": "REBUILT_QUALIFIED",
+      "mapped_claim_ids": [
+        "claim.md.repotting.trigger"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.uconn.repotting.trigger",
+        "ev.md.rhs.repotting"
+      ],
+      "evidence_decision": "CORROBORATED",
+      "human_review_v1_decision": "OWNER_DECISION_REQUIRED",
+      "content_master_action": "REWRITE_QUALIFIED",
+      "final_candidate_wording": "Rempotez lorsque les racines occupent réellement le contenant — notamment lorsqu'elles atteignent le fond et les côtés — ou lorsque la stabilité devient insuffisante, plutôt que selon un calendrier rigide.",
+      "content_master_content_ids": [
+        "content.rootzone.repotting"
+      ],
+      "faq_ids": [
+        "faq.md.repotting"
+      ],
+      "consistency_key": "rootzone.repotting",
+      "silent_reentry_risk": "CONTROLLED",
+      "rationale": "Legacy status REBUILT_QUALIFIED; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.fertilising",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:28"
+      ],
+      "legacy_wording_or_value": "Complete diluted feed in bright period on moist substrate",
+      "legacy_status": "REBUILT_QUALIFIED",
+      "mapped_claim_ids": [
+        "claim.md.fertilisation.growing-season"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.rhs.feeding",
+        "ev.md.rhs.monthly-feeding",
+        "ev.md.uconn.fertilisation"
+      ],
+      "evidence_decision": "QUALIFIED",
+      "human_review_v1_decision": "QUALIFIED",
+      "content_master_action": "REWRITE_QUALIFIED",
+      "final_candidate_wording": "Fertilisez modérément pendant la croissance active avec un engrais équilibré, en suivant le dosage du produit et en évitant l'accumulation de sels. La fréquence dépend du produit et des conditions réelles.",
+      "content_master_content_ids": [
+        "content.care.fertilisation"
+      ],
+      "faq_ids": [],
+      "consistency_key": "care.fertilisation",
+      "silent_reentry_risk": "CONTROLLED",
+      "rationale": "Legacy status REBUILT_QUALIFIED; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.propagation",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:29",
+        "app/plantes/DeliciosaProfileNext.tsx:67"
+      ],
+      "legacy_wording_or_value": "Cutting with active node or division",
+      "legacy_status": "REBUILT_PARTIAL",
+      "mapped_claim_ids": [
+        "claim.md.propagation.node"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.uconn.node-cutting",
+        "ev.md.iastate.node-cutting"
+      ],
+      "evidence_decision": "CORROBORATED",
+      "human_review_v1_decision": "OWNER_DECISION_REQUIRED",
+      "content_master_action": "REWRITE_QUALIFIED",
+      "final_candidate_wording": "Pour obtenir une nouvelle plante par bouture de tige, conservez au moins un nœud. Une feuille isolée sans nœud ne constitue pas une bouture de tige viable pour reformer une plante complète.",
+      "content_master_content_ids": [
+        "content.propagation.node"
+      ],
+      "faq_ids": [],
+      "consistency_key": "propagation.node",
+      "silent_reentry_risk": "CONTROLLED",
+      "rationale": "Legacy status REBUILT_PARTIAL; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.support",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:69,72"
+      ],
+      "legacy_wording_or_value": "Stable support; fix stem back to support",
+      "legacy_status": "REBUILT_QUALIFIED",
+      "mapped_claim_ids": [
+        "claim.md.support.role"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.ncsu.support",
+        "ev.md.rhs.support-holes.role",
+        "ev.md.uconn.support-leaf-size.role"
+      ],
+      "evidence_decision": "QUALIFIED",
+      "human_review_v1_decision": "QUALIFIED",
+      "content_master_action": "REWRITE_QUALIFIED",
+      "final_candidate_wording": "Un support accompagne son port grimpant et stabilise les tiges. Il peut favoriser l'expression d'une croissance plus mature, sans garantir à lui seul de grandes feuilles ou des fenestrations.",
+      "content_master_content_ids": [
+        "content.support.role",
+        "content.studio.observation"
+      ],
+      "faq_ids": [],
+      "consistency_key": "support.role",
+      "silent_reentry_risk": "CONTROLLED",
+      "rationale": "Legacy status REBUILT_QUALIFIED; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.aerial-roots",
+      "legacy_location": [
+        "lib/plants/deliciosa-next.ts:39-41",
+        "app/plantes/DeliciosaProfileNext.tsx:141"
+      ],
+      "legacy_wording_or_value": "Guide to support/substrate; avoid systematic removal",
+      "legacy_status": "PARTIAL_WITHHELD",
+      "mapped_claim_ids": [
+        "claim.md.aerial-roots.cut-or-guide"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.frontiers.aerial-root.handling",
+        "ev.md.uf.aerial-roots.handling"
+      ],
+      "evidence_decision": "UNVERIFIED",
+      "human_review_v1_decision": "NO_EVIDENCE_FOUND",
+      "content_master_action": "REWRITE_QUALIFIED",
+      "final_candidate_wording": null,
+      "content_master_content_ids": [],
+      "faq_ids": [],
+      "consistency_key": null,
+      "silent_reentry_risk": "CONTROLLED",
+      "rationale": "Legacy status PARTIAL_WITHHELD; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.dimensions",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:72"
+      ],
+      "legacy_wording_or_value": "Several metres / large indoor vine",
+      "legacy_status": "REBUILT_QUALIFIED",
+      "mapped_claim_ids": [
+        "claim.md.dimensions.context"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.uf.dimensions",
+        "ev.md.rhs.dimensions",
+        "ev.md.ncsu.dimensions"
+      ],
+      "evidence_decision": "QUALIFIED",
+      "human_review_v1_decision": "QUALIFIED",
+      "content_master_action": "REWRITE_QUALIFIED",
+      "final_candidate_wording": "La liane peut dépasser 20 m dans des conditions extérieures favorables ; en intérieur, elle reste généralement bien plus contenue, souvent autour de quelques mètres selon l'espace, le support et la taille.",
+      "content_master_content_ids": [
+        "content.dimensions.context"
+      ],
+      "faq_ids": [],
+      "consistency_key": "growth.dimensions",
+      "silent_reentry_risk": "CONTROLLED",
+      "rationale": "Legacy status REBUILT_QUALIFIED; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.toxicity",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:15,31,44",
+        "lib/plants/deliciosa-next.ts:49-51",
+        "app/plantes/DeliciosaProfileNext.tsx:152"
+      ],
+      "legacy_wording_or_value": "Calcium oxalate irritant; keep away children/cats/dogs",
+      "legacy_status": "REBUILT_REVIEW_REQUIRED",
+      "mapped_claim_ids": [
+        "claim.md.safety.mechanism"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.aspca.oxalates",
+        "ev.md.ncsu.oxalates"
+      ],
+      "evidence_decision": "CORROBORATED",
+      "human_review_v1_decision": "SPECIALIST_REVIEW_REQUIRED",
+      "content_master_action": "SUPERSEDE",
+      "final_candidate_wording": "La plante contient des cristaux insolubles d'oxalate de calcium pouvant irriter la bouche, les muqueuses et, chez certaines personnes, la peau.",
+      "content_master_content_ids": [
+        "content.safety.candidate"
+      ],
+      "faq_ids": [
+        "faq.md.safety"
+      ],
+      "consistency_key": "safety.oxalates",
+      "silent_reentry_risk": "CONTROLLED",
+      "rationale": "Legacy status REBUILT_REVIEW_REQUIRED; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.yellow-leaves",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:33",
+        "lib/plants/deliciosa-next.ts:54-63"
+      ],
+      "legacy_wording_or_value": "Excess water, cold, low light, roots, natural aging",
+      "legacy_status": "REBUILT_QUALIFIED",
+      "mapped_claim_ids": [
+        "claim.md.diagnostic.yellow-leaves"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.uconn.yellowing-pests",
+        "ev.md.uconn.root-rot.yellow",
+        "ev.md.rhs.standing-water.yellow"
+      ],
+      "evidence_decision": "QUALIFIED",
+      "human_review_v1_decision": "QUALIFIED",
+      "content_master_action": "REWRITE_QUALIFIED",
+      "final_candidate_wording": "Une feuille jaune ne suffit pas à conclure. Contrôlez d'abord l'humidité du substrat, l'état des racines, les températures récentes et la présence de ravageurs ; une vieille feuille isolée peut aussi simplement terminer son cycle.",
+      "content_master_content_ids": [],
+      "faq_ids": [],
+      "consistency_key": null,
+      "silent_reentry_risk": "CONTROLLED",
+      "rationale": "Legacy status REBUILT_QUALIFIED; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.brown-areas",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:34",
+        "lib/plants/deliciosa-next.ts:65-73"
+      ],
+      "legacy_wording_or_value": "Sun, irregular watering, salts, dry air, mechanical damage",
+      "legacy_status": "REBUILT_PARTIAL",
+      "mapped_claim_ids": [
+        "claim.md.diagnostic.brown-areas"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.rhs.brown-edges",
+        "ev.md.uconn.leaf-spots"
+      ],
+      "evidence_decision": "QUALIFIED",
+      "human_review_v1_decision": "QUALIFIED",
+      "content_master_action": "REWRITE_QUALIFIED",
+      "final_candidate_wording": "Des bords bruns peuvent être compatibles avec un air très sec ou une brûlure lumineuse. Si les taches s'étendent, présentent un halo jaune ou un suintement, isolez la plante et faites préciser le diagnostic.",
+      "content_master_content_ids": [],
+      "faq_ids": [],
+      "consistency_key": null,
+      "silent_reentry_risk": "CONTROLLED",
+      "rationale": "Legacy status REBUILT_PARTIAL; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.slow-growth",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:35",
+        "lib/plants/deliciosa-next.ts:75-83"
+      ],
+      "legacy_wording_or_value": "Low light, temperature, support, season, roots",
+      "legacy_status": "REBUILT_QUALIFIED",
+      "mapped_claim_ids": [
+        "claim.md.diagnostic.slow-growth-small-leaves"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.rhs.low-light-holes.slow",
+        "ev.md.rhs.pruning-maturity.slow",
+        "ev.md.uconn.support-leaf-size.slow",
+        "ev.md.uconn.repotting.slow"
+      ],
+      "evidence_decision": "QUALIFIED",
+      "human_review_v1_decision": "QUALIFIED",
+      "content_master_action": "REWRITE_QUALIFIED",
+      "final_candidate_wording": "Une croissance ralentie ou de petites feuilles demandent de vérifier ensemble la lumière, la saison, la température, l'espace racinaire et le port de la plante. Un support peut accompagner la maturité, mais ne constitue pas une correction garantie.",
+      "content_master_content_ids": [],
+      "faq_ids": [],
+      "consistency_key": null,
+      "silent_reentry_risk": "CONTROLLED",
+      "rationale": "Legacy status REBUILT_QUALIFIED; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.thrips-mites",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:36",
+        "lib/plants/deliciosa-next.ts:85-93"
+      ],
+      "legacy_wording_or_value": "Both presented as possible Deliciosa pests",
+      "legacy_status": "PARTIAL",
+      "mapped_claim_ids": [
+        "claim.md.pests.documented"
+      ],
+      "mapped_evidence_link_ids": [
+        "ev.md.rhs.pests",
+        "ev.md.uconn.pests",
+        "ev.md.umn.thrips-general"
+      ],
+      "evidence_decision": "QUALIFIED",
+      "human_review_v1_decision": "QUALIFIED",
+      "content_master_action": "REWRITE_QUALIFIED",
+      "final_candidate_wording": "Surveillez surtout les cochenilles et les acariens, directement documentés sur cette espèce. Les cochenilles farineuses sont également signalées. Les thrips restent une hypothèse à confirmer par inspection, pas un diagnostic automatique.",
+      "content_master_content_ids": [
+        "content.pests.documented"
+      ],
+      "faq_ids": [],
+      "consistency_key": "diagnostic.pests",
+      "silent_reentry_risk": "CONTROLLED",
+      "rationale": "Legacy status PARTIAL; replacement mapping preserved.",
+      "validation_result": "PASS"
+    },
+    {
+      "legacy_id": "legacy.md.sources",
+      "legacy_location": [
+        "lib/plants/requested-plants.ts:72",
+        "lib/plants/deliciosa-next.ts:97-118"
+      ],
+      "legacy_wording_or_value": "4 page-level URLs; one generic POWO search URL in PlantEntry",
+      "legacy_status": "SUPERSEDED_BY_FIELD_LINKS",
+      "mapped_claim_ids": [],
+      "mapped_evidence_link_ids": [],
+      "evidence_decision": "NO_MAPPING",
+      "human_review_v1_decision": "NOT_APPLICABLE",
+      "content_master_action": "REMOVE_FROM_FUTURE_CONTENT",
+      "final_candidate_wording": null,
+      "content_master_content_ids": [],
+      "faq_ids": [],
+      "consistency_key": null,
+      "silent_reentry_risk": "HIGH",
+      "rationale": "Legacy status SUPERSEDED_BY_FIELD_LINKS; replacement mapping preserved.",
+      "validation_result": "PASS"
+    }
+  ]
+}

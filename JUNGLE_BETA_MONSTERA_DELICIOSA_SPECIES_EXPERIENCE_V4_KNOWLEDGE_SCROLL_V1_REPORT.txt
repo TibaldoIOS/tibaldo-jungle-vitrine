@@ -1,0 +1,245 @@
+JUNGLE BETA — MONSTERA DELICIOSA
+SPECIES EXPERIENCE V4 / KNOWLEDGE SCROLL V1
+RAPPORT LAB — 24 AOÛT 2026
+
+VERDICT
+
+DELICIOSA — SPECIES EXPERIENCE V4 / KNOWLEDGE SCROLL V1 —
+READY FOR OWNER INTERACTIVE REVIEW
+
+1. SCOPE
+
+Prototype strictement local et isolé sur /lab/deliciosa/v4.
+Branche : beta/deliciosa-species-experience-v4-knowledge-scroll-v1
+Base / HEAD non modifié par commit : 738d107074f4b8febae312dc31d419977b7f8041
+Déploiement : AUCUN.
+Commit : AUCUN.
+Deliciosa BÊTA servie, autres Species, Jungle PUBLIC, Supabase et Search Console : INTACTS.
+
+2. AUTORITÉ DE CONTENU
+
+Le prototype consomme directement content-master-v1.json, diagnostics-v1.json et faq-v1.json depuis la couche Botanical Evidence. Les composants ne possèdent pas de copie parallèle des contenus structurés. Chaque unité candidate remonte à ses content IDs, claim IDs et EvidenceLinks via le Content Master.
+
+Décisions Owner appliquées : contenus non Safety éligibles avec qualifiers ; scores exclus ; Safety absente ; taxonomie détaillée non exposée après le Hero frozen ; fertilisation minimale ; aucune règle universelle racines aériennes ; hypothèse Muir qualifiée ; Rhaphidophora reportée ; Conseil du Studio labellisé JUNGLE_EDITORIAL_GUIDANCE.
+
+3. PAGE 1 FROZEN
+
+Le markup du Hero V4 et du Hero D3 produit le même SHA-256 normalisé :
+7eb2e9200b51e2fd16662f963a52b086e79bef94c23cf7485a909fd66115d7fc
+
+Composition, photographie locale, H1, breadcrumb, phrase, crop, overlay, header et meta visuelle : INCHANGÉS.
+
+4. ART DIRECTION
+
+Concept : documentaire botanique interactif. Le scroll ne simule aucune croissance photographique ; il révèle une connaissance. La photographie est confinée au Hero. Le corps utilise typographie, lignes, surfaces et schémas CSS locaux explicitement qualifiés « schéma éditorial ».
+
+Rythme : scène forte → lecture calme → révélation → lecture → scène forte → interaction. Deux scènes seulement utilisent LEVEL 5.
+
+5. ACTES ET MOTION LEVELS
+
+I — Identité / origine — LEVEL 4 — sticky 2,2 viewports.
+Acquis : aire native POWO, biome, liane, hémiépiphytisme qualifié.
+
+II — Une feuille qui change — LEVEL 5 — sticky 3 viewports.
+Acquis : hétéroblastie, feuille juvénile/adulte, découpes et perforations. Diagramme conceptuel, aucune photo transformée en croissance.
+
+III — Pourquoi ces trous ? — LEVEL 3 — non sticky.
+Acquis : observé / associé / hypothèse scientifique Muir.
+
+IV — Environnement — LEVEL 3 — non sticky.
+Acquis : lumière qualitative, humidité qualitative, chaleur stable sans plage universelle.
+
+V — Eau / substrat — LEVEL 4 — sticky 2,4 viewports.
+Acquis : observer → arroser → égoutter, sans calendrier.
+
+VI — Sous la surface — LEVEL 5 — sticky 2,6 viewports.
+Acquis : substrat, drainage, contenant, rempotage, fertilisation minimale.
+
+VII — Grimper — LEVEL 4 — sticky 2,2 viewports.
+Acquis : port grimpant, support, racines aériennes, association sans garantie.
+
+VIII — Prendre de l’ampleur — LEVEL 3 — non sticky.
+Acquis : dimensions contextualisées, taille et inspection.
+
+IX — Diagnostic — LEVEL 1 — interaction directe.
+Six investigations : feuilles jaunes, plages brunes, croissance ralentie, absence de fenestrations, acariens, cochenilles. Une entrée ouverte maximum.
+
+X — Conseil du Studio — LEVEL 2.
+Changement de voix explicite JUNGLE_EDITORIAL_GUIDANCE.
+
+XI — FAQ — LEVEL 1.
+Cinq questions éligibles ; Safety absente.
+
+XII — Sources — LEVEL 0.
+Sources organisées par taxonomie, horticulture, morphologie/écologie et publication scientifique.
+
+Répartition : LEVEL 0 = 1 ; LEVEL 1 = 2 ; LEVEL 2 = 1 ; LEVEL 3 = 3 ; LEVEL 4 = 3 ; LEVEL 5 = 2.
+
+6. TRANSITIONS
+
+Hero → rail éditorial → ligne géographique → axe de liane → nervure de feuille → atmosphère lumineuse → ligne d’eau → coupe de substrat → racines → support vertical → échelles de dimensions → investigation.
+
+7. CONTENT IDs → ACTES
+
+I : content.origin.range ; content.origin.habitat.
+II : content.morphology.heteroblasty.
+III : content.morphology.fenestrations.
+IV : content.care.light ; content.care.humidity ; content.care.temperature.
+V : content.care.watering.
+VI : content.rootzone.substrate ; content.rootzone.pot ; content.rootzone.repotting ; content.care.fertilisation.
+VII : content.support.role ; content.aerial-roots.role.
+VIII : content.dimensions.context ; content.pruning.cleaning.
+IX : content.pests.documented + six diagnostics autorisés.
+X : content.studio.observation.
+XI : cinq FAQ non Safety.
+XII : sources dérivées des supporting_source_ids.
+
+8. SOURCES PROCHES
+
+Identité/origine : Source directe · Kew / POWO.
+Morphologie : données croisées · Croat, Muir, NC State, UF/IFAS.
+Fenestrations : Hypothèse scientifique · Muir 2013.
+Lumière/eau : données croisées · RHS, NC State, UConn.
+Diagnostic : RHS, UConn, UMN selon le symptôme.
+Aucun badge global « scientific verified ».
+
+9. TECHNIQUE MOTION
+
+Scroll natif. Un listener scroll passif, un listener resize et requestAnimationFrame partagé. Cinq éléments sticky. CSS variables par scène. Transform/opacity uniquement pour la progression principale. Aucun preventDefault, wheel/touch interception, snap agressif ou scroll-jacking.
+
+CSS Scroll-Driven Animations : NON.
+Fallback Safari : moteur JS natif + état HTML/CSS statique par défaut.
+GSAP / Lenis / Locomotive : NON.
+Nouvelle dépendance : 0.
+
+JS client ajouté, mesure source : 3 866 octets bruts (controller + accordéons), 1 377 octets gzip concaténés. Le controller seul : 1 940 octets bruts / 793 octets gzip. Cette mesure n’est pas présentée comme une mesure exacte du chunk final.
+
+Assets produit nouveaux : 0.
+Assets externes : 0.
+Botanix : NON utilisée, statut TO_VERIFY inchangé.
+
+10. RESPONSIVE MESURÉ APRÈS HYDRATATION
+
+360 × 800 : scrollHeight 17 737 px ; scrollWidth 360 ; clientWidth 360 ; overflow 0 ; sticky 5 ; images cassées 0.
+390 × 844 : scrollHeight 18 237 px ; scrollWidth 390 ; clientWidth 390 ; overflow 0 ; sticky 5 ; images cassées 0.
+820 × 1180 : scrollHeight 21 569 px ; scrollWidth 820 ; clientWidth 820 ; overflow 0 ; sticky 5 ; images cassées 0.
+1440 × 900 : scrollHeight 20 100 px ; scrollWidth 1440 ; clientWidth 1440 ; overflow 0 ; sticky 5 ; images cassées 0.
+
+H1 : 1 à chaque largeur. Dock dégagé par le padding terminal + safe-area. Le desktop utilise des compositions latérales ; mobile possède des compositions spécifiques.
+
+11. REDUCED MOTION / NO-JS
+
+Reduced-motion forcé : classe statique active ; sticky narratif 0 ; contenu critique caché 0. Les scènes gardent leurs états finaux et l’ordre DOM.
+
+No-JS : HTML serveur 72 056 octets ; contenu critique présent ; aucun opacity:0 par défaut ; Safety absente ; Rhaphidophora absente. Le JS améliore la progression sans créer la connaissance.
+
+12. ACCESSIBILITÉ
+
+H1 unique ; H2/H3 logiques ; ordre DOM narratif ; texte réel ; décor aria-hidden ; focus natif visible ; touch targets >=44 px ; diagnostic et FAQ en buttons avec aria-expanded/aria-controls ; une entrée ouverte maximum ; clavier testé ; contenu non dépendant de la couleur ou du mouvement. Aucune prétention de certification WCAG formelle.
+
+13. ANTI-RÉINTRODUCTION
+
+PASS : 50–75 % absent.
+PASS : minimum universel 15 °C absent.
+PASS : 18–28 °C universel absent.
+PASS : 4/5, 2/5, 3/5 absents.
+PASS : arrosage tous les X jours absent.
+PASS : support garantissant les trous absent.
+PASS : règle « toujours couper/guider/enterrer » absente.
+PASS : thrips spécifique absent du prototype.
+PASS : borsigiana comme espèce distincte absent.
+PASS : Safety approuvée absente ; FAQ Safety non rendue.
+PASS : Rhaphidophora non comparée.
+PASS : hypothèse Muir explicitement qualifiée.
+
+14. TESTS
+
+TypeScript : PASS.
+Lint ciblé : PASS.
+Build Sites/Jungle : PASS.
+Tests Jungle : 43/43 PASS.
+Tests V4 ciblés : 7/7 PASS.
+Audit placeholders : PASS ; Deliciosa utilise l’asset local définitif existant.
+Validation artefact Sites : PASS.
+git diff --check : PASS.
+Console navigateur : 0 erreur.
+HTTP local Mac : 200.
+HTTP réseau local : 200.
+
+Audit SEO générique : non applicable à cet environnement BÊTA car le script attend un sitemap HTTP 200 alors que le contrat BÊTA validé exige l’absence du sitemap ; il retourne donc Sitemap HTTP 404. Contrôle ciblé V4 : noindex/nofollow PASS, route absente du sitemap de build, HTML serveur PASS. Aucun changement SEO.
+
+15. CAPTURES
+
+Dossier : artifacts/deliciosa-v4-knowledge-scroll/captures/
+Captures : Hero frozen 390 ; pleine page 360/390/820/1440 ; feuille début/milieu/fin ; sous-surface début/milieu/fin ; état desktop feuille. Les pleines pages constituent la vue globale des douze actes.
+
+16. GIT / ENVIRONNEMENT
+
+Branche dédiée créée. Aucun commit, push, merge ou déploiement. Les fichiers Evidence existants étaient déjà non suivis avant la mission et n’ont pas été modifiés par le prototype. Rollback LAB : supprimer les nouveaux dossiers V4, le test, le plan, les captures et ce rapport ; aucune version servie n’est affectée.
+
+17. RÉPONSES AUX 50 QUESTIONS
+
+1. Page 1 strictement inchangée ? YES — hash normalisé identique.
+2. Knowledge Scroll construit ? YES.
+3. D3 réutilisé comme direction artistique ? NO — technique légère seulement.
+4. Une même photo est-elle utilisée pour simuler la croissance ? NO.
+5. Card soup ? NO — une feuille éditoriale intégrée existe sous la surface, pas une succession de cards.
+6. Nombre d’actes ? 12.
+7. Nombre de sticky ? 5.
+8. Nombre de scènes LEVEL 5 ? 2.
+9. Scroll natif ? YES.
+10. Scroll-jacking ? NO.
+11. Nouvelle dépendance ? NO.
+12. GSAP ? NO.
+13. Lenis ? NO.
+14. Locomotive ? NO.
+15. CSS Scroll-Driven utilisé ? NO.
+16. Fallback Safari ? YES — moteur natif léger + état statique par défaut.
+17. Reduced-motion PASS ? YES.
+18. No-JS PASS ? YES.
+19. 360 PASS ? YES.
+20. 390 PASS ? YES.
+21. 820 PASS ? YES.
+22. 1440 PASS ? YES.
+23. Overflow ? 0 aux quatre largeurs.
+24. Images cassées ? 0.
+25. Erreurs console ? 0.
+26. Contenu 50–75 % réintroduit ? NO.
+27. Minimum 15 °C réintroduit ? NO.
+28. 18–28 °C universel réintroduit ? NO.
+29. Scores Jungle réintroduits ? NO.
+30. Arrosage calendaire réintroduit ? NO.
+31. Support présenté comme cause garantie des fenestrations ? NO.
+32. Racines aériennes : règle universelle publiée ? NO.
+33. Thrips présenté comme spécifique ? NO.
+34. borsigiana présenté comme espèce distincte ? NO.
+35. Safety présentée comme approuvée ? NO.
+36. Hypothèse Muir correctement qualifiée ? YES.
+37. Sources proches visibles ? YES.
+38. Conseil du Studio distinct des faits ? YES.
+39. FAQ Safety publiée ? NO.
+40. Rhaphidophora comparée ? NO.
+41. Botanix utilisée ? NO.
+42. Nouvel asset externe ? NO.
+43. BÊTA Deliciosa modifiée ? NO.
+44. Autres Species modifiées ? NO.
+45. Jungle PUBLIC modifiée ? NO.
+46. Supabase modifié ? NO.
+47. Search Console utilisée ? NO.
+48. Déploiement effectué ? NO.
+49. Commit ? NO.
+50. OWNER INTERACTIVE REVIEW REQUIRED ? YES.
+
+18. PREVIEW
+
+Mac : http://localhost:5174/lab/deliciosa/v4
+iPhone même Wi-Fi : http://192.168.1.125:5174/lab/deliciosa/v4
+
+Le serveur local est laissé actif pour la revue propriétaire.
+
+VERDICT FINAL
+
+DELICIOSA — SPECIES EXPERIENCE V4 / KNOWLEDGE SCROLL V1 —
+READY FOR OWNER INTERACTIVE REVIEW
+
+STOP. Aucun passage BÊTA, PUBLIC, rollout ou autre Species.

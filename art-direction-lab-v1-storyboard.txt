@@ -1,0 +1,59 @@
+TIBALDO JUNGLE — MONSTERA DELICIOSA
+ART DIRECTION LAB V1 — STORYBOARD
+Date : 24 août 2026
+
+CONTRAT
+Hero V4 frozen, puis quatre scènes uniquement. Scroll natif. Une scène = une idée dominante.
+Contenu issu du Content Master FINAL. Les formulations condensées portent LAB_VISUAL_EXCERPT.
+
+TRANSITION HERO → SCÈNE 1 — CHAPTER PORTAL
+START STATE : fin du Hero vert photographique.
+25 % : un aplat crème monte comme un rideau souple ; le mot LIANE apparaît derrière la photographie.
+50 % : la photographie se resserre sur une diagonale végétale.
+75 % : le titre prend le relais ; l’aplat devient le fond de la scène Origine.
+END STATE : la photographie est devenue la matière centrale de la scène.
+TRANSITION OUT : la diagonale/pétiole reste présente et guide vers la feuille.
+
+SCÈNE 1 — ORIGINE / LIANE
+START STATE : photographie végétale plein cadre, texte minimal « Une liane ».
+SCROLL 25 % : le cadre se décale ; la plante occupe l’axe vertical.
+SCROLL 50 % : « avant d’être une plante en pot » apparaît ; l’aire native se compose sans carte dashboard.
+SCROLL 75 % : Mexique / Guatemala et biome tropical humide apparaissent comme légendes éditoriales.
+END STATE : photographie + nom + aire native + qualifier forment une page magazine stable.
+TRANSITION OUT : OBJECT CONTINUITY — le pétiole devient l’axe visuel de la feuille suivante.
+
+SCÈNE 2 — UNE FEUILLE QUI CHANGE
+START STATE : une feuille entière cordiforme issue du crop local domine l’écran.
+SCROLL 25 % : l’image se réduit légèrement ; un second crop adulte apparaît en satellite.
+SCROLL 50 % : composition triptyque — juvénile / développement / adulte — sans colonnes-cartes.
+SCROLL 75 % : le crop adulte s’agrandit et révèle découpes et perforations internes.
+END STATE : la feuille adulte devient plein cadre ; label « lecture morphologique, pas séquence photographique de croissance ».
+TRANSITION OUT : CHAPTER PORTAL — le vert plein cadre s’ouvre verticalement sur la scène Grimper.
+
+SCÈNE 3 — ELLE GRIMPE
+START STATE : plante entière sur fond clair ; la silhouette domine.
+SCROLL 25 % : zoom vers la tige et les nœuds.
+SCROLL 50 % : le support entre dans la composition ; légende « accompagne le port ».
+SCROLL 75 % : rapprochement sur la racine aérienne ; son rôle d’ancrage est révélé.
+END STATE : vue rapprochée + deux formulations qualifiées, sans règle universelle.
+TRANSITION OUT : OBJECT CONTINUITY — la racine descend et devient l’entrée vers la coupe du contenant.
+
+SCÈNE 4 — SOUS LA SURFACE
+START STATE : pot complet, silhouette sobre, surface fermée.
+SCROLL 25 % : masque vertical révélant le substrat ouvert/aéré/drainant.
+SCROLL 50 % : réseau racinaire éditorial et drainage deviennent visibles.
+SCROLL 75 % : volume du contenant et signes de rempotage apparaissent en légendes contextuelles.
+END STATE : coupe complète, nutrition secondaire et qualitative ; aucune recette ni calendrier universel.
+TRANSITION OUT : retour au crème calme avec invitation à la review Owner.
+
+MOTION / PERFORMANCE
+- Un seul listener scroll passif, un requestAnimationFrame partagé.
+- Cinq zones de progression : portal + quatre scènes ; quatre stages sticky.
+- Transform, opacity, clip-path et variables CSS uniquement.
+- Reduced-motion : stages non sticky et états finaux complets.
+- No-JS : contenu, photos et illustration visibles par défaut.
+
+ASSETS
+- /monstera-deliciosa-feuilles.jpg : asset local déjà utilisé par le Hero frozen ; réutilisé en crops LAB.
+- /plant-monstera.jpg : asset local préexistant, origine/licence non démontrée ; LAB_LOCAL_REFERENCE_ONLY, jamais publié.
+- Aucun téléchargement, hotlink ou nouvel asset externe.

@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "audit_date": "2026-08-24",
+  "remote_preview_url": "https://tibaldo-jungle-deliciosa-art-review.tibaldo.chatgpt.site/lab/deliciosa/art-direction-v1",
+  "assets": [
+    {
+      "asset": "/monstera-deliciosa-feuilles.jpg",
+      "source": "Existing Jungle repository asset; introduced by owner repository commit a81fbbe3518f5a687479ba5534a0e3fe5c263930 and already served by Jungle",
+      "local_only": false,
+      "rights_status": "EXISTING_JUNGLE_PUBLISHED_ASSET",
+      "remote_preview_allowed": true,
+      "uses": ["frozen Hero", "Origin crop", "Leaf crops", "Climb crop"]
+    },
+    {
+      "asset": "/tibaldo-jungle-logo.webp",
+      "source": "Existing Tibaldo Jungle brand asset",
+      "local_only": false,
+      "rights_status": "OWNER_BRAND_ASSET",
+      "remote_preview_allowed": true,
+      "uses": ["Header brand"]
+    },
+    {
+      "asset": "Subsurface CSS/DOM cutaway",
+      "source": "Locally authored prototype composition",
+      "local_only": false,
+      "rights_status": "LOCAL_ORIGINAL",
+      "remote_preview_allowed": true,
+      "uses": ["Subsurface scene"]
+    },
+    {
+      "asset": "/plant-monstera.jpg",
+      "source": "Existing repository asset; provenance not demonstrated",
+      "local_only": true,
+      "rights_status": "PHOTO_ORIGIN_UNCERTAIN",
+      "remote_preview_allowed": false,
+      "remote_action": "EXCLUDED_FROM_STANDALONE_PREVIEW",
+      "replacement": "/monstera-deliciosa-feuilles.jpg crop",
+      "remote_http_status": 404
+    }
+  ],
+  "external_hotlinks": 0,
+  "botanix_used": false,
+  "unverified_external_asset_published": false
+}

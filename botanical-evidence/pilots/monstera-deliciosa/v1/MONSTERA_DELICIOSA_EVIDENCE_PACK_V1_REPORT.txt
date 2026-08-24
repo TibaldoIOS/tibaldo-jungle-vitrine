@@ -1,0 +1,333 @@
+MONSTERA DELICIOSA — EVIDENCE PACK V1
+JUNGLE BOTANICAL EVIDENCE PILOT
+Date: 2026-08-24
+Status: EVIDENCE_PACK_COMPLETE_PENDING_HUMAN_REVIEWS
+
+===============================================================================
+1. EXECUTIVE SUMMARY
+===============================================================================
+
+Le pilote a reconstruit la preuve de 45 claims couvrant les 26 domaines A–Z à partir de 15 sources originales ouvertes et évaluées. Il contient 97 EvidenceLinks, 13 Review records, 7 conflits documentés, 8 parcours diagnostiques prudents et 34 entrées Legacy.
+
+Décisions majeures :
+
+- nom accepté : Monstera deliciosa Liebm. ;
+- Monstera borsigiana : synonyme selon POWO, pas espèce distincte acceptée ;
+- aire native POWO : sud/sud-est du Mexique jusqu'au Guatemala ;
+- 50–75 % RH : non démontré, WITHHELD ;
+- 18–28 °C : plage Legacy non directement corroborée ; recommandation chaude qualifiée ;
+- minimum 15 °C : WITHHELD comme minimum universel ;
+- lumière : lumineuse à modérée, indirecte/filtrée, avec acclimatation pour toute exposition plus forte ;
+- arrosage : vérifier le séchage de la partie supérieure du substrat, arroser complètement, égoutter ; aucune fréquence universelle ;
+- fenestrations : maturité clairement impliquée ; lumière/support = associations horticoles, pas déclencheurs garantis ; fonction évolutive non résolue, hypothèse de Muir seulement ;
+- Safety : oxalates insolubles et irritation documentés ; chiens/chats directement couverts par ASPCA ; toute formulation publique reste REVIEW_REQUIRED ;
+- thrips : signes généraux documentés, mais preuve spécifique à M. deliciosa non ouverte dans ce pilote ; WITHHELD comme fait spécifique.
+
+Aucun claim n'est APPROVED : les reviews humaines obligatoires n'ont pas été simulées. Le pack peut nourrir un futur Content Master uniquement après décisions Owner et reviews humaines.
+
+===============================================================================
+2. SCOPE CONFIRMATION
+===============================================================================
+
+IN SCOPE : recherche documentaire, audit Legacy read-only, données structurées Git isolées, validations locales.
+
+OUT OF SCOPE ET INTACTS : produit, PlantEntry, deliciosa-next, Species UX NEXT, D4, UI, routes, metadata/JSON-LD publics, Supabase, BÊTA, PUBLIC, Search Console, déploiement, commit, push et droits photo.
+
+Taxon unique : Monstera deliciosa. Aucun cultivar ni autre Monstera n'est traité comme taxon du pack.
+
+===============================================================================
+3. FILES CREATED / MODIFIED
+===============================================================================
+
+12 fichiers ont été créés, tous sous :
+botanical-evidence/pilots/monstera-deliciosa/v1/
+
+Voir FILE_MANIFEST.txt. Aucun fichier produit n'a été modifié.
+
+===============================================================================
+4. LEGACY CLAIM AUDIT SUMMARY
+===============================================================================
+
+34 claims/valeurs actuels ont été recensés.
+
+- REBUILT : 5
+- REBUILT_QUALIFIED : 13
+- REBUILT_PARTIAL / PROPERTIES_ONLY / REVIEW_REQUIRED : 4
+- SUPERSEDED / SUPERSEDED_BY_FIELD_LINKS : 2
+- REJECTED / REJECTED_AS_CERTAINTY : 4
+- LEGACY_UNVERIFIED : 4
+- PARTIAL / PARTIAL_WITHHELD : 2
+
+Dette principale révélée : Deliciosa hérite encore de valeurs génériques dans lib/plants/requested-plants.ts, notamment 15 °C, 18–28 °C, 50–75 %, scores 4/5–2/5–3/5–2/5, diagnostics génériques et FAQ générée. Ces valeurs n'ont pas été modifiées ; elles sont simplement cartographiées dans legacy-claim-audit.json.
+
+===============================================================================
+5. TAXONOMY DECISION
+===============================================================================
+
+Décision proposée, pending human Taxonomy Review :
+
+- accepted name : Monstera deliciosa Liebm. ;
+- rank : species ; status : accepted ;
+- family : Araceae ; genus : Monstera ; order : Alismatales ;
+- POWO/IPNI LSID : urn:lsid:ipni.org:names:87478-1 ;
+- original publication (IPNI) : Vidensk. Meddel. Naturhist. Foren. Kjøbenhavn (1849) 19 ;
+- Monstera borsigiana K.Koch : synonyme POWO ;
+- Monstera deliciosa var. borsigiana : synonyme POWO ;
+- Philodendron pertusum : synonyme POWO.
+
+POWO gouverne acceptation/statut/synonymie. IPNI complète l'authorship et la publication. Taxonomy Review présente mais reviewer=null : aucune approbation humaine revendiquée.
+
+===============================================================================
+6. SOURCE REGISTER SUMMARY
+===============================================================================
+
+15 sources ouvertes et utilisées : POWO, IPNI, deux ressources RHS, NC State Extension, UConn Extension, Croat/Missouri Botanical Garden, Muir 2013, UF/IFAS, Iowa State Extension, Frontiers 2022, ASPCA Animal Poison Control, CHOP Poison Control, deux ressources University of Minnesota Extension.
+
+Une page Penn State découverte a retourné 403 à l'ouverture. Elle est enregistrée comme candidate inaccessible et n'est reliée à aucun EvidenceLink.
+
+Répartition qualitative : taxonomie/backbone pour taxonomie/aire ; littérature scientifique pour écologie/fenestrations/racines ; institutions horticoles pour culture ; organismes antipoison/vétérinaires pour Safety ; extensions pour diagnostics.
+
+===============================================================================
+7. CLAIMS BY DOMAIN A–Z
+===============================================================================
+
+A — IDENTITÉ / TAXONOMIE
+4 claims. Nom, classification, borsigiana et Philodendron pertusum VERIFIED. Publication REVIEW_REQUIRED jusqu'à Taxonomy Review humaine.
+
+B — DISTRIBUTION / ORIGINE
+Aire native POWO VERIFIED ; les extensions plus larges sont conservées comme divergence. Biome tropical humide VERIFIED.
+
+C — HABITAT / ÉCOLOGIE
+Liane grimpante CORROBORATED. Hémiépiphytisme secondaire QUALIFIED car une partie de la preuve est au niveau du genre.
+
+D — MORPHOLOGIE
+Hétéroblastie et feuilles adultes avec découpes externes + perforations internes CORROBORATED.
+
+E — FENESTRATIONS
+Maturité fortement soutenue. Lumière et support = associations qualifiées. La fonction adaptative reste une hypothèse ; aucune explication unique n'est publiée comme certitude.
+
+F — LUMIÈRE
+Lumière intérieure lumineuse à modérée, filtrée/indirecte CORROBORATED. Soleil intense = risque de brûlure. Pas d'heures/lux universels.
+
+G — ARROSAGE
+Critère défendable : état du substrat, pas calendrier. Les sources divergent légèrement sur « presque sec », « quart/tiers supérieur » ou « 2–3 pouces ». Formulation qualitative retenue. Eau stagnante/forte saturation à éviter.
+
+H — HUMIDITÉ
+Préférence qualitative modérée à élevée CORROBORATED. Plage 50–75 % UNVERIFIED et WITHHELD.
+
+I — TEMPÉRATURE
+Conditions chaudes soutenues, plages exactes contextuelles : RHS 18–25 °C ; NC State 15,6–29,4 °C après conversion de 60–85 °F. Les seuils de manipulation extérieure et de gel ne sont pas des minima intérieurs. 18–28 °C QUALIFIED ; minimum 15 °C WITHHELD.
+
+J — SUBSTRAT / ROOT ZONE
+Propriétés CORROBORATED : ouvert/aéré, bien drainé, matière organique, sans saturation persistante. Aucune recette Tibaldo en pourcentage n'est validée ici.
+
+K — POT / CONTENANT
+Drainage + augmentation progressive du volume CORROBORATED. Éviter le surpotage.
+
+L — REMPOTAGE
+Déclencheurs observables : racines au fond/côtés, motte réellement remplie, stabilité. La fréquence calendaire est secondaire et qualifiée.
+
+M — FERTILISATION
+Engrais équilibré pendant croissance active QUALIFIED. Fréquence/dilution divergent et restent REVIEW_REQUIRED ; prudence sur accumulation de sels.
+
+N — MULTIPLICATION
+Bouture de tige avec au moins un nœud CORROBORATED. Une feuille seule sans nœud n'est pas soutenue pour reformer une plante complète.
+
+O — SUPPORT / TUTEUR
+Rôle mécanique/grimpant direct. Association avec feuilles plus matures, sans promesse « tuteur = trous ».
+
+P — RACINES AÉRIENNES
+Ancrage/progression et capacité à s'enraciner au contact d'un milieu favorable CORROBORATED. Règle universelle couper/guider/enterrer : NO_EVIDENCE_FOUND, WITHHELD.
+
+Q — CROISSANCE / DIMENSIONS
+Contexte obligatoire : >21 m en paysage extérieur favorable ; 4–8 m profil RHS ; 1,8–2,4 m « most homes » NC State. Aucune taille unique. « Rapide/vigoureuse » reste QUALIFIED : les sources ne définissent pas une vitesse intérieure universelle.
+
+R — TOXICITÉ / SAFETY
+Oxalates insolubles CORROBORATED. Humains/enfants QUALIFIED ; chiens/chats VERIFIED selon ASPCA. Toutes publications restent REVIEW_REQUIRED.
+
+S — RAVAGEURS
+Cochenilles et acariens directement documentés ; UConn ajoute cochenilles farineuses et pucerons. Thrips : GENERAL_DOMAIN seulement, WITHHELD comme fait spécifique.
+
+T — FEUILLES JAUNES
+Symptôme multicausal. Vérification substrat/racines/température/ravageurs avant action. Sénescence naturelle conservée comme possibilité générale, non comme diagnostic.
+
+U — POINTES / PLAGES BRUNES
+Air très sec et brûlure lumineuse soutenus ; motifs avec halo/suintement doivent orienter vers une évaluation de maladie. Sels/arrosages irréguliers insuffisamment prouvés spécifiquement.
+
+V — CROISSANCE RALENTIE / PETITES FEUILLES
+Lumière, saison/température, racines, repousse après taille et support sont des vérifications, jamais une cause certaine à partir du symptôme seul.
+
+W — ABSENCE DE FENESTRATIONS
+Stade juvénile d'abord ; lumière/support comme associations qualifiées. Aucun « ajoutez un tuteur et les trous apparaîtront ».
+
+X — TAILLE / NETTOYAGE
+Taille des tiges pour contenir la plante CORROBORATED ; repousse initialement moins mature possible. Essuyage doux de la poussière et inspection du feuillage CORROBORATED. Hygiène d'outil finale à sourcer séparément si publiée.
+
+Y — DIFFICULTÉ / SCORES
+4/5 lumière, 2/5 arrosage, 3/5 humidité, 2/5 difficulté = JUNGLE_EDITORIAL_SCORE, UNVERIFIED, WITHHELD jusqu'à rubric Owner.
+
+Z — QUESTIONS FRÉQUENTES
+Le socle est suffisant pour traiter plus tard placement, arrosage, absence de trous, rempotage, drainage et toxicité. La règle sur coupe des racines aériennes reste WITHHELD. Aucune FAQ finale n'a été rédigée.
+
+Le détail FIELD / CLAIM ID / contexte / sources / locator / confiance / publication / Legacy / questions est dans claims.json et evidence-links.json.
+
+===============================================================================
+8. NUMERIC CLAIM AUDIT
+===============================================================================
+
+50–75 % RH : UNVERIFIED, WITHHELD. Aucune source ouverte ne donne les deux bornes.
+
+18–28 °C : QUALIFIED/REVIEW_REQUIRED comme plage Legacy. Elle chevauche des plages institutionnelles mais n'est pas directement confirmée à l'identique.
+
+Minimum 15 °C : UNVERIFIED comme minimum universel, WITHHELD. Ne pas confondre plage préférée, manipulation extérieure et dommage par gel.
+
+4/5 lumière, 2/5 arrosage, 3/5 humidité, 2/5 difficulté : scores éditoriaux, pas faits botaniques.
+
+Dimensions : conservées par contexte, jamais fusionnées. Conversion NC State 60–85 °F = environ 15,6–29,4 °C documentée ; aucune moyenne calculée.
+
+===============================================================================
+9. CONFLICTS AND DIVERGENCES
+===============================================================================
+
+7 conflits/variations : aire native, fonction des fenestrations, seuil d'arrosage, humidité 50–75 %, température, fertilisation, dimensions.
+
+Aucun conflit n'a été masqué ni moyenné. Voir conflicts.json pour valeurs, contexte, hypothèse et décision éditoriale.
+
+===============================================================================
+10. SAFETY REVIEW
+===============================================================================
+
+Safety Review créée : review.safety.monstera-deliciosa.v1.
+Reviewer : null. Status : REVIEW_REQUIRED.
+
+Formulation proposée, non approuvée humainement : la plante contient des cristaux insolubles d'oxalate de calcium susceptibles d'irriter la bouche, les muqueuses et parfois la peau. Elle doit rester hors de portée des enfants et animaux. Pour une exposition préoccupante, en particulier gonflement/difficulté à avaler, contacter un centre antipoison, un professionnel de santé ou un vétérinaire selon le cas.
+
+Mots interdits sans preuve : « mortel », « sans danger », toute garantie ou protocole médical/vétérinaire maison.
+
+===============================================================================
+11. DIAGNOSTIC GUIDANCE SUMMARY
+===============================================================================
+
+8 parcours : feuilles jaunes, zones brunes, croissance lente/petites feuilles, absence de fenestrations, acariens, cochenilles, thrips, pourriture racinaire.
+
+Chaque parcours sépare symptôme, causes possibles, vérifications, actions à faible risque et red flags. Aucun pesticide précis n'est prescrit ; toute utilisation future doit suivre identification, homologation et étiquette.
+
+===============================================================================
+12. UNVERIFIED / WITHHELD CLAIMS
+===============================================================================
+
+UNVERIFIED : plage RH 50–75 %, minimum universel 15 °C, quatre scores éditoriaux, règle universelle de conduite des racines aériennes.
+
+WITHHELD : ces 7 claims plus le claim de couverture FAQ, la mission interdisant la FAQ finale.
+
+Thrips reste explicitement non vérifié au niveau espèce dans le registre diagnostique, malgré des signes généraux disponibles.
+
+===============================================================================
+13. CLAIMS POTENTIALLY READY FOR CONTENT MASTER
+===============================================================================
+
+Après reviews humaines : nom/classification/synonymie, biome, port grimpant, hétéroblastie, morphologie adulte, lumière indirecte/filtrée, arrosage par état du substrat, absence d'eau stagnante, humidité qualitative, propriétés du substrat, pot drainant/progressif, déclencheurs de rempotage, nœud pour bouture, support qualifié, rôle des racines aériennes, dimensions contextualisées, Safety prudente, acariens/cochenilles et diagnostics probabilistes.
+
+Ne sont pas prêts : valeurs RH et minima universels, scores, règle de coupe des racines aériennes, thrips spécifique, fonction certaine des fenestrations, prescription universelle de fertilisation.
+
+===============================================================================
+14. OPEN QUESTIONS
+===============================================================================
+
+8 questions détaillées dans open-questions.json : racines aériennes, thrips spécifique, plage RH, choix température Owner, causalité des fenestrations, protocole fertilisation France/Lille, noms communs français, droits photo Botanix hors périmètre.
+
+===============================================================================
+15. SYSTEM V1 FINDINGS / PROPOSED IMPROVEMENTS
+===============================================================================
+
+1. Ajouter un champ claim_scope_precision pour distinguer taxon direct, genre et domaine général sans dépendre uniquement des EvidenceLinks.
+2. Ajouter measurement_kind : preference / optimum / tolerance / damage_threshold / editorial_score.
+3. Ajouter explicitement evidence_gap_reason pour les claims WITHHELD.
+4. Prévoir une relation source-family afin que deux pages RHS ne comptent jamais comme deux sources indépendantes.
+5. Prévoir une table DiagnosticCause séparée si le système dépasse quelques taxons.
+6. Prévoir un champ public_wording_locale ; la formulation française ne doit pas écraser le claim canonique.
+7. Conserver le modèle Git V1 : le pilote ne révèle aucun besoin de Supabase.
+
+Ces propositions ne modifient aucun schéma partagé : le pilote reste schema_version 1.0.0-pilot isolé.
+
+Freshness : taxonomie à revoir si POWO change ; Safety en priorité lors d'une mise à jour institutionnelle ; horticulture lors d'une modification de source/conflit ; pas de renouvellement annuel artificiel.
+
+===============================================================================
+16. QUALITY GATES P0/P1/P2
+===============================================================================
+
+P0 — PASS
+Nom POWO vérifié ; Taxonomy/Safety Reviews présentes ; 97/97 EvidenceLinks vers sources ouvertes ; aucun snippet utilisé ; statuts séparés ; conflits visibles ; JSON/références valides ; périmètre interdit intact.
+
+P1 — PASS
+A–Z couverts ; contexte/confiance/publication sur 45/45 claims ; nombres contextualisés ; dépendances évaluées ; Legacy comparé ; manifest et questions ouverts complets.
+
+P2 — PARTIAL
+Locators et formulations sobres présents. Restent les reviews humaines, une dernière revue manuelle des URL avant Content Master et des recherches ciblées sur les gaps. Aucun PDF/image protégé n'a été archivé.
+
+===============================================================================
+17. PHOTO BOTANIX STATUS
+===============================================================================
+
+PHOTO_BOTANIX = TO_VERIFY.
+
+Statut inchangé. Aucun téléchargement, hotlink, copie, optimisation, intégration ou usage comme preuve. Photo Rights et Botanical Evidence sont restés séparés.
+
+===============================================================================
+18. PROHIBITED ACTIONS CONFIRMATION
+===============================================================================
+
+Content Master : NON créé.
+D4 : NON créé.
+Produit/UI/routes/PlantEntry/deliciosa-next : NON modifiés.
+Supabase : untouched.
+BÊTA/PUBLIC : untouched.
+Déploiement/publication : AUCUN.
+Search Console : untouched.
+Commit/push/PR : AUCUN.
+
+===============================================================================
+19. OWNER DECISIONS REQUIRED
+===============================================================================
+
+1. Valider ou modifier la formulation Safety proposée après review humaine compétente.
+2. Décider si la future page publie 18–25 °C avec attribution/contexte RHS, ou reste qualitative.
+3. Confirmer la dépréciation des Legacy 50–75 %, minimum 15 °C et des scores sans rubric.
+4. Choisir si l'hypothèse scientifique des fenestrations mérite d'apparaître dans le futur Content Master.
+5. Accepter que thrips et règle couper/guider les racines aériennes restent WITHHELD jusqu'à preuve directe.
+6. Valider les évolutions de schéma proposées ou conserver le pilot schema inchangé.
+7. Après Taxonomy, Safety et Editorial Reviews humaines : décider séparément si une mission MONSTERA DELICIOSA — CONTENT MASTER V1 peut être lancée.
+
+===============================================================================
+20. FINAL STATUS
+===============================================================================
+
+EVIDENCE_PACK_COMPLETE_PENDING_HUMAN_REVIEWS
+
+Réponses obligatoires :
+
+1. Nom/authorship POWO/IPNI ? Monstera deliciosa Liebm.
+2. Monstera borsigiana ? Synonyme POWO, pas espèce acceptée distincte.
+3. Aire native ? Sud/sud-est du Mexique jusqu'au Guatemala selon POWO ; introductions/culture séparées.
+4. Croissance/hémiépiphytisme ? Liane grimpante corroborée ; « secondairement hémiépiphyte » qualifié par contexte et littérature de genre.
+5. Fenestrations ? Hétéroblastie/maturité soutenues ; fonction adaptative non établie ; hypothèse Muir seulement.
+6. Lumière ? Lumineuse à modérée, indirecte/filtrée ; soleil intense à acclimater/éviter selon contexte.
+7. Arrosage ? État du haut du substrat, arrosage complet, égouttage ; aucune fréquence universelle.
+8. 50–75 % ? NON suffisamment soutenu ; WITHHELD.
+9. 18–28 °C et minimum 15 °C ? Chaleur soutenue ; 18–28 non corroboré à l'identique ; 15 minimum universel WITHHELD.
+10. Substrat ? Ouvert/aéré, drainant, organique, non saturé ; aucune recette pourcentée validée.
+11. Rempotage ? Racines occupant fond/côtés, motte/contenant et stabilité ; pas calendrier rigide.
+12. Fertilisation ? Équilibrée en croissance active ; fréquence/division contextuelles et divergentes.
+13. Nœud requis ? OUI pour la bouture de tige viable documentée.
+14. Support/racines aériennes ? Support mécanique et port grimpant ; racines d'ancrage pouvant s'enraciner ; conduite domestique universelle non prouvée.
+15. Dimensions ? >21 m extérieur favorable ; 4–8 m RHS ; 1,8–2,4 m souvent en intérieur NC State — contextes séparés.
+16. Safety ? Oxalates irritants ; hors de portée ; professionnel/antipoison/vétérinaire si exposition préoccupante ; review humaine obligatoire.
+17. Ravageurs ? Cochenilles, acariens, cochenilles farineuses directement documentés ; vérification visuelle/loupe ; thrips non direct au niveau espèce.
+18. Diagnostics trop catégoriques ? Jaunissement, brunissement, croissance lente, absence de trous et thrips Legacy devaient tous être probabilisés.
+19. UNVERIFIED/CONFLICTING ? 7 UNVERIFIED ; aucun claim étiqueté CONFLICTING car les divergences ont été résolues comme contextuelles/qualifiées, mais 7 conflits restent documentés et human-reviewable.
+20. Prêts Content Master ? 22 VERIFIED/CORROBORATED et une partie des 14 QUALIFIED, uniquement après reviews humaines.
+21. Valeurs Legacy ? Conserver/reconstruire faits taxonomiques et guidances qualitatives ; qualifier température, diagnostic, support ; rejeter 50–75 %, 15 °C universel et scores sans rubric.
+22. Besoins System V1 ? measurement_kind, source-family/dependency, evidence-gap reason, locale wording, diagnostic normalization.
+23. Photo Botanix ? Toujours TO_VERIFY et totalement hors Botanical Evidence : OUI.
+
+STOP — aucun Content Master ni D4 lancé.

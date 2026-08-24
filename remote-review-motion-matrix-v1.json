@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "tested_at": "2026-08-24T22:18:00+02:00",
+  "viewport": "390x844",
+  "normal_scroll": {
+    "native": true,
+    "scroll_jacking": false,
+    "reverse_scroll": "PASS",
+    "forward_leaf_progress": 0.5189,
+    "reverse_leaf_progress": 0.2227,
+    "console_critical_errors": 0
+  },
+  "scenes": [
+    {"scene":"ORIGIN","sticky_works":"PASS","progress_0":"PASS","progress_25":"PASS","progress_50":"PASS","progress_75":"PASS","progress_100":"PASS","reverse_scroll":"PASS","transition_out":"PASS","known_issue":null},
+    {"scene":"LEAF","sticky_works":"PASS","progress_0":"PASS","progress_25":"PASS","progress_50":"PASS","progress_75":"PASS","progress_100":"PASS","reverse_scroll":"PASS","transition_out":"PASS","known_issue":null},
+    {"scene":"CLIMB","sticky_works":"PASS","progress_0":"PASS","progress_25":"PASS","progress_50":"PASS","progress_75":"PASS","progress_100":"PASS","reverse_scroll":"PASS","transition_out":"PASS","known_issue":"Remote preview uses an authorized crop instead of local-only /plant-monstera.jpg."},
+    {"scene":"SUBSURFACE","sticky_works":"PASS","progress_0":"PASS","progress_25":"PASS","progress_50":"PASS","progress_75":"PASS","progress_100":"PASS","reverse_scroll":"PASS","transition_out":"PASS","known_issue":null}
+  ]
+}

@@ -1,0 +1,447 @@
+{
+  "schema_version": "1.0.0",
+  "records": [
+    {
+      "claim_id": "claim.md.taxonomy.accepted-name",
+      "decision": "TAXONOMY_REVIEW_REQUIRED",
+      "publication_eligibility": "CANDIDATE_ONLY",
+      "specialist_review_required": "TAXONOMY_REVIEW_REQUIRED",
+      "owner_decision_required": true,
+      "prohibited_wording": [],
+      "rationale": "POWO directly records the species as accepted; IPNI independently confirms the nomenclatural name, authorship and original publication. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.taxonomy.classification",
+      "decision": "TAXONOMY_REVIEW_REQUIRED",
+      "publication_eligibility": "CANDIDATE_ONLY",
+      "specialist_review_required": "TAXONOMY_REVIEW_REQUIRED",
+      "owner_decision_required": true,
+      "prohibited_wording": [],
+      "rationale": "Direct POWO classification; IPNI confirms family as entered. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.taxonomy.borsigiana",
+      "decision": "TAXONOMY_REVIEW_REQUIRED",
+      "publication_eligibility": "CANDIDATE_ONLY",
+      "specialist_review_required": "TAXONOMY_REVIEW_REQUIRED",
+      "owner_decision_required": true,
+      "prohibited_wording": [
+        "Monstera borsigiana est une espèce acceptée distincte"
+      ],
+      "rationale": "Direct synonymy entry in the authoritative taxonomic backbone. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.taxonomy.philodendron-pertusum",
+      "decision": "TAXONOMY_REVIEW_REQUIRED",
+      "publication_eligibility": "CANDIDATE_ONLY",
+      "specialist_review_required": "TAXONOMY_REVIEW_REQUIRED",
+      "owner_decision_required": true,
+      "prohibited_wording": [],
+      "rationale": "Direct POWO synonymy record. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.distribution.native-range",
+      "decision": "QUALIFIED",
+      "publication_eligibility": "ALLOWED_WITH_QUALIFIER",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [],
+      "rationale": "Direct native-range record from POWO. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.distribution.biome",
+      "decision": "OWNER_DECISION_REQUIRED",
+      "publication_eligibility": "ALLOWED",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [],
+      "rationale": "Direct POWO biome field. Publication Evidence V1: DRAFT."
+    },
+    {
+      "claim_id": "claim.md.ecology.climbing-liana",
+      "decision": "OWNER_DECISION_REQUIRED",
+      "publication_eligibility": "ALLOWED",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [],
+      "rationale": "POWO identifies a liana; RHS, NC State and UF/IFAS independently describe climbing habit/support use. Publication Evidence V1: DRAFT."
+    },
+    {
+      "claim_id": "claim.md.ecology.secondary-hemiepiphyte",
+      "decision": "QUALIFIED",
+      "publication_eligibility": "ALLOWED_WITH_QUALIFIER",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [],
+      "rationale": "Muir and Croat support the life form mainly at genus level; NC State describes the species starting terrestrially then becoming epiphytic upon reaching a support. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.morphology.heteroblasty",
+      "decision": "OWNER_DECISION_REQUIRED",
+      "publication_eligibility": "ALLOWED",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [],
+      "rationale": "Croat and Muir explicitly discuss heteroblasty in Monstera; NC State independently distinguishes mature perforated leaves. Publication Evidence V1: DRAFT."
+    },
+    {
+      "claim_id": "claim.md.morphology.adult-fenestrations",
+      "decision": "OWNER_DECISION_REQUIRED",
+      "publication_eligibility": "ALLOWED",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [],
+      "rationale": "Specific descriptions from NC State and UF/IFAS converge; Muir treats adult fenestration as the defining trait under study. Publication Evidence V1: DRAFT."
+    },
+    {
+      "claim_id": "claim.md.fenestration.function",
+      "decision": "QUALIFIED",
+      "publication_eligibility": "ALLOWED_WITH_QUALIFIER",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [
+        "les fenestrations servent certainement à laisser passer la lumière"
+      ],
+      "rationale": "Peer-reviewed modeling paper explicitly frames the result as a testable hypothesis and reviews competing conjectures. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.fenestration.drivers",
+      "decision": "QUALIFIED",
+      "publication_eligibility": "ALLOWED_WITH_QUALIFIER",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [
+        "un tuteur fera apparaître les trous"
+      ],
+      "rationale": "Maturity is corroborated by morphology sources; RHS and UConn give horticultural associations for light/support without controlled causal proof. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.light.indoor-preference",
+      "decision": "OWNER_DECISION_REQUIRED",
+      "publication_eligibility": "ALLOWED",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [],
+      "rationale": "RHS profile/guide and NC State independently converge; UConn's regional partial-sun guidance reinforces the need for acclimation/context rather than a universal direct-sun prohibition. Publication Evidence V1: DRAFT."
+    },
+    {
+      "claim_id": "claim.md.watering.substrate-state",
+      "decision": "OWNER_DECISION_REQUIRED",
+      "publication_eligibility": "ALLOWED",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [],
+      "rationale": "RHS says allow compost to become almost dry; NC State specifies the upper quarter to third; UConn gives 2–3 inches. They converge on substrate state but differ in operational threshold. Publication Evidence V1: DRAFT."
+    },
+    {
+      "claim_id": "claim.md.watering.standing-water",
+      "decision": "OWNER_DECISION_REQUIRED",
+      "publication_eligibility": "ALLOWED",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [],
+      "rationale": "RHS and UConn independently connect persistent wetness/standing water with rot risk. Publication Evidence V1: DRAFT."
+    },
+    {
+      "claim_id": "claim.md.humidity.qualitative-preference",
+      "decision": "OWNER_DECISION_REQUIRED",
+      "publication_eligibility": "ALLOWED",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [],
+      "rationale": "RHS and NC State independently state a qualitative preference; no opened authoritative source validates the historical 50–75% band as a species requirement. Publication Evidence V1: DRAFT."
+    },
+    {
+      "claim_id": "claim.md.humidity.legacy-50-75",
+      "decision": "NO_EVIDENCE_FOUND",
+      "publication_eligibility": "PROHIBITED",
+      "specialist_review_required": null,
+      "owner_decision_required": false,
+      "prohibited_wording": [
+        "plage d’humidité obligatoire chiffrée"
+      ],
+      "rationale": "Opened institutional sources use qualitative terms; none supports both bounds in the same context. Publication Evidence V1: WITHHELD."
+    },
+    {
+      "claim_id": "claim.md.temperature.indoor-guidance",
+      "decision": "QUALIFIED",
+      "publication_eligibility": "ALLOWED_WITH_QUALIFIER",
+      "specialist_review_required": "HORTICULTURAL_REVIEW_REQUIRED",
+      "owner_decision_required": true,
+      "prohibited_wording": [
+        "plage universelle Jungle fusionnée"
+      ],
+      "rationale": "Reliable sources converge qualitatively but not on identical numeric bounds. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.temperature.legacy-minimum-15",
+      "decision": "NO_EVIDENCE_FOUND",
+      "publication_eligibility": "PROHIBITED",
+      "specialist_review_required": null,
+      "owner_decision_required": false,
+      "prohibited_wording": [
+        "seuil minimum universel"
+      ],
+      "rationale": "NC State's lower preferred bound approximates 15.6°C, RHS gives 18°C or 18–25°C, UConn uses 45°F/7.2°C for summer outdoor handling, and UF/IFAS gives freeze-damage thresholds; these are not equivalent endpoints. Publication Evidence V1: WITHHELD."
+    },
+    {
+      "claim_id": "claim.md.substrate.properties",
+      "decision": "OWNER_DECISION_REQUIRED",
+      "publication_eligibility": "ALLOWED",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [],
+      "rationale": "RHS and UConn converge on open/well-drained and organic-rich media; rot guidance supports avoiding persistent saturation. Publication Evidence V1: DRAFT."
+    },
+    {
+      "claim_id": "claim.md.pot.drainage",
+      "decision": "OWNER_DECISION_REQUIRED",
+      "publication_eligibility": "ALLOWED",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [],
+      "rationale": "RHS and UConn independently warn against disproportionate container size and persistent wetness. Publication Evidence V1: DRAFT."
+    },
+    {
+      "claim_id": "claim.md.repotting.trigger",
+      "decision": "OWNER_DECISION_REQUIRED",
+      "publication_eligibility": "ALLOWED",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [],
+      "rationale": "UConn gives a direct root inspection criterion; RHS discusses rootball fit and top-heaviness while providing only a broad timing tendency. Publication Evidence V1: DRAFT."
+    },
+    {
+      "claim_id": "claim.md.fertilisation.growing-season",
+      "decision": "QUALIFIED",
+      "publication_eligibility": "ALLOWED_WITH_QUALIFIER",
+      "specialist_review_required": "HORTICULTURAL_REVIEW_REQUIRED",
+      "owner_decision_required": true,
+      "prohibited_wording": [],
+      "rationale": "RHS guide/profile converge on balanced feed in growth, with one specifying monthly; UConn cautions about salts and gives regional active-growth months. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.propagation.node",
+      "decision": "OWNER_DECISION_REQUIRED",
+      "publication_eligibility": "ALLOWED",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [],
+      "rationale": "UConn's species-specific cutting instruction locates the cut below a node; Iowa State's protocol requires nodes and explicitly lists M. deliciosa as suitable for stem cuttings. Publication Evidence V1: DRAFT."
+    },
+    {
+      "claim_id": "claim.md.support.role",
+      "decision": "QUALIFIED",
+      "publication_eligibility": "ALLOWED_WITH_QUALIFIER",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [],
+      "rationale": "NC State directly supports physical stability; RHS and UConn associate climbing with mature/larger leaves; controlled causality is not established. Publication Evidence V1: DRAFT."
+    },
+    {
+      "claim_id": "claim.md.aerial-roots.role",
+      "decision": "OWNER_DECISION_REQUIRED",
+      "publication_eligibility": "ALLOWED",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [],
+      "rationale": "UF/IFAS specifically describes emergence and rooting on ground contact; RHS describes rooting into a moist support; peer-reviewed work confirms distinct aerial-root growth/anatomy. Publication Evidence V1: DRAFT."
+    },
+    {
+      "claim_id": "claim.md.aerial-roots.cut-or-guide",
+      "decision": "NO_EVIDENCE_FOUND",
+      "publication_eligibility": "PROHIBITED",
+      "specialist_review_required": null,
+      "owner_decision_required": false,
+      "prohibited_wording": [
+        "toujours couper",
+        "toujours guider",
+        "toujours enterrer"
+      ],
+      "rationale": "Opened sources document role/anatomy but not a controlled universal home-practice rule. Publication Evidence V1: WITHHELD."
+    },
+    {
+      "claim_id": "claim.md.dimensions.context",
+      "decision": "QUALIFIED",
+      "publication_eligibility": "ALLOWED_WITH_QUALIFIER",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [
+        "taille unique sans contexte"
+      ],
+      "rationale": "Institutional sources directly give values but for non-equivalent settings. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.growth.rate-context",
+      "decision": "QUALIFIED",
+      "publication_eligibility": "ALLOWED_WITH_QUALIFIER",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [
+        "croissance toujours rapide"
+      ],
+      "rationale": "RHS describes vigorous plants and UF/IFAS fast outdoor vine growth; neither defines a transferable indoor rate. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.safety.mechanism",
+      "decision": "SPECIALIST_REVIEW_REQUIRED",
+      "publication_eligibility": "CANDIDATE_ONLY",
+      "specialist_review_required": "SAFETY_REVIEW_REQUIRED",
+      "owner_decision_required": true,
+      "prohibited_wording": [
+        "sans danger",
+        "mortel"
+      ],
+      "rationale": "ASPCA directly identifies insoluble calcium oxalates in the species; NC State independently identifies needle-like calcium oxalate crystals and contact dermatitis. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.safety.humans-children",
+      "decision": "SPECIALIST_REVIEW_REQUIRED",
+      "publication_eligibility": "CANDIDATE_ONLY",
+      "specialist_review_required": "SAFETY_REVIEW_REQUIRED",
+      "owner_decision_required": true,
+      "prohibited_wording": [
+        "diagnostic ou protocole médical"
+      ],
+      "rationale": "NC State is species-specific; CHOP provides direct institutional mechanism and symptom guidance for oxalate plants generally; RHS advises keeping the species away from children. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.safety.pets",
+      "decision": "SPECIALIST_REVIEW_REQUIRED",
+      "publication_eligibility": "CANDIDATE_ONLY",
+      "specialist_review_required": "SAFETY_REVIEW_REQUIRED",
+      "owner_decision_required": true,
+      "prohibited_wording": [
+        "diagnostic ou protocole vétérinaire"
+      ],
+      "rationale": "Direct species-specific ASPCA Animal Poison Control profile. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.pests.documented",
+      "decision": "QUALIFIED",
+      "publication_eligibility": "ALLOWED_WITH_QUALIFIER",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [
+        "thrips établi spécifiquement pour Monstera deliciosa"
+      ],
+      "rationale": "RHS/UConn provide species-specific pest records; the opened thrips source is general-domain only. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.pests.spider-mite-check",
+      "decision": "QUALIFIED",
+      "publication_eligibility": "ALLOWED_WITH_QUALIFIER",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [],
+      "rationale": "UConn gives species-specific signs; UMN provides independent diagnostic procedure for twospotted mites. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.diagnostic.yellow-leaves",
+      "decision": "QUALIFIED",
+      "publication_eligibility": "ALLOWED_WITH_QUALIFIER",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [],
+      "rationale": "UConn directly documents yellowing from scale/mealybugs and root/stem rot signs; RHS supports wet-root risk. Natural senescence is general plant biology but was not found in a species-specific source during this pilot. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.diagnostic.brown-areas",
+      "decision": "QUALIFIED",
+      "publication_eligibility": "ALLOWED_WITH_QUALIFIER",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [],
+      "rationale": "RHS links dry air and direct sun to browning/scorch; UConn describes bacterial/anthracnose lesion patterns. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.diagnostic.slow-growth-small-leaves",
+      "decision": "QUALIFIED",
+      "publication_eligibility": "ALLOWED_WITH_QUALIFIER",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [],
+      "rationale": "RHS links low light and post-pruning growth to less mature leaves; UConn links support attachment with leaf-size increase; root constraints and temperature need contextual inspection. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.diagnostic.no-fenestrations",
+      "decision": "QUALIFIED",
+      "publication_eligibility": "ALLOWED_WITH_QUALIFIER",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [],
+      "rationale": "Stage is corroborated; light/support associations come from institutional horticultural guidance. Publication Evidence V1: REVIEW_REQUIRED."
+    },
+    {
+      "claim_id": "claim.md.pruning.size-control",
+      "decision": "OWNER_DECISION_REQUIRED",
+      "publication_eligibility": "ALLOWED",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [],
+      "rationale": "RHS and UF/IFAS independently support stem pruning for size; RHS supplies the regrowth qualifier. Publication Evidence V1: DRAFT."
+    },
+    {
+      "claim_id": "claim.md.cleaning.leaf-dust",
+      "decision": "OWNER_DECISION_REQUIRED",
+      "publication_eligibility": "ALLOWED",
+      "specialist_review_required": null,
+      "owner_decision_required": true,
+      "prohibited_wording": [],
+      "rationale": "RHS recommends regular wiping for dust/insect inspection; NC State independently recommends wiping dust from leaves. Publication Evidence V1: DRAFT."
+    },
+    {
+      "claim_id": "claim.md.editorial-score.light-4-of-5",
+      "decision": "NO_EVIDENCE_FOUND",
+      "publication_eligibility": "PROHIBITED",
+      "specialist_review_required": null,
+      "owner_decision_required": false,
+      "prohibited_wording": [
+        "score présenté comme fait botanique"
+      ],
+      "rationale": "No scoring rubric is present in Evidence V1. Publication Evidence V1: WITHHELD."
+    },
+    {
+      "claim_id": "claim.md.editorial-score.watering-2-of-5",
+      "decision": "NO_EVIDENCE_FOUND",
+      "publication_eligibility": "PROHIBITED",
+      "specialist_review_required": null,
+      "owner_decision_required": false,
+      "prohibited_wording": [
+        "score présenté comme fait botanique"
+      ],
+      "rationale": "No scoring rubric is present in Evidence V1. Publication Evidence V1: WITHHELD."
+    },
+    {
+      "claim_id": "claim.md.editorial-score.humidity-3-of-5",
+      "decision": "NO_EVIDENCE_FOUND",
+      "publication_eligibility": "PROHIBITED",
+      "specialist_review_required": null,
+      "owner_decision_required": false,
+      "prohibited_wording": [
+        "score présenté comme fait botanique"
+      ],
+      "rationale": "No scoring rubric is present in Evidence V1. Publication Evidence V1: WITHHELD."
+    },
+    {
+      "claim_id": "claim.md.editorial-score.difficulty-2-of-5",
+      "decision": "NO_EVIDENCE_FOUND",
+      "publication_eligibility": "PROHIBITED",
+      "specialist_review_required": null,
+      "owner_decision_required": false,
+      "prohibited_wording": [
+        "score présenté comme fait botanique"
+      ],
+      "rationale": "No explicit documented scoring criteria have been applied. Publication Evidence V1: WITHHELD."
+    },
+    {
+      "claim_id": "claim.md.faq.required-claim-set",
+      "decision": "WITHHELD",
+      "publication_eligibility": "PROHIBITED",
+      "specialist_review_required": null,
+      "owner_decision_required": false,
+      "prohibited_wording": [],
+      "rationale": "This is a coverage assessment derived from the atomic claims, not a final FAQ. Publication Evidence V1: WITHHELD."
+    }
+  ]
+}

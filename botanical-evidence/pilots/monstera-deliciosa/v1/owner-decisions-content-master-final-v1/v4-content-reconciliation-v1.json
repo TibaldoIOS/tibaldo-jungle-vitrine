@@ -1,0 +1,759 @@
+{
+  "schema_version": "1.0.0",
+  "taxon_id": "monstera-deliciosa",
+  "v4_route": "/lab/deliciosa/v4",
+  "audit_mode": "READ_ONLY",
+  "audited_at": "2026-08-24T15:56:13+02:00",
+  "content_contract": "content-master-v1-final.json",
+  "rendered_corpus_scope": "Exact V4 fields consumed by JSX + six rendered diagnostics + five rendered FAQ + hardcoded V4 wording.",
+  "hero_frozen": {
+    "reference_sha256": "7eb2e9200b51e2fd16662f963a52b086e79bef94c23cf7485a909fd66115d7fc",
+    "actual_sha256": "7eb2e9200b51e2fd16662f963a52b086e79bef94c23cf7485a909fd66115d7fc",
+    "status": "PASS",
+    "normalization": "Hero JSX section; whitespace collapsed to one space; trim; SHA-256"
+  },
+  "matrix": [
+    {
+      "act": "HERO",
+      "content_id": "content.identity.name",
+      "claim_ids": [
+        "claim.md.taxonomy.accepted-name",
+        "claim.md.taxonomy.classification"
+      ],
+      "final_owner_status": "OWNER_APPROVED_QUALIFIED",
+      "final_eligibility": "V4_ELIGIBLE_WITH_QUALIFIER",
+      "qualifier_required": "NAME_ONLY : ne pas exposer l’authorship, la synonymie détaillée ou borsigiana.",
+      "v4_rendered": true,
+      "v4_wording_match": "PARTIAL_FROZEN_HERO_METADATA_GAP",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS_WITH_QUALIFIER",
+      "notes": "P2 : nom conforme, mais métadonnée Hero Araceae · Monstera sous exception frozen en attente d’arbitrage."
+    },
+    {
+      "act": "NOT_RENDERED",
+      "content_id": "content.identity.synonyms",
+      "claim_ids": [
+        "claim.md.taxonomy.borsigiana",
+        "claim.md.taxonomy.philodendron-pertusum"
+      ],
+      "final_owner_status": "INTERNAL_OR_WITHHELD",
+      "final_eligibility": "INTERNAL_ONLY",
+      "qualifier_required": null,
+      "v4_rendered": false,
+      "v4_wording_match": "NOT_APPLICABLE",
+      "source_proximity_match": "NOT_APPLICABLE",
+      "consistency_key_match": "NOT_APPLICABLE",
+      "verdict": "NOT_APPLICABLE",
+      "notes": null
+    },
+    {
+      "act": "I",
+      "content_id": "content.origin.range",
+      "claim_ids": [
+        "claim.md.distribution.native-range"
+      ],
+      "final_owner_status": "OWNER_APPROVED_QUALIFIED",
+      "final_eligibility": "V4_ELIGIBLE_WITH_QUALIFIER",
+      "qualifier_required": "Aire native POWO, distincte des introductions et cultures.",
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS_WITH_QUALIFIER",
+      "notes": null
+    },
+    {
+      "act": "I",
+      "content_id": "content.origin.habitat",
+      "claim_ids": [
+        "claim.md.distribution.biome",
+        "claim.md.ecology.climbing-liana",
+        "claim.md.ecology.secondary-hemiepiphyte"
+      ],
+      "final_owner_status": "OWNER_APPROVED_QUALIFIED",
+      "final_eligibility": "V4_ELIGIBLE_WITH_QUALIFIER",
+      "qualifier_required": "Hémiépiphytisme qualifié ; ne pas généraliser au-delà du contexte sauvage.",
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS_WITH_QUALIFIER",
+      "notes": null
+    },
+    {
+      "act": "II",
+      "content_id": "content.morphology.heteroblasty",
+      "claim_ids": [
+        "claim.md.morphology.heteroblasty",
+        "claim.md.morphology.adult-fenestrations"
+      ],
+      "final_owner_status": "OWNER_APPROVED",
+      "final_eligibility": "V4_ELIGIBLE",
+      "qualifier_required": null,
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS",
+      "notes": null
+    },
+    {
+      "act": "III",
+      "content_id": "content.morphology.fenestrations",
+      "claim_ids": [
+        "claim.md.fenestration.drivers",
+        "claim.md.fenestration.function"
+      ],
+      "final_owner_status": "OWNER_APPROVED_QUALIFIED",
+      "final_eligibility": "V4_ELIGIBLE_WITH_QUALIFIER",
+      "qualifier_required": "Hypothèse scientifique attribuée ; causalité non établie.",
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS_WITH_QUALIFIER",
+      "notes": null
+    },
+    {
+      "act": "IV",
+      "content_id": "content.care.light",
+      "claim_ids": [
+        "claim.md.light.indoor-preference"
+      ],
+      "final_owner_status": "OWNER_APPROVED",
+      "final_eligibility": "V4_ELIGIBLE",
+      "qualifier_required": null,
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS",
+      "notes": null
+    },
+    {
+      "act": "V",
+      "content_id": "content.care.watering",
+      "claim_ids": [
+        "claim.md.watering.substrate-state",
+        "claim.md.watering.standing-water"
+      ],
+      "final_owner_status": "OWNER_APPROVED",
+      "final_eligibility": "V4_ELIGIBLE",
+      "qualifier_required": null,
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS",
+      "notes": null
+    },
+    {
+      "act": "IV",
+      "content_id": "content.care.humidity",
+      "claim_ids": [
+        "claim.md.humidity.qualitative-preference"
+      ],
+      "final_owner_status": "OWNER_APPROVED_QUALIFIED",
+      "final_eligibility": "V4_ELIGIBLE_WITH_QUALIFIER",
+      "qualifier_required": "Préférence, pas nécessité chiffrée.",
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS_WITH_QUALIFIER",
+      "notes": null
+    },
+    {
+      "act": "IV",
+      "content_id": "content.care.temperature",
+      "claim_ids": [
+        "claim.md.temperature.indoor-guidance"
+      ],
+      "final_owner_status": "OWNER_APPROVED_QUALIFIED",
+      "final_eligibility": "V4_ELIGIBLE_WITH_QUALIFIER",
+      "qualifier_required": "Guidance qualitative en attente d’un arbitrage horticole/Owner sur toute valeur chiffrée.",
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS_WITH_QUALIFIER",
+      "notes": null
+    },
+    {
+      "act": "VI",
+      "content_id": "content.rootzone.substrate",
+      "claim_ids": [
+        "claim.md.substrate.properties"
+      ],
+      "final_owner_status": "OWNER_APPROVED",
+      "final_eligibility": "V4_ELIGIBLE",
+      "qualifier_required": null,
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS",
+      "notes": null
+    },
+    {
+      "act": "VI",
+      "content_id": "content.rootzone.pot",
+      "claim_ids": [
+        "claim.md.pot.drainage"
+      ],
+      "final_owner_status": "OWNER_APPROVED",
+      "final_eligibility": "V4_ELIGIBLE",
+      "qualifier_required": null,
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS",
+      "notes": null
+    },
+    {
+      "act": "VI",
+      "content_id": "content.rootzone.repotting",
+      "claim_ids": [
+        "claim.md.repotting.trigger"
+      ],
+      "final_owner_status": "OWNER_APPROVED_QUALIFIED",
+      "final_eligibility": "V4_ELIGIBLE_WITH_QUALIFIER",
+      "qualifier_required": "Les fréquences générales restent secondaires.",
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS_WITH_QUALIFIER",
+      "notes": null
+    },
+    {
+      "act": "VI",
+      "content_id": "content.care.fertilisation",
+      "claim_ids": [
+        "claim.md.fertilisation.growing-season"
+      ],
+      "final_owner_status": "OWNER_APPROVED_QUALIFIED",
+      "final_eligibility": "V4_ELIGIBLE_WITH_QUALIFIER",
+      "qualifier_required": "Guidance minimale et qualitative uniquement.",
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS_WITH_QUALIFIER",
+      "notes": null
+    },
+    {
+      "act": "NOT_RENDERED",
+      "content_id": "content.propagation.node",
+      "claim_ids": [
+        "claim.md.propagation.node"
+      ],
+      "final_owner_status": "OWNER_APPROVED",
+      "final_eligibility": "V4_ELIGIBLE",
+      "qualifier_required": null,
+      "v4_rendered": false,
+      "v4_wording_match": "NOT_APPLICABLE",
+      "source_proximity_match": "NOT_APPLICABLE",
+      "consistency_key_match": "NOT_APPLICABLE",
+      "verdict": "NOT_APPLICABLE",
+      "notes": null
+    },
+    {
+      "act": "VII",
+      "content_id": "content.support.role",
+      "claim_ids": [
+        "claim.md.support.role"
+      ],
+      "final_owner_status": "OWNER_APPROVED_QUALIFIED",
+      "final_eligibility": "V4_ELIGIBLE_WITH_QUALIFIER",
+      "qualifier_required": "Association horticole, pas causalité garantie.",
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS_WITH_QUALIFIER",
+      "notes": null
+    },
+    {
+      "act": "VII",
+      "content_id": "content.aerial-roots.role",
+      "claim_ids": [
+        "claim.md.aerial-roots.role"
+      ],
+      "final_owner_status": "OWNER_APPROVED_QUALIFIED",
+      "final_eligibility": "V4_ELIGIBLE_WITH_QUALIFIER",
+      "qualifier_required": "Expliquer le rôle sans règle universelle de coupe, guidage, enfouissement ou remise dans le pot.",
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS_WITH_QUALIFIER",
+      "notes": null
+    },
+    {
+      "act": "VIII",
+      "content_id": "content.dimensions.context",
+      "claim_ids": [
+        "claim.md.dimensions.context",
+        "claim.md.growth.rate-context"
+      ],
+      "final_owner_status": "OWNER_APPROVED_QUALIFIED",
+      "final_eligibility": "V4_ELIGIBLE_WITH_QUALIFIER",
+      "qualifier_required": "Toujours afficher la source et le contexte de mesure.",
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS_WITH_QUALIFIER",
+      "notes": null
+    },
+    {
+      "act": "VIII",
+      "content_id": "content.pruning.cleaning",
+      "claim_ids": [
+        "claim.md.pruning.size-control",
+        "claim.md.cleaning.leaf-dust"
+      ],
+      "final_owner_status": "OWNER_APPROVED",
+      "final_eligibility": "V4_ELIGIBLE",
+      "qualifier_required": null,
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS",
+      "notes": null
+    },
+    {
+      "act": "NOT_RENDERED",
+      "content_id": "content.safety.candidate",
+      "claim_ids": [
+        "claim.md.safety.mechanism",
+        "claim.md.safety.humans-children",
+        "claim.md.safety.pets"
+      ],
+      "final_owner_status": "INTERNAL_OR_WITHHELD",
+      "final_eligibility": "INTERNAL_ONLY",
+      "qualifier_required": null,
+      "v4_rendered": false,
+      "v4_wording_match": "NOT_APPLICABLE",
+      "source_proximity_match": "NOT_APPLICABLE",
+      "consistency_key_match": "NOT_APPLICABLE",
+      "verdict": "NOT_APPLICABLE",
+      "notes": null
+    },
+    {
+      "act": "IX",
+      "content_id": "content.pests.documented",
+      "claim_ids": [
+        "claim.md.pests.documented",
+        "claim.md.pests.spider-mite-check"
+      ],
+      "final_owner_status": "OWNER_APPROVED_QUALIFIED",
+      "final_eligibility": "V4_ELIGIBLE_WITH_QUALIFIER",
+      "qualifier_required": "Thrips spécifique WITHHELD.",
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PARTIAL_P2",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS_WITH_QUALIFIER",
+      "notes": "P2 : portée du groupe de sources proche à préciser ; aucun thrips rendu."
+    },
+    {
+      "act": "NOT_RENDERED",
+      "content_id": "content.comparison.borsigiana",
+      "claim_ids": [
+        "claim.md.taxonomy.borsigiana"
+      ],
+      "final_owner_status": "INTERNAL_OR_WITHHELD",
+      "final_eligibility": "INTERNAL_ONLY",
+      "qualifier_required": null,
+      "v4_rendered": false,
+      "v4_wording_match": "NOT_APPLICABLE",
+      "source_proximity_match": "NOT_APPLICABLE",
+      "consistency_key_match": "NOT_APPLICABLE",
+      "verdict": "NOT_APPLICABLE",
+      "notes": null
+    },
+    {
+      "act": "NOT_RENDERED",
+      "content_id": "content.comparison.rhaphidophora-gap",
+      "claim_ids": [],
+      "final_owner_status": "INTERNAL_OR_WITHHELD",
+      "final_eligibility": "INTERNAL_ONLY",
+      "qualifier_required": null,
+      "v4_rendered": false,
+      "v4_wording_match": "NOT_APPLICABLE",
+      "source_proximity_match": "NOT_APPLICABLE",
+      "consistency_key_match": "NOT_APPLICABLE",
+      "verdict": "NOT_APPLICABLE",
+      "notes": null
+    },
+    {
+      "act": "X",
+      "content_id": "content.studio.observation",
+      "claim_ids": [
+        "claim.md.watering.substrate-state",
+        "claim.md.light.indoor-preference",
+        "claim.md.support.role"
+      ],
+      "final_owner_status": "APPROVED_AS_JUNGLE_EDITORIAL_GUIDANCE",
+      "final_eligibility": "V4_ELIGIBLE_WITH_QUALIFIER",
+      "qualifier_required": "Conseil éditorial distinct des faits botaniques ; jamais source autonome.",
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS_WITH_QUALIFIER",
+      "notes": null
+    },
+    {
+      "act": "IX",
+      "content_id": "diagnostic.md.yellow-leaves",
+      "claim_ids": [
+        "claim.md.diagnostic.yellow-leaves"
+      ],
+      "final_owner_status": "OWNER_APPROVED_QUALIFIED",
+      "final_eligibility": "V4_ELIGIBLE_WITH_QUALIFIER",
+      "qualifier_required": "Diagnostic probabiliste ; causes non ordonnées par probabilité.",
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS_WITH_QUALIFIER",
+      "notes": null
+    },
+    {
+      "act": "IX",
+      "content_id": "diagnostic.md.brown-tips-patches",
+      "claim_ids": [
+        "claim.md.diagnostic.brown-areas"
+      ],
+      "final_owner_status": "OWNER_APPROVED_QUALIFIED",
+      "final_eligibility": "V4_ELIGIBLE_WITH_QUALIFIER",
+      "qualifier_required": "Diagnostic probabiliste ; causes non ordonnées par probabilité.",
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS_WITH_QUALIFIER",
+      "notes": null
+    },
+    {
+      "act": "IX",
+      "content_id": "diagnostic.md.slow-growth-small-leaves",
+      "claim_ids": [
+        "claim.md.diagnostic.slow-growth-small-leaves"
+      ],
+      "final_owner_status": "OWNER_APPROVED_QUALIFIED",
+      "final_eligibility": "V4_ELIGIBLE_WITH_QUALIFIER",
+      "qualifier_required": "Diagnostic probabiliste ; causes non ordonnées par probabilité.",
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS_WITH_QUALIFIER",
+      "notes": null
+    },
+    {
+      "act": "IX",
+      "content_id": "diagnostic.md.no-fenestrations",
+      "claim_ids": [
+        "claim.md.diagnostic.no-fenestrations"
+      ],
+      "final_owner_status": "OWNER_APPROVED_QUALIFIED",
+      "final_eligibility": "V4_ELIGIBLE_WITH_QUALIFIER",
+      "qualifier_required": "Diagnostic probabiliste ; causes non ordonnées par probabilité.",
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS_WITH_QUALIFIER",
+      "notes": null
+    },
+    {
+      "act": "IX",
+      "content_id": "diagnostic.md.spider-mites",
+      "claim_ids": [
+        "claim.md.pests.spider-mite-check"
+      ],
+      "final_owner_status": "OWNER_APPROVED_QUALIFIED",
+      "final_eligibility": "V4_ELIGIBLE_WITH_QUALIFIER",
+      "qualifier_required": "Diagnostic probabiliste ; causes non ordonnées par probabilité.",
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS_WITH_QUALIFIER",
+      "notes": null
+    },
+    {
+      "act": "IX",
+      "content_id": "diagnostic.md.scale-mealybugs",
+      "claim_ids": [
+        "claim.md.pests.documented"
+      ],
+      "final_owner_status": "OWNER_APPROVED_QUALIFIED",
+      "final_eligibility": "V4_ELIGIBLE_WITH_QUALIFIER",
+      "qualifier_required": "Diagnostic probabiliste ; causes non ordonnées par probabilité.",
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS_WITH_QUALIFIER",
+      "notes": null
+    },
+    {
+      "act": "IX",
+      "content_id": "diagnostic.md.thrips",
+      "claim_ids": [
+        "claim.md.pests.documented"
+      ],
+      "final_owner_status": "INTERNAL_OR_WITHHELD",
+      "final_eligibility": "INTERNAL_ONLY",
+      "qualifier_required": null,
+      "v4_rendered": false,
+      "v4_wording_match": "NOT_APPLICABLE",
+      "source_proximity_match": "NOT_APPLICABLE",
+      "consistency_key_match": "NOT_APPLICABLE",
+      "verdict": "NOT_APPLICABLE",
+      "notes": null
+    },
+    {
+      "act": "IX",
+      "content_id": "diagnostic.md.root-rot",
+      "claim_ids": [
+        "claim.md.watering.standing-water"
+      ],
+      "final_owner_status": "INTERNAL_OR_WITHHELD",
+      "final_eligibility": "INTERNAL_ONLY",
+      "qualifier_required": null,
+      "v4_rendered": false,
+      "v4_wording_match": "NOT_APPLICABLE",
+      "source_proximity_match": "NOT_APPLICABLE",
+      "consistency_key_match": "NOT_APPLICABLE",
+      "verdict": "NOT_APPLICABLE",
+      "notes": null
+    },
+    {
+      "act": "XI",
+      "content_id": "faq.md.placement",
+      "claim_ids": [
+        "claim.md.light.indoor-preference"
+      ],
+      "final_owner_status": "OWNER_APPROVED",
+      "final_eligibility": "V4_ELIGIBLE",
+      "qualifier_required": null,
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS",
+      "notes": null
+    },
+    {
+      "act": "XI",
+      "content_id": "faq.md.watering",
+      "claim_ids": [
+        "claim.md.watering.substrate-state",
+        "claim.md.watering.standing-water"
+      ],
+      "final_owner_status": "OWNER_APPROVED",
+      "final_eligibility": "V4_ELIGIBLE",
+      "qualifier_required": null,
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS",
+      "notes": null
+    },
+    {
+      "act": "XI",
+      "content_id": "faq.md.fenestrations",
+      "claim_ids": [
+        "claim.md.diagnostic.no-fenestrations",
+        "claim.md.fenestration.drivers"
+      ],
+      "final_owner_status": "OWNER_APPROVED",
+      "final_eligibility": "V4_ELIGIBLE_WITH_QUALIFIER",
+      "qualifier_required": "Qualifier du claim partagé requis",
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS_WITH_QUALIFIER",
+      "notes": null
+    },
+    {
+      "act": "XI",
+      "content_id": "faq.md.repotting",
+      "claim_ids": [
+        "claim.md.repotting.trigger",
+        "claim.md.pot.drainage"
+      ],
+      "final_owner_status": "OWNER_APPROVED",
+      "final_eligibility": "V4_ELIGIBLE_WITH_QUALIFIER",
+      "qualifier_required": "Qualifier du claim partagé requis",
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS_WITH_QUALIFIER",
+      "notes": null
+    },
+    {
+      "act": "XI",
+      "content_id": "faq.md.drainage",
+      "claim_ids": [
+        "claim.md.pot.drainage",
+        "claim.md.watering.standing-water"
+      ],
+      "final_owner_status": "OWNER_APPROVED",
+      "final_eligibility": "V4_ELIGIBLE",
+      "qualifier_required": null,
+      "v4_rendered": true,
+      "v4_wording_match": "PASS",
+      "source_proximity_match": "PASS",
+      "consistency_key_match": "PASS",
+      "verdict": "PASS",
+      "notes": null
+    },
+    {
+      "act": "XI",
+      "content_id": "faq.md.safety",
+      "claim_ids": [
+        "claim.md.safety.mechanism",
+        "claim.md.safety.humans-children",
+        "claim.md.safety.pets"
+      ],
+      "final_owner_status": "INTERNAL_ONLY",
+      "final_eligibility": "INTERNAL_ONLY",
+      "qualifier_required": null,
+      "v4_rendered": false,
+      "v4_wording_match": "NOT_APPLICABLE",
+      "source_proximity_match": "NOT_APPLICABLE",
+      "consistency_key_match": "NOT_APPLICABLE",
+      "verdict": "NOT_APPLICABLE",
+      "notes": null
+    }
+  ],
+  "counts": {
+    "PASS_WITH_QUALIFIER": 21,
+    "NOT_APPLICABLE": 8,
+    "PASS": 9
+  },
+  "anti_reintroduction": [
+    {
+      "check_id": "SAFETY",
+      "pass": true,
+      "matches": null
+    },
+    {
+      "check_id": "FAQ_SAFETY",
+      "pass": true,
+      "matches": null
+    },
+    {
+      "check_id": "HUMIDITY_50_75",
+      "pass": true,
+      "matches": null
+    },
+    {
+      "check_id": "MINIMUM_15",
+      "pass": true,
+      "matches": null
+    },
+    {
+      "check_id": "TEMP_18_28",
+      "pass": true,
+      "matches": null
+    },
+    {
+      "check_id": "SCORE_4_5",
+      "pass": true,
+      "matches": null
+    },
+    {
+      "check_id": "SCORE_2_5",
+      "pass": true,
+      "matches": null
+    },
+    {
+      "check_id": "SCORE_3_5",
+      "pass": true,
+      "matches": null
+    },
+    {
+      "check_id": "CALENDAR_WATERING",
+      "pass": true,
+      "matches": null
+    },
+    {
+      "check_id": "UNIVERSAL_AERIAL_ROOTS",
+      "pass": true,
+      "matches": null
+    },
+    {
+      "check_id": "SUPPORT_GUARANTEES_FENESTRATIONS",
+      "pass": true,
+      "matches": null
+    },
+    {
+      "check_id": "THRIPS_SPECIFIC",
+      "pass": true,
+      "matches": null
+    },
+    {
+      "check_id": "BORSIGIANA_DISTINCT",
+      "pass": true,
+      "matches": null
+    },
+    {
+      "check_id": "RHAPHIDOPHORA",
+      "pass": true,
+      "matches": null
+    }
+  ],
+  "divergences": [
+    {
+      "divergence_id": "v4-gap-hero-taxonomy-meta",
+      "content_master_final": "V4 peut utiliser le nom Monstera deliciosa ; taxonomie détaillée pending.",
+      "v4_current": "Hero frozen affiche Araceae · Monstera en métadonnée.",
+      "difference": "Métadonnée taxonomique au-delà du nom seul sous contrainte Hero frozen.",
+      "severity": "P2",
+      "recommended_v4_fix": "Arbitrage Owner avant intégration produit : conserver comme exception frozen ou retirer lors d’une mission V4 autorisée.",
+      "owner_action": "REQUIRED"
+    },
+    {
+      "divergence_id": "v4-gap-pest-source-proximity",
+      "content_master_final": "Thrips spécifique exclu ; source proximity doit refléter les claims réellement rendus.",
+      "v4_current": "Marqueur proche groupe RHS · UConn · UMN sur la scène ravageurs.",
+      "difference": "UMN est surtout mobilisée pour des signes généraux/thrips ; le rendu V4 exclut les thrips.",
+      "severity": "P2",
+      "recommended_v4_fix": "À une future mission V4, préciser le périmètre des sources proches ou déplacer UMN vers le détail interne.",
+      "owner_action": "NOT_REQUIRED"
+    }
+  ],
+  "quality_gates": {
+    "P0": {
+      "status": "PASS",
+      "count": 0
+    },
+    "P1": {
+      "status": "PASS",
+      "count": 0
+    },
+    "P2": {
+      "status": "PARTIAL",
+      "count": 2
+    },
+    "P3": {
+      "status": "PASS",
+      "count": 0
+    }
+  },
+  "status": "PASS_WITH_GAPS"
+}
