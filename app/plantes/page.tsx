@@ -101,7 +101,7 @@ export default function PlantsPage() {
       </section>
 
       <section className="studio-collection plants-hub-collection shell" aria-labelledby="studio-collection-title">
-        <header data-reveal><p className="section-kicker">Cultivées et observées à Wattignies</p><h2 id="studio-collection-title">La collection<br /><em>du Studio.</em></h2><p>Les plantes suivies par Tibaldo Jungle nourrissent progressivement l’encyclopédie ; cette liste n’est pas un état du stock.</p></header>
+        <header data-reveal><p className="section-kicker">Cultivées et observées par TIBALDO Jungle</p><h2 id="studio-collection-title">La collection<br /><em>du Studio.</em></h2><p>Les plantes suivies par TIBALDO Jungle nourrissent progressivement l’encyclopédie ; cette liste n’est pas un état du stock.</p></header>
         <details><summary>Voir la collection complète <span>{studioCollection.length} groupes</span></summary>
           <div className="studio-collection-list">{publicStudioCollection.map((group, index) => <article key={group.genre}><span>{String(index + 1).padStart(2, "0")}</span><div><h3><a href={group.href}>{group.genre} <Arrow /></a></h3>{group.plants.length > 0 && <ul>{group.plants.map((plant) => <li key={plant}>{plant}</li>)}</ul>}</div></article>)}</div>
         </details>

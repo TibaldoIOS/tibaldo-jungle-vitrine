@@ -29,14 +29,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { genre } = await params;
   const guide = familyGuides[genre as GuideKey];
   if (!guide) return {};
+  const title = genre === "anthurium"
+    ? "Anthurium : entretien, espèces et variétés | TIBALDO Jungle"
+    : `${guide.name} : entretien, espèces et variétés`;
   return {
-    title: `${guide.name} : entretien, espèces et variétés`,
+    title,
     description: `Guide complet des ${guide.name} : taxonomie, lumière, arrosage, humidité, substrat, rempotage, espèces et cultivars documentés.`,
     keywords: [`${guide.name}`, `${guide.name} entretien`, `${guide.name} lumière`, `${guide.name} arrosage`, `${guide.name} substrat`, `${guide.name} variétés`],
     alternates: { canonical: `/plantes/${genre}` },
     robots: { index: false, follow: false },
     openGraph: {
-      title: `${guide.name} — Guide de culture et variétés`,
+      siteName: "TIBALDO Jungle",
+      title: genre === "anthurium" ? title : `${guide.name} — Guide de culture et variétés`,
       description: guide.lead,
       url: `/plantes/${genre}`,
       type: "article",
@@ -91,12 +95,12 @@ export default async function Page({ params }: Props) {
         image: guide.image,
         author: {
           "@type": "Organization",
-          name: "Studio Végétal – Tibaldo Jungle",
+          name: genre === "anthurium" ? "TIBALDO Jungle" : "Studio Végétal – Tibaldo Jungle",
         },
         publisher: {
           "@type": "Organization",
-          name: "Studio Végétal – Tibaldo Jungle",
-          alternateName: "Tibaldo Jungle",
+          name: genre === "anthurium" ? "TIBALDO Jungle" : "Studio Végétal – Tibaldo Jungle",
+          alternateName: genre === "anthurium" ? "Studio Végétal — TIBALDO Jungle" : "Tibaldo Jungle",
           url: "https://jungle.tibaldo.fr",
         },
       },

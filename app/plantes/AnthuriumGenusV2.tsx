@@ -89,6 +89,16 @@ export default function AnthuriumGenusV2({ guide, editorials, plants }: { guide:
 
       <section className="anth-v2-diagnostic"><div className="shell"><header data-reveal><p className="section-kicker">Diagnostic rapide</p><h2>Observer avant d’agir.</h2></header><div>{guide.problems.map((problem) => <article key={problem.title} data-reveal><span>Signe observé</span><h3>{problem.title}</h3><p>{problem.text}</p></article>)}</div><a href="/sos-plantes">Vous hésitez ? Ouvrir SOS Plantes <Arrow /></a></div></section>
 
+      <section className="family-guide-local shell anth-v2-local-bridge" data-reveal>
+        <p className="section-kicker">TIBALDO Jungle · Lille</p>
+        <h2>Comprendre les Anthurium, puis vérifier les disponibilités.</h2>
+        <p>Ce hub compare les espèces et leurs besoins. Il reste indépendant du catalogue : un prix ou un stock éventuel n’est indiqué que sur une offre commerciale réelle. Le Studio Végétal — TIBALDO Jungle se trouve au 3 place de l’Arbonnoise, 59000 Lille.</p>
+        <div className="family-guide-local-actions">
+          <Link className="button" href="/boutique-plantes-lille">Découvrir le Studio <Arrow /></Link>
+          <Link className="text-link" href="/plantes/anthurium/veitchii">Lire la fiche Anthurium veitchii <Arrow /></Link>
+        </div>
+      </section>
+
       <section className="family-guide-faq shell anth-v2-faq"><header data-reveal><p className="section-kicker">Questions fréquentes</p><h2>Anthurium : les réponses essentielles.</h2></header>{guide.faq.map((item) => <details key={item.question} data-reveal><summary>{item.question}</summary><p>{item.answer}</p></details>)}<p className="family-guide-sources">Sources botaniques : {guide.sources.map((source, index) => <span key={source.url}>{index > 0 && " · "}<a href={source.url} target="_blank" rel="noreferrer">{source.label}</a></span>)}</p></section>
     </article>
     <StudioAccessCompact />

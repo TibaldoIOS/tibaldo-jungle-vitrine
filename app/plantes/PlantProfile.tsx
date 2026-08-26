@@ -13,6 +13,7 @@ import PlantSpeciesHero from "./PlantSpeciesHero";
 import VeitchiiProfileV2 from "./VeitchiiProfileV2";
 import ThaiConstellationProfileV3 from "./ThaiConstellationProfileV3";
 import DeliciosaProfileNext from "./DeliciosaProfileNext";
+import SpeciesLocalStudio from "./SpeciesLocalStudio";
 
 function Meter({
   label,
@@ -94,6 +95,11 @@ export default function PlantProfile({ plant }: { plant: PlantEntry }) {
         <ScrollReveal />
         <PlantSpeciesHero plant={plant} />
         <ThaiConstellationProfileV3 plant={plant} gallery={gallery} />
+        <SpeciesLocalStudio
+          speciesName="Monstera deliciosa ‘Thai Constellation’"
+          genusName="Monstera"
+          genusSlug="monstera"
+        />
         <SiteFooter compactTransit />
         {plant.shopUrl && (
           <PlantShopBar
@@ -123,6 +129,11 @@ export default function PlantProfile({ plant }: { plant: PlantEntry }) {
           nutrition={plant.care.fertilizing}
         />
         <VeitchiiProfileV2 plant={plant} gallery={gallery} />
+        <SpeciesLocalStudio
+          speciesName="Anthurium veitchii"
+          genusName="Anthurium"
+          genusSlug="anthurium"
+        />
         <SiteFooter compactTransit />
         {plant.shopUrl && (
           <PlantShopBar

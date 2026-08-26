@@ -51,10 +51,11 @@ export default function LocalSeoPage(props: LocalPageProps) {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": ["Florist", "Store", "LocalBusiness"],
+        "@type": ["GardenStore", "Florist", "LocalBusiness"],
         "@id": "https://jungle.tibaldo.fr/#store",
-        name: "Studio Végétal — Tibaldo Jungle",
+        name: "Studio Végétal — TIBALDO Jungle",
         url: "https://jungle.tibaldo.fr",
+        parentOrganization: { "@id": "https://jungle.tibaldo.fr/#organization" },
         telephone: "+33743727079",
         email: "jungle@tibaldo.fr",
         address: { "@type": "PostalAddress", streetAddress: "3 place de l’Arbonnoise", postalCode: "59000", addressLocality: "Lille", addressRegion: "Hauts-de-France", addressCountry: "FR" },
@@ -101,7 +102,7 @@ export default function LocalSeoPage(props: LocalPageProps) {
     </div></section>
 
     <section className="shell local-seo-visit" id="informations">
-      <div data-reveal><p className="section-kicker">Boutique physique</p><h2>Une adresse végétale<br /><em>au cœur de Lille.</em></h2><p><strong>Studio Végétal — Tibaldo Jungle</strong><br />{address}<br />Mardi · 14h–19h<br />Mercredi–samedi · 10h–19h<br />Dimanche · 10h–13h</p><a className="button button-green" href="https://www.google.com/maps/dir/?api=1&destination=3%20place%20de%20l%27Arbonnoise%2C%2059000%20Lille" target="_blank" rel="noreferrer">Ouvrir l’itinéraire <Arrow /></a></div>
+      <div data-reveal><p className="section-kicker">Boutique physique</p><h2>Une adresse végétale<br /><em>au cœur de Lille.</em></h2><p><strong>Studio Végétal — TIBALDO Jungle</strong><br />{address}<br />Mardi · 14h–19h<br />Mercredi–samedi · 10h–19h<br />Dimanche · 10h–13h</p><a className="button button-green" href="https://www.google.com/maps/dir/?api=1&destination=3%20place%20de%20l%27Arbonnoise%2C%2059000%20Lille" target="_blank" rel="noreferrer">Ouvrir l’itinéraire <Arrow /></a></div>
       {visitVisual ? <figure className="local-seo-visit-visual"><img src={visitVisual.src} alt={visitVisual.alt} width="1280" height="960" loading="lazy" /><figcaption>{visitVisual.caption}</figcaption></figure> : <iframe title={`Carte pour ${props.title} chez Tibaldo Jungle à Lille`} src="https://www.google.com/maps?q=3%20place%20de%20l%27Arbonnoise%2C%2059000%20Lille&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />}
     </section>
 

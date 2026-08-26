@@ -9,10 +9,10 @@ const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["Florist", "Store", "LocalBusiness"],
+      "@type": ["GardenStore", "Florist", "LocalBusiness"],
       "@id": "https://jungle.tibaldo.fr/#store",
-      name: "Studio Végétal — Tibaldo Jungle",
-      alternateName: "Tibaldo Jungle",
+      name: "Studio Végétal — TIBALDO Jungle",
+      alternateName: "TIBALDO Jungle",
       legalName: "Pruvost Romain EI",
       url: "https://jungle.tibaldo.fr/",
       logo: "https://jungle.tibaldo.fr/tibaldo-jungle-logo.webp",
@@ -25,11 +25,13 @@ const structuredData = {
       openingDate: "2026-09-26",
       address: { "@type": "PostalAddress", streetAddress: "3 place de l’Arbonnoise", postalCode: "59000", addressLocality: "Lille", addressRegion: "Hauts-de-France", addressCountry: "FR" },
       areaServed: [{ "@type": "City", name: "Lille" }, { "@type": "AdministrativeArea", name: "Nord" }],
+      parentOrganization: { "@id": "https://jungle.tibaldo.fr/#organization" },
       knowsAbout: ["Plantes rares", "Plantes d’intérieur", "Rempotage de plantes", "Substrats horticoles en vrac", "Studio végétal"],
       sameAs: ["https://www.instagram.com/tibaldojungle", "https://www.facebook.com/tibaldojungle"],
     },
-    { "@type": "WebSite", "@id": "https://jungle.tibaldo.fr/#website", url: "https://jungle.tibaldo.fr/", name: "Studio Végétal — Tibaldo Jungle", publisher: { "@id": "https://jungle.tibaldo.fr/#store" }, inLanguage: "fr-FR" },
-    { "@type": "WebPage", "@id": "https://jungle.tibaldo.fr/#webpage", url: "https://jungle.tibaldo.fr/", name: "Boutique de plantes rares à Lille | Tibaldo Jungle", isPartOf: { "@id": "https://jungle.tibaldo.fr/#website" }, about: { "@id": "https://jungle.tibaldo.fr/#store" }, inLanguage: "fr-FR" },
+    { "@type": "Organization", "@id": "https://jungle.tibaldo.fr/#organization", name: "TIBALDO Jungle", alternateName: "Studio Végétal — TIBALDO Jungle", url: "https://jungle.tibaldo.fr/" },
+    { "@type": "WebSite", "@id": "https://jungle.tibaldo.fr/#website", url: "https://jungle.tibaldo.fr/", name: "TIBALDO Jungle", alternateName: "Studio Végétal — TIBALDO Jungle", publisher: { "@id": "https://jungle.tibaldo.fr/#organization" }, inLanguage: "fr-FR" },
+    { "@type": "WebPage", "@id": "https://jungle.tibaldo.fr/#webpage", url: "https://jungle.tibaldo.fr/", name: "Boutique de plantes rares à Lille | TIBALDO Jungle", isPartOf: { "@id": "https://jungle.tibaldo.fr/#website" }, about: { "@id": "https://jungle.tibaldo.fr/#store" }, inLanguage: "fr-FR" },
   ],
 };
 

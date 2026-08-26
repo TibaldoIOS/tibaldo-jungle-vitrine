@@ -474,6 +474,53 @@ test("renders Thai Constellation as the only Species Editorial V3 prototype", as
   }
 });
 
+test("renders the Local Species SEO V1 pilot without inventing commerce", async () => {
+  const pilots = [
+    [
+      "/plantes/anthurium/veitchii",
+      "Anthurium veitchii",
+      "Anthurium veitchii : entretien et conseils | TIBALDO Jungle",
+      "/plantes/anthurium",
+    ],
+    [
+      "/plantes/monstera/thai-constellation",
+      "Monstera deliciosa ‘Thai Constellation’",
+      "Monstera deliciosa ‘Thai Constellation’ : entretien et conseils | TIBALDO Jungle",
+      "/plantes/monstera",
+    ],
+  ];
+
+  for (const [path, species, title, genusPath] of pilots) {
+    const response = await render(path);
+    assert.equal(response.status, 200, path);
+    const html = await response.text();
+    assert.match(html, new RegExp(`<title>${title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}<\\/title>`, "i"), path);
+    assert.match(html, /species-local-studio/i, path);
+    assert.match(html, new RegExp(`${species.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}[^]*chez TIBALDO Jungle`, "i"), path);
+    assert.match(html, /Studio Végétal — TIBALDO Jungle/i, path);
+    assert.match(html, /3 place de l’Arbonnoise[^]*59000 Lille/i, path);
+    assert.match(html, new RegExp(`href=["']${genusPath.replaceAll("/", "\\/")}["']`, "i"), path);
+    assert.match(html, /href=["']\/plantes["']/i, path);
+    assert.match(html, /href=["']\/boutique-plantes-lille["']/i, path);
+    assert.match(html, /"@type":\["GardenStore","LocalBusiness"\]/i, path);
+    assert.match(html, /"name":"TIBALDO Jungle"/i, path);
+    assert.doesNotMatch(html, /"@type":"Product"|"@type":"Offer"/i, path);
+    assert.match(html, /<meta name="robots" content="noindex, nofollow/i, path);
+  }
+
+  const hub = await (await render("/plantes/anthurium")).text();
+  assert.match(hub, /<title>Anthurium : entretien, espèces et variétés \| TIBALDO Jungle<\/title>/i);
+  assert.match(hub, /Comprendre les Anthurium, puis vérifier les disponibilités/i);
+  assert.match(hub, /href=["']\/plantes\/anthurium\/veitchii["']/i);
+
+  const boutique = await (await render("/boutique-plantes-lille")).text();
+  assert.match(boutique, /<title>Boutique de plantes à Lille \| TIBALDO Jungle<\/title>/i);
+  assert.match(boutique, /href=["']\/plantes\/anthurium["']/i);
+  assert.match(boutique, /href=["']\/plantes\/monstera\/thai-constellation["']/i);
+  assert.match(boutique, /"@type":\["GardenStore","Florist","LocalBusiness"\]/i);
+  assert.doesNotMatch(boutique, /"@type":"Product"/i);
+});
+
 test("renders Species UX NEXT only for Monstera deliciosa", async () => {
   const response = await render("/plantes/monstera/deliciosa");
   assert.equal(response.status, 200);
