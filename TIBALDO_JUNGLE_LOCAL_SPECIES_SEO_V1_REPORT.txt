@@ -1,0 +1,137 @@
+TIBALDO JUNGLE — LOCAL SPECIES SEO V1 + BRAND IDENTITY
+DATE=2026-08-27
+MODE=AUDIT_FIRST_THEN_BETA_PROTOTYPE
+VERDICT=PASS_WITH_CONDITIONS
+
+GUARDRAILS
+PUBLIC_MUTATED=NO
+PROD_MUTATED=NO
+SEARCH_CONSOLE_MUTATED=NO
+INDEXING_REQUESTED=NO
+MAIN_MERGED=NO
+BETA_DEPLOYED=NO
+PROTOTYPE_LOCATION=isolated local worktree and branch
+BRANCH=beta/jungle-local-species-seo-v1
+BASE_COMMIT=3dfe898
+PROTOTYPE_COMMIT=1e9d84eac7c017e029b62f8f14f003a5e753f28e
+
+CURRENT_LOCAL_SEO_STATE=PARTIAL
+The site already separates most botanical species pages, genus hubs and local commercial pages by route and intent. The target species were technically healthy and had public canonical URLs. The main weakness was not missing pages but inconsistent brand naming and a weak explicit bridge between botanical content, the physical Lille studio and authoritative commercial availability.
+
+BRAND_IDENTITY_STATE=PARTIAL_BEFORE_PROTOTYPE__COHERENT_ON_PROTOTYPE_SCOPE
+Observed variants included "Tibaldo Jungle", "Studio Végétal — Tibaldo Jungle" and shortened "Studio Végétal" labels. The prototype establishes:
+- canonical brand: TIBALDO Jungle;
+- physical establishment: Studio Végétal — TIBALDO Jungle;
+- parent Organization: TIBALDO Jungle;
+- WebSite/application/og:site_name: TIBALDO Jungle;
+- generic TIBALDO alone avoided where Jungle context is known.
+
+LOCAL_ENTITY_CONSISTENCY=PASS_ON_PROTOTYPE_SCOPE
+Authoritative local identity used: Studio Végétal — TIBALDO Jungle, 3 place de l’Arbonnoise, 59000 Lille. No telephone, opening hours, coordinates, price range, price, availability or review was invented.
+
+LOCALBUSINESS_STATE=PARTIAL_BEFORE_PROTOTYPE__JUSTIFIED_BETA_MODEL_READY
+The existing local page already exposed a LocalBusiness/Florist entity. The prototype refines it to GardenStore + Florist + LocalBusiness and links it to the TIBALDO Jungle parent Organization. Target species additionally expose the same physical entity to connect botanical content with the real studio. This does not assert that either species is in stock.
+
+SPECIES_LOCAL_SIGNAL=PASS_FOR_TWO_PILOTS
+SpeciesLocalStudio is visible and reusable on:
+- /plantes/anthurium/veitchii
+- /plantes/monstera/thai-constellation
+It states the studio identity and address, explains how botanical guidance supports local advice, and explicitly says the encyclopedia is not a stock announcement.
+
+GENUS_LOCAL_SIGNAL=PASS_FOR_ANTHURIUM_PILOT
+/plantes/anthurium now contains a visible bridge that separates comparison/culture intent from commercial availability and links to the Veitchii guide and local boutique page.
+
+INTERNAL_LINK_GRAPH=PASS_ON_PILOT
+Veitchii -> Anthurium hub -> /plantes -> /boutique-plantes-lille.
+Thai Constellation -> Monstera hub -> /plantes -> /boutique-plantes-lille.
+Anthurium hub -> Veitchii and local boutique.
+Local boutique -> /plantes, Anthurium hub and Thai Constellation.
+No product link was added because no authoritative product/stock record was provided.
+
+COMMERCIAL_ENCYCLOPEDIA_SEPARATION=PASS
+Species pages remain botanical/maintenance pages. The Anthurium hub remains discovery/comparison. The Lille boutique page carries local commercial intent. Visible copy states that species pages do not represent current stock. Different intents were not canonicalized together.
+
+STRUCTURED_DATA_STATE=PASS_WITH_SCOPE_LIMIT
+Present/retained on the prototype: Organization, WebSite/WebPage, Article, Thing, BreadcrumbList, FAQPage where visible, ImageObject, and the local GardenStore/Florist/LocalBusiness entity. Product and Offer count is zero on all four pilot routes. No Event or review schema was introduced.
+
+IMAGE_OPPORTUNITIES
+1. Anthurium veitchii currently uses a strong, correctly identified 1920x2880 third-party licensed image; a documented owner photo would improve proprietary proof but is not required for this SEO prototype.
+2. Thai Constellation uses a 1619x971 editorial botanical plate derived from a supplied specimen image and already has stronger original/editorial value.
+3. Keep stable URLs, explicit dimensions and useful botanical alt text.
+4. Do not replace imagery until provenance and species identity are owner-validated.
+
+TITLE_META_DECISIONS
+- Veitchii: "Anthurium veitchii : entretien et conseils | TIBALDO Jungle".
+- Thai Constellation: "Monstera deliciosa ‘Thai Constellation’ : entretien et conseils | TIBALDO Jungle".
+- Anthurium hub: "Anthurium : entretien, espèces et variétés | TIBALDO Jungle".
+- Local boutique: "Boutique de plantes à Lille | TIBALDO Jungle".
+"Plante rare" was not added mechanically to species titles.
+
+TOP_10_IMPROVEMENTS
+1. KEEP: one reusable, visible SpeciesLocalStudio module rather than Lille text repeated throughout each guide.
+2. KEEP: strict encyclopedia-versus-stock wording on species and hub pages.
+3. KEEP: TIBALDO Jungle as WebSite/Organization/site-name identity.
+4. BEFORE_PUBLIC: validate the address spelling and full establishment name one final time with Owner/GBP source of truth.
+5. BEFORE_PUBLIC: decide whether remaining repository-wide "Tibaldo Jungle" casing should be normalized in a separate bounded pass.
+6. BEFORE_PUBLIC: resolve legacy Wattignies references only where they describe the current public studio; retain them where they truthfully describe cultivation history.
+7. WHEN_REAL_PRODUCT_EXISTS: link species to the single authoritative Shop product with current price and stock; never duplicate the catalogue.
+8. OWNER_MEDIA_PASS: add proprietary Veitchii photography only after botanical/provenance validation.
+9. MEASURE_AFTER_PUBLIC: monitor species name, species + Lille, genus + Lille and local commercial queries in Search Console without mass indexing requests.
+10. LATER: extend the local module only to species with genuine studio evidence or a clear local user continuation; do not roll it out mechanically.
+
+PROTOTYPE_PLAN=COMPLETED_LOCALLY
+Implemented exactly two species pilots, one Anthurium hub and the existing /boutique-plantes-lille page. No new URL was created. No second catalogue, stock engine, price or fake availability was added.
+
+FILES_TO_CHANGE_COMPLETED
+app/LocalSeoPage.tsx
+app/SiteChrome.tsx
+app/boutique-plantes-lille/page.tsx
+app/globals.css
+app/layout.tsx
+app/page.tsx
+app/plantes/AnthuriumGenusV2.tsx
+app/plantes/PlantProfile.tsx
+app/plantes/SpeciesLocalStudio.tsx
+app/plantes/[genre]/[slug]/page.tsx
+app/plantes/[genre]/page.tsx
+app/plantes/page.tsx
+tests/rendered-html.test.mjs
+
+EXPECTED_BETA_SCOPE=LOCAL_PROTOTYPE_READY_FOR_OWNER_REVIEW__NO_HOSTED_BETA_VERSION_CREATED
+
+TEST_PLAN_AND_RESULTS
+BUILD=PASS
+TESTS=PASS_44_OF_44
+TYPESCRIPT=PASS
+SEO_AUDIT_BETA=PASS__GLOBAL_NOINDEX_NOFOLLOW__ROBOTS_CLOSED__SITEMAP_404
+PLACEHOLDER_AUDIT=PASS__EXISTING_DEBT_REPORTED__PILOT_IMAGES_DEFINITIVE
+HTTP_LOCAL_PILOT=PASS_4_OF_4
+CANONICAL=PASS_4_OF_4__PUBLIC_CANONICAL_HOST_RETAINED
+H1=PASS_4_OF_4__ONE_PER_PAGE
+STRUCTURED_DATA_NO_FAKE_PRODUCT=PASS_4_OF_4
+INTERNAL_LINKS=PASS_ON_PILOT_GRAPH
+MOBILE_390=PASS_4_OF_4__NO_HORIZONTAL_OVERFLOW
+DESKTOP_1440=PASS_4_OF_4__NO_HORIZONTAL_OVERFLOW
+ACCESSIBILITY_MECHANICAL=PASS__ONE_H1__NO_MISSING_ALT__NO_EMPTY_UNLABELLED_LINKS_ON_PILOT
+CONSOLE_ERRORS=0_ON_BROWSER_SAMPLE
+LINT_GLOBAL=FAIL_BASELINE__51_ERRORS_AND_45_WARNINGS_ALREADY_PRESENT_ACROSS_REPOSITORY
+LINT_CONDITION=The global ESLint baseline is not green, primarily because historical internal anchors violate the Next Link rule. This prototype does not claim to close that repository-wide debt.
+
+ROLLBACK
+No deployment exists. Local rollback is deletion of the isolated worktree/branch after preserving any wanted evidence, or Git revert of commit 1e9d84eac7c017e029b62f8f14f003a5e753f28e. No public rollback is needed.
+
+OWNER_DECISIONS_REQUIRED
+1. Approve the exact visible capitalization "TIBALDO Jungle" and physical name "Studio Végétal — TIBALDO Jungle" before any wider rollout.
+2. Confirm the address as the current authoritative NAP source.
+3. Decide later which real Shop products may receive species-to-product links; Master remains authoritative for stock/catalogue/Merchant data.
+4. Decide whether a separate owner-photo curation mission should replace the licensed Veitchii image.
+None of these decisions blocks local BETA testing of the current prototype.
+
+TEST_BETA_AUTONOMY=YES
+PUBLIC_ROLLOUT_AUTHORIZED=NO
+SEARCH_CONSOLE_ACTION_AUTHORIZED=NO
+INDEXING_REQUEST_AUTHORIZED=NO
+MERGE_MAIN_AUTHORIZED=NO
+
+FINAL_VERDICT
+PASS_WITH_CONDITIONS — the bounded Local Species SEO and brand-identity prototype is implemented and mechanically validated on an isolated BETA branch. The only test condition is the pre-existing repository-wide ESLint debt. Owner brand/NAP approval is required before any wider rollout. STOP.
