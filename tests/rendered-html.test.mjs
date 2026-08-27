@@ -502,6 +502,8 @@ test("renders the Local Species SEO V1 pilot without inventing commerce", async 
     assert.match(html, new RegExp(`href=["']${genusPath.replaceAll("/", "\\/")}["']`, "i"), path);
     assert.match(html, /href=["']\/plantes["']/i, path);
     assert.match(html, /href=["']\/boutique-plantes-lille["']/i, path);
+    assert.match(html, /Les disponibilités et les prix varient selon les arrivages/i, path);
+    assert.doesNotMatch(html, /offre commerciale autoritaire|La fiche encyclopédique ne constitue pas une annonce/i, path);
     assert.match(html, /"@type":\["GardenStore","LocalBusiness"\]/i, path);
     assert.match(html, /"name":"TIBALDO Jungle"/i, path);
     assert.doesNotMatch(html, /"@type":"Product"|"@type":"Offer"/i, path);
@@ -510,7 +512,8 @@ test("renders the Local Species SEO V1 pilot without inventing commerce", async 
 
   const hub = await (await render("/plantes/anthurium")).text();
   assert.match(hub, /<title>Anthurium : entretien, espèces et variétés \| TIBALDO Jungle<\/title>/i);
-  assert.match(hub, /Comprendre les Anthurium, puis vérifier les disponibilités/i);
+  assert.match(hub, /Comprendre et choisir son Anthurium/i);
+  assert.doesNotMatch(hub, /Ce hub compare|catalogue indépendant|offre commerciale autoritaire/i);
   assert.match(hub, /href=["']\/plantes\/anthurium\/veitchii["']/i);
 
   const boutique = await (await render("/boutique-plantes-lille")).text();
@@ -518,6 +521,13 @@ test("renders the Local Species SEO V1 pilot without inventing commerce", async 
   assert.match(boutique, /href=["']\/plantes\/anthurium["']/i);
   assert.match(boutique, /href=["']\/plantes\/monstera\/thai-constellation["']/i);
   assert.match(boutique, /"@type":\["GardenStore","Florist","LocalBusiness"\]/i);
+  assert.match(boutique, /"@id":"https:\/\/jungle\.tibaldo\.fr\/#store"/i);
+  assert.match(boutique, /"email":"jungle@tibaldo\.fr"/i);
+  assert.match(boutique, /"telephone":"\+33743727079"/i);
+  assert.match(boutique, /"dayOfWeek":"Tuesday","opens":"14:00","closes":"19:00"/i);
+  assert.match(boutique, /tibaldo-jungle-logo\.webp/i);
+  assert.doesNotMatch(boutique, /facade-tibaldo-jungle-studio-vegetal-lille\.jpg/i);
+  assert.doesNotMatch(boutique, /contact@tibaldo\.fr|Mardi · 10h/i);
   assert.doesNotMatch(boutique, /"@type":"Product"/i);
 });
 

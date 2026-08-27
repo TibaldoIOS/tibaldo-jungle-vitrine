@@ -1,4 +1,5 @@
 import { shopUrl } from "@/lib/environment";
+import { jungleLocalIdentity } from "@/lib/jungle-local-identity";
 
 const Arrow = () => <svg className="jungle-arrow-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M5 15 15 5M7 5h8v8" /></svg>;
 const InstagramIcon = () => <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4.25" /><circle className="social-icon-dot" cx="17.4" cy="6.8" r="1" /></svg>;
@@ -66,7 +67,7 @@ export function SiteFooter({ compactTransit = false }: { compactTransit?: boolea
   return (
     <footer>
       {!compactTransit && <section className="shell footer-transit" aria-labelledby="footer-transit-title" data-reveal>
-        <header><span>Venir sans voiture</span><h2 id="footer-transit-title">Le Studio est à quelques pas<br />de <em>Cormontaigne.</em></h2><p>3 place de l’Arbonnoise · 59000 Lille</p></header>
+        <header><span>Venir sans voiture</span><h2 id="footer-transit-title">Le Studio est à quelques pas<br />de <em>Cormontaigne.</em></h2><p>{jungleLocalIdentity.streetAddress} · {jungleLocalIdentity.postalCode} {jungleLocalIdentity.city}</p></header>
         <div className="footer-transit-visual">
           <figure><img src="/transports/cormontaigne-1.jpg" alt="Place et accès de la station de métro Cormontaigne à Lille" width="1280" height="960" loading="lazy" /><figcaption><span>Repère photographique réel</span><strong>Place Cormontaigne</strong><small>Accès au métro M2, dans le quartier Vauban-Esquermes.</small></figcaption></figure>
           <div className="footer-transit-routes">
@@ -107,7 +108,7 @@ export function SiteFooter({ compactTransit = false }: { compactTransit?: boolea
           <div><span>Explorer</span><a href="/boutique-plantes-lille">Boutique plantes Lille</a><a href="/plantes">Plantes</a><a href="/conseils">Conseils plantes</a><a href="/sos-plantes">SOS Plantes</a><a href="/rempotage-plantes-lille">Bar à rempotage</a><a href="/fleurs">Catalogue de fleurs</a><a href="/substrats-en-vrac-lille">Substrats en vrac Lille</a><a href="/pots-cache-pots-lille">Pots et cache-pots à Lille</a><a href="/coulisses">Les coulisses</a><a href="https://tibaldo.fr/qui-suis-je">Qui suis-je ?</a><a href="/livraison-plantes-lille">Livraison de plantes</a><a href="/fleurs-sur-commande-lille">Fleurs et bouquets sur commande</a><a href="/evenements">Événements</a><a href="/services">Nos services</a></div>
           <div className="social-links"><span>Nous suivre</span><a href="https://www.instagram.com/tibaldojungle" target="_blank" rel="noreferrer">Instagram</a><a href="https://www.facebook.com/tibaldojungle" target="_blank" rel="noreferrer">Facebook</a></div>
           <div><span>Horaires</span><p>Mardi · 14h–19h<br />Mercredi–samedi · 10h–19h<br />Dimanche · 10h–13h</p></div>
-          <div><span>Venir & écrire</span><p>3 place de l’Arbonnoise<br />59000 Lille<br /><a href="tel:+33743727079">07 43 72 70 79</a></p><a className="footer-email" href="mailto:jungle@tibaldo.fr">jungle@tibaldo.fr</a></div>
+          <div><span>Venir & écrire</span><p>{jungleLocalIdentity.streetAddress}<br />{jungleLocalIdentity.postalCode} {jungleLocalIdentity.city}<br /><a href={`tel:${jungleLocalIdentity.phoneE164}`}>{jungleLocalIdentity.phoneDisplay}</a></p><a className="footer-email" href={`mailto:${jungleLocalIdentity.email}`}>{jungleLocalIdentity.email}</a></div>
         </div>
       </div>
       <div className="shell footer-bottom" data-reveal>

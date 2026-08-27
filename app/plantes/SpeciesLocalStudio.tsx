@@ -26,15 +26,14 @@ export default function SpeciesLocalStudio({
           <em>chez TIBALDO Jungle.</em>
         </h2>
         <p>
-          Cette fiche rassemble les repères botaniques et horticoles utiles pour
-          comprendre l’espèce. Au Studio Végétal — TIBALDO Jungle, à Lille, ces
-          repères servent à relier lumière, arrosage, racines et substrat avant
-          tout conseil.
+          Retrouvez ici les repères essentiels pour connaître cette espèce et
+          mieux comprendre ses besoins. Au Studio Végétal — TIBALDO Jungle à
+          Lille, nous nous appuyons sur ces mêmes repères pour vous conseiller
+          sur la lumière, l’arrosage, les racines et le substrat.
         </p>
         <p>
-          La fiche encyclopédique ne constitue pas une annonce de disponibilité.
-          Les arrivages, prix et stocks éventuels sont présentés uniquement sur
-          une offre commerciale autoritaire.
+          Les disponibilités et les prix varient selon les arrivages. Consultez
+          le Shop ou contactez le Studio pour connaître la sélection du moment.
         </p>
       </div>
       <aside className="species-local-studio-card" aria-label="Adresse et liens utiles">

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
+import { jungleLocalIdentity } from "@/lib/jungle-local-identity";
 
 export const metadata: Metadata = {
-  title: "Contact et boutique de plantes à Lille | Tibaldo Jungle",
-  description: "Tibaldo Jungle, boutique de plantes et Studio Végétal : 3 place de l’Arbonnoise, 59000 Lille. Horaires, itinéraire GPS et contact.",
+  title: "Contact et boutique de plantes à Lille | TIBALDO Jungle",
+  description: "TIBALDO Jungle, boutique de plantes et Studio Végétal : 3 place de l’Arbonnoise, 59000 Lille. Horaires, itinéraire GPS et contact.",
   alternates: { canonical: "/contact" },
 };
 
@@ -28,9 +29,9 @@ export default function ContactPage() {
         <p className="section-kicker">Votre itinéraire</p>
         <h2>Venez découvrir<br />le Studio Végétal.</h2>
         <div className="contact-details">
-          <p><span>Adresse</span><strong>3 place de l’Arbonnoise<br />59000 Lille</strong></p>
+          <p><span>Adresse</span><strong>{jungleLocalIdentity.streetAddress}<br />{jungleLocalIdentity.postalCode} {jungleLocalIdentity.city}</strong></p>
           <p><span>Horaires</span><strong>Mardi · 14h–19h<br />Mercredi–samedi · 10h–19h<br />Dimanche · 10h–13h</strong></p>
-          <p><span>Contact</span><strong><a href="mailto:jungle@tibaldo.fr">jungle@tibaldo.fr</a><br /><a href="tel:+33743727079">07 43 72 70 79</a></strong></p>
+          <p><span>Contact</span><strong><a href={`mailto:${jungleLocalIdentity.email}`}>{jungleLocalIdentity.email}</a><br /><a href={`tel:${jungleLocalIdentity.phoneE164}`}>{jungleLocalIdentity.phoneDisplay}</a></strong></p>
         </div>
         <div className="gps-chooser" id="itineraire">
           <p><span>Itinéraire GPS</span><strong>Ouvrir avec votre application préférée</strong></p>
@@ -43,7 +44,7 @@ export default function ContactPage() {
       </div>
       <div className="contact-map reveal-right" data-reveal>
         <iframe title="Carte de Tibaldo Jungle, 3 place de l’Arbonnoise à Lille" src="https://www.google.com/maps?q=3%20place%20de%20l%27Arbonnoise%2C%2059000%20Lille&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
-        <div className="contact-map-label"><span>Tibaldo Jungle · Studio Végétal</span><strong>3 place de l’Arbonnoise · Lille</strong></div>
+        <div className="contact-map-label"><span>TIBALDO Jungle · Studio Végétal</span><strong>{jungleLocalIdentity.streetAddress} · {jungleLocalIdentity.city}</strong></div>
       </div>
     </section>
     <SiteFooter />

@@ -91,8 +91,8 @@ export default function AnthuriumGenusV2({ guide, editorials, plants }: { guide:
 
       <section className="family-guide-local shell anth-v2-local-bridge" data-reveal>
         <p className="section-kicker">TIBALDO Jungle · Lille</p>
-        <h2>Comprendre les Anthurium, puis vérifier les disponibilités.</h2>
-        <p>Ce hub compare les espèces et leurs besoins. Il reste indépendant du catalogue : un prix ou un stock éventuel n’est indiqué que sur une offre commerciale réelle. Le Studio Végétal — TIBALDO Jungle se trouve au 3 place de l’Arbonnoise, 59000 Lille.</p>
+        <h2>Comprendre et choisir son Anthurium.</h2>
+        <p>Découvrez et comparez les Anthurium, leurs particularités et leurs besoins. Pour connaître les plantes disponibles au Studio Végétal — TIBALDO Jungle à Lille, consultez la sélection du moment ou contactez-nous avant votre visite.</p>
         <div className="family-guide-local-actions">
           <Link className="button" href="/boutique-plantes-lille">Découvrir le Studio <Arrow /></Link>
           <Link className="text-link" href="/plantes/anthurium/veitchii">Lire la fiche Anthurium veitchii <Arrow /></Link>

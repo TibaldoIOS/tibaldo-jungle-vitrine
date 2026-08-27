@@ -22,7 +22,7 @@ const universes = [
     title: "Le Studio",
     copy: "Découvrez la nouvelle adresse Tibaldo Jungle, ses plantes, ses matières et les conseils proposés sur place à Lille.",
     href: "/contact",
-    image: "/facade-tibaldo-jungle-studio-vegetal-lille.jpg",
+    image: "/projet-boutique-tibaldo-jungle-lille.webp",
     alt: "Façade du Studio Végétal Tibaldo Jungle à Lille",
   },
 ];
