@@ -712,7 +712,7 @@ test("serves species hero photos directly without the vinext image optimizer", a
   for (const [path, image] of [
     ["/plantes/cycas/revoluta", "/media/images/cycas-revoluta/cycas-revoluta-terrasse-tibaldo.webp"],
     ["/plantes/monstera/deliciosa", "/monstera-deliciosa-feuilles.jpg"],
-    ["/plantes/anthurium/veitchii", "/anthurium-veitchii-king.jpg"],
+    ["/plantes/anthurium/veitchii", "/media/anthurium-veitchii-king.jpg"],
   ]) {
     const html = await (await render(path)).text();
     assert.match(html, new RegExp(`<img[^>]+src=["']${image.replaceAll("/", "\\/")}["']`, "i"), path);
