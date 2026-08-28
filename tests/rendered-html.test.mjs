@@ -609,6 +609,17 @@ test("renders Thai Constellation as the only Species Editorial V3 prototype", as
   }
 });
 
+test("serves Deliciosa with the approved hero and the shared species body", async () => {
+  const html = await (await render("/plantes/monstera/deliciosa")).text();
+  assert.match(html, /species-next-hero/);
+  assert.match(html, /monstera-deliciosa-feuilles\.jpg/);
+  assert.match(html, /plant-profile-layout/);
+  assert.match(html, /plant-identity-section/);
+  assert.match(html, /care-meter-grid/);
+  assert.doesNotMatch(html, /species-next-diagnostic-index/);
+  assert.doesNotMatch(html, /species-next-comparison-matrix/);
+});
+
 test("renders the Local Species SEO V1 pilot without inventing commerce", async () => {
   const pilots = [
     [
@@ -666,29 +677,21 @@ test("renders the Local Species SEO V1 pilot without inventing commerce", async 
   assert.doesNotMatch(boutique, /"@type":"Product"/i);
 });
 
-test("renders Species UX NEXT only for Monstera deliciosa", async () => {
+test("scopes the Deliciosa Owner hero without forking the shared species body", async () => {
   const response = await render("/plantes/monstera/deliciosa");
   assert.equal(response.status, 200);
   const html = await response.text();
 
   assert.match(html, /species-next-page/i);
-  assert.match(html, /Sommaire de la fiche Monstera deliciosa/i);
-  for (const id of ["apercu", "identite", "comprendre", "cultiver", "racines", "diagnostic", "comparer", "regard", "faq", "sources", "explorer"]) {
+  assert.match(html, /species-next-hero/i);
+  assert.match(html, /plant-care-passport|plant-identity-signature|plant-taxonomy|care-meter-grid|plant-gallery/i);
+  for (const id of ["identite", "entretien", "problemes", "comparaison", "conseils", "faq"]) {
     assert.match(html, new RegExp(`id=["']${id}["']`, "i"), id);
+    assert.match(html, new RegExp(`href=["']#${id}["']`, "i"), id);
   }
-  assert.equal((html.match(/class=["'][^"']*species-next-nav[^"']*["']/gi) ?? []).length >= 1, true);
-  for (const href of ["#apercu", "#identite", "#cultiver", "#diagnostic", "#comparer", "#faq"]) {
-    assert.match(html, new RegExp(`href=["']${href}["']`, "i"), href);
-  }
-  assert.doesNotMatch(html, /plant-care-passport|plant-identity-signature|plant-taxonomy|care-meter-grid|plant-gallery/i);
-  assert.match(html, /Monstera borsigiana[\s\S]*synonyme/i);
-  assert.match(html, /Rhaphidophora tetrasperma/i);
-  assert.match(html, /Causes possibles[\s\S]*Comment vérifier[\s\S]*Action conseillée/i);
-  assert.match(html, /Conseil du Studio/i);
-  assert.doesNotMatch(html, /Observation Tibaldo Jungle/i);
-  assert.match(html, /aria-expanded=["']false["']/i);
+  assert.match(html, /Sommaire de la fiche plante/i);
+  assert.doesNotMatch(html, /species-next-nav|species-next-diagnostic-index|species-next-comparison-matrix/i);
   assert.match(html, /"@type":"FAQPage"/i);
-  assert.match(html, /Pourquoi les nouvelles feuilles n’ont-elles pas de trous/i);
   assert.match(html, /monstera-deliciosa-feuilles\.jpg/i);
   assert.doesNotMatch(html, /botanix\.com/i);
   assert.match(html, /<meta name="robots" content="noindex, nofollow/i);

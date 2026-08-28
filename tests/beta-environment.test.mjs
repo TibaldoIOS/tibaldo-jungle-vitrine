@@ -72,15 +72,20 @@ test("Editorial Experience V3 keeps the visual and environment guardrails", asyn
   assert.doesNotMatch(chrome, /↗️/);
 });
 
-test("Species UX NEXT is scoped and has a reduced-motion final state", async () => {
-  const [profile, nextProfile, styles, interactions] = await Promise.all([
+test("Deliciosa preserves its Owner hero and uses the canonical species body", async () => {
+  const [profile, nextProfile, ownerHero, styles, interactions] = await Promise.all([
     readFile(new URL("../app/plantes/PlantProfile.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/plantes/DeliciosaProfileNext.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/plantes/DeliciosaOwnerHero.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
     readFile(new URL("../app/plantes/SpeciesNextInteractions.tsx", import.meta.url), "utf8"),
   ]);
   assert.match(profile, /plant\.genre === "monstera" && plant\.slug === "deliciosa"/);
-  assert.match(profile, /<DeliciosaProfileNext/);
+  assert.match(profile, /<DeliciosaOwnerHero/);
+  assert.doesNotMatch(profile, /<DeliciosaProfileNext/);
+  assert.match(nextProfile, /ARCHIVE V6/);
+  assert.match(ownerHero, /monstera-deliciosa-feuilles\.jpg/);
+  assert.match(ownerHero, /01 · Reconnaître · Encyclopédie végétale/);
   assert.match(nextProfile, /monstera-deliciosa-feuilles\.jpg/);
   assert.doesNotMatch(nextProfile, /botanix\.com/);
   assert.match(interactions, /prefers-reduced-motion: reduce/);

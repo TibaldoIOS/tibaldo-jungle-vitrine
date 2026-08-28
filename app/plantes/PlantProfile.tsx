@@ -14,7 +14,7 @@ import PlantShopBar from "./PlantShopBar";
 import PlantSpeciesHero from "./PlantSpeciesHero";
 import VeitchiiProfileV2 from "./VeitchiiProfileV2";
 import ThaiConstellationProfileV3 from "./ThaiConstellationProfileV3";
-import DeliciosaProfileNext from "./DeliciosaProfileNext";
+import DeliciosaOwnerHero from "./DeliciosaOwnerHero";
 import SpeciesLocalStudio from "./SpeciesLocalStudio";
 
 function Meter({
@@ -89,8 +89,8 @@ export default function PlantProfile({ plant }: { plant: PlantEntry }) {
   const isVisualP1Species =
     (plant.genre === "cycas" && plant.slug === "revoluta") ||
     (plant.genre === "dicksonia" && plant.slug === "antarctica");
-  if (plant.genre === "monstera" && plant.slug === "deliciosa")
-    return <DeliciosaProfileNext />;
+  const isDeliciosa =
+    plant.genre === "monstera" && plant.slug === "deliciosa";
   if (plant.genre === "monstera" && plant.slug === "thai-constellation")
     return (
       <main className="editorial-page plant-profile-page thai-profile-v3">
@@ -147,10 +147,14 @@ export default function PlantProfile({ plant }: { plant: PlantEntry }) {
     );
   return (
     <main
-      className={`editorial-page plant-profile-page${isVisualP1Species ? ` p1-species-compact p1-species-${plant.genre}` : ""}`}
+      className={`editorial-page plant-profile-page${isDeliciosa ? " species-next-page deliciosa-next deliciosa-standard-species" : ""}${isVisualP1Species ? ` p1-species-compact p1-species-${plant.genre}` : ""}`}
     >
       <ScrollReveal />
-      <PlantSpeciesHero plant={plant} />
+      {isDeliciosa ? (
+        <DeliciosaOwnerHero />
+      ) : (
+        <PlantSpeciesHero plant={plant} />
+      )}
       <PlantCarePassport
         indicators={[
           {

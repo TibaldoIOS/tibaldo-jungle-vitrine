@@ -70,6 +70,11 @@ const rootZone = [
   },
 ] as const;
 
+/**
+ * ARCHIVE V6 — preserved for possible future reuse. This component is no
+ * longer mounted by the public BETA species route; the active route keeps its
+ * approved hero and uses the shared PlantProfile body.
+ */
 export default function DeliciosaProfileNext() {
   return (
     <main className="editorial-page plant-profile-page species-next-page deliciosa-next">
