@@ -257,6 +257,40 @@ test("beta hides every owner LAB route unless the explicit local switch is set",
   }
 });
 
+test("V19 Owner-review prototypes share one narrative system without replacing V18 routes", async () => {
+  const prototypes = [
+    ["/lab/v19/monstera/deliciosa", "Monstera deliciosa"],
+    ["/lab/v19/anthurium/veitchii", "Anthurium veitchii"],
+    ["/lab/v19/pilea/peperomioides", "Pilea peperomioides"],
+  ];
+
+  for (const [route, botanicalName] of prototypes) {
+    const response = await render(route);
+    assert.equal(response.status, 200, route);
+    assert.equal(response.headers.get("x-robots-tag"), "noindex, nofollow", route);
+    const html = await response.text();
+    assert.match(html, /Prototype V19/i, route);
+    assert.match(html, new RegExp(botanicalName.replace(" ", "[\\s\\S]*"), "i"), route);
+    assert.match(html, /id=["']identite["'][\s\S]*id=["']entretien["'][\s\S]*id=["']problemes["'][\s\S]*id=["']comparaison["'][\s\S]*id=["']faq["']/i, route);
+    assert.match(html, /prefers-reduced-motion|SpeciesVisualNarrativeV2Motion/i, route);
+    assert.doesNotMatch(html, /Jungle Scroll Story|ARCHIVE V6|LAB D2/i, route);
+  }
+
+  const canonical = await render("/plantes/monstera/deliciosa");
+  assert.equal(canonical.status, 200);
+  const canonicalHtml = await canonical.text();
+  assert.doesNotMatch(canonicalHtml, /Prototype V19|Système visuel partagé/i);
+
+  const motionSource = readFileSync(
+    new URL("../app/plantes/SpeciesVisualNarrativeV2Motion.tsx", import.meta.url),
+    "utf8",
+  );
+  assert.match(motionSource, /prefers-reduced-motion: reduce/);
+  assert.match(motionSource, /IntersectionObserver/);
+  assert.match(motionSource, /requestAnimationFrame/);
+  assert.match(motionSource, /\{ passive: true \}/);
+});
+
 test("Visual P1 target routes expose no internal production placeholders", async () => {
   const routes = [
     "/plantes/bananiers",
