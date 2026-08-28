@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -10,20 +9,17 @@ import ScrollReveal from "../../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../../SiteChrome";
 import PlantCarePassport from "../PlantCarePassport";
 import type { Level } from "@/lib/plants/types";
-import {
-  isInternalPhotoProductionCopy,
-  publicPlantImageAlt,
-} from "@/lib/plants/types";
+import { isInternalPhotoProductionCopy } from "@/lib/plants/types";
 import BotanicalGenusHero from "../BotanicalGenusHero";
 import { hasBotanicalHero } from "@/lib/plants/botanical-heroes";
 import AnthuriumGenusV2 from "../AnthuriumGenusV2";
 import GenusPilotV21 from "../GenusPilotV21";
 import PhotoGenusHero from "../PhotoGenusHero";
 import { hasPhotoGenusHero } from "@/lib/plants/photo-genus-heroes";
+import GenusSpeciesCarousel from "../GenusSpeciesCarousel";
 
 type Props = { params: Promise<{ genre: string }> };
 type GuideKey = keyof typeof familyGuides;
-const listingNameOf = (plant: { botanicalName: string; listingName?: string }) => plant.listingName ?? plant.botanicalName;
 
 export const generateStaticParams = () => Object.keys(familyGuides).map((genre) => ({ genre }));
 
@@ -74,19 +70,6 @@ export default async function Page({ params }: Props) {
       !isInternalPhotoProductionCopy(item.answer),
   );
   const isV21Pilot = genre === "alocasia" || genre === "chlorophytum" || genre === "dicksonia";
-  const genrePortraits = list
-    .map((plant) => ({
-      src: plant.gallery[0].src,
-      alt: publicPlantImageAlt(
-        plant.gallery[0].src,
-        plant.botanicalName,
-        plant.gallery[0].alt,
-      ),
-      name: ("listingName" in plant ? plant.listingName : undefined) ?? plant.botanicalName,
-      href: `/plantes/${genre}/${plant.slug}`,
-    }))
-    .filter((portrait, index, portraits) => portraits.findIndex((item) => item.src === portrait.src) === index)
-    .slice(0, 4);
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -201,58 +184,7 @@ export default async function Page({ params }: Props) {
         substrate={guide.care.substrate}
         nutrition={guide.care.nutrition}
       />
-      {genre !== "anthurium" && (
-        <>
-          <section className="genre-portrait shell" aria-labelledby="genre-portrait-title" data-reveal>
-            <header>
-              <p className="section-kicker">Reconnaître le genre</p>
-              <h2 id="genre-portrait-title">
-                Plusieurs silhouettes,
-                <br />
-                <em>un même univers.</em>
-              </h2>
-              <p>Feuilles, ports et textures varient d’une espèce à l’autre. Parcourez les spécimens déjà présents dans l’encyclopédie.</p>
-            </header>
-            <div className={`genre-portrait-grid count-${genrePortraits.length}`}>
-              {genrePortraits.map((portrait, index) => {
-                const visual = (
-                  <>
-                    <Image unoptimized src={portrait.src} alt={portrait.alt} width="900" height="1100" />
-                    <span>0{index + 1}</span>
-                    <strong>{portrait.name}</strong>
-                    {portrait.href && <small>Voir la fiche <Arrow /></small>}
-                  </>
-                );
-                return portrait.href ? (
-                  <a href={portrait.href} key={portrait.src}>
-                    {visual}
-                  </a>
-                ) : (
-                  <figure key={portrait.src}>{visual}</figure>
-                );
-              })}
-            </div>
-          </section>
-          <nav className="plant-explorer is-compact" aria-label={`Espèces et cultivars de ${guide.name}`}>
-            <div className="shell plant-explorer-inner">
-              <div>
-                <span>Explorer les espèces & cultivars</span>
-                <div className="plant-explorer-links">
-                  {list.length ? (
-                    list.map((plant) => (
-                      <Link href={`/plantes/${genre}/${plant.slug}`} key={plant.slug}>
-                        {listingNameOf(plant)}
-                      </Link>
-                    ))
-                  ) : (
-                    <span className="is-disabled">Premières fiches à venir</span>
-                  )}
-                </div>
-              </div>
-            </div>
-          </nav>
-        </>
-      )}
+      <GenusSpeciesCarousel genre={genre} genusName={guide.name} plants={list} />
       {genre === "anthurium" ? (
         <AnthuriumGenusV2 guide={guide} editorials={editorials} plants={list} />
       ) : isV21Pilot ? (
@@ -426,44 +358,6 @@ export default async function Page({ params }: Props) {
               </p>
             </section>
           </article>
-          <section className="plant-index shell">
-            <div data-reveal>
-              <p className="section-kicker">Espèces et variétés documentées</p>
-              <h2>
-                {list.length ? (
-                  <>
-                    Une famille.
-                    <br />
-                    Des caractères singuliers.
-                  </>
-                ) : (
-                  <>
-                    La collection
-                    <br />
-                    se prépare.
-                  </>
-                )}
-              </h2>
-              <p>{list.length ? "Chaque fiche repose sur l’observation, la culture et des sources botaniques identifiées." : `Les premières fiches ${guide.name} seront ajoutées au fil des plantes observées et proposées au Studio.`}</p>
-            </div>
-            {list.length > 0 && (
-              <div className="plant-index-grid">
-                {list.map((plant) => (
-                  <Link href={`/plantes/${genre}/${plant.slug}`} key={plant.slug} data-reveal>
-                    <Image unoptimized src={plant.gallery[0].src} alt={publicPlantImageAlt(plant.gallery[0].src, plant.botanicalName, plant.gallery[0].alt)} width={plant.gallery[0].width} height={plant.gallery[0].height} />
-                    <span>
-                      {plant.family} · {isInternalPhotoProductionCopy(plant.specimen.observedHeight) ? plant.growth.habit : plant.specimen.observedHeight}
-                    </span>
-                    <h2>{listingNameOf(plant)}</h2>
-                    <p>{plant.subtitle}</p>
-                    <strong>
-                      Lire la fiche <Arrow />
-                    </strong>
-                  </Link>
-                ))}
-              </div>
-            )}
-          </section>
           <nav className="shell plant-back-link">
             <Link href="/plantes">← Tous les genres</Link>
           </nav>

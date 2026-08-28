@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-const credits = [
+const credits: readonly [string, string, string, string, string?][] = [
   ["Herbier du genre Alocasia · Alocasia reginula", "Obsidian Soul", "CC0", "https://commons.wikimedia.org/wiki/File:Alocasia_reginula_(Philippines)_02.jpg"],
   ["Herbier du genre Alocasia · Alocasia portei", "Obsidian Soul", "CC0", "https://commons.wikimedia.org/wiki/File:Alocasia_portei_(Philippines)_young_plant_01.jpg"],
   ["Herbier du genre Alocasia · Alocasia nycteris", "Obsidian Soul", "CC0", "https://commons.wikimedia.org/wiki/File:Alocasia_nycteris_(Philippines)_Batwing_alocasia_0004.jpg"],
@@ -18,6 +18,7 @@ const credits = [
   ["Anthurium crystallinum", "David J. Stang", "CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:Anthurium_crystallinum_6zz.jpg"],
   ["Anthurium veitchii", "Supertita", "CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:Anthurium_veitchii-King_Anthurium.jpg"],
   ["Monstera deliciosa", "Aarón González", "Licence Unsplash", "https://unsplash.com/photos/green-leaves-on-white-background-TV5xD50MZJo"],
+  ["Monstera sp. ‘Esqueleto’ · morphologie horticole mature", "Janadume", "CC BY-SA 4.0 · conversion WebP sans recadrage", "https://commons.wikimedia.org/wiki/File:Monstera_%27Esqueleto%27.png", "https://creativecommons.org/licenses/by-sa/4.0/"],
   ["Philodendron hastatum", "Krzysztof Ziarnek, Kenraiz", "CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:Philodendron_hastatum_kz2.jpg"],
   ["Epipremnum aureum", "Filo gèn’", "CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:Epipremnum_aureum_(Golden_pothos).jpg"],
   ["Colocasia esculenta", "Forest & Kim Starr", "CC BY 3.0 US", "https://commons.wikimedia.org/wiki/File:Starr-090519-8057-Colocasia_esculenta-leaves-Native_Nursery_Kula-Maui_(24325097844).jpg"],
@@ -28,8 +29,8 @@ const credits = [
   ["Station Cormontaigne · accès et place (vue 2)", "Floflo62", "CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:Lille_-_M%C3%A9tro_Cormontaigne_-_2.JPG"],
   ["Bus Ilévia · Iveco Urbanway", "Kevin.B", "CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:Il%C3%A9via_Iveco_Bus_Urbanway_12_Gaz_naturel_(1).jpg"],
   ["Station V’Lille", "Chabe01", "CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:Station_V%27Lille_face_Piscine_Roubaix_2.jpg"],
-] as const;
+];
 
 export default function ImageCreditsPage() {
-  return <main className="editorial-page"><section className="inner-hero compact-inner-hero"><div className="inner-hero-image services-hero-image" /><div className="inner-hero-shade" /><SiteHeader /><div className="shell inner-hero-content"><p className="eyebrow"><span /> Tibaldo Jungle</p><h1>Crédits<br /><em>photographiques.</em></h1><p>Sources et licences des visuels botaniques de l’encyclopédie.</p></div></section><section className="shell legal-credits"><h2>Photographies végétales</h2>{credits.map(([plant, author, license, url]) => <p key={plant}><strong>{plant}</strong> — {author} · {license} · <a href={url} target="_blank" rel="noreferrer">Voir la source</a></p>)}</section><SiteFooter /></main>;
+  return <main className="editorial-page"><section className="inner-hero compact-inner-hero"><div className="inner-hero-image services-hero-image" /><div className="inner-hero-shade" /><SiteHeader /><div className="shell inner-hero-content"><p className="eyebrow"><span /> Tibaldo Jungle</p><h1>Crédits<br /><em>photographiques.</em></h1><p>Sources et licences des visuels botaniques de l’encyclopédie.</p></div></section><section className="shell legal-credits"><h2>Photographies végétales</h2>{credits.map(([plant, author, license, url, licenseUrl]) => <p key={plant}><strong>{plant}</strong> — {author} · {license} · <a href={url} target="_blank" rel="noreferrer">Voir la source</a>{licenseUrl ? <> · <a href={licenseUrl} target="_blank" rel="noreferrer">Lire la licence</a></> : null}</p>)}</section><SiteFooter /></main>;
 }

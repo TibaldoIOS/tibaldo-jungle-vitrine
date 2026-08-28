@@ -4,12 +4,31 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { useMemo, useState } from "react";
-import type { PlantEntry } from "@/lib/plants/types";
 import { publicPlantImageAlt } from "@/lib/plants/types";
+
+export type PlantExplorerItem = {
+  slug: string;
+  genre: string;
+  botanicalName: string;
+  displayName: string;
+  listingName?: string;
+  subtitle: string;
+  taxonomy: { family: string; genus: string; species: string; cultivar: string | null; commonNames: string[] };
+  synonyms: string[];
+  filters: {
+    light: string;
+    watering: string;
+    temperatureMin: number;
+    habits: string[];
+    petToxic: boolean;
+  };
+  difficulty: number;
+  image: { src: string; alt: string; width: number; height: number };
+};
 
 const normalize = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 
-export default function PlantExplorer({ plants }: { plants: readonly PlantEntry[] }) {
+export default function PlantExplorer({ plants }: { plants: readonly PlantExplorerItem[] }) {
   const [query, setQuery] = useState("");
   const [family, setFamily] = useState("");
   const [genus, setGenus] = useState("");
@@ -32,9 +51,9 @@ export default function PlantExplorer({ plants }: { plants: readonly PlantEntry[
       && (!genus || plant.taxonomy.genus === genus)
       && (!light || plant.filters.light === light)
       && (!watering || plant.filters.watering === watering)
-      && plant.care.difficulty <= Number(difficulty)
+      && plant.difficulty <= Number(difficulty)
       && (!temperature || plant.filters.temperatureMin <= Number(temperature))
-      && (!habit || plant.filters.habits.includes(habit as PlantEntry["filters"]["habits"][number]))
+      && (!habit || plant.filters.habits.includes(habit))
       && (!petSafe || !plant.filters.petToxic);
   }), [plants, query, family, genus, light, watering, difficulty, temperature, habit, petSafe]);
   const hasActiveFilters = Boolean(query || family || genus || light || watering || difficulty !== "5" || temperature || habit || petSafe);
@@ -61,6 +80,6 @@ export default function PlantExplorer({ plants }: { plants: readonly PlantEntry[
       </div>}
       <div className="plant-search-status"><strong>{hasActiveFilters ? `${results.length} ${results.length > 1 ? "plantes trouvées" : "plante trouvée"}` : "Saisissez un nom ou choisissez un filtre"}</strong><button type="button" onClick={reset}>Effacer les filtres</button></div>
     </div>
-    {hasActiveFilters && <div className="plant-search-results">{results.length ? <>{visibleResults.map((plant) => <Link href={`/plantes/${plant.genre}/${plant.slug}`} key={`${plant.genre}-${plant.slug}`}><Image unoptimized src={plant.gallery[0].src} alt={publicPlantImageAlt(plant.gallery[0].src, plant.botanicalName, plant.gallery[0].alt)} width={plant.gallery[0].width} height={plant.gallery[0].height} loading="lazy" /><div><span>{plant.taxonomy.family} · {plant.taxonomy.genus}</span><h3>{plant.listingName ?? plant.botanicalName}</h3><p>{plant.subtitle}</p><ul><li>{"★".repeat(plant.care.difficulty)} difficulté</li><li>{plant.filters.light}</li><li>{plant.filters.temperatureMin} °C min.</li></ul></div></Link>)}{results.length > visibleResults.length && <button className="plant-search-show-all" type="button" onClick={() => setShowAll(true)}>Voir les {results.length} résultats</button>}</> : <div className="plant-search-empty"><h3>Aucune plante ne correspond encore.</h3><p>Élargissez un critère : l’encyclopédie s’enrichit progressivement.</p><button type="button" onClick={reset}>Réinitialiser</button></div>}</div>}
+    {hasActiveFilters && <div className="plant-search-results">{results.length ? <>{visibleResults.map((plant) => <Link href={`/plantes/${plant.genre}/${plant.slug}`} key={`${plant.genre}-${plant.slug}`}><Image unoptimized src={plant.image.src} alt={publicPlantImageAlt(plant.image.src, plant.botanicalName, plant.image.alt)} width={plant.image.width} height={plant.image.height} loading="lazy" /><div><span>{plant.taxonomy.family} · {plant.taxonomy.genus}</span><h3>{plant.listingName ?? plant.botanicalName}</h3><p>{plant.subtitle}</p><ul><li>{"★".repeat(plant.difficulty)} difficulté</li><li>{plant.filters.light}</li><li>{plant.filters.temperatureMin} °C min.</li></ul></div></Link>)}{results.length > visibleResults.length && <button className="plant-search-show-all" type="button" onClick={() => setShowAll(true)}>Voir les {results.length} résultats</button>}</> : <div className="plant-search-empty"><h3>Aucune plante ne correspond encore.</h3><p>Élargissez un critère : l’encyclopédie s’enrichit progressivement.</p><button type="button" onClick={reset}>Réinitialiser</button></div>}</div>}
   </section>;
 }

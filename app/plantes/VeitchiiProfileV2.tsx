@@ -1,15 +1,12 @@
-import Image from "next/image";
 import type { PlantEntry } from "@/lib/plants/types";
 import { getPlantsByGenre } from "@/lib/plants/catalog";
 import Link from "next/link";
 import { Arrow } from "../SiteChrome";
 import PlantSectionNav from "./PlantSectionNav";
+import PlantNeedsVisualSystem from "./PlantNeedsVisualSystem";
+import BotanicalPhotoBook from "./BotanicalPhotoBook";
 import ScientificName from "./ScientificName";
 import StudioAccessCompact from "./StudioAccessCompact";
-
-function Need({ label, value, copy }: { label: string; value: number; copy: string }) {
-  return <article className="veitchii-v2-need" data-reveal><header><span>{label}</span><strong>{value}<small>/5</small></strong></header><div aria-label={`${label} : ${value} sur 5`}>{[1,2,3,4,5].map((level) => <i className={level <= value ? "is-filled" : ""} key={level} />)}</div><p>{copy}</p></article>;
-}
 
 export default function VeitchiiProfileV2({ plant, gallery }: { plant: PlantEntry; gallery: PlantEntry["gallery"] }) {
   const neighbours = getPlantsByGenre("anthurium").filter((item) => item.slug !== plant.slug).slice(0, 3);
@@ -29,7 +26,7 @@ export default function VeitchiiProfileV2({ plant, gallery }: { plant: PlantEntr
         <aside className="specimen-note veitchii-v2-observation"><span>Observation Tibaldo Jungle</span><strong>{plant.specimen.observedHeight}</strong><p>{plant.specimen.note}</p></aside>
       </section>
 
-      <section className="plant-profile-section veitchii-v2-needs" id="entretien"><header data-reveal><p className="section-kicker">Les bons équilibres</p><h2>Comprendre ses besoins.</h2><p>Quatre repères à lire ensemble : aucune jauge ne remplace l’observation du substrat, de la lumière et de la saison.</p></header><div className="veitchii-v2-needs-grid"><Need label="Lumière" value={plant.care.light} copy={plant.care.lightText} /><Need label="Arrosage" value={plant.care.water} copy={plant.care.watering} /><Need label="Humidité" value={plant.care.humidity} copy={plant.care.humidityText} /><Need label="Difficulté" value={plant.care.difficulty} copy={plant.care.difficultyText ?? "Une culture stable et attentive convient à cette espèce de collection."} /></div></section>
+      <section className="plant-profile-section veitchii-v2-needs" id="entretien"><header data-reveal><p className="section-kicker">Les bons équilibres</p><h2>Comprendre ses besoins.</h2><p>Onze repères partagés à lire ensemble : chaque échelle reste complétée par la méthode et les signes à observer.</p></header><PlantNeedsVisualSystem plant={plant} /></section>
 
       <section className="plant-profile-section veitchii-v2-conditions"><header data-reveal><p className="section-kicker">Les conditions qui font la différence</p><h2>Prioriser plutôt<br /><em>que tout égaliser.</em></h2></header><div className="veitchii-v2-conditions-grid"><article className="is-temperature" data-reveal><span>Température</span><strong>18–27 °C</strong><p>{plant.care.temperature}</p></article><article className="is-substrate" data-reveal><span>Substrat épiphyte</span><h3>Air autour des racines.</h3><p>{plant.care.substrate}</p><nav><Link href="/substrats/ecorce-de-pin">Écorce</Link><Link href="/substrats/chips-coco">Coco</Link><Link href="/substrats/sphaigne-sechee">Sphaigne</Link><Link href="/substrats/perlite">Perlite</Link></nav></article><article data-reveal><span>Rempotage</span><p>{plant.care.repotting}</p><Link href="/rempotage-plantes-lille">Bar à rempotage <Arrow /></Link></article><article data-reveal><span>Fertilisation</span><p>{plant.care.fertilizing}</p></article><article data-reveal><span>Multiplication</span><p>{plant.care.propagation}</p></article></div><aside className="toxicity-card" data-reveal><div><span>Toxicité · {plant.toxicity.level}</span><strong>{plant.toxicity.summary}</strong></div><p>{plant.toxicity.details}</p></aside></section>
 
@@ -39,7 +36,7 @@ export default function VeitchiiProfileV2({ plant, gallery }: { plant: PlantEntr
       <section className="plant-profile-section veitchii-v2-problems" id="problemes"><header data-reveal><p className="section-kicker">Diagnostic prudent</p><h2>Un signe.<br /><em>Plusieurs pistes.</em></h2></header><div>{plant.problems.map((problem, index) => <details key={problem.title} data-reveal><summary><span>0{index + 1}</span><strong>{problem.title}</strong><i aria-hidden="true" /></summary><div><p><b>Causes possibles</b>{problem.cause}</p><p><b>Bon réflexe</b>{problem.advice}</p></div></details>)}</div><aside><div><span>Vous hésitez sur ce que vous observez ?</span><p>Envoyez-nous votre plante et quelques informations : la photo devient une pièce du dossier, pas un diagnostic automatique.</p></div><Link className="button button-light" href="/sos-plantes">Demander un avis · SOS Plantes <Arrow /></Link></aside></section>
 
       <section className="plant-profile-section" id="comparaison"><header className="plant-section-heading" data-reveal><p className="section-kicker">Plantes proches</p><h2>Ne plus les confondre.</h2></header><div className="plant-comparison-grid">{plant.comparisons.map((item) => <article key={item.name} data-reveal><span>À comparer</span><h3>{item.name}</h3><p>{item.difference}</p></article>)}</div></section>
-      <section className="plant-gallery plant-profile-section" data-reveal><p className="section-kicker">Galerie végétale</p><div>{gallery.map((image) => <figure key={image.src}><Image unoptimized src={image.src} alt={image.alt} width={image.width} height={image.height} loading="lazy" /><figcaption>{image.caption}</figcaption></figure>)}</div></section>
+      <BotanicalPhotoBook plant={plant} images={gallery} />
 
       <section className="tibaldo-advice plant-profile-section veitchii-v2-advice" id="conseils" data-reveal><p className="section-kicker">Les réflexes du Studio</p><h2>Notre regard<br />au Studio.</h2><ol>{plant.tibaldoAdvice.map((advice,index) => <li key={advice}><span>0{index+1}</span><p>{advice}</p></li>)}</ol></section>
 

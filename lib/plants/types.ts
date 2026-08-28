@@ -11,6 +11,7 @@ export type PlantMediaLicense = {
   status: "verified" | "media-gap";
   creator?: string;
   license?: string;
+  licenseUrl?: string;
   sourceUrl?: string;
   registryPath?: string;
   note: string;

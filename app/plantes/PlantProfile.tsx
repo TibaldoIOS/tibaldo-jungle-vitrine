@@ -1,6 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
-import type { Level, PlantEntry } from "@/lib/plants/types";
+import type { PlantEntry } from "@/lib/plants/types";
 import {
   isInternalPhotoProductionCopy,
   isPhotoProductionPlaceholder,
@@ -16,36 +15,8 @@ import VeitchiiProfileV2 from "./VeitchiiProfileV2";
 import ThaiConstellationProfileV3 from "./ThaiConstellationProfileV3";
 import DeliciosaOwnerHero from "./DeliciosaOwnerHero";
 import SpeciesLocalStudio from "./SpeciesLocalStudio";
-
-function Meter({
-  label,
-  value,
-  copy,
-}: {
-  label: string;
-  value: Level;
-  copy: string;
-}) {
-  return (
-    <article className="care-meter" data-reveal>
-      <header>
-        <span>{label}</span>
-        <strong>
-          <b>{value}</b>/5
-        </strong>
-      </header>
-      <div
-        className="care-meter-track"
-        aria-label={`${label} : ${value} sur 5`}
-      >
-        {[1, 2, 3, 4, 5].map((level) => (
-          <i className={level <= value ? "is-filled" : ""} key={level} />
-        ))}
-      </div>
-      <p>{copy}</p>
-    </article>
-  );
-}
+import PlantNeedsVisualSystem from "./PlantNeedsVisualSystem";
+import BotanicalPhotoBook from "./BotanicalPhotoBook";
 
 export default function PlantProfile({ plant }: { plant: PlantEntry }) {
   const difficultyLabels = [
@@ -283,52 +254,7 @@ export default function PlantProfile({ plant }: { plant: PlantEntry }) {
               <p className="section-kicker">Les bons équilibres</p>
               <h2>Comprendre ses besoins.</h2>
             </header>
-            <div className="care-meter-grid">
-              <Meter
-                label="Lumière"
-                value={plant.care.light}
-                copy={plant.care.lightText}
-              />
-              <Meter
-                label="Arrosage"
-                value={plant.care.water}
-                copy={plant.care.watering}
-              />
-              <Meter
-                label="Humidité"
-                value={plant.care.humidity}
-                copy={plant.care.humidityText}
-              />
-              <Meter
-                label="Difficulté"
-                value={plant.care.difficulty}
-                copy={
-                  plant.care.difficultyText ??
-                  "Vigoureuse lorsque lumière, chaleur et drainage restent cohérents."
-                }
-              />
-            </div>
-            <div className="care-details" data-reveal>
-              {[
-                ["Température", plant.care.temperature],
-                ["Substrat", plant.care.substrate],
-                ["Rempotage", plant.care.repotting],
-                ["Fertilisation", plant.care.fertilizing],
-                ["Multiplication", plant.care.propagation],
-              ].map(([title, text]) => (
-                <article key={title}>
-                  <span>{title}</span>
-                  <p>{text}</p>
-                </article>
-              ))}
-            </div>
-            <aside className="toxicity-card" data-reveal>
-              <div>
-                <span>Toxicité · {plant.toxicity.level}</span>
-                <strong>{plant.toxicity.summary}</strong>
-              </div>
-              <p>{plant.toxicity.details}</p>
-            </aside>
+            <PlantNeedsVisualSystem plant={plant} />
           </section>
           {plant.localSpotlight && (
             <aside className="plant-local-spotlight" data-reveal>
@@ -442,28 +368,7 @@ export default function PlantProfile({ plant }: { plant: PlantEntry }) {
               ))}
             </div>
           </section>
-          {gallery.length > 0 && (
-            <section
-              className="plant-gallery plant-profile-section"
-              data-reveal
-            >
-              <p className="section-kicker">Galerie végétale</p>
-              <div>
-                {gallery.map((image) => (
-                  <figure key={image.src}>
-                    <Image unoptimized
-                      src={image.src}
-                      alt={image.alt}
-                      width={image.width}
-                      height={image.height}
-                      loading="lazy"
-                    />
-                    <figcaption>{image.caption}</figcaption>
-                  </figure>
-                ))}
-              </div>
-            </section>
-          )}
+          <BotanicalPhotoBook plant={plant} images={gallery} />
           <section
             className="tibaldo-advice plant-profile-section"
             id="conseils"

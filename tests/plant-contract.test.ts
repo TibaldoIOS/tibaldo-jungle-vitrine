@@ -170,6 +170,17 @@ test("V19 publie les deux libellés Monstera prudents demandés", () => {
   ]);
 });
 
+test("V20 documente Esqueleto avec une photographie réelle, licenciée et taxonomiquement prudente", () => {
+  const esqueleto = plants.find((entry) => entry.genre === "monstera" && entry.slug === "esqueleto");
+  assert.equal(esqueleto?.gallery[0].src, "/media/monstera-esqueleto-feuille-mature-fenestrations.webp");
+  assert.equal(esqueleto?.gallery[0].license?.status, "verified");
+  assert.equal(esqueleto?.gallery[0].license?.creator, "Janadume");
+  assert.equal(esqueleto?.gallery[0].license?.license, "CC BY-SA 4.0");
+  assert.match(esqueleto?.gallery[0].license?.sourceUrl ?? "", /commons\.wikimedia\.org/);
+  assert.match(esqueleto?.gallery[0].license?.note ?? "", /nom horticole non établi/i);
+  assert.equal(existsSync(new URL("../public/monstera-esqueleto-feuille-mature-fenestrations.webp", import.meta.url)), true);
+});
+
 test("V19 ne référence aucun média absent et explicite chaque lacune documentaire", () => {
   for (const plant of plants) {
     for (const image of plant.gallery) {

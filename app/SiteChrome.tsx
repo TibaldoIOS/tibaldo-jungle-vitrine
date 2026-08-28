@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { shopUrl } from "@/lib/environment";
 import { jungleLocalIdentity } from "@/lib/jungle-local-identity";
+import MobileJungleMenu from "./MobileJungleMenu";
 
 const Arrow = () => <svg className="jungle-arrow-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M5 15 15 5M7 5h8v8" /></svg>;
 const InstagramIcon = () => <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4.25" /><circle className="social-icon-dot" cx="17.4" cy="6.8" r="1" /></svg>;
@@ -30,29 +31,7 @@ export function SiteHeader({ light = false }: { light?: boolean }) {
         <a className="nav-shop" href={shopUrl()}>Boutique <Arrow /></a>
       </nav>
 
-      <details className="mobile-menu">
-        <summary aria-label="Ouvrir le menu principal"><span className="menu-glyph" aria-hidden="true"><i /><i /></span><b>Menu</b></summary>
-        <div className="mobile-menu-panel" aria-label="Navigation mobile">
-          <Link href="/"><span>01</span>Accueil</Link>
-          <Link href="/plantes"><span>02</span>Plantes</Link>
-          <Link href="/conseils"><span>03</span>Conseils</Link>
-          <Link href="/sos-plantes"><span>04</span>SOS Plantes</Link>
-          <Link href="/fleurs"><span>05</span>Fleurs sur commande</Link>
-          <Link href="/substrats"><span>06</span>Substrats</Link>
-          <Link href="/pots-cache-pots-lille"><span>07</span>Pots & cache-pots</Link>
-          <Link href="/rempotage"><span>08</span>Bar à rempotage</Link>
-          <Link href="/evenements"><span>09</span>Événements</Link>
-          <a href={shopUrl()}><span>10</span>Boutique en ligne</a>
-          <Link href="/services"><span>11</span>Nos services</Link>
-          <Link href="/coulisses"><span>12</span>Les coulisses</Link>
-          <Link href="/contact"><span>13</span>Contact</Link>
-          <div className="mobile-menu-socials">
-            <span>Suivre la Jungle</span>
-            <a href="https://www.instagram.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Instagram Tibaldo Jungle"><InstagramIcon /><strong>Instagram</strong></a>
-            <a href="https://www.facebook.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Facebook Tibaldo Jungle"><FacebookIcon /><strong>Facebook</strong></a>
-          </div>
-        </div>
-      </details>
+      <MobileJungleMenu />
 
       <div className="header-actions">
         <div className="header-socials" aria-label="Réseaux sociaux Tibaldo Jungle">

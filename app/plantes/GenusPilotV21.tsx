@@ -1,9 +1,4 @@
-import Image from "next/image";
 import type { PlantEntry } from "@/lib/plants/types";
-import {
-  isInternalPhotoProductionCopy,
-  publicPlantImageAlt,
-} from "@/lib/plants/types";
 import Link from "next/link";
 import { Arrow } from "../SiteChrome";
 import {
@@ -120,7 +115,7 @@ function SecondaryRhythm({ genre, guide, editorials }: {
 }
 
 function symptomItemsFor(genre: PilotGenre, guide: Guide, plants: PlantEntry[]): SymptomItem[] {
-  if (genre !== "alocasia" && plants[0]?.problems.length) {
+  if (genre === "dicksonia" && plants[0]?.problems.length) {
     return plants[0].problems.slice(0, 4).map((problem) => ({
       title: problem.title,
       causes: problem.cause,
@@ -191,30 +186,31 @@ function AlocasiaCulture({ guide }: { guide: Guide }) {
   </div>;
 }
 
-function ChlorophytumCulture({ plant }: { plant: PlantEntry }) {
+function ChlorophytumCulture({ guide }: { guide: Guide }) {
+  const [identity, light, watering, substrate, growth] = guide.sections;
   return <div className="pilot-compositions pilot-compositions-chlorophytum">
-    <EditorialFeature motion="editorial" className="pilot-chlorophytum-form" label="Silhouette" title="Une rosette qui se partage." copy={plant.description[0]} tone="cream" />
-    <EditorialFeature motion="editorial" className="pilot-chlorophytum-light" label="Lumière" title="Vive, sans brûler." copy={`${plant.description[1]} ${plant.care.lightText}`} tone="sage" />
+    <EditorialFeature motion="editorial" className="pilot-chlorophytum-form" label="Silhouette" title="Une rosette qui se partage." copy={identity.text} tone="cream" />
+    <EditorialFeature motion="editorial" className="pilot-chlorophytum-light" label="Lumière" title="Vive, sans brûler." copy={light.text} tone="sage" />
     <ProcessFeature
       motion="process"
       className="pilot-chlorophytum-stolons"
       label="Multiplication"
       title="Des stolons aux jeunes plants."
-      copy={plant.care.propagation}
+      copy={growth.text}
       steps={[
         { title: "Observer", text: "Les jeunes plantes apparaissent au bout des stolons." },
         { title: "Enraciner", text: "Elles s’enracinent facilement quand elles sont prêtes." },
       ]}
       tone="forest"
     />
-    <EditorialFeature motion="editorial" className="pilot-chlorophytum-watering" label="Arrosage" title="Laisser le mélange respirer." copy={plant.care.watering} tone="cream" />
-    <EditorialFeature motion="editorial" className="pilot-chlorophytum-substrate" label="Substrat" title="Simple · aéré · drainant." copy={plant.care.substrate} tone="sage" />
+    <EditorialFeature motion="editorial" className="pilot-chlorophytum-watering" label="Arrosage" title="Laisser le mélange respirer." copy={watering.text} tone="cream" />
+    <EditorialFeature motion="editorial" className="pilot-chlorophytum-substrate" label="Substrat" title="Simple · aéré · drainant." copy={substrate.text} tone="sage" />
     <ServiceBridge
       motion="service"
       className="pilot-chlorophytum-service"
       label="Conseil botanique"
       title="Un pot à sa mesure."
-      advice={plant.care.repotting}
+      advice={substrate.text}
       serviceTitle="Bar à rempotage · Tibaldo Jungle"
       serviceCopy="Un accompagnement simple pour conserver une touffe équilibrée."
       href="/rempotage-plantes-lille"
@@ -275,9 +271,10 @@ function DicksoniaCulture({ plant }: { plant: PlantEntry }) {
 
 function CultureSystem({ genre, guide, plants }: { genre: PilotGenre; guide: Guide; plants: PlantEntry[] }) {
   if (genre === "alocasia") return <AlocasiaCulture guide={guide} />;
+  if (genre === "chlorophytum") return <ChlorophytumCulture guide={guide} />;
   const plant = plants[0];
   if (!plant) return null;
-  return genre === "chlorophytum" ? <ChlorophytumCulture plant={plant} /> : <DicksoniaCulture plant={plant} />;
+  return <DicksoniaCulture plant={plant} />;
 }
 
 export default function GenusPilotV21({ genre, guide, editorials, plants }: {
@@ -315,10 +312,6 @@ export default function GenusPilotV21({ genre, guide, editorials, plants }: {
       </section>
     </article>
 
-    <section className="plant-index shell pilot-v21-index">
-      <div data-reveal data-motion="section"><p className="section-kicker">Espèces et variétés documentées</p><h2>{plants.length ? <>Une famille.<br />Des caractères singuliers.</> : <>La collection<br />se prépare.</>}</h2><p>{plants.length ? "Chaque fiche repose sur l’observation, la culture et des sources botaniques identifiées." : `Les premières fiches ${guide.name} seront ajoutées au fil des plantes observées et proposées au Studio.`}</p></div>
-      {plants.length > 0 && <div className="plant-index-grid">{plants.map((plant) => <Link href={`/plantes/${genre}/${plant.slug}`} key={plant.slug} data-reveal><Image unoptimized src={plant.gallery[0].src} alt={publicPlantImageAlt(plant.gallery[0].src, plant.botanicalName, plant.gallery[0].alt)} width={plant.gallery[0].width} height={plant.gallery[0].height} /><span>{plant.family} · {isInternalPhotoProductionCopy(plant.specimen.observedHeight) ? plant.growth.habit : plant.specimen.observedHeight}</span><h2>{plant.listingName ?? plant.botanicalName}</h2><p>{plant.subtitle}</p><strong>Lire la fiche <Arrow /></strong></Link>)}</div>}
-    </section>
     <nav className="shell plant-back-link"><Link href="/plantes">← Tous les genres</Link></nav>
   </>;
 }

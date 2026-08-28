@@ -104,6 +104,13 @@ const worker = {
       return withBetaHeaders(request, await env.ASSETS.fetch(assetRequest));
     }
 
+    // With run_worker_first enabled, hashed application bundles reach this
+    // Worker before the asset dispatcher. Serve them explicitly so CSS and
+    // hydration modules cannot fall through to the application router.
+    if (url.pathname.startsWith("/assets/") || url.pathname.startsWith("/_next/static/")) {
+      return withBetaHeaders(request, await env.ASSETS.fetch(request));
+    }
+
     if (STATIC_ASSET_PATTERN.test(url.pathname)) {
       return withBetaHeaders(request, await env.ASSETS.fetch(request));
     }

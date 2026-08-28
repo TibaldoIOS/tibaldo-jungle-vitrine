@@ -85,6 +85,88 @@ test("renders the substrates collection with local SEO metadata", async () => {
   assert.match(html, /src=["']\/substrats\/sphaigne-sechee-substrat-plantes-lille-v2\.png["']/i);
 });
 
+test("V20 renders every Monstera entry in one shared carousel", async () => {
+  const response = await render("/plantes/monstera");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /class="genus-species-carousel shell"/);
+  assert.equal((html.match(/class="genus-carousel-card/g) ?? []).length, 11);
+  for (const slug of ["deliciosa", "thai-constellation", "esqueleto", "burle-marx-flame", "dubia", "obliqua", "siltepecana", "pinnatipartita", "standleyana"]) {
+    assert.match(html, new RegExp(`href="/plantes/monstera/${slug}"`));
+  }
+  assert.doesNotMatch(html, /<a[^>]*role="listitem"/);
+});
+
+test("V20 removes the rejected SOS legacy photo blocks and fake diagnosis", async () => {
+  const response = await render("/sos-plantes");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.doesNotMatch(html, /class="sos-signs"|class="sos-sign-grid"/);
+  assert.doesNotMatch(html, /Lancer le pré-diagnostic|Votre pré-diagnostic apparaîtra ici/);
+  assert.match(html, /Tibaldo relit avant réponse/);
+  assert.match(html, /Venir au Studio/);
+});
+
+test("V20 keeps Chlorophytum on one canonical discovery surface", async () => {
+  const response = await render("/plantes/chlorophytum");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.equal((html.match(/class="genus-species-carousel shell"/g) ?? []).length, 1);
+  assert.doesNotMatch(html, /class="plant-index shell pilot-v21-index"/);
+  const source = readFileSync(new URL("../app/plantes/GenusPilotV21.tsx", import.meta.url), "utf8");
+  assert.match(source, /genre === "chlorophytum"\) return <ChlorophytumCulture guide=\{guide\}/);
+  assert.doesNotMatch(source, /genre === "chlorophytum" \? <ChlorophytumCulture plant=/);
+});
+
+test("V20 keeps Anthurium on the shared discovery carousel without a legacy duplicate", async () => {
+  const html = await (await render("/plantes/anthurium")).text();
+  assert.equal((html.match(/class="genus-species-carousel shell"/g) ?? []).length, 1);
+  assert.doesNotMatch(html, /anth-v2-species|anth-v2-gallery|anth-v2-index/);
+});
+
+test("V20 exposes the eleven-dimensional needs language on canonical species", async () => {
+  const response = await render("/plantes/monstera/esqueleto");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /monstera-esqueleto-feuille-mature-fenestrations\.webp/);
+  assert.equal((html.match(/class="plant-need plant-need-/g) ?? []).length, 11);
+  assert.match(html, /class="botanical-photo-book plant-profile-section"/);
+  for (const label of ["Lumière", "Arrosage", "Température", "Humidité", "Substrat", "Fertilisation", "Rempotage", "Croissance", "Support", "Toxicité", "Difficulté"]) assert.match(html, new RegExp(label));
+
+  const veitchii = await (await render("/plantes/anthurium/veitchii")).text();
+  assert.equal((veitchii.match(/class="plant-need plant-need-/g) ?? []).length, 11);
+  assert.match(veitchii, /class="botanical-photo-book plant-profile-section"/);
+});
+
+test("V20 photo-book preserves every verified gallery medium", async () => {
+  const cycas = await (await render("/plantes/cycas/revoluta")).text();
+  assert.match(cycas, /class="botanical-photo-book plant-profile-section"/);
+  assert.match(cycas, /class="botanical-photo-book-stack has-many-pages"/);
+  assert.match(cycas, /class="is-page-4"/);
+  for (const medium of [
+    "cycas-revoluta-terrasse-tibaldo.webp",
+    "cycas-revoluta-port-couronne.webp",
+    "cycas-revoluta-pot-noir-exterieur.webp",
+    "cycas-revoluta-pot-bleu-frondes.webp",
+  ]) assert.match(cycas, new RegExp(medium));
+});
+
+test("V20 mobile menu is a modal interaction with lock, focus and Escape contracts", () => {
+  const source = readFileSync(new URL("../app/MobileJungleMenu.tsx", import.meta.url), "utf8");
+  const css = readFileSync(new URL("../app/globals.css", import.meta.url), "utf8");
+  assert.match(source, /role="dialog"/);
+  assert.match(source, /aria-modal="true"/);
+  assert.match(source, /event\.key === "Escape"/);
+  assert.match(source, /body\.style\.position = "fixed"/);
+  assert.match(source, /window\.scrollTo\(0, scrollY\)/);
+  assert.match(source, /document\.activeElement === first/);
+  assert.match(source, /createPortal\(/);
+  assert.match(source, /document\.querySelectorAll<HTMLElement>\("main, footer"\)/);
+  assert.match(source, /region\.inert = true/);
+  assert.match(css, /\.mobile-menu-overlay\s*\{[^}]*z-index:\s*2000/);
+  assert.doesNotMatch(css, /@media \(max-width: 900px\) \{[\s\S]{0,80}\n\s*nav\s*\{\s*display:\s*none/);
+});
+
 test("blocks beta crawling and exposes no beta sitemap", async () => {
   const robots = await render("/robots.txt");
   assert.equal(robots.status, 200);
@@ -122,6 +204,28 @@ test("keeps BETA media MIME and cache policy explicit", () => {
   assert.match(workerSource, /max-age=86400, stale-while-revalidate=604800/);
   assert.match(staticHeaders, /\/\*\.webp[\s\S]*Content-Type:\s*image\/webp/);
   assert.match(staticHeaders, /max-age=86400, stale-while-revalidate=604800/);
+});
+
+test("serves hashed application bundles before the app router", async () => {
+  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
+  workerUrl.searchParams.set("bundle-policy-test", `${process.pid}-${Date.now()}`);
+  const { default: worker } = await import(workerUrl.href);
+  let requestedAssetPath = "";
+  const response = await worker.fetch(
+    new Request("https://beta-jungle.tibaldo.fr/assets/index-example.js"),
+    {
+      ASSETS: {
+        fetch: async (request) => {
+          requestedAssetPath = new URL(request.url).pathname;
+          return new Response("export {};", { headers: { "content-type": "text/javascript" } });
+        },
+      },
+    },
+    { waitUntil() {}, passThroughOnException() {} },
+  );
+  assert.equal(requestedAssetPath, "/assets/index-example.js");
+  assert.equal(response.status, 200);
+  assert.equal(response.headers.get("cache-control"), "public, max-age=31536000, immutable");
 });
 
 test("routes static media through the Worker before applying asset headers", async () => {
@@ -652,7 +756,7 @@ test("serves Deliciosa with the approved hero and the shared species body", asyn
   assert.match(html, /monstera-deliciosa-feuilles\.jpg/);
   assert.match(html, /plant-profile-layout/);
   assert.match(html, /plant-identity-section/);
-  assert.match(html, /care-meter-grid/);
+  assert.match(html, /plant-needs-visual-system/);
   assert.doesNotMatch(html, /species-next-diagnostic-index/);
   assert.doesNotMatch(html, /species-next-comparison-matrix/);
 });

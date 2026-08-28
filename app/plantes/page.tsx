@@ -5,6 +5,7 @@ import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 import { plantFamilies, plants, studioCollection } from "@/lib/plants/catalog";
 import PlantExplorer from "./PlantExplorer";
+import type { PlantExplorerItem } from "./PlantExplorer";
 import StudioAccessCompact from "./StudioAccessCompact";
 import BotanicalMotif from "./BotanicalMotif";
 import CompactBotanicalIndex from "./CompactBotanicalIndex";
@@ -58,6 +59,31 @@ export default function PlantsPage() {
     plants: group.plants.filter(
       (plant) => !isInternalPhotoProductionCopy(plant),
     ),
+  }));
+  const explorerItems: PlantExplorerItem[] = plants.map((plant) => ({
+    slug: plant.slug,
+    genre: plant.genre,
+    botanicalName: plant.botanicalName,
+    displayName: plant.displayName,
+    listingName: "listingName" in plant ? plant.listingName : undefined,
+    subtitle: plant.subtitle,
+    taxonomy: {
+      family: plant.taxonomy.family,
+      genus: plant.taxonomy.genus,
+      species: plant.taxonomy.species,
+      cultivar: plant.taxonomy.cultivar,
+      commonNames: plant.taxonomy.commonNames,
+    },
+    synonyms: plant.synonyms,
+    filters: {
+      light: plant.filters.light,
+      watering: plant.filters.watering,
+      temperatureMin: plant.filters.temperatureMin,
+      habits: plant.filters.habits,
+      petToxic: plant.filters.petToxic,
+    },
+    difficulty: plant.care.difficulty,
+    image: plant.gallery[0],
   }));
   const structuredData = {
     "@context": "https://schema.org",
@@ -125,7 +151,7 @@ export default function PlantsPage() {
         <div className="shell"><header data-reveal><p className="section-kicker">Index botanique complet</p><h2 id="all-genera-title">Trente et un genres.<br/><em>Un seul index.</em></h2><p>Une lecture compacte pour rejoindre chaque genre sans répéter une seconde galerie de grandes cartes.</p></header><CompactBotanicalIndex items={directoryItems} /></div>
       </section>
 
-      <PlantExplorer plants={plants} />
+      <PlantExplorer plants={explorerItems} />
 
       <section className="plants-hub-sos-v3" data-reveal>
         <BotanicalMotif genre="chlorophytum" />
@@ -133,9 +159,14 @@ export default function PlantsPage() {
       </section>
 
       <section className="studio-collection plants-hub-collection shell" aria-labelledby="studio-collection-title">
-        <header data-reveal><p className="section-kicker">Cultivées et observées par TIBALDO Jungle</p><h2 id="studio-collection-title">La collection<br /><em>du Studio.</em></h2><p>Les plantes suivies par TIBALDO Jungle nourrissent progressivement l’encyclopédie ; cette liste n’est pas un état du stock.</p></header>
-        <details><summary>Voir la collection complète <span>{studioCollection.length} groupes</span></summary>
-          <div className="studio-collection-list">{publicStudioCollection.map((group, index) => <article key={group.genre}><span>{String(index + 1).padStart(2, "0")}</span><div><h3><a href={group.href}>{group.genre} <Arrow /></a></h3>{group.plants.length > 0 && <ul>{group.plants.map((plant) => <li key={plant}>{plant}</li>)}</ul>}</div></article>)}</div>
+        <header data-reveal><p className="section-kicker">Le regard humain de TIBALDO Jungle</p><h2 id="studio-collection-title">Le carnet<br /><em>du Studio.</em></h2><p>Des plantes réellement cultivées, observées ou photographiées au Studio nourrissent les futures fiches. Ce carnet manuel n’est ni un second catalogue, ni une promesse de stock.</p></header>
+        <div className="studio-observation-principles" data-reveal>
+          <article><span>01</span><strong>Cultiver</strong><p>Consigner les réactions concrètes à la lumière, à l’eau et au substrat.</p></article>
+          <article><span>02</span><strong>Observer</strong><p>Documenter la croissance, les détails de feuille et les difficultés rencontrées.</p></article>
+          <article><span>03</span><strong>Transmettre</strong><p>Transformer l’expérience du Studio en conseils prudents et vérifiables.</p></article>
+        </div>
+        <details className="studio-observation-index"><summary>Genres actuellement suivis <span>{publicStudioCollection.length} groupes</span></summary>
+          <div>{publicStudioCollection.map((group) => <a href={group.href} key={group.genre}>{group.genre}<small>{group.plants.length ? `${group.plants.length} observations` : "suivi en préparation"}</small></a>)}</div>
         </details>
       </section>
 
