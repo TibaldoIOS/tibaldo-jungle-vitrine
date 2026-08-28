@@ -492,7 +492,7 @@ test("renders Dicksonia, its hierarchy and the shared species hero fallback", as
   assert.match(speciesHtml, /rel=["']canonical["'][^>]+plantes\/dicksonia\/antarctica/i);
   assert.doesNotMatch(speciesHtml, /Dictyonia/i);
   const api = await (await render("/api/encyclopedie/plantes")).json();
-  assert.equal(api.length, 46);
+  assert.equal(api.length, 64);
   assert.ok(api.some((entry) => entry.encyclopediaSlug === "plantes/dicksonia/antarctica"));
 });
 
@@ -518,8 +518,8 @@ test("renders the Agave, Fatsia and five-species Strelitzia cluster", async () =
   assert.match(hub, /synonyme de S\. alba/i);
   assert.doesNotMatch(hub, /href=["']\/plantes\/strelitzia\/augusta/i);
   const api = await (await render("/api/v2/encyclopedie/plantes")).json();
-  assert.equal(api.length, 46);
-  assert.equal(new Set(api.map((entry) => entry.encyclopediaSlug)).size, 46);
+  assert.equal(api.length, 64);
+  assert.equal(new Set(api.map((entry) => entry.encyclopediaSlug)).size, 64);
 });
 
 test("uses only owner-approved Botanical Genus Heroes and excludes rejected prototypes", async () => {
@@ -760,6 +760,27 @@ test("serves species hero photos directly without the vinext image optimizer", a
     assert.match(html, /loading=["']eager["']/i, path);
     assert.match(html, /decoding=["']async["']/i, path);
     assert.doesNotMatch(html, /\/_vinext\/image/i, path);
+  }
+});
+
+test("renders every V19 species route through the canonical shared profile", async () => {
+  const slugs = {
+    monstera: ["dubia", "siltepecana", "obliqua", "pinnatipartita", "standleyana"],
+    anthurium: ["crystallinum", "magnificum", "forgetii", "papillilaminum"],
+    alocasia: ["cuprea", "zebrina", "reginula", "micholitziana", "baginda", "sinuata", "longiloba", "macrorrhizos", "odora"],
+  };
+  for (const [genre, species] of Object.entries(slugs)) {
+    for (const slug of species) {
+      const path = `/plantes/${genre}/${slug}`;
+      const response = await render(path);
+      assert.equal(response.status, 200, path);
+      const html = await response.text();
+      assert.match(html, /plant-profile-page/i, path);
+      assert.match(html, new RegExp(`rel=["']canonical["'][^>]+plantes\\/${genre}\\/${slug}`, "i"), path);
+      assert.match(html, /Identité botanique/i, path);
+      assert.match(html, /"@type":"FAQPage"/i, path);
+      assert.doesNotMatch(html, /species-next-page|veitchii-profile-v2|thai-profile-v3/i, path);
+    }
   }
 });
 

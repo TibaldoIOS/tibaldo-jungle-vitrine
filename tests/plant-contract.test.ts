@@ -1,7 +1,13 @@
 import assert from "node:assert/strict";
+import { existsSync } from "node:fs";
 import test from "node:test";
 import { encyclopediaSlugOf, toPlantApiV1, toPlantApiV2 } from "../lib/plants/api-contract.ts";
 import { plants } from "../lib/plants/catalog.ts";
+import {
+  encyclopediaV19ExpansionPlants,
+  encyclopediaV19TaxonomyAudit,
+  v19MediaGapCount,
+} from "../lib/plants/encyclopedia-v19-expansion.ts";
 
 const plant = {
   slug: "deliciosa",
@@ -62,7 +68,7 @@ test("tous les encyclopedia_slug restent uniques", () => {
 
 test("Dicksonia antarctica ajoute une seule identité botanique centrale", () => {
   const dicksonia = plants.find((entry) => entry.genre === "dicksonia" && entry.slug === "antarctica");
-  assert.equal(plants.length, 46);
+  assert.equal(plants.length, 64);
   assert.equal(dicksonia?.botanicalName, "Dicksonia antarctica");
   assert.equal(dicksonia?.taxonomy.family, "Dicksoniaceae");
   assert.equal(dicksonia?.taxonomy.order, "Cyatheales");
@@ -105,4 +111,78 @@ test("l’étape 2 ajoute quatre identités Bananiers sans taille commerciale", 
   const florida = plants.find((plant) => plant.slug === "florida-variegata");
   assert.equal(florida?.taxonomy.species, "Non déterminée");
   assert.equal(florida?.taxonomy.cultivar, "Florida Variegata");
+});
+
+test("V19 atteint le seuil de dix fiches pour les trois genres ciblés", () => {
+  const expected = { monstera: 11, anthurium: 12, alocasia: 10 } as const;
+  for (const [genre, count] of Object.entries(expected)) {
+    const entries = plants.filter((plant) => plant.genre === genre);
+    assert.equal(entries.length, count, genre);
+    assert.equal(new Set(entries.map((plant) => plant.slug)).size, count, genre);
+  }
+  assert.equal(encyclopediaV19ExpansionPlants.length, 18);
+});
+
+test("V19 conserve les identités botaniques demandées sans fusionner espèces et hybrides", () => {
+  const expected = [
+    ["monstera", "dubia", "Monstera dubia"],
+    ["monstera", "siltepecana", "Monstera siltepecana"],
+    ["monstera", "obliqua", "Monstera obliqua"],
+    ["monstera", "pinnatipartita", "Monstera pinnatipartita"],
+    ["monstera", "standleyana", "Monstera standleyana"],
+    ["anthurium", "crystallinum", "Anthurium crystallinum"],
+    ["anthurium", "magnificum", "Anthurium magnificum Linden"],
+    ["anthurium", "forgetii", "Anthurium forgetii"],
+    ["anthurium", "papillilaminum", "Anthurium papillilaminum"],
+    ["alocasia", "cuprea", "Alocasia cuprea"],
+    ["alocasia", "zebrina", "Alocasia zebrina"],
+    ["alocasia", "reginula", "Alocasia reginula"],
+    ["alocasia", "micholitziana", "Alocasia micholitziana"],
+    ["alocasia", "baginda", "Alocasia baginda"],
+    ["alocasia", "sinuata", "Alocasia sinuata"],
+    ["alocasia", "longiloba", "Alocasia longiloba"],
+    ["alocasia", "macrorrhizos", "Alocasia macrorrhizos"],
+    ["alocasia", "odora", "Alocasia odora"],
+  ] as const;
+  for (const [genre, slug, botanicalName] of expected) {
+    const entry = plants.find((plant) => plant.genre === genre && plant.slug === slug);
+    assert.equal(entry?.botanicalName, botanicalName, `${genre}/${slug}`);
+    assert.ok((entry?.sources.length ?? 0) >= 2, `${genre}/${slug} sources`);
+    assert.equal(encyclopediaSlugOf(entry!), `plantes/${genre}/${slug}`);
+  }
+  assert.equal(plants.find((plant) => plant.slug === "magnificum")?.taxonomy.species, "Anthurium magnificum");
+  assert.notEqual(plants.find((plant) => plant.slug === "forgetii")?.slug, "forgetii-dark-form-silver-blush");
+  assert.notEqual(plants.find((plant) => plant.slug === "papillilaminum")?.slug, "papillilaminum-dark-phoenix");
+});
+
+test("V19 publie les deux libellés Monstera prudents demandés", () => {
+  const burle = plants.find((plant) => plant.slug === "burle-marx-flame");
+  const esqueleto = plants.find((plant) => plant.slug === "esqueleto");
+  assert.equal(burle?.botanicalName, "Monstera sp. ‘Burle Marx’s Flame’");
+  assert.equal(burle?.taxonomy.species, "sp. (non établi)");
+  assert.match(burle?.hybridization ?? "", /accepté.*International Aroid Society.*pas une espèce botanique établie/i);
+  assert.equal(esqueleto?.botanicalName, "Monstera sp. ‘Esqueleto’");
+  assert.equal(esqueleto?.taxonomy.species, "sp. (non établi)");
+  assert.match(esqueleto?.hybridization ?? "", /historique\/non établi/i);
+  assert.deepEqual(encyclopediaV19TaxonomyAudit.map(({ label }) => label), [
+    "Monstera sp. ‘Burle Marx’s Flame’",
+    "Monstera sp. ‘Esqueleto’",
+  ]);
+});
+
+test("V19 ne référence aucun média absent et explicite chaque lacune documentaire", () => {
+  for (const plant of plants) {
+    for (const image of plant.gallery) {
+      const publicPath = image.src.replace(/^\/media\//, "/");
+      assert.equal(existsSync(new URL(`../public${publicPath}`, import.meta.url)), true, `${plant.genre}/${plant.slug}: ${image.src}`);
+    }
+  }
+
+  const v19WithVerifiedPhoto = encyclopediaV19ExpansionPlants.filter((plant) => plant.gallery[0].license?.status === "verified");
+  assert.deepEqual(v19WithVerifiedPhoto.map((plant) => plant.slug).sort(), ["crystallinum", "cuprea"]);
+  assert.equal(v19MediaGapCount, 16);
+  for (const plant of encyclopediaV19ExpansionPlants.filter((plant) => plant.gallery[0].license?.status === "media-gap")) {
+    assert.equal(plant.gallery[0].src, "/photo-reelle-a-venir.svg");
+    assert.match(plant.mediaNeeds?.[0]?.description ?? "", /Média manquant.*provenance.*licence/i);
+  }
 });

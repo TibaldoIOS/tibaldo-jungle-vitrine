@@ -7,6 +7,14 @@ export type PlantTaxonomy = {
   cultivar: string | null;
   commonNames: string[];
 };
+export type PlantMediaLicense = {
+  status: "verified" | "media-gap";
+  creator?: string;
+  license?: string;
+  sourceUrl?: string;
+  registryPath?: string;
+  note: string;
+};
 export type PlantFilters = {
   temperatureMin: number;
   temperatureIdeal: [number, number];
@@ -40,7 +48,7 @@ export type PlantEntry = {
   localSpotlight?: { title: string; text: string };
   editorialSections?: { id: string; eyebrow: string; title: string; paragraphs: string[]; points?: string[] }[];
   mediaNeeds?: { role: string; description: string }[];
-  gallery: { src: string; alt: string; caption: string; width: number; height: number }[];
+  gallery: { src: string; alt: string; caption: string; width: number; height: number; license?: PlantMediaLicense }[];
   seo: { title: string; description: string; keywords: string[] };
   sources: { label: string; url: string }[];
   shopUrl?: string;
