@@ -24,7 +24,7 @@ const universes = [
     title: "Le Studio",
     copy: "Découvrez la nouvelle adresse Tibaldo Jungle, ses plantes, ses matières et les conseils proposés sur place à Lille.",
     href: "/contact",
-    image: "/projet-boutique-tibaldo-jungle-lille.webp",
+    image: "/media/projet-boutique-tibaldo-jungle-lille.webp",
     alt: "Façade du Studio Végétal Tibaldo Jungle à Lille",
   },
 ];
@@ -63,7 +63,7 @@ export default function HomeExperience() {
       </section>
 
       <section className="home-studio-compact shell" data-reveal>
-        <figure><Image unoptimized src="/projet-boutique-tibaldo-jungle-lille.webp" alt="Création du Studio Végétal Tibaldo Jungle à Lille" width="1200" height="900" loading="lazy" /></figure>
+        <figure><Image unoptimized src="/media/projet-boutique-tibaldo-jungle-lille.webp" alt="Création du Studio Végétal Tibaldo Jungle à Lille" width="1200" height="900" loading="lazy" /></figure>
         <div><p className="section-kicker">Le Studio Végétal</p><h2>À Lille,<br /><em>près de vos plantes.</em></h2><p>Tibaldo Jungle est une boutique de plantes rares et exotiques, mais aussi un lieu de conseil. La sélection, le rempotage et les substrats sont pensés ensemble pour éviter les achats inutiles et accompagner durablement chaque plante.</p><div className="home-studio-facts"><span><small>Adresse</small>3 place de l’Arbonnoise</span><span><small>Ouverture</small>26 septembre 2026</span></div><Link className="button button-green" href="/contact">Préparer ma visite <Arrow /></Link></div>
       </section>
 

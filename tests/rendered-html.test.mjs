@@ -148,6 +148,50 @@ test("routes static media through the Worker before applying asset headers", asy
   assert.equal(response.headers.get("x-content-type-options"), "nosniff");
 });
 
+test("serves public editorial media through the controlled BETA route", async () => {
+  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
+  workerUrl.searchParams.set("controlled-media-test", `${process.pid}-${Date.now()}`);
+  const { default: worker } = await import(workerUrl.href);
+  let requestedAssetPath = "";
+  const response = await worker.fetch(
+    new Request("https://beta-jungle.tibaldo.fr/media/anthurium-pallidiflorum-cascade.webp"),
+    {
+      ASSETS: {
+        fetch: async (request) => {
+          requestedAssetPath = new URL(request.url).pathname;
+          return new Response(new Uint8Array([82, 73, 70, 70]), {
+            headers: { "content-type": "application/octet-stream" },
+          });
+        },
+      },
+    },
+    { waitUntil() {}, passThroughOnException() {} },
+  );
+  assert.equal(requestedAssetPath, "/anthurium-pallidiflorum-cascade.webp");
+  assert.equal(response.status, 200);
+  assert.equal(response.headers.get("content-type"), "image/webp");
+  assert.equal(
+    response.headers.get("cache-control"),
+    "public, max-age=86400, stale-while-revalidate=604800",
+  );
+  assert.equal(response.headers.get("x-content-type-options"), "nosniff");
+  assert.equal(response.headers.get("x-robots-tag"), "noindex, nofollow");
+});
+
+test("rejects invalid controlled media paths without reading bundled assets", async () => {
+  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
+  workerUrl.searchParams.set("controlled-media-rejection-test", `${process.pid}-${Date.now()}`);
+  const { default: worker } = await import(workerUrl.href);
+  let assetRead = false;
+  const response = await worker.fetch(
+    new Request("https://beta-jungle.tibaldo.fr/media/not-a-media-file.txt"),
+    { ASSETS: { fetch: async () => { assetRead = true; return new Response(); } } },
+    { waitUntil() {}, passThroughOnException() {} },
+  );
+  assert.equal(response.status, 404);
+  assert.equal(assetRead, false);
+});
+
 test("keeps Jungle Scroll Story D isolated, server rendered and non-indexable", async () => {
   const response = await renderLab("/lab/deliciosa/d");
   assert.equal(response.status, 200);
@@ -386,6 +430,7 @@ test("exposes an additive versioned plant encyclopedia V2", async () => {
     assert.equal(entry.primaryImage.url, entry.imageUrl);
     for (const image of entry.images) {
       assert.match(image.path, /^\//);
+      assert.doesNotMatch(image.path, /^\/media\//, "Le contrat public conserve ses chemins canoniques");
       assert.equal(image.url, `https://jungle.tibaldo.fr${image.path}`);
       assert.ok(existsSync(new URL(`../public${image.path}`, import.meta.url)), `Média absent : ${image.path}`);
     }
@@ -665,7 +710,7 @@ test("renders Species UX NEXT only for Monstera deliciosa", async () => {
 
 test("serves species hero photos directly without the vinext image optimizer", async () => {
   for (const [path, image] of [
-    ["/plantes/cycas/revoluta", "/images/cycas-revoluta/cycas-revoluta-terrasse-tibaldo.webp"],
+    ["/plantes/cycas/revoluta", "/media/images/cycas-revoluta/cycas-revoluta-terrasse-tibaldo.webp"],
     ["/plantes/monstera/deliciosa", "/monstera-deliciosa-feuilles.jpg"],
     ["/plantes/anthurium/veitchii", "/anthurium-veitchii-king.jpg"],
   ]) {

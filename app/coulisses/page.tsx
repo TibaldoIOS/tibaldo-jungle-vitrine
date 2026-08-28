@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 };
 
 const steps = [
-  { date: "Printemps 2026", title: "Le lieu prend forme", copy: "Les premières intentions deviennent un espace concret : circulation, lumière, zones de culture et accueil du public.", image: "/projet-boutique-tibaldo-jungle-lille.webp" },
+  { date: "Printemps 2026", title: "Le lieu prend forme", copy: "Les premières intentions deviennent un espace concret : circulation, lumière, zones de culture et accueil du public.", image: "/media/projet-boutique-tibaldo-jungle-lille.webp" },
   { date: "Été 2026", title: "La sélection végétale", copy: "Les plantes sont choisies, suivies et préparées entre Lille et Wattignies, avec une attention particulière portée aux sujets de collection.", image: "/collection-plantes-rares-tibaldo-jungle-lille.jpg" },
-  { date: "Août 2026", title: "Le Studio s’installe", copy: "Mobilier, matériauthèque de substrats et espaces de conseil trouvent leur place au 3 place de l’Arbonnoise.", image: "/projet-boutique-tibaldo-jungle-lille.webp" },
+  { date: "Août 2026", title: "Le Studio s’installe", copy: "Mobilier, matériauthèque de substrats et espaces de conseil trouvent leur place au 3 place de l’Arbonnoise.", image: "/media/projet-boutique-tibaldo-jungle-lille.webp" },
   { date: "26 septembre 2026", title: "Le jour J", copy: "Tibaldo Jungle ouvre ses portes : plantes rares, conseils, rempotage raisonné et rencontres autour du vivant.", image: "/opening-jungle.jpg" },
 ];
 

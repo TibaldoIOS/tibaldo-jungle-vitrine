@@ -27,7 +27,7 @@ export default function LivingWallPage() {
       { title: "Avec ou sans entretien", copy: "Livraison du projet avec conseils de suivi ou proposition d’un entretien régulier défini dans un devis distinct." },
     ]}
     service={{ name: "Création de mur végétal naturel", description: "Conception et installation de murs végétaux naturels sur mesure, avec ou sans entretien.", areaServed: ["Lille", "Métropole Européenne de Lille"] }}
-    visitVisual={{ src: "/mur-vegetal-tibaldo-jungle-encyclopedie.webp", alt: "Mur végétal naturel mature conçu et cultivé par Tibaldo Jungle", caption: "Un exemple de mur vivant cultivé par Tibaldo Jungle" }}
+    visitVisual={{ src: "/media/mur-vegetal-tibaldo-jungle-encyclopedie.webp", alt: "Mur végétal naturel mature conçu et cultivé par Tibaldo Jungle", caption: "Un exemple de mur vivant cultivé par Tibaldo Jungle" }}
     notice={{ eyebrow: "Projet personnalisé", title: "Création et entretien sur devis", copy: "Le prix dépend de la surface, du support, de l’accès, du système retenu, des végétaux et de la fréquence d’entretien souhaitée." }}
     links={[
       { href: "/contact", label: "Décrire votre projet", copy: "Dimensions, photos du mur, lumière disponible et adresse nous permettront de préparer un premier échange." },

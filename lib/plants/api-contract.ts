@@ -31,6 +31,7 @@ const fallbackImage = {
 };
 
 const absoluteUrl = (path: string) => new URL(path, origin).toString();
+const canonicalMediaPath = (path: string) => path.replace(/^\/media\//, "/");
 export const encyclopediaSlugOf = (plant: Pick<ApiPlant, "genre" | "slug">) => `plantes/${plant.genre}/${plant.slug}`;
 
 export function toPlantApiV1(plant: ApiPlant) {
@@ -45,7 +46,7 @@ export function toPlantApiV1(plant: ApiPlant) {
     botanicalName: plant.botanicalName,
     cultivar: plant.taxonomy.cultivar,
     family: plant.taxonomy.family,
-    imageUrl: absoluteUrl(image.src),
+    imageUrl: absoluteUrl(canonicalMediaPath(image.src)),
     imageAlt: image.alt,
     encyclopediaSlug,
     encyclopediaUrl: `${origin}/${encyclopediaSlug}`,
@@ -57,8 +58,8 @@ export function toPlantApiV1(plant: ApiPlant) {
 export function toPlantApiV2(plant: ApiPlant) {
   const v1 = toPlantApiV1(plant);
   const images = (plant.gallery.length ? plant.gallery : [fallbackImage]).map((image) => ({
-    path: image.src,
-    url: absoluteUrl(image.src),
+    path: canonicalMediaPath(image.src),
+    url: absoluteUrl(canonicalMediaPath(image.src)),
     alt: image.alt,
     caption: image.caption,
     width: image.width,

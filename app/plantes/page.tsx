@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     siteName: "Studio Végétal — Tibaldo Jungle",
     title: "Encyclopédie des plantes d’intérieur et tropicales",
     description: "Recherchez une plante par son nom, sa famille botanique ou ses besoins et consultez les guides Tibaldo Jungle.",
-    images: [{ url: "/alocasia-imperial-red.webp", width: 1024, height: 1536, alt: "Encyclopédie végétale Tibaldo Jungle à Lille" }],
+    images: [{ url: "/media/alocasia-imperial-red.webp", width: 1024, height: 1536, alt: "Encyclopédie végétale Tibaldo Jungle à Lille" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Encyclopédie végétale Tibaldo Jungle",
     description: "Genres, espèces, cultivars et conseils de culture pour trouver une plante adaptée à votre intérieur.",
-    images: ["/alocasia-imperial-red.webp"],
+    images: ["/media/alocasia-imperial-red.webp"],
   },
 };
 

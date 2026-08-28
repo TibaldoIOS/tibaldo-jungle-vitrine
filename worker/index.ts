@@ -38,6 +38,18 @@ const BETA_CONTENT_SECURITY_POLICY = [
 ].join("; ");
 
 const STATIC_ASSET_PATTERN = /\.(?:avif|gif|ico|jpe?g|png|svg|webp|woff2?)$/i;
+const CONTROLLED_MEDIA_PREFIX = "/media/";
+
+function getControlledMediaAssetPath(pathname: string): string | null {
+  if (!pathname.startsWith(CONTROLLED_MEDIA_PREFIX)) return null;
+
+  const relativePath = pathname.slice(CONTROLLED_MEDIA_PREFIX.length);
+  if (!relativePath || relativePath.includes("..") || !STATIC_ASSET_PATTERN.test(relativePath)) {
+    return null;
+  }
+
+  return `/${relativePath}`;
+}
 
 function withBetaHeaders(request: Request, response: Response): Response {
   const { pathname } = new URL(request.url);
@@ -76,6 +88,19 @@ function withBetaHeaders(request: Request, response: Response): Response {
 const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
+
+    // Sites may dispatch files that physically exist in the static bundle
+    // before the Worker runs. Public editorial media therefore uses a stable
+    // virtual prefix: the request reaches the Worker, which fetches the
+    // original bundled asset and applies the BETA MIME/cache/security policy.
+    const controlledMediaAssetPath = getControlledMediaAssetPath(url.pathname);
+    if (url.pathname.startsWith(CONTROLLED_MEDIA_PREFIX)) {
+      if (!controlledMediaAssetPath) return withBetaHeaders(request, new Response("Not found", { status: 404 }));
+
+      const assetUrl = new URL(controlledMediaAssetPath, request.url);
+      const assetRequest = new Request(assetUrl, request);
+      return withBetaHeaders(request, await env.ASSETS.fetch(assetRequest));
+    }
 
     if (STATIC_ASSET_PATTERN.test(url.pathname)) {
       return withBetaHeaders(request, await env.ASSETS.fetch(request));

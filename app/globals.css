@@ -265,7 +265,7 @@ img[data-parallax] { transform: translate3d(0, var(--parallax-y), 0) scale(1.08)
 
 .project-teaser { position: relative; min-height: 690px; display: grid; align-items: center; color: #fff; overflow: hidden; }
 .project-teaser-photo, .project-teaser-shade { position: absolute; inset: 0; }
-.project-teaser-photo { background: url("/projet-boutique-tibaldo-jungle-lille.webp") center/cover; transform: translate3d(0, var(--parallax-y), 0) scale(1.06); transition: transform 1.2s cubic-bezier(.2,.72,.2,1); }
+.project-teaser-photo { background: url("/media/projet-boutique-tibaldo-jungle-lille.webp") center/cover; transform: translate3d(0, var(--parallax-y), 0) scale(1.06); transition: transform 1.2s cubic-bezier(.2,.72,.2,1); }
 .project-teaser-shade { background: linear-gradient(90deg, rgba(7,34,24,.94), rgba(7,34,24,.62) 48%, rgba(7,34,24,.12)); }
 .project-teaser:hover .project-teaser-photo { transform: translate3d(0, var(--parallax-y), 0) scale(1.085); }
 .project-teaser-content { position: relative; z-index: 1; }
@@ -276,7 +276,7 @@ img[data-parallax] { transform: translate3d(0, var(--parallax-y), 0) scale(1.08)
 .project-page { background: var(--paper); }
 .project-hero { position: relative; min-height: 800px; height: 100svh; max-height: 980px; overflow: hidden; color: #fff; background: var(--forest-dark); }
 .project-hero-photo, .project-hero-shade { position: absolute; inset: 0; }
-.project-hero-photo { background: url("/projet-boutique-tibaldo-jungle-lille.webp") center/cover; animation: hero-breathe 1.8s cubic-bezier(.2,.72,.2,1) both; }
+.project-hero-photo { background: url("/media/projet-boutique-tibaldo-jungle-lille.webp") center/cover; animation: hero-breathe 1.8s cubic-bezier(.2,.72,.2,1) both; }
 .project-hero-shade { background: linear-gradient(90deg, rgba(5,30,21,.94) 0%, rgba(7,34,24,.65) 43%, rgba(7,34,24,.12) 78%), linear-gradient(0deg, rgba(4,24,17,.48), transparent 45%); }
 .project-header { color: #fff; }
 .project-hero-content { position: relative; z-index: 1; padding-top: clamp(110px, 17vh, 180px); }
@@ -298,7 +298,7 @@ img[data-parallax] { transform: translate3d(0, var(--parallax-y), 0) scale(1.08)
 .project-gallery figcaption span { font: 400 20px Georgia, serif; }
 .project-gallery figcaption small { color: #768078; font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
 .project-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 75px; }
-.project-crop { height: 480px; background-image: url("/projet-boutique-tibaldo-jungle-lille.webp"); background-repeat: no-repeat; background-size: 165%; }
+.project-crop { height: 480px; background-image: url("/media/projet-boutique-tibaldo-jungle-lille.webp"); background-repeat: no-repeat; background-size: 165%; }
 .project-crop-wall { background-position: 2% 48%; }
 .project-crop-display { background-position: 98% 52%; }
 
@@ -664,7 +664,7 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
 
 /* Local SEO pages */
 .local-seo-hero .inner-hero-texture { background: radial-gradient(circle at 78% 35%, rgba(185,201,167,.28), transparent 24%), linear-gradient(125deg, #09261b, #245744); }
-.local-seo-hero.is-living-wall-hero .inner-hero-texture{background:linear-gradient(90deg,rgba(3,31,22,.78),rgba(3,31,22,.43) 45%,rgba(3,31,22,.08) 78%),url("/mur-vegetal-tibaldo-jungle-encyclopedie.webp") center 46%/cover no-repeat}
+.local-seo-hero.is-living-wall-hero .inner-hero-texture{background:linear-gradient(90deg,rgba(3,31,22,.78),rgba(3,31,22,.43) 45%,rgba(3,31,22,.08) 78%),url("/media/mur-vegetal-tibaldo-jungle-encyclopedie.webp") center 46%/cover no-repeat}
 .local-seo-story { display: grid; grid-template-columns: .9fr 1.1fr; gap: 100px; padding-top: 120px; padding-bottom: 120px; }
 .local-seo-story h2, .local-seo-visit h2, .local-seo-links h2, .local-seo-faq h2 { margin: 18px 0 0; color: var(--forest); font: 400 clamp(48px, 5vw, 74px)/.98 Georgia, serif; letter-spacing: -.045em; }
 .local-seo-story h2 em, .local-seo-visit h2 em { color: #78906f; font-weight: 400; }
@@ -973,7 +973,7 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
 .inner-hero { position: relative; min-height: 760px; height: min(900px, 94svh); color: #fff; overflow: hidden; background: #0a2d20; }
 .inner-hero-texture { position: absolute; inset: -4%; background: radial-gradient(circle at 72% 44%, rgba(186,204,164,.22), transparent 22%), radial-gradient(circle at 67% 63%, rgba(143,111,76,.25), transparent 10%), linear-gradient(118deg, #09291d 0%, #174c37 54%, #8a927c 100%); transform: scale(1.08); animation: hero-photo-arrival 1.8s cubic-bezier(.2,.72,.2,1) both; }
 .services-page .inner-hero-texture { background: linear-gradient(90deg, rgba(3,31,22,.94) 0%, rgba(3,31,22,.78) 43%, rgba(3,31,22,.2) 76%, rgba(3,31,22,.06) 100%), url("/collection-plantes-rares-tibaldo-jungle-lille.jpg") center 48%/cover no-repeat; }
-.plants-library-page > .inner-hero .inner-hero-texture { background: linear-gradient(90deg, rgba(3,31,22,.82) 0%, rgba(3,31,22,.7) 46%, rgba(3,31,22,.47) 76%, rgba(3,31,22,.38) 100%), url("/mur-vegetal-tibaldo-jungle-encyclopedie.webp") center 46%/cover no-repeat; filter:brightness(.56) contrast(.82) saturate(.68); }
+.plants-library-page > .inner-hero .inner-hero-texture { background: linear-gradient(90deg, rgba(3,31,22,.82) 0%, rgba(3,31,22,.7) 46%, rgba(3,31,22,.47) 76%, rgba(3,31,22,.38) 100%), url("/media/mur-vegetal-tibaldo-jungle-encyclopedie.webp") center 46%/cover no-repeat; filter:brightness(.56) contrast(.82) saturate(.68); }
 .substrate-hero .inner-hero-texture::before, .substrate-hero .inner-hero-texture::after { content: ""; position: absolute; border-radius: 50%; filter: blur(2px); opacity: .65; }
 .substrate-hero .inner-hero-texture::before { width: 430px; height: 430px; right: 7%; bottom: 5%; background: repeating-radial-gradient(circle at 40% 35%, #b6b2a1 0 7px, #6c6a5f 8px 14px, #252f28 15px 19px); transform: rotate(-13deg) scaleY(.58); }
 .substrate-hero .inner-hero-texture::after { width: 280px; height: 280px; right: 25%; top: 18%; background: repeating-radial-gradient(circle, #b09b77 0 5px, #4b3b2b 6px 11px, transparent 12px 17px); transform: rotate(19deg) scaleY(.55); }

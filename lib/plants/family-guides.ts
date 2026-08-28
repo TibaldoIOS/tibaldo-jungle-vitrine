@@ -52,7 +52,7 @@ const simpleGuides = {
   yucca: simpleGuide("Yucca", "Yucca", "Des silhouettes graphiques adaptées au soleil, de l’intérieur lumineux aux sujets rustiques cultivés dehors.", "Le genre Yucca appartient aux Asparagaceae et provient des Amériques.", "Photographie réelle d’un Yucca à ajouter"),
   cycas: {
     ...simpleGuide("Cycas", "Cycas", "Des gymnospermes très anciennes à la couronne graphique, dont Cycas revoluta est l’espèce horticole la plus familière.", "Le genre Cycas appartient aux Cycadaceae et rassemble des espèces originaires d’Afrique orientale, d’Asie, du Pacifique et d’Australie.", "Cycas revoluta adulte cultivé en pot sur la terrasse végétalisée de Tibaldo Jungle"),
-    image: "/images/cycas-revoluta/cycas-revoluta-terrasse-tibaldo.webp",
+    image: "/media/images/cycas-revoluta/cycas-revoluta-terrasse-tibaldo.webp",
     imageAlt: "Cycas revoluta adulte cultivé en pot sur la terrasse végétalisée de Tibaldo Jungle",
     care: { difficulty: 3, light: 5, water: 2, humidity: 2, substrate: "Très minéral, aéré et drainant", nutrition: "Légère pendant une poussée active" },
   },
@@ -151,7 +151,7 @@ export const familyGuides = {
     sources: [{ label: "Kew Science — Philodendron", url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:326132-2/general-information" }, { label: "NC State Extension — Philodendron", url: "https://plants.ces.ncsu.edu/plants/philodendron/" }],
   },
   epipremnum: {
-    name: "Epipremnum", image: "/epipremnum-marble-queen.webp", imageAlt: "Epipremnum aureum Marble Queen en suspension aux feuilles vertes marbrées de crème", heroSubtitle: "Les célèbres pothos sont des lianes endurantes qui changent radicalement de feuillage lorsqu’on leur offre lumière et support.",
+    name: "Epipremnum", image: "/media/epipremnum-marble-queen.webp", imageAlt: "Epipremnum aureum Marble Queen en suspension aux feuilles vertes marbrées de crème", heroSubtitle: "Les célèbres pothos sont des lianes endurantes qui changent radicalement de feuillage lorsqu’on leur offre lumière et support.",
     care: { difficulty: 1, light: 3, water: 2, humidity: 2, substrate: "Léger, drainant et tolérant", nutrition: "Faible à modérée en croissance" },
     lead: "Souvent vendus sous le nom de pothos, les Epipremnum sont des plantes grimpantes faciles à vivre. Leur forme juvénile retombante est familière, mais un sujet qui grimpe peut produire des feuilles bien plus grandes et parfois découpées.", origin: "Les Epipremnum appartiennent aux Araceae et sont originaires des régions tropicales d’Asie et du Pacifique. Ils utilisent leurs racines aériennes pour s’accrocher et monter vers la lumière.",
     facts: [{ label: "Exposition", value: "Moyenne à vive" }, { label: "Température", value: "17–29 °C" }, { label: "Arrosage", value: "Après séchage partiel" }, { label: "Difficulté", value: "Très accessible" }],
@@ -181,7 +181,7 @@ export const familyGuides = {
     sources: [{ label: "Kew Science — Colocasia", url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:331172-2/general-information" }, { label: "Kew Science — Colocasia esculenta", url: "https://powo.science.kew.org/taxon/1170772-2" }],
   },
   pilea: {
-    name: "Pilea", image: "/pilea-collection-especes.webp", imageAlt: "Collection éditoriale de Pilea aux feuilles rondes, argentées, gaufrées et retombantes", heroSubtitle: "Des plantes graphiques et souvent compactes, du célèbre Pilea peperomioides aux espèces texturées de terrarium.",
+    name: "Pilea", image: "/media/pilea-collection-especes.webp", imageAlt: "Collection éditoriale de Pilea aux feuilles rondes, argentées, gaufrées et retombantes", heroSubtitle: "Des plantes graphiques et souvent compactes, du célèbre Pilea peperomioides aux espèces texturées de terrarium.",
     care: { difficulty: 2, light: 3, water: 3, humidity: 3, substrate: "Fin, léger et bien drainé", nutrition: "Légère au printemps et en été" },
     lead: "Les Pilea ne sont ni des Philodendron ni des Peperomia. Ce genre de la famille des Urticaceae rassemble des plantes très diverses, appréciées pour leurs feuilles rondes, gaufrées, argentées ou minuscules.", origin: "Les Pilea sont largement répartis dans les régions tropicales et subtropicales. Leur croissance souvent rapide et leur facilité de bouturage en font des plantes vivantes et évolutives.",
     facts: [{ label: "Exposition", value: "Lumière douce à vive" }, { label: "Température", value: "16–26 °C" }, { label: "Arrosage", value: "Régulier sans saturation" }, { label: "Multiplication", value: "Boutures ou rejets" }],
@@ -201,7 +201,7 @@ export const familyGuides = {
     sources: [{ label: "NC State Extension — Peperomia", url: "https://plants.ces.ncsu.edu/plants/peperomia/" }, { label: "Kew Science — ressources taxonomiques", url: "https://powo.science.kew.org/" }],
   },
   maranta: {
-    name: "Maranta", image: "/maranta-leuconeura-tibaldo.webp", imageAlt: "Maranta leuconeura aux feuilles vertes nervurées de rouge", heroSubtitle: "Des feuillages qui se soulèvent avec la nuit, dessinés de nervures, de taches et de contrastes presque peints à la main.",
+    name: "Maranta", image: "/media/maranta-leuconeura-tibaldo.webp", imageAlt: "Maranta leuconeura aux feuilles vertes nervurées de rouge", heroSubtitle: "Des feuillages qui se soulèvent avec la nuit, dessinés de nervures, de taches et de contrastes presque peints à la main.",
     care: { difficulty: 3, light: 3, water: 4, humidity: 4, substrate: "Humifère, fin, aéré et drainant", nutrition: "Douce et régulière pendant la croissance" },
     lead: "Les Maranta sont des plantes tropicales de sous-bois recherchées pour leurs motifs et le mouvement quotidien de leurs feuilles. À Lille, elles réussissent dans une lumière filtrée, avec une chaleur stable et un substrat frais mais respirant.",
     origin: "Le genre Maranta appartient aux Marantaceae et vient des régions tropicales des Amériques. Ses feuilles réagissent au rythme jour-nuit par un mouvement naturel appelé nyctinastie, à l’origine du surnom de plante qui prie.",
@@ -212,7 +212,7 @@ export const familyGuides = {
     sources: [{ label: "Kew Science — Marantaceae", url: "https://powo.science.kew.org/" }, { label: "NC State Extension — Maranta", url: "https://plants.ces.ncsu.edu/plants/maranta-leuconeura/" }],
   },
   calathea: {
-    name: "Calathea", image: "/calathea-orbifolia-tibaldo.webp", imageAlt: "Goeppertia orbifolia aux grandes feuilles rayées vert argenté", heroSubtitle: "Calathea, Goeppertia et plantes-paons : des feuillages vivants dont la beauté repose sur la stabilité et l’observation.",
+    name: "Calathea", image: "/media/calathea-orbifolia-tibaldo.webp", imageAlt: "Goeppertia orbifolia aux grandes feuilles rayées vert argenté", heroSubtitle: "Calathea, Goeppertia et plantes-paons : des feuillages vivants dont la beauté repose sur la stabilité et l’observation.",
     care: { difficulty: 4, light: 3, water: 4, humidity: 5, substrate: "Humifère, stable et respirant", nutrition: "Faible à modérée, sans accumulation de sels" },
     lead: "Le nom Calathea reste très utilisé en horticulture, même si de nombreuses espèces d’intérieur sont désormais classées dans le genre Goeppertia. Elles séduisent par des feuilles rondes, rayées, veloutées ou colorées au revers.",
     origin: "Les Calathea et Goeppertia appartiennent aux Marantaceae, originaires des forêts tropicales américaines. Elles vivent sous une canopée lumineuse mais filtrée, dans une ambiance chaude et humide.",
@@ -241,7 +241,7 @@ export const familyGuides = {
     sources: [{ label: "Kew Science — Cactaceae", url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30000055-2" }, { label: "Royal Horticultural Society — cactus et succulentes", url: "https://www.rhs.org.uk/plants/types/cacti-succulents/growing-guide" }],
   },
   epiphyllum: {
-    name: "Epiphyllum", image: "/disocactus-anguliger-cactus-zigzag.webp", imageAlt: "Disocactus anguliger suspendu en serre avec de longues tiges vertes plates et profondément découpées", heroSubtitle: "Des cactus de forêt retombants, encore connus sous leur ancien nom Epiphyllum, qui préfèrent la lumière filtrée aux conditions désertiques.",
+    name: "Epiphyllum", image: "/media/disocactus-anguliger-cactus-zigzag.webp", imageAlt: "Disocactus anguliger suspendu en serre avec de longues tiges vertes plates et profondément découpées", heroSubtitle: "Des cactus de forêt retombants, encore connus sous leur ancien nom Epiphyllum, qui préfèrent la lumière filtrée aux conditions désertiques.",
     care: { difficulty: 2, light: 4, water: 3, humidity: 3, substrate: "Organique, très aéré et drainant", nutrition: "Légère pendant la croissance" },
     lead: "Le nom Epiphyllum reste très utilisé pour le cactus zigzag. La classification actuelle retient Disocactus anguliger : un cactus épiphyte mexicain aux tiges profondément découpées et aux fleurs nocturnes.",
     origin: "Les cactus épiphytes vivent dans les forêts tropicales américaines, installés sur des branches où leurs racines profitent d’humus, d’air et d’une humidité passagère sans rester noyées.",

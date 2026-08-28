@@ -11,7 +11,7 @@ export function SiteHeader({ light = false }: { light?: boolean }) {
   return (
     <header className={`site-header shell${light ? " site-header-light" : ""}`}>
       <Link className="brand" href="/" aria-label="Studio Végétal — TIBALDO Jungle, accueil">
-        <Image unoptimized className="brand-logo" src="/tibaldo-jungle-logo.webp" alt="Studio Végétal — TIBALDO Jungle à Lille" width={72} height={72} />
+        <Image unoptimized className="brand-logo" src="/media/tibaldo-jungle-logo.webp" alt="Studio Végétal — TIBALDO Jungle à Lille" width={72} height={72} />
         <span className="brand-wordmark">
           <strong><span>STUDIO VÉGÉTAL</span></strong>
           <small>TIBALDO Jungle</small>
@@ -101,7 +101,7 @@ export function SiteFooter({ compactTransit = false }: { compactTransit?: boolea
       <div className="shell footer-main" data-reveal>
         <div className="footer-brand">
           <Link className="brand footer-brand-mark" href="/" aria-label="Studio Végétal — TIBALDO Jungle, accueil">
-            <Image unoptimized className="brand-logo footer-logo" src="/tibaldo-jungle-logo.webp" alt="Studio Végétal — TIBALDO Jungle" width={120} height={120} />
+            <Image unoptimized className="brand-logo footer-logo" src="/media/tibaldo-jungle-logo.webp" alt="Studio Végétal — TIBALDO Jungle" width={120} height={120} />
             <span className="brand-wordmark"><strong><span>STUDIO VÉGÉTAL</span></strong><small>TIBALDO Jungle</small></span>
           </Link>
           <p>Plantes d’intérieur, plantes rares,<br />rempotage et substrats en vrac à Lille.</p>
