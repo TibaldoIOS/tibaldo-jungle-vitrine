@@ -100,11 +100,57 @@ try {
       });
       page.on("pageerror", (error) => pageErrors.push(error.message));
 
-      const response = await page.goto(new URL(record.route, baseUrl).href, {
-        waitUntil: "load",
-        timeout: 45_000,
-      });
-      await page.waitForTimeout(250);
+      let response = null;
+      let navigationError = null;
+      try {
+        response = await page.goto(new URL(record.route, baseUrl).href, {
+          waitUntil: "domcontentloaded",
+          timeout: 15_000,
+        });
+      } catch (error) {
+        navigationError = error instanceof Error ? error.message : String(error);
+      }
+      await page.waitForTimeout(100);
+
+      if (navigationError) {
+        results.push({
+          ...record,
+          viewport: viewport.width,
+          httpStatus: response?.status() ?? null,
+          consoleErrors,
+          pageErrors,
+          navigationError,
+          title: null,
+          h1Count: 0,
+          h1: null,
+          mainLandmark: false,
+          robots: null,
+          documentWidth: null,
+          viewportWidth: viewport.width,
+          overflowX: null,
+          brokenImages: [],
+          template: "NAVIGATION_FAILED",
+          rootClasses: "",
+          heroSystem: "UNKNOWN",
+          navigationSystem: "UNKNOWN",
+          comparisonSystem: "UNKNOWN",
+          suspiciousEmptySurfaces: [],
+        });
+        await page.close();
+        continue;
+      }
+
+      if (visualRoutes.has(record.route)) {
+        const scrollHeight = await page.evaluate(
+          () => document.documentElement.scrollHeight,
+        );
+        for (let y = 0; y <= scrollHeight; y += Math.max(520, viewport.height - 120)) {
+          await page.evaluate((top) => window.scrollTo({ top, behavior: "instant" }), y);
+          await page.waitForTimeout(35);
+        }
+        await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
+        await page.waitForTimeout(100);
+      }
 
       const metrics = await page.evaluate(() => {
         const main = document.querySelector("main");
@@ -200,6 +246,43 @@ try {
         await page.screenshot({
           path: path.join(
             outputDirectory,
+            `${slug(record.route)}-${viewport.width}-top.png`,
+          ),
+          fullPage: false,
+          animations: "disabled",
+        });
+        await page.evaluate(
+          () =>
+            window.scrollTo({
+              top: Math.max(0, document.documentElement.scrollHeight / 2 - window.innerHeight / 2),
+              behavior: "instant",
+            }),
+        );
+        await page.screenshot({
+          path: path.join(
+            outputDirectory,
+            `${slug(record.route)}-${viewport.width}-middle.png`,
+          ),
+          fullPage: false,
+          animations: "disabled",
+        });
+        await page.evaluate(() =>
+          window.scrollTo({
+            top: document.documentElement.scrollHeight,
+            behavior: "instant",
+          }),
+        );
+        await page.screenshot({
+          path: path.join(
+            outputDirectory,
+            `${slug(record.route)}-${viewport.width}-bottom.png`,
+          ),
+          fullPage: false,
+          animations: "disabled",
+        });
+        await page.screenshot({
+          path: path.join(
+            outputDirectory,
             `${slug(record.route)}-${viewport.width}-full.png`,
           ),
           fullPage: true,
@@ -213,6 +296,7 @@ try {
         httpStatus: response?.status() ?? null,
         consoleErrors,
         pageErrors,
+        navigationError,
         ...metrics,
       });
       await page.close();
@@ -232,6 +316,7 @@ const summary = {
   failures: results.filter(
     (item) =>
       item.httpStatus !== 200 ||
+      item.navigationError ||
       !item.mainLandmark ||
       item.h1Count !== 1 ||
       !item.robots?.includes("noindex") ||
