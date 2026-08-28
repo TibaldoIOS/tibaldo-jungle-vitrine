@@ -27,6 +27,17 @@ async function render(pathname = "/") {
   return response;
 }
 
+async function renderLab(pathname) {
+  const previous = process.env.JUNGLE_LAB_ENABLED;
+  process.env.JUNGLE_LAB_ENABLED = "1";
+  try {
+    return await render(pathname);
+  } finally {
+    if (previous === undefined) delete process.env.JUNGLE_LAB_ENABLED;
+    else process.env.JUNGLE_LAB_ENABLED = previous;
+  }
+}
+
 test("renders the homepage SEO signals and editorial content", async () => {
   const response = await render();
 
@@ -88,7 +99,7 @@ test("blocks beta crawling and exposes no beta sitemap", async () => {
 });
 
 test("keeps Jungle Scroll Story D isolated, server rendered and non-indexable", async () => {
-  const response = await render("/lab/deliciosa/d");
+  const response = await renderLab("/lab/deliciosa/d");
   assert.equal(response.status, 200);
   const html = await response.text();
 
@@ -117,7 +128,7 @@ test("keeps Jungle Scroll Story D isolated, server rendered and non-indexable", 
 });
 
 test("keeps Cinematic Botanical D2 isolated while preserving D V1", async () => {
-  const response = await render("/lab/deliciosa/d2");
+  const response = await renderLab("/lab/deliciosa/d2");
   assert.equal(response.status, 200);
   const html = await response.text();
 
@@ -129,12 +140,27 @@ test("keeps Cinematic Botanical D2 isolated while preserving D V1", async () => 
   assert.match(html, /<meta name="robots" content="noindex, nofollow, nocache"/i);
   assert.doesNotMatch(html, /botanix\.com|pinterest|willemse|moai/i);
 
-  const dV1 = await render("/lab/deliciosa/d");
+  const dV1 = await renderLab("/lab/deliciosa/d");
   assert.equal(dV1.status, 200);
   assert.match(await dV1.text(), /Jungle Scroll Story/);
 
   const servedProfile = await render("/plantes/monstera/deliciosa");
   assert.doesNotMatch(await servedProfile.text(), /Cinematic Botanical|LAB D2/i);
+});
+
+test("beta hides every owner LAB route unless the explicit local switch is set", async () => {
+  delete process.env.JUNGLE_LAB_ENABLED;
+  for (const route of [
+    "/lab/deliciosa/d",
+    "/lab/deliciosa/d2",
+    "/lab/deliciosa/d3",
+    "/lab/deliciosa/v4",
+    "/lab/deliciosa/art-direction-v1",
+  ]) {
+    const response = await render(route);
+    assert.equal(response.status, 404, route);
+    assert.equal(response.headers.get("x-robots-tag"), "noindex, nofollow", route);
+  }
 });
 
 test("Visual P1 target routes expose no internal production placeholders", async () => {
