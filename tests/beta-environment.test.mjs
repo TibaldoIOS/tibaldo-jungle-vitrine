@@ -36,6 +36,28 @@ test("editorial motion always provides a reduced-motion fallback", async () => {
   assert.match(reveal, /classList\.add\("is-visible"\)/);
 });
 
+test("the /plantes Owner video is bounded, silent, and served by the controlled media route", async () => {
+  const [hero, styles, worker, mp4, poster] = await Promise.all([
+    readFile(new URL("../app/plantes/PlantsHeroMedia.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
+    readFile(new URL("../worker/index.ts", import.meta.url), "utf8"),
+    readFile(new URL("../public/plantes-mur-vegetal-hero-v19.mp4", import.meta.url)),
+    readFile(new URL("../public/plantes-mur-vegetal-poster-v19.webp", import.meta.url)),
+  ]);
+
+  assert.match(hero, /<video\s+autoPlay\s+muted\s+loop\s+playsInline/);
+  assert.match(hero, /preload="metadata"/);
+  assert.match(hero, /plantes-mur-vegetal-hero-v19\.mp4/);
+  assert.match(hero, /plantes-mur-vegetal-poster-v19\.webp/);
+  assert.doesNotMatch(hero, /controls|<audio/i);
+  assert.match(styles, /@media \(prefers-reduced-motion: reduce\)[\s\S]*\.plants-hub-video video[\s\S]*display: none/);
+  assert.match(styles, /\.plants-hub-video-poster[\s\S]*display: block/);
+  assert.match(worker, /mp4[\s\S]*webm/);
+  assert.match(worker, /video\/mp4/);
+  assert.ok(mp4.byteLength > 1_000_000 && mp4.byteLength < 5_000_000);
+  assert.ok(poster.byteLength > 50_000 && poster.byteLength < 600_000);
+});
+
 test("Jungle beta is globally marked and excluded from indexing", async () => {
   const [layout, robots, sitemap] = await Promise.all([
     readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),

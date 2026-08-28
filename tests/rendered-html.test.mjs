@@ -610,15 +610,18 @@ test("renders Editorial Rhythm V1 only on the three pilots with accessible compa
   assert.match(css, /@media\(prefers-reduced-motion:reduce\)[\s\S]*\.rhythm-faq-panel/i);
 });
 
-test("renders /plantes V3 as a crawlable editorial mosaic and Botanical Directory", async () => {
+test("renders /plantes V19 as a cinematic editorial hub with one compact index", async () => {
   const html = await (await render("/plantes")).text();
   assert.match(html, /class=["'][^"']*plants-hub-hero[^"']*["']/i);
+  assert.match(html, /src=["']\/media\/plantes-mur-vegetal-hero-v19\.mp4["']/i);
+  assert.match(html, /poster=["']\/media\/plantes-mur-vegetal-poster-v19\.webp["']/i);
+  assert.match(html, /<video[^>]*autoplay[^>]*muted[^>]*loop[^>]*playsinline/i);
   assert.match(html, /href=["']#recherche-plantes["']/i);
   assert.match(html, /id=["']recherche-plantes["']/i);
-  assert.match(html, /class=["'][^"']*plants-v3-essential-grid[^"']*["']/i);
-  assert.match(html, /class=["'][^"']*botanical-directory-v3[^"']*["']/i);
-  assert.match(html, /aria-expanded=["']true["']/i);
-  assert.match(html, /aria-controls=/i);
+  assert.match(html, /class=["'][^"']*plants-editorial-genera-list[^"']*["']/i);
+  assert.match(html, /class=["'][^"']*plants-compact-index[^"']*["']/i);
+  assert.doesNotMatch(html, /class=["'][^"']*plants-v3-essential-grid[^"']*["']/i);
+  assert.doesNotMatch(html, /class=["'][^"']*botanical-directory-v3[^"']*["']/i);
   assert.match(html, /Trente et un genres/i);
   for (const name of ["Monstera", "Anthurium", "Philodendron", "Chlorophytum", "Sansevieria"]) {
     assert.match(html, new RegExp(`>${name}<`, "i"), name);

@@ -1,13 +1,14 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 import { plantFamilies, plants, studioCollection } from "@/lib/plants/catalog";
 import PlantExplorer from "./PlantExplorer";
 import StudioAccessCompact from "./StudioAccessCompact";
-import EssentialUniversesV3 from "./EssentialUniversesV3";
-import BotanicalDirectoryV3 from "./BotanicalDirectoryV3";
 import BotanicalMotif from "./BotanicalMotif";
+import CompactBotanicalIndex from "./CompactBotanicalIndex";
+import PlantsHeroMedia from "./PlantsHeroMedia";
 import { isInternalPhotoProductionCopy } from "@/lib/plants/types";
 
 const SearchIcon = () => <svg className="plants-search-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="4.75"/><path d="m12 12 4 4"/></svg>;
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
 export default function PlantsPage() {
   const pageUrl = "https://jungle.tibaldo.fr/plantes";
   const primaryPlantFamilies = plantFamilies;
-  const featuredSlugs = ["monstera", "anthurium", "alocasia", "philodendron", "strelitzia", "bananiers"];
+  const featuredSlugs = ["monstera", "anthurium", "alocasia", "philodendron"];
   const featuredFamilies = featuredSlugs
     .map((slug) => primaryPlantFamilies.find((family) => family.slug === slug))
     .filter((family): family is (typeof primaryPlantFamilies)[number] => Boolean(family));
@@ -45,8 +46,13 @@ export default function PlantsPage() {
     if (slug === "bananiers") return plants.filter((plant) => ["musa", "ensete"].includes(plant.genre)).length;
     return plants.filter((plant) => plant.genre === slug).length;
   };
-  const essentialUniverses = featuredFamilies.map((family) => ({ slug: family.slug, name: family.name, descriptor: family.eyebrow, count: speciesCount(family.slug) }));
-  const directoryItems = primaryPlantFamilies.map((family) => ({ slug: family.slug, name: family.name, descriptor: family.eyebrow, description: family.description, count: speciesCount(family.slug) }));
+  const featuredImages: Record<string, { src: string; alt: string; note: string }> = {
+    monstera: { src: "/media/monstera-deliciosa-feuilles.jpg", alt: "Feuillage découpé d’un Monstera deliciosa", note: "Silhouettes graphiques et croissance grimpante" },
+    anthurium: { src: "/media/anthurium-veitchii-king.jpg", alt: "Longue feuille nervurée d’un Anthurium veitchii", note: "Textures, nervures et feuillages de collection" },
+    alocasia: { src: "/media/alocasia-cuprea-feuillage.jpg", alt: "Feuillage métallique d’un Alocasia cuprea", note: "Contrastes métalliques et besoins précis" },
+    philodendron: { src: "/media/philodendron-hastatum-feuillage.jpg", alt: "Feuillage argenté d’un Philodendron hastatum", note: "Lianes tropicales et ports très variés" },
+  };
+  const directoryItems = primaryPlantFamilies.map((family) => ({ slug: family.slug, name: family.name, descriptor: family.eyebrow, count: speciesCount(family.slug) }));
   const publicStudioCollection = studioCollection.map((group) => ({
     ...group,
     plants: group.plants.filter(
@@ -66,7 +72,7 @@ export default function PlantsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <ScrollReveal />
       <section className="inner-hero compact-inner-hero plants-hub-hero">
-        <div className="inner-hero-texture" />
+        <PlantsHeroMedia />
         <div className="inner-hero-shade" />
         <SiteHeader />
         <div className="shell inner-hero-content">
@@ -83,22 +89,47 @@ export default function PlantsPage() {
       </section>
 
       <section className="shell plants-hub-manifesto" data-reveal>
-        <p className="section-kicker">On prend le vivant au sérieux</p>
-        <div><h2>Une encyclopédie<br /><em>faite pour explorer.</em></h2><p>Chaque plante est rattachée à son genre, sa famille et ses besoins réels. Entrez par un univers ou recherchez directement un nom.</p></div>
+        <p className="section-kicker">Comprendre avant de cultiver</p>
+        <div>
+          <h2>Lire la plante.<br /><em>Suivre son milieu.</em></h2>
+          <div className="plants-hub-editorial-copy">
+            <p>Une plante tropicale ne se résume pas à une silhouette. Sa feuille, son port, ses racines et son rythme racontent un milieu : sous-bois humide, lisière lumineuse, tronc d’arbre ou sol drainant. Cette encyclopédie relie ces indices visibles aux gestes de culture, sans transformer le vivant en recette universelle.</p>
+            <p>Chaque genre ouvre une manière différente d’observer. Les Monstera grimpent et se transforment avec la lumière ; les Anthurium révèlent une diversité de textures et d’exigences ; les Alocasia réagissent vite aux écarts d’arrosage ; les Philodendron explorent des ports rampants, dressés ou lianescents. Les fiches rassemblent identité botanique, conditions, entretien, diagnostic et comparaisons utiles.</p>
+            <p>Commencez par un grand univers, parcourez l’index complet ou recherchez directement un nom. L’objectif reste le même : reconnaître la plante que vous avez devant vous, comprendre ses signaux et lui offrir un environnement cohérent.</p>
+          </div>
+        </div>
       </section>
 
-      <section className="shell plants-quick-explore" aria-labelledby="quick-explore-title">
-        <header data-reveal><p className="section-kicker">Explorer les plantes</p><h2 id="quick-explore-title">Les univers<br /><em>essentiels.</em></h2><p>Les grandes portes d’entrée de l’encyclopédie, accessibles en un geste.</p></header>
-        <EssentialUniversesV3 items={essentialUniverses} />
+      <section className="shell plants-editorial-genera" aria-labelledby="featured-genera-title">
+        <header data-reveal><p className="section-kicker">Quatre portes d’entrée</p><h2 id="featured-genera-title">Des formes.<br /><em>Des milieux.</em></h2><p>Quatre genres pour entrer dans l’encyclopédie par la feuille, le port et la manière d’habiter l’espace.</p></header>
+        <div className="plants-editorial-genera-list">
+          {featuredFamilies.map((family, index) => {
+            const image = featuredImages[family.slug];
+            return <Link href={`/plantes/${family.slug}`} className="plants-editorial-genus" key={family.slug} data-reveal>
+              <div className="plants-editorial-genus-media">
+                <Image unoptimized src={image.src} alt={image.alt} width={1200} height={900} sizes="(max-width: 700px) 100vw, 55vw" />
+              </div>
+              <div className="plants-editorial-genus-copy">
+                <span>{String(index + 1).padStart(2, "0")} · {family.eyebrow}</span>
+                <h3>{family.name}</h3>
+                <p>{family.description}</p>
+                <small>{image.note}</small>
+                <strong>{speciesCount(family.slug)} {speciesCount(family.slug) > 1 ? "fiches" : "fiche"} <Arrow /></strong>
+              </div>
+            </Link>;
+          })}
+        </div>
       </section>
+
+      <section className="plants-all-genera-v3" id="index-botanique" aria-labelledby="all-genera-title">
+        <div className="shell"><header data-reveal><p className="section-kicker">Index botanique complet</p><h2 id="all-genera-title">Trente et un genres.<br/><em>Un seul index.</em></h2><p>Une lecture compacte pour rejoindre chaque genre sans répéter une seconde galerie de grandes cartes.</p></header><CompactBotanicalIndex items={directoryItems} /></div>
+      </section>
+
+      <PlantExplorer plants={plants} />
 
       <section className="plants-hub-sos-v3" data-reveal>
         <BotanicalMotif genre="chlorophytum" />
         <div className="shell plants-hub-sos-v3-inner"><div><p className="section-kicker">Une plante vous inquiète ?</p><h2>Observer.<br/><em>Puis agir.</em></h2><p>Partez du signe réellement observé pour éviter les gestes inutiles.</p></div><div className="plants-sos-signs"><span>01 · Feuilles jaunes</span><span>02 · Parasites</span><span>03 · Racines</span></div><Link className="button button-light" href="/sos-plantes">Ouvrir SOS Plantes <Arrow /></Link></div>
-      </section>
-
-      <section className="plants-all-genera-v3" id="index-botanique" aria-labelledby="all-genera-title">
-        <div className="shell"><header data-reveal><p className="section-kicker">Botanical Directory</p><h2 id="all-genera-title">Trente et un genres.<br/><em>Un index vivant.</em></h2><p>Tous les univers restent présents dans le HTML et accessibles sans mosaïque répétitive.</p></header><BotanicalDirectoryV3 items={directoryItems} /></div>
       </section>
 
       <section className="studio-collection plants-hub-collection shell" aria-labelledby="studio-collection-title">
@@ -108,7 +139,6 @@ export default function PlantsPage() {
         </details>
       </section>
 
-      <PlantExplorer plants={plants} />
       <div className="shell plants-back-top"><a href="#haut-plantes">↑ Retour en haut</a></div>
 
       <StudioAccessCompact showOpeningEvent />

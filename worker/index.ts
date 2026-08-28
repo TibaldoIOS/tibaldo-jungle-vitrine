@@ -37,7 +37,7 @@ const BETA_CONTENT_SECURITY_POLICY = [
   "upgrade-insecure-requests",
 ].join("; ");
 
-const STATIC_ASSET_PATTERN = /\.(?:avif|gif|ico|jpe?g|png|svg|webp|woff2?)$/i;
+const STATIC_ASSET_PATTERN = /\.(?:avif|gif|ico|jpe?g|mp4|png|svg|webm|webp|woff2?)$/i;
 const CONTROLLED_MEDIA_PREFIX = "/media/";
 
 function getControlledMediaAssetPath(pathname: string): string | null {
@@ -67,6 +67,8 @@ function withBetaHeaders(request: Request, response: Response): Response {
   if (STATIC_ASSET_PATTERN.test(pathname)) {
     headers.set("Cache-Control", "public, max-age=86400, stale-while-revalidate=604800");
     if (pathname.toLowerCase().endsWith(".webp")) headers.set("Content-Type", "image/webp");
+    if (pathname.toLowerCase().endsWith(".mp4")) headers.set("Content-Type", "video/mp4");
+    if (pathname.toLowerCase().endsWith(".webm")) headers.set("Content-Type", "video/webm");
   }
   if (pathname.startsWith("/assets/") || pathname.startsWith("/_next/static/")) {
     headers.set("Cache-Control", "public, max-age=31536000, immutable");
