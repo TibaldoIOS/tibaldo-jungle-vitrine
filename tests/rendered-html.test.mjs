@@ -213,6 +213,20 @@ test("Visual P1 preserves the three approved beta pilots", async () => {
   }
 });
 
+test("species without a real Shop product never expose a dead merchant CTA", async () => {
+  for (const [route, deadProductPath, genrePath] of [
+    ["/plantes/anthurium/pallidiflorum", "/plantes/anthurium/pallidiflorum", "/plantes/anthurium"],
+    ["/plantes/philodendron/billietiae", "/plantes/philodendron/billietiae", "/plantes/philodendron"],
+  ]) {
+    const response = await render(route);
+    assert.equal(response.status, 200, route);
+    const html = await response.text();
+    assert.doesNotMatch(html, new RegExp(`beta-shop\\.tibaldo\\.fr${deadProductPath}`), route);
+    assert.match(html, new RegExp(`href=["']${genrePath}["']`), route);
+    assert.doesNotMatch(html, />Voir en boutique</i, route);
+  }
+});
+
 test("links the opening event contextually from major editorial pages", async () => {
   for (const route of ["/plantes", "/substrats", "/services"]) {
     const response = await render(route);
