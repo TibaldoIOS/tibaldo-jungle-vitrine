@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   deliciosaNextDiagnostics,
@@ -74,7 +75,7 @@ export default function DeliciosaProfileNext() {
     <main className="editorial-page plant-profile-page species-next-page deliciosa-next">
       <SpeciesNextMotion />
       <section className="species-next-hero">
-        <img
+        <Image unoptimized
           className="species-next-hero-image"
           src="/monstera-deliciosa-feuilles.jpg"
           alt="Feuilles adultes découpées et fenêtrées de Monstera deliciosa"

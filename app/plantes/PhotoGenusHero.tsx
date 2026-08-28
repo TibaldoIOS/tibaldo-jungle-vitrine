@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { CSSProperties } from "react";
 import { SiteHeader } from "../SiteChrome";
@@ -24,7 +25,7 @@ export default function PhotoGenusHero({ genre, label, title, subtitle, titleLea
   };
 
   return <section className="inner-hero compact-inner-hero family-genre-hero photo-genus-hero" data-genus={genre} style={style}>
-    <img className="photo-genus-hero-image" src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} sizes="100vw" loading="eager" fetchPriority="high" decoding="async" />
+    <Image unoptimized className="photo-genus-hero-image" src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} sizes="100vw" loading="eager" fetchPriority="high" decoding="async" />
     <div className="photo-genus-hero-shade" aria-hidden="true" />
     <SiteHeader />
     <div className="shell inner-hero-content">

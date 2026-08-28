@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import { shopUrl } from "@/lib/environment";
 import { jungleLocalIdentity } from "@/lib/jungle-local-identity";
 
@@ -8,42 +10,42 @@ const FacebookIcon = () => <svg viewBox="0 0 24 24" aria-hidden="true"><path d="
 export function SiteHeader({ light = false }: { light?: boolean }) {
   return (
     <header className={`site-header shell${light ? " site-header-light" : ""}`}>
-      <a className="brand" href="/" aria-label="Studio Végétal — TIBALDO Jungle, accueil">
-        <img className="brand-logo" src="/tibaldo-jungle-logo.webp" alt="Studio Végétal — TIBALDO Jungle à Lille" width={72} height={72} />
+      <Link className="brand" href="/" aria-label="Studio Végétal — TIBALDO Jungle, accueil">
+        <Image unoptimized className="brand-logo" src="/tibaldo-jungle-logo.webp" alt="Studio Végétal — TIBALDO Jungle à Lille" width={72} height={72} />
         <span className="brand-wordmark">
           <strong><span>STUDIO VÉGÉTAL</span></strong>
           <small>TIBALDO Jungle</small>
           <span className="brand-location">Lille</span>
         </span>
-      </a>
+      </Link>
 
       <nav className="desktop-nav" aria-label="Navigation principale">
-        <a href="/plantes">Plantes</a>
-        <a href="/substrats">Substrats</a>
-        <a href="/pots-cache-pots-lille">Pots</a>
-        <a href="/sos-plantes">SOS Plantes</a>
-        <a href="/rempotage">Rempotage</a>
-        <a href="/conseils">Conseils</a>
-        <a href="/services">Services</a>
+        <Link href="/plantes">Plantes</Link>
+        <Link href="/substrats">Substrats</Link>
+        <Link href="/pots-cache-pots-lille">Pots</Link>
+        <Link href="/sos-plantes">SOS Plantes</Link>
+        <Link href="/rempotage">Rempotage</Link>
+        <Link href="/conseils">Conseils</Link>
+        <Link href="/services">Services</Link>
         <a className="nav-shop" href={shopUrl()}>Boutique <Arrow /></a>
       </nav>
 
       <details className="mobile-menu">
         <summary aria-label="Ouvrir le menu principal"><span className="menu-glyph" aria-hidden="true"><i /><i /></span><b>Menu</b></summary>
         <div className="mobile-menu-panel" aria-label="Navigation mobile">
-          <a href="/"><span>01</span>Accueil</a>
-          <a href="/plantes"><span>02</span>Plantes</a>
-          <a href="/conseils"><span>03</span>Conseils</a>
-          <a href="/sos-plantes"><span>04</span>SOS Plantes</a>
-          <a href="/fleurs"><span>05</span>Fleurs sur commande</a>
-          <a href="/substrats"><span>06</span>Substrats</a>
-          <a href="/pots-cache-pots-lille"><span>07</span>Pots & cache-pots</a>
-          <a href="/rempotage"><span>08</span>Bar à rempotage</a>
-          <a href="/evenements"><span>09</span>Événements</a>
+          <Link href="/"><span>01</span>Accueil</Link>
+          <Link href="/plantes"><span>02</span>Plantes</Link>
+          <Link href="/conseils"><span>03</span>Conseils</Link>
+          <Link href="/sos-plantes"><span>04</span>SOS Plantes</Link>
+          <Link href="/fleurs"><span>05</span>Fleurs sur commande</Link>
+          <Link href="/substrats"><span>06</span>Substrats</Link>
+          <Link href="/pots-cache-pots-lille"><span>07</span>Pots & cache-pots</Link>
+          <Link href="/rempotage"><span>08</span>Bar à rempotage</Link>
+          <Link href="/evenements"><span>09</span>Événements</Link>
           <a href={shopUrl()}><span>10</span>Boutique en ligne</a>
-          <a href="/services"><span>11</span>Nos services</a>
-          <a href="/coulisses"><span>12</span>Les coulisses</a>
-          <a href="/contact"><span>13</span>Contact</a>
+          <Link href="/services"><span>11</span>Nos services</Link>
+          <Link href="/coulisses"><span>12</span>Les coulisses</Link>
+          <Link href="/contact"><span>13</span>Contact</Link>
           <div className="mobile-menu-socials">
             <span>Suivre la Jungle</span>
             <a href="https://www.instagram.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Instagram Tibaldo Jungle"><InstagramIcon /><strong>Instagram</strong></a>
@@ -57,7 +59,7 @@ export function SiteHeader({ light = false }: { light?: boolean }) {
           <a href="https://www.instagram.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Instagram Tibaldo Jungle"><InstagramIcon /></a>
           <a href="https://www.facebook.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Facebook Tibaldo Jungle"><FacebookIcon /></a>
         </div>
-        <a className="header-cta" data-action="route" href="/contact">Nous trouver <Arrow /></a>
+        <Link className="header-cta" data-action="route" href="/contact">Nous trouver <Arrow /></Link>
       </div>
     </header>
   );
@@ -69,7 +71,7 @@ export function SiteFooter({ compactTransit = false }: { compactTransit?: boolea
       {!compactTransit && <section className="shell footer-transit" aria-labelledby="footer-transit-title" data-reveal>
         <header><span>Venir sans voiture</span><h2 id="footer-transit-title">Le Studio est à quelques pas<br />de <em>Cormontaigne.</em></h2><p>{jungleLocalIdentity.streetAddress} · {jungleLocalIdentity.postalCode} {jungleLocalIdentity.city}</p></header>
         <div className="footer-transit-visual">
-          <figure><img src="/transports/cormontaigne-1.jpg" alt="Place et accès de la station de métro Cormontaigne à Lille" width="1280" height="960" loading="lazy" /><figcaption><span>Repère photographique réel</span><strong>Place Cormontaigne</strong><small>Accès au métro M2, dans le quartier Vauban-Esquermes.</small></figcaption></figure>
+          <figure><Image unoptimized src="/transports/cormontaigne-1.jpg" alt="Place et accès de la station de métro Cormontaigne à Lille" width="1280" height="960" loading="lazy" /><figcaption><span>Repère photographique réel</span><strong>Place Cormontaigne</strong><small>Accès au métro M2, dans le quartier Vauban-Esquermes.</small></figcaption></figure>
           <div className="footer-transit-routes">
             <article><span>01</span><strong>M2</strong><div><small>Métro · ligne 2</small><h3>Cormontaigne</h3><p>Station située entre Port de Lille et Montebello.</p></div></article>
             <article><span>02</span><strong>L5</strong><div><small>Liane · bus</small><h3>Cormontaigne</h3><p>Arrêt desservi par la Liane 5.</p></div></article>
@@ -98,14 +100,14 @@ export function SiteFooter({ compactTransit = false }: { compactTransit?: boolea
       </section>}
       <div className="shell footer-main" data-reveal>
         <div className="footer-brand">
-          <a className="brand footer-brand-mark" href="/" aria-label="Studio Végétal — TIBALDO Jungle, accueil">
-            <img className="brand-logo footer-logo" src="/tibaldo-jungle-logo.webp" alt="Studio Végétal — TIBALDO Jungle" width={120} height={120} />
+          <Link className="brand footer-brand-mark" href="/" aria-label="Studio Végétal — TIBALDO Jungle, accueil">
+            <Image unoptimized className="brand-logo footer-logo" src="/tibaldo-jungle-logo.webp" alt="Studio Végétal — TIBALDO Jungle" width={120} height={120} />
             <span className="brand-wordmark"><strong><span>STUDIO VÉGÉTAL</span></strong><small>TIBALDO Jungle</small></span>
-          </a>
+          </Link>
           <p>Plantes d’intérieur, plantes rares,<br />rempotage et substrats en vrac à Lille.</p>
         </div>
         <div className="footer-links">
-          <div><span>Explorer</span><a href="/boutique-plantes-lille">Boutique plantes Lille</a><a href="/plantes">Plantes</a><a href="/conseils">Conseils plantes</a><a href="/sos-plantes">SOS Plantes</a><a href="/rempotage-plantes-lille">Bar à rempotage</a><a href="/fleurs">Catalogue de fleurs</a><a href="/substrats-en-vrac-lille">Substrats en vrac Lille</a><a href="/pots-cache-pots-lille">Pots et cache-pots à Lille</a><a href="/coulisses">Les coulisses</a><a href="https://tibaldo.fr/qui-suis-je">Qui suis-je ?</a><a href="/livraison-plantes-lille">Livraison de plantes</a><a href="/fleurs-sur-commande-lille">Fleurs et bouquets sur commande</a><a href="/evenements">Événements</a><a href="/services">Nos services</a></div>
+          <div><span>Explorer</span><Link href="/boutique-plantes-lille">Boutique plantes Lille</Link><Link href="/plantes">Plantes</Link><Link href="/conseils">Conseils plantes</Link><Link href="/sos-plantes">SOS Plantes</Link><Link href="/rempotage-plantes-lille">Bar à rempotage</Link><Link href="/fleurs">Catalogue de fleurs</Link><Link href="/substrats-en-vrac-lille">Substrats en vrac Lille</Link><Link href="/pots-cache-pots-lille">Pots et cache-pots à Lille</Link><Link href="/coulisses">Les coulisses</Link><a href="https://tibaldo.fr/qui-suis-je">Qui suis-je ?</a><Link href="/livraison-plantes-lille">Livraison de plantes</Link><Link href="/fleurs-sur-commande-lille">Fleurs et bouquets sur commande</Link><Link href="/evenements">Événements</Link><Link href="/services">Nos services</Link></div>
           <div className="social-links"><span>Nous suivre</span><a href="https://www.instagram.com/tibaldojungle" target="_blank" rel="noreferrer">Instagram</a><a href="https://www.facebook.com/tibaldojungle" target="_blank" rel="noreferrer">Facebook</a></div>
           <div><span>Horaires</span><p>Mardi · 14h–19h<br />Mercredi–samedi · 10h–19h<br />Dimanche · 10h–13h</p></div>
           <div><span>Venir & écrire</span><p>{jungleLocalIdentity.streetAddress}<br />{jungleLocalIdentity.postalCode} {jungleLocalIdentity.city}<br /><a href={`tel:${jungleLocalIdentity.phoneE164}`}>{jungleLocalIdentity.phoneDisplay}</a></p><a className="footer-email" href={`mailto:${jungleLocalIdentity.email}`}>{jungleLocalIdentity.email}</a></div>
@@ -114,7 +116,7 @@ export function SiteFooter({ compactTransit = false }: { compactTransit?: boolea
       <div className="shell footer-bottom" data-reveal>
         <span>© 2026 Studio Végétal · TIBALDO Jungle · Lille</span>
         <span>Pruvost Romain EI · SIRET 518 102 603 00074 · TVA FR94 518 102 603 · RNE 518 102 603</span>
-        <nav className="footer-legal" aria-label="Informations légales"><a className="footer-legal-primary" href="/conditions-generales-de-vente">Consulter les CGV</a><a href="/programme-fidelite">Fidélité</a><a href="/cartes-cadeaux">Cartes cadeaux</a><a href="/politique-confidentialite">Confidentialité</a><a href="/mentions-legales">Mentions légales</a><a href="/credits-images">Crédits photos</a></nav>
+        <nav className="footer-legal" aria-label="Informations légales"><Link className="footer-legal-primary" href="/conditions-generales-de-vente">Consulter les CGV</Link><Link href="/programme-fidelite">Fidélité</Link><Link href="/cartes-cadeaux">Cartes cadeaux</Link><Link href="/politique-confidentialite">Confidentialité</Link><Link href="/mentions-legales">Mentions légales</Link><Link href="/credits-images">Crédits photos</Link></nav>
       </div>
     </footer>
   );

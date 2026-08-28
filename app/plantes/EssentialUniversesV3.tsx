@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Arrow } from "../SiteChrome";
 import BotanicalMotif from "./BotanicalMotif";
 
@@ -10,7 +11,7 @@ export type EssentialUniverse = {
 
 export default function EssentialUniversesV3({ items }: { items: EssentialUniverse[] }) {
   return <div className="plants-v3-essential-grid">
-    {items.map((item, index) => <a className={`is-card-${index + 1}`} href={`/plantes/${item.slug}`} key={item.slug} data-reveal>
+    {items.map((item, index) => <Link className={`is-card-${index + 1}`} href={`/plantes/${item.slug}`} key={item.slug} data-reveal>
       <span className="plants-v3-essential-number">{String(index + 1).padStart(2, "0")}</span>
       <BotanicalMotif genre={item.slug} />
       <span className="plants-v3-essential-copy">
@@ -19,6 +20,6 @@ export default function EssentialUniversesV3({ items }: { items: EssentialUniver
         <em>{item.count} {item.count > 1 ? "fiches" : "fiche"}</em>
       </span>
       <span className="plants-v3-essential-cta">Explorer <Arrow /></span>
-    </a>)}
+    </Link>)}
   </div>;
 }

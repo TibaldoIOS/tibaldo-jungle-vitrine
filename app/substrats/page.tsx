@@ -1,7 +1,9 @@
+import Image from "next/image";
+import Link from "next/link";
 import type { Metadata } from "next";
 import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
-import { featuredSubstrateSlugs, substrates, substrateProfiles } from "./data";
+import { substrates, substrateProfiles } from "./data";
 import OpeningEventLink from "../OpeningEventLink";
 
 export const metadata: Metadata = {
@@ -87,7 +89,7 @@ export default function SubstratesPage() {
           {substrates.map((item) => (
             <article className="material-card" id={item.slug} key={item.slug} data-reveal>
               <div className={`material-visual material-${item.tone}`}>
-                <img src={item.image} alt={item.imageAlt} loading="lazy" width="900" height="700" />
+                <Image unoptimized src={item.image} alt={item.imageAlt} loading="lazy" width="900" height="700" />
                 <span className="material-number">{item.number}</span>
                 <small>Photo matière · Guide Tibaldo</small>
               </div>
@@ -99,7 +101,7 @@ export default function SubstratesPage() {
                   <div><dt>Usages</dt><dd>{item.uses}</dd></div>
                   <div><dt>Pour quelles plantes ?</dt><dd>{item.plants}</dd></div>
                 </dl>
-                <div className="material-price"><span>Disponibilité</span><strong>{substrateProfiles[item.slug].statusLabel}</strong><small>Conditionnement et tarif affichés prochainement</small></div><a className="material-discover" href={`/substrats/${item.slug}`}>Découvrir le guide complet <Arrow /></a>
+                <div className="material-price"><span>Disponibilité</span><strong>{substrateProfiles[item.slug].statusLabel}</strong><small>Conditionnement et tarif affichés prochainement</small></div><Link className="material-discover" href={`/substrats/${item.slug}`}>Découvrir le guide complet <Arrow /></Link>
               </div>
             </article>
           ))}
@@ -109,21 +111,21 @@ export default function SubstratesPage() {
       <section className="mix-guide">
         <div className="shell mix-guide-grid">
           <div data-reveal><p className="section-kicker">Le conseil du Studio</p><h2>Pas de recette universelle.</h2></div>
-          <div data-reveal><p>Un Anthurium n’attend pas la même chose qu’une Calathea. La taille du pot, votre manière d’arroser et la lumière changent aussi l’équilibre. Apportez une photo, votre plante ou simplement vos questions : nous vous aiderons à composer un mélange cohérent.</p><a className="button button-light" href="/contact">Demander conseil <Arrow /></a></div>
+          <div data-reveal><p>Un Anthurium n’attend pas la même chose qu’une Calathea. La taille du pot, votre manière d’arroser et la lumière changent aussi l’équilibre. Apportez une photo, votre plante ou simplement vos questions : nous vous aiderons à composer un mélange cohérent.</p><Link className="button button-light" href="/contact">Demander conseil <Arrow /></Link></div>
         </div>
       </section>
 
       <section className="cross-links shell" data-reveal>
         <p className="section-kicker">Continuer l’exploration</p>
         <div className="cross-link-grid">
-          <a href="/rempotage"><span>Service</span><strong>Faire rempoter<br />une plante</strong><Arrow /></a>
-          <a href="/plantes"><span>La sélection</span><strong>Découvrir<br />nos plantes</strong><Arrow /></a>
-          <a href="/contact"><span>À Lille</span><strong>Venir au<br />Studio Végétal</strong><Arrow /></a>
+          <Link href="/rempotage"><span>Service</span><strong>Faire rempoter<br />une plante</strong><Arrow /></Link>
+          <Link href="/plantes"><span>La sélection</span><strong>Découvrir<br />nos plantes</strong><Arrow /></Link>
+          <Link href="/contact"><span>À Lille</span><strong>Venir au<br />Studio Végétal</strong><Arrow /></Link>
         </div>
       </section>
       <nav className="shell flower-service-link" data-reveal>
-        <a href="/substrats-en-vrac-lille">Acheter des substrats en vrac à Lille <span>↗</span></a>
-        <a href="/pots-cache-pots-lille">Choisir un pot ou un cache-pot <span>↗</span></a>
+        <Link href="/substrats-en-vrac-lille">Acheter des substrats en vrac à Lille <span>↗</span></Link>
+        <Link href="/pots-cache-pots-lille">Choisir un pot ou un cache-pot <span>↗</span></Link>
       </nav>
       <OpeningEventLink />
       <SiteFooter />

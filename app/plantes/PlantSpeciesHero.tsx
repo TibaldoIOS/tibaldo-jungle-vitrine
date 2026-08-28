@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { PlantEntry } from "@/lib/plants/types";
 import {
   isEditorialPlaceholder,
@@ -17,7 +18,7 @@ export default function PlantSpeciesHero({ plant }: { plant: PlantEntry }) {
       className={`plant-profile-hero plant-profile-hero-${plant.genre}-${plant.slug} ${hasPhoto ? "has-photo" : "has-editorial-fallback"}`}
     >
       {hasPhoto ? (
-        <img
+        <Image unoptimized
           className="plant-profile-hero-image"
           src={image.src}
           alt={image.alt}
@@ -32,7 +33,7 @@ export default function PlantSpeciesHero({ plant }: { plant: PlantEntry }) {
           className="plant-profile-hero-fallback plant-profile-hero-botanical-fallback"
           aria-hidden="true"
         >
-          <img
+          <Image unoptimized
             src="/images/botanical-heroes/prototypes/dicksonia-prototype.svg"
             alt=""
           />

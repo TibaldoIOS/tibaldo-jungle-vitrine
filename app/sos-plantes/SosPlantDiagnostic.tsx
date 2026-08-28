@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import { useMemo, useState } from "react";
 
 const symptoms = [
@@ -34,7 +36,7 @@ export default function SosPlantDiagnostic() {
       <div className="photo-diagnostic-form">
         <label className={`photo-dropzone${preview ? " has-image" : ""}`}>
           <input type="file" accept="image/jpeg,image/png,image/webp,image/heic" onChange={(event) => loadImage(event.target.files?.[0])}/>
-          {preview ? <img src={preview} alt="Aperçu de la plante à diagnostiquer"/> : <span aria-hidden="true">＋</span>}
+          {preview ? <Image unoptimized src={preview} alt="Aperçu de la plante à diagnostiquer"/> : <span aria-hidden="true">＋</span>}
           <strong>{preview ? "Changer la photo" : "Ajouter une photo"}</strong>
           <small>{imageName || "JPG, PNG, WebP ou HEIC"}</small>
         </label>

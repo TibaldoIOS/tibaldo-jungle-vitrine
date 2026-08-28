@@ -1,5 +1,8 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
+
 import { useEffect, useState } from "react";
 
 type Variety = {
@@ -28,7 +31,7 @@ function UniverseCard({ family, index, active, openUniverse }: { family: Univers
     return () => window.clearInterval(timer);
   }, [index, paused, slides.length]);
 
-  return <a
+  return <Link
     className={`${active ? "is-opening " : ""}motion-${index % 3}`}
     href={`/plantes/${family.slug}`}
     onClick={(event) => openUniverse(event, family.slug)}
@@ -38,12 +41,12 @@ function UniverseCard({ family, index, active, openUniverse }: { family: Univers
     onBlur={() => setPaused(false)}
   >
     <span className="plant-universe-slides" aria-hidden="true">
-      {slides.map((slide, slideIndex) => <img className={slideIndex === current ? "is-current" : ""} src={slide.image} alt="" width="240" height="300" key={`${slide.botanicalName}-${slideIndex}`} />)}
+      {slides.map((slide, slideIndex) => <Image unoptimized className={slideIndex === current ? "is-current" : ""} src={slide.image} alt="" width="240" height="300" key={`${slide.botanicalName}-${slideIndex}`} />)}
     </span>
     <small>{String(index + 1).padStart(2, "0")}</small>
     <span className="plant-universe-variety"><i>{String(current + 1).padStart(2, "0")}</i><b>{slides[current].name}</b><em>{slides.length} fiche{slides.length > 1 ? "s" : ""}</em></span>
     <strong>{family.name}</strong>
-  </a>;
+  </Link>;
 }
 
 export default function PlantUniverseCards({ families }: { families: readonly Universe[] }) {

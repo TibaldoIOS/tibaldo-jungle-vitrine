@@ -1,0 +1,18 @@
+# Static media keeps a short BETA browser cache so a new version remains easy
+# to review, while avoiding a full revalidation on every navigation.
+/*.webp
+  Content-Type: image/webp
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/*.jpg
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/*.jpeg
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/*.png
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/*.svg
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+

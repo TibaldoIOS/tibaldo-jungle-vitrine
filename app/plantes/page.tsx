@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
@@ -93,7 +94,7 @@ export default function PlantsPage() {
 
       <section className="plants-hub-sos-v3" data-reveal>
         <BotanicalMotif genre="chlorophytum" />
-        <div className="shell plants-hub-sos-v3-inner"><div><p className="section-kicker">Une plante vous inquiète ?</p><h2>Observer.<br/><em>Puis agir.</em></h2><p>Partez du signe réellement observé pour éviter les gestes inutiles.</p></div><div className="plants-sos-signs"><span>01 · Feuilles jaunes</span><span>02 · Parasites</span><span>03 · Racines</span></div><a className="button button-light" href="/sos-plantes">Ouvrir SOS Plantes <Arrow /></a></div>
+        <div className="shell plants-hub-sos-v3-inner"><div><p className="section-kicker">Une plante vous inquiète ?</p><h2>Observer.<br/><em>Puis agir.</em></h2><p>Partez du signe réellement observé pour éviter les gestes inutiles.</p></div><div className="plants-sos-signs"><span>01 · Feuilles jaunes</span><span>02 · Parasites</span><span>03 · Racines</span></div><Link className="button button-light" href="/sos-plantes">Ouvrir SOS Plantes <Arrow /></Link></div>
       </section>
 
       <section className="plants-all-genera-v3" id="index-botanique" aria-labelledby="all-genera-title">

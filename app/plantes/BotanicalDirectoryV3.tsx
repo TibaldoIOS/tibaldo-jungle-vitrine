@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import { useId, useState } from "react";
 import { Arrow } from "../SiteChrome";
 import BotanicalMotif from "./BotanicalMotif";
@@ -35,10 +37,10 @@ export default function BotanicalDirectoryV3({ items }: { items: BotanicalDirect
               <em>{item.count} {item.count > 1 ? "fiches" : "fiche"}</em>
               <Chevron open={open} />
             </button>
-            <a href={`/plantes/${item.slug}`} aria-label={`Ouvrir le genre ${item.name}`}><Arrow /></a>
+            <Link href={`/plantes/${item.slug}`} aria-label={`Ouvrir le genre ${item.name}`}><Arrow /></Link>
           </div>
           <div className="botanical-directory-mobile-panel" id={panelId} aria-hidden={!open} data-open={open}>
-            <div><BotanicalMotif genre={item.slug} /><p>{item.description}</p><a tabIndex={open ? 0 : -1} href={`/plantes/${item.slug}`}>Découvrir {item.name} <Arrow /></a></div>
+            <div><BotanicalMotif genre={item.slug} /><p>{item.description}</p><Link tabIndex={open ? 0 : -1} href={`/plantes/${item.slug}`}>Découvrir {item.name} <Arrow /></Link></div>
           </div>
         </article>;
       })}
@@ -49,7 +51,7 @@ export default function BotanicalDirectoryV3({ items }: { items: BotanicalDirect
         <span>{String(active + 1).padStart(2, "0")} · Index botanique</span>
         <h3>{current.name}</h3>
         <p>{current.description}</p>
-        <a href={`/plantes/${current.slug}`}>Entrer dans le genre <Arrow /></a>
+        <Link href={`/plantes/${current.slug}`}>Entrer dans le genre <Arrow /></Link>
       </> : <><span>31 · Index botanique</span><h3>Choisissez un genre.</h3><p>Chaque univers reste accessible directement dans la liste.</p></>}
     </aside>
   </div>;

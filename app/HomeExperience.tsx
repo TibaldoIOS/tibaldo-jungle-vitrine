@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import { Arrow } from "./SiteChrome";
 
 const universes = [
@@ -45,7 +47,7 @@ export default function HomeExperience() {
         <div className="home-hub-grid">
           {universes.map((item) => (
             <a href={item.href} key={item.title} data-reveal>
-              <img src={item.image} alt={item.alt} width="900" height="1100" loading="lazy" />
+              <Image unoptimized src={item.image} alt={item.alt} width="900" height="1100" loading="lazy" />
               <span className="home-hub-shade" aria-hidden="true" />
               <small>{item.number}</small><div><h3>{item.title}</h3><p>{item.copy}</p><strong>Découvrir <Arrow /></strong></div>
             </a>
@@ -55,18 +57,18 @@ export default function HomeExperience() {
 
       <section className="home-core-services">
         <div className="shell home-core-services-inner">
-          <header data-reveal><p className="section-kicker">Services essentiels · Lille</p><h2>Une réponse claire,<br /><em>au bon moment.</em></h2><a href="/services">Voir tous les services <Arrow /></a></header>
+          <header data-reveal><p className="section-kicker">Services essentiels · Lille</p><h2>Une réponse claire,<br /><em>au bon moment.</em></h2><Link href="/services">Voir tous les services <Arrow /></Link></header>
           <div>{services.map((service) => <a href={service.href} key={service.title} data-reveal><span>{service.number}</span><div><h3>{service.title}</h3><p>{service.copy}</p></div><Arrow /></a>)}</div>
         </div>
       </section>
 
       <section className="home-studio-compact shell" data-reveal>
-        <figure><img src="/projet-boutique-tibaldo-jungle-lille.webp" alt="Création du Studio Végétal Tibaldo Jungle à Lille" width="1200" height="900" loading="lazy" /></figure>
-        <div><p className="section-kicker">Le Studio Végétal</p><h2>À Lille,<br /><em>près de vos plantes.</em></h2><p>Tibaldo Jungle est une boutique de plantes rares et exotiques, mais aussi un lieu de conseil. La sélection, le rempotage et les substrats sont pensés ensemble pour éviter les achats inutiles et accompagner durablement chaque plante.</p><div className="home-studio-facts"><span><small>Adresse</small>3 place de l’Arbonnoise</span><span><small>Ouverture</small>26 septembre 2026</span></div><a className="button button-green" href="/contact">Préparer ma visite <Arrow /></a></div>
+        <figure><Image unoptimized src="/projet-boutique-tibaldo-jungle-lille.webp" alt="Création du Studio Végétal Tibaldo Jungle à Lille" width="1200" height="900" loading="lazy" /></figure>
+        <div><p className="section-kicker">Le Studio Végétal</p><h2>À Lille,<br /><em>près de vos plantes.</em></h2><p>Tibaldo Jungle est une boutique de plantes rares et exotiques, mais aussi un lieu de conseil. La sélection, le rempotage et les substrats sont pensés ensemble pour éviter les achats inutiles et accompagner durablement chaque plante.</p><div className="home-studio-facts"><span><small>Adresse</small>3 place de l’Arbonnoise</span><span><small>Ouverture</small>26 septembre 2026</span></div><Link className="button button-green" href="/contact">Préparer ma visite <Arrow /></Link></div>
       </section>
 
       <section className="home-expertise-strip" aria-label="L’approche Tibaldo Jungle">
-        <div className="shell" data-reveal><p className="section-kicker">L’expertise Tibaldo</p><h2>Observer. Comprendre.<br /><em>Conseiller sans sur-vendre.</em></h2><p>Une sélection passionnée, une culture suivie entre Lille et Wattignies et des conseils adaptés à la réalité de votre intérieur.</p><nav><a href="/conseils">Lire les conseils <Arrow /></a><a href="/plantes">Explorer l’encyclopédie <Arrow /></a><a href="/coulisses">Voir les coulisses <Arrow /></a></nav></div>
+        <div className="shell" data-reveal><p className="section-kicker">L’expertise Tibaldo</p><h2>Observer. Comprendre.<br /><em>Conseiller sans sur-vendre.</em></h2><p>Une sélection passionnée, une culture suivie entre Lille et Wattignies et des conseils adaptés à la réalité de votre intérieur.</p><nav><Link href="/conseils">Lire les conseils <Arrow /></Link><Link href="/plantes">Explorer l’encyclopédie <Arrow /></Link><Link href="/coulisses">Voir les coulisses <Arrow /></Link></nav></div>
       </section>
     </>
   );

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ScrollReveal from "./ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "./SiteChrome";
 import OpeningEventLink from "./OpeningEventLink";
@@ -94,9 +95,9 @@ export default function InnerPage({
             )}
           </aside>
         )}
-        <a className="button button-green" href="/contact">
+        <Link className="button button-green" href="/contact">
           Nous contacter <Arrow />
-        </a>
+        </Link>
       </section>
       <OpeningEventLink />
       <SiteFooter />

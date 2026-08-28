@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import type { Level, PlantEntry } from "@/lib/plants/types";
 import {
   isInternalPhotoProductionCopy,
@@ -206,17 +208,17 @@ export default function PlantProfile({ plant }: { plant: PlantEntry }) {
               <div>
                 <dt>Famille</dt>
                 <dd>
-                  <a
+                  <Link
                     href={`/plantes/famille/${plant.taxonomy.family.toLowerCase()}`}
                   >
                     {plant.taxonomy.family}
-                  </a>
+                  </Link>
                 </dd>
               </div>
               <div>
                 <dt>Genre</dt>
                 <dd>
-                  <a href={`/plantes/${plant.genre}`}>{plant.taxonomy.genus}</a>
+                  <Link href={`/plantes/${plant.genre}`}>{plant.taxonomy.genus}</Link>
                 </dd>
               </div>
               <div>
@@ -445,7 +447,7 @@ export default function PlantProfile({ plant }: { plant: PlantEntry }) {
               <div>
                 {gallery.map((image) => (
                   <figure key={image.src}>
-                    <img
+                    <Image unoptimized
                       src={image.src}
                       alt={image.alt}
                       width={image.width}

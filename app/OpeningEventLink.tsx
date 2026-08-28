@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Arrow } from "./SiteChrome";
 
 export default function OpeningEventLink() {
@@ -12,9 +13,9 @@ export default function OpeningEventLink() {
         <h2 id="opening-event-link-title">Découvrez Tibaldo Jungle<br /><em>le jour de son ouverture.</em></h2>
         <span>Samedi 26 septembre 2026 · 10 h–19 h · 3 place de l’Arbonnoise, Lille</span>
       </div>
-      <a href="/evenements/ouverture-tibaldo-jungle-lille">
+      <Link href="/evenements/ouverture-tibaldo-jungle-lille">
         Voir l’événement <Arrow />
-      </a>
+      </Link>
     </aside>
   );
 }

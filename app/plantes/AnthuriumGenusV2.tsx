@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { PlantEntry } from "@/lib/plants/types";
 import Link from "next/link";
 import { Arrow } from "../SiteChrome";
@@ -83,11 +84,11 @@ export default function AnthuriumGenusV2({ guide, editorials, plants }: { guide:
 
       <section className="shell anth-v2-species" aria-labelledby="anth-v2-species-title">
         <header data-reveal><div><p className="section-kicker">Espèces & variétés documentées</p><h2 id="anth-v2-species-title">Des espèces,<br /><em>des caractères.</em></h2></div><p><strong>{plants.length}</strong><span>espèces documentées</span>Chaque fiche relie morphologie, culture et sources identifiées.</p></header>
-        <div className="anth-v2-gallery">{gallery.map((plant, index) => <a href={`/plantes/anthurium/${plant.slug}`} key={plant.slug} data-reveal><figure><img src={plant.gallery[0].src} alt={plant.gallery[0].alt} width={plant.gallery[0].width} height={plant.gallery[0].height} loading="lazy" /><figcaption><small>0{index + 1} · {plant.taxonomy.family}</small><strong>{plant.botanicalName}</strong><span>{plant.subtitle}</span><b>Lire la fiche <Arrow /></b></figcaption></figure></a>)}</div>
-        <div className="anth-v2-index" data-reveal><h3>Toutes les espèces</h3><div>{plants.map((plant, index) => <a href={`/plantes/anthurium/${plant.slug}`} key={plant.slug}><span>{String(index + 1).padStart(2, "0")}</span><strong>{plant.listingName ?? plant.botanicalName}</strong><small>{plant.taxonomy.species}</small><b aria-hidden="true">→</b></a>)}</div></div>
+        <div className="anth-v2-gallery">{gallery.map((plant, index) => <Link href={`/plantes/anthurium/${plant.slug}`} key={plant.slug} data-reveal><figure><Image unoptimized src={plant.gallery[0].src} alt={plant.gallery[0].alt} width={plant.gallery[0].width} height={plant.gallery[0].height} loading="lazy" /><figcaption><small>0{index + 1} · {plant.taxonomy.family}</small><strong>{plant.botanicalName}</strong><span>{plant.subtitle}</span><b>Lire la fiche <Arrow /></b></figcaption></figure></Link>)}</div>
+        <div className="anth-v2-index" data-reveal><h3>Toutes les espèces</h3><div>{plants.map((plant, index) => <Link href={`/plantes/anthurium/${plant.slug}`} key={plant.slug}><span>{String(index + 1).padStart(2, "0")}</span><strong>{plant.listingName ?? plant.botanicalName}</strong><small>{plant.taxonomy.species}</small><b aria-hidden="true">→</b></Link>)}</div></div>
       </section>
 
-      <section className="anth-v2-diagnostic"><div className="shell"><header data-reveal><p className="section-kicker">Diagnostic rapide</p><h2>Observer avant d’agir.</h2></header><div>{guide.problems.map((problem) => <article key={problem.title} data-reveal><span>Signe observé</span><h3>{problem.title}</h3><p>{problem.text}</p></article>)}</div><a href="/sos-plantes">Vous hésitez ? Ouvrir SOS Plantes <Arrow /></a></div></section>
+      <section className="anth-v2-diagnostic"><div className="shell"><header data-reveal><p className="section-kicker">Diagnostic rapide</p><h2>Observer avant d’agir.</h2></header><div>{guide.problems.map((problem) => <article key={problem.title} data-reveal><span>Signe observé</span><h3>{problem.title}</h3><p>{problem.text}</p></article>)}</div><Link href="/sos-plantes">Vous hésitez ? Ouvrir SOS Plantes <Arrow /></Link></div></section>
 
       <section className="family-guide-local shell anth-v2-local-bridge" data-reveal>
         <p className="section-kicker">TIBALDO Jungle · Lille</p>

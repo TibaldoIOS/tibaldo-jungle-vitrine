@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { flowers } from "@/lib/flowers/catalog";
 import ScrollReveal from "../ScrollReveal";
@@ -113,15 +114,15 @@ export default function FlowersPage() {
         aria-label="Projets floraux"
         data-reveal
       >
-        <a href="/fleurs-mariage-lille">
+        <Link href="/fleurs-mariage-lille">
           Préparer les fleurs de votre mariage <Arrow />
-        </a>
-        <a href="/fleurs-evenement-lille">
+        </Link>
+        <Link href="/fleurs-evenement-lille">
           Préparer les fleurs de votre événement <Arrow />
-        </a>
-        <a href="/fleurs-sur-commande-lille">
+        </Link>
+        <Link href="/fleurs-sur-commande-lille">
           Comprendre le service Fleurs sur commande <Arrow />
-        </a>
+        </Link>
       </nav>
       <SiteFooter />
     </main>

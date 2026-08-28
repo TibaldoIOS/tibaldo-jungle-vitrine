@@ -98,6 +98,32 @@ test("blocks beta crawling and exposes no beta sitemap", async () => {
   assert.equal(sitemap.headers.get("x-robots-tag"), "noindex, nofollow");
 });
 
+test("applies the BETA security header baseline to rendered routes", async () => {
+  const response = await render("/plantes/anthurium/veitchii");
+  assert.equal(response.status, 200);
+  assert.equal(response.headers.get("x-content-type-options"), "nosniff");
+  assert.equal(response.headers.get("referrer-policy"), "strict-origin-when-cross-origin");
+  assert.equal(
+    response.headers.get("strict-transport-security"),
+    "max-age=31536000; includeSubDomains",
+  );
+  assert.match(response.headers.get("permissions-policy") ?? "", /payment=\(\)/);
+  const csp = response.headers.get("content-security-policy") ?? "";
+  assert.match(csp, /default-src 'self'/);
+  assert.match(csp, /frame-ancestors 'none'/);
+  assert.match(csp, /connect-src 'self' https:\/\/api\.open-meteo\.com/);
+  assert.equal(response.headers.get("x-robots-tag"), "noindex, nofollow");
+});
+
+test("keeps BETA media MIME and cache policy explicit", () => {
+  const workerSource = readFileSync(new URL("../worker/index.ts", import.meta.url), "utf8");
+  const staticHeaders = readFileSync(new URL("../public/_headers", import.meta.url), "utf8");
+  assert.match(workerSource, /endsWith\("\.webp"\)[\s\S]*Content-Type[\s\S]*image\/webp/);
+  assert.match(workerSource, /max-age=86400, stale-while-revalidate=604800/);
+  assert.match(staticHeaders, /\/\*\.webp[\s\S]*Content-Type:\s*image\/webp/);
+  assert.match(staticHeaders, /max-age=86400, stale-while-revalidate=604800/);
+});
+
 test("keeps Jungle Scroll Story D isolated, server rendered and non-indexable", async () => {
   const response = await renderLab("/lab/deliciosa/d");
   assert.equal(response.status, 200);

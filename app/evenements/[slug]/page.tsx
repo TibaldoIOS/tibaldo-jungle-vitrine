@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ScrollReveal from "../../ScrollReveal";
@@ -158,7 +160,7 @@ export default async function EventPage({ params }: Props) {
             <i />
           </div>
         ) : (
-          <img
+          <Image unoptimized
             src={event.coverImage}
             alt={`Événement Tibaldo Jungle à ${event.city}`}
             width="1800"
@@ -168,9 +170,9 @@ export default async function EventPage({ params }: Props) {
         <div className="event-detail-shade" />
         <SiteHeader />
         <div className="shell event-detail-hero-copy">
-          <a href="/evenements">
+          <Link href="/evenements">
             Événements <span>·</span> Agenda
-          </a>
+          </Link>
           <p className="eyebrow">
             <span /> {event.category} · {event.city}
           </p>
@@ -326,7 +328,7 @@ export default async function EventPage({ params }: Props) {
         <div>
           {event.gallery.map((image, index) => (
             <figure key={`${image.src}-${index}`} data-reveal>
-              <img
+              <Image unoptimized
                 src={image.src}
                 alt={image.alt}
                 loading="lazy"
@@ -408,7 +410,7 @@ export default async function EventPage({ params }: Props) {
         </section>
       )}
       <nav className="shell plant-back-link">
-        <a href="/evenements">← Tous les événements</a>
+        <Link href="/evenements">← Tous les événements</Link>
       </nav>
       <SiteFooter />
     </main>

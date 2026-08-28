@@ -1,5 +1,8 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
+
 import { useEffect, useMemo, useState } from "react";
 import type { JungleEvent } from "@/lib/events/types";
 
@@ -55,7 +58,10 @@ export function EventActions({ event }: { event: JungleEvent }) {
 
 export function EventFilters({ events }: { events: JungleEvent[] }) {
   const [filter, setFilter] = useState("upcoming");
-  const now = Date.now();
+  // Freeze the classification reference time for this mounted view. A filter
+  // interaction must not make an event jump categories because render timing
+  // changed; remounting the page naturally refreshes the reference time.
+  const [now] = useState(() => Date.now());
   const visible = events.filter((event) => filter === "all" || filter === "upcoming" ? (filter === "all" || new Date(event.endAt ?? event.startAt).getTime() >= now) : filter === "past" ? new Date(event.endAt ?? event.startAt).getTime() < now : event.category === filter);
   const labels = [["upcoming", "À venir"], ["past", "Passés"], ["atelier", "Ateliers"], ["ouverture", "Ouvertures"], ["promotion", "Promotions"], ["special", "Événements spéciaux"], ["all", "Tous"]];
   return <><div className="event-filters" aria-label="Filtrer les événements">{labels.map(([value, label]) => <button type="button" className={filter === value ? "is-active" : ""} onClick={() => setFilter(value)} key={value}>{label}</button>)}</div><div className="event-card-grid">{visible.map((event) => <EventCard event={event} key={event.id} />)}{visible.length === 0 && <p className="event-empty">Aucun événement dans cette catégorie pour le moment.</p>}</div></>;
@@ -63,5 +69,5 @@ export function EventFilters({ events }: { events: JungleEvent[] }) {
 
 export function EventCard({ event }: { event: JungleEvent }) {
   const date = new Date(event.startAt);
-  return <a className="event-card" href={`/evenements/${event.slug}`}><div><img className={event.slug === "ouverture-tibaldo-jungle-lille" ? "event-cover-storefront" : undefined} src={event.coverImage} alt={`Illustration de ${event.title}`} loading="lazy" width="1200" height="800" /><span>{event.category}</span></div><section><time dateTime={event.startAt}>{new Intl.DateTimeFormat("fr-FR", { day: "2-digit", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit" }).format(date)}</time><h2>{event.title}</h2><p>{event.excerpt}</p><small>{event.venueName} · {event.city}</small><strong>Découvrir <b>↗</b></strong></section></a>;
+  return <Link className="event-card" href={`/evenements/${event.slug}`}><div><Image unoptimized className={event.slug === "ouverture-tibaldo-jungle-lille" ? "event-cover-storefront" : undefined} src={event.coverImage} alt={`Illustration de ${event.title}`} loading="lazy" width="1200" height="800" /><span>{event.category}</span></div><section><time dateTime={event.startAt}>{new Intl.DateTimeFormat("fr-FR", { day: "2-digit", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit" }).format(date)}</time><h2>{event.title}</h2><p>{event.excerpt}</p><small>{event.venueName} · {event.city}</small><strong>Découvrir <b>↗</b></strong></section></Link>;
 }

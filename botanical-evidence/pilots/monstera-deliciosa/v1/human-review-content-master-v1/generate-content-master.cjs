@@ -20,7 +20,6 @@ const taxon = read('taxon.json').taxon;
 
 const claimById = new Map(claims.map(x => [x.claim_id, x]));
 const linkById = new Map(links.map(x => [x.evidence_link_id, x]));
-const sourceById = new Map(sources.map(x => [x.source_id, x]));
 const reviewById = new Map(reviews.map(x => [x.review_id, x]));
 const conflictFor = id => conflicts.filter(x => x.claim_ids.includes(id)).map(x => x.conflict_id);
 const legacyFor = id => legacy.filter(x => x.replacement_claim_id === id).map(x => x.legacy_id);
@@ -168,7 +167,6 @@ const contentUnits = [
   unit('content.studio.observation','21_CONSEIL_STUDIO','Conseil du Studio — candidat','Observez d’abord la motte, la lumière et le port avant de corriger plusieurs paramètres.','Ce conseil synthétise des gestes à faible risque : vérifier le substrat avant l’arrosage, ajuster progressivement la lumière et proposer un support stable sans promettre de fenestrations.',['claim.md.watering.substrate-state','claim.md.light.indoor-preference','claim.md.support.role'],{knowledge_type:'JUNGLE_EDITORIAL_GUIDANCE',publication_status:'CANDIDATE_PENDING_OWNER_DECISION',qualifier:'Conseil éditorial, jamais fait botanique autonome.',consistency_key:'studio.observe-first'})
 ];
 
-const sectionForClaim = id => contentUnits.find(u => u.linked_claim_ids.includes(id))?.section || null;
 for (const d of decisions) d.downstream_content_sections = contentUnits.filter(u => u.linked_claim_ids.includes(d.claim_id)).map(u => u.section);
 
 const diagnostics = diagnosticsSource.map(d => ({

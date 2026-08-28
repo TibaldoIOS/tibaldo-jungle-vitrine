@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getPlantsByGenre } from "@/lib/plants/catalog";
@@ -161,9 +163,9 @@ export default async function Page({ params }: Props) {
           <div className="inner-hero-shade" />
           <SiteHeader />
           <div className="shell inner-hero-content">
-            <a className="family-genre-breadcrumb" href="/plantes">
+            <Link className="family-genre-breadcrumb" href="/plantes">
               Encyclopédie <span>·</span> Tous les univers
-            </a>
+            </Link>
             <p className="eyebrow">
               <span /> {isFamily ? "Famille botanique" : "Genre végétal"}
             </p>
@@ -215,7 +217,7 @@ export default async function Page({ params }: Props) {
               {genrePortraits.map((portrait, index) => {
                 const visual = (
                   <>
-                    <img src={portrait.src} alt={portrait.alt} width="900" height="1100" />
+                    <Image unoptimized src={portrait.src} alt={portrait.alt} width="900" height="1100" />
                     <span>0{index + 1}</span>
                     <strong>{portrait.name}</strong>
                     {portrait.href && <small>Voir la fiche <Arrow /></small>}
@@ -238,9 +240,9 @@ export default async function Page({ params }: Props) {
                 <div className="plant-explorer-links">
                   {list.length ? (
                     list.map((plant) => (
-                      <a href={`/plantes/${genre}/${plant.slug}`} key={plant.slug}>
+                      <Link href={`/plantes/${genre}/${plant.slug}`} key={plant.slug}>
                         {listingNameOf(plant)}
-                      </a>
+                      </Link>
                     ))
                   ) : (
                     <span className="is-disabled">Premières fiches à venir</span>
@@ -396,9 +398,9 @@ export default async function Page({ params }: Props) {
               <p className="section-kicker">Tibaldo Jungle · Lille</p>
               <h2>Voir, choisir et rempoter votre {guide.name} au Studio.</h2>
               <p>Retrouvez nos conseils personnalisés au 3 place de l’Arbonnoise. Nous adaptons le choix de la plante à votre lumière et proposons le rempotage gratuit toute l’année.</p>
-              <a className="button" href="/contact">
+              <Link className="button" href="/contact">
                 Nous trouver <Arrow />
-              </a>
+              </Link>
             </section>
             <section className="family-guide-faq shell">
               <header data-reveal>
@@ -447,8 +449,8 @@ export default async function Page({ params }: Props) {
             {list.length > 0 && (
               <div className="plant-index-grid">
                 {list.map((plant) => (
-                  <a href={`/plantes/${genre}/${plant.slug}`} key={plant.slug} data-reveal>
-                    <img src={plant.gallery[0].src} alt={publicPlantImageAlt(plant.gallery[0].src, plant.botanicalName, plant.gallery[0].alt)} width={plant.gallery[0].width} height={plant.gallery[0].height} />
+                  <Link href={`/plantes/${genre}/${plant.slug}`} key={plant.slug} data-reveal>
+                    <Image unoptimized src={plant.gallery[0].src} alt={publicPlantImageAlt(plant.gallery[0].src, plant.botanicalName, plant.gallery[0].alt)} width={plant.gallery[0].width} height={plant.gallery[0].height} />
                     <span>
                       {plant.family} · {isInternalPhotoProductionCopy(plant.specimen.observedHeight) ? plant.growth.habit : plant.specimen.observedHeight}
                     </span>
@@ -457,13 +459,13 @@ export default async function Page({ params }: Props) {
                     <strong>
                       Lire la fiche <Arrow />
                     </strong>
-                  </a>
+                  </Link>
                 ))}
               </div>
             )}
           </section>
           <nav className="shell plant-back-link">
-            <a href="/plantes">← Tous les genres</a>
+            <Link href="/plantes">← Tous les genres</Link>
           </nav>
         </>
       )}

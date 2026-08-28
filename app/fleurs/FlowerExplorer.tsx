@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import { useMemo, useState } from "react";
 import type { FlowerEntry } from "@/lib/flowers/catalog";
 import FlowerQuoteForm from "./FlowerQuoteForm";
@@ -173,7 +175,7 @@ export default function FlowerExplorer({
                 <li>Tenue indicative : {flower.vaseLife}</li>
               </ul>
               {flower.faq && (
-                <a
+                <Link
                   className="flower-card-detail"
                   href={`/fleurs/${flower.slug}`}
                 >
@@ -181,7 +183,7 @@ export default function FlowerExplorer({
                   <svg viewBox="0 0 20 20" aria-hidden="true">
                     <path d="M5 15 15 5M7 5h8v8" />
                   </svg>
-                </a>
+                </Link>
               )}
               <button type="button" onClick={() => toggle(flower.slug)}>
                 {selection.includes(flower.slug)
