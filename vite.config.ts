@@ -14,6 +14,10 @@ const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === "seatbelt";
 const localBindingConfig = {
   main: "./worker/index.ts",
   compatibility_flags: ["nodejs_compat"],
+  // Route static assets through the Worker so BETA security, MIME and cache
+  // headers are applied consistently instead of bypassing the application
+  // response policy at the asset dispatcher.
+  assets: { binding: "ASSETS", run_worker_first: true },
   d1_databases: d1
     ? [
         {

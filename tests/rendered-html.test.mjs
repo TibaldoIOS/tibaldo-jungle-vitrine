@@ -124,6 +124,30 @@ test("keeps BETA media MIME and cache policy explicit", () => {
   assert.match(staticHeaders, /max-age=86400, stale-while-revalidate=604800/);
 });
 
+test("routes static media through the Worker before applying asset headers", async () => {
+  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
+  workerUrl.searchParams.set("asset-policy-test", `${process.pid}-${Date.now()}`);
+  const { default: worker } = await import(workerUrl.href);
+  const response = await worker.fetch(
+    new Request("https://beta-jungle.tibaldo.fr/media-example.webp"),
+    {
+      ASSETS: {
+        fetch: async () => new Response(new Uint8Array([82, 73, 70, 70]), {
+          headers: { "content-type": "application/octet-stream" },
+        }),
+      },
+    },
+    { waitUntil() {}, passThroughOnException() {} },
+  );
+  assert.equal(response.status, 200);
+  assert.equal(response.headers.get("content-type"), "image/webp");
+  assert.equal(
+    response.headers.get("cache-control"),
+    "public, max-age=86400, stale-while-revalidate=604800",
+  );
+  assert.equal(response.headers.get("x-content-type-options"), "nosniff");
+});
+
 test("keeps Jungle Scroll Story D isolated, server rendered and non-indexable", async () => {
   const response = await renderLab("/lab/deliciosa/d");
   assert.equal(response.status, 200);
