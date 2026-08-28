@@ -2877,3 +2877,51 @@ body:has(.conversion-dock){padding-bottom:calc(76px + env(safe-area-inset-bottom
   .deliciosa-scroll-story-d3 .d3-morphology-scene{height:auto!important}.deliciosa-scroll-story-d3 .d3-stage{position:relative!important;min-height:100svh}.deliciosa-scroll-story-d3 .d3-story-copy{display:grid;position:relative;gap:52px;padding-top:72vh}.deliciosa-scroll-story-d3 .d3-story-copy li{position:relative!important;inset:auto!important;width:auto!important;margin:0!important;opacity:1!important;transform:none!important}.deliciosa-scroll-story-d3 .d3-photo-field{inset:15% 5% 38%;clip-path:none!important;transform:none!important;will-change:auto!important}.deliciosa-scroll-story-d3 .d3-photo-field img{mix-blend-mode:multiply}.deliciosa-scroll-story-d3 .d3-intro{position:relative!important;inset:auto!important;width:auto!important;padding:7vh 6vw 4vh!important;opacity:1!important;transform:none!important}.deliciosa-scroll-story-d3 .d3-transition-word,.deliciosa-scroll-story-d3 .d3-support-line,.deliciosa-scroll-story-d3 .d3-annotations,.deliciosa-scroll-story-d3 .d3-progress{display:none!important}.deliciosa-scroll-story-d3 .d3-reading-label,.deliciosa-scroll-story-d3 .d3-nuance{display:block;position:relative;inset:auto;width:auto;margin:40px 6vw;color:rgba(243,240,231,.66);opacity:1!important}
 }
 .deliciosa-scroll-story-d3.d3-story-static .d3-morphology-scene{height:auto!important}.deliciosa-scroll-story-d3.d3-story-static .d3-stage{position:relative!important;min-height:100svh}.deliciosa-scroll-story-d3.d3-story-static .d3-story-copy{display:grid;position:relative;gap:52px;padding-top:72vh}.deliciosa-scroll-story-d3.d3-story-static .d3-story-copy li{position:relative!important;inset:auto!important;width:auto!important;margin:0!important;opacity:1!important;transform:none!important}.deliciosa-scroll-story-d3.d3-story-static .d3-photo-field{inset:15% 5% 38%;clip-path:none!important;transform:none!important;will-change:auto!important}.deliciosa-scroll-story-d3.d3-story-static .d3-photo-field img{mix-blend-mode:multiply}.deliciosa-scroll-story-d3.d3-story-static .d3-intro{position:relative!important;inset:auto!important;width:auto!important;padding:7vh 6vw 4vh!important;opacity:1!important;transform:none!important}.deliciosa-scroll-story-d3.d3-story-static .d3-transition-word,.deliciosa-scroll-story-d3.d3-story-static .d3-support-line,.deliciosa-scroll-story-d3.d3-story-static .d3-annotations,.deliciosa-scroll-story-d3.d3-story-static .d3-progress{display:none!important}.deliciosa-scroll-story-d3.d3-story-static .d3-reading-label,.deliciosa-scroll-story-d3.d3-story-static .d3-nuance{display:block;position:relative;inset:auto;width:auto;margin:40px 6vw;color:rgba(243,240,231,.66);opacity:1!important}
+/* Species full-bleed geometry follows the authoritative shell gutter. */
+@media (max-width: 900px) {
+  .shell {
+    --shell-gutter: 20px;
+  }
+
+  .plant-profile-layout > aside,
+  .thai-v3-layout > aside,
+  .species-next-layout > aside,
+  .species-next-morphology,
+  .species-next-diagnostic,
+  .species-next-studio {
+    margin-inline: calc(-1 * var(--shell-gutter));
+  }
+
+  .plant-profile-layout > aside,
+  .species-next-morphology,
+  .species-next-diagnostic,
+  .species-next-studio {
+    padding-inline: var(--shell-gutter);
+  }
+
+  .thai-v3-layout .plant-section-nav,
+  .species-next-nav {
+    padding-inline: var(--shell-gutter);
+    scroll-padding-inline: var(--shell-gutter);
+  }
+}
+
+@media (max-width: 600px) {
+  .shell {
+    --shell-gutter: 16px;
+  }
+
+  .veitchii-v2-continue,
+  .veitchii-v2-advice {
+    margin-inline: calc(-1 * var(--shell-gutter));
+  }
+
+  .veitchii-v2-continue {
+    padding-inline: var(--shell-gutter) !important;
+  }
+
+  .p1-species-compact .plant-gallery > div {
+    margin-right: calc(-1 * var(--shell-gutter));
+    padding-right: var(--shell-gutter);
+  }
+}

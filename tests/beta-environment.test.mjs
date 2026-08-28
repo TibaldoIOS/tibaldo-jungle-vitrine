@@ -89,3 +89,18 @@ test("Species UX NEXT is scoped and has a reduced-motion final state", async () 
   assert.match(styles, /@media\(prefers-reduced-motion:reduce\)[\s\S]*\.species-next-page\.next-motion-ready/);
   assert.match(styles, /\.species-next-page\.next-motion-ready \[data-next-reveal\]\.is-visible/);
 });
+
+test("species full-bleed regions follow the responsive shell gutter", async () => {
+  const styles = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
+  assert.match(styles, /--shell-gutter:\s*20px/);
+  assert.match(styles, /--shell-gutter:\s*16px/);
+  assert.match(
+    styles,
+    /\.plant-profile-layout\s*>\s*aside[\s\S]*margin-inline:\s*calc\(-1\s*\*\s*var\(--shell-gutter\)\)/,
+  );
+  assert.match(styles, /\.species-next-morphology[\s\S]*padding-inline:\s*var\(--shell-gutter\)/);
+  assert.match(
+    styles,
+    /\.p1-species-compact\s+\.plant-gallery\s*>\s*div[\s\S]*padding-right:\s*var\(--shell-gutter\)/,
+  );
+});
