@@ -172,6 +172,37 @@ test("V22 consolidates species on one shared body and recovers the V19 photo rev
   assert.match(css, /prefers-reduced-motion:reduce[^]*canonical-species-photo-reveal/i);
 });
 
+test("V23 keeps the Veitchii Golden Species prototype isolated, compact and non-indexable", async () => {
+  const response = await render("/lab/v23/anthurium/veitchii");
+  assert.equal(response.status, 200);
+  assert.equal(response.headers.get("x-robots-tag"), "noindex, nofollow");
+  const html = await response.text();
+
+  assert.match(html, /data-golden-species-v23="anthurium-veitchii"/);
+  assert.match(html, /Lab V23[\s\S]*Golden Species · revue Owner/i);
+  assert.match(html, /Nom botanique[\s\S]*Famille[\s\S]*Genre[\s\S]*Espèce[\s\S]*Ordre[\s\S]*Port/);
+  assert.match(html, /Lecture en dix secondes[\s\S]*Les cinq repères essentiels/i);
+  assert.match(html, /Carnet photographique[\s\S]*Une seule photographie de Veitchii est aujourd’hui vérifiée/i);
+  assert.match(html, /Diagnostic prudent[\s\S]*Tout savoir avant de lui faire une place/i);
+  assert.match(html, /<meta name="robots" content="noindex, nofollow, nocache"/i);
+  assert.doesNotMatch(html, /veitchii-v2-id-grid|veitchii-v2-conditions-grid|plant-identity-signature/);
+  assert.equal((html.match(/role="listitem"/g) ?? []).length, 1);
+
+  const canonical = await (await render("/plantes/anthurium/veitchii")).text();
+  assert.doesNotMatch(canonical, /data-golden-species-v23|Lab V23|Golden Species · revue Owner/i);
+  assert.match(canonical, /canonical-species-v22/);
+});
+
+test("V23 reuses the bounded V19 reveal with an accessible reduced-motion fallback", () => {
+  const css = readFileSync(
+    new URL("../app/lab/v23/anthurium/veitchii/VeitchiiGoldenV23.module.css", import.meta.url),
+    "utf8",
+  );
+  assert.match(css, /photoRevealMedia::after[\s\S]*transition:\s*transform 1\.05s \.14s cubic-bezier\(\.77, 0, \.18, 1\)/i);
+  assert.match(css, /@media \(prefers-reduced-motion: reduce\)[\s\S]*photoRevealMedia::after\s*\{\s*display:\s*none/i);
+  assert.doesNotMatch(css, /scroll-behavior:\s*smooth|position:\s*fixed/);
+});
+
 test("V22 keeps the rejected SOS symptom-photo treatment absent", async () => {
   const html = await (await render("/sos-plantes")).text();
   assert.match(html, /sos-photo-protocol/);
