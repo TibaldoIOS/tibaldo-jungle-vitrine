@@ -455,6 +455,40 @@ test("V19 Owner-review prototypes share one narrative system without replacing V
   assert.match(motionSource, /\{ passive: true \}/);
 });
 
+test("V23 Golden Pilea prototypes remain isolated and expose two distinct editorial roles", async () => {
+  const groupResponse = await render("/lab/v23/golden-hub/pilea");
+  assert.equal(groupResponse.status, 200);
+  assert.equal(groupResponse.headers.get("x-robots-tag"), "noindex, nofollow");
+  const groupHtml = await groupResponse.text();
+  assert.match(groupHtml, /data-golden-group-v23="pilea"/);
+  assert.match(groupHtml, /Golden Group/);
+  assert.match(groupHtml, /pilea-planche-formes-textures\.webp/);
+  assert.match(groupHtml, /ni un inventaire taxonomique exhaustif ni une disponibilité boutique/i);
+  assert.equal((groupHtml.match(/class="genus-carousel-card/g) ?? []).length, 2);
+  assert.match(groupHtml, /Photographie réelle[\s\S]*à documenter/i);
+
+  const speciesResponse = await render("/lab/v23/golden-species/pilea-peperomioides");
+  assert.equal(speciesResponse.status, 200);
+  assert.equal(speciesResponse.headers.get("x-robots-tag"), "noindex, nofollow");
+  const speciesHtml = await speciesResponse.text();
+  assert.match(speciesHtml, /data-golden-species-v23="pilea-peperomioides"/);
+  assert.match(speciesHtml, /Golden Species/);
+  assert.match(speciesHtml, /Reveal botanique · 1,65 seconde/);
+  assert.match(speciesHtml, /Pilea peperomioides/);
+  assert.match(speciesHtml, /Une seule photographie documentaire/i);
+  assert.match(speciesHtml, /id="identite"[\s\S]*id="entretien"[\s\S]*id="problemes"[\s\S]*id="comparaison"[\s\S]*id="faq"/i);
+
+  const styles = readFileSync(new URL("../app/lab/v23/_golden-pilea/GoldenPilea.module.css", import.meta.url), "utf8");
+  assert.match(styles, /border-radius:\s*48% 48% 3px 3px\s*\/\s*16% 16% 3px 3px/);
+  assert.match(styles, /transition:\s*transform 1\.65s \.18s cubic-bezier\(\.77, 0, \.18, 1\)/);
+  assert.match(styles, /@media \(prefers-reduced-motion: reduce\)[\s\S]*\.archMedia::after\s*\{\s*display:\s*none/);
+
+  const canonicalHub = await (await render("/plantes/pilea")).text();
+  const canonicalSpecies = await (await render("/plantes/pilea/peperomioides")).text();
+  assert.doesNotMatch(canonicalHub, /data-golden-group-v23|Golden Group · choix visuel Owner/);
+  assert.doesNotMatch(canonicalSpecies, /data-golden-species-v23|Golden Species · choix visuel Owner/);
+});
+
 test("Visual P1 target routes expose no internal production placeholders", async () => {
   const routes = [
     "/plantes/bananiers",
