@@ -151,6 +151,35 @@ test("V20 photo-book preserves every verified gallery medium", async () => {
   ]) assert.match(cycas, new RegExp(medium));
 });
 
+test("V22 consolidates species on one shared body and recovers the V19 photo reveal", async () => {
+  for (const route of [
+    "/plantes/monstera/esqueleto",
+    "/plantes/monstera/burle-marx-flame",
+    "/plantes/anthurium/veitchii",
+    "/plantes/chlorophytum/comosum",
+  ]) {
+    const response = await render(route);
+    assert.equal(response.status, 200, route);
+    const html = await response.text();
+    assert.match(html, /canonical-species-v22/, route);
+    assert.match(html, /canonical-taxonomy-more/, route);
+    assert.match(html, /botanical-faq/, route);
+    assert.doesNotMatch(html, /veitchii-v2-id-grid|veitchii-v2-conditions-grid/, route);
+  }
+
+  const css = readFileSync(new URL("../app/globals.css", import.meta.url), "utf8");
+  assert.match(css, /canonical-species-photo-reveal[^]*transition:\s*transform 1\.05s/i);
+  assert.match(css, /prefers-reduced-motion:reduce[^]*canonical-species-photo-reveal/i);
+});
+
+test("V22 keeps the rejected SOS symptom-photo treatment absent", async () => {
+  const html = await (await render("/sos-plantes")).text();
+  assert.match(html, /sos-photo-protocol/);
+  assert.match(html, /Tibaldo valide humainement/i);
+  assert.match(html, /botanical-faq/);
+  assert.doesNotMatch(html, />\s*(Traces|Points noirs|Déformations|Odeurs)\s*</i);
+});
+
 test("V20 mobile menu is a modal interaction with lock, focus and Escape contracts", () => {
   const source = readFileSync(new URL("../app/MobileJungleMenu.tsx", import.meta.url), "utf8");
   const css = readFileSync(new URL("../app/globals.css", import.meta.url), "utf8");

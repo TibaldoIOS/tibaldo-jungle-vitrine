@@ -155,7 +155,7 @@ export default function PlantsPage() {
 
       <section className="plants-hub-sos-v3" data-reveal>
         <BotanicalMotif genre="chlorophytum" />
-        <div className="shell plants-hub-sos-v3-inner"><div><p className="section-kicker">Une plante vous inquiète ?</p><h2>Observer.<br/><em>Puis agir.</em></h2><p>Partez du signe réellement observé pour éviter les gestes inutiles.</p></div><div className="plants-sos-signs"><span>01 · Feuilles jaunes</span><span>02 · Parasites</span><span>03 · Racines</span></div><Link className="button button-light" href="/sos-plantes">Ouvrir SOS Plantes <Arrow /></Link></div>
+        <div className="shell plants-hub-sos-v3-inner"><div><p className="section-kicker">Une plante vous inquiète ?</p><h2>Observer.<br/><em>Puis agir.</em></h2><p>Un dossier clair aide Tibaldo à relire les indices sans transformer une photographie en diagnostic automatique certain.</p></div><div className="plants-sos-signs"><span>01 · Photographier</span><span>02 · Donner le contexte</span><span>03 · Faire valider</span></div><Link className="button button-light" href="/sos-plantes">Ouvrir SOS Plantes <Arrow /></Link></div>
       </section>
 
       <section className="studio-collection plants-hub-collection shell" aria-labelledby="studio-collection-title">

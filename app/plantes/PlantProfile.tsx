@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { PlantEntry } from "@/lib/plants/types";
 import {
   isInternalPhotoProductionCopy,
@@ -7,26 +8,17 @@ import {
 import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter } from "../SiteChrome";
 import PlantSectionNav from "./PlantSectionNav";
-import PlantCarePassport from "./PlantCarePassport";
 import ScientificName from "./ScientificName";
 import PlantShopBar from "./PlantShopBar";
 import PlantSpeciesHero from "./PlantSpeciesHero";
-import VeitchiiProfileV2 from "./VeitchiiProfileV2";
 import ThaiConstellationProfileV3 from "./ThaiConstellationProfileV3";
 import DeliciosaOwnerHero from "./DeliciosaOwnerHero";
 import SpeciesLocalStudio from "./SpeciesLocalStudio";
 import PlantNeedsVisualSystem from "./PlantNeedsVisualSystem";
 import BotanicalPhotoBook from "./BotanicalPhotoBook";
+import BotanicalFaq from "./BotanicalFaq";
 
 export default function PlantProfile({ plant }: { plant: PlantEntry }) {
-  const difficultyLabels = [
-    "",
-    "Très facile",
-    "Facile",
-    "Intermédiaire",
-    "Difficile",
-    "Expert",
-  ];
   const gallery = plant.gallery.filter(
     (image, index, images) =>
       !isPhotoProductionPlaceholder(image.src) &&
@@ -82,43 +74,11 @@ export default function PlantProfile({ plant }: { plant: PlantEntry }) {
         )}
       </main>
     );
-  if (plant.genre === "anthurium" && plant.slug === "veitchii")
-    return (
-      <main className="editorial-page plant-profile-page veitchii-profile-v2">
-        <ScrollReveal />
-        <PlantSpeciesHero plant={plant} />
-        <PlantCarePassport
-          indicators={[
-            {
-              label: `Difficulté · ${difficultyLabels[plant.care.difficulty]}`,
-              value: plant.care.difficulty,
-              tone: "coral",
-            },
-            { label: "Lumière", value: plant.care.light, tone: "gold" },
-            { label: "Arrosage", value: plant.care.water, tone: "blue" },
-            { label: "Humidité", value: plant.care.humidity, tone: "sage" },
-          ]}
-          substrate={plant.care.substrate}
-          nutrition={plant.care.fertilizing}
-        />
-        <VeitchiiProfileV2 plant={plant} gallery={gallery} />
-        <SpeciesLocalStudio
-          speciesName="Anthurium veitchii"
-          genusName="Anthurium"
-          genusSlug="anthurium"
-        />
-        <SiteFooter compactTransit />
-        {plant.shopUrl && (
-          <PlantShopBar
-            shopUrl={plant.shopUrl}
-            plantName={plant.botanicalName}
-          />
-        )}
-      </main>
-    );
+  const isVeitchii = plant.genre === "anthurium" && plant.slug === "veitchii";
+  const revealImage = gallery[1] ?? gallery[0];
   return (
     <main
-      className={`editorial-page plant-profile-page${isDeliciosa ? " species-next-page deliciosa-next deliciosa-standard-species" : ""}${isVisualP1Species ? ` p1-species-compact p1-species-${plant.genre}` : ""}`}
+      className={`editorial-page plant-profile-page canonical-species-v22${isDeliciosa ? " species-next-page deliciosa-next deliciosa-standard-species" : ""}${isVeitchii ? " canonical-species-veitchii" : ""}${isVisualP1Species ? ` p1-species-compact p1-species-${plant.genre}` : ""}`}
     >
       <ScrollReveal />
       {isDeliciosa ? (
@@ -126,20 +86,6 @@ export default function PlantProfile({ plant }: { plant: PlantEntry }) {
       ) : (
         <PlantSpeciesHero plant={plant} />
       )}
-      <PlantCarePassport
-        indicators={[
-          {
-            label: `Difficulté · ${difficultyLabels[plant.care.difficulty]}`,
-            value: plant.care.difficulty,
-            tone: "coral",
-          },
-          { label: "Lumière", value: plant.care.light, tone: "gold" },
-          { label: "Arrosage", value: plant.care.water, tone: "blue" },
-          { label: "Humidité", value: plant.care.humidity, tone: "sage" },
-        ]}
-        substrate={plant.care.substrate}
-        nutrition={plant.care.fertilizing}
-      />
       <div className="plant-profile-layout shell">
         <aside>
           <PlantSectionNav />
@@ -179,7 +125,7 @@ export default function PlantProfile({ plant }: { plant: PlantEntry }) {
                 <small>{plant.growth.habit}</small>
               </article>
             </div>
-            <dl className="plant-facts plant-taxonomy">
+            <dl className="plant-facts plant-taxonomy canonical-taxonomy">
               <div>
                 <dt>Famille</dt>
                 <dd>
@@ -212,21 +158,9 @@ export default function PlantProfile({ plant }: { plant: PlantEntry }) {
                   <dd>‘{plant.taxonomy.cultivar}’</dd>
                 </div>
               )}
-              <div className="is-secondary">
-                <dt>Ordre botanique</dt>
-                <dd>{plant.taxonomy.order}</dd>
-              </div>
-              <div>
-                <dt>Synonymes</dt>
-                <dd>{plant.synonyms.join(" · ")}</dd>
-              </div>
               <div className="is-wide">
                 <dt>Habitat naturel</dt>
                 <dd>{plant.habitat}</dd>
-              </div>
-              <div className="is-wide">
-                <dt>Statut botanique</dt>
-                <dd>{plant.hybridization}</dd>
               </div>
               <div>
                 <dt>Croissance</dt>
@@ -237,6 +171,14 @@ export default function PlantProfile({ plant }: { plant: PlantEntry }) {
                 <dd>{plant.growth.adultSize}</dd>
               </div>
             </dl>
+            <details className="canonical-taxonomy-more">
+              <summary>Taxonomie complète et synonymes <span aria-hidden="true">+</span></summary>
+              <dl>
+                <div><dt>Ordre botanique</dt><dd>{plant.taxonomy.order}</dd></div>
+                <div><dt>Synonymes</dt><dd>{plant.synonyms.join(" · ")}</dd></div>
+                <div><dt>Statut botanique</dt><dd>{plant.hybridization}</dd></div>
+              </dl>
+            </details>
             {hasPublicSpecimenObservation && (
               <aside className="specimen-note">
                 <span>Observation Tibaldo Jungle</span>
@@ -249,6 +191,21 @@ export default function PlantProfile({ plant }: { plant: PlantEntry }) {
               </aside>
             )}
           </section>
+          {revealImage && (
+            <figure className="canonical-species-photo-reveal" data-reveal>
+              <div>
+                <Image
+                  unoptimized
+                  src={revealImage.src}
+                  alt={revealImage.alt}
+                  width={revealImage.width}
+                  height={revealImage.height}
+                  loading="lazy"
+                />
+              </div>
+              <figcaption><span>Lecture photographique</span>{revealImage.caption}</figcaption>
+            </figure>
+          )}
           <section className="plant-profile-section" id="entretien">
             <header className="plant-section-heading" data-reveal>
               <p className="section-kicker">Les bons équilibres</p>
@@ -410,27 +367,7 @@ export default function PlantProfile({ plant }: { plant: PlantEntry }) {
               </a>
             </div>
           </section>
-          <section className="plant-faq plant-profile-section" id="faq">
-            <header className="plant-section-heading" data-reveal>
-              <p className="section-kicker">Questions fréquentes</p>
-              <h2>Tout savoir avant de l’accueillir.</h2>
-            </header>
-            <div>
-              {publicFaq.map((item) => (
-                <details key={item.question} data-reveal>
-                  <summary>
-                    <strong>{item.question}</strong>
-                    {isVisualP1Species ? (
-                      <i className="p1-faq-indicator" aria-hidden="true" />
-                    ) : (
-                      <span>+</span>
-                    )}
-                  </summary>
-                  <p>{item.answer}</p>
-                </details>
-              ))}
-            </div>
-          </section>
+          <BotanicalFaq items={publicFaq} title="Tout savoir avant de l’accueillir." />
           <section className="plant-sources" data-reveal>
             <p className="section-kicker">Sources & prudence</p>
             <p>
@@ -453,6 +390,13 @@ export default function PlantProfile({ plant }: { plant: PlantEntry }) {
           </section>
         </div>
       </div>
+      {isVeitchii && (
+        <SpeciesLocalStudio
+          speciesName="Anthurium veitchii"
+          genusName="Anthurium"
+          genusSlug="anthurium"
+        />
+      )}
       <SiteFooter />
       {plant.shopUrl && (
         <PlantShopBar shopUrl={plant.shopUrl} plantName={plant.botanicalName} />

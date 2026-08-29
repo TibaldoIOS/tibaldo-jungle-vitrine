@@ -3483,3 +3483,95 @@ body:has(.conversion-dock){padding-bottom:calc(76px + env(safe-area-inset-bottom
 @media (prefers-reduced-motion: reduce) {
   .mobile-menu-overlay,.genus-carousel-media img,.botanical-photo-book figure { animation: none !important; transition: none !important; transform: none !important; opacity: 1 !important; }
 }
+
+/* V22 canonical species consolidation. The photographic mask is the shared
+   1.05 s V19 reveal, recovered from the approved prototype rather than
+   introducing a route-specific animation. */
+.canonical-species-v22 .plant-profile-layout { padding-top: 82px; }
+.canonical-species-v22 .plant-identity-section { padding-bottom: 62px; }
+.canonical-species-v22 .plant-identity-signature { grid-template-columns: 1.35fr .65fr; }
+.canonical-species-v22 .plant-identity-signature article { min-height: 225px; }
+.canonical-species-v22 .plant-identity-signature article + article strong {
+  font-size: clamp(24px, 2.6vw, 38px);
+  line-height: 1.02;
+  overflow-wrap: anywhere;
+}
+.canonical-species-v22 .canonical-taxonomy { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.canonical-species-v22 .canonical-taxonomy > div { border: 0; border-bottom: 1px solid rgba(21,59,44,.16); background: transparent; }
+.canonical-species-v22 .canonical-taxonomy > div:nth-child(even) { border-left: 1px solid rgba(21,59,44,.16); }
+.canonical-species-v22 .canonical-taxonomy > div.is-wide { display: block; grid-column: 1/-1; padding-left: 0; }
+.canonical-species-v22 .canonical-taxonomy > div.is-wide dd { max-width: 780px; margin-top: 12px; }
+.canonical-taxonomy-more { border-bottom: 1px solid rgba(21,59,44,.16); }
+.canonical-taxonomy-more summary { display: flex; min-height: 58px; align-items: center; justify-content: space-between; color: var(--forest); cursor: pointer; font-size: 8px; font-weight: 800; letter-spacing: .12em; list-style: none; text-transform: uppercase; }
+.canonical-taxonomy-more summary::-webkit-details-marker { display: none; }
+.canonical-taxonomy-more summary span { display: grid; width: 28px; height: 28px; place-items: center; border: 1px solid rgba(21,59,44,.22); border-radius: 50%; font: 400 17px Georgia,serif; transition: transform .25s ease; }
+.canonical-taxonomy-more[open] summary span { transform: rotate(45deg); }
+.canonical-taxonomy-more dl { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 0; margin: 0; padding-bottom: 24px; }
+.canonical-taxonomy-more dl > div { padding: 18px 18px 18px 0; }
+.canonical-taxonomy-more dt { color: #8f6b66; font-size: 7px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.canonical-taxonomy-more dd { margin: 9px 0 0; color: #5f6e65; font: 400 15px/1.55 Georgia,serif; }
+
+.canonical-species-photo-reveal { margin: 0 0 92px; }
+.canonical-species-photo-reveal > div { position: relative; height: clamp(390px,58vw,720px); overflow: hidden; background: #173f30; }
+.canonical-species-photo-reveal > div::after,.botanical-photo-book-media::after { position: absolute; z-index: 2; inset: 0; background: #173f30; content: ""; transform: scaleX(1); transform-origin: right center; transition: transform 1.05s .14s cubic-bezier(.77,0,.18,1); }
+.canonical-species-photo-reveal.is-visible > div::after,.botanical-photo-book.is-visible .botanical-photo-book-media::after { transform: scaleX(0); }
+.canonical-species-photo-reveal img { width: 100%; height: 100%; object-fit: cover; }
+.canonical-species-photo-reveal figcaption { display: flex; justify-content: space-between; gap: 24px; padding: 16px 0; border-bottom: 1px solid rgba(21,59,44,.16); color: #68756d; font-size: 9px; line-height: 1.55; }
+.canonical-species-photo-reveal figcaption span { color: #916861; font-size: 7px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.botanical-photo-book-media { position: relative; overflow: hidden; }
+
+.botanical-faq { border-top: 1px solid rgba(21,59,44,.18); }
+.botanical-faq-list details { border-bottom: 1px solid rgba(21,59,44,.18); }
+.botanical-faq-list summary { display: grid; grid-template-columns: 44px minmax(0,1fr) 36px; align-items: center; gap: 14px; min-height: 70px; cursor: pointer; list-style: none; }
+.botanical-faq-list summary::-webkit-details-marker { display: none; }
+.botanical-faq-list summary span { color: #9b7169; font: italic 11px Georgia,serif; }
+.botanical-faq-list summary strong { color: var(--forest); font: 400 20px/1.35 Georgia,serif; }
+.botanical-faq-list summary i { position: relative; width: 32px; height: 32px; border: 1px solid rgba(21,59,44,.2); border-radius: 50%; }
+.botanical-faq-list summary i::before,.botanical-faq-list summary i::after { position: absolute; top: 50%; left: 50%; width: 11px; height: 1px; background: var(--forest); content: ""; transform: translate(-50%,-50%); transition: transform .22s ease; }
+.botanical-faq-list summary i::after { transform: translate(-50%,-50%) rotate(90deg); }
+.botanical-faq-list details[open] summary i::after { transform: translate(-50%,-50%) rotate(0); }
+.botanical-faq-list details > p { max-width: 760px; margin: 0; padding: 0 50px 25px 58px; color: #647168; font-size: 13px; line-height: 1.75; }
+
+.sos-photo-protocol { margin: 90px 0; padding: 92px 0; background: linear-gradient(145deg,#0c3427,#174c38); color: #fff; }
+.sos-photo-protocol header { display: grid; grid-template-columns: .65fr 1.35fr; gap: 8%; align-items: start; }
+.sos-photo-protocol h2 { margin: 0; font: 400 clamp(46px,5.5vw,76px)/.94 Georgia,serif; letter-spacing: -.045em; }
+.sos-photo-protocol h2 em { color: #bdd49e; font-weight: 400; }
+.sos-photo-protocol-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); margin-top: 56px; border-top: 1px solid rgba(255,255,255,.18); border-bottom: 1px solid rgba(255,255,255,.18); }
+.sos-photo-protocol-grid article { min-height: 235px; padding: 25px 22px; border-right: 1px solid rgba(255,255,255,.16); }
+.sos-photo-protocol-grid article:last-child { border-right: 0; }
+.sos-photo-protocol-grid span { color: #bdd49e; font: italic 11px Georgia,serif; }
+.sos-photo-protocol-grid strong { display: block; margin: 70px 0 14px; font: 400 22px Georgia,serif; }
+.sos-photo-protocol-grid p,.sos-photo-protocol > .shell > p { color: rgba(255,255,255,.67); font-size: 11px; line-height: 1.7; }
+.sos-photo-protocol > .shell > p { max-width: 680px; margin: 30px 0 0 auto; }
+.sos-faq-shell { padding-bottom: 90px; }
+
+@media(max-width:900px){
+  .canonical-species-v22 .plant-profile-layout { padding-top: 0; }
+  .canonical-species-v22 .plant-identity-section { padding-top: 52px; }
+  .canonical-taxonomy-more dl { grid-template-columns: 1fr; }
+  .sos-photo-protocol header { grid-template-columns: 1fr; gap: 24px; }
+  .sos-photo-protocol-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .sos-photo-protocol-grid article:nth-child(2) { border-right: 0; }
+  .sos-photo-protocol-grid article:nth-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,.16); }
+}
+
+@media(max-width:600px){
+  .canonical-species-v22 .plant-identity-signature { grid-template-columns: 1fr; }
+  .canonical-species-v22 .canonical-taxonomy { grid-template-columns: 1fr; }
+  .canonical-species-v22 .canonical-taxonomy > div:nth-child(even) { border-left: 0; }
+  .canonical-species-photo-reveal { margin-bottom: 64px; }
+  .canonical-species-photo-reveal > div { height: 118vw; max-height: 560px; }
+  .canonical-species-photo-reveal figcaption { display: grid; gap: 8px; }
+  .botanical-faq-list summary { grid-template-columns: 30px minmax(0,1fr) 32px; min-height: 64px; }
+  .botanical-faq-list summary strong { font-size: 17px; }
+  .botanical-faq-list details > p { padding: 0 4px 22px 44px; font-size: 12px; }
+  .sos-photo-protocol { margin: 70px 0; padding: 70px 0; }
+  .sos-photo-protocol-grid { display: block; }
+  .sos-photo-protocol-grid article { min-height: 0; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.16); }
+  .sos-photo-protocol-grid strong { margin-top: 30px; }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .canonical-species-photo-reveal > div::after,.botanical-photo-book-media::after { display: none; }
+  .canonical-taxonomy-more summary span { transition: none; }
+}
