@@ -22,7 +22,7 @@ export default function GenusSpeciesCarousel({ genre, genusName, plants }: {
             const image = plant.gallery[0];
             const hasPhoto = image && !isPhotoProductionPlaceholder(image.src);
             return (
-              <Link className={`genus-carousel-card${hasPhoto ? " has-photo" : " has-media-gap"}`} href={`/plantes/${genre}/${plant.slug}`} key={plant.slug}>
+              <Link className={`genus-carousel-card${hasPhoto ? " has-photo" : " has-media-gap"}`} href={`/plantes/${plant.genre}/${plant.slug}`} key={`${plant.genre}/${plant.slug}`}>
                 <div className="genus-carousel-media">
                   {hasPhoto ? (
                     <Image unoptimized src={image.src} alt={publicPlantImageAlt(image.src, plant.botanicalName, image.alt)} width={image.width} height={image.height} loading="lazy" />

@@ -70,12 +70,13 @@ test("Jungle beta is globally marked and excluded from indexing", async () => {
   assert.match(sitemap, /status:\s*404/);
 });
 
-test("Editorial Experience V3 keeps the visual and environment guardrails", async () => {
-  const [styles, photoRegistry, directory, profile, chrome] = await Promise.all([
+test("Golden V25 keeps the visual and environment guardrails", async () => {
+  const [styles, photoRegistry, directory, profile, golden, chrome] = await Promise.all([
     readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
     readFile(new URL("../lib/plants/photo-genus-heroes.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/plantes/BotanicalDirectoryV3.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/plantes/PlantProfile.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/plantes/GoldenSpeciesProfile.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/SiteChrome.tsx", import.meta.url), "utf8"),
   ]);
   assert.match(photoRegistry, /monstera[\s\S]*OWNER_AUTHORIZED/);
@@ -89,14 +90,15 @@ test("Editorial Experience V3 keeps the visual and environment guardrails", asyn
   assert.match(directory, /aria-expanded/);
   assert.match(directory, /aria-controls/);
   assert.match(directory, /tabIndex=\{open \? 0 : -1\}/);
-  assert.match(profile, /thai-constellation/);
-  assert.match(profile, /ThaiConstellationProfileV3/);
+  assert.match(profile, /GoldenSpeciesProfile/);
+  assert.doesNotMatch(profile, /ThaiConstellationProfileV3/);
+  assert.match(golden, /data-golden-species-v25/);
   assert.doesNotMatch(chrome, /↗️/);
 });
 
 test("Deliciosa preserves its Owner hero and uses the canonical species body", async () => {
   const [profile, nextProfile, ownerHero, styles, interactions] = await Promise.all([
-    readFile(new URL("../app/plantes/PlantProfile.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/plantes/GoldenSpeciesProfile.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/plantes/DeliciosaProfileNext.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/plantes/DeliciosaOwnerHero.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
