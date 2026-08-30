@@ -68,7 +68,7 @@ test("tous les encyclopedia_slug restent uniques", () => {
 
 test("Dicksonia antarctica ajoute une seule identité botanique centrale", () => {
   const dicksonia = plants.find((entry) => entry.genre === "dicksonia" && entry.slug === "antarctica");
-  assert.equal(plants.length, 64);
+  assert.equal(plants.length, 76);
   assert.equal(dicksonia?.botanicalName, "Dicksonia antarctica");
   assert.equal(dicksonia?.taxonomy.family, "Dicksoniaceae");
   assert.equal(dicksonia?.taxonomy.order, "Cyatheales");
@@ -113,8 +113,8 @@ test("l’étape 2 ajoute quatre identités Bananiers sans taille commerciale", 
   assert.equal(florida?.taxonomy.cultivar, "Florida Variegata");
 });
 
-test("V19 atteint le seuil de dix fiches pour les trois genres ciblés", () => {
-  const expected = { monstera: 11, anthurium: 12, alocasia: 10 } as const;
+test("V19 reste intact après l’expansion P1 des genres majeurs", () => {
+  const expected = { monstera: 12, anthurium: 14, alocasia: 13 } as const;
   for (const [genre, count] of Object.entries(expected)) {
     const entries = plants.filter((plant) => plant.genre === genre);
     assert.equal(entries.length, count, genre);

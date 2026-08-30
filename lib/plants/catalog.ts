@@ -9,6 +9,7 @@ import { cycasRevoluta } from "./cycas-revoluta.ts";
 import { dicksoniaAntarctica } from "./dicksonia-antarctica.ts";
 import { agaveFatsiaStrelitziaPlants } from "./agave-fatsia-strelitzia.ts";
 import { encyclopediaV19ExpansionPlants } from "./encyclopedia-v19-expansion.ts";
+import { encyclopediaP1Plants } from "./encyclopedia-p1-expansion.ts";
 
 export const plantFamilies = [
   { slug: "strelitzia", name: "Strelitzia", eyebrow: "Oiseaux de paradis", description: "Les cinq espèces acceptées du genre Strelitzia : du compact reginae aux grands alba, caudata et nicolai, avec une lecture claire des appellations « Augusta ».", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle de Strelitzia à ajouter", available: true },
@@ -37,14 +38,14 @@ export const plantFamilies = [
   { slug: "dicksonia", name: "Dicksonia", eyebrow: "Fougère arborescente", description: "Le genre Dicksonia réunit des fougères arborescentes au stipe fibreux. Découvrez Dicksonia antarctica, son besoin d’humidité et son hivernage nuancé dans le Nord.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie propriétaire de Dicksonia antarctica à ajouter", available: true },
   { slug: "plumeria", name: "Plumeria", eyebrow: "Frangipaniers", description: "Floraisons roses ou jaunes, chaleur et repos hivernal : les frangipaniers sont regroupés sans inventer le nom de leurs cultivars.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle de frangipanier à ajouter", available: true },
   { slug: "equisetum", name: "Prêle japonaise", eyebrow: "Extérieur humide", description: "La prêle japonaise forme des tiges verticales très graphiques et demande une culture maîtrisée pour contenir ses rhizomes.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle de prêle japonaise à ajouter", available: true },
-  { slug: "ficus", name: "Ficus", eyebrow: "Gamme en préparation", description: "La gamme Ficus sera documentée espèce par espèce après identification et photographie des sujets réellement proposés au Studio.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographies réelles de la gamme Ficus à ajouter", available: true },
+  { slug: "ficus", name: "Ficus", eyebrow: "Espèce documentée", description: "Arbres et lianes aux silhouettes très diverses, les Ficus demandent une lumière adaptée et un arrosage lu à l’échelle du pot. Ficus elastica ouvre cet univers avec son feuillage coriace et sa croissance arborescente.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie documentaire de Ficus encore manquante", available: true },
   { slug: "syngonium", name: "Syngonium", eyebrow: "Nouvel univers", description: "Des jeunes feuilles en pointe de flèche aux formes adultes profondément divisées, les Syngonium changent de silhouette en grandissant. Découvrez leur lumière, leur support et les nombreuses panachures horticoles.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle d’une collection de Syngonium à ajouter", available: true },
   { slug: "hoya", name: "Hoya", eyebrow: "Nouvel univers", description: "Lianes épiphytes aux feuilles souvent charnues, les Hoya sont appréciés pour leurs formes variées et leurs floraisons en ombelles. Leur réussite repose sur la lumière, l’aération des racines et un arrosage mesuré.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle d’une collection de Hoya à ajouter", available: true },
   { slug: "sansevieria", name: "Sansevieria", eyebrow: "Nom horticole familier", description: "Toujours connues comme Sansevieria, ces plantes sont désormais rattachées au genre Dracaena. Leurs feuilles verticales, cylindriques ou panachées demandent beaucoup de lumière et peu d’eau.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle de plusieurs Sansevieria ou Dracaena à ajouter", available: true },
   { slug: "fougeres", name: "Fougères", eyebrow: "Frondes & textures", description: "Des fougères fines et retombantes aux frondes coriaces ou argentées, cet univers rassemble plusieurs familles botaniques. Chaque future fiche précisera les besoins propres à l’espèce documentée.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle d’une collection de fougères à ajouter", available: true },
 ] as const;
 
-export const plants = [{
+export const plants: PlantEntry[] = [{
   slug: "imperial-red", genre: "alocasia", genreLabel: "Alocasia", botanicalName: "Alocasia ‘Imperial Red’", displayName: "Imperial Red",
   subtitle: "Une Alocasia architecturale aux pétioles rouge bordeaux.", family: "Araceae", origin: "Hybride horticole tropical",
   taxonomy: { order: "Alismatales", family: "Araceae", genus: "Alocasia", species: "Hybride horticole", cultivar: "Imperial Red", commonNames: ["Oreille d’éléphant Imperial Red", "Alocasia à pétioles rouges"] },
@@ -183,7 +184,7 @@ export const plants = [{
   seo: { title: "Pilea peperomioides : entretien et plante à monnaie Lille", description: "Guide du Pilea peperomioides : lumière, arrosage, rejets, substrat et problèmes. Retrouvez la plante à monnaie chinoise à Lille.", keywords: ["Pilea peperomioides entretien", "plante monnaie chinoise Lille", "Pilea Lille", "Pilea animaux", "bouture Pilea"] },
   sources: [{ label: "Kew Science", url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:855664-1/general-information" }, { label: "NC State Extension", url: "https://plants.ces.ncsu.edu/plants/pilea-peperomioides/" }, { label: "Plantes Pour Tous — fiche consultée", url: "https://plantespourtous.co/products/pilea-peperomioides" }],
   publishedAt: "2026-08-06", updatedAt: "2026-08-06",
-}, ...newArrivalPlants, ...requestedPlants, ...afternoonPlants, ...encyclopediaV19ExpansionPlants, ...prayerPlants, ...encyclopediaV2Step1Plants, ...encyclopediaV2Step2Plants, cycasRevoluta, dicksoniaAntarctica, ...agaveFatsiaStrelitziaPlants] satisfies PlantEntry[];
+}, ...newArrivalPlants, ...requestedPlants, ...afternoonPlants, ...encyclopediaV19ExpansionPlants, ...prayerPlants, ...encyclopediaV2Step1Plants, ...encyclopediaV2Step2Plants, cycasRevoluta, dicksoniaAntarctica, ...agaveFatsiaStrelitziaPlants, ...encyclopediaP1Plants];
 
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);

@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
 import test from "node:test";
 import { plants } from "../lib/plants/catalog.ts";
+import { encyclopediaP1Routes } from "../lib/plants/encyclopedia-p1-expansion.ts";
 import { isPhotoProductionPlaceholder } from "../lib/plants/types.ts";
 
 async function render(pathname = "/") {
@@ -37,6 +38,42 @@ async function renderLab(pathname) {
     else process.env.JUNGLE_LAB_ENABLED = previous;
   }
 }
+
+test("P1 renders twelve canonical Golden Species pages without commercial schema", async () => {
+  for (const pathname of encyclopediaP1Routes) {
+    const response = await render(pathname);
+    assert.equal(response.status, 200, pathname);
+    const html = await response.text();
+    assert.equal((html.match(/<h1\b/gi) ?? []).length, 1, `${pathname}: H1`);
+    assert.match(html, /data-golden-species-v1=/i, `${pathname}: Golden Species`);
+    assert.match(html, new RegExp(`rel=["']canonical["'][^>]+https:\\/\\/jungle\\.tibaldo\\.fr${pathname.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`, "i"), `${pathname}: canonical`);
+    assert.match(html, /"@type":"Article"/i, `${pathname}: Article`);
+    assert.match(html, /"@type":"Thing"/i, `${pathname}: Thing`);
+    assert.match(html, /"@type":"FAQPage"/i, `${pathname}: FAQ`);
+    assert.match(html, /"@type":"BreadcrumbList"/i, `${pathname}: breadcrumb`);
+    assert.doesNotMatch(html, /"@type":"(?:Product|Offer)"/i, `${pathname}: commerce`);
+  }
+});
+
+test("P1 entries are discoverable from the eight existing Golden Group hubs", async () => {
+  const expected = {
+    alocasia: ["tandurusa", "melo", "mortfontanensis-polly"],
+    anthurium: ["luxurians", "wendlingeri"],
+    philodendron: ["hederaceum", "pink-princess"],
+    monstera: ["albo-variegata"],
+    ficus: ["elastica"],
+    hoya: ["carnosa"],
+    syngonium: ["podophyllum"],
+    sansevieria: ["trifasciata"],
+  };
+  for (const [genre, slugs] of Object.entries(expected)) {
+    const response = await render(`/plantes/${genre}`);
+    assert.equal(response.status, 200, genre);
+    const html = await response.text();
+    assert.match(html, /data-golden-group/i, `${genre}: Golden Group`);
+    for (const slug of slugs) assert.match(html, new RegExp(`href=["']/plantes/${genre}/${slug}["']`, "i"), `${genre}/${slug}`);
+  }
+});
 
 test("renders the homepage SEO signals and editorial content", async () => {
   const response = await render();
@@ -85,13 +122,13 @@ test("renders the substrates collection with local SEO metadata", async () => {
   assert.match(html, /src=["']\/substrats\/sphaigne-sechee-substrat-plantes-lille-v2\.png["']/i);
 });
 
-test("V20 renders every Monstera entry in one shared carousel", async () => {
+test("the shared carousel renders every Monstera entry after P1", async () => {
   const response = await render("/plantes/monstera");
   assert.equal(response.status, 200);
   const html = await response.text();
   assert.match(html, /class="genus-species-carousel shell"/);
-  assert.equal((html.match(/class="genus-carousel-card/g) ?? []).length, 11);
-  for (const slug of ["deliciosa", "thai-constellation", "esqueleto", "burle-marx-flame", "dubia", "obliqua", "siltepecana", "pinnatipartita", "standleyana"]) {
+  assert.equal((html.match(/class="genus-carousel-card/g) ?? []).length, 12);
+  for (const slug of ["deliciosa", "thai-constellation", "albo-variegata", "esqueleto", "burle-marx-flame", "dubia", "obliqua", "siltepecana", "pinnatipartita", "standleyana"]) {
     assert.match(html, new RegExp(`href="/plantes/monstera/${slug}"`));
   }
   assert.doesNotMatch(html, /<a[^>]*role="listitem"/);
@@ -815,7 +852,7 @@ test("renders Dicksonia, its hierarchy and the shared species hero fallback", as
   assert.match(speciesHtml, /rel=["']canonical["'][^>]+plantes\/dicksonia\/antarctica/i);
   assert.doesNotMatch(speciesHtml, /Dictyonia/i);
   const api = await (await render("/api/encyclopedie/plantes")).json();
-  assert.equal(api.length, 64);
+  assert.equal(api.length, 76);
   assert.ok(api.some((entry) => entry.encyclopediaSlug === "plantes/dicksonia/antarctica"));
 });
 
@@ -841,8 +878,8 @@ test("renders the Agave, Fatsia and five-species Strelitzia cluster", async () =
   assert.match(hub, /synonyme de S\. alba/i);
   assert.doesNotMatch(hub, /href=["']\/plantes\/strelitzia\/augusta/i);
   const api = await (await render("/api/v2/encyclopedie/plantes")).json();
-  assert.equal(api.length, 64);
-  assert.equal(new Set(api.map((entry) => entry.encyclopediaSlug)).size, 64);
+  assert.equal(api.length, 76);
+  assert.equal(new Set(api.map((entry) => entry.encyclopediaSlug)).size, 76);
 });
 
 test("final convergence renders one shared Golden Group system with honest genus media", async () => {
