@@ -45,7 +45,7 @@ for (const path of paths) {
 const redirects = {
   "/creation-boutique": "/coulisses", "/diagnostic-plante-lille": "/sos-plantes", "/traitement-thrips-lille": "/sos-plantes",
   "/conseils/thrips-plantes-interieur-lille": "/conseils/thrips-plantes-interieur", "/conseils/rempoter-plante-quand-comment": "/rempotage",
-  "/rempotage-monstera-lille": "/rempotage-plantes-lille", "/substrat-alocasia-lille": "/plantes/alocasia",
+  "/rempotage-plantes-lille": "/rempotage", "/rempotage-monstera-lille": "/rempotage", "/substrat-alocasia-lille": "/plantes/alocasia",
   "/livraison-fleurs-coupees-lille": "/fleurs-sur-commande-lille", "/bouquets-fleurs-livraison-lille": "/fleurs-sur-commande-lille",
 };
 for (const [source, destination] of Object.entries(redirects)) {

@@ -74,7 +74,7 @@ export default function AnthuriumGenusV2({ guide, editorials, plants }: { guide:
             advice={repotting.text}
             serviceTitle="Bar à rempotage · Tibaldo Jungle"
             serviceCopy="Confiez votre plante au Bar à rempotage du Studio."
-            href="/rempotage-plantes-lille"
+            href="/rempotage"
             cta="Découvrir le Bar à rempotage"
           />
         </div>

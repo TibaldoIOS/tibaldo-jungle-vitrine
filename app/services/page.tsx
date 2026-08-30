@@ -23,7 +23,7 @@ export default function ServicesPage() {
         {
           title: "Bar à rempotage",
           copy: "Intervenir concrètement sur les racines, le drainage, le volume du pot et la composition du substrat.",
-          href: "/rempotage-plantes-lille",
+          href: "/rempotage",
         },
         {
           title: "Livraison de plantes",

@@ -180,7 +180,7 @@ function AlocasiaCulture({ guide }: { guide: Guide }) {
       advice={substrate.text}
       serviceTitle="Bar à rempotage · Tibaldo Jungle"
       serviceCopy="Le Studio ajuste le contenant et le mélange à la motte réelle."
-      href="/rempotage-plantes-lille"
+      href="/rempotage"
       cta="Découvrir le Bar à rempotage"
     />
   </div>;
@@ -213,7 +213,7 @@ function ChlorophytumCulture({ guide }: { guide: Guide }) {
       advice={substrate.text}
       serviceTitle="Bar à rempotage · Tibaldo Jungle"
       serviceCopy="Un accompagnement simple pour conserver une touffe équilibrée."
-      href="/rempotage-plantes-lille"
+      href="/rempotage"
       cta="Découvrir le Bar à rempotage"
     />
   </div>;
@@ -263,7 +263,7 @@ function DicksoniaCulture({ plant }: { plant: PlantEntry }) {
       advice={plant.care.repotting}
       serviceTitle="Bar à rempotage · Tibaldo Jungle"
       serviceCopy="Le Studio vérifie stabilité, drainage et volume avant toute intervention."
-      href="/rempotage-plantes-lille"
+      href="/rempotage"
       cta="Découvrir le Bar à rempotage"
     />
   </div>;

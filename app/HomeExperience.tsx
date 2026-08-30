@@ -31,7 +31,7 @@ const universes = [
 
 const services = [
   { number: "01", title: "SOS Plantes", copy: "Comprendre les symptômes avant d’agir.", href: "/sos-plantes" },
-  { number: "02", title: "Rempotage", copy: "Observer les racines et ajuster le mélange.", href: "/rempotage-plantes-lille" },
+  { number: "02", title: "Rempotage", copy: "Observer les racines et ajuster le mélange.", href: "/rempotage" },
   { number: "03", title: "Livraison", copy: "Faire arriver votre plante à Lille et dans la MEL.", href: "/livraison-plantes-lille" },
   { number: "04", title: "Mur végétal naturel", copy: "Créer un paysage vivant sur mesure, avec ou sans entretien.", href: "/mur-vegetal-naturel-lille" },
 ];

@@ -161,7 +161,7 @@ export default function DeliciosaProfileNext() {
           <section className="species-next-section species-next-root-zone" id="racines" aria-labelledby="deliciosa-root-title" data-next-reveal>
             <header className="species-next-heading is-split"><div><p className="section-kicker">06 · Substrat & rempotage</p><h2 id="deliciosa-root-title">De l’air autour<br /><em>des racines.</em></h2></div><p>Les propriétés du milieu racinaire comptent davantage qu’une recette universelle en pourcentages.</p></header>
             <div className="species-next-root-grid">{rootZone.map((item) => <article key={item.number}><span>{item.number} · {item.label}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}</div>
-            <nav className="species-next-root-links" aria-label="Ressources sur le substrat et le rempotage"><Link href="/substrats">Comprendre les substrats <Arrow /></Link><Link href="/rempotage-plantes-lille">Découvrir le Bar à rempotage <Arrow /></Link></nav>
+            <nav className="species-next-root-links" aria-label="Ressources sur le substrat et le rempotage"><Link href="/substrats">Comprendre les substrats <Arrow /></Link><Link href="/rempotage">Découvrir le Bar à rempotage <Arrow /></Link></nav>
           </section>
 
           <section className="species-next-section species-next-diagnostic" id="diagnostic" aria-labelledby="deliciosa-diagnostic-title" data-next-reveal>

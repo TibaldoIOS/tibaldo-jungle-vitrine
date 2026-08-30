@@ -5,7 +5,7 @@ export const editorialLastModified = {
   "/plantes": "2026-08-17",
   "/fleurs": "2026-08-15",
   "/substrats": "2026-08-15",
-  "/rempotage": "2026-08-17",
+  "/rempotage": "2026-08-30",
   "/evenements": "2026-08-17",
   "/services": "2026-08-15",
   "/coulisses": "2026-08-15",

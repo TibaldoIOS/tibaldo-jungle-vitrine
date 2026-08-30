@@ -776,7 +776,8 @@ test("serves every retained SEO migration as one direct 301", async () => {
     ["/traitement-thrips-lille", "/sos-plantes"],
     ["/conseils/thrips-plantes-interieur-lille", "/conseils/thrips-plantes-interieur"],
     ["/conseils/rempoter-plante-quand-comment", "/rempotage"],
-    ["/rempotage-monstera-lille", "/rempotage-plantes-lille"],
+    ["/rempotage-plantes-lille", "/rempotage"],
+    ["/rempotage-monstera-lille", "/rempotage"],
     ["/substrat-alocasia-lille", "/plantes/alocasia"],
     ["/livraison-fleurs-coupees-lille", "/fleurs-sur-commande-lille"],
     ["/bouquets-fleurs-livraison-lille", "/fleurs-sur-commande-lille"],
@@ -786,6 +787,25 @@ test("serves every retained SEO migration as one direct 301", async () => {
     assert.equal(response.status, 301, source);
     assert.equal(new URL(response.headers.get("location"), "https://jungle.tibaldo.fr").pathname.replace(/\/$/, ""), destination);
   }
+});
+
+test("renders the Golden rempotage service landing with factual local schema", async () => {
+  const response = await render("/rempotage");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+
+  assert.equal((html.match(/<h1\b/gi) ?? []).length, 1);
+  assert.match(html, /Sous la surface/i);
+  assert.match(html, /Bar à rempotage gratuit à Lille/i);
+  assert.match(html, /3 place de l’Arbonnoise/i);
+  assert.match(html, /Terreau Signature offert/i);
+  assert.match(html, /rel=["']canonical["'][^>]+https:\/\/jungle\.tibaldo\.fr\/rempotage/i);
+  assert.match(html, /"@type":"Service"/i);
+  assert.match(html, /"@type":"Offer"/i);
+  assert.match(html, /"price":"0"/i);
+  assert.match(html, /"@type":"FAQPage"/i);
+  assert.match(html, /"@type":"BreadcrumbList"/i);
+  assert.doesNotMatch(html, /"@type":"Product"/i);
 });
 
 test("conserves the existing plant encyclopedia API contract", async () => {

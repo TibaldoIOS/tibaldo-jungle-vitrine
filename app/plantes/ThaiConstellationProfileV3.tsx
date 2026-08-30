@@ -56,7 +56,7 @@ export default function ThaiConstellationProfileV3({ plant, gallery }: { plant: 
         <div className="thai-v3-temperature" data-reveal><span>Plage de culture</span><strong>{plant.care.temperature}</strong></div>
         <article className="thai-v3-substrate" data-reveal><div><span>Substrat · composition matière</span><h3>Respirant avant tout.</h3><p>{plant.care.substrate}</p></div><div>{plant.filters.substrateTags.map((tag) => <span key={tag}>{tag}</span>)}</div><nav><Link href="/substrats">Comprendre les substrats <Arrow /></Link></nav></article>
         <div className="thai-v3-culture-rhythm">
-          <article data-reveal><span>Rempotage</span><h3>Quand</h3><p>Lorsque les racines occupent réellement le contenant.</p><h3>Comment</h3><p>{plant.care.repotting}</p><Link href="/rempotage-plantes-lille">Bar à rempotage <Arrow /></Link></article>
+          <article data-reveal><span>Rempotage</span><h3>Quand</h3><p>Lorsque les racines occupent réellement le contenant.</p><h3>Comment</h3><p>{plant.care.repotting}</p><Link href="/rempotage">Bar à rempotage <Arrow /></Link></article>
           <article data-reveal><span>Fertilisation</span><h3>En période lumineuse.</h3><p>{plant.care.fertilizing}</p></article>
           <article data-reveal><span>Multiplication</span><ol><li><b>01</b> Choisir un nœud actif</li><li><b>02</b> Bouturer ou diviser</li><li><b>03</b> Laisser la reprise s’établir</li></ol><p>{plant.care.propagation}</p></article>
         </div>
