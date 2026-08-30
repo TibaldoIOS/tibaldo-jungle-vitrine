@@ -57,16 +57,7 @@ const isDocumentaryImage = (image: PlantEntry["gallery"][number]) =>
   !/interprétation éditoriale|illustration générée|image générée/i.test(`${image.alt} ${image.caption}`);
 
 const firstGroupMedia = (genre: string, plants: readonly PlantEntry[]): GroupMedia | null => {
-  if (genre === "pilea") {
-    return {
-      src: "/pilea-planche-formes-textures.webp",
-      alt: "Planche éditoriale Pilea — diversité de formes et de textures foliaires",
-      caption: "Planche éditoriale contrôlée utilisée uniquement sur la BÊTA, dans l’attente d’une preuve de droits publics.",
-      width: 972,
-      height: 1619,
-      rights: "controlled-beta",
-    };
-  }
+  if (genre === "pilea") return null;
   const image = plants.flatMap((plant) => plant.gallery).find(isDocumentaryImage);
   return image ? { ...image, rights: image.license?.status === "verified" ? "verified" : "controlled-beta" } : null;
 };
@@ -126,7 +117,7 @@ export default function GoldenGenusHub({ genre, guide, plants, editorials = [], 
             <p className={`${hero.heroEyebrow} ${mobile.mobileEyebrow}`}>{label} · Univers botanique</p>
             <h1 className={mobile.mobileTitle} id={`golden-group-title-${genre}`}>Les <em>{title}.</em></h1>
             <p className={`${hero.heroIntroduction} ${mobile.mobileIntroduction}`}>{heroCopy}</p>
-            <p className={`${hero.heroNote} ${mobile.mobileNote}`}>{genre === "pilea" ? "Une planche éditoriale pour lire les formes et textures, pas un inventaire scientifique." : media ? "Une photographie documentaire contrôlée ouvre le groupe sans prétendre représenter toutes ses formes." : "Un manque de média reste explicite : aucun spécimen documentaire n’est fabriqué pour compléter la page."}</p>
+            <p className={`${hero.heroNote} ${mobile.mobileNote}`}>{media ? "Une photographie documentaire contrôlée ouvre le groupe sans prétendre représenter toutes ses formes." : "Un manque de média reste explicite : aucun spécimen documentaire n’est fabriqué pour compléter la page."}</p>
           </div>
         </div>
       </section>

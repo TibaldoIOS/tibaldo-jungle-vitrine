@@ -108,7 +108,7 @@ test("Deliciosa preserves its Owner hero and uses the canonical species body", a
   assert.match(profile, /<DeliciosaOwnerHero/);
   assert.doesNotMatch(profile, /<DeliciosaProfileNext/);
   assert.match(nextProfile, /ARCHIVE V6/);
-  assert.match(ownerHero, /monstera-deliciosa-feuilles\.jpg/);
+  assert.match(ownerHero, /final-media-v35\/monstera-deliciosa-jonathan-borba-pexels\.webp/);
   assert.match(ownerHero, /01 · Reconnaître · Encyclopédie végétale/);
   assert.match(nextProfile, /monstera-deliciosa-feuilles\.jpg/);
   assert.doesNotMatch(nextProfile, /botanix\.com/);

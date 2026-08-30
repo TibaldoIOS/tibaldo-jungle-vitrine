@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { existsSync } from "node:fs";
 import test from "node:test";
 import { plantFamilies, plants } from "../lib/plants/catalog.ts";
 import {
@@ -63,7 +64,10 @@ test("la table d’alias rassemble les intentions sans créer de route dupliqué
   }
 });
 
-test("chaque fiche P1 est substantielle, sourcée et utilise le média-gap honnête", () => {
+test("chaque fiche P1 est substantielle, sourcée et conserve un média honnête", () => {
+  const remainingGaps = new Set(["melo", "luxurians"]);
+  const publicAssetPath = (src: string) =>
+    src.startsWith("/media/") ? `public/${src.slice("/media/".length)}` : `public${src}`;
   for (const plant of encyclopediaP1Plants) {
     assert.ok(plant.description.length >= 2, `${plant.slug}: description`);
     assert.ok((plant.editorialSections?.length ?? 0) >= 3, `${plant.slug}: sections`);
@@ -71,10 +75,22 @@ test("chaque fiche P1 est substantielle, sourcée et utilise le média-gap honn�
     assert.ok(plant.comparisons.length >= 3, `${plant.slug}: comparaisons`);
     assert.ok(plant.faq.length >= 5, `${plant.slug}: FAQ`);
     assert.ok(plant.sources.length >= 2, `${plant.slug}: sources`);
-    assert.equal(plant.gallery[0].src, "/photo-reelle-a-venir.svg", `${plant.slug}: média`);
-    assert.equal(plant.gallery[0].license?.status, "media-gap", `${plant.slug}: droits`);
+    if (remainingGaps.has(plant.slug)) {
+      assert.equal(plant.gallery[0].src, "/photo-reelle-a-venir.svg", `${plant.slug}: média-gap`);
+      assert.equal(plant.gallery[0].license?.status, "media-gap", `${plant.slug}: droits gap`);
+    } else {
+      assert.ok(plant.gallery.length >= 1, `${plant.slug}: média connecté`);
+      for (const image of plant.gallery) {
+        assert.equal(image.license?.status, "verified", `${plant.slug}: droits vérifiés`);
+        assert.ok(image.license?.sourceUrl, `${plant.slug}: source`);
+        assert.ok(image.license?.licenseUrl, `${plant.slug}: licence`);
+        assert.equal(existsSync(publicAssetPath(image.src)), true, `${plant.slug}: fichier local`);
+      }
+    }
     assert.equal(plant.shopUrl, undefined, `${plant.slug}: aucune offre`);
   }
+  assert.equal(encyclopediaP1Plants.filter((plant) => plant.gallery[0].license?.status === "verified").length, 10);
+  assert.equal(encyclopediaP1Plants.filter((plant) => plant.gallery[0].license?.status === "media-gap").length, 2);
 });
 
 test("les hubs majeurs atteignent les nouveaux totaux sans créer de groupe", () => {

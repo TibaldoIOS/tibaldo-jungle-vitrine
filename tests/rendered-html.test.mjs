@@ -898,8 +898,9 @@ test("final convergence renders one shared Golden Group system with honest genus
   }
 
   const pilea = await (await render("/plantes/pilea")).text();
-  assert.match(pilea, /pilea-planche-formes-textures\.webp/i);
-  assert.match(pilea, /width=["']972["'][^>]*height=["']1619["']/i);
+  assert.match(pilea, /data-group-media-state=["']honest-gap["']/i);
+  assert.match(pilea, /data-pilea-public-media-gate=["']blocked-pending-rights-proof-or-owner-original["']/i);
+  assert.doesNotMatch(pilea, /pilea-planche-formes-textures\.webp/i);
   for (const genre of ["strelitzia", "chlorophytum", "alocasia", "dicksonia", "monstera", "anthurium"]) {
     const html = await (await render(`/plantes/${genre}`)).text();
     assert.doesNotMatch(html, /pilea-planche-formes-textures\.webp/i, genre);
@@ -1019,7 +1020,7 @@ test("V25 reconciles Thai Constellation into Golden Species without losing culti
 test("serves Deliciosa with the approved hero and the shared species body", async () => {
   const html = await (await render("/plantes/monstera/deliciosa")).text();
   assert.match(html, /species-next-hero/);
-  assert.match(html, /monstera-deliciosa-feuilles\.jpg/);
+  assert.match(html, /final-media-v35\/monstera-deliciosa-jonathan-borba-pexels\.webp/);
   assert.match(html, /data-golden-species-v(?:1|25)="monstera\/deliciosa"/);
   assert.match(html, /Statut, synonymes et observation|Taxonomie complète et synonymes/);
   assert.match(html, /plant-needs-visual-system/);
@@ -1099,7 +1100,7 @@ test("scopes the Deliciosa Owner hero without forking the shared species body", 
   assert.match(html, /Sommaire de la fiche plante/i);
   assert.doesNotMatch(html, /species-next-nav|species-next-diagnostic-index|species-next-comparison-matrix/i);
   assert.match(html, /"@type":"FAQPage"/i);
-  assert.match(html, /monstera-deliciosa-feuilles\.jpg/i);
+  assert.match(html, /final-media-v35\/monstera-deliciosa-jonathan-borba-pexels\.webp/i);
   assert.doesNotMatch(html, /botanix\.com/i);
   assert.match(html, /<meta name="robots" content="noindex, nofollow/i);
   assert.match(html, /rel=["']canonical["'][^>]+plantes\/monstera\/deliciosa/i);
@@ -1121,7 +1122,7 @@ test("scopes the Deliciosa Owner hero without forking the shared species body", 
 test("serves species hero photos directly without the vinext image optimizer", async () => {
   for (const [path, image] of [
     ["/plantes/cycas/revoluta", "/media/images/cycas-revoluta/cycas-revoluta-terrasse-tibaldo.webp"],
-    ["/plantes/monstera/deliciosa", "/monstera-deliciosa-feuilles.jpg"],
+    ["/plantes/monstera/deliciosa", "/media/final-media-v35/monstera-deliciosa-jonathan-borba-pexels.webp"],
     ["/plantes/anthurium/veitchii", "/media/anthurium-veitchii-king.jpg"],
   ]) {
     const html = await (await render(path)).text();

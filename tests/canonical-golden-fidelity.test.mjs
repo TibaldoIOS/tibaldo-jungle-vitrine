@@ -57,8 +57,9 @@ test("canonical Group mounts the locked Golden Group generation without a mosaic
   assert.match(source, /PlantCarePassport/);
   assert.match(source, /GenusSpeciesCarousel/);
   assert.match(source, /BotanicalFaq/);
-  assert.match(source, /pilea-planche-formes-textures\.webp/);
-  assert.match(source, /width:\s*972[^]*height:\s*1619/);
+  assert.doesNotMatch(source, /pilea-planche-formes-textures\.webp/);
+  assert.match(source, /blocked-pending-rights-proof-or-owner-original/);
+  assert.match(source, /data-group-media-state=\{media \? media\.rights : "honest-gap"\}/);
   assert.doesNotMatch(source, /heroMosaic|pilea-collection-especes|photo mosaic|photo-mosaic/i);
   assert.doesNotMatch(source, /genus-pilot-|anth-v2-|botanical-genus-hero|photo-genus-hero/i);
 

@@ -1,4 +1,5 @@
 import type { PlantEntry } from "./types";
+import { monsteraDeliciosaPexelsMedia } from "./final-media-completion-v1.ts";
 
 type Draft = {
   slug: string; genre: string; genreLabel: string; botanicalName: string; displayName: string;
@@ -10,6 +11,7 @@ type Draft = {
   lightText: string; watering: string; humidityText: string; temperature: string; substrate: string;
   growth: PlantEntry["growth"]; specimen: PlantEntry["specimen"]; filters: PlantEntry["filters"];
   comparisons: PlantEntry["comparisons"]; extraAdvice: string[]; source: { label: string; url: string };
+  imageLicense?: PlantEntry["gallery"][number]["license"];
 };
 
 const genericToxicity = { level: "toxique", summary: "À tenir hors de portée des enfants, chats et chiens.", details: "Comme de nombreuses Araceae, cette plante contient des cristaux d’oxalate de calcium irritants en cas de mastication ou d’ingestion." };
@@ -45,7 +47,7 @@ function makePlant(d: Draft): PlantEntry {
       { question: "Quand la rempoter ?", answer: "Lorsque les racines ont colonisé le pot et que le mélange sèche anormalement vite, plutôt que selon un calendrier fixe." },
     ],
     tibaldoAdvice: ["Observez la motte avant chaque arrosage : la surface seule ne raconte pas tout.", "Une lumière adaptée produit une croissance plus solide qu’un apport d’engrais excessif.", ...d.extraAdvice],
-    gallery: [{ src: d.image, alt: d.imageAlt, caption: d.imageCaption, width: d.imageWidth, height: d.imageHeight }],
+    gallery: [{ src: d.image, alt: d.imageAlt, caption: d.imageCaption, width: d.imageWidth, height: d.imageHeight, license: d.imageLicense }],
     seo: { title: `${d.botanicalName} : entretien et conseils`, description: `Guide de ${d.botanicalName} : lumière, arrosage, substrat, croissance, toxicité et entretien en intérieur à Lille.`, keywords: [`${d.botanicalName} entretien`, `${d.displayName} Lille`, `${d.genus} arrosage`, `${d.genus} substrat`] },
     sources: [d.source], publishedAt: "2026-08-15", updatedAt: "2026-08-15",
   };
@@ -67,7 +69,7 @@ export const requestedPlants = [
   makePlant({
     slug: "deliciosa", genre: "monstera", genreLabel: "Monstera", botanicalName: "Monstera deliciosa", displayName: "Deliciosa", subtitle: "La grande Monstera aux feuilles naturellement découpées et fenêtrées.", family: "Araceae", origin: "Mexique à Amérique centrale", genus: "Monstera", species: "Monstera deliciosa", cultivar: null,
     commonNames: ["Faux philodendron", "Plante gruyère", "Monstera"], habitat: "Liane hémiépiphyte des forêts tropicales humides, qui grimpe sur les troncs vers la lumière.", hybridization: "Espèce botanique.", synonyms: ["Philodendron pertusum hort."], description: ["Les feuilles juvéniles sont entières puis développent découpes et perforations en gagnant maturité, lumière et support.", "Un tuteur stable et une lumière vive permettent d’obtenir un port plus vertical et des feuilles plus grandes."],
-    image: "/monstera-deliciosa-feuilles.jpg", imageAlt: "Feuilles réelles découpées et fenêtrées de Monstera deliciosa", imageCaption: "Feuillage mature de Monstera deliciosa.", imageWidth: 1200, imageHeight: 800,
+    image: monsteraDeliciosaPexelsMedia.src, imageAlt: monsteraDeliciosaPexelsMedia.alt, imageCaption: monsteraDeliciosaPexelsMedia.caption, imageWidth: monsteraDeliciosaPexelsMedia.width, imageHeight: monsteraDeliciosaPexelsMedia.height, imageLicense: monsteraDeliciosaPexelsMedia.license,
     light: 4, water: 2, humidity: 3, difficulty: 2, lightText: "Lumière vive indirecte, avec éventuellement un soleil doux après acclimatation.", watering: "Laisser sécher plusieurs centimètres du mélange puis arroser complètement et égoutter.", humidityText: "Une humidité moyenne suffit ; la stabilité compte davantage que les vaporisations.", temperature: "18 à 28 °C, sans froid durable sous 15 °C.", substrate: "Mélange aroïdes grossier et respirant dans un pot percé.",
     specimen: { observedHeight: "Jusqu’à plusieurs mètres avec support", note: "La taille des feuilles dépend fortement de la lumière et de la possibilité de grimper." }, growth: { adultSize: "Grande liane d’intérieur", speed: "Rapide en conditions lumineuses", habit: "Grimpant et hémiépiphyte" }, filters: aroidFilters(false, "rapide"), comparisons: [{ name: "Monstera borsigiana", difference: "Nom horticole encore utilisé, mais généralement traité dans Monstera deliciosa." }, { name: "Rhaphidophora tetrasperma", difference: "Feuilles plus petites, découpées sans perforations internes typiques." }], extraAdvice: ["Fixez le dos de la tige contre le support afin que les racines aériennes puissent s’y ancrer."], source: { label: "Kew Science — Monstera deliciosa", url: "https://powo.science.kew.org/results?q=Monstera%20deliciosa" },
   }),

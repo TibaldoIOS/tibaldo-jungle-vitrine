@@ -1,4 +1,5 @@
 import type { PlantEntry } from "./types";
+import { p1VerifiedMediaByRoute } from "./final-media-completion-v1.ts";
 
 type P1PlantDraft = Omit<PlantEntry, "gallery" | "mediaNeeds" | "publishedAt" | "updatedAt">;
 
@@ -976,7 +977,7 @@ const dracaenaTrifasciata = withHonestMediaGap({
   ],
 });
 
-export const encyclopediaP1Plants = [
+const encyclopediaP1Drafts = [
   alocasiaTandurusa,
   alocasiaMelo,
   alocasiaPolly,
@@ -990,6 +991,13 @@ export const encyclopediaP1Plants = [
   syngoniumPodophyllum,
   dracaenaTrifasciata,
 ] satisfies PlantEntry[];
+
+export const encyclopediaP1Plants = encyclopediaP1Drafts.map((plant) => {
+  const gallery = p1VerifiedMediaByRoute[`${plant.genre}/${plant.slug}`];
+  return gallery
+    ? { ...plant, gallery, mediaNeeds: undefined, updatedAt: publicationDate }
+    : plant;
+});
 
 export const encyclopediaP1Routes = encyclopediaP1Plants.map(
   (plant) => `/plantes/${plant.genre}/${plant.slug}`,

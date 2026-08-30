@@ -14,10 +14,10 @@ export default function DeliciosaOwnerHero() {
       <Image
         unoptimized
         className="species-next-hero-image"
-        src="/monstera-deliciosa-feuilles.jpg"
+        src="/media/final-media-v35/monstera-deliciosa-jonathan-borba-pexels.webp"
         alt="Feuilles adultes découpées et fenêtrées de Monstera deliciosa"
-        width="1800"
-        height="2700"
+        width="1600"
+        height="2400"
         loading="eager"
         fetchPriority="high"
         decoding="async"
