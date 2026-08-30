@@ -7,6 +7,7 @@ import PlantFamilyPage, {
 } from "../../famille/[family]/page";
 import { isEditorialPlaceholder, isInternalPhotoProductionCopy, isPhotoProductionPlaceholder } from "@/lib/plants/types";
 import { deliciosaNextFaq } from "@/lib/plants/deliciosa-next";
+import { betaOnlyRobots } from "@/lib/deployment-mode";
 
 type Props = { params: Promise<{ genre: string; slug: string }> };
 
@@ -63,7 +64,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     keywords: plant.seo.keywords,
     alternates: { canonical: url },
-    robots: { index: false, follow: false, nocache: true },
+    ...(betaOnlyRobots ? { robots: betaOnlyRobots } : {}),
     openGraph: {
       type: "article",
       locale: "fr_FR",

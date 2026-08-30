@@ -1,6 +1,7 @@
 /** Cloudflare Worker entry point for the vinext-starter template. */
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
+import { isBetaJungleDeployment } from "../lib/deployment-mode";
 
 interface Env {
   ASSETS: Fetcher;
@@ -19,7 +20,7 @@ interface ExecutionContext {
   passThroughOnException(): void;
 }
 
-const BETA_CONTENT_SECURITY_POLICY = [
+const CONTENT_SECURITY_POLICY = [
   "default-src 'self'",
   "base-uri 'self'",
   "object-src 'none'",
@@ -51,15 +52,17 @@ function getControlledMediaAssetPath(pathname: string): string | null {
   return `/${relativePath}`;
 }
 
-function withBetaHeaders(request: Request, response: Response): Response {
+function withDeploymentHeaders(request: Request, response: Response): Response {
   const { pathname } = new URL(request.url);
   const headers = new Headers(response.headers);
-  headers.set("X-Robots-Tag", "noindex, nofollow");
+  if (isBetaJungleDeployment) {
+    headers.set("X-Robots-Tag", "noindex, nofollow");
+  }
   headers.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
   headers.set("X-Content-Type-Options", "nosniff");
   headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
   headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=(), payment=(), usb=()");
-  headers.set("Content-Security-Policy", BETA_CONTENT_SECURITY_POLICY);
+  headers.set("Content-Security-Policy", CONTENT_SECURITY_POLICY);
 
   // Stable, non-fingerprinted editorial media may change between BETA reviews,
   // so cache it for one day rather than indefinitely. Hashed application assets
@@ -94,25 +97,25 @@ const worker = {
     // Sites may dispatch files that physically exist in the static bundle
     // before the Worker runs. Public editorial media therefore uses a stable
     // virtual prefix: the request reaches the Worker, which fetches the
-    // original bundled asset and applies the BETA MIME/cache/security policy.
+    // original bundled asset and applies the deployment MIME/cache/security policy.
     const controlledMediaAssetPath = getControlledMediaAssetPath(url.pathname);
     if (url.pathname.startsWith(CONTROLLED_MEDIA_PREFIX)) {
-      if (!controlledMediaAssetPath) return withBetaHeaders(request, new Response("Not found", { status: 404 }));
+      if (!controlledMediaAssetPath) return withDeploymentHeaders(request, new Response("Not found", { status: 404 }));
 
       const assetUrl = new URL(controlledMediaAssetPath, request.url);
       const assetRequest = new Request(assetUrl, request);
-      return withBetaHeaders(request, await env.ASSETS.fetch(assetRequest));
+      return withDeploymentHeaders(request, await env.ASSETS.fetch(assetRequest));
     }
 
     // With run_worker_first enabled, hashed application bundles reach this
     // Worker before the asset dispatcher. Serve them explicitly so CSS and
     // hydration modules cannot fall through to the application router.
     if (url.pathname.startsWith("/assets/") || url.pathname.startsWith("/_next/static/")) {
-      return withBetaHeaders(request, await env.ASSETS.fetch(request));
+      return withDeploymentHeaders(request, await env.ASSETS.fetch(request));
     }
 
     if (STATIC_ASSET_PATTERN.test(url.pathname)) {
-      return withBetaHeaders(request, await env.ASSETS.fetch(request));
+      return withDeploymentHeaders(request, await env.ASSETS.fetch(request));
     }
 
     if (url.pathname === "/_vinext/image") {
@@ -124,11 +127,11 @@ const worker = {
           return result.response();
         },
       }, allowedWidths);
-      return withBetaHeaders(request, response);
+      return withDeploymentHeaders(request, response);
     }
 
     const response = await handler.fetch(request, env, ctx);
-    return withBetaHeaders(request, response);
+    return withDeploymentHeaders(request, response);
   },
 };
 

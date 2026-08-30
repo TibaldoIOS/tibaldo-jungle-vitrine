@@ -104,12 +104,14 @@ test("Thai, Bananiers and Family routes cannot remount a parallel legacy generat
 
 test("BETA remains globally noindex, nofollow and closed to sitemap discovery", () => {
   const layout = read("app/layout.tsx");
+  const mode = read("lib/deployment-mode.ts");
   const robots = read("app/robots.txt/route.ts");
   const sitemap = read("app/sitemap.xml/route.ts");
 
-  assert.match(layout, /index:\s*false/);
-  assert.match(layout, /follow:\s*false/);
-  assert.match(layout, /nocache:\s*true/);
+  assert.match(layout, /betaOnlyRobots/);
+  assert.match(mode, /index:\s*false/);
+  assert.match(mode, /follow:\s*false/);
+  assert.match(mode, /nocache:\s*true/);
   assert.match(robots, /Disallow:\s*\//i);
   assert.match(sitemap, /status:\s*404/);
 });

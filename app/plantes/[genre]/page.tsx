@@ -5,6 +5,7 @@ import { familyGuides } from "@/lib/plants/family-guides";
 import { familyEditorials } from "@/lib/plants/family-editorials";
 import { isEditorialPlaceholder, isInternalPhotoProductionCopy, isPhotoProductionPlaceholder } from "@/lib/plants/types";
 import GoldenGenusHub, { type GoldenGroupGuide } from "../GoldenGenusHub";
+import { betaOnlyRobots } from "@/lib/deployment-mode";
 
 type Props = { params: Promise<{ genre: string }> };
 type GuideKey = keyof typeof familyGuides;
@@ -27,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!guide) return {};
   const title = genre === "anthurium" ? "Anthurium : entretien, espèces et variétés | TIBALDO Jungle" : `${guide.name} : entretien, espèces et variétés`;
   const image = firstDocumentaryImage(genre);
-  return { title, description: `Guide complet des ${guide.name} : taxonomie, lumière, arrosage, humidité, substrat, rempotage, espèces et cultivars documentés.`, keywords: [`${guide.name}`, `${guide.name} entretien`, `${guide.name} lumière`, `${guide.name} arrosage`, `${guide.name} variétés`], alternates: { canonical: `/plantes/${genre}` }, robots: { index: false, follow: false, nocache: true }, openGraph: { siteName: "TIBALDO Jungle", title, description: guide.lead, url: `/plantes/${genre}`, type: "article", images: image ? [{ url: image.src, width: image.width, height: image.height, alt: image.alt }] : undefined } };
+  return { title, description: `Guide complet des ${guide.name} : taxonomie, lumière, arrosage, humidité, substrat, rempotage, espèces et cultivars documentés.`, keywords: [`${guide.name}`, `${guide.name} entretien`, `${guide.name} lumière`, `${guide.name} arrosage`, `${guide.name} variétés`], alternates: { canonical: `/plantes/${genre}` }, ...(betaOnlyRobots ? { robots: betaOnlyRobots } : {}), openGraph: { siteName: "TIBALDO Jungle", title, description: guide.lead, url: `/plantes/${genre}`, type: "article", images: image ? [{ url: image.src, width: image.width, height: image.height, alt: image.alt }] : undefined } };
 }
 
 export default async function Page({ params }: Props) {

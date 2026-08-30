@@ -4,6 +4,7 @@ import "./globals.css";
 import ConversionDock from "./ConversionDock";
 import ConversionTracker from "./ConversionTracker";
 import { BetaEnvironmentBanner } from "./BetaEnvironmentBanner";
+import { betaOnlyRobots } from "@/lib/deployment-mode";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,16 +28,7 @@ export const metadata: Metadata = {
     "studio végétal Lille",
   ],
   alternates: { canonical: "/" },
-  robots: {
-    index: false,
-    follow: false,
-    nocache: true,
-    googleBot: {
-      index: false,
-      follow: false,
-      noimageindex: true,
-    },
-  },
+  ...(betaOnlyRobots ? { robots: betaOnlyRobots } : {}),
   openGraph: {
     type: "website",
     locale: "fr_FR",

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { plants } from "@/lib/plants/catalog";
 import GoldenGenusHub, { type GoldenGroupGuide } from "../GoldenGenusHub";
+import { betaOnlyRobots } from "@/lib/deployment-mode";
 
 const origin = "https://jungle.tibaldo.fr";
 const bananaPlants = plants.filter((plant) => plant.genre === "musa" || plant.genre === "ensete");
@@ -16,7 +17,7 @@ const guide: GoldenGroupGuide = {
   sources: [{ label: "Kew Science — Musa", url: "https://powo.science.kew.org/" }, { label: "Kew Science — Ensete", url: "https://powo.science.kew.org/" }],
 };
 
-export const metadata: Metadata = { title: "Bananiers : entretien, Musa, Ensete et hivernage", description: "Guide des bananiers : différences entre Musa et Ensete, culture en pot ou pleine terre, eau, substrat, vent, froid et hivernage dans le Nord.", alternates: { canonical: "/plantes/bananiers" }, robots: { index: false, follow: false, nocache: true }, openGraph: { title: "Bananiers : comprendre Musa et Ensete", description: "Culture, entretien, rusticité et comparaison de bananiers documentés par Jungle.", type: "article" } };
+export const metadata: Metadata = { title: "Bananiers : entretien, Musa, Ensete et hivernage", description: "Guide des bananiers : différences entre Musa et Ensete, culture en pot ou pleine terre, eau, substrat, vent, froid et hivernage dans le Nord.", alternates: { canonical: "/plantes/bananiers" }, ...(betaOnlyRobots ? { robots: betaOnlyRobots } : {}), openGraph: { title: "Bananiers : comprendre Musa et Ensete", description: "Culture, entretien, rusticité et comparaison de bananiers documentés par Jungle.", type: "article" } };
 
 export default function BananiersPage() {
   const jsonLd = { "@context": "https://schema.org", "@graph": [{ "@type": "CollectionPage", "@id": `${origin}/plantes/bananiers#page`, name: "Bananiers : Musa et Ensete", url: `${origin}/plantes/bananiers`, description: metadata.description }, { "@type": "ItemList", numberOfItems: bananaPlants.length, itemListElement: bananaPlants.map((plant, index) => ({ "@type": "ListItem", position: index + 1, name: plant.botanicalName, url: `${origin}/plantes/${plant.genre}/${plant.slug}` })) }, { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Accueil", item: origin }, { "@type": "ListItem", position: 2, name: "Plantes", item: `${origin}/plantes` }, { "@type": "ListItem", position: 3, name: "Bananiers", item: `${origin}/plantes/bananiers` }] }] };

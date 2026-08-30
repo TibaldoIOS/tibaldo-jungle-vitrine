@@ -1,11 +1,19 @@
 import vinext from "vinext";
 import { defineConfig } from "vite";
-import hostingConfig from "./.openai/hosting.json";
+import betaHostingConfig from "./.openai/hosting.json";
+import publicHostingConfig from "./.openai/hosting.public.json";
 import { sites } from "./build/sites-vite-plugin";
 
 const SITE_CREATOR_PLACEHOLDER_DATABASE_ID =
   "00000000-0000-4000-8000-000000000000";
 
+const publicDeployment = process.env.NEXT_PUBLIC_JUNGLE_ENV === "public";
+const hostingConfig = publicDeployment
+  ? publicHostingConfig
+  : betaHostingConfig;
+const hostingConfigFile = publicDeployment
+  ? "hosting.public.json"
+  : "hosting.json";
 const { d1, r2 } = hostingConfig;
 
 // macOS Seatbelt blocks FSEvents, so Codex previews need polling for HMR.
@@ -14,7 +22,7 @@ const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === "seatbelt";
 const localBindingConfig = {
   main: "./worker/index.ts",
   compatibility_flags: ["nodejs_compat"],
-  // Route static assets through the Worker so BETA security, MIME and cache
+  // Route static assets through the Worker so deployment security, MIME and cache
   // headers are applied consistently instead of bypassing the application
   // response policy at the asset dispatcher.
   assets: { binding: "ASSETS", run_worker_first: true },
@@ -57,7 +65,7 @@ export default defineConfig(async () => {
     },
     plugins: [
       vinext(),
-      sites(),
+      sites(hostingConfigFile),
       cloudflare({
         viteEnvironment: { name: "rsc", childEnvironments: ["ssr"] },
         inspectorPort: false,

@@ -3,6 +3,15 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 import { shopUrl } from "../lib/environment.ts";
+import { resolveJungleDeploymentMode } from "../lib/deployment-mode.ts";
+
+test("deployment mode fails closed unless PUBLIC is explicit", () => {
+  assert.equal(resolveJungleDeploymentMode(undefined), "beta");
+  assert.equal(resolveJungleDeploymentMode(""), "beta");
+  assert.equal(resolveJungleDeploymentMode("PUBLIC"), "beta");
+  assert.equal(resolveJungleDeploymentMode("staging"), "beta");
+  assert.equal(resolveJungleDeploymentMode("public"), "public");
+});
 
 test("Jungle beta sends shop CTAs exclusively to Shop beta", async () => {
   assert.equal(shopUrl(), "https://beta-shop.tibaldo.fr/");
@@ -59,13 +68,17 @@ test("the /plantes Owner video is bounded, silent, and served by the controlled 
 });
 
 test("Jungle beta is globally marked and excluded from indexing", async () => {
-  const [layout, robots, sitemap] = await Promise.all([
+  const [layout, mode, robots, sitemap] = await Promise.all([
     readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../lib/deployment-mode.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/robots.txt/route.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/sitemap.xml/route.ts", import.meta.url), "utf8"),
   ]);
   assert.match(layout, /BetaEnvironmentBanner/);
-  assert.match(layout, /index:\s*false/);
+  assert.match(layout, /betaOnlyRobots/);
+  assert.match(mode, /value === "public" \? "public" : "beta"/);
+  assert.match(mode, /index:\s*false/);
+  assert.match(mode, /follow:\s*false/);
   assert.match(robots, /Disallow: \/|noindex, nofollow/);
   assert.match(sitemap, /status:\s*404/);
 });
