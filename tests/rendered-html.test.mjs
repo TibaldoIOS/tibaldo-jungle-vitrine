@@ -193,6 +193,36 @@ test("V23 keeps the Veitchii Golden Species prototype isolated, compact and non-
   assert.match(canonical, /data-golden-species-v25="anthurium\/veitchii"/);
 });
 
+test("V25.1 exposes only the two corrected Owner references with the reconstructed contracts", async () => {
+  const speciesResponse = await renderLab("/lab/v25-1/golden-species/anthurium-veitchii");
+  assert.equal(speciesResponse.status, 200);
+  const species = await speciesResponse.text();
+  assert.match(species, /data-corrected-golden-species="anthurium-veitchii"/);
+  assert.match(species, /Lab V25\.1/);
+  assert.match(species, /Portail botanique · 1,65 seconde/);
+  assert.match(species, /Les cinq repères essentiels/);
+  assert.match(species, /Une vue vérifiée/);
+  assert.match(species, /name="robots" content="noindex, nofollow, nocache"/);
+
+  const groupResponse = await renderLab("/lab/v25-1/golden-hub/pilea");
+  assert.equal(groupResponse.status, 200);
+  const group = await groupResponse.text();
+  assert.match(group, /data-corrected-golden-group="pilea"/);
+  assert.match(group, /pilea-planche-formes-textures\.webp/);
+  assert.match(group, /width="972" height="1619"/);
+  assert.match(group, /Formes &amp; textures/);
+  assert.doesNotMatch(group, /pilea-collection-especes\.webp/);
+  assert.match(group, /name="robots" content="noindex, nofollow, nocache"/);
+
+  const component = readFileSync(new URL("../app/lab/v25-1/_components/CorrectedGoldenReferences.tsx", import.meta.url), "utf8");
+  const css = readFileSync(new URL("../app/lab/v23/_golden-pilea/GoldenPilea.module.css", import.meta.url), "utf8");
+  assert.match(css, /border-radius:\s*48% 48% 3px 3px \/ 16% 16% 3px 3px/);
+  assert.match(css, /transform:\s*scaleX\(1\)/);
+  assert.match(css, /transform-origin:\s*right center/);
+  assert.match(css, /transition:\s*transform 1\.65s \.18s cubic-bezier\(\.77, 0, \.18, 1\)/);
+  assert.doesNotMatch(component, /clip-path|pilea-collection-especes/);
+});
+
 test("V23 reuses the bounded V19 reveal with an accessible reduced-motion fallback", () => {
   const css = readFileSync(
     new URL("../app/lab/v23/anthurium/veitchii/VeitchiiGoldenV23.module.css", import.meta.url),
