@@ -4,7 +4,12 @@ import "./globals.css";
 import ConversionDock from "./ConversionDock";
 import ConversionTracker from "./ConversionTracker";
 import { BetaEnvironmentBanner } from "./BetaEnvironmentBanner";
-import { betaOnlyRobots } from "@/lib/deployment-mode";
+import SafeLinkMaskLayer from "./SafeLinkMaskLayer";
+import { SHOP_ORIGIN } from "@/lib/environment";
+import {
+  betaOnlyRobots,
+  isPublicJungleDeployment,
+} from "@/lib/deployment-mode";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -76,6 +81,9 @@ export default function RootLayout({
         <div id="contenu-principal" tabIndex={-1}>{children}</div>
         <ConversionDock />
         <ConversionTracker />
+        {isPublicJungleDeployment ? (
+          <SafeLinkMaskLayer shopOrigin={SHOP_ORIGIN} />
+        ) : null}
       </body>
     </html>
   );
