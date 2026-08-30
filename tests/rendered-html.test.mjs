@@ -222,7 +222,8 @@ test("V25.1 exposes only the two corrected Owner references with the reconstruct
   assert.match(css, /transition:\s*transform 1\.65s \.18s cubic-bezier\(\.77, 0, \.18, 1\)/);
   assert.doesNotMatch(component, /clip-path|pilea-collection-especes/);
   const correctedCss = readFileSync(new URL("../app/lab/v25-1/_components/CorrectedGoldenReferences.module.css", import.meta.url), "utf8");
-  assert.match(correctedCss, /plant-section-nav a i\) \{ display: none; \}/);
+  assert.match(correctedCss, /plant-section-nav a i/);
+  assert.match(correctedCss, /plant-section-nav a svg\) \{ display: none; \}/);
 });
 
 test("V23 reuses the bounded V19 reveal with an accessible reduced-motion fallback", () => {
