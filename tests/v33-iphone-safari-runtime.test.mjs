@@ -21,6 +21,16 @@ test("honest-media-gap hero avoids Safari's negative compositor stack", () => {
   );
 });
 
+test("Golden Rempotage hero keeps every full-bleed layer in Safari's positive compositor stack", () => {
+  const css = read("app/rempotage/rempotage.module.css");
+
+  assert.doesNotMatch(css, /z-index:\s*-/);
+  assert.match(css, /\.heroImage\{z-index:0;/);
+  assert.match(css, /\.heroShade\{position:absolute;z-index:1;/);
+  assert.match(css, /\.heroContent\{position:relative;z-index:2;/);
+  assert.match(css, /\.heroFacts\{position:absolute;z-index:2;/);
+});
+
 test("Golden Species reveals do not preallocate filtered offscreen layers", () => {
   const css = read("app/plantes/GoldenBaseline.module.css");
   const rule = css.match(
