@@ -1,3 +1,5 @@
+.speciesScope :global(.plant-section-nav a i) { display: none; }
+
 .plusMark {
   position: relative;
   display: inline-block;

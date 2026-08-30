@@ -59,7 +59,7 @@ export function CorrectedGoldenSpeciesVeitchii({ plant }: { plant: PlantEntry })
   const controlledImage = plant.gallery.find((image) => !image.src.includes("photo-reelle-a-venir"));
 
   return (
-    <main className={`${golden.page} editorial-page plant-profile-page ${golden.speciesHero}`} data-corrected-golden-species="anthurium-veitchii">
+    <main className={`${golden.page} ${styles.speciesScope} editorial-page plant-profile-page ${golden.speciesHero}`} data-corrected-golden-species="anthurium-veitchii">
       <ScrollReveal />
       <PlantSpeciesHero plant={plant} />
       <PrototypeFlag kind="Species" />
