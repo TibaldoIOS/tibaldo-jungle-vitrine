@@ -226,6 +226,30 @@ test("V25.1 exposes only the two corrected Owner references with the reconstruct
   assert.match(correctedCss, /plant-section-nav a svg\) \{ display: none; \}/);
 });
 
+test("V25.2 refines only the isolated Pilea Golden Group contract", async () => {
+  const response = await renderLab("/lab/v25-2/golden-hub/pilea");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /data-corrected-golden-group-v25-2="pilea"/);
+  assert.match(html, /Lab V25\.2/);
+  assert.match(html, /pilea-planche-formes-textures\.webp/);
+  assert.match(html, /width="972" height="1619"/);
+  assert.match(html, /01[\s\S]*Comprendre le groupe[\s\S]*07[\s\S]*Continuer au Studio/);
+  assert.doesNotMatch(html, /pilea-collection-especes\.webp/);
+  assert.match(html, /name="robots" content="noindex, nofollow, nocache"/);
+
+  const source = readFileSync(new URL("../app/lab/v25-2/_components/RefinedGoldenGroup.tsx", import.meta.url), "utf8");
+  const css = readFileSync(new URL("../app/lab/v25-2/_components/RefinedGoldenGroup.module.css", import.meta.url), "utf8");
+  assert.match(source, /data-hub-chapter-marker/);
+  assert.match(css, /--hub-body-size:\s*17px/);
+  assert.match(css, /\.plateHero \{ min-height: 700px/);
+  assert.match(css, /\.groupSpecies :global\(\.genus-species-carousel\) \{ padding-top: 34px; padding-bottom: 0; \}/);
+
+  const v251Species = await (await renderLab("/lab/v25-1/golden-species/anthurium-veitchii")).text();
+  assert.match(v251Species, /data-corrected-golden-species="anthurium-veitchii"/);
+  assert.match(v251Species, /Portail botanique · 1,65 seconde/);
+});
+
 test("V23 reuses the bounded V19 reveal with an accessible reduced-motion fallback", () => {
   const css = readFileSync(
     new URL("../app/lab/v23/anthurium/veitchii/VeitchiiGoldenV23.module.css", import.meta.url),
