@@ -250,6 +250,34 @@ test("V25.2 refines only the isolated Pilea Golden Group contract", async () => 
   assert.match(v251Species, /Portail botanique · 1,65 seconde/);
 });
 
+test("V25.3 presents the controlled Pilea plate as one landscape editorial Hero", async () => {
+  const response = await renderLab("/lab/v25-3/golden-hub/pilea");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /data-golden-group-v25-3="pilea"/);
+  assert.match(html, /Lab V25\.3/);
+  assert.match(html, /pilea-planche-formes-textures\.webp/);
+  assert.match(html, /width="972" height="1619"/);
+  assert.match(html, /Les Pilea forment un genre de la famille des Urticaceae/);
+  assert.match(html, /culture en intérieur[\s\S]*lumière douce à vive/);
+  assert.match(html, /hiver moins lumineux ralentit notamment le Pilea peperomioides/);
+  assert.doesNotMatch(html, /pilea-collection-especes\.webp/);
+  assert.match(html, /name="robots" content="noindex, nofollow, nocache"/);
+
+  const source = readFileSync(new URL("../app/lab/v25-3/_components/FinalGoldenGroup.tsx", import.meta.url), "utf8");
+  const css = readFileSync(new URL("../app/lab/v25-3/_components/FinalGoldenGroup.module.css", import.meta.url), "utf8");
+  assert.match(source, /data-hero-editorial-copy/);
+  assert.match(source, /RefinedGoldenGroup\.module\.css/);
+  assert.match(css, /mask-image:\s*linear-gradient/);
+  assert.match(css, /object-fit:\s*cover/);
+  assert.doesNotMatch(source, /pilea-collection-especes|canvas|webgl/i);
+
+  const v252 = await (await renderLab("/lab/v25-2/golden-hub/pilea")).text();
+  assert.match(v252, /data-corrected-golden-group-v25-2="pilea"/);
+  const goldenSpecies = await (await renderLab("/lab/v25-1/golden-species/anthurium-veitchii")).text();
+  assert.match(goldenSpecies, /data-corrected-golden-species="anthurium-veitchii"/);
+});
+
 test("V23 reuses the bounded V19 reveal with an accessible reduced-motion fallback", () => {
   const css = readFileSync(
     new URL("../app/lab/v23/anthurium/veitchii/VeitchiiGoldenV23.module.css", import.meta.url),
