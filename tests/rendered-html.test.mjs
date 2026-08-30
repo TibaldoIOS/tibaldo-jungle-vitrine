@@ -480,7 +480,7 @@ test("serves public editorial media through the controlled BETA route", async ()
   const { default: worker } = await import(workerUrl.href);
   let requestedAssetPath = "";
   const response = await worker.fetch(
-    new Request("https://beta-jungle.tibaldo.fr/media/anthurium-pallidiflorum-cascade.webp"),
+    new Request("https://beta-jungle.tibaldo.fr/media/final-media-v35/monstera-deliciosa-jonathan-borba-pexels.webp"),
     {
       ASSETS: {
         fetch: async (request) => {
@@ -493,7 +493,7 @@ test("serves public editorial media through the controlled BETA route", async ()
     },
     { waitUntil() {}, passThroughOnException() {} },
   );
-  assert.equal(requestedAssetPath, "/anthurium-pallidiflorum-cascade.webp");
+  assert.equal(requestedAssetPath, "/final-media-v35/monstera-deliciosa-jonathan-borba-pexels.webp");
   assert.equal(response.status, 200);
   assert.equal(response.headers.get("content-type"), "image/webp");
   assert.equal(

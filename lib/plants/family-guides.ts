@@ -151,7 +151,7 @@ export const familyGuides = {
     sources: [{ label: "Kew Science — Philodendron", url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:326132-2/general-information" }, { label: "NC State Extension — Philodendron", url: "https://plants.ces.ncsu.edu/plants/philodendron/" }],
   },
   epipremnum: {
-    name: "Epipremnum", image: "/media/epipremnum-marble-queen.webp", imageAlt: "Epipremnum aureum Marble Queen en suspension aux feuilles vertes marbrées de crème", heroSubtitle: "Les célèbres pothos sont des lianes endurantes qui changent radicalement de feuillage lorsqu’on leur offre lumière et support.",
+    name: "Epipremnum", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie documentaire vérifiée d’Epipremnum à documenter", heroSubtitle: "Les célèbres pothos sont des lianes endurantes qui changent radicalement de feuillage lorsqu’on leur offre lumière et support.",
     care: { difficulty: 1, light: 3, water: 2, humidity: 2, substrate: "Léger, drainant et tolérant", nutrition: "Faible à modérée en croissance" },
     lead: "Souvent vendus sous le nom de pothos, les Epipremnum sont des plantes grimpantes faciles à vivre. Leur forme juvénile retombante est familière, mais un sujet qui grimpe peut produire des feuilles bien plus grandes et parfois découpées.", origin: "Les Epipremnum appartiennent aux Araceae et sont originaires des régions tropicales d’Asie et du Pacifique. Ils utilisent leurs racines aériennes pour s’accrocher et monter vers la lumière.",
     facts: [{ label: "Exposition", value: "Moyenne à vive" }, { label: "Température", value: "17–29 °C" }, { label: "Arrosage", value: "Après séchage partiel" }, { label: "Difficulté", value: "Très accessible" }],
@@ -161,7 +161,7 @@ export const familyGuides = {
     sources: [{ label: "NC State Extension — distinction avec Philodendron", url: "https://plants.ces.ncsu.edu/plants/philodendron-hederaceum/" }, { label: "Kew Science — Araceae", url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30000216-2/general-information" }],
   },
   asparagus: {
-    name: "Asparagus", image: "/asparagus-setaceus-plumosus.jpg", imageAlt: "Asparagus setaceus Plumosus au feuillage vert fin et retombant dans un pot en terre cuite", heroSubtitle: "Des plantes plumeuses qui ne sont pas des fougères, capables de retomber ou de grimper avec une légèreté remarquable.",
+    name: "Asparagus", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie documentaire vérifiée d’Asparagus à documenter", heroSubtitle: "Des plantes plumeuses qui ne sont pas des fougères, capables de retomber ou de grimper avec une légèreté remarquable.",
     care: { difficulty: 2, light: 4, water: 3, humidity: 3, substrate: "Organique, léger et drainant", nutrition: "Douce et régulière en croissance" },
     lead: "Le genre Asparagus rassemble bien plus que l’asperge potagère. Plusieurs espèces sont cultivées en intérieur pour leurs tiges fines et leurs cladodes plumeux. Asparagus setaceus, encore vendu sous le nom plumosus, devient une élégante plante sarmenteuse.", origin: "Asparagus setaceus est originaire d’une vaste zone allant de l’Afrique orientale à l’Afrique australe et aux Comores. Il appartient aux Asparagaceae et non aux fougères.",
     facts: [{ label: "Exposition", value: "Vive sans soleil chaud" }, { label: "Température", value: "16–24 °C" }, { label: "Arrosage", value: "Régulier sans saturation" }, { label: "Port", value: "Arqué puis sarmenteux" }],
@@ -241,7 +241,7 @@ export const familyGuides = {
     sources: [{ label: "Kew Science — Cactaceae", url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30000055-2" }, { label: "Royal Horticultural Society — cactus et succulentes", url: "https://www.rhs.org.uk/plants/types/cacti-succulents/growing-guide" }],
   },
   epiphyllum: {
-    name: "Epiphyllum", image: "/media/disocactus-anguliger-cactus-zigzag.webp", imageAlt: "Disocactus anguliger suspendu en serre avec de longues tiges vertes plates et profondément découpées", heroSubtitle: "Des cactus de forêt retombants, encore connus sous leur ancien nom Epiphyllum, qui préfèrent la lumière filtrée aux conditions désertiques.",
+    name: "Epiphyllum", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie documentaire vérifiée de Disocactus à documenter", heroSubtitle: "Des cactus de forêt retombants, encore connus sous leur ancien nom Epiphyllum, qui préfèrent la lumière filtrée aux conditions désertiques.",
     care: { difficulty: 2, light: 4, water: 3, humidity: 3, substrate: "Organique, très aéré et drainant", nutrition: "Légère pendant la croissance" },
     lead: "Le nom Epiphyllum reste très utilisé pour le cactus zigzag. La classification actuelle retient Disocactus anguliger : un cactus épiphyte mexicain aux tiges profondément découpées et aux fleurs nocturnes.",
     origin: "Les cactus épiphytes vivent dans les forêts tropicales américaines, installés sur des branches où leurs racines profitent d’humus, d’air et d’une humidité passagère sans rester noyées.",

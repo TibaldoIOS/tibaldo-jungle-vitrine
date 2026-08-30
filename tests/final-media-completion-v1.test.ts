@@ -30,7 +30,7 @@ const documentaryGallery = (plant: (typeof plants)[number]) => {
 const publicAssetPath = (src: string) =>
   src.startsWith("/media/") ? `public/${src.slice("/media/".length)}` : `public${src}`;
 
-test("la complétion média conserve exactement 76 fiches et le contrat 2/27/47", () => {
+test("la complétion média conserve 76 fiches et intègre les huit retraits P0 en manque honnête", () => {
   assert.equal(plants.length, 76);
   const counts = { complete: 0, partial: 0, gap: 0 };
   for (const plant of plants) {
@@ -39,7 +39,7 @@ test("la complétion média conserve exactement 76 fiches et le contrat 2/27/47"
     else if (count >= 1) counts.partial += 1;
     else counts.gap += 1;
   }
-  assert.deepEqual(counts, { complete: 2, partial: 27, gap: 47 });
+  assert.deepEqual(counts, { complete: 2, partial: 19, gap: 55 });
 });
 
 test("les dix nouvelles fiches qualifiées ont uniquement des médias locaux, sourcés et licenciés", () => {
