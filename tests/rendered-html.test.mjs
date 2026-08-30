@@ -161,15 +161,23 @@ test("V25 consolidates species on Golden Species and uses the approved arch reve
     const response = await render(route);
     assert.equal(response.status, 200, route);
     const html = await response.text();
-    assert.match(html, /data-golden-species-v25=/, route);
-    assert.match(html, /Taxonomie complète et synonymes/, route);
+    assert.match(html, /data-golden-species-v(?:1|25)=/, route);
+    assert.match(html, /Statut, synonymes et observation|Taxonomie complète et synonymes/, route);
     assert.match(html, /botanical-faq/, route);
     assert.doesNotMatch(html, /veitchii-v2-id-grid|veitchii-v2-conditions-grid/, route);
   }
 
-  const css = readFileSync(new URL("../app/plantes/GoldenSpeciesProfile.module.css", import.meta.url), "utf8");
-  assert.match(css, /transition:clip-path 1\.65s cubic-bezier\(\.77,0,\.18,1\) \.18s/i);
-  assert.match(css, /@media\(prefers-reduced-motion:reduce\)[^]*\.archMedia/i);
+  const componentUrl = new URL("../app/plantes/GoldenSpeciesProfile.tsx", import.meta.url);
+  const component = readFileSync(componentUrl, "utf8");
+  const css = [...component.matchAll(/import\s+\w+\s+from\s+["']([^"']+\.module\.css)["']/g)]
+    .map(([, specifier]) => readFileSync(new URL(specifier, componentUrl), "utf8"))
+    .join("\n");
+  assert.match(css, /\.archMedia::after[^]*transform:\s*scaleX\(1\)/i);
+  assert.match(css, /transform-origin:\s*right center/i);
+  assert.match(css, /transition:\s*transform 1\.65s \.18s cubic-bezier\(\.77,\s*0,\s*\.18,\s*1\)/i);
+  assert.match(css, /\.archFigure:global\(\.is-visible\) \.archMedia::after[^]*transform:\s*scaleX\(0\)/i);
+  assert.match(css, /@media\s*\(prefers-reduced-motion:\s*reduce\)[^]*\.archMedia::after/i);
+  assert.doesNotMatch(css, /clip-path/i);
 });
 
 test("V23 keeps the Veitchii Golden Species prototype isolated, compact and non-indexable", async () => {
@@ -190,7 +198,7 @@ test("V23 keeps the Veitchii Golden Species prototype isolated, compact and non-
 
   const canonical = await (await render("/plantes/anthurium/veitchii")).text();
   assert.doesNotMatch(canonical, /data-golden-species-v23|Lab V23|Golden Species · revue Owner/i);
-  assert.match(canonical, /data-golden-species-v25="anthurium\/veitchii"/);
+  assert.match(canonical, /data-golden-species-v(?:1|25)="anthurium\/veitchii"/);
 });
 
 test("V25.1 exposes only the two corrected Owner references with the reconstructed contracts", async () => {
@@ -803,7 +811,7 @@ test("renders Dicksonia, its hierarchy and the shared species hero fallback", as
   const speciesHtml = await (await render("/plantes/dicksonia/antarctica")).text();
   assert.match(speciesHtml, /<h1[^>]*>[\s\S]*?Dicksonia[\s\S]*?antarctica[\s\S]*?<\/h1>/i);
   assert.match(speciesHtml, /has-editorial-fallback/i);
-  assert.match(speciesHtml, /data-golden-species-v25="dicksonia\/antarctica"/i);
+  assert.match(speciesHtml, /data-golden-species-v(?:1|25)="dicksonia\/antarctica"/i);
   assert.match(speciesHtml, /rel=["']canonical["'][^>]+plantes\/dicksonia\/antarctica/i);
   assert.doesNotMatch(speciesHtml, /Dictyonia/i);
   const api = await (await render("/api/encyclopedie/plantes")).json();
@@ -837,21 +845,89 @@ test("renders the Agave, Fatsia and five-species Strelitzia cluster", async () =
   assert.equal(new Set(api.map((entry) => entry.encyclopediaSlug)).size, 64);
 });
 
-test("V25 renders one shared Golden Group system with genus-specific controlled media", async () => {
+test("final convergence renders one shared Golden Group system with honest genus media", async () => {
   for (const genre of ["strelitzia", "chlorophytum", "alocasia", "dicksonia", "monstera", "anthurium", "pilea"]) {
     const html = await (await render(`/plantes/${genre}`)).text();
-    assert.match(html, new RegExp(`data-golden-group-v25=["']${genre}["']`, "i"), genre);
-    assert.match(html, /formes &amp; textures/i, genre);
-    assert.match(html, /Composition éditoriale issue des médias contrôlés Jungle/i, genre);
+    assert.match(html, new RegExp(`data-golden-group-v(?:1|25)=["']${genre}["']`, "i"), genre);
+    const markerCount = (html.match(/data-hub-chapter-marker/g) ?? []).length;
+    assert.ok(markerCount === 7 || markerCount === 14, `${genre}: expected 7 rendered markers (the RSC transport may serialize them a second time), got ${markerCount}`);
+    assert.match(html, /Passeport de culture/i, genre);
+    assert.match(html, /Explorer le genre/i, genre);
+    assert.match(html, /Histoire du groupe/i, genre);
+    assert.match(html, /Questions du Studio/i, genre);
     assert.doesNotMatch(html, /genus-pilot-|anth-v2-|botanical-genus-hero|photo-genus-hero/i, genre);
+    assert.doesNotMatch(html, /heroMosaic|pilea-collection-especes|photo[- ]mosaic/i, genre);
     assert.doesNotMatch(html, /\/_vinext\/image/i, genre);
+  }
+
+  const pilea = await (await render("/plantes/pilea")).text();
+  assert.match(pilea, /pilea-planche-formes-textures\.webp/i);
+  assert.match(pilea, /width=["']972["'][^>]*height=["']1619["']/i);
+  for (const genre of ["strelitzia", "chlorophytum", "alocasia", "dicksonia", "monstera", "anthurium"]) {
+    const html = await (await render(`/plantes/${genre}`)).text();
+    assert.doesNotMatch(html, /pilea-planche-formes-textures\.webp/i, genre);
+  }
+});
+
+test("final convergence keeps representative canonical surfaces Golden and BETA-only", async () => {
+  const speciesRoutes = [
+    "/plantes/anthurium/veitchii",
+    "/plantes/monstera/thai-constellation",
+    "/plantes/pilea/peperomioides",
+    "/plantes/monstera/deliciosa",
+    "/plantes/cycas/revoluta",
+    "/plantes/pilea/cadierei",
+    "/plantes/chlorophytum/comosum",
+  ];
+  for (const route of speciesRoutes) {
+    const response = await render(route);
+    assert.equal(response.status, 200, route);
+    assert.equal(response.headers.get("x-robots-tag"), "noindex, nofollow", route);
+    const html = await response.text();
+    assert.equal((html.match(/<main\b/gi) ?? []).length, 1, route);
+    assert.equal((html.match(/<h1\b/gi) ?? []).length, 1, route);
+    assert.match(html, /data-golden-species-v(?:1|25)=/i, route);
+    assert.match(html, /plant-needs-visual-system/i, route);
+    assert.match(html, /Diagnostic prudent/i, route);
+    assert.match(html, /botanical-faq/i, route);
+    assert.match(html, /<meta name="robots" content="noindex, nofollow, nocache"/i, route);
+    assert.doesNotMatch(html, /thai-profile-v3|veitchii-profile-v2|veitchii-v2-id-grid|species-next-page/i, route);
+  }
+
+  const mediaGap = await (await render("/plantes/pilea/cadierei")).text();
+  assert.match(mediaGap, /Aucune image fabriquée|Aucune photographie documentaire vérifiée/i);
+  const richMedia = await (await render("/plantes/cycas/revoluta")).text();
+  assert.match(richMedia, /botanical-photo-book/i);
+
+  for (const route of ["/plantes/pilea", "/plantes/monstera", "/plantes/anthurium", "/plantes/alocasia", "/plantes/chlorophytum", "/plantes/bananiers"]) {
+    const response = await render(route);
+    assert.equal(response.status, 200, route);
+    assert.equal(response.headers.get("x-robots-tag"), "noindex, nofollow", route);
+    const html = await response.text();
+    assert.match(html, /data-golden-group-v(?:1|25)=/i, route);
+    assert.match(html, /data-hub-chapter-marker/i, route);
+    assert.match(html, /botanical-faq/i, route);
+    assert.doesNotMatch(html, /heroMosaic|genus-pilot-|anth-v2-|banana-profile|legacy-hub/i, route);
+  }
+
+  const bananas = await (await render("/plantes/bananiers")).text();
+  assert.match(bananas, /froid|hiver|vent|Lille|Nord/i);
+
+  for (const route of ["/plantes/famille/araceae", "/plantes/famille/asparagaceae"]) {
+    const response = await render(route);
+    assert.equal(response.status, 200, route);
+    assert.equal(response.headers.get("x-robots-tag"), "noindex, nofollow", route);
+    const html = await response.text();
+    assert.match(html, /data-golden-family-v25=/i, route);
+    assert.match(html, /Un répertoire compact/i, route);
+    assert.doesNotMatch(html, /plant-family-card|placeholder-leaf|generic-leaf-wall/i, route);
   }
 });
 
 test("V25 keeps prior pilot content inside the shared Golden Group architecture", async () => {
   for (const genre of ["alocasia", "chlorophytum", "dicksonia"]) {
     const html = await (await render(`/plantes/${genre}`)).text();
-    assert.match(html, new RegExp(`data-golden-group-v25=["']${genre}["']`, "i"), genre);
+    assert.match(html, new RegExp(`data-golden-group-v(?:1|25)=["']${genre}["']`, "i"), genre);
     assert.match(html, /Histoire du groupe/i, genre);
     assert.match(html, /application\/ld\+json/i, genre);
     assert.match(html, new RegExp(`rel=["']canonical["'][^>]+plantes/${genre}`, "i"), genre);
@@ -890,7 +966,7 @@ test("renders /plantes V19 as a cinematic editorial hub with one compact index",
 
 test("V25 reconciles Thai Constellation into Golden Species without losing cultivar content", async () => {
   const thai = await (await render("/plantes/monstera/thai-constellation")).text();
-  assert.match(thai, /data-golden-species-v25="monstera\/thai-constellation"/i);
+  assert.match(thai, /data-golden-species-v(?:1|25)="monstera\/thai-constellation"/i);
   assert.match(thai, /plant-needs-visual-system/i);
   assert.match(thai, /Diagnostic prudent/i);
   assert.match(thai, /Thai Constellation[\s\S]*Albo Variegata/i);
@@ -907,8 +983,8 @@ test("serves Deliciosa with the approved hero and the shared species body", asyn
   const html = await (await render("/plantes/monstera/deliciosa")).text();
   assert.match(html, /species-next-hero/);
   assert.match(html, /monstera-deliciosa-feuilles\.jpg/);
-  assert.match(html, /data-golden-species-v25="monstera\/deliciosa"/);
-  assert.match(html, /Taxonomie complète et synonymes/);
+  assert.match(html, /data-golden-species-v(?:1|25)="monstera\/deliciosa"/);
+  assert.match(html, /Statut, synonymes et observation|Taxonomie complète et synonymes/);
   assert.match(html, /plant-needs-visual-system/);
   assert.doesNotMatch(html, /species-next-diagnostic-index/);
   assert.doesNotMatch(html, /species-next-comparison-matrix/);
@@ -952,7 +1028,7 @@ test("renders the Local Species SEO V1 pilot without inventing commerce", async 
 
   const hub = await (await render("/plantes/anthurium")).text();
   assert.match(hub, /<title>Anthurium : entretien, espèces et variétés \| TIBALDO Jungle<\/title>/i);
-  assert.match(hub, /data-golden-group-v25="anthurium"/i);
+  assert.match(hub, /data-golden-group-v(?:1|25)="anthurium"/i);
   assert.doesNotMatch(hub, /Ce hub compare|catalogue indépendant|offre commerciale autoritaire/i);
   assert.match(hub, /href=["']\/plantes\/anthurium\/veitchii["']/i);
 
@@ -977,7 +1053,7 @@ test("scopes the Deliciosa Owner hero without forking the shared species body", 
   const html = await response.text();
 
   assert.match(html, /species-next-hero/i);
-  assert.match(html, /data-golden-species-v25="monstera\/deliciosa"/i);
+  assert.match(html, /data-golden-species-v(?:1|25)="monstera\/deliciosa"/i);
   assert.match(html, /plant-needs-visual-system/i);
   for (const id of ["identite", "entretien", "problemes", "comparaison", "conseils", "faq"]) {
     assert.match(html, new RegExp(`id=["']${id}["']`, "i"), id);
@@ -1070,7 +1146,7 @@ test("consolidates the V2 hierarchy without orphaning Anthurium or Bananiers", a
   }
 });
 
-test("serves complete SEO metadata for the nine V2 pages", async () => {
+test("serves complete, media-truth-aware SEO metadata for the nine V2 pages", async () => {
   const paths = [
     "/plantes/anthurium/clarinervium",
     "/plantes/anthurium/warocqueanum",
@@ -1089,7 +1165,7 @@ test("serves complete SEO metadata for the nine V2 pages", async () => {
     assert.match(html, /<title>[^<]+<\/title>/i, path);
     assert.match(html, /<meta[^>]+name=["']description["'][^>]+content=["'][^"']+/i, path);
     assert.match(html, /<meta[^>]+property=["']og:title["']/i, path);
-    assert.match(html, /<meta[^>]+property=["']og:image["']/i, path);
+    assert.doesNotMatch(html, /<meta[^>]+property=["']og:image["'][^>]+(?:photo-reelle-a-venir|interprétation éditoriale|pilea-collection-especes)/i, path);
     assert.match(html, /"@type":"BreadcrumbList"/i, path);
     assert.match(html, /<link[^>]+rel=["']canonical["']/i, path);
     assert.match(html, /noindex/i, path);

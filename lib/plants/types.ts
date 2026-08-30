@@ -56,7 +56,16 @@ export type PlantEntry = {
   publishedAt: string; updatedAt: string;
 };
 
-export const isEditorialPlaceholder = (src?: string) => !src || src.includes("photo-reelle-a-venir") || src.includes("dicksonia-prototype.svg");
+const genericEditorialPlantMedia = new Set([
+  "/hero-jungle.jpg",
+  "/advice-rempotage.jpg",
+]);
+
+export const isEditorialPlaceholder = (src?: string) =>
+  !src ||
+  src.includes("photo-reelle-a-venir") ||
+  src.includes("dicksonia-prototype.svg") ||
+  genericEditorialPlantMedia.has(src);
 
 export const isPhotoProductionPlaceholder = (src?: string) =>
   !src || src.includes("photo-reelle-a-venir");

@@ -1,16 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { PlantEntry, Level } from "@/lib/plants/types";
-import { isInternalPhotoProductionCopy, isPhotoProductionPlaceholder } from "@/lib/plants/types";
+import { isEditorialPlaceholder, isInternalPhotoProductionCopy, isPhotoProductionPlaceholder } from "@/lib/plants/types";
 import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 import BotanicalFaq from "./BotanicalFaq";
 import GenusSpeciesCarousel from "./GenusSpeciesCarousel";
 import PlantCarePassport from "./PlantCarePassport";
-import styles from "./GoldenGenusHub.module.css";
+import golden from "./GoldenBaseline.module.css";
+import body from "./GoldenGroupBodyBaseline.module.css";
+import hero from "./GoldenGroupHeroBaseline.module.css";
+import mobile from "./GoldenGroupMobileBaseline.module.css";
+import canonical from "./GoldenGroupCanonical.module.css";
 
 export type GoldenGroupGuide = {
-  name: string; image: string; imageAlt: string; heroSubtitle: string; lead: string; origin: string;
+  name: string;
+  image: string;
+  imageAlt: string;
+  heroSubtitle: string;
+  lead: string;
+  origin: string;
   care: { difficulty: number; light: number; water: number; humidity: number; substrate: string; nutrition: string };
   facts: { label: string; value: string }[];
   sections: { title: string; text: string }[];
@@ -19,44 +28,151 @@ export type GoldenGroupGuide = {
   sources: { label: string; url: string }[];
 };
 
+type GroupMedia = PlantEntry["gallery"][number] & { rights: "verified" | "controlled-beta" };
+
+const pileaHeroCopy = "Les Pilea forment un genre de la famille des Urticaceae bien plus vaste que la seule plante à monnaie chinoise. Rampants, compacts ou texturés, ils déploient des feuilles rondes, gaufrées, argentées ou minuscules : une diversité graphique adaptée aux petits espaces et aux étagères lumineuses. Pour leur culture en intérieur, placez-les dans une lumière douce à vive, tournez régulièrement les formes dressées et arrosez sans saturer le substrat, après un léger séchage en surface. Ce guide Tibaldo Jungle aide à ajuster leur entretien selon l’espèce. À Lille, l’hiver moins lumineux ralentit notamment le Pilea peperomioides : ses arrosages doivent alors s’espacer.";
+
+const safeSentence = (value: string) => {
+  const cleaned = value
+    .split(/(?<=[.!?])\s+/)
+    .filter((sentence) => !/stock|disponib|proposera|boutique|shop|prix/i.test(sentence))
+    .slice(0, 1)
+    .join(" ")
+    .trim();
+  return cleaned;
+};
+
+const groupHeroCopy = (genre: string, guide: GoldenGroupGuide) => {
+  if (genre === "pilea") return pileaHeroCopy;
+  return [safeSentence(guide.lead), safeSentence(guide.origin), safeSentence(guide.heroSubtitle)]
+    .filter((sentence, index, sentences) => sentence && sentences.indexOf(sentence) === index)
+    .join(" ");
+};
+
+const isDocumentaryImage = (image: PlantEntry["gallery"][number]) =>
+  !isPhotoProductionPlaceholder(image.src) &&
+  !isEditorialPlaceholder(image.src) &&
+  image.license?.status !== "media-gap" &&
+  !isInternalPhotoProductionCopy(`${image.alt} ${image.caption}`) &&
+  !/interprétation éditoriale|illustration générée|image générée/i.test(`${image.alt} ${image.caption}`);
+
+const firstGroupMedia = (genre: string, plants: readonly PlantEntry[]): GroupMedia | null => {
+  if (genre === "pilea") {
+    return {
+      src: "/pilea-planche-formes-textures.webp",
+      alt: "Planche éditoriale Pilea — diversité de formes et de textures foliaires",
+      caption: "Planche éditoriale contrôlée utilisée uniquement sur la BÊTA, dans l’attente d’une preuve de droits publics.",
+      width: 972,
+      height: 1619,
+      rights: "controlled-beta",
+    };
+  }
+  const image = plants.flatMap((plant) => plant.gallery).find(isDocumentaryImage);
+  return image ? { ...image, rights: image.license?.status === "verified" ? "verified" : "controlled-beta" } : null;
+};
+
+const preparedPlants = (genre: string, plants: readonly PlantEntry[]) => plants.map((plant) => {
+  if (genre === "pilea" && plant.slug === "peperomioides") {
+    return {
+      ...plant,
+      gallery: [{
+        src: "/pilea-peperomioides-plante.jpg",
+        alt: "Pilea peperomioides aux feuilles rondes portées par de longs pétioles",
+        caption: "Photographie réelle et réutilisable déjà créditée dans Jungle.",
+        width: 1280,
+        height: 1707,
+      }],
+    };
+  }
+  return { ...plant, gallery: plant.gallery.filter(isDocumentaryImage) };
+});
+
+function HubChapterMarker({ number, label }: { number: string; label: string }) {
+  return <div className={body.chapterMarker} data-hub-chapter-marker><span>{number}</span><strong>{label}</strong><i aria-hidden="true" /></div>;
+}
+
 export default function GoldenGenusHub({ genre, guide, plants, editorials = [], label = "Genre végétal", title = guide.name, additionalStory = [] }: {
-  genre: string; guide: GoldenGroupGuide; plants: readonly PlantEntry[];
-  editorials?: readonly { title: string; text: string }[]; label?: string; title?: string;
+  genre: string;
+  guide: GoldenGroupGuide;
+  plants: readonly PlantEntry[];
+  editorials?: readonly { title: string; text: string }[];
+  label?: string;
+  title?: string;
   additionalStory?: readonly { title: string; text: string }[];
 }) {
-  const media = [{ src: guide.image, alt: guide.imageAlt, width: 1800, height: 1200 }, ...plants.map((plant) => plant.gallery[0])]
-    .filter((image, index, images) => image && !isPhotoProductionPlaceholder(image.src) && images.findIndex((candidate) => candidate?.src === image.src) === index)
-    .slice(0, 4);
+  const displayPlants = preparedPlants(genre, plants);
+  const media = firstGroupMedia(genre, plants);
   const sections = guide.sections.filter((section) => !isInternalPhotoProductionCopy(`${section.title} ${section.text}`));
   const facts = guide.facts.filter((fact) => !isInternalPhotoProductionCopy(`${fact.label} ${fact.value}`));
   const faq = guide.faq.filter((item) => !isInternalPhotoProductionCopy(`${item.question} ${item.answer}`));
-  const stories = [...editorials, ...additionalStory, ...sections.slice(0, 4)];
+  const stories = [...editorials, ...additionalStory, ...sections]
+    .filter((section, index, all) => all.findIndex((candidate) => candidate.title === section.title) === index)
+    .slice(0, 6);
   const navigationGenres = [...new Map(plants.map((plant) => [plant.genre, plant.genreLabel])).entries()];
+  const gapCount = displayPlants.filter((plant) => !plant.gallery.length).length;
+  const heroCopy = groupHeroCopy(genre, guide);
 
-  return <main className={`${styles.page} editorial-page`} data-golden-group-v25={genre}>
-    <ScrollReveal />
-    <section className={`${styles.hero} ${media.length < 2 ? styles.heroSparse : ""}`}>
-      <div className={styles.heroMosaic} aria-label={`Formes et textures documentées du groupe ${title}`}>
-        {media.length ? media.map((image, index) => <div className={styles[`tile${index + 1}`]} key={image.src}><Image unoptimized src={image.src} alt={image.alt} width={image.width} height={image.height} priority={index === 0} /></div>) : <div className={styles.heroFallback} aria-hidden="true"><span>{title.slice(0, 1)}</span></div>}
-      </div>
-      <div className={styles.heroShade} aria-hidden="true" /><SiteHeader />
-      <div className={`${styles.heroContent} shell`}><Link href="/plantes">Encyclopédie · Tous les univers</Link><p>{label} · formes & textures</p><h1>Les <em>{title}.</em></h1><p>{guide.heroSubtitle}</p><small>Composition éditoriale issue des médias contrôlés Jungle — ni planche taxonomique exhaustive, ni stock boutique.</small></div>
-    </section>
+  return (
+    <main className={`${golden.page} ${body.groupPage} editorial-page`} data-golden-group-v25={genre} data-golden-group-v1={genre}>
+      <ScrollReveal />
+      <section className={`${hero.landscapeHero} ${mobile.mobileHero}`} aria-labelledby={`golden-group-title-${genre}`} data-group-media-state={media ? media.rights : "honest-gap"} data-pilea-public-media-gate={genre === "pilea" ? "blocked-pending-rights-proof-or-owner-original" : undefined}>
+        <SiteHeader />
+        <div className={`${hero.landscapeMedia} ${mobile.mobileMedia}`} aria-hidden="true">
+          {media ? <Image unoptimized src={media.src} alt="" width={media.width} height={media.height} priority /> : <div className={canonical.groupMediaGap}><span>{title.slice(0, 1)}</span><small>Photographie collective<br />à documenter</small></div>}
+        </div>
+        <div className={`${hero.forestFade} ${mobile.mobileFade}`} aria-hidden="true" />
+        <div className={`${hero.heroContent} ${mobile.mobileContent} shell`}>
+          <div className={`${hero.heroCopy} ${mobile.mobileCopy}`}>
+            <p className={`${hero.heroEyebrow} ${mobile.mobileEyebrow}`}>{label} · Univers botanique</p>
+            <h1 className={mobile.mobileTitle} id={`golden-group-title-${genre}`}>Les <em>{title}.</em></h1>
+            <p className={`${hero.heroIntroduction} ${mobile.mobileIntroduction}`}>{heroCopy}</p>
+            <p className={`${hero.heroNote} ${mobile.mobileNote}`}>{genre === "pilea" ? "Une planche éditoriale pour lire les formes et textures, pas un inventaire scientifique." : media ? "Une photographie documentaire contrôlée ouvre le groupe sans prétendre représenter toutes ses formes." : "Un manque de média reste explicite : aucun spécimen documentaire n’est fabriqué pour compléter la page."}</p>
+          </div>
+        </div>
+      </section>
 
-    <section className={`${styles.intro} shell`} data-reveal><p className="section-kicker">01 · Comprendre le groupe</p><div><h2>Un langage commun.<br /><em>Des formes singulières.</em></h2><p>{guide.lead}</p><p>{guide.origin}</p></div></section>
+      <section className={`${golden.groupIntro} ${mobile.introTransition} shell`} data-reveal>
+        <HubChapterMarker number="01" label="Comprendre le groupe" />
+        <div><h2>Un langage commun.<br /><em>Des formes singulières.</em></h2><div className={`${golden.groupIntroCopy} ${body.bodyCopy}`}><p>{guide.lead}</p><p>{guide.origin}</p></div>{facts.length ? <dl className={canonical.factBand}>{facts.map((fact) => <div key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}</dl> : null}</div>
+      </section>
 
-    <section className={styles.passport} aria-labelledby={`passport-${genre}`}><div className={`${styles.passportTitle} shell`} data-reveal><p className="section-kicker">02 · Passeport de culture</p><h2 id={`passport-${genre}`}>Des repères communs.<br /><em>Des nuances par espèce.</em></h2></div><PlantCarePassport indicators={[{ label: "Difficulté", value: guide.care.difficulty as Level, tone: "coral" }, { label: "Lumière", value: guide.care.light as Level, tone: "gold" }, { label: "Arrosage", value: guide.care.water as Level, tone: "blue" }, { label: "Humidité", value: guide.care.humidity as Level, tone: "sage" }]} substrate={guide.care.substrate} nutrition={guide.care.nutrition} /></section>
+      <section className={`${golden.groupPassport} ${body.passport} ${mobile.passportTransition}`} aria-labelledby={`golden-group-passport-${genre}`}>
+        <div className={`${golden.groupPassportHeading} shell`} data-reveal>
+          <HubChapterMarker number="02" label="Passeport de culture" />
+          <h2 id={`golden-group-passport-${genre}`}>Des repères communs.<br /><em>Des nuances selon l’espèce.</em></h2>
+          <p className={body.bodyText}>Le passeport donne un point de départ pour le groupe ; chaque fiche affine ensuite les besoins.</p>
+        </div>
+        <PlantCarePassport indicators={[{ label: "Difficulté", value: guide.care.difficulty as Level, tone: "coral" }, { label: "Lumière", value: guide.care.light as Level, tone: "gold" }, { label: "Arrosage", value: guide.care.water as Level, tone: "blue" }, { label: "Humidité", value: guide.care.humidity as Level, tone: "sage" }]} substrate={guide.care.substrate} nutrition={guide.care.nutrition} />
+      </section>
 
-    {navigationGenres.length > 1 ? <nav className={`${styles.subgroups} shell`} aria-label={`Sous-groupes ${title}`}>{navigationGenres.map(([slug, name]) => <Link href={`/plantes/${slug}`} key={slug}><span>Genre botanique</span><strong>{name}</strong><Arrow /></Link>)}</nav> : null}
-    <GenusSpeciesCarousel genre={genre} genusName={title} plants={plants} />
+      {navigationGenres.length > 1 ? <nav className={`${canonical.subgroups} shell`} aria-label={`Sous-groupes ${title}`}>{navigationGenres.map(([slug, name]) => <Link href={`/plantes/${slug}`} key={slug}><span>Genre botanique</span><strong>{name}</strong><Arrow /></Link>)}</nav> : null}
 
-    <section className={`${styles.facts} shell`} aria-label={`Repères ${title}`}>{facts.map((fact) => <div key={fact.label} data-reveal><span>{fact.label}</span><strong>{fact.value}</strong></div>)}</section>
+      <section className={`${golden.groupSpecies} ${body.groupSpecies}`} aria-labelledby={`golden-group-species-${genre}`}>
+        <div className="shell"><HubChapterMarker number="03" label={genre === "bananiers" ? "Explorer les genres" : "Explorer le genre"} /></div>
+        <div id={`golden-group-species-${genre}`}><GenusSpeciesCarousel genre={genre} genusName={title} plants={displayPlants} /></div>
+        <p className={`${golden.indexNote} ${body.indexNote} shell`} data-reveal>{displayPlants.length ? `${displayPlants.length} ${displayPlants.length > 1 ? "fiches sont documentées" : "fiche est documentée"}. ${gapCount ? `${gapCount} ${gapCount > 1 ? "fiches conservent" : "fiche conserve"} un manque de photographie réelle plutôt qu’un visuel non vérifié.` : "Les médias présentés restent distincts du stock du Shop."}` : "Aucune fiche spécifique n’est encore publiée ; le guide de groupe reste accessible sans inventer de plante ni de photographie."}</p>
+      </section>
 
-    <section className={styles.story} aria-labelledby={`story-${genre}`}><div className={`${styles.storyTitle} shell`} data-reveal><p className="section-kicker">04 · Histoire du groupe</p><h2 id={`story-${genre}`}>Observer les stratégies.<br /><em>Adapter la culture.</em></h2></div><div className={`${styles.storyGrid} shell`}>{stories.map((section, index) => <article key={`${section.title}-${index}`} data-reveal><span>{String(index + 1).padStart(2, "0")}</span><h3>{section.title}</h3><p>{section.text}</p></article>)}</div></section>
+      <section className={`${golden.groupStory} ${body.groupStory}`} aria-labelledby={`golden-group-story-${genre}`}>
+        <div className={`${golden.groupStoryHeading} shell`} data-reveal><HubChapterMarker number="04" label="Histoire du groupe" /><h2 id={`golden-group-story-${genre}`}>Observer les stratégies.<br /><em>Adapter la culture.</em></h2></div>
+        <div className={`${golden.groupStoryGrid} ${body.storyGrid} shell`}>{stories.map((section, index) => <article key={`${section.title}-${index}`} data-reveal><span>{String(index + 1).padStart(2, "0")}</span><h3>{section.title}</h3><p>{section.text}</p></article>)}</div>
+      </section>
 
-    <section className={`${styles.diagnostic} shell`} aria-labelledby={`diagnostic-${genre}`}><header data-reveal><p className="section-kicker">05 · Observer</p><h2 id={`diagnostic-${genre}`}>Lire les signaux<br /><em>avant d’agir.</em></h2></header><div>{guide.problems.map((problem, index) => <article key={problem.title} data-reveal><span>0{index + 1}</span><div><h3>{problem.title}</h3><p>{problem.text}</p></div></article>)}</div><Link href="/sos-plantes">Faire relire un doute · SOS Plantes <Arrow /></Link></section>
-    <div className={`${styles.faq} shell`}><BotanicalFaq items={faq} title={`${title} : les réponses essentielles.`} /></div>
-    <section className={styles.closing} data-reveal><div className="shell"><p className="section-kicker">06 · Continuer au Studio</p><h2>Observer les formes.<br /><em>Choisir ensuite.</em></h2><p>Une fiche Jungle documente une plante ; elle ne prétend jamais qu’elle est disponible en boutique. Le stock reste autoritaire côté Shop.</p><nav><Link href="/plantes">Explorer l’encyclopédie <Arrow /></Link><Link href="/contact">Venir au Studio <Arrow /></Link></nav><small>Sources : {guide.sources.map((source, index) => <span key={source.url}>{index ? " · " : ""}<a href={source.url} target="_blank" rel="noreferrer">{source.label}</a></span>)}</small></div></section>
-    <SiteFooter compactTransit />
-  </main>;
+      <section className={`${golden.groupDiagnostic} ${body.diagnostic} shell`} id="problemes" aria-labelledby={`golden-group-diagnostic-${genre}`}>
+        <header data-reveal><HubChapterMarker number="05" label="Observer" /><h2 id={`golden-group-diagnostic-${genre}`}>Lire les signaux<br /><em>avant d’agir.</em></h2></header>
+        <div className={`${golden.groupDiagnosticList} ${body.diagnosticList}`}>{guide.problems.map((problem, index) => <article key={problem.title} data-reveal><span>0{index + 1}</span><div><h3>{problem.title}</h3><p>{problem.text}</p></div></article>)}</div>
+        <Link className={golden.sosLink} href="/sos-plantes">Faire relire un doute · SOS Plantes <Arrow /></Link>
+      </section>
+
+      <section className={`${golden.groupFaq} ${body.groupFaq} shell`} aria-label={`Questions fréquentes sur les ${title}`}>
+        <HubChapterMarker number="06" label="Questions du Studio" />
+        <BotanicalFaq items={faq} title={`${title} : les réponses essentielles.`} />
+      </section>
+
+      <section className={`${golden.groupClosing} ${body.groupClosing}`} data-reveal>
+        <div className="shell"><HubChapterMarker number="07" label="Continuer au Studio" /><h2>Observer les formes.<br /><em>Choisir ensuite.</em></h2><p>Une fiche Jungle documente une plante ; elle ne prétend jamais qu’elle est disponible en boutique. Le stock reste autoritaire côté Shop.</p><nav><Link href="/plantes">Explorer l’encyclopédie <Arrow /></Link><Link href="/contact">Venir au Studio <Arrow /></Link></nav>{guide.sources.length ? <small className={canonical.sources}>Sources : {guide.sources.map((source, index) => <span key={source.url}>{index ? " · " : ""}<a href={source.url} target="_blank" rel="noreferrer">{source.label}</a></span>)}</small> : null}</div>
+      </section>
+      <SiteFooter compactTransit />
+    </main>
+  );
 }

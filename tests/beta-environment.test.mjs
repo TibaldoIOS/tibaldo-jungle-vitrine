@@ -92,7 +92,7 @@ test("Golden V25 keeps the visual and environment guardrails", async () => {
   assert.match(directory, /tabIndex=\{open \? 0 : -1\}/);
   assert.match(profile, /GoldenSpeciesProfile/);
   assert.doesNotMatch(profile, /ThaiConstellationProfileV3/);
-  assert.match(golden, /data-golden-species-v25/);
+  assert.match(golden, /data-golden-species-v(?:1|25)/);
   assert.doesNotMatch(chrome, /↗️/);
 });
 

@@ -5,7 +5,7 @@ import PlantProfile from "../../PlantProfile";
 import PlantFamilyPage, {
   generateMetadata as generateFamilyMetadata,
 } from "../../famille/[family]/page";
-import { isEditorialPlaceholder } from "@/lib/plants/types";
+import { isEditorialPlaceholder, isInternalPhotoProductionCopy, isPhotoProductionPlaceholder } from "@/lib/plants/types";
 import { deliciosaNextFaq } from "@/lib/plants/deliciosa-next";
 
 type Props = { params: Promise<{ genre: string; slug: string }> };
@@ -24,6 +24,13 @@ const localPilotTitles: Record<string, string> = {
 const isLocalSpeciesPilot = (genre: string, slug: string) =>
   `${genre}/${slug}` in localPilotTitles;
 
+const isDocumentaryImage = (image: (typeof plants)[number]["gallery"][number]) =>
+  !isPhotoProductionPlaceholder(image.src) &&
+  !isEditorialPlaceholder(image.src) &&
+  image.license?.status !== "media-gap" &&
+  !isInternalPhotoProductionCopy(`${image.alt} ${image.caption}`) &&
+  !/interprétation éditoriale|illustration générée|image générée/i.test(`${image.alt} ${image.caption}`);
+
 export const generateStaticParams = () => [
   ...plants.map(({ genre, slug }) => ({ genre, slug })),
   ...families.map((slug) => ({ genre: "famille", slug })),
@@ -36,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const plant = getPlant(genre, slug);
   if (!plant) return {};
   const url = `/plantes/${genre}/${slug}`;
-  const image = plant.gallery[0];
+  const image = plant.gallery.find(isDocumentaryImage);
   const title = localPilotTitles[`${genre}/${slug}`] ?? plant.seo.title;
   const description = isLocalSpeciesPilot(genre, slug)
     ? `${plant.seo.description.replace(/\s*(Découvrez|Disponibilité)[^.]*\.?$/i, "")} Fiche botanique indépendante des disponibilités du Studio Végétal — TIBALDO Jungle à Lille.`
@@ -56,7 +63,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     keywords: plant.seo.keywords,
     alternates: { canonical: url },
-    robots: { index: false, follow: false },
+    robots: { index: false, follow: false, nocache: true },
     openGraph: {
       type: "article",
       locale: "fr_FR",
@@ -84,7 +91,7 @@ export default async function Page({ params }: Props) {
   const url = `https://jungle.tibaldo.fr/plantes/${genre}/${slug}`;
   const gallery = plant.gallery.filter(
     (image, index, images) =>
-      !isEditorialPlaceholder(image.src) &&
+      isDocumentaryImage(image) &&
       images.findIndex((candidate) => candidate.src === image.src) === index,
   );
   const faq =

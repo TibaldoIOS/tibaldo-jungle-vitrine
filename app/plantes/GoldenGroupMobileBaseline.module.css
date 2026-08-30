@@ -1,0 +1,64 @@
+@media (max-width: 520px) {
+  .mobileHero {
+    min-height: 720px;
+  }
+
+  .mobileMedia {
+    inset: 54px -15% auto -15%;
+    height: 220px;
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 62%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 0%, #000 62%, transparent 100%);
+  }
+
+  .mobileMedia img {
+    object-fit: cover;
+    object-position: center 31%;
+  }
+
+  .mobileFade {
+    background:
+      linear-gradient(90deg, rgb(6 39 29 / 20%) 0%, transparent 24%, transparent 76%, rgb(6 39 29 / 14%) 100%),
+      linear-gradient(180deg, rgb(6 39 29 / 3%) 15%, rgb(6 39 29 / 20%) 28%, rgb(6 39 29 / 92%) 36%, #06271d 49%);
+  }
+
+  .mobileContent {
+    min-height: 640px;
+    align-items: start;
+    padding-top: 110px;
+    padding-bottom: 16px;
+  }
+
+  .mobileCopy {
+    width: 100%;
+  }
+
+  .mobileEyebrow {
+    margin-bottom: 8px;
+    font-size: 8px;
+  }
+
+  .mobileCopy .mobileTitle {
+    max-width: 320px;
+    font-size: clamp(60px, 17.5vw, 68px);
+    line-height: .84;
+  }
+
+  .mobileIntroduction {
+    max-width: 358px;
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.46;
+  }
+
+  .mobileNote {
+    display: none;
+  }
+
+  .introTransition {
+    padding-bottom: 0;
+  }
+
+  .passportTransition {
+    padding-top: 48px;
+  }
+}

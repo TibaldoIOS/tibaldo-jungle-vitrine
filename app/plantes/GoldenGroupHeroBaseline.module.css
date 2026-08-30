@@ -1,0 +1,153 @@
+.landscapeHero {
+  position: relative;
+  min-height: min(820px, 92svh);
+  overflow: hidden;
+  isolation: isolate;
+  background: #06271d;
+  color: #fff;
+}
+
+.landscapeHero :global(.site-header) {
+  position: relative;
+  z-index: 8;
+}
+
+.landscapeMedia {
+  position: absolute;
+  z-index: -2;
+  inset: 0 -4% 0 36%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgb(0 0 0 / 32%) 18%, #000 43%, #000 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, rgb(0 0 0 / 32%) 18%, #000 43%, #000 100%);
+}
+
+.landscapeMedia img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 34%;
+  filter: saturate(.9) contrast(1.02);
+}
+
+.forestFade {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, #06271d 0%, rgb(6 39 29 / 98%) 28%, rgb(6 39 29 / 81%) 45%, rgb(6 39 29 / 18%) 68%, rgb(6 39 29 / 5%) 100%),
+    linear-gradient(180deg, rgb(6 39 29 / 18%) 45%, rgb(6 39 29 / 72%) 100%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-height: calc(min(820px, 92svh) - 86px);
+  align-items: center;
+  padding-top: 96px;
+  padding-bottom: 64px;
+}
+
+.heroCopy {
+  width: min(50%, 650px);
+}
+
+.heroEyebrow {
+  margin: 0 0 22px;
+  color: #d8b56d;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.heroCopy h1 {
+  margin: 0;
+  font: 400 clamp(80px, 10.5vw, 150px) / .82 Georgia, serif;
+  letter-spacing: -.065em;
+}
+
+.heroCopy h1 em {
+  display: block;
+  color: #c6d9ad;
+  font-weight: 400;
+}
+
+.heroIntroduction {
+  max-width: 610px;
+  margin: 30px 0 0;
+  color: rgb(255 255 255 / 86%);
+  font: 400 clamp(17px, 1.45vw, 19px) / 1.58 Georgia, serif;
+}
+
+.heroNote {
+  max-width: 520px;
+  margin: 22px 0 0;
+  padding-left: 15px;
+  border-left: 1px solid rgb(216 181 109 / 66%);
+  color: rgb(229 237 222 / 76%);
+  font-size: 10px;
+  line-height: 1.55;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 980px) {
+  .landscapeHero { min-height: 820px; }
+  .landscapeMedia {
+    inset: 48px -18% 260px 22%;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 28%, #000 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, #000 28%, #000 100%);
+  }
+  .landscapeMedia img { object-position: center 32%; }
+  .forestFade {
+    background:
+      linear-gradient(90deg, rgb(6 39 29 / 94%) 0%, rgb(6 39 29 / 70%) 39%, rgb(6 39 29 / 5%) 82%),
+      linear-gradient(180deg, rgb(6 39 29 / 3%) 35%, rgb(6 39 29 / 93%) 66%, #06271d 82%);
+  }
+  .heroContent {
+    min-height: 730px;
+    align-items: end;
+    padding-top: 320px;
+    padding-bottom: 48px;
+  }
+  .heroCopy { width: min(86%, 660px); }
+  .heroCopy h1 { font-size: clamp(78px, 16vw, 120px); }
+  .heroIntroduction { max-width: 630px; }
+}
+
+@media (max-width: 520px) {
+  .landscapeHero { min-height: 780px; }
+  .landscapeMedia {
+    inset: 54px -20% auto -20%;
+    height: 330px;
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 70%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 0%, #000 70%, transparent 100%);
+  }
+  .landscapeMedia img {
+    object-fit: cover;
+    object-position: center 31%;
+    filter: saturate(.92) contrast(1.02);
+  }
+  .forestFade {
+    background:
+      linear-gradient(90deg, rgb(6 39 29 / 22%) 0%, transparent 26%, transparent 74%, rgb(6 39 29 / 16%) 100%),
+      linear-gradient(180deg, rgb(6 39 29 / 4%) 20%, rgb(6 39 29 / 18%) 36%, rgb(6 39 29 / 92%) 50%, #06271d 64%);
+  }
+  .heroContent {
+    min-height: 728px;
+    align-items: end;
+    padding-top: 280px;
+    padding-bottom: 32px;
+  }
+  .heroCopy { width: 100%; }
+  .heroEyebrow { margin-bottom: 10px; font-size: 8px; }
+  .heroCopy h1 { max-width: 340px; font-size: clamp(66px, 19vw, 76px); line-height: .84; }
+  .heroIntroduction { max-width: 348px; margin-top: 16px; font-size: 17px; line-height: 1.5; }
+  .heroNote { max-width: 330px; margin-top: 14px; font-size: 8px; line-height: 1.48; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landscapeMedia img { transform: none !important; }
+}

@@ -1,0 +1,141 @@
+.groupMediaGap {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-content: center;
+  gap: 18px;
+  background:
+    radial-gradient(circle at 64% 28%, rgb(198 217 173 / 24%) 0 12%, transparent 13%),
+    radial-gradient(circle at 45% 58%, rgb(216 181 109 / 13%) 0 20%, transparent 21%),
+    linear-gradient(135deg, #315b48, #0d3327);
+  color: rgb(255 255 255 / 68%);
+  text-align: center;
+}
+
+.groupMediaGap span {
+  color: rgb(198 217 173 / 34%);
+  font: 400 clamp(180px, 33vw, 470px) / .7 Georgia, serif;
+}
+
+.groupMediaGap small {
+  color: rgb(255 255 255 / 68%);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  line-height: 1.55;
+  text-transform: uppercase;
+}
+
+.factBand {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 38px 0 0;
+  border-top: 1px solid rgb(18 60 45 / 18%);
+  border-bottom: 1px solid rgb(18 60 45 / 18%);
+}
+
+.factBand > div {
+  min-width: 0;
+  padding: 20px 18px 21px 0;
+  border-right: 1px solid rgb(18 60 45 / 12%);
+  border-bottom: 1px solid rgb(18 60 45 / 12%);
+}
+
+.factBand > div:nth-child(even) {
+  padding-left: 18px;
+  border-right: 0;
+}
+
+.factBand > div:nth-last-child(-n + 2) {
+  border-bottom: 0;
+}
+
+.factBand dt {
+  color: #a36f62;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.factBand dd {
+  margin: 10px 0 0;
+  color: #123c2d;
+  font: 400 17px / 1.4 Georgia, serif;
+}
+
+.subgroups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 70px;
+  background: #9aaa9d;
+  border: 1px solid #9aaa9d;
+}
+
+.subgroups a {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  padding: 28px;
+  background: #fbf8f1;
+  color: #123c2d;
+  text-decoration: none;
+}
+
+.subgroups span {
+  grid-column: 1;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.subgroups strong {
+  font: 400 30px / 1 Georgia, serif;
+}
+
+.sources {
+  grid-column: 2;
+  display: block;
+  margin-top: 18px;
+  color: rgb(255 255 255 / 53%);
+  font-size: 10px;
+  line-height: 1.65;
+}
+
+.sources a {
+  padding: 0;
+  border: 0;
+  color: inherit;
+  font-size: inherit;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+@media (max-width: 720px) {
+  .factBand {
+    grid-template-columns: 1fr;
+  }
+
+  .factBand > div,
+  .factBand > div:nth-child(even) {
+    padding: 17px 0;
+    border-right: 0;
+    border-bottom: 1px solid rgb(18 60 45 / 12%);
+  }
+
+  .factBand > div:last-child {
+    border-bottom: 0;
+  }
+
+  .subgroups {
+    grid-template-columns: 1fr;
+    margin-top: 46px;
+  }
+
+  .sources {
+    grid-column: 1;
+  }
+}

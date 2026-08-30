@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = `${family} : plantes, genres et conseils de culture`;
   const description = `Découvrez les plantes de la famille ${family} documentées par Tibaldo Jungle : genres, espèces, besoins de culture et fiches botaniques.`;
   const image = plants.find((plant) => plant.taxonomy.family === family)?.gallery[0];
-  return { title, description, alternates: { canonical: `/plantes/famille/${slug}` }, robots: { index: false, follow: false }, openGraph: { type: "website", locale: "fr_FR", url: `/plantes/famille/${slug}`, siteName: "Studio Végétal — Tibaldo Jungle", title, description, images: image ? [{ url: image.src, width: image.width, height: image.height, alt: image.alt }] : undefined } };
+  return { title, description, alternates: { canonical: `/plantes/famille/${slug}` }, robots: { index: false, follow: false, nocache: true }, openGraph: { type: "website", locale: "fr_FR", url: `/plantes/famille/${slug}`, siteName: "Studio Végétal — Tibaldo Jungle", title, description, images: image ? [{ url: image.src, width: image.width, height: image.height, alt: image.alt }] : undefined } };
 }
 
 export default async function PlantFamilyPage({ params }: Props) {
