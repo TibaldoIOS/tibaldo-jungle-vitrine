@@ -1451,6 +1451,13 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
 .plant-profile-hero-fallback{position:absolute;z-index:-2;inset:0;overflow:hidden;background:radial-gradient(circle at 77% 34%,rgba(192,211,169,.3),transparent 22%),radial-gradient(circle at 70% 72%,rgba(98,141,109,.38),transparent 25%),linear-gradient(125deg,#08271d 0%,#164b37 56%,#79947d 100%)}
 .plant-profile-hero-fallback::before,.plant-profile-hero-fallback::after{content:"";position:absolute;width:min(46vw,650px);aspect-ratio:1;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:5%;top:12%}.plant-profile-hero-fallback::after{width:min(35vw,500px);right:13%;top:24%}
 .plant-profile-hero-fallback>span{position:absolute;right:8%;bottom:-.08em;color:rgba(255,255,255,.1);font:400 clamp(230px,38vw,610px)/.75 Georgia,serif;letter-spacing:-.12em}.plant-profile-hero-fallback>span i{color:rgba(185,201,167,.14);font-style:italic}.plant-profile-hero-fallback>small{position:absolute;right:6%;top:130px;color:rgba(255,255,255,.55);font-size:8px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+/* Keep honest-media-gap heroes on a simple positive layer stack. Safari can
+   allocate excessive backing stores for negative composited descendants. */
+.plant-profile-hero.has-editorial-fallback .plant-profile-hero-fallback{z-index:0}
+.plant-profile-hero.has-editorial-fallback .plant-profile-hero-shade,
+.plant-profile-hero.has-editorial-fallback::after{z-index:1}
+.plant-profile-hero.has-editorial-fallback>.site-header,
+.plant-profile-hero.has-editorial-fallback .plant-profile-hero-content{position:relative;z-index:2}
 .plant-profile-hero-content { min-height: inherit; display: flex; flex-direction: column; justify-content: flex-end; padding-top: 160px; padding-bottom: 70px; }
 .plant-profile-breadcrumb{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px;color:rgba(255,255,255,.62);font-size:8px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}.plant-profile-breadcrumb a{border-bottom:1px solid rgba(255,255,255,.3)}.plant-profile-breadcrumb strong{color:rgba(255,255,255,.84)}
 .plant-profile-hero h1 { max-width: 980px; margin: 20px 0 25px; font: 400 clamp(62px, 9vw, 138px)/.82 Georgia, serif; letter-spacing: -.065em; }
