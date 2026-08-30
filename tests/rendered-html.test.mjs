@@ -165,7 +165,8 @@ test("V20 exposes the eleven-dimensional needs language on canonical species", a
   const response = await render("/plantes/monstera/esqueleto");
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /monstera-esqueleto-feuille-mature-fenestrations\.webp/);
+  assert.doesNotMatch(html, /monstera-esqueleto-feuille-mature-fenestrations\.webp/);
+  assert.match(html, /Aucune image fabriquée/i);
   assert.equal((html.match(/class="plant-need plant-need-/g) ?? []).length, 11);
   assert.match(html, /Carnet photographique/);
   for (const label of ["Lumière", "Arrosage", "Température", "Humidité", "Substrat", "Fertilisation", "Rempotage", "Croissance", "Support", "Toxicité", "Difficulté"]) assert.match(html, new RegExp(label));
@@ -918,8 +919,9 @@ test("final convergence renders one shared Golden Group system with honest genus
   }
 
   const pilea = await (await render("/plantes/pilea")).text();
-  assert.match(pilea, /data-group-media-state=["']honest-gap["']/i);
-  assert.match(pilea, /data-pilea-public-media-gate=["']blocked-pending-rights-proof-or-owner-original["']/i);
+  assert.match(pilea, /data-group-media-state=["']verified["']/i);
+  assert.match(pilea, /data-pilea-public-media-gate=["']resolved-with-verified-cc0-species-photo["']/i);
+  assert.match(pilea, /pilea-peperomioides-plante\.jpg/i);
   assert.doesNotMatch(pilea, /pilea-planche-formes-textures\.webp/i);
   for (const genre of ["strelitzia", "chlorophytum", "alocasia", "dicksonia", "monstera", "anthurium"]) {
     const html = await (await render(`/plantes/${genre}`)).text();

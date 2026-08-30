@@ -58,7 +58,7 @@ test("canonical Group mounts the locked Golden Group generation without a mosaic
   assert.match(source, /GenusSpeciesCarousel/);
   assert.match(source, /BotanicalFaq/);
   assert.doesNotMatch(source, /pilea-planche-formes-textures\.webp/);
-  assert.match(source, /blocked-pending-rights-proof-or-owner-original/);
+  assert.match(source, /resolved-with-verified-cc0-species-photo/);
   assert.match(source, /data-group-media-state=\{media \? media\.rights : "honest-gap"\}/);
   assert.doesNotMatch(source, /heroMosaic|pilea-collection-especes|photo mosaic|photo-mosaic/i);
   assert.doesNotMatch(source, /genus-pilot-|anth-v2-|botanical-genus-hero|photo-genus-hero/i);
@@ -76,11 +76,14 @@ test("editorial prototype media can never be promoted as documentary media", () 
   const group = read("app/plantes/GoldenGenusHub.tsx");
   const speciesRoute = read("app/plantes/[genre]/[slug]/page.tsx");
   const groupRoute = read("app/plantes/[genre]/page.tsx");
+  const documentary = read("lib/plants/documentary-media.ts");
 
-  assert.match(species, /isEditorialPlaceholder\(image\.src\)/);
-  assert.match(group, /isEditorialPlaceholder\(image\.src\)/);
+  assert.match(species, /documentaryGallery\(plant\)/);
+  assert.match(group, /documentaryGallery\(plant\)/);
   assert.match(speciesRoute, /isEditorialPlaceholder\(image\.src\)/);
-  assert.match(groupRoute, /isEditorialPlaceholder\(image\.src\)/);
+  assert.match(groupRoute, /isDocumentaryPlantImage/);
+  assert.match(documentary, /isEditorialPlaceholder\(image\.src\)/);
+  assert.match(documentary, /isPhotoProductionPlaceholder\(image\.src\)/);
   assert.equal(isEditorialPlaceholder("/images/botanical-heroes/prototypes/dicksonia-prototype.svg"), true);
   assert.equal(isEditorialPlaceholder("/hero-jungle.jpg"), true);
   assert.equal(isEditorialPlaceholder("/advice-rempotage.jpg"), true);

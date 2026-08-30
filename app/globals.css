@@ -1385,7 +1385,10 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
 .plant-search-status button, .plant-search-empty button { border: 0; border-bottom: 1px solid var(--sage); background: transparent; color: var(--sage); font-size: 9px; letter-spacing: .13em; text-transform: uppercase; }
 .plant-search-results { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 25px; border-top: 1px solid rgba(21,59,44,.16); border-left: 1px solid rgba(21,59,44,.16); }
 .plant-search-results > a { display: grid; grid-template-columns: 180px 1fr; gap: 28px; padding: 25px; border-right: 1px solid rgba(21,59,44,.16); border-bottom: 1px solid rgba(21,59,44,.16); background: #f8f6ed; }
-.plant-search-results img { width: 180px; height: 220px; object-fit: cover; }
+.plant-search-results img, .plant-search-media-gap { width: 180px; height: 220px; object-fit: cover; }
+.plant-search-media-gap { display: grid; place-content: center; gap: 8px; padding: 18px; background: #e7e8dc; color: var(--forest); text-align: center; }
+.plant-search-media-gap > span { font: 400 54px/1 Georgia, serif; letter-spacing: 0; }
+.plant-search-media-gap > small { font-size: 9px; line-height: 1.45; letter-spacing: .08em; text-transform: uppercase; }
 .plant-search-results span { color: #87917e; font-size: 8px; letter-spacing: .14em; text-transform: uppercase; }
 .plant-search-results h3 { margin: 15px 0 10px; color: var(--forest); font: 400 clamp(27px, 3vw, 40px)/1 Georgia, serif; }
 .plant-search-results p { color: #637067; font-size: 13px; line-height: 1.6; }
@@ -1744,7 +1747,10 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
   .plant-search-status strong { font-size: 17px; }
   .plant-search-results { margin-left: -5vw; margin-right: -5vw; border-left: 0; }
   .plant-search-results > a { grid-template-columns: 105px 1fr; gap: 18px; padding: 18px 5vw; border-right: 0; }
-  .plant-search-results img { width: 105px; height: 145px; }
+  .plant-search-results img, .plant-search-media-gap { width: 105px; height: 145px; }
+  .plant-search-media-gap { padding: 10px; }
+  .plant-search-media-gap > span { font-size: 38px; }
+  .plant-search-media-gap > small { font-size: 7px; }
   .plant-search-results h3 { font-size: 27px; }
   .plant-search-results p { display: none; }
   .plant-search-results ul { margin-top: 12px; }

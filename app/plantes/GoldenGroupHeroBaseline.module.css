@@ -14,7 +14,7 @@
 
 .landscapeMedia {
   position: absolute;
-  z-index: -2;
+  z-index: 0;
   inset: 0 -4% 0 36%;
   overflow: hidden;
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgb(0 0 0 / 32%) 18%, #000 43%, #000 100%);
@@ -31,7 +31,7 @@
 
 .forestFade {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   inset: 0;
   pointer-events: none;
   background:

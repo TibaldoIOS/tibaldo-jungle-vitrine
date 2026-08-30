@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { PlantEntry, Level } from "@/lib/plants/types";
-import { isEditorialPlaceholder, isInternalPhotoProductionCopy, isPhotoProductionPlaceholder } from "@/lib/plants/types";
+import { isInternalPhotoProductionCopy } from "@/lib/plants/types";
+import { documentaryGallery, isDocumentaryPlantImage } from "@/lib/plants/documentary-media";
+import { verifiedGroupMediaByGenre } from "@/lib/plants/verified-group-media";
 import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 import BotanicalFaq from "./BotanicalFaq";
@@ -49,33 +51,15 @@ const groupHeroCopy = (genre: string, guide: GoldenGroupGuide) => {
     .join(" ");
 };
 
-const isDocumentaryImage = (image: PlantEntry["gallery"][number]) =>
-  !isPhotoProductionPlaceholder(image.src) &&
-  !isEditorialPlaceholder(image.src) &&
-  image.license?.status !== "media-gap" &&
-  !isInternalPhotoProductionCopy(`${image.alt} ${image.caption}`) &&
-  !/interprétation éditoriale|illustration générée|image générée/i.test(`${image.alt} ${image.caption}`);
-
 const firstGroupMedia = (genre: string, plants: readonly PlantEntry[]): GroupMedia | null => {
-  if (genre === "pilea") return null;
-  const image = plants.flatMap((plant) => plant.gallery).find(isDocumentaryImage);
+  const override = verifiedGroupMediaByGenre[genre];
+  if (override) return override;
+  const image = plants.flatMap((plant) => plant.gallery).find(isDocumentaryPlantImage);
   return image ? { ...image, rights: image.license?.status === "verified" ? "verified" : "controlled-beta" } : null;
 };
 
 const preparedPlants = (genre: string, plants: readonly PlantEntry[]) => plants.map((plant) => {
-  if (genre === "pilea" && plant.slug === "peperomioides") {
-    return {
-      ...plant,
-      gallery: [{
-        src: "/pilea-peperomioides-plante.jpg",
-        alt: "Pilea peperomioides aux feuilles rondes portées par de longs pétioles",
-        caption: "Photographie réelle et réutilisable déjà créditée dans Jungle.",
-        width: 1280,
-        height: 1707,
-      }],
-    };
-  }
-  return { ...plant, gallery: plant.gallery.filter(isDocumentaryImage) };
+  return { ...plant, gallery: documentaryGallery(plant) };
 });
 
 function HubChapterMarker({ number, label }: { number: string; label: string }) {
@@ -106,7 +90,7 @@ export default function GoldenGenusHub({ genre, guide, plants, editorials = [], 
   return (
     <main className={`${golden.page} ${body.groupPage} editorial-page`} data-golden-group-v25={genre} data-golden-group-v1={genre}>
       <ScrollReveal />
-      <section className={`${hero.landscapeHero} ${mobile.mobileHero}`} aria-labelledby={`golden-group-title-${genre}`} data-group-media-state={media ? media.rights : "honest-gap"} data-pilea-public-media-gate={genre === "pilea" ? "blocked-pending-rights-proof-or-owner-original" : undefined}>
+      <section className={`${hero.landscapeHero} ${mobile.mobileHero}`} aria-labelledby={`golden-group-title-${genre}`} data-group-media-state={media ? media.rights : "honest-gap"} data-pilea-public-media-gate={genre === "pilea" ? "resolved-with-verified-cc0-species-photo" : undefined}>
         <SiteHeader />
         <div className={`${hero.landscapeMedia} ${mobile.mobileMedia}`} aria-hidden="true">
           {media ? <Image unoptimized src={media.src} alt="" width={media.width} height={media.height} priority /> : <div className={canonical.groupMediaGap}><span>{title.slice(0, 1)}</span><small>Photographie collective<br />à documenter</small></div>}

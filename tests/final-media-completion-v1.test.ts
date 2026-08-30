@@ -2,30 +2,7 @@ import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
 import test from "node:test";
 import { plants } from "../lib/plants/catalog.ts";
-import type { PlantEntry } from "../lib/plants/types.ts";
-import { isEditorialPlaceholder, isInternalPhotoProductionCopy } from "../lib/plants/types.ts";
-
-const pileaVerifiedOverride: PlantEntry["gallery"][number] = {
-  src: "/pilea-peperomioides-plante.jpg",
-  license: { status: "verified", note: "Photographie CC0 vérifiée" },
-  alt: "Pilea peperomioides",
-  caption: "Photographie CC0 vérifiée",
-  width: 1280,
-  height: 1707,
-};
-
-const documentaryGallery = (plant: (typeof plants)[number]) => {
-  const source = plant.genre === "pilea" && plant.slug === "peperomioides"
-    ? [pileaVerifiedOverride]
-    : plant.gallery;
-  return source.filter((image, index, images) =>
-    !isEditorialPlaceholder(image.src) &&
-    image.license?.status !== "media-gap" &&
-    !isInternalPhotoProductionCopy(`${image.alt} ${image.caption}`) &&
-    !/interprétation éditoriale|illustration générée|image générée/i.test(`${image.alt} ${image.caption}`) &&
-    images.findIndex((candidate) => candidate.src === image.src) === index,
-  );
-};
+import { documentaryGallery } from "../lib/plants/documentary-media.ts";
 
 const publicAssetPath = (src: string) =>
   src.startsWith("/media/") ? `public/${src.slice("/media/".length)}` : `public${src}`;
@@ -39,7 +16,7 @@ test("la complétion média conserve 76 fiches et intègre les huit retraits P0 
     else if (count >= 1) counts.partial += 1;
     else counts.gap += 1;
   }
-  assert.deepEqual(counts, { complete: 2, partial: 19, gap: 55 });
+  assert.deepEqual(counts, { complete: 2, partial: 17, gap: 57 });
 });
 
 test("les dix nouvelles fiches qualifiées ont uniquement des médias locaux, sourcés et licenciés", () => {
@@ -88,9 +65,9 @@ test("Colocasia utilise la photo exacte avec la licence complète", () => {
   assert.equal(colocasia.gallery[0].license?.licenseUrl, "https://creativecommons.org/licenses/by/3.0/us/");
 });
 
-test("le hub Pilea ne charge plus la planche sans preuve de droits", () => {
+test("le hub Pilea remplace la planche sans preuve par la photographie CC0 vérifiée", () => {
   const source = readFileSync("app/plantes/GoldenGenusHub.tsx", "utf8");
   assert.doesNotMatch(source, /src:\s*["']\/pilea-planche-formes-textures\.webp/);
-  assert.match(source, /if \(genre === "pilea"\) return null/);
-  assert.match(source, /blocked-pending-rights-proof-or-owner-original/);
+  assert.match(source, /verifiedGroupMediaByGenre/);
+  assert.match(source, /resolved-with-verified-cc0-species-photo/);
 });

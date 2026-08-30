@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { plants } from "@/lib/plants/catalog";
 import type { PlantEntry } from "@/lib/plants/types";
-import { isEditorialPlaceholder, isInternalPhotoProductionCopy, isPhotoProductionPlaceholder } from "@/lib/plants/types";
+import { isInternalPhotoProductionCopy } from "@/lib/plants/types";
+import { documentaryGallery } from "@/lib/plants/documentary-media";
 import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter } from "../SiteChrome";
 import BotanicalFaq from "./BotanicalFaq";
@@ -18,38 +19,6 @@ import golden from "./GoldenBaseline.module.css";
 import canonical from "./GoldenSpeciesCanonical.module.css";
 
 type SnapshotTone = "light" | "water" | "humidity" | "temperature" | "difficulty";
-type PlantImage = PlantEntry["gallery"][number];
-
-const mediaOverrides: Record<string, PlantImage[]> = {
-  "pilea/peperomioides": [{
-    src: "/pilea-peperomioides-plante.jpg",
-    alt: "Pilea peperomioides aux feuilles rondes portées par de longs pétioles",
-    caption: "Photographie réelle réutilisable, créditée dans le registre média Jungle.",
-    width: 1280,
-    height: 1707,
-    license: {
-      status: "verified",
-      creator: "Husky",
-      license: "CC0 1.0",
-      licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/",
-      registryPath: "/credits-images",
-      note: "Photographie réelle déjà contrôlée dans Jungle.",
-    },
-  }],
-};
-
-const isDocumentaryImage = (image: PlantImage) =>
-  !isPhotoProductionPlaceholder(image.src) &&
-  !isEditorialPlaceholder(image.src) &&
-  image.license?.status !== "media-gap" &&
-  !isInternalPhotoProductionCopy(`${image.alt} ${image.caption}`) &&
-  !/interprétation éditoriale|illustration générée|image générée/i.test(`${image.alt} ${image.caption}`);
-
-const documentaryGallery = (plant: PlantEntry) => {
-  const source = mediaOverrides[`${plant.genre}/${plant.slug}`] ?? plant.gallery;
-  return source.filter((image, index, images) => isDocumentaryImage(image) && images.findIndex((candidate) => candidate.src === image.src) === index);
-};
-
 const firstSentence = (value: string, fallback: string) => {
   const sentence = value.trim().match(/^.*?[.!?](?:\s|$)/)?.[0]?.trim();
   return sentence || value.trim() || fallback;

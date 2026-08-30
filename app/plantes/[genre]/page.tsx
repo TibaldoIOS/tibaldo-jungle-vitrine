@@ -3,7 +3,8 @@ import { notFound } from "next/navigation";
 import { getPlantsByGenre } from "@/lib/plants/catalog";
 import { familyGuides } from "@/lib/plants/family-guides";
 import { familyEditorials } from "@/lib/plants/family-editorials";
-import { isEditorialPlaceholder, isInternalPhotoProductionCopy, isPhotoProductionPlaceholder } from "@/lib/plants/types";
+import { isDocumentaryPlantImage } from "@/lib/plants/documentary-media";
+import { verifiedGroupMediaByGenre } from "@/lib/plants/verified-group-media";
 import GoldenGenusHub, { type GoldenGroupGuide } from "../GoldenGenusHub";
 import { betaOnlyRobots } from "@/lib/deployment-mode";
 
@@ -12,14 +13,10 @@ type GuideKey = keyof typeof familyGuides;
 export const generateStaticParams = () => Object.keys(familyGuides).map((genre) => ({ genre }));
 
 const firstDocumentaryImage = (genre: string) => {
-  if (genre === "pilea") return undefined;
-  return getPlantsByGenre(genre).flatMap((plant) => plant.gallery).find((image) =>
-    !isPhotoProductionPlaceholder(image.src) &&
-    !isEditorialPlaceholder(image.src) &&
-    image.license?.status !== "media-gap" &&
-    !isInternalPhotoProductionCopy(`${image.alt} ${image.caption}`) &&
-    !/interprétation éditoriale|illustration générée|image générée/i.test(`${image.alt} ${image.caption}`),
-  );
+  const override = verifiedGroupMediaByGenre[genre];
+  if (override) return override;
+  const genres = genre === "bananiers" ? ["musa", "ensete"] : [genre];
+  return genres.flatMap((item) => getPlantsByGenre(item)).flatMap((plant) => plant.gallery).find(isDocumentaryPlantImage);
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -36,7 +33,9 @@ export default async function Page({ params }: Props) {
   const guide = familyGuides[genre as GuideKey];
   if (!guide) notFound();
   const editorials = familyEditorials[genre as keyof typeof familyEditorials] ?? [];
-  const list = getPlantsByGenre(genre);
+  const list = genre === "bananiers"
+    ? ["musa", "ensete"].flatMap((item) => getPlantsByGenre(item))
+    : getPlantsByGenre(genre);
   const documentaryImage = firstDocumentaryImage(genre);
   const publicFaq = guide.faq.filter((item) => !item.question.toLowerCase().includes("photograph"));
   const schema = { "@context": "https://schema.org", "@graph": [
