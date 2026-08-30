@@ -5,11 +5,13 @@ import ConversionDock from "./ConversionDock";
 import ConversionTracker from "./ConversionTracker";
 import { BetaEnvironmentBanner } from "./BetaEnvironmentBanner";
 import SafeLinkMaskLayer from "./SafeLinkMaskLayer";
+import JunglePrelaunchCurtain from "./JunglePrelaunchCurtain";
 import { SHOP_ORIGIN } from "@/lib/environment";
 import {
   betaOnlyRobots,
   isPublicJungleDeployment,
 } from "@/lib/deployment-mode";
+import { isPublicPrelaunchCurtainActive } from "@/lib/public-prelaunch";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -71,19 +73,38 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const prelaunchCurtainActive = isPublicPrelaunchCurtainActive(
+    isPublicJungleDeployment,
+  );
+
   return (
     <html lang="fr">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <BetaEnvironmentBanner />
-        <a className="skip-link" href="#contenu-principal">Aller au contenu principal</a>
-        <div id="contenu-principal" tabIndex={-1}>{children}</div>
-        <ConversionDock />
+        <a
+          className="skip-link"
+          href="#contenu-principal"
+          inert={prelaunchCurtainActive || undefined}
+          aria-hidden={prelaunchCurtainActive || undefined}
+        >
+          Aller au contenu principal
+        </a>
+        <div
+          id="contenu-principal"
+          tabIndex={-1}
+          inert={prelaunchCurtainActive || undefined}
+          aria-hidden={prelaunchCurtainActive || undefined}
+        >
+          {children}
+        </div>
+        <ConversionDock inert={prelaunchCurtainActive} />
         <ConversionTracker />
         {isPublicJungleDeployment ? (
           <SafeLinkMaskLayer shopOrigin={SHOP_ORIGIN} />
         ) : null}
+        {prelaunchCurtainActive ? <JunglePrelaunchCurtain /> : null}
       </body>
     </html>
   );
