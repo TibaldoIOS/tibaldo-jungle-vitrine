@@ -9,7 +9,7 @@ export type DocumentaryMediaWaveRecord = {
   source: string;
   license: string;
   mediaFile: string;
-  batch: 1;
+  batch: 1 | 2;
 };
 
 const verifiedLicense = (
@@ -141,7 +141,73 @@ const verifiedMediaByRoute: Readonly<Record<string, readonly PlantImage[]>> = {
       "La fiche Commons identifie explicitement Strelitzia alba dans la Palmenhaus de Schönbrunn. Adaptation locale : redimensionnement et conversion WebP.",
     ),
   )],
+  "/plantes/monstera/dubia": [image(
+    "/documentary-media-wave-v1/monstera-dubia.webp",
+    "Jeunes feuilles plaquées contre un tronc de Monstera dubia",
+    "Monstera dubia en phase juvénile grimpante · photographie documentaire réelle.",
+    1600,
+    2401,
+    verifiedLicense("Jacob Rehage", "CC0 1.0", "https://creativecommons.org/publicdomain/zero/1.0/", "https://commons.wikimedia.org/wiki/File:Monstera_dubia_90346850.jpg", "La fiche Commons et l’observation iNaturalist revue identifient Monstera dubia. Adaptation locale : redimensionnement et conversion WebP."),
+  )],
+  "/plantes/monstera/siltepecana": [image(
+    "/documentary-media-wave-v1/monstera-siltepecana.webp",
+    "Feuilles juvéniles argentées de Monstera siltepecana grimpant sur un support",
+    "Monstera siltepecana · photographie documentaire réelle.",
+    1600,
+    2400,
+    verifiedLicense("Krzysztof Ziarnek, Kenraiz", "CC BY-SA 4.0", ccBySa4, "https://commons.wikimedia.org/wiki/File:Monstera_siltepecana_kz01.jpg", "La fiche Commons identifie Monstera siltepecana au Lincoln Park Conservatory. Adaptation locale : redimensionnement et conversion WebP."),
+  )],
+  "/plantes/monstera/obliqua": [image(
+    "/documentary-media-wave-v1/monstera-obliqua.webp",
+    "Feuille étroite et fenêtrée de Monstera obliqua dans son habitat",
+    "Monstera obliqua observée au Brésil · photographie documentaire réelle.",
+    1600,
+    2134,
+    verifiedLicense("B. Phalan (deboas)", "CC BY 4.0", ccBy4, "https://commons.wikimedia.org/wiki/File:Monstera_obliqua_56326766.jpg", "La fiche Commons et l’observation iNaturalist revue identifient Monstera obliqua au Brésil. Adaptation locale : redimensionnement et conversion WebP."),
+  )],
+  "/plantes/monstera/pinnatipartita": [image(
+    "/documentary-media-wave-v1/monstera-pinnatipartita.webp",
+    "Monstera pinnatipartita grimpant avec feuilles adultes profondément divisées",
+    "Monstera pinnatipartita observée en Colombie · photographie documentaire réelle.",
+    1600,
+    2134,
+    verifiedLicense("Daniel A. Monsalve Ortiz", "CC BY 4.0", ccBy4, "https://commons.wikimedia.org/wiki/File:Monstera_pinnatipartita_in_Colombia.jpg", "La fiche Commons et l’observation iNaturalist revue identifient Monstera pinnatipartita en Colombie. Adaptation locale : redimensionnement et conversion WebP."),
+  )],
+  "/plantes/anthurium/magnificum": [image(
+    "/documentary-media-wave-v1/anthurium-magnificum.webp",
+    "Grandes feuilles veloutées nervurées d’Anthurium magnificum",
+    "Anthurium magnificum · photographie documentaire réelle.",
+    1600,
+    2188,
+    verifiedLicense("Krzysztof Ziarnek, Kenraiz", "CC BY-SA 4.0", ccBySa4, "https://commons.wikimedia.org/wiki/File:Anthurium_magnificum_kz1.jpg", "La fiche Commons identifie Anthurium magnificum au New York Botanical Garden. Adaptation locale : redimensionnement et conversion WebP."),
+  )],
+  "/plantes/anthurium/forgetii": [image(
+    "/documentary-media-wave-v1/anthurium-forgetii.webp",
+    "Anthurium forgetii en pot aux feuilles peltées sans sinus ouvert",
+    "Anthurium forgetii · photographie documentaire réelle.",
+    1600,
+    1279,
+    verifiedLicense("Steven Walling", "CC BY-SA 4.0", ccBySa4, "https://commons.wikimedia.org/wiki/File:Anthurium_forgetii_potted.jpg", "La fiche Commons identifie explicitement un Anthurium forgetii cultivé. Adaptation locale : redimensionnement et conversion WebP."),
+  )],
+  "/plantes/anthurium/papillilaminum": [image(
+    "/documentary-media-wave-v1/anthurium-papillilaminum.webp",
+    "Feuilles sombres veloutées d’Anthurium papillilaminum",
+    "Anthurium papillilaminum · photographie documentaire réelle.",
+    1600,
+    2400,
+    verifiedLicense("NKSTTSSHNVN", "CC BY-SA 4.0", ccBySa4, "https://commons.wikimedia.org/wiki/File:Anthurium_papillilaminum_NKS.jpg", "La fiche Commons identifie explicitement Anthurium papillilaminum. Adaptation locale : redimensionnement et conversion WebP."),
+  )],
 };
+
+const batch2Routes = new Set([
+  "/plantes/monstera/dubia",
+  "/plantes/monstera/siltepecana",
+  "/plantes/monstera/obliqua",
+  "/plantes/monstera/pinnatipartita",
+  "/plantes/anthurium/magnificum",
+  "/plantes/anthurium/forgetii",
+  "/plantes/anthurium/papillilaminum",
+]);
 
 export const documentaryMediaWaveV1Registry: readonly DocumentaryMediaWaveRecord[] = Object.entries(verifiedMediaByRoute).map(([route, images]) => ({
   route: route as `/plantes/${string}`,
@@ -150,7 +216,7 @@ export const documentaryMediaWaveV1Registry: readonly DocumentaryMediaWaveRecord
   source: images[0].license?.sourceUrl ?? "",
   license: images[0].license?.license ?? "",
   mediaFile: images[0].src,
-  batch: 1,
+  batch: batch2Routes.has(route) ? 2 : 1,
 }));
 
 export const applyDocumentaryMediaCompletionWaveV1 = (plants: PlantEntry[]): PlantEntry[] => plants.map((plant) => {

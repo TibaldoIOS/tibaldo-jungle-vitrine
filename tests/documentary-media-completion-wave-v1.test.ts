@@ -5,8 +5,10 @@ import { getPlant } from "../lib/plants/catalog.ts";
 import { documentaryMediaWaveV1Registry } from "../lib/plants/documentary-media-completion-wave-v1.ts";
 import { documentaryGallery } from "../lib/plants/documentary-media.ts";
 
-test("batch 1 publishes only seven exact, licensed and visually accepted photographs", () => {
-  assert.equal(documentaryMediaWaveV1Registry.length, 7);
+test("batches 1 and 2 publish only exact, licensed and visually accepted photographs", () => {
+  assert.equal(documentaryMediaWaveV1Registry.length, 14);
+  assert.equal(documentaryMediaWaveV1Registry.filter(({ batch }) => batch === 1).length, 7);
+  assert.equal(documentaryMediaWaveV1Registry.filter(({ batch }) => batch === 2).length, 7);
 
   for (const record of documentaryMediaWaveV1Registry) {
     const [, , genre, slug] = record.route.split("/");
