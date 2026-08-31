@@ -43,6 +43,18 @@
     line-height: .84;
   }
 
+  .mobileCopy .mobileTitle[data-title-fit="long"] {
+    max-width: 100%;
+    font-size: clamp(44px, 13vw, 56px);
+    letter-spacing: -.055em;
+  }
+
+  .mobileCopy .mobileTitle[data-title-fit="extra-long"] {
+    max-width: 100%;
+    font-size: clamp(38px, 11vw, 48px);
+    letter-spacing: -.06em;
+  }
+
   .mobileIntroduction {
     max-width: 358px;
     margin-top: 10px;

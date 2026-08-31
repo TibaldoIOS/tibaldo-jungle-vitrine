@@ -11,8 +11,8 @@ export default function GenusSpeciesCarousel({ genre, genusName, plants }: {
   plants: readonly PlantEntry[];
 }) {
   return (
-    <section className="genus-species-carousel shell" aria-labelledby={`genus-carousel-${genre}`} data-reveal>
-      <header>
+    <section className="genus-species-carousel shell" aria-labelledby={`genus-carousel-${genre}`} data-long-grid-visible>
+      <header data-reveal>
         <p className="section-kicker">Toutes les fiches du genre</p>
         <h2 id={`genus-carousel-${genre}`}>Explorer les <em>{genusName}.</em></h2>
         <p>{plants.length ? `${plants.length} ${plants.length > 1 ? "espèces et cultivars documentés" : "fiche documentée"}, sans confondre encyclopédie et disponibilité en boutique.` : "Les premières fiches documentées rejoindront ici l’encyclopédie."}</p>

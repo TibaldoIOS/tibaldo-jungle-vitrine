@@ -99,7 +99,7 @@ export default function GoldenGenusHub({ genre, guide, plants, editorials = [], 
         <div className={`${hero.heroContent} ${mobile.mobileContent} shell`}>
           <div className={`${hero.heroCopy} ${mobile.mobileCopy}`}>
             <p className={`${hero.heroEyebrow} ${mobile.mobileEyebrow}`}>{label} · Univers botanique</p>
-            <h1 className={mobile.mobileTitle} id={`golden-group-title-${genre}`}>Les <em>{title}.</em></h1>
+            <h1 className={mobile.mobileTitle} data-title-fit={title.length >= 15 ? "extra-long" : title.length >= 9 ? "long" : "default"} id={`golden-group-title-${genre}`}>Les <em>{title}.</em></h1>
             <p className={`${hero.heroIntroduction} ${mobile.mobileIntroduction}`}>{heroCopy}</p>
             <p className={`${hero.heroNote} ${mobile.mobileNote}`}>{media ? "Une photographie documentaire contrôlée ouvre le groupe sans prétendre représenter toutes ses formes." : "Un manque de média reste explicite : aucun spécimen documentaire n’est fabriqué pour compléter la page."}</p>
           </div>
