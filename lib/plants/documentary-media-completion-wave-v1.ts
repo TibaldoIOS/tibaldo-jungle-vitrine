@@ -9,7 +9,7 @@ export type DocumentaryMediaWaveRecord = {
   source: string;
   license: string;
   mediaFile: string;
-  batch: 1 | 2;
+  batch: 1 | 2 | 3;
 };
 
 const verifiedLicense = (
@@ -197,6 +197,30 @@ const verifiedMediaByRoute: Readonly<Record<string, readonly PlantImage[]>> = {
     2400,
     verifiedLicense("NKSTTSSHNVN", "CC BY-SA 4.0", ccBySa4, "https://commons.wikimedia.org/wiki/File:Anthurium_papillilaminum_NKS.jpg", "La fiche Commons identifie explicitement Anthurium papillilaminum. Adaptation locale : redimensionnement et conversion WebP."),
   )],
+  "/plantes/alocasia/reginula": [image(
+    "/documentary-media-wave-v1/alocasia-reginula.webp",
+    "Feuilles sombres veloutées aux nervures blanches d’Alocasia reginula",
+    "Alocasia reginula · photographie documentaire réelle.",
+    1600,
+    1600,
+    verifiedLicense("Obsidian Soul", "CC0 1.0", "https://creativecommons.org/publicdomain/zero/1.0/", "https://commons.wikimedia.org/wiki/File:Alocasia_reginula_(Philippines)_01.jpg", "La fiche Commons identifie explicitement Alocasia reginula aux Philippines. Adaptation locale : redimensionnement et conversion WebP."),
+  )],
+  "/plantes/alocasia/micholitziana": [image(
+    "/documentary-media-wave-v1/alocasia-micholitziana.webp",
+    "Feuilles sagittées sombres aux nervures claires d’Alocasia micholitziana",
+    "Alocasia micholitziana · photographie documentaire réelle.",
+    1600,
+    1482,
+    verifiedLicense("Dinkum", "CC0 1.0", "https://creativecommons.org/publicdomain/zero/1.0/", "https://commons.wikimedia.org/wiki/File:Alocasia_micholitziana_2.JPG", "La fiche Commons identifie explicitement Alocasia micholitziana. Adaptation locale : redimensionnement et conversion WebP."),
+  )],
+  "/plantes/alocasia/baginda": [image(
+    "/documentary-media-wave-v1/alocasia-baginda.webp",
+    "Feuilles épaisses argentées et nervurées d’Alocasia baginda",
+    "Alocasia baginda · photographie documentaire réelle.",
+    1600,
+    2183,
+    verifiedLicense("Yercaud-elango", "CC BY 4.0", ccBy4, "https://commons.wikimedia.org/wiki/File:Alocasia_baginda_-3-NRI_Layout-bengaluru-India.jpg", "La fiche Commons identifie explicitement Alocasia baginda à Bengaluru. Adaptation locale : redimensionnement et conversion WebP."),
+  )],
 };
 
 const batch2Routes = new Set([
@@ -209,6 +233,12 @@ const batch2Routes = new Set([
   "/plantes/anthurium/papillilaminum",
 ]);
 
+const batch3Routes = new Set([
+  "/plantes/alocasia/reginula",
+  "/plantes/alocasia/micholitziana",
+  "/plantes/alocasia/baginda",
+]);
+
 export const documentaryMediaWaveV1Registry: readonly DocumentaryMediaWaveRecord[] = Object.entries(verifiedMediaByRoute).map(([route, images]) => ({
   route: route as `/plantes/${string}`,
   botanicalIdentity: images[0].alt,
@@ -216,7 +246,7 @@ export const documentaryMediaWaveV1Registry: readonly DocumentaryMediaWaveRecord
   source: images[0].license?.sourceUrl ?? "",
   license: images[0].license?.license ?? "",
   mediaFile: images[0].src,
-  batch: batch2Routes.has(route) ? 2 : 1,
+  batch: batch3Routes.has(route) ? 3 : batch2Routes.has(route) ? 2 : 1,
 }));
 
 export const applyDocumentaryMediaCompletionWaveV1 = (plants: PlantEntry[]): PlantEntry[] => plants.map((plant) => {
