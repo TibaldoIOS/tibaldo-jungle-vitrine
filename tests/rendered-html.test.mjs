@@ -127,7 +127,7 @@ test("the shared carousel renders every Monstera entry after P1", async () => {
   assert.equal(response.status, 200);
   const html = await response.text();
   assert.match(html, /class="genus-species-carousel shell"/);
-  assert.equal((html.match(/class="genus-carousel-card/g) ?? []).length, 12);
+  assert.equal((html.match(/class="genus-carousel-card/g) ?? []).length, 15);
   for (const slug of ["deliciosa", "thai-constellation", "albo-variegata", "esqueleto", "burle-marx-flame", "dubia", "obliqua", "siltepecana", "pinnatipartita", "standleyana"]) {
     assert.match(html, new RegExp(`href="/plantes/monstera/${slug}"`));
   }
@@ -627,7 +627,7 @@ test("V23 Golden Pilea prototypes remain isolated and expose two distinct editor
   assert.match(groupHtml, /Golden Group/);
   assert.match(groupHtml, /pilea-planche-formes-textures\.webp/);
   assert.match(groupHtml, /ni un inventaire taxonomique exhaustif ni une disponibilité boutique/i);
-  assert.equal((groupHtml.match(/class="genus-carousel-card/g) ?? []).length, 2);
+  assert.equal((groupHtml.match(/class="genus-carousel-card/g) ?? []).length, 3);
   assert.match(groupHtml, /Photographie réelle[\s\S]*à documenter/i);
 
   const speciesResponse = await render("/lab/v23/golden-species/pilea-peperomioides");
@@ -873,7 +873,7 @@ test("renders Dicksonia, its hierarchy and the shared species hero fallback", as
   assert.match(speciesHtml, /rel=["']canonical["'][^>]+plantes\/dicksonia\/antarctica/i);
   assert.doesNotMatch(speciesHtml, /Dictyonia/i);
   const api = await (await render("/api/encyclopedie/plantes")).json();
-  assert.equal(api.length, 76);
+  assert.equal(api.length, 96);
   assert.ok(api.some((entry) => entry.encyclopediaSlug === "plantes/dicksonia/antarctica"));
 });
 
@@ -899,8 +899,8 @@ test("renders the Agave, Fatsia and five-species Strelitzia cluster", async () =
   assert.match(hub, /synonyme de S\. alba/i);
   assert.doesNotMatch(hub, /href=["']\/plantes\/strelitzia\/augusta/i);
   const api = await (await render("/api/v2/encyclopedie/plantes")).json();
-  assert.equal(api.length, 76);
-  assert.equal(new Set(api.map((entry) => entry.encyclopediaSlug)).size, 76);
+  assert.equal(api.length, 96);
+  assert.equal(new Set(api.map((entry) => entry.encyclopediaSlug)).size, 96);
 });
 
 test("final convergence renders one shared Golden Group system with honest genus media", async () => {

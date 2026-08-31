@@ -1,0 +1,1437 @@
+{
+  "generatedAt": "2026-08-31",
+  "baseline": {
+    "species": 76,
+    "hubs": 31,
+    "realMediaSpecies": 19,
+    "mediaGapSpecies": 57,
+    "completeMediaHubs": 14,
+    "mediaGapHubs": 17
+  },
+  "after": {
+    "species": 96,
+    "hubs": 31,
+    "realMediaSpecies": 35,
+    "mediaGapSpecies": 61,
+    "completeMediaHubs": 16,
+    "mediaGapHubs": 15
+  },
+  "species": [
+    {
+      "route": "/plantes/alocasia/imperial-red",
+      "hub": "/plantes/alocasia",
+      "family": "Araceae",
+      "genus": "Alocasia",
+      "taxon": "Alocasia ‘Imperial Red’",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/anthurium/pallidiflorum",
+      "hub": "/plantes/anthurium",
+      "family": "Araceae",
+      "genus": "Anthurium",
+      "taxon": "Anthurium pallidiflorum",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/anthurium/veitchii",
+      "hub": "/plantes/anthurium",
+      "family": "Araceae",
+      "genus": "Anthurium",
+      "taxon": "Anthurium veitchii",
+      "media": [
+        {
+          "src": "/media/anthurium-veitchii-king.jpg",
+          "source": "https://commons.wikimedia.org/wiki/File:Anthurium_veitchii-King_Anthurium.jpg",
+          "creator": "Supertita",
+          "license": "CC BY-SA 4.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/philodendron/billietiae",
+      "hub": "/plantes/philodendron",
+      "family": "Araceae",
+      "genus": "Philodendron",
+      "taxon": "Philodendron billietiae",
+      "media": [
+        {
+          "src": "/philodendron-billietiae-feuilles-ondulees.jpg",
+          "source": "https://commons.wikimedia.org/wiki/File:Philodendron_billietiae_0zz.jpg",
+          "creator": "David J. Stang",
+          "license": "CC BY-SA 4.0",
+          "status": "verified"
+        },
+        {
+          "src": "/philodendron-billietiae-petioles-orange.jpg",
+          "source": "https://commons.wikimedia.org/wiki/File:Philodendron_billietiae_1zz.jpg",
+          "creator": "David J. Stang",
+          "license": "CC BY-SA 4.0",
+          "status": "verified"
+        },
+        {
+          "src": "/philodendron-billietiae-revers-feuille.jpg",
+          "source": "https://commons.wikimedia.org/wiki/File:Philodendron_billietiae_2zz.jpg",
+          "creator": "David J. Stang",
+          "license": "CC BY-SA 4.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/pilea/peperomioides",
+      "hub": "/plantes/pilea",
+      "family": "Urticaceae",
+      "genus": "Pilea",
+      "taxon": "Pilea peperomioides",
+      "media": [
+        {
+          "src": "/pilea-peperomioides-plante.jpg",
+          "source": "https://commons.wikimedia.org/wiki/File:Pilea_peperomioides_Chinese_money_plant.jpg",
+          "creator": "Husky",
+          "license": "CC0 1.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/asparagus/plumosus",
+      "hub": "/plantes/asparagus",
+      "family": "Asparagaceae",
+      "genus": "Asparagus",
+      "taxon": "Asparagus setaceus",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/epipremnum/marble-queen",
+      "hub": "/plantes/epipremnum",
+      "family": "Araceae",
+      "genus": "Epipremnum",
+      "taxon": "Epipremnum aureum ‘Marble Queen’",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/epiphyllum/anguliger",
+      "hub": "/plantes/epiphyllum",
+      "family": "Cactaceae",
+      "genus": "Disocactus",
+      "taxon": "Disocactus anguliger",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/monstera/deliciosa",
+      "hub": "/plantes/monstera",
+      "family": "Araceae",
+      "genus": "Monstera",
+      "taxon": "Monstera deliciosa",
+      "media": [
+        {
+          "src": "/media/final-media-v35/monstera-deliciosa-jonathan-borba-pexels.webp",
+          "source": "https://www.pexels.com/fr-fr/photo/feuilles-de-monstera-d-un-vert-luxuriant-a-la-texture-naturelle-37181425/",
+          "creator": "Jonathan Borba",
+          "license": "Pexels License",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/monstera/thai-constellation",
+      "hub": "/plantes/monstera",
+      "family": "Araceae",
+      "genus": "Monstera",
+      "taxon": "Monstera deliciosa ‘Thai Constellation’",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/monstera/mint",
+      "hub": "/plantes/monstera",
+      "family": "Araceae",
+      "genus": "Monstera",
+      "taxon": "Monstera deliciosa ‘Mint’",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/monstera/adansonii",
+      "hub": "/plantes/monstera",
+      "family": "Araceae",
+      "genus": "Monstera",
+      "taxon": "Monstera adansonii",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/philodendron/royal-queen",
+      "hub": "/plantes/philodendron",
+      "family": "Araceae",
+      "genus": "Philodendron",
+      "taxon": "Philodendron ‘Royal Queen’",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/anthurium/delta-force",
+      "hub": "/plantes/anthurium",
+      "family": "Araceae",
+      "genus": "Anthurium",
+      "taxon": "Anthurium ‘Delta Force’",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/philodendron/melanochrysum",
+      "hub": "/plantes/philodendron",
+      "family": "Araceae",
+      "genus": "Philodendron",
+      "taxon": "Philodendron melanochrysum",
+      "media": [
+        {
+          "src": "/philodendron-melanochrysum-real.jpg",
+          "source": "https://commons.wikimedia.org/wiki/File:PhilodendronMelanochrysum.jpg",
+          "creator": "Chhe",
+          "license": "Domaine public",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/philodendron/brasil",
+      "hub": "/plantes/philodendron",
+      "family": "Araceae",
+      "genus": "Philodendron",
+      "taxon": "Philodendron hederaceum ‘Brasil’",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/anthurium/regale",
+      "hub": "/plantes/anthurium",
+      "family": "Araceae",
+      "genus": "Anthurium",
+      "taxon": "Anthurium regale",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/anthurium/papillilaminum-dark-phoenix",
+      "hub": "/plantes/anthurium",
+      "family": "Araceae",
+      "genus": "Anthurium",
+      "taxon": "Anthurium papillilaminum × ‘Dark Phoenix’",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/anthurium/forgetii-dark-form-silver-blush",
+      "hub": "/plantes/anthurium",
+      "family": "Araceae",
+      "genus": "Anthurium",
+      "taxon": "Anthurium forgetii dark form × ‘Silver Blush’",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/philodendron/gloriosum",
+      "hub": "/plantes/philodendron",
+      "family": "Araceae",
+      "genus": "Philodendron",
+      "taxon": "Philodendron gloriosum",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/philodendron/grazielae",
+      "hub": "/plantes/philodendron",
+      "family": "Araceae",
+      "genus": "Philodendron",
+      "taxon": "Philodendron grazielae",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/monstera/burle-marx-flame",
+      "hub": "/plantes/monstera",
+      "family": "Araceae",
+      "genus": "Monstera",
+      "taxon": "Monstera sp. ‘Burle Marx’s Flame’",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/monstera/esqueleto",
+      "hub": "/plantes/monstera",
+      "family": "Araceae",
+      "genus": "Monstera",
+      "taxon": "Monstera sp. ‘Esqueleto’",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/pilea/cadierei",
+      "hub": "/plantes/pilea",
+      "family": "Urticaceae",
+      "genus": "Pilea",
+      "taxon": "Pilea cadierei",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/colocasia/esculenta-eddo",
+      "hub": "/plantes/colocasia",
+      "family": "Araceae",
+      "genus": "Colocasia",
+      "taxon": "Colocasia esculenta",
+      "media": [
+        {
+          "src": "/colocasia-esculenta-feuille.jpg",
+          "source": "https://commons.wikimedia.org/wiki/File:Starr-090519-8057-Colocasia_esculenta-leaves-Native_Nursery_Kula-Maui_(24325097844).jpg",
+          "creator": "Forest & Kim Starr",
+          "license": "CC BY 3.0 US",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/yucca/rostrata",
+      "hub": "/plantes/yucca",
+      "family": "Asparagaceae",
+      "genus": "Yucca",
+      "taxon": "Yucca rostrata",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/aloe/vera",
+      "hub": "/plantes/aloe",
+      "family": "Asphodelaceae",
+      "genus": "Aloe",
+      "taxon": "Aloe vera",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/chlorophytum/comosum",
+      "hub": "/plantes/chlorophytum",
+      "family": "Asparagaceae",
+      "genus": "Chlorophytum",
+      "taxon": "Chlorophytum comosum",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/plumeria/rubra",
+      "hub": "/plantes/plumeria",
+      "family": "Apocynaceae",
+      "genus": "Plumeria",
+      "taxon": "Plumeria rubra",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/equisetum/japonicum",
+      "hub": "/plantes/equisetum",
+      "family": "Equisetaceae",
+      "genus": "Equisetum",
+      "taxon": "Equisetum hyemale var. japonicum",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/monstera/dubia",
+      "hub": "/plantes/monstera",
+      "family": "Araceae",
+      "genus": "Monstera",
+      "taxon": "Monstera dubia",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/monstera/siltepecana",
+      "hub": "/plantes/monstera",
+      "family": "Araceae",
+      "genus": "Monstera",
+      "taxon": "Monstera siltepecana",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/monstera/obliqua",
+      "hub": "/plantes/monstera",
+      "family": "Araceae",
+      "genus": "Monstera",
+      "taxon": "Monstera obliqua",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/monstera/pinnatipartita",
+      "hub": "/plantes/monstera",
+      "family": "Araceae",
+      "genus": "Monstera",
+      "taxon": "Monstera pinnatipartita",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/monstera/standleyana",
+      "hub": "/plantes/monstera",
+      "family": "Araceae",
+      "genus": "Monstera",
+      "taxon": "Monstera standleyana",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/anthurium/crystallinum",
+      "hub": "/plantes/anthurium",
+      "family": "Araceae",
+      "genus": "Anthurium",
+      "taxon": "Anthurium crystallinum",
+      "media": [
+        {
+          "src": "/media/anthurium-crystallinum-feuille.jpg",
+          "source": "https://commons.wikimedia.org/wiki/File:Anthurium_crystallinum_6zz.jpg",
+          "creator": "David J. Stang",
+          "license": "CC BY-SA 4.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/anthurium/magnificum",
+      "hub": "/plantes/anthurium",
+      "family": "Araceae",
+      "genus": "Anthurium",
+      "taxon": "Anthurium magnificum Linden",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/anthurium/forgetii",
+      "hub": "/plantes/anthurium",
+      "family": "Araceae",
+      "genus": "Anthurium",
+      "taxon": "Anthurium forgetii",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/anthurium/papillilaminum",
+      "hub": "/plantes/anthurium",
+      "family": "Araceae",
+      "genus": "Anthurium",
+      "taxon": "Anthurium papillilaminum",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/alocasia/cuprea",
+      "hub": "/plantes/alocasia",
+      "family": "Araceae",
+      "genus": "Alocasia",
+      "taxon": "Alocasia cuprea",
+      "media": [
+        {
+          "src": "/media/alocasia-cuprea-feuillage.jpg",
+          "source": "https://commons.wikimedia.org/wiki/File:Alocasia_cuprea_(portrait_orientation).jpg",
+          "creator": "Frank Schulenburg",
+          "license": "CC BY-SA 3.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/alocasia/zebrina",
+      "hub": "/plantes/alocasia",
+      "family": "Araceae",
+      "genus": "Alocasia",
+      "taxon": "Alocasia zebrina",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/alocasia/reginula",
+      "hub": "/plantes/alocasia",
+      "family": "Araceae",
+      "genus": "Alocasia",
+      "taxon": "Alocasia reginula",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/alocasia/micholitziana",
+      "hub": "/plantes/alocasia",
+      "family": "Araceae",
+      "genus": "Alocasia",
+      "taxon": "Alocasia micholitziana",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/alocasia/baginda",
+      "hub": "/plantes/alocasia",
+      "family": "Araceae",
+      "genus": "Alocasia",
+      "taxon": "Alocasia baginda",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/alocasia/sinuata",
+      "hub": "/plantes/alocasia",
+      "family": "Araceae",
+      "genus": "Alocasia",
+      "taxon": "Alocasia sinuata",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/alocasia/longiloba",
+      "hub": "/plantes/alocasia",
+      "family": "Araceae",
+      "genus": "Alocasia",
+      "taxon": "Alocasia longiloba",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/alocasia/macrorrhizos",
+      "hub": "/plantes/alocasia",
+      "family": "Araceae",
+      "genus": "Alocasia",
+      "taxon": "Alocasia macrorrhizos",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/alocasia/odora",
+      "hub": "/plantes/alocasia",
+      "family": "Araceae",
+      "genus": "Alocasia",
+      "taxon": "Alocasia odora",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/maranta/lemon-lime",
+      "hub": "/plantes/maranta",
+      "family": "Marantaceae",
+      "genus": "Maranta",
+      "taxon": "Maranta leuconeura ‘Lemon Lime’",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/anthurium/clarinervium",
+      "hub": "/plantes/anthurium",
+      "family": "Araceae",
+      "genus": "Anthurium",
+      "taxon": "Anthurium clarinervium",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/anthurium/warocqueanum",
+      "hub": "/plantes/anthurium",
+      "family": "Araceae",
+      "genus": "Anthurium",
+      "taxon": "Anthurium warocqueanum",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/musa/basjoo",
+      "hub": "/plantes/musa",
+      "family": "Musaceae",
+      "genus": "Musa",
+      "taxon": "Musa basjoo",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/musa/sikkimensis-red-tiger",
+      "hub": "/plantes/musa",
+      "family": "Musaceae",
+      "genus": "Musa",
+      "taxon": "Musa sikkimensis 'Red Tiger'",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/musa/florida-variegata",
+      "hub": "/plantes/musa",
+      "family": "Musaceae",
+      "genus": "Musa",
+      "taxon": "Musa 'Florida Variegata'",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/ensete/ventricosum-maurelii",
+      "hub": "/plantes/ensete",
+      "family": "Musaceae",
+      "genus": "Ensete",
+      "taxon": "Ensete ventricosum 'Maurelii'",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/cycas/revoluta",
+      "hub": "/plantes/cycas",
+      "family": "Cycadaceae",
+      "genus": "Cycas",
+      "taxon": "Cycas revoluta",
+      "media": [
+        {
+          "src": "/media/images/cycas-revoluta/cycas-revoluta-terrasse-tibaldo.webp",
+          "source": null,
+          "creator": null,
+          "license": null,
+          "status": "legacy-documented"
+        },
+        {
+          "src": "/media/images/cycas-revoluta/cycas-revoluta-port-couronne.webp",
+          "source": null,
+          "creator": null,
+          "license": null,
+          "status": "legacy-documented"
+        },
+        {
+          "src": "/media/images/cycas-revoluta/cycas-revoluta-pot-noir-exterieur.webp",
+          "source": null,
+          "creator": null,
+          "license": null,
+          "status": "legacy-documented"
+        },
+        {
+          "src": "/media/images/cycas-revoluta/cycas-revoluta-pot-bleu-frondes.webp",
+          "source": null,
+          "creator": null,
+          "license": null,
+          "status": "legacy-documented"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/dicksonia/antarctica",
+      "hub": "/plantes/dicksonia",
+      "family": "Dicksoniaceae",
+      "genus": "Dicksonia",
+      "taxon": "Dicksonia antarctica",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/agave/americana-variegata",
+      "hub": "/plantes/agave",
+      "family": "Asparagaceae",
+      "genus": "Agave",
+      "taxon": "Agave americana ‘Variegata’",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/fatsia/japonica-spiders-web",
+      "hub": "/plantes/fatsia",
+      "family": "Araliaceae",
+      "genus": "Fatsia",
+      "taxon": "Fatsia japonica ‘Spider’s Web’",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/strelitzia/alba",
+      "hub": "/plantes/strelitzia",
+      "family": "Strelitziaceae",
+      "genus": "Strelitzia",
+      "taxon": "Strelitzia alba",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/strelitzia/caudata",
+      "hub": "/plantes/strelitzia",
+      "family": "Strelitziaceae",
+      "genus": "Strelitzia",
+      "taxon": "Strelitzia caudata",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/strelitzia/juncea",
+      "hub": "/plantes/strelitzia",
+      "family": "Strelitziaceae",
+      "genus": "Strelitzia",
+      "taxon": "Strelitzia juncea",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/strelitzia/nicolai",
+      "hub": "/plantes/strelitzia",
+      "family": "Strelitziaceae",
+      "genus": "Strelitzia",
+      "taxon": "Strelitzia nicolai",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/strelitzia/reginae",
+      "hub": "/plantes/strelitzia",
+      "family": "Strelitziaceae",
+      "genus": "Strelitzia",
+      "taxon": "Strelitzia reginae",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/alocasia/tandurusa",
+      "hub": "/plantes/alocasia",
+      "family": "Araceae",
+      "genus": "Alocasia",
+      "taxon": "Alocasia tandurusa",
+      "media": [
+        {
+          "src": "/media/final-media-v35/alocasia-tandurusa-port.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Alocasia_Tandurusa_%27Jacklyn%27_JRVdH_02.jpg",
+          "creator": "Cephas",
+          "license": "CC BY-SA 4.0",
+          "status": "verified"
+        },
+        {
+          "src": "/media/final-media-v35/alocasia-tandurusa-feuillage.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Alocasia_Tandurusa_%27Jacklyn%27_JRVdH_01.jpg",
+          "creator": "Cephas",
+          "license": "CC BY-SA 4.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/alocasia/melo",
+      "hub": "/plantes/alocasia",
+      "family": "Araceae",
+      "genus": "Alocasia",
+      "taxon": "Alocasia melo",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/alocasia/mortfontanensis-polly",
+      "hub": "/plantes/alocasia",
+      "family": "Araceae",
+      "genus": "Alocasia",
+      "taxon": "Alocasia × mortfontanensis ‘Polly’",
+      "media": [
+        {
+          "src": "/media/final-media-v35/alocasia-polly.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Alocasia_x_amazonica_%27Polly%27.jpg",
+          "creator": "Tim Kortekamp",
+          "license": "CC BY-SA 4.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/anthurium/luxurians",
+      "hub": "/plantes/anthurium",
+      "family": "Araceae",
+      "genus": "Anthurium",
+      "taxon": "Anthurium luxurians",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/anthurium/wendlingeri",
+      "hub": "/plantes/anthurium",
+      "family": "Araceae",
+      "genus": "Anthurium",
+      "taxon": "Anthurium wendlingeri",
+      "media": [
+        {
+          "src": "/media/final-media-v35/anthurium-wendlingeri-port.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Anthurium-wendlingeri-SF24277-01.jpg",
+          "creator": "Steve Fitzgerald",
+          "license": "CC BY-SA 4.0",
+          "status": "verified"
+        },
+        {
+          "src": "/media/final-media-v35/anthurium-wendlingeri-inflorescence.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Anthurium_wendlingeri_kz01.jpg",
+          "creator": "Krzysztof Ziarnek, Kenraiz",
+          "license": "CC BY-SA 4.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/philodendron/hederaceum",
+      "hub": "/plantes/philodendron",
+      "family": "Araceae",
+      "genus": "Philodendron",
+      "taxon": "Philodendron hederaceum",
+      "media": [
+        {
+          "src": "/media/final-media-v35/philodendron-hederaceum-port.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Philodendron_hederaceum,_Singapore_Botanic_Gardens_(141542).jpg",
+          "creator": "Moheen Reeyad",
+          "license": "CC BY-SA 4.0",
+          "status": "verified"
+        },
+        {
+          "src": "/media/final-media-v35/philodendron-hederaceum-feuillage.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Philodendron_hederaceum_kz01.jpg",
+          "creator": "Krzysztof Ziarnek, Kenraiz",
+          "license": "CC BY-SA 4.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/philodendron/pink-princess",
+      "hub": "/plantes/philodendron",
+      "family": "Araceae",
+      "genus": "Philodendron",
+      "taxon": "Philodendron ‘Pink Princess’",
+      "media": [
+        {
+          "src": "/media/final-media-v35/philodendron-pink-princess.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Philodendron_Pink_Princess.jpg",
+          "creator": "Srikandi73",
+          "license": "CC BY-SA 4.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/monstera/albo-variegata",
+      "hub": "/plantes/monstera",
+      "family": "Araceae",
+      "genus": "Monstera",
+      "taxon": "Monstera deliciosa ‘Albo Variegata’",
+      "media": [
+        {
+          "src": "/media/final-media-v35/monstera-albo-variegata.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Fruit_Salad_Plant_(Monstera_deliciosa_%27Albo-Variegata%27)_1.jpg",
+          "creator": "Mokkie",
+          "license": "CC BY-SA 3.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/ficus/elastica",
+      "hub": "/plantes/ficus",
+      "family": "Moraceae",
+      "genus": "Ficus",
+      "taxon": "Ficus elastica",
+      "media": [
+        {
+          "src": "/media/final-media-v35/ficus-elastica-port.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Ficus_elastica_(rubber_plant).jpg",
+          "creator": "Karlfonza",
+          "license": "CC BY-SA 4.0",
+          "status": "verified"
+        },
+        {
+          "src": "/media/final-media-v35/ficus-elastica-feuille.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Backlit_ficus_elastica_leaf_texture_2014_02.jpg",
+          "creator": "Julian Herzog",
+          "license": "CC BY 4.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/hoya/carnosa",
+      "hub": "/plantes/hoya",
+      "family": "Apocynaceae",
+      "genus": "Hoya",
+      "taxon": "Hoya carnosa",
+      "media": [
+        {
+          "src": "/media/final-media-v35/hoya-carnosa-port.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Hoya_carnosa_-_Begonia_House_-_Wellington_Botanic_Garden_-_Wellington,_NZ_-_DSC09338.jpg",
+          "creator": "Daderot",
+          "license": "CC0 1.0",
+          "status": "verified"
+        },
+        {
+          "src": "/media/final-media-v35/hoya-carnosa-fleurs.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Hoya_carnosa_-_umbel_with_nectar_droplets.jpg",
+          "creator": "Franz van Duns",
+          "license": "CC BY-SA 4.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/syngonium/podophyllum",
+      "hub": "/plantes/syngonium",
+      "family": "Araceae",
+      "genus": "Syngonium",
+      "taxon": "Syngonium podophyllum",
+      "media": [
+        {
+          "src": "/media/final-media-v35/syngonium-podophyllum-feuillage.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Syngonium_podophyllum_10zz.jpg",
+          "creator": "David J. Stang",
+          "license": "CC BY-SA 4.0",
+          "status": "verified"
+        },
+        {
+          "src": "/media/final-media-v35/syngonium-podophyllum-port.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Syngonium_podophyllum_kz02.jpg",
+          "creator": "Krzysztof Ziarnek, Kenraiz",
+          "license": "CC BY-SA 4.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/sansevieria/trifasciata",
+      "hub": "/plantes/sansevieria",
+      "family": "Asparagaceae",
+      "genus": "Dracaena",
+      "taxon": "Dracaena trifasciata",
+      "media": [
+        {
+          "src": "/media/final-media-v35/dracaena-trifasciata-port.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Dracaena_Trifasciata_Plant.jpg",
+          "creator": "Fanti Salms",
+          "license": "CC BY-SA 4.0",
+          "status": "verified"
+        },
+        {
+          "src": "/media/final-media-v35/dracaena-trifasciata-jardin-botanique.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:20210623_Hortus_botanicus_Leiden_-_Sansevieria_trifasciata_v2.jpg",
+          "creator": "Rudolphous",
+          "license": "CC BY-SA 4.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/peperomia/argyraea",
+      "hub": "/plantes/peperomia",
+      "family": "Piperaceae",
+      "genus": "Peperomia",
+      "taxon": "Peperomia argyraea",
+      "media": [
+        {
+          "src": "/peperomia-argyreia-feuillage.jpg",
+          "source": "https://commons.wikimedia.org/wiki/File:Watermelon_Peperomia_(Peperomia_argyreia).jpg",
+          "creator": "Mokkie",
+          "license": "CC BY-SA 4.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/epipremnum/aureum",
+      "hub": "/plantes/epipremnum",
+      "family": "Araceae",
+      "genus": "Epipremnum",
+      "taxon": "Epipremnum aureum",
+      "media": [
+        {
+          "src": "/epipremnum-aureum-pothos.jpg",
+          "source": "https://commons.wikimedia.org/wiki/File:Epipremnum_aureum_(Golden_pothos).jpg",
+          "creator": "Filo gèn’",
+          "license": "CC BY-SA 4.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/philodendron/hastatum",
+      "hub": "/plantes/philodendron",
+      "family": "Araceae",
+      "genus": "Philodendron",
+      "taxon": "Philodendron hastatum",
+      "media": [
+        {
+          "src": "/philodendron-hastatum-feuillage.jpg",
+          "source": "https://commons.wikimedia.org/wiki/File:Philodendron_hastatum_kz2.jpg",
+          "creator": "Krzysztof Ziarnek, Kenraiz",
+          "license": "CC BY-SA 4.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/calathea/orbifolia",
+      "hub": "/plantes/calathea",
+      "family": "Marantaceae",
+      "genus": "Goeppertia",
+      "taxon": "Goeppertia orbifolia",
+      "media": [
+        {
+          "src": "/goeppertia-orbifolia.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Calathea_orbifolia_kz1.jpg",
+          "creator": "Krzysztof Ziarnek, Kenraiz",
+          "license": "CC BY-SA 4.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/cactus/truncata",
+      "hub": "/plantes/cactus",
+      "family": "Cactaceae",
+      "genus": "Schlumbergera",
+      "taxon": "Schlumbergera truncata",
+      "media": [
+        {
+          "src": "/schlumbergera-truncata.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Schlumbergera_truncata_kz01.jpg",
+          "creator": "Krzysztof Ziarnek, Kenraiz",
+          "license": "CC BY 4.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/fougeres/nephrolepis-exaltata",
+      "hub": "/plantes/fougeres",
+      "family": "Nephrolepidaceae",
+      "genus": "Nephrolepis",
+      "taxon": "Nephrolepis exaltata",
+      "media": [
+        {
+          "src": "/nephrolepis-exaltata.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Helecho_de_Boston_(Nephrolepis_exaltata).jpg",
+          "creator": "Nathaly 1106",
+          "license": "CC0 1.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/philodendron/verrucosum",
+      "hub": "/plantes/philodendron",
+      "family": "Araceae",
+      "genus": "Philodendron",
+      "taxon": "Philodendron verrucosum",
+      "media": [
+        {
+          "src": "/philodendron-verrucosum.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:PhilodendronVerrucosum.jpg",
+          "creator": "Chhe",
+          "license": "Domaine public",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/philodendron/squamiferum",
+      "hub": "/plantes/philodendron",
+      "family": "Araceae",
+      "genus": "Philodendron",
+      "taxon": "Philodendron squamiferum",
+      "media": [
+        {
+          "src": "/philodendron-squamiferum.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Philodendron_squamiferum_kz1.jpg",
+          "creator": "Krzysztof Ziarnek, Kenraiz",
+          "license": "CC BY-SA 4.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/philodendron/brandtianum",
+      "hub": "/plantes/philodendron",
+      "family": "Araceae",
+      "genus": "Philodendron",
+      "taxon": "Philodendron brandtianum",
+      "media": [
+        {
+          "src": "/philodendron-brandtianum.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Philodendron_brandtianum_in_Colombia.jpg",
+          "creator": "Martha Lucia Ortiz Moreno",
+          "license": "CC BY 4.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/philodendron/erubescens",
+      "hub": "/plantes/philodendron",
+      "family": "Araceae",
+      "genus": "Philodendron",
+      "taxon": "Philodendron erubescens",
+      "media": [
+        {
+          "src": "/philodendron-erubescens.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Philodendron_erubescens_(angiospermes).jpg",
+          "creator": "Filo gèn’",
+          "license": "CC BY-SA 4.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/monstera/acuminata",
+      "hub": "/plantes/monstera",
+      "family": "Araceae",
+      "genus": "Monstera",
+      "taxon": "Monstera acuminata",
+      "media": [
+        {
+          "src": "/monstera-acuminata.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Monstera_acuminata_in_Belize.jpg",
+          "creator": "Annika Lindqvist",
+          "license": "CC BY 4.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/monstera/subpinnata",
+      "hub": "/plantes/monstera",
+      "family": "Araceae",
+      "genus": "Monstera",
+      "taxon": "Monstera subpinnata",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/monstera/spruceana",
+      "hub": "/plantes/monstera",
+      "family": "Araceae",
+      "genus": "Monstera",
+      "taxon": "Monstera spruceana",
+      "media": [
+        {
+          "src": "/monstera-spruceana.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Monstera_spruceana_in_Bolivia.jpg",
+          "creator": "Vincent A. Vos",
+          "license": "CC BY 4.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/anthurium/villenaorum",
+      "hub": "/plantes/anthurium",
+      "family": "Araceae",
+      "genus": "Anthurium",
+      "taxon": "Anthurium villenaorum",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/anthurium/pedatoradiatum",
+      "hub": "/plantes/anthurium",
+      "family": "Araceae",
+      "genus": "Anthurium",
+      "taxon": "Anthurium pedatoradiatum",
+      "media": [
+        {
+          "src": "/anthurium-pedatoradiatum.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Anthurium_pedato-radiatum.JPG",
+          "creator": "Consultaplantas",
+          "license": "CC BY-SA 4.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/anthurium/radicans",
+      "hub": "/plantes/anthurium",
+      "family": "Araceae",
+      "genus": "Anthurium",
+      "taxon": "Anthurium radicans",
+      "media": [
+        {
+          "src": "/anthurium-radicans.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Anthurium_radicans.jpg",
+          "creator": "Aureonatal",
+          "license": "CC0 1.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/alocasia/gageana",
+      "hub": "/plantes/alocasia",
+      "family": "Araceae",
+      "genus": "Alocasia",
+      "taxon": "Alocasia gageana",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/alocasia/lauterbachiana",
+      "hub": "/plantes/alocasia",
+      "family": "Araceae",
+      "genus": "Alocasia",
+      "taxon": "Alocasia lauterbachiana",
+      "media": [],
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/alocasia/portei",
+      "hub": "/plantes/alocasia",
+      "family": "Araceae",
+      "genus": "Alocasia",
+      "taxon": "Alocasia portei",
+      "media": [
+        {
+          "src": "/alocasia-portei.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Alocasia_portei_(Philippines).jpg",
+          "creator": "Obsidian Soul",
+          "license": "CC0 1.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    },
+    {
+      "route": "/plantes/pilea/involucrata",
+      "hub": "/plantes/pilea",
+      "family": "Urticaceae",
+      "genus": "Pilea",
+      "taxon": "Pilea involucrata",
+      "media": [
+        {
+          "src": "/pilea-involucrata.webp",
+          "source": "https://commons.wikimedia.org/wiki/File:Pilea_involucrata,_Jardín_Botánico,_Múnich,_Alemania_2012-04-21,_DD_02.jpg",
+          "creator": "Diego Delso",
+          "license": "CC BY-SA 3.0",
+          "status": "verified"
+        }
+      ],
+      "status": "REAL_MEDIA"
+    }
+  ],
+  "hubs": [
+    {
+      "route": "/plantes/strelitzia",
+      "name": "Strelitzia",
+      "image": "/photo-reelle-a-venir.svg",
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/agave",
+      "name": "Agave",
+      "image": "/photo-reelle-a-venir.svg",
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/fatsia",
+      "name": "Fatsia",
+      "image": "/photo-reelle-a-venir.svg",
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/bananiers",
+      "name": "Bananiers",
+      "image": "/photo-reelle-a-venir.svg",
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/musa",
+      "name": "Musa",
+      "image": "/photo-reelle-a-venir.svg",
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/ensete",
+      "name": "Ensete",
+      "image": "/photo-reelle-a-venir.svg",
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/alocasia",
+      "name": "Alocasia",
+      "image": "/alocasia-cuprea-feuillage.jpg",
+      "status": "MEDIA_CONNECTED"
+    },
+    {
+      "route": "/plantes/anthurium",
+      "name": "Anthurium",
+      "image": "/anthurium-crystallinum-feuille.jpg",
+      "status": "MEDIA_CONNECTED"
+    },
+    {
+      "route": "/plantes/monstera",
+      "name": "Monstera",
+      "image": "/monstera-deliciosa-feuilles.jpg",
+      "status": "MEDIA_CONNECTED"
+    },
+    {
+      "route": "/plantes/philodendron",
+      "name": "Philodendron",
+      "image": "/philodendron-hastatum-feuillage.jpg",
+      "status": "MEDIA_CONNECTED"
+    },
+    {
+      "route": "/plantes/epipremnum",
+      "name": "Epipremnum",
+      "image": "/epipremnum-aureum-pothos.jpg",
+      "status": "MEDIA_CONNECTED"
+    },
+    {
+      "route": "/plantes/asparagus",
+      "name": "Asparagus",
+      "image": "/photo-reelle-a-venir.svg",
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/epiphyllum",
+      "name": "Epiphyllum",
+      "image": "/photo-reelle-a-venir.svg",
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/colocasia",
+      "name": "Colocasia",
+      "image": "/colocasia-esculenta-feuille.jpg",
+      "status": "MEDIA_CONNECTED"
+    },
+    {
+      "route": "/plantes/pilea",
+      "name": "Pilea",
+      "image": "/pilea-peperomioides-plante.jpg",
+      "status": "MEDIA_CONNECTED"
+    },
+    {
+      "route": "/plantes/peperomia",
+      "name": "Peperomia",
+      "image": "/peperomia-argyreia-feuillage.jpg",
+      "status": "MEDIA_CONNECTED"
+    },
+    {
+      "route": "/plantes/cactus",
+      "name": "Cactus",
+      "image": "/schlumbergera-truncata.webp",
+      "status": "MEDIA_CONNECTED"
+    },
+    {
+      "route": "/plantes/maranta",
+      "name": "Maranta",
+      "image": "/photo-reelle-a-venir.svg",
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/calathea",
+      "name": "Calathea",
+      "image": "/goeppertia-orbifolia.webp",
+      "status": "MEDIA_CONNECTED"
+    },
+    {
+      "route": "/plantes/aloe",
+      "name": "Aloe",
+      "image": "/photo-reelle-a-venir.svg",
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/chlorophytum",
+      "name": "Chlorophytum",
+      "image": "/photo-reelle-a-venir.svg",
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/yucca",
+      "name": "Yucca",
+      "image": "/photo-reelle-a-venir.svg",
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/cycas",
+      "name": "Cycas",
+      "image": "/media/images/cycas-revoluta/cycas-revoluta-terrasse-tibaldo.webp",
+      "status": "MEDIA_CONNECTED"
+    },
+    {
+      "route": "/plantes/dicksonia",
+      "name": "Dicksonia",
+      "image": "/photo-reelle-a-venir.svg",
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/plumeria",
+      "name": "Plumeria",
+      "image": "/photo-reelle-a-venir.svg",
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/equisetum",
+      "name": "Prêle japonaise",
+      "image": "/photo-reelle-a-venir.svg",
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/ficus",
+      "name": "Ficus",
+      "image": "/photo-reelle-a-venir.svg",
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/syngonium",
+      "name": "Syngonium",
+      "image": "/photo-reelle-a-venir.svg",
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/hoya",
+      "name": "Hoya",
+      "image": "/photo-reelle-a-venir.svg",
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/sansevieria",
+      "name": "Sansevieria",
+      "image": "/photo-reelle-a-venir.svg",
+      "status": "HONEST_MEDIA_GAP"
+    },
+    {
+      "route": "/plantes/fougeres",
+      "name": "Fougères",
+      "image": "/nephrolepis-exaltata.webp",
+      "status": "MEDIA_CONNECTED"
+    }
+  ]
+}

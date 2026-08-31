@@ -26,7 +26,7 @@ const expectedRoutes = [
 test("P1 ajoute exactement les douze routes approuvées au catalogue V32", () => {
   assert.equal(encyclopediaP1Plants.length, 12);
   assert.deepEqual(encyclopediaP1Routes, expectedRoutes);
-  assert.equal(plants.length, 76);
+  assert.equal(plants.length, 96);
   assert.equal(plantFamilies.length, 31);
   for (const route of expectedRoutes) {
     const [, , genre, slug] = route.split("/");
@@ -94,10 +94,10 @@ test("chaque fiche P1 est substantielle, sourcée et conserve un média honnête
 });
 
 test("les hubs majeurs atteignent les nouveaux totaux sans créer de groupe", () => {
-  assert.equal(plants.filter((plant) => plant.genre === "alocasia").length, 13);
-  assert.equal(plants.filter((plant) => plant.genre === "anthurium").length, 14);
-  assert.equal(plants.filter((plant) => plant.genre === "philodendron").length, 8);
-  assert.equal(plants.filter((plant) => plant.genre === "monstera").length, 12);
+  assert.equal(plants.filter((plant) => plant.genre === "alocasia").length, 16);
+  assert.equal(plants.filter((plant) => plant.genre === "anthurium").length, 17);
+  assert.equal(plants.filter((plant) => plant.genre === "philodendron").length, 13);
+  assert.equal(plants.filter((plant) => plant.genre === "monstera").length, 15);
   for (const genre of ["ficus", "hoya", "syngonium", "sansevieria"] as const) {
     assert.equal(plants.filter((plant) => plant.genre === genre).length, 1, genre);
     assert.ok(plantFamilies.some((family) => family.slug === genre), genre);
