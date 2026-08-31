@@ -996,7 +996,7 @@
       "taxon": "Goeppertia orbifolia",
       "media": [
         {
-          "src": "/goeppertia-orbifolia.webp",
+          "src": "/media/species-expansion-v1/goeppertia-orbifolia.webp",
           "source": "https://commons.wikimedia.org/wiki/File:Calathea_orbifolia_kz1.jpg",
           "creator": "Krzysztof Ziarnek, Kenraiz",
           "license": "CC BY-SA 4.0",
@@ -1013,7 +1013,7 @@
       "taxon": "Schlumbergera truncata",
       "media": [
         {
-          "src": "/schlumbergera-truncata.webp",
+          "src": "/media/species-expansion-v1/schlumbergera-truncata.webp",
           "source": "https://commons.wikimedia.org/wiki/File:Schlumbergera_truncata_kz01.jpg",
           "creator": "Krzysztof Ziarnek, Kenraiz",
           "license": "CC BY 4.0",
@@ -1030,7 +1030,7 @@
       "taxon": "Nephrolepis exaltata",
       "media": [
         {
-          "src": "/nephrolepis-exaltata.webp",
+          "src": "/media/species-expansion-v1/nephrolepis-exaltata.webp",
           "source": "https://commons.wikimedia.org/wiki/File:Helecho_de_Boston_(Nephrolepis_exaltata).jpg",
           "creator": "Nathaly 1106",
           "license": "CC0 1.0",
@@ -1047,7 +1047,7 @@
       "taxon": "Philodendron verrucosum",
       "media": [
         {
-          "src": "/philodendron-verrucosum.webp",
+          "src": "/media/species-expansion-v1/philodendron-verrucosum.webp",
           "source": "https://commons.wikimedia.org/wiki/File:PhilodendronVerrucosum.jpg",
           "creator": "Chhe",
           "license": "Domaine public",
@@ -1064,7 +1064,7 @@
       "taxon": "Philodendron squamiferum",
       "media": [
         {
-          "src": "/philodendron-squamiferum.webp",
+          "src": "/media/species-expansion-v1/philodendron-squamiferum.webp",
           "source": "https://commons.wikimedia.org/wiki/File:Philodendron_squamiferum_kz1.jpg",
           "creator": "Krzysztof Ziarnek, Kenraiz",
           "license": "CC BY-SA 4.0",
@@ -1081,7 +1081,7 @@
       "taxon": "Philodendron brandtianum",
       "media": [
         {
-          "src": "/philodendron-brandtianum.webp",
+          "src": "/media/species-expansion-v1/philodendron-brandtianum.webp",
           "source": "https://commons.wikimedia.org/wiki/File:Philodendron_brandtianum_in_Colombia.jpg",
           "creator": "Martha Lucia Ortiz Moreno",
           "license": "CC BY 4.0",
@@ -1098,7 +1098,7 @@
       "taxon": "Philodendron erubescens",
       "media": [
         {
-          "src": "/philodendron-erubescens.webp",
+          "src": "/media/species-expansion-v1/philodendron-erubescens.webp",
           "source": "https://commons.wikimedia.org/wiki/File:Philodendron_erubescens_(angiospermes).jpg",
           "creator": "Filo gèn’",
           "license": "CC BY-SA 4.0",
@@ -1115,7 +1115,7 @@
       "taxon": "Monstera acuminata",
       "media": [
         {
-          "src": "/monstera-acuminata.webp",
+          "src": "/media/species-expansion-v1/monstera-acuminata.webp",
           "source": "https://commons.wikimedia.org/wiki/File:Monstera_acuminata_in_Belize.jpg",
           "creator": "Annika Lindqvist",
           "license": "CC BY 4.0",
@@ -1141,7 +1141,7 @@
       "taxon": "Monstera spruceana",
       "media": [
         {
-          "src": "/monstera-spruceana.webp",
+          "src": "/media/species-expansion-v1/monstera-spruceana.webp",
           "source": "https://commons.wikimedia.org/wiki/File:Monstera_spruceana_in_Bolivia.jpg",
           "creator": "Vincent A. Vos",
           "license": "CC BY 4.0",
@@ -1167,7 +1167,7 @@
       "taxon": "Anthurium pedatoradiatum",
       "media": [
         {
-          "src": "/anthurium-pedatoradiatum.webp",
+          "src": "/media/species-expansion-v1/anthurium-pedatoradiatum.webp",
           "source": "https://commons.wikimedia.org/wiki/File:Anthurium_pedato-radiatum.JPG",
           "creator": "Consultaplantas",
           "license": "CC BY-SA 4.0",
@@ -1184,7 +1184,7 @@
       "taxon": "Anthurium radicans",
       "media": [
         {
-          "src": "/anthurium-radicans.webp",
+          "src": "/media/species-expansion-v1/anthurium-radicans.webp",
           "source": "https://commons.wikimedia.org/wiki/File:Anthurium_radicans.jpg",
           "creator": "Aureonatal",
           "license": "CC0 1.0",
@@ -1219,7 +1219,7 @@
       "taxon": "Alocasia portei",
       "media": [
         {
-          "src": "/alocasia-portei.webp",
+          "src": "/media/species-expansion-v1/alocasia-portei.webp",
           "source": "https://commons.wikimedia.org/wiki/File:Alocasia_portei_(Philippines).jpg",
           "creator": "Obsidian Soul",
           "license": "CC0 1.0",
@@ -1236,7 +1236,7 @@
       "taxon": "Pilea involucrata",
       "media": [
         {
-          "src": "/pilea-involucrata.webp",
+          "src": "/media/species-expansion-v1/pilea-involucrata.webp",
           "source": "https://commons.wikimedia.org/wiki/File:Pilea_involucrata,_Jardín_Botánico,_Múnich,_Alemania_2012-04-21,_DD_02.jpg",
           "creator": "Diego Delso",
           "license": "CC BY-SA 3.0",
@@ -1346,7 +1346,7 @@
     {
       "route": "/plantes/cactus",
       "name": "Cactus",
-      "image": "/schlumbergera-truncata.webp",
+      "image": "/media/species-expansion-v1/schlumbergera-truncata.webp",
       "status": "MEDIA_CONNECTED"
     },
     {
@@ -1358,7 +1358,7 @@
     {
       "route": "/plantes/calathea",
       "name": "Calathea",
-      "image": "/goeppertia-orbifolia.webp",
+      "image": "/media/species-expansion-v1/goeppertia-orbifolia.webp",
       "status": "MEDIA_CONNECTED"
     },
     {
@@ -1430,7 +1430,7 @@
     {
       "route": "/plantes/fougeres",
       "name": "Fougères",
-      "image": "/nephrolepis-exaltata.webp",
+      "image": "/media/species-expansion-v1/nephrolepis-exaltata.webp",
       "status": "MEDIA_CONNECTED"
     }
   ]

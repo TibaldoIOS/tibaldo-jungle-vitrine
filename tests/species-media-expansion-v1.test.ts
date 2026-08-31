@@ -63,7 +63,8 @@ test("seize médias sont vérifiés et quatre restent en média-gap honnête", (
     assert.ok(image.license?.creator, `${plant.slug}: auteur`);
     assert.ok(image.license?.sourceUrl, `${plant.slug}: source`);
     assert.ok(image.license?.licenseUrl, `${plant.slug}: licence`);
-    assert.equal(existsSync(`public${image.src}`), true, `${plant.slug}: fichier`);
+    const assetPath = image.src.startsWith("/media/") ? `public/${image.src.slice("/media/".length)}` : `public${image.src}`;
+    assert.equal(existsSync(assetPath), true, `${plant.slug}: fichier`);
   }
 });
 
@@ -73,7 +74,8 @@ test("les hubs Calathea, Cactus et Fougères ont une fiche et une photo contrôl
     const hub = plantFamilies.find((family) => family.slug === genre);
     assert.ok(hub, genre);
     assert.doesNotMatch(hub.image, /photo-reelle-a-venir/, genre);
-    assert.equal(existsSync(`public${hub.image}`), true, genre);
+    const hubAssetPath = hub.image.startsWith("/media/") ? `public/${hub.image.slice("/media/".length)}` : `public${hub.image}`;
+    assert.equal(existsSync(hubAssetPath), true, genre);
   }
 });
 
