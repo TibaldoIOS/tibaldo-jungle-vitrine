@@ -1,8 +1,13 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import test from "node:test";
 
 import { plants } from "../lib/plants/catalog.ts";
 import { publicPermanentRedirects } from "../lib/seo/public-redirects.ts";
+
+const certifiedMediaInventory = JSON.parse(
+  readFileSync(new URL("../reports/species-media-inventory-after-expansion-v1.json", import.meta.url), "utf8"),
+);
 
 const requestedMode = process.env.JUNGLE_ENV === "public" ? "public" : "beta";
 const workerUrl = new URL("../dist/server/index.js", import.meta.url);
@@ -29,7 +34,8 @@ const labs = [
 ];
 
 test("release species inventory remains frozen", () => {
-  assert.equal(plants.length, 76);
+  assert.equal(plants.length, certifiedMediaInventory.after.species);
+  assert.equal(new Set(plants.map((plant) => `${plant.genre}/${plant.slug}`)).size, certifiedMediaInventory.after.species);
 });
 
 test(`${requestedMode} artifact has the exact indexing and customer-mode contract`, async () => {

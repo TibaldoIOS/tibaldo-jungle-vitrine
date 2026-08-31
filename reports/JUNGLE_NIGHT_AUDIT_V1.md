@@ -1,7 +1,7 @@
 # TIBALDO JUNGLE — NIGHT AUDIT V1
 
-Date : 31 août 2026  
-Baseline : PUBLIC V77 · `4c921322c7cb89945e222f8d2bde1cfbaf3ee98a`  
+Date : 31 août 2026
+Baseline : PUBLIC V77 · `4c921322c7cb89945e222f8d2bde1cfbaf3ee98a`
 Périmètre : audit complet, corrections sûres sur branche/BÊTA uniquement.
 
 ## Résultat exécutif

@@ -6,6 +6,16 @@ import { documentaryGallery } from "../lib/plants/documentary-media.ts";
 import { nightMediaSafetyRegistry } from "../lib/plants/night-media-safety-v1.ts";
 import { verifiedGroupMediaByGenre } from "../lib/plants/verified-group-media.ts";
 
+const certifiedMediaInventory = JSON.parse(
+  readFileSync("reports/species-media-inventory-after-expansion-v1.json", "utf8"),
+) as {
+  after: {
+    species: number;
+    realMediaSpecies: number;
+    mediaGapSpecies: number;
+  };
+};
+
 test("night media safety removes exactly the two unsafe documentary renderings", () => {
   assert.equal(nightMediaSafetyRegistry.length, 2);
   assert.deepEqual(nightMediaSafetyRegistry.map(({ classification }) => classification).sort(), ["PHOTO_DOUBTFUL", "PHOTO_WRONG"]);
@@ -44,7 +54,12 @@ test("species media inventory is deterministic after safety closure", () => {
     else if (count) counts.partial += 1;
     else counts.gap += 1;
   }
-  assert.deepEqual(counts, { complete: 2, partial: 17, gap: 57 });
+  assert.equal(plants.length, certifiedMediaInventory.after.species);
+  assert.deepEqual(counts, {
+    complete: 2,
+    partial: certifiedMediaInventory.after.realMediaSpecies - 2,
+    gap: certifiedMediaInventory.after.mediaGapSpecies,
+  });
 });
 
 test("Bananiers hub composes Musa and Ensete instead of querying a nonexistent genus", () => {

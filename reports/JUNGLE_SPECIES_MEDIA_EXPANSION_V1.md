@@ -1,8 +1,8 @@
 # TIBALDO JUNGLE — SPECIES EXPANSION + COMPLETE MEDIA COVERAGE V1
 
-Date : 31 août 2026  
-Périmètre : branche et BÊTA uniquement  
-Baseline de travail : Night Audit V39, commit `753fa101cc058628689c38e273ffd3d38dbe1a90`  
+Date : 31 août 2026
+Périmètre : branche et BÊTA uniquement
+Baseline de travail : Night Audit V39, commit `753fa101cc058628689c38e273ffd3d38dbe1a90`
 Baseline publique protégée : V77, inchangée.
 
 ## Résultat exécutif
@@ -79,11 +79,11 @@ Prochaine action média recommandée : photographie Owner ou sourcing route par 
 
 ## Isolation
 
-PUBLIC_MUTATED=NO  
-SEARCH_CONSOLE_MUTATED=NO  
-DNS_MUTATED=NO  
-SHOP_MUTATED=NO  
-CAISSE_MUTATED=NO  
-ANIMAUX_MUTATED=NO  
-SUPABASE_MUTATED=NO  
+PUBLIC_MUTATED=NO
+SEARCH_CONSOLE_MUTATED=NO
+DNS_MUTATED=NO
+SHOP_MUTATED=NO
+CAISSE_MUTATED=NO
+ANIMAUX_MUTATED=NO
+SUPABASE_MUTATED=NO
 MERGE_MAIN=NO
