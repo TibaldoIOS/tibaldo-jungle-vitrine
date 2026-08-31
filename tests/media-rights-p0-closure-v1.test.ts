@@ -4,8 +4,9 @@ import { test } from "node:test";
 import { getPlant, plantFamilies } from "../lib/plants/catalog.ts";
 import { mediaRightsP0ClosureRegistry } from "../lib/plants/media-rights-p0-closure-v1.ts";
 import { documentaryMediaWaveV1Registry } from "../lib/plants/documentary-media-completion-wave-v1.ts";
+import { documentaryMediaWave2V1Registry } from "../lib/plants/documentary-media-completion-wave-2-v1.ts";
 
-const laterVerifiedRoutes = new Set(documentaryMediaWaveV1Registry.map(({ route }) => route));
+const laterVerifiedRoutes = new Set([...documentaryMediaWaveV1Registry, ...documentaryMediaWave2V1Registry].map(({ route }) => route));
 
 const removedAssets = [
   "/anthurium-pallidiflorum-cascade.webp",

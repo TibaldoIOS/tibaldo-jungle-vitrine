@@ -628,7 +628,7 @@ test("V23 Golden Pilea prototypes remain isolated and expose two distinct editor
   assert.match(groupHtml, /pilea-planche-formes-textures\.webp/);
   assert.match(groupHtml, /ni un inventaire taxonomique exhaustif ni une disponibilité boutique/i);
   assert.equal((groupHtml.match(/class="genus-carousel-card/g) ?? []).length, 3);
-  assert.match(groupHtml, /Photographie réelle[\s\S]*à documenter/i);
+  assert.match(groupHtml, /Photographie réelle[\s\S]*(?:à documenter|Pilea cadierei)/i);
 
   const speciesResponse = await render("/lab/v23/golden-species/pilea-peperomioides");
   assert.equal(speciesResponse.status, 200);
@@ -890,7 +890,7 @@ test("renders the Agave, Fatsia and five-species Strelitzia cluster", async () =
     const html = await response.text();
     assert.match(html, /<h1/i, path);
     assert.match(html, /rel=["']canonical["']/i, path);
-    if (path.split("/").length === 4) assert.match(html, /has-editorial-fallback/i, path);
+    if (path.split("/").length === 4 && path !== "/plantes/strelitzia/alba") assert.match(html, /has-editorial-fallback/i, path);
     assert.doesNotMatch(html, /\/_vinext\/image/i, path);
     assert.match(html, /noindex/i, path);
   }
@@ -954,7 +954,7 @@ test("final convergence keeps representative canonical surfaces Golden and BETA-
     assert.doesNotMatch(html, /thai-profile-v3|veitchii-profile-v2|veitchii-v2-id-grid|species-next-page/i, route);
   }
 
-  const mediaGap = await (await render("/plantes/pilea/cadierei")).text();
+  const mediaGap = await (await render("/plantes/chlorophytum/comosum")).text();
   assert.match(mediaGap, /Aucune image fabriquée|Aucune photographie documentaire vérifiée/i);
   const richMedia = await (await render("/plantes/cycas/revoluta")).text();
   assert.match(richMedia, /botanical-photo-book/i);
