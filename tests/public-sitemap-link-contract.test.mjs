@@ -15,7 +15,7 @@ const robotsMeta = (html) =>
 const canonicalFor = (html) =>
   html.match(/<link(?=[^>]*rel=["']canonical["'])(?=[^>]*href=["']([^"']+)["'])[^>]*>/i)?.[1] ?? null;
 
-test("PUBLIC sitemap derives 176 unique canonical routes from the certified inventory", async () => {
+test("PUBLIC sitemap derives the exact unique canonical route inventory", async () => {
   const response = await fetchRoute("/sitemap.xml");
   const xml = await response.text();
   const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);

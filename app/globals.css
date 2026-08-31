@@ -3479,8 +3479,8 @@ body:has(.conversion-dock){padding-bottom:calc(76px + env(safe-area-inset-bottom
 .genus-species-carousel h2 { margin: 0; color: var(--forest); font: 400 clamp(44px,5.5vw,76px)/.94 Georgia,serif; letter-spacing: -.05em; }
 .genus-species-carousel h2 em { color: #9f756d; font-weight: 400; }
 .genus-species-carousel > header > p:last-child { max-width: 650px; margin: 0; color: #657169; line-height: 1.75; }
-.genus-carousel-track { display: flex; max-width: 100%; gap: 12px; overflow-x: auto; padding: 0 0 18px; overscroll-behavior-inline: contain; scroll-snap-type: x proximity; scrollbar-color: #78906f transparent; }
-.genus-carousel-card { flex: 0 0 min(27vw,330px); min-width: 255px; scroll-snap-align: start; background: #e7e4da; color: var(--forest); }
+.genus-carousel-track { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,250px),1fr)); max-width: 100%; gap: 12px; padding: 0 0 18px; }
+.genus-carousel-card { min-width: 0; background: #e7e4da; color: var(--forest); }
 .genus-carousel-media { position: relative; height: 360px; overflow: hidden; background: linear-gradient(145deg,#174c38,#769274); }
 .genus-carousel-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .65s cubic-bezier(.2,.75,.2,1); }
 .genus-carousel-card:hover .genus-carousel-media img { transform: scale(1.035); }
@@ -3589,9 +3589,8 @@ body:has(.conversion-dock){padding-bottom:calc(76px + env(safe-area-inset-bottom
   .mobile-menu-secondary { gap: 0 14px; }
   .genus-species-carousel { width: 100%; padding: 66px 0 70px 16px; }
   .genus-species-carousel > header { padding-right: 16px; }
-  .genus-carousel-track { padding-right: 16px; }
-  .genus-carousel-card { flex-basis: min(78vw,292px); min-width: 0; }
-  .genus-carousel-media { height: 350px; }
+  .genus-carousel-track { grid-template-columns: 1fr; padding-right: 16px; }
+  .genus-carousel-media { height: min(112vw,430px); }
   .plant-needs-visual-system { display: block; }
   .plant-need:nth-child(n) { padding: 24px 0 26px; border-right: 0; background: transparent; }
   .plant-need:nth-child(4),.plant-need:nth-child(7),.plant-need:nth-child(8),.plant-need:nth-child(10) { margin-inline: -16px; padding-inline: 16px; }

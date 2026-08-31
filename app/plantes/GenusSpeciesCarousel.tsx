@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { PlantEntry } from "@/lib/plants/types";
-import { isPhotoProductionPlaceholder, publicPlantImageAlt } from "@/lib/plants/types";
+import { publicPlantImageAlt } from "@/lib/plants/types";
+import { documentaryGallery } from "@/lib/plants/documentary-media";
 import { Arrow } from "../SiteChrome";
 
 export default function GenusSpeciesCarousel({ genre, genusName, plants }: {
@@ -19,8 +20,8 @@ export default function GenusSpeciesCarousel({ genre, genusName, plants }: {
       {plants.length ? (
         <div className="genus-carousel-track" aria-label={`Toutes les fiches ${genusName}`}>
           {plants.map((plant) => {
-            const image = plant.gallery[0];
-            const hasPhoto = image && !isPhotoProductionPlaceholder(image.src);
+            const image = documentaryGallery(plant)[0];
+            const hasPhoto = Boolean(image);
             return (
               <Link className={`genus-carousel-card${hasPhoto ? " has-photo" : " has-media-gap"}`} href={`/plantes/${plant.genre}/${plant.slug}`} key={`${plant.genre}/${plant.slug}`}>
                 <div className="genus-carousel-media">

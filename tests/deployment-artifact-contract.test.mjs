@@ -4,6 +4,7 @@ import test from "node:test";
 
 import { plants } from "../lib/plants/catalog.ts";
 import { publicPermanentRedirects } from "../lib/seo/public-redirects.ts";
+import { familyHubDecisions, isFamilyIndexable } from "../lib/seo/family-indexability-contract.ts";
 import {
   certifiedPublicSpeciesUrlCount,
   expectedPublicSitemapUrlCount,
@@ -96,6 +97,34 @@ test(`${requestedMode} artifact has the exact robots and sitemap contract`, asyn
     assert.equal(robots.headers.get("x-robots-tag"), "noindex, nofollow");
     assert.equal(sitemap.status, 404);
     assert.equal(sitemap.headers.get("x-robots-tag"), "noindex, nofollow");
+  }
+});
+
+test(`${requestedMode} artifact keeps family metadata and sitemap on one indexability contract`, async () => {
+  const sitemap = await fetchRoute("/sitemap.xml");
+  const sitemapPaths = requestedMode === "public"
+    ? new Set([...((await sitemap.text()).matchAll(/<loc>([^<]+)<\/loc>/g))].map((match) => new URL(match[1]).pathname))
+    : new Set();
+
+  for (const family of Object.keys(familyHubDecisions)) {
+    const path = `/plantes/famille/${family}`;
+    const response = await fetchRoute(path);
+    const html = await response.text();
+    assert.equal(response.status, 200, path);
+    assert.match(html, /<h1[^>]*>Les[\s\S]*?<em>/i, path);
+    assert.match(html, /application\/ld\+json/i, path);
+    assert.match(html, new RegExp(`rel=["']canonical["'][^>]+${path}`), path);
+    if (requestedMode === "public") {
+      assert.equal(sitemapPaths.has(path), isFamilyIndexable(family), path);
+      if (isFamilyIndexable(family)) assert.doesNotMatch(metaRobots(html), /noindex|nofollow/i, path);
+      else {
+        assert.match(metaRobots(html), /noindex/i, path);
+        assert.doesNotMatch(metaRobots(html), /nofollow/i, path);
+      }
+    } else {
+      assert.match(metaRobots(html), /noindex/i, path);
+      assert.match(metaRobots(html), /nofollow/i, path);
+    }
   }
 });
 
