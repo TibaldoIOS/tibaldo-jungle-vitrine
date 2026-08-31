@@ -4,6 +4,10 @@ import test from "node:test";
 
 import { plants } from "../lib/plants/catalog.ts";
 import { publicPermanentRedirects } from "../lib/seo/public-redirects.ts";
+import {
+  certifiedPublicSpeciesUrlCount,
+  expectedPublicSitemapUrlCount,
+} from "../scripts/public-sitemap-contract.mjs";
 
 const certifiedMediaInventory = JSON.parse(
   readFileSync(new URL("../reports/species-media-inventory-after-expansion-v1.json", import.meta.url), "utf8"),
@@ -72,10 +76,19 @@ test(`${requestedMode} artifact has the exact robots and sitemap contract`, asyn
     assert.equal(sitemap.status, 200);
     const xml = await sitemap.text();
     const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-    assert.equal(urls.length, 156);
+    assert.equal(urls.length, expectedPublicSitemapUrlCount);
     assert.equal(new Set(urls).size, urls.length);
     assert.ok(urls.every((url) => url.startsWith("https://jungle.tibaldo.fr/")));
     assert.ok(urls.every((url) => !url.includes("/lab/")));
+    const speciesUrls = urls.filter((url) => {
+      const [, root, genre, slug] = new URL(url).pathname.split("/");
+      return root === "plantes" && genre !== "famille" && Boolean(genre && slug);
+    });
+    assert.equal(speciesUrls.length, certifiedPublicSpeciesUrlCount);
+    assert.deepEqual(
+      speciesUrls.map((url) => new URL(url).pathname).sort(),
+      plants.map((plant) => `/plantes/${plant.genre}/${plant.slug}`).sort(),
+    );
     assert.equal(urls.filter((url) => /^https:\/\/jungle\.tibaldo\.fr\/plantes\/[^/]+$/.test(url)).length, 31);
   } else {
     assert.match(robotsText, /^Disallow: \/$/im);
