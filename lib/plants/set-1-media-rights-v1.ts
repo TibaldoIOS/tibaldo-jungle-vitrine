@@ -131,6 +131,29 @@ export const set1RejectedMediaExclusions = [
   },
 ] as const;
 
+export type Set1NextMediaCertificationReview = {
+  route: "/plantes/colocasia/esculenta-eddo";
+  MEDIA_STATUS: "REAL_REVIEW_REQUIRED";
+  certification: "NEXT_MEDIA_CERTIFICATION";
+  renderPolicy: "PRESERVE_CURRENT_MEDIA";
+  reason: string;
+};
+
+/**
+ * Addendum Owner : le média réel existant reste en place. Son statut demande
+ * simplement une revue lors de la prochaine certification, sans relink ni
+ * changement de rendu dans le présent lot.
+ */
+export const set1NextMediaCertificationReviews: readonly Set1NextMediaCertificationReview[] = [
+  {
+    route: "/plantes/colocasia/esculenta-eddo",
+    MEDIA_STATUS: "REAL_REVIEW_REQUIRED",
+    certification: "NEXT_MEDIA_CERTIFICATION",
+    renderPolicy: "PRESERVE_CURRENT_MEDIA",
+    reason: "La photographie Commons est réelle et attribuée ; la fiche ‘Eddo’ conserve une identification de spécimen provisoire à revoir à la prochaine certification média.",
+  },
+] as const;
+
 const blockedRoutes = new Set([
   ...set1MediaRightsRegistry.map(({ route }) => route),
   set1MarantaVerifyOnly.route,

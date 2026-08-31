@@ -38,3 +38,9 @@ Un média documentaire de fiche doit porter simultanément : identité, droits, 
 
 - `applySet1MediaRightsGate` convertit les douze routes contrôlées (onze prioritaires + Maranta VERIFY_ONLY) en gap explicite avant les clôtures P0/nocturne existantes ; les motifs spécialisés Esqueleto et Maranta restent ensuite appliqués.
 - Le test `tests/set-1-media-rights-v1.test.ts` interdit toute promotion documentaire, vérifie les neuf champs, le verrou Caisse-only d’Agave et l’absence persistante de Gageana.
+
+## Addendum Owner — Colocasia Eddo et certification suivante
+
+`/plantes/colocasia/esculenta-eddo` est classé `MEDIA_STATUS=REAL_REVIEW_REQUIRED` pour la prochaine certification média. La photographie actuelle est conservée à l’identique : `/colocasia-esculenta-feuille.jpg`, Forest & Kim Starr, CC BY 3.0 US, source Commons, 1280 × 1707. Ce statut ne supprime, ne relie et ne modifie aucun média ; il demande uniquement une revue ultérieure de l’identification de spécimen « Eddo », déjà déclarée provisoire dans la fiche.
+
+Les exclusions Maranta Lemon Lime, Esqueleto et Gageana sont inchangées. Le protocole de capture Set 2 et les métriques Dock sont documentés séparément dans `reports/JUNGLE_SET_2_STABILIZED_CAPTURE_PROTOCOL_V1.md`, sans changement de code Dock.

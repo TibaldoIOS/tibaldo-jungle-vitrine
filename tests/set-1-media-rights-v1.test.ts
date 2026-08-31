@@ -5,6 +5,7 @@ import { documentaryGallery } from "../lib/plants/documentary-media.ts";
 import {
   set1MarantaVerifyOnly,
   set1MediaRightsRegistry,
+  set1NextMediaCertificationReviews,
   set1RejectedMediaExclusions,
   set1RequiredMediaFields,
 } from "../lib/plants/set-1-media-rights-v1.ts";
@@ -53,4 +54,33 @@ test("Agave remains Caisse-only and rejected Gageana stays absent", () => {
   const gageana = routeToPlant("/plantes/alocasia/gageana");
   assert.equal(documentaryGallery(gageana).length, 0);
   assert.equal(gageana.gallery[0].src, "/photo-reelle-a-venir.svg");
+});
+
+test("Colocasia Eddo is real-review-required without any media relink or render change", () => {
+  assert.deepEqual(set1NextMediaCertificationReviews, [{
+    route: "/plantes/colocasia/esculenta-eddo",
+    MEDIA_STATUS: "REAL_REVIEW_REQUIRED",
+    certification: "NEXT_MEDIA_CERTIFICATION",
+    renderPolicy: "PRESERVE_CURRENT_MEDIA",
+    reason: "La photographie Commons est réelle et attribuée ; la fiche ‘Eddo’ conserve une identification de spécimen provisoire à revoir à la prochaine certification média.",
+  }]);
+
+  const colocasia = routeToPlant("/plantes/colocasia/esculenta-eddo");
+  assert.equal(documentaryGallery(colocasia).length, 1);
+  assert.deepEqual(colocasia.gallery, [{
+    src: "/colocasia-esculenta-feuille.jpg",
+    alt: "Grandes feuilles de Colocasia esculenta cultivé à Maui",
+    caption: "Feuillage de Colocasia esculenta en culture · Forest & Kim Starr · CC BY 3.0 US.",
+    width: 1280,
+    height: 1707,
+    license: {
+      status: "verified",
+      creator: "Forest & Kim Starr",
+      license: "CC BY 3.0 US",
+      licenseUrl: "https://creativecommons.org/licenses/by/3.0/us/",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Starr-090519-8057-Colocasia_esculenta-leaves-Native_Nursery_Kula-Maui_(24325097844).jpg",
+      registryPath: "/credits-images",
+      note: "Licence et attribution revérifiées le 30 août 2026. Le fichier Commons documente Colocasia esculenta cultivé ; le recadrage Web historique reste un seul documentaire.",
+    },
+  }]);
 });
