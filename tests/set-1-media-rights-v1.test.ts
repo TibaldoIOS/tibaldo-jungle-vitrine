@@ -9,6 +9,9 @@ import {
   set1RejectedMediaExclusions,
   set1RequiredMediaFields,
 } from "../lib/plants/set-1-media-rights-v1.ts";
+import { documentaryMediaWaveV1Registry } from "../lib/plants/documentary-media-completion-wave-v1.ts";
+
+const laterVerifiedRoutes = new Set(documentaryMediaWaveV1Registry.map(({ route }) => route));
 
 const routeToPlant = (route: string) => {
   const [, , genre, slug] = route.split("/");
@@ -26,6 +29,11 @@ test("Set 1 admits no incomplete candidate as documentary media", () => {
   for (const entry of set1MediaRightsRegistry) {
     assert.ok(entry.missingRequiredFields.length > 0, entry.route);
     const plant = routeToPlant(entry.route);
+    if (laterVerifiedRoutes.has(entry.route)) {
+      assert.equal(documentaryGallery(plant).length, 1, entry.route);
+      assert.equal(plant.gallery[0].license?.status, "verified", entry.route);
+      continue;
+    }
     assert.equal(documentaryGallery(plant).length, 0, entry.route);
     assert.equal(plant.gallery.length, 1, entry.route);
     assert.equal(plant.gallery[0].src, "/photo-reelle-a-venir.svg", entry.route);

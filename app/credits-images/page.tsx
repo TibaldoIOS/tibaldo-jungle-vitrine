@@ -9,6 +9,13 @@ export const metadata: Metadata = {
 };
 
 const credits: readonly [string, string, string, string, string?][] = [
+  ["Asparagus setaceus", "Forest & Kim Starr", "CC BY 3.0 · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Starr_050517-9003_Asparagus_setaceus.jpg", "https://creativecommons.org/licenses/by/3.0/"],
+  ["Disocactus anguliger", "Agnieszka Kwiecień, Nova", "CC BY-SA 4.0 · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Disocactus_anguliger_syn._Epiphyllum_anguliger_2024-02-29_Graz_01.jpg", "https://creativecommons.org/licenses/by-sa/4.0/"],
+  ["Pilea cadierei", "Krzysztof Ziarnek, Kenraiz", "CC BY-SA 4.0 · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Pilea_cadierei_kz05.jpg", "https://creativecommons.org/licenses/by-sa/4.0/"],
+  ["Yucca rostrata", "Krzysztof Ziarnek, Kenraiz", "CC BY-SA 4.0 · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Yucca_rostrata_kz01.jpg", "https://creativecommons.org/licenses/by-sa/4.0/"],
+  ["Aloe vera", "Gaurav Dhwaj Khadka", "CC BY-SA 4.0 · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Aloe_vera_(51653).jpg", "https://creativecommons.org/licenses/by-sa/4.0/"],
+  ["Musa basjoo", "Materialscientist", "CC BY-SA 3.0 · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Musa_basjooSochi1.JPG", "https://creativecommons.org/licenses/by-sa/3.0/"],
+  ["Strelitzia alba", "Tournasol7", "CC BY 4.0 · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Strelitzia_alba_in_Palm_House_Schoenbrunn_(4).jpg", "https://creativecommons.org/licenses/by/4.0/"],
   ["Herbier du genre Alocasia · Alocasia reginula", "Obsidian Soul", "CC0", "https://commons.wikimedia.org/wiki/File:Alocasia_reginula_(Philippines)_02.jpg"],
   ["Herbier du genre Alocasia · Alocasia portei", "Obsidian Soul", "CC0", "https://commons.wikimedia.org/wiki/File:Alocasia_portei_(Philippines)_young_plant_01.jpg"],
   ["Herbier du genre Alocasia · Alocasia nycteris", "Obsidian Soul", "CC0", "https://commons.wikimedia.org/wiki/File:Alocasia_nycteris_(Philippines)_Batwing_alocasia_0004.jpg"],

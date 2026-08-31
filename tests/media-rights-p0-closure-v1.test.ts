@@ -3,6 +3,9 @@ import { readFileSync } from "node:fs";
 import { test } from "node:test";
 import { getPlant, plantFamilies } from "../lib/plants/catalog.ts";
 import { mediaRightsP0ClosureRegistry } from "../lib/plants/media-rights-p0-closure-v1.ts";
+import { documentaryMediaWaveV1Registry } from "../lib/plants/documentary-media-completion-wave-v1.ts";
+
+const laterVerifiedRoutes = new Set(documentaryMediaWaveV1Registry.map(({ route }) => route));
 
 const removedAssets = [
   "/anthurium-pallidiflorum-cascade.webp",
@@ -25,6 +28,10 @@ test("closes the exact 11-route P0 media-rights set", () => {
     const plant = getPlant(genre, slug);
     assert.ok(plant, item.route);
     if (item.decision === "REMOVE_AND_USE_HONEST_MEDIA_GAP") {
+      if (laterVerifiedRoutes.has(item.route)) {
+        assert.equal(plant.gallery[0].license?.status, "verified", item.route);
+        continue;
+      }
       assert.equal(plant.gallery.length, 1, item.route);
       assert.equal(plant.gallery[0].src, "/photo-reelle-a-venir.svg", item.route);
       assert.equal(plant.gallery[0].license?.status, "media-gap", item.route);
