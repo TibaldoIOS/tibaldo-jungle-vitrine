@@ -1,0 +1,157 @@
+TIBALDO JUNGLE — DOCUMENTARY MEDIA COMPLETION WAVE V1
+DATE=2026-08-31
+SCOPE=JUNGLE_BETA_ONLY
+SOURCE_VERSION=V45
+SOURCE_COMMIT=b8ef58879462be79b7d99aa3de6ee289344e89cb
+
+STATUS=SAFE_PARTIAL_COMPLETION
+
+SPECIES_TOTAL=96
+REAL_VERIFIED_BEFORE=34
+REAL_REVIEW_REQUIRED_BEFORE=1
+HONEST_MEDIA_GAPS_BEFORE=61
+
+RESEARCH_SCOPE=
+- 45 routes traitées en trois lots bornés de 15 maximum.
+- 31 candidats primaires inspectés individuellement.
+- 17 médias certifiés et intégrés.
+- 6 candidats rejetés pour qualité documentaire insuffisante.
+- 8 candidats exacts non intégrés dans cette vague (téléchargement source temporairement limité ou certification non finalisée).
+- 16 routes non recherchées dans cette exécution : elles restent explicitement des manques honnêtes.
+
+CANDIDATES_RESEARCHED=31
+CANDIDATES_REJECTED_IDENTITY=0
+CANDIDATES_REJECTED_RIGHTS=0
+CANDIDATES_REJECTED_QUALITY=6
+NO_SAFE_CANDIDATE=8
+
+NEW_REAL_VERIFIED=17
+NEW_REAL_REVIEW_REQUIRED=0
+REAL_VERIFIED_AFTER=51
+REAL_REVIEW_REQUIRED_AFTER=1
+HONEST_MEDIA_GAPS_AFTER=44
+
+BATCH_1_COMMIT=5bf9e070f2d14a2e51f9e964ccd51ff74e3dbf1a
+BATCH_1_ROUTES=7
+BATCH_2_COMMIT=3f62b7898746e3b0411d761beb34b152d428b418
+BATCH_2_ROUTES=7
+BATCH_3_COMMIT=f93cee4f4505e09feb81b18267c3864d1addbfbc
+BATCH_3_ROUTES=3
+
+EXACT_ROUTES_UPGRADED=
+/plantes/asparagus/plumosus
+/plantes/epiphyllum/anguliger
+/plantes/pilea/cadierei
+/plantes/yucca/rostrata
+/plantes/aloe/vera
+/plantes/musa/basjoo
+/plantes/strelitzia/alba
+/plantes/monstera/dubia
+/plantes/monstera/siltepecana
+/plantes/monstera/obliqua
+/plantes/monstera/pinnatipartita
+/plantes/anthurium/magnificum
+/plantes/anthurium/forgetii
+/plantes/anthurium/papillilaminum
+/plantes/alocasia/reginula
+/plantes/alocasia/micholitziana
+/plantes/alocasia/baginda
+
+EXACT_ROUTES_STILL_GAP=
+/plantes/alocasia/imperial-red
+/plantes/anthurium/pallidiflorum
+/plantes/epipremnum/marble-queen
+/plantes/monstera/thai-constellation
+/plantes/monstera/mint
+/plantes/monstera/adansonii
+/plantes/philodendron/royal-queen
+/plantes/anthurium/delta-force
+/plantes/philodendron/brasil
+/plantes/anthurium/regale
+/plantes/anthurium/papillilaminum-dark-phoenix
+/plantes/anthurium/forgetii-dark-form-silver-blush
+/plantes/philodendron/gloriosum
+/plantes/philodendron/grazielae
+/plantes/monstera/burle-marx-flame
+/plantes/monstera/esqueleto
+/plantes/chlorophytum/comosum
+/plantes/plumeria/rubra
+/plantes/equisetum/japonicum
+/plantes/monstera/standleyana
+/plantes/alocasia/zebrina
+/plantes/alocasia/sinuata
+/plantes/alocasia/longiloba
+/plantes/alocasia/macrorrhizos
+/plantes/alocasia/odora
+/plantes/maranta/lemon-lime
+/plantes/anthurium/clarinervium
+/plantes/anthurium/warocqueanum
+/plantes/musa/sikkimensis-red-tiger
+/plantes/musa/florida-variegata
+/plantes/ensete/ventricosum-maurelii
+/plantes/dicksonia/antarctica
+/plantes/agave/americana-variegata
+/plantes/fatsia/japonica-spiders-web
+/plantes/strelitzia/caudata
+/plantes/strelitzia/juncea
+/plantes/strelitzia/nicolai
+/plantes/strelitzia/reginae
+/plantes/alocasia/melo
+/plantes/anthurium/luxurians
+/plantes/monstera/subpinnata
+/plantes/anthurium/villenaorum
+/plantes/alocasia/gageana
+/plantes/alocasia/lauterbachiana
+
+ACCEPTED_MEDIA_REGISTRY=
+1. /plantes/asparagus/plumosus | Asparagus setaceus | Forest & Kim Starr | https://commons.wikimedia.org/wiki/File:Starr_050517-9003_Asparagus_setaceus.jpg | CC BY 3.0 | verified | /documentary-media-wave-v1/asparagus-setaceus.webp
+2. /plantes/epiphyllum/anguliger | Disocactus anguliger | Agnieszka Kwiecień, Nova | https://commons.wikimedia.org/wiki/File:Disocactus_anguliger_syn._Epiphyllum_anguliger_2024-02-29_Graz_01.jpg | CC BY-SA 4.0 | verified | /documentary-media-wave-v1/disocactus-anguliger.webp
+3. /plantes/pilea/cadierei | Pilea cadierei | Krzysztof Ziarnek, Kenraiz | https://commons.wikimedia.org/wiki/File:Pilea_cadierei_kz05.jpg | CC BY-SA 4.0 | verified | /documentary-media-wave-v1/pilea-cadierei.webp
+4. /plantes/yucca/rostrata | Yucca rostrata | Krzysztof Ziarnek, Kenraiz | https://commons.wikimedia.org/wiki/File:Yucca_rostrata_kz01.jpg | CC BY-SA 4.0 | verified | /documentary-media-wave-v1/yucca-rostrata.webp
+5. /plantes/aloe/vera | Aloe vera | Gaurav Dhwaj Khadka | https://commons.wikimedia.org/wiki/File:Aloe_vera_(51653).jpg | CC BY-SA 4.0 | verified | /documentary-media-wave-v1/aloe-vera.webp
+6. /plantes/musa/basjoo | Musa basjoo | Materialscientist | https://commons.wikimedia.org/wiki/File:Musa_basjooSochi1.JPG | CC BY-SA 3.0 | verified | /documentary-media-wave-v1/musa-basjoo.webp
+7. /plantes/strelitzia/alba | Strelitzia alba | Tournasol7 | https://commons.wikimedia.org/wiki/File:Strelitzia_alba_in_Palm_House_Schoenbrunn_(4).jpg | CC BY 4.0 | verified | /documentary-media-wave-v1/strelitzia-alba.webp
+8. /plantes/monstera/dubia | Monstera dubia | Jacob Rehage | https://commons.wikimedia.org/wiki/File:Monstera_dubia_90346850.jpg | CC0 1.0 | verified | /documentary-media-wave-v1/monstera-dubia.webp
+9. /plantes/monstera/siltepecana | Monstera siltepecana | Krzysztof Ziarnek, Kenraiz | https://commons.wikimedia.org/wiki/File:Monstera_siltepecana_kz01.jpg | CC BY-SA 4.0 | verified | /documentary-media-wave-v1/monstera-siltepecana.webp
+10. /plantes/monstera/obliqua | Monstera obliqua | B. Phalan (deboas) | https://commons.wikimedia.org/wiki/File:Monstera_obliqua_56326766.jpg | CC BY 4.0 | verified | /documentary-media-wave-v1/monstera-obliqua.webp
+11. /plantes/monstera/pinnatipartita | Monstera pinnatipartita | Daniel A. Monsalve Ortiz | https://commons.wikimedia.org/wiki/File:Monstera_pinnatipartita_in_Colombia.jpg | CC BY 4.0 | verified | /documentary-media-wave-v1/monstera-pinnatipartita.webp
+12. /plantes/anthurium/magnificum | Anthurium magnificum | Krzysztof Ziarnek, Kenraiz | https://commons.wikimedia.org/wiki/File:Anthurium_magnificum_kz1.jpg | CC BY-SA 4.0 | verified | /documentary-media-wave-v1/anthurium-magnificum.webp
+13. /plantes/anthurium/forgetii | Anthurium forgetii | Steven Walling | https://commons.wikimedia.org/wiki/File:Anthurium_forgetii_potted.jpg | CC BY-SA 4.0 | verified | /documentary-media-wave-v1/anthurium-forgetii.webp
+14. /plantes/anthurium/papillilaminum | Anthurium papillilaminum | NKSTTSSHNVN | https://commons.wikimedia.org/wiki/File:Anthurium_papillilaminum_NKS.jpg | CC BY-SA 4.0 | verified | /documentary-media-wave-v1/anthurium-papillilaminum.webp
+15. /plantes/alocasia/reginula | Alocasia reginula | Obsidian Soul | https://commons.wikimedia.org/wiki/File:Alocasia_reginula_(Philippines)_01.jpg | CC0 1.0 | verified | /documentary-media-wave-v1/alocasia-reginula.webp
+16. /plantes/alocasia/micholitziana | Alocasia micholitziana | Dinkum | https://commons.wikimedia.org/wiki/File:Alocasia_micholitziana_2.JPG | CC0 1.0 | verified | /documentary-media-wave-v1/alocasia-micholitziana.webp
+17. /plantes/alocasia/baginda | Alocasia baginda | Yercaud-elango | https://commons.wikimedia.org/wiki/File:Alocasia_baginda_-3-NRI_Layout-bengaluru-India.jpg | CC BY 4.0 | verified | /documentary-media-wave-v1/alocasia-baginda.webp
+
+ATTRIBUTION_STATUS=PASS_17/17
+BOTANICAL_IDENTITY_STATUS=PASS_17/17
+LOCAL_FILE_STATUS=PASS_17/17
+TARGETED_TESTS=PASS_10/10
+LINT_TARGETED=PASS
+BUILD_BETA=PASS
+DIFF_CHECK=PASS
+MOBILE_390_VISUAL=PASS_REPRESENTATIVE
+DESKTOP_1440_VISUAL=PASS_REPRESENTATIVE
+HORIZONTAL_OVERFLOW=0
+CONSOLE_CRITICAL_ERRORS=0_ON_PRODUCTION_LOCAL_FRESH_TABS
+
+OWNER_REVIEW_LIST=
+- Colocasia esculenta ‘Eddo’ reste REAL_REVIEW_REQUIRED, sans promotion automatique.
+- Aucun des 17 médias certifiés n’exige de décision subjective Owner.
+- Les candidats Chlorophytum comosum, Plumeria rubra, Dicksonia antarctica, Monstera adansonii, Alocasia zebrina et Alocasia longiloba ont été rejetés plutôt que soumis comme compromis visuel.
+
+V45_MOBILE_DOCK_PRESERVED=YES
+EXISTING_34_VERIFIED_MEDIA_PRESERVED=YES
+KNOWN_EXCLUSIONS_REINTRODUCED=NO
+PUBLIC_MUTATED=NO
+SHOP_MUTATED=NO
+CAISSE_MUTATED=NO
+CATALOGUE_MUTATED=NO
+SUPABASE_MUTATED=NO
+SEARCH_CONSOLE_MUTATED=NO
+DNS_MUTATED=NO
+MERGE_MAIN=NO
+AI_GENERATED_DOCUMENTARY_MEDIA=NO
+
+READY_FOR_AI_VISUAL_MEDIA_RECERTIFICATION=YES_FOR_17_UPGRADED_ROUTES
+READY_FOR_OWNER_MEDIA_REVIEW=YES_AFTER_BETA_DEPLOYMENT
+STOP=YES
