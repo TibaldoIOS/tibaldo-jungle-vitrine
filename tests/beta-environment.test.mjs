@@ -98,6 +98,10 @@ test("Golden V25 keeps the visual and environment guardrails", async () => {
   assert.match(styles, /overflow-wrap:normal/);
   assert.match(styles, /body:has\(\.conversion-dock\)/);
   assert.match(styles, /env\(safe-area-inset-bottom\)/);
+  assert.match(
+    styles,
+    /@media\(max-width:600px\)\{\.plant-profile-hero>\.site-header\{flex-basis:80px\}\.plant-profile-hero-content\{padding-bottom:calc\(84px \+ env\(safe-area-inset-bottom\)\)\}/,
+  );
   assert.match(styles, /footer-parking-grid[\s\S]*overflow-x:auto/);
   assert.match(styles, /@media\(prefers-reduced-motion:reduce\)/);
   assert.match(directory, /aria-expanded/);
