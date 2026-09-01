@@ -859,7 +859,7 @@ test("returns 404 for an unknown encyclopedia plant page", async () => {
   assert.equal(response.status, 404);
 });
 
-test("renders Dicksonia, its hierarchy and the shared species hero fallback", async () => {
+test("renders Dicksonia, its hierarchy and its verified documentary hero", async () => {
   for (const path of ["/plantes/dicksonia", "/plantes/famille/dicksoniaceae", "/plantes/dicksonia/antarctica"]) {
     const response = await render(path);
     assert.equal(response.status, 200, path);
@@ -868,7 +868,8 @@ test("renders Dicksonia, its hierarchy and the shared species hero fallback", as
   assert.match(plantsHtml, /href=["']\/plantes\/dicksonia["']/i);
   const speciesHtml = await (await render("/plantes/dicksonia/antarctica")).text();
   assert.match(speciesHtml, /<h1[^>]*>[\s\S]*?Dicksonia[\s\S]*?antarctica[\s\S]*?<\/h1>/i);
-  assert.match(speciesHtml, /has-editorial-fallback/i);
+  assert.match(speciesHtml, /documentary-media-wave-3-v1\/dicksonia-antarctica\.webp/i);
+  assert.doesNotMatch(speciesHtml, /has-editorial-fallback/i);
   assert.match(speciesHtml, /data-golden-species-v(?:1|25)="dicksonia\/antarctica"/i);
   assert.match(speciesHtml, /rel=["']canonical["'][^>]+plantes\/dicksonia\/antarctica/i);
   assert.doesNotMatch(speciesHtml, /Dictyonia/i);
@@ -890,7 +891,8 @@ test("renders the Agave, Fatsia and five-species Strelitzia cluster", async () =
     const html = await response.text();
     assert.match(html, /<h1/i, path);
     assert.match(html, /rel=["']canonical["']/i, path);
-    if (path.split("/").length === 4 && path !== "/plantes/strelitzia/alba") assert.match(html, /has-editorial-fallback/i, path);
+    if (["/plantes/agave/americana-variegata", "/plantes/fatsia/japonica-spiders-web", "/plantes/strelitzia/caudata"].includes(path)) assert.match(html, /has-editorial-fallback/i, path);
+    if (["/plantes/strelitzia/juncea", "/plantes/strelitzia/nicolai", "/plantes/strelitzia/reginae"].includes(path)) assert.match(html, /documentary-media-wave-3-v1/i, path);
     assert.doesNotMatch(html, /\/_vinext\/image/i, path);
     assert.match(html, /noindex/i, path);
   }
@@ -954,8 +956,8 @@ test("final convergence keeps representative canonical surfaces Golden and BETA-
     assert.doesNotMatch(html, /thai-profile-v3|veitchii-profile-v2|veitchii-v2-id-grid|species-next-page/i, route);
   }
 
-  const mediaGap = await (await render("/plantes/chlorophytum/comosum")).text();
-  assert.match(mediaGap, /Aucune image fabriquée|Aucune photographie documentaire vérifiée/i);
+  const chlorophytumMedia = await (await render("/plantes/chlorophytum/comosum")).text();
+  assert.match(chlorophytumMedia, /documentary-media-wave-3-v1\/chlorophytum-comosum\.webp/i);
   const richMedia = await (await render("/plantes/cycas/revoluta")).text();
   assert.match(richMedia, /botanical-photo-book/i);
 

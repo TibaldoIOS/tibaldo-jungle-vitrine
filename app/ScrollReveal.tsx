@@ -18,23 +18,48 @@ export default function ScrollReveal() {
 
     root.classList.add("reveal-ready");
 
-    if (reducedMotion.matches || !("IntersectionObserver" in window)) {
-      elements.forEach((element) => element.classList.add("is-visible"));
-      return () => root.classList.remove("reveal-ready");
-    }
-
-    const observer = new IntersectionObserver(
+    const observer = reducedMotion.matches || !("IntersectionObserver" in window) ? null : new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
           entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
+          observer?.unobserve(entry.target);
         });
       },
       { threshold: 0.14, rootMargin: "0px 0px -8% 0px" },
     );
 
-    elements.forEach((element) => observer.observe(element));
+    const registered = new WeakSet<HTMLElement>();
+    const register = (element: HTMLElement) => {
+      if (registered.has(element)) return;
+      registered.add(element);
+      if (observer) observer.observe(element);
+      else element.classList.add("is-visible");
+    };
+    const registerWithin = (node: Node) => {
+      if (!(node instanceof HTMLElement)) return;
+      const added = [
+        ...(node.matches("[data-reveal]") ? [node] : []),
+        ...node.querySelectorAll<HTMLElement>("[data-reveal]"),
+      ];
+      added.forEach((element) => {
+        registered.add(element);
+        element.classList.add("is-visible");
+      });
+    };
+
+    elements.forEach(register);
+    const mutationObserver = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => mutation.addedNodes.forEach(registerWithin));
+    });
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
+
+    if (!observer) {
+      return () => {
+        mutationObserver.disconnect();
+        root.classList.remove("reveal-ready");
+      };
+    }
 
     let animationFrame = 0;
 
@@ -87,6 +112,7 @@ export default function ScrollReveal() {
 
     return () => {
       observer.disconnect();
+      mutationObserver.disconnect();
       window.removeEventListener("scroll", scheduleMotion);
       window.removeEventListener("resize", scheduleMotion);
       if (animationFrame) window.cancelAnimationFrame(animationFrame);

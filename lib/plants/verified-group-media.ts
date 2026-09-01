@@ -73,4 +73,21 @@ export const verifiedGroupMediaByGenre: Readonly<Record<string, VerifiedGroupMed
       note: "Média déjà conservé localement et présent dans le registre de crédits Jungle ; réutilisation hub vérifiée le 31 août 2026.",
     },
   },
+  philodendron: {
+    src: "/philodendron-hastatum-feuillage.jpg",
+    alt: "Ensemble de feuilles argentées lancéolées de Philodendron hastatum",
+    caption: "Philodendron hastatum · Krzysztof Ziarnek, Kenraiz · CC BY-SA 4.0.",
+    width: 1280,
+    height: 853,
+    rights: "verified",
+    license: {
+      status: "verified",
+      creator: "Krzysztof Ziarnek, Kenraiz",
+      license: "CC BY-SA 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Philodendron_hastatum_kz2.jpg",
+      registryPath: "/credits-images",
+      note: "Source naturellement horizontale montrant plusieurs feuilles ; identité et droits déjà enregistrés dans Jungle, validation hero du 1er septembre 2026.",
+    },
+  },
 };

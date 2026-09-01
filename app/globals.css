@@ -263,6 +263,16 @@ h1 em { color: var(--sage); font-weight: 400; }
 .reveal-ready [data-reveal].is-visible :where(.section-kicker, h2, h3),
 .reveal-ready [data-reveal].is-visible > :where(p, ul, .button, .intro-copy) { opacity: 1; transform: none; }
 
+/* The encyclopedia index is navigation, not decorative motion: it must remain
+   fail-visible when Vinext swaps the route without remounting ScrollReveal. */
+.reveal-ready .plants-library-page [data-reveal],
+.reveal-ready .plants-library-page [data-reveal] :where(.section-kicker, h2, h3),
+.reveal-ready .plants-library-page [data-reveal] > :where(p, ul, .button, .intro-copy) {
+  opacity: 1;
+  filter: none;
+  transform: none;
+}
+
 [data-parallax] { --parallax-y: 0px; will-change: transform; }
 img[data-parallax] { transform: translate3d(0, var(--parallax-y), 0) scale(1.08); }
 

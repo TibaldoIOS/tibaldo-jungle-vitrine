@@ -28,8 +28,8 @@ test("night media safety removes exactly the two unsafe documentary renderings",
   }
 });
 
-test("four group heroes reuse only locally available, proven assets", () => {
-  assert.deepEqual(Object.keys(verifiedGroupMediaByGenre).sort(), ["cactus", "epipremnum", "peperomia", "pilea"]);
+test("five group heroes reuse only locally available, proven assets", () => {
+  assert.deepEqual(Object.keys(verifiedGroupMediaByGenre).sort(), ["cactus", "epipremnum", "peperomia", "philodendron", "pilea"]);
   for (const media of Object.values(verifiedGroupMediaByGenre)) {
     assert.equal(media.rights, "verified");
     assert.equal(media.license?.status, "verified");
@@ -55,11 +55,9 @@ test("species media inventory is deterministic after safety closure", () => {
     else counts.gap += 1;
   }
   assert.equal(plants.length, certifiedMediaInventory.after.species);
-  assert.deepEqual(counts, {
-    complete: 2,
-    partial: certifiedMediaInventory.after.realMediaSpecies - 2,
-    gap: certifiedMediaInventory.after.mediaGapSpecies,
-  });
+  assert.deepEqual(counts, { complete: 2, partial: 65, gap: 29 });
+  assert.equal(certifiedMediaInventory.after.realMediaSpecies, 35, "report remains the historical pre-wave baseline");
+  assert.equal(certifiedMediaInventory.after.mediaGapSpecies, 61, "report remains the historical pre-wave baseline");
 });
 
 test("Bananiers hub composes Musa and Ensete instead of querying a nonexistent genus", () => {

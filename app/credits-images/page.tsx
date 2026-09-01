@@ -9,6 +9,16 @@ export const metadata: Metadata = {
 };
 
 const credits: readonly [string, string, string, string, string?][] = [
+  ["Alocasia zebrina", "David J. Stang", "CC BY-SA 4.0 · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Alocasia_zebrina_1zz.jpg", "https://creativecommons.org/licenses/by-sa/4.0/"],
+  ["Alocasia macrorrhizos", "Qian2007", "CC BY-SA 4.0 · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Alocasia_macrorrhizos_2025.jpg", "https://creativecommons.org/licenses/by-sa/4.0/"],
+  ["Alocasia odora", "Mike Peel", "CC BY-SA 4.0 · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:At_La_Orotava_2023_120_-_Alocasia_odora.jpg", "https://creativecommons.org/licenses/by-sa/4.0/"],
+  ["Alocasia sinuata", "Obsidian Soul", "CC0 1.0 · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Alocasia_sinuata_(Philippines)_0002.jpg", "https://creativecommons.org/publicdomain/zero/1.0/"],
+  ["Chlorophytum comosum", "Juan Carlos Fonseca Mata", "CC BY-SA 4.0 · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Malamadre_(Chlorophytum_comosum).jpg", "https://creativecommons.org/licenses/by-sa/4.0/"],
+  ["Dicksonia antarctica", "brewbooks", "CC BY-SA 2.0 · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Dicksonia_antarctica_(Tasmanian_Tree_Fern)_-_Flickr_-_brewbooks.jpg", "https://creativecommons.org/licenses/by-sa/2.0/"],
+  ["Plumeria rubra", "Vengolis", "CC BY-SA 4.0 · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Plumeria_rubra_2852.jpg", "https://creativecommons.org/licenses/by-sa/4.0/"],
+  ["Strelitzia nicolai", "NasserHalaweh", "CC BY-SA 4.0 · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Strelitziaceae_Strelitzia_nicolai_1.jpg", "https://creativecommons.org/licenses/by-sa/4.0/"],
+  ["Strelitzia reginae", "Reinhold Möller Ermell", "CC BY-SA 4.0 · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Strelitzia_reginae-20091014-RM-115622.jpg", "https://creativecommons.org/licenses/by-sa/4.0/"],
+  ["Strelitzia juncea", "Andrew massyn", "Domaine public · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Strelitzia_juncea.JPG", "https://creativecommons.org/publicdomain/mark/1.0/"],
   ["Asparagus setaceus", "Forest & Kim Starr", "CC BY 3.0 · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Starr_050517-9003_Asparagus_setaceus.jpg", "https://creativecommons.org/licenses/by/3.0/"],
   ["Disocactus anguliger", "Agnieszka Kwiecień, Nova", "CC BY-SA 4.0 · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Disocactus_anguliger_syn._Epiphyllum_anguliger_2024-02-29_Graz_01.jpg", "https://creativecommons.org/licenses/by-sa/4.0/"],
   ["Pilea cadierei", "Krzysztof Ziarnek, Kenraiz", "CC BY-SA 4.0 · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Pilea_cadierei_kz05.jpg", "https://creativecommons.org/licenses/by-sa/4.0/"],

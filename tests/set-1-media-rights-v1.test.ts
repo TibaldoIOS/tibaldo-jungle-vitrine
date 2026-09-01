@@ -11,8 +11,9 @@ import {
 } from "../lib/plants/set-1-media-rights-v1.ts";
 import { documentaryMediaWaveV1Registry } from "../lib/plants/documentary-media-completion-wave-v1.ts";
 import { documentaryMediaWave2V1Registry } from "../lib/plants/documentary-media-completion-wave-2-v1.ts";
+import { documentaryMediaWave3V1Registry } from "../lib/plants/documentary-media-completion-wave-3-v1.ts";
 
-const laterVerifiedRoutes = new Set([...documentaryMediaWaveV1Registry, ...documentaryMediaWave2V1Registry].map(({ route }) => route));
+const laterVerifiedRoutes = new Set([...documentaryMediaWaveV1Registry, ...documentaryMediaWave2V1Registry, ...documentaryMediaWave3V1Registry].map(({ route }) => route));
 
 const routeToPlant = (route: string) => {
   const [, , genre, slug] = route.split("/");
