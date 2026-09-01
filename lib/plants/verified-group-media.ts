@@ -5,6 +5,36 @@ export type VerifiedGroupMedia = PlantEntry["gallery"][number] & {
 };
 
 export const verifiedGroupMediaByGenre: Readonly<Record<string, VerifiedGroupMedia>> = {
+  fatsia: {
+    src: "/hub-media-wave-4-v1/fatsia.webp",
+    alt: "Tableau de feuilles palmées de Fatsia japonica en fructification",
+    caption: "Fatsia japonica au Jardin botanique royal de Madrid · Dinkum · CC0 1.0.",
+    width: 1600,
+    height: 980,
+    rights: "verified",
+    license: {
+      status: "verified", creator: "Dinkum", license: "CC0 1.0",
+      licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Fatsia_japonica_leaves.jpg",
+      registryPath: "/credits-images",
+      note: "Hero Wave 4 · source paysage montrant de nombreuses feuilles de Fatsia japonica ; redimensionnement et conversion WebP.",
+    },
+  },
+  ensete: {
+    src: "/hub-media-wave-4-v1/ensete.webp",
+    alt: "Ensemble de grandes feuilles nervurées d’Ensete ventricosum",
+    caption: "Ensete ventricosum au Walter Sisulu Botanical Garden · Rotational · domaine public.",
+    width: 1600,
+    height: 2400,
+    rights: "verified",
+    license: {
+      status: "verified", creator: "Rotational", license: "Domaine public",
+      licenseUrl: "https://creativecommons.org/publicdomain/mark/1.0/",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Ensete_ventricosum00.jpg",
+      registryPath: "/credits-images",
+      note: "Hero Wave 4 · plusieurs feuilles d’Ensete ventricosum au jardin botanique ; recadrage responsive, redimensionnement et conversion WebP.",
+    },
+  },
   pilea: {
     src: "/pilea-peperomioides-plante.jpg",
     alt: "Pilea peperomioides aux feuilles rondes portées par de longs pétioles",

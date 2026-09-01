@@ -9,6 +9,12 @@ export const metadata: Metadata = {
 };
 
 const credits: readonly [string, string, string, string, string?][] = [
+  ["Hero Fatsia · Fatsia japonica", "Dinkum", "CC0 1.0 · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Fatsia_japonica_leaves.jpg", "https://creativecommons.org/publicdomain/zero/1.0/"],
+  ["Hero Ensete · Ensete ventricosum", "Rotational", "Domaine public · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Ensete_ventricosum00.jpg", "https://creativecommons.org/publicdomain/mark/1.0/"],
+  ["Philodendron grazielae", "Krzysztof Ziarnek, Kenraiz", "CC BY-SA 4.0 · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Philodendron_grazielae_kz1.jpg", "https://creativecommons.org/licenses/by-sa/4.0/"],
+  ["Strelitzia caudata", "Tony Rebelo", "CC BY-SA 4.0 · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Strelitzia_caudata_63769847.jpg", "https://creativecommons.org/licenses/by-sa/4.0/"],
+  ["Monstera subpinnata", "Jared Shorma (blazeclaw)", "CC BY 4.0 · redimensionnement et conversion WebP", "https://www.inaturalist.org/observations/220637449", "https://creativecommons.org/licenses/by/4.0/"],
+  ["Alocasia longiloba", "Lyu yi-chi (pchi45)", "CC BY 4.0 · redimensionnement et conversion WebP", "https://www.inaturalist.org/observations/155580390", "https://creativecommons.org/licenses/by/4.0/"],
   ["Alocasia zebrina", "David J. Stang", "CC BY-SA 4.0 · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Alocasia_zebrina_1zz.jpg", "https://creativecommons.org/licenses/by-sa/4.0/"],
   ["Alocasia macrorrhizos", "Qian2007", "CC BY-SA 4.0 · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Alocasia_macrorrhizos_2025.jpg", "https://creativecommons.org/licenses/by-sa/4.0/"],
   ["Alocasia odora", "Mike Peel", "CC BY-SA 4.0 · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:At_La_Orotava_2023_120_-_Alocasia_odora.jpg", "https://creativecommons.org/licenses/by-sa/4.0/"],

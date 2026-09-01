@@ -28,11 +28,11 @@ test("Wave 3 publishes ten exact documentary photographs with complete rights ev
   }
 });
 
-test("Wave 3 reduces honest gaps from 39 to 29 without touching sensitive cultivar decisions", () => {
+test("Wave 4 preserves Wave 3 and reduces honest gaps from 29 to 25 without touching sensitive cultivar decisions", () => {
   const gaps = plants.filter((plant) => documentaryGallery(plant).length === 0);
   assert.equal(plants.length, 96);
-  assert.equal(gaps.length, 29);
-  assert.equal(plants.length - gaps.length, 67);
+  assert.equal(gaps.length, 25);
+  assert.equal(plants.length - gaps.length, 71);
   for (const [genre, slug] of [
     ["monstera", "esqueleto"],
     ["monstera", "thai-constellation"],

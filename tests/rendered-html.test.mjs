@@ -891,7 +891,8 @@ test("renders the Agave, Fatsia and five-species Strelitzia cluster", async () =
     const html = await response.text();
     assert.match(html, /<h1/i, path);
     assert.match(html, /rel=["']canonical["']/i, path);
-    if (["/plantes/agave/americana-variegata", "/plantes/fatsia/japonica-spiders-web", "/plantes/strelitzia/caudata"].includes(path)) assert.match(html, /has-editorial-fallback/i, path);
+    if (["/plantes/agave/americana-variegata", "/plantes/fatsia/japonica-spiders-web"].includes(path)) assert.match(html, /has-editorial-fallback/i, path);
+    if (path === "/plantes/strelitzia/caudata") assert.match(html, /documentary-media-wave-4-v1/i, path);
     if (["/plantes/strelitzia/juncea", "/plantes/strelitzia/nicolai", "/plantes/strelitzia/reginae"].includes(path)) assert.match(html, /documentary-media-wave-3-v1/i, path);
     assert.doesNotMatch(html, /\/_vinext\/image/i, path);
     assert.match(html, /noindex/i, path);

@@ -78,9 +78,9 @@ test("indexability and future sitemap contracts remain frozen", () => {
   assert.equal(expectedPublicSitemapUrlCount, 176);
 });
 
-test("Wave 3 media contract contains 67 verified species and 29 honest gaps", () => {
+test("Wave 4 media contract contains 71 verified species and 25 honest gaps", () => {
   const gaps = plants.filter((plant) => documentaryGallery(plant).length === 0);
   assert.equal(plants.length, 96);
-  assert.equal(plants.length - gaps.length, 67);
-  assert.equal(gaps.length, 29);
+  assert.equal(plants.length - gaps.length, 71);
+  assert.equal(gaps.length, 25);
 });
