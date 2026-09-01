@@ -1,5 +1,5 @@
 import { jungleOrigin } from "../deployment-mode.ts";
-import { documentaryGallery } from "./documentary-media.ts";
+import { cycasRevolutaVerifiedApiMedia, documentaryGallery } from "./documentary-media.ts";
 import type { PlantEntry } from "./types.ts";
 
 export const verifiedMediaApiContractVersion = "1.0";
@@ -8,7 +8,9 @@ export const verifiedMediaStatusValues = ["VERIFIED_MEDIA", "HONEST_MEDIA_GAP"] 
 const canonicalMediaPath = (path: string) => path.replace(/^\/media\//, "/");
 
 export function exactVerifiedPrimaryMedia(plant: PlantEntry) {
-  const image = documentaryGallery(plant)[0];
+  const image = plant.genre === "cycas" && plant.slug === "revoluta"
+    ? cycasRevolutaVerifiedApiMedia
+    : documentaryGallery(plant)[0];
   if (
     !image ||
     image.license?.status !== "verified" ||

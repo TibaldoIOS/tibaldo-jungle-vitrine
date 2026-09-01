@@ -15,8 +15,8 @@ test("verified media API classifies all 96 canonical entries without fuzzy assoc
   const contracts = plants.map((plant) => toVerifiedMediaApiFields(plant, registryVersion));
   assert.equal(contracts.length, 96);
   assert.equal(new Set(contracts.map(({ jungle_slug }) => jungle_slug)).size, 96);
-  assert.equal(contracts.filter(({ media_status }) => media_status === "VERIFIED_MEDIA").length, 72);
-  assert.equal(contracts.filter(({ media_status }) => media_status === "HONEST_MEDIA_GAP").length, 24);
+  assert.equal(contracts.filter(({ media_status }) => media_status === "VERIFIED_MEDIA").length, 74);
+  assert.equal(contracts.filter(({ media_status }) => media_status === "HONEST_MEDIA_GAP").length, 22);
   assert.match(registryVersion, /^jungle-media-v1-[0-9a-f]{8}$/);
 });
 
@@ -46,9 +46,10 @@ test("priority product identities return exact verified media or an honest gap",
   assert.equal(plants.some((plant) => plant.slug === "imperial-green"), false);
 });
 
-test("rights-incomplete Cycas fails closed without changing its canonical page media", () => {
+test("Cycas uses the new exact licensed documentary override without rewriting its Owner gallery", () => {
   const cycas = plants.find((plant) => plant.genre === "cycas" && plant.slug === "revoluta");
   assert.ok(cycas);
-  assert.equal(toVerifiedMediaApiFields(cycas, registryVersion).media_status, "HONEST_MEDIA_GAP");
+  assert.equal(toVerifiedMediaApiFields(cycas, registryVersion).media_status, "VERIFIED_MEDIA");
+  assert.match(toVerifiedMediaApiFields(cycas, registryVersion).primary_media_url!, /documentary-media-wave-6-v1\/cycas-revoluta-documentaire\.webp$/);
   assert.match(cycas.gallery[0].src, /cycas-revoluta-terrasse-tibaldo/);
 });

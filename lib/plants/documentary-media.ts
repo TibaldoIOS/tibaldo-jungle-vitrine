@@ -24,8 +24,43 @@ const pileaVerifiedOverride: PlantImage = {
   },
 };
 
+export const cycasRevolutaVerifiedApiMedia: PlantImage = {
+  src: "/documentary-media-wave-6-v1/cycas-revoluta-documentaire.webp",
+  alt: "Cycas revoluta adulte montrant sa couronne dense de frondes pennées et son caudex",
+  caption: "Cycas revoluta · photographie documentaire d’Ayyuha Sideeq · CC0 1.0.",
+  width: 1600,
+  height: 2134,
+  license: {
+    status: "verified",
+    creator: "Ayyuha Sideeq",
+    license: "CC0 1.0",
+    licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Cycas_revoluta_plant.jpg",
+    registryPath: "/credits-images",
+    note: "Wave 6 V1 · identité Cycas revoluta, source, auteur et licence contrôlés le 1er septembre 2026 ; conversion WebP et réduction sans modification morphologique.",
+  },
+};
+
+const philodendronBrasilVerifiedOverride: PlantImage = {
+  src: "/documentary-media-wave-6-v1/philodendron-hederaceum-brasil.webp",
+  alt: "Philodendron hederaceum ‘Brasil’ aux feuilles cordiformes marquées d’une bande jaune citron",
+  caption: "Philodendron hederaceum ‘Brasil’ au New York Botanical Garden · photographie de David J. Stang · CC BY-SA 4.0.",
+  width: 1000,
+  height: 665,
+  license: {
+    status: "verified",
+    creator: "David J. Stang",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Philodendron_hederaceum_hederaceum_Brasil_0zz.jpg",
+    registryPath: "/credits-images",
+    note: "Wave 6 V1 · cultivar Brasil explicitement nommé par la source du New York Botanical Garden ; conversion WebP sans recadrage ni modification morphologique.",
+  },
+};
+
 const documentaryOverrides: Readonly<Record<string, readonly PlantImage[]>> = {
   "pilea/peperomioides": [pileaVerifiedOverride],
+  "philodendron/brasil": [philodendronBrasilVerifiedOverride],
 };
 
 export const isDocumentaryPlantImage = (image?: PlantImage): image is PlantImage =>
