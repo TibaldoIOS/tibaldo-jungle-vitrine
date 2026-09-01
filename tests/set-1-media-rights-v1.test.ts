@@ -12,8 +12,10 @@ import {
 import { documentaryMediaWaveV1Registry } from "../lib/plants/documentary-media-completion-wave-v1.ts";
 import { documentaryMediaWave2V1Registry } from "../lib/plants/documentary-media-completion-wave-2-v1.ts";
 import { documentaryMediaWave3V1Registry } from "../lib/plants/documentary-media-completion-wave-3-v1.ts";
+import { documentaryMediaWave4V1Registry } from "../lib/plants/documentary-media-completion-wave-4-v1.ts";
+import { documentaryMediaWave5V1Registry } from "../lib/plants/documentary-media-completion-wave-5-v1.ts";
 
-const laterVerifiedRoutes = new Set([...documentaryMediaWaveV1Registry, ...documentaryMediaWave2V1Registry, ...documentaryMediaWave3V1Registry].map(({ route }) => route));
+const laterVerifiedRoutes = new Set([...documentaryMediaWaveV1Registry, ...documentaryMediaWave2V1Registry, ...documentaryMediaWave3V1Registry, ...documentaryMediaWave4V1Registry, ...documentaryMediaWave5V1Registry].map(({ route }) => route));
 
 const routeToPlant = (route: string) => {
   const [, , genre, slug] = route.split("/");

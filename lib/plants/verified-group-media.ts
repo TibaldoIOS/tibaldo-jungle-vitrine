@@ -5,6 +5,18 @@ export type VerifiedGroupMedia = PlantEntry["gallery"][number] & {
 };
 
 export const verifiedGroupMediaByGenre: Readonly<Record<string, VerifiedGroupMedia>> = {
+  agave: {
+    src:"/hub-media-wave-5-v1/hub-agave.webp",alt:"Collection botanique de rosettes d’Agave aux formes variées",caption:"Collection d’Agave · Kenizzer · CC BY-SA 4.0.",width:1600,height:1200,rights:"verified",
+    license:{status:"verified",creator:"Kenizzer",license:"CC BY-SA 4.0",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",sourceUrl:"https://commons.wikimedia.org/wiki/File:Agave_collection_summer_2020.jpg",registryPath:"/credits-images",note:"Hero Wave 5 · collection de plusieurs Agave ; redimensionnement et conversion WebP."},
+  },
+  equisetum: {
+    src:"/hub-media-wave-5-v1/hub-equisetum.webp",alt:"Tableau dense de tiges verticales d’Equisetum hyemale",caption:"Equisetum hyemale au Jardin botanique de Brasília · Daderot · CC0 1.0.",width:1400,height:1867,rights:"verified",
+    license:{status:"verified",creator:"Daderot",license:"CC0 1.0",licenseUrl:"https://creativecommons.org/publicdomain/zero/1.0/",sourceUrl:"https://commons.wikimedia.org/wiki/File:Equisetum_hyemale_-_Jardim_Bot%C3%A2nico_de_Bras%C3%ADlia_-_DSC09678.JPG",registryPath:"/credits-images",note:"Hero Wave 5 · peuplement dense d’une espèce du genre ; redimensionnement et conversion WebP."},
+  },
+  maranta: {
+    src:"/hub-media-wave-5-v1/hub-maranta.webp",alt:"Tableau de feuilles dessinées de Maranta leuconeura ‘Tricolor’",caption:"Maranta leuconeura ‘Tricolor’ · Krzysztof Ziarnek, Kenraiz · CC BY-SA 4.0.",width:1600,height:1143,rights:"verified",
+    license:{status:"verified",creator:"Krzysztof Ziarnek, Kenraiz",license:"CC BY-SA 4.0",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",sourceUrl:"https://commons.wikimedia.org/wiki/File:Maranta_leuconeura_%27Tricolor%27_kz01.jpg",registryPath:"/credits-images",note:"Hero Wave 5 · tableau horizontal de nombreuses feuilles d’une espèce du genre ; redimensionnement et conversion WebP."},
+  },
   fatsia: {
     src: "/hub-media-wave-4-v1/fatsia.webp",
     alt: "Tableau de feuilles palmées de Fatsia japonica en fructification",
