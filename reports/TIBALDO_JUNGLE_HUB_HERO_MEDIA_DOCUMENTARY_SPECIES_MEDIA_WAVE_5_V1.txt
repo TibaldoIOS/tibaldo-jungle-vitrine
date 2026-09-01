@@ -35,5 +35,6 @@ LINT=PASS
 BUILD=PASS
 DIFF_CHECK=PASS
 SECRET_SCAN=PASS
+BETA_ARTIFACT_NOTE=Initial V54 publish rejected before activation because the hosting migration runner encountered an already-existing events table; retry packages the unchanged application without replaying historical D1 migrations.
 PUBLIC_MUTATED=NO
 MAIN_MERGE=NO
