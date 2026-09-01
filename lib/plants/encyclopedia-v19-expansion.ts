@@ -8,6 +8,7 @@ type LicensedImage = {
   caption: string;
   creator: string;
   license: string;
+  licenseUrl?: string;
   sourceUrl: string;
 };
 
@@ -75,6 +76,7 @@ const licensedImage = (image: LicensedImage): PlantEntry["gallery"][number] => (
     status: "verified",
     creator: image.creator,
     license: image.license,
+    licenseUrl: image.licenseUrl,
     sourceUrl: image.sourceUrl,
     registryPath: creditsRegistry,
     note: "Fichier déjà présent dans le dépôt et crédit déjà publié dans le registre d’images.",
@@ -287,7 +289,7 @@ const drafts: SpeciesDraft[] = [
     lightText: "Lumière vive diffuse ; protéger les feuilles veloutées d’un soleil direct chaud.", watering: "Arroser quand la surface commence à sécher, en gardant le cœur du mélange aéré.", temperature: "19 à 27 °C, avec stabilité nocturne.",
     careFocus: "Protéger les nouvelles feuilles jusqu’à leur durcissement et ne jamais compenser un air sec par une motte saturée.", comparison: { name: "Anthurium magnificum", difference: "Magnificum est notamment associé à des pétioles adultes nettement quadrangulaires ou ailés ; une jeune feuille seule peut prêter à confusion." },
     sources: [powo("Anthurium crystallinum"), supportingSource.anthurium],
-    image: { src: "/media/anthurium-crystallinum-feuille.jpg", alt: "Feuille cordiforme veloutée et nervurée d’Anthurium crystallinum", caption: "Anthurium crystallinum · photographie documentaire déjà créditée dans le dépôt", creator: "David J. Stang", license: "CC BY-SA 4.0", sourceUrl: "https://commons.wikimedia.org/wiki/File:Anthurium_crystallinum_6zz.jpg" },
+    image: { src: "/media/anthurium-crystallinum-feuille.jpg", alt: "Feuille cordiforme veloutée et nervurée d’Anthurium crystallinum", caption: "Anthurium crystallinum · photographie documentaire déjà créditée dans le dépôt", creator: "David J. Stang", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/", sourceUrl: "https://commons.wikimedia.org/wiki/File:Anthurium_crystallinum_6zz.jpg" },
   },
   {
     slug: "magnificum", genre: "anthurium", botanicalName: "Anthurium magnificum Linden", taxonomyName: "Anthurium magnificum", displayName: "Anthurium magnificum",
@@ -345,7 +347,7 @@ const drafts: SpeciesDraft[] = [
     lightText: "Lumière vive filtrée ; le soleil direct chaud marque rapidement le limbe métallique.", watering: "Laisser la surface ressuyer, puis arroser sans remplir durablement le cache-pot.", temperature: "20 à 28 °C ; éviter le froid humide.",
     careFocus: "Surveiller le corme et le pétiole : une plante compacte demande moins d’eau qu’une grande Alocasia à croissance rapide.", comparison: { name: "Alocasia azlanii", difference: "Azlanii peut aussi montrer des reflets irisés, mais présente un réseau de nervures colorées et une morphologie distincte." },
     sources: [powo("Alocasia cuprea"), supportingSource.alocasia],
-    image: { src: "/media/alocasia-cuprea-feuillage.jpg", alt: "Feuille métallique cuivrée et nervurée d’Alocasia cuprea", caption: "Alocasia cuprea · photographie documentaire déjà créditée dans le dépôt", creator: "Frank Schulenburg", license: "CC BY-SA 3.0", sourceUrl: "https://commons.wikimedia.org/wiki/File:Alocasia_cuprea_(portrait_orientation).jpg" },
+    image: { src: "/media/alocasia-cuprea-feuillage.jpg", alt: "Feuille métallique cuivrée et nervurée d’Alocasia cuprea", caption: "Alocasia cuprea · photographie documentaire déjà créditée dans le dépôt", creator: "Frank Schulenburg", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/", sourceUrl: "https://commons.wikimedia.org/wiki/File:Alocasia_cuprea_(portrait_orientation).jpg" },
   },
   {
     slug: "zebrina", genre: "alocasia", botanicalName: "Alocasia zebrina", displayName: "Alocasia zebrina",
