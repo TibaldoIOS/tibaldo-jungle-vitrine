@@ -26,10 +26,10 @@
   .heading h2 { max-width: 10ch; font-size: clamp(2.65rem, 13vw, 4rem); }
   .heading p:last-child { font-size: 1rem; }
   .markers span { width: 1.45rem; height: 1.45rem; font-size: .5rem; }
-  .legend { grid-template-columns: 1fr 1fr; }
+  .legend { grid-template-columns: 1fr; }
   .legend a:nth-child(3n + 2), .legend a:nth-child(3n + 3) { padding-left: 0; border-left: 0; }
-  .legend a:nth-child(even) { padding-left: .85rem; border-left: 1px solid rgb(23 62 48 / .18); }
-  .legend a { padding-right: .65rem; }
-  .legend strong { font-size: .91rem; }
-  .legend small { font-size: .69rem; }
+  .legend a:nth-child(even) { padding-left: 0; border-left: 0; }
+  .legend a { min-height: 4.4rem; padding-right: .65rem; }
+  .legend strong { font-size: 1rem; }
+  .legend small { font-size: .74rem; }
 }
