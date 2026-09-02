@@ -17,10 +17,17 @@ test("Wave 2 batch 1 publishes only exact, licensed and visually accepted photog
     const media = gallery[0];
     assert.equal(media.license?.status, "verified", record.route);
     assert.ok(media.license?.creator, record.route);
-    assert.ok(media.license?.sourceUrl?.startsWith("https://commons.wikimedia.org/wiki/File:"), record.route);
-    assert.ok(media.license?.licenseUrl?.startsWith("https://creativecommons.org/"), record.route);
+    if (record.route === "/plantes/anthurium/clarinervium") {
+      assert.equal(media.license?.sourceUrl, "owner-provided://tibaldo/anthurium-clarinervium-2026-09-02");
+      assert.equal(media.license?.license, "Droits de réutilisation confirmés par l’Owner");
+      assert.equal(media.license?.licenseUrl, "");
+      assert.match(media.license?.note ?? "", /2 septembre 2026/);
+    } else {
+      assert.ok(media.license?.sourceUrl?.startsWith("https://commons.wikimedia.org/wiki/File:"), record.route);
+      assert.ok(media.license?.licenseUrl?.startsWith("https://creativecommons.org/"), record.route);
+      assert.match(media.license?.note ?? "", /31 août 2026/, record.route);
+    }
     assert.equal(media.license?.registryPath, "/credits-images", record.route);
-    assert.match(media.license?.note ?? "", /31 août 2026/, record.route);
     assert.ok(existsSync(new URL(`../public${media.src}`, import.meta.url)), media.src);
   }
 });
