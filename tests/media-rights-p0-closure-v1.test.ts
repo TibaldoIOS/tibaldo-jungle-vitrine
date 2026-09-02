@@ -17,8 +17,8 @@ const removedAssets = [
 
 test("closes the exact 11-route P0 media-rights set", () => {
   assert.equal(mediaRightsP0ClosureRegistry.length, 11);
-  assert.equal(mediaRightsP0ClosureRegistry.filter(({ decision }) => decision === "RIGHTS_PROVEN_KEEP").length, 3);
-  assert.equal(mediaRightsP0ClosureRegistry.filter(({ decision }) => decision === "REMOVE_AND_USE_HONEST_MEDIA_GAP").length, 8);
+  assert.equal(mediaRightsP0ClosureRegistry.filter(({ decision }) => decision === "RIGHTS_PROVEN_KEEP").length, 4);
+  assert.equal(mediaRightsP0ClosureRegistry.filter(({ decision }) => decision === "REMOVE_AND_USE_HONEST_MEDIA_GAP").length, 7);
 
   for (const item of mediaRightsP0ClosureRegistry) {
     const [, , genre, slug] = item.route.split("/");
@@ -35,12 +35,28 @@ test("closes the exact 11-route P0 media-rights set", () => {
     for (const image of plant.gallery) {
       assert.equal(image.license?.status, "verified", `${item.route}: status`);
       assert.ok(image.license?.creator, `${item.route}: creator`);
-      assert.ok(image.license?.sourceUrl?.startsWith("https://commons.wikimedia.org/wiki/File:"), `${item.route}: source`);
-      assert.ok(image.license?.licenseUrl?.startsWith("https://"), `${item.route}: license`);
+      assert.ok(image.license?.sourceUrl?.startsWith("https://"), `${item.route}: source`);
+      if (item.route !== "/plantes/anthurium/pallidiflorum") {
+        assert.ok(image.license?.licenseUrl?.startsWith("https://"), `${item.route}: license`);
+      }
       assert.equal(image.license?.registryPath, "/credits-images", `${item.route}: registry`);
-      assert.match(image.license?.note ?? "", /30 août 2026/, `${item.route}: proof date`);
+      assert.match(image.license?.note ?? "", /(?:30 août|2 septembre) 2026/, `${item.route}: proof date`);
     }
   }
+});
+
+test("restores Pallidiflorum from the exact Owner-authorized URL without the stale asset", () => {
+  const plant = getPlant("anthurium", "pallidiflorum");
+  assert.ok(plant);
+  assert.equal(plant.gallery.length, 1);
+  assert.equal(plant.gallery[0].src, "/anthurium-pallidiflorum-feuillage-tibaldo-jungle.webp");
+  assert.equal(plant.gallery[0].alt, "Anthurium pallidiflorum aux longues feuilles rubanées et retombantes");
+  assert.equal(plant.gallery[0].width, 1080);
+  assert.equal(plant.gallery[0].height, 1080);
+  assert.equal(plant.gallery[0].license?.status, "verified");
+  assert.equal(plant.gallery[0].license?.sourceUrl, "https://www.driftlessbotanicals.net/wp-content/uploads/2024/12/Anth-Pallidiflorum.jpeg");
+  assert.match(plant.gallery[0].license?.license ?? "", /Owner TIBALDO/);
+  assert.doesNotMatch(JSON.stringify(plant), /anthurium-pallidiflorum-cascade\.webp/);
 });
 
 test("does not expose removed rights-unknown assets through canonical plant or group data", () => {

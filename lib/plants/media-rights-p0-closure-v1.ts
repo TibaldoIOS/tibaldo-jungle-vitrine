@@ -45,6 +45,14 @@ const honestGapImage = (plant: PlantEntry): PlantImage => ({
 });
 
 const verifiedLicensesByRoute: Readonly<Record<string, readonly PlantMediaLicense[]>> = {
+  "/plantes/anthurium/pallidiflorum": [
+    verifiedLicense({
+      creator: "Driftless Botanicals (source fournie par l’Owner)",
+      license: "Autorisation d’utilisation confirmée par l’Owner TIBALDO",
+      sourceUrl: "https://www.driftlessbotanicals.net/wp-content/uploads/2024/12/Anth-Pallidiflorum.jpeg",
+      note: "Preuve contrôlée le 2 septembre 2026. L’Owner confirme explicitement disposer des droits nécessaires pour utiliser cette source dans l’écosystème TIBALDO. La source JPEG 1080 × 1080 (SHA-256 491f206b2abf31d5711a2c630971077b505f34aed5e3c285345ef31d50e0b232) montre le port rubané et retombant attendu d’Anthurium pallidiflorum. Adaptation locale : conversion WebP haute qualité sans recadrage ni transformation morphologique (SHA-256 314332d758bf1f31405bbcca9aa01d6ede594089ab605aaf4383801b8db8ebde).",
+    }),
+  ],
   "/plantes/anthurium/veitchii": [
     verifiedLicense({
       creator: "Supertita",
@@ -89,7 +97,6 @@ const verifiedLicensesByRoute: Readonly<Record<string, readonly PlantMediaLicens
 };
 
 const honestGapRoutes = new Set([
-  "/plantes/anthurium/pallidiflorum",
   "/plantes/asparagus/plumosus",
   "/plantes/epipremnum/marble-queen",
   "/plantes/epiphyllum/anguliger",
@@ -100,7 +107,7 @@ const honestGapRoutes = new Set([
 ]);
 
 export const mediaRightsP0ClosureRegistry: readonly RightsDecision[] = [
-  { route: "/plantes/anthurium/pallidiflorum", decision: "REMOVE_AND_USE_HONEST_MEDIA_GAP", source: "Ancien asset local sans provenance démontrée", license: "Aucune preuve réutilisable", botanicalIdentity: "Non retenue sans provenance ni preuve d’identité", finalMediaStatus: "HONEST_MEDIA_GAP" },
+  { route: "/plantes/anthurium/pallidiflorum", decision: "RIGHTS_PROVEN_KEEP", source: "URL fournie et autorisée par l’Owner TIBALDO — Driftless Botanicals", license: "Autorisation d’utilisation confirmée par l’Owner TIBALDO", botanicalIdentity: "Source nommée Anthurium pallidiflorum et morphologie rubanée retombante cohérente", finalMediaStatus: "VERIFIED_MEDIA" },
   { route: "/plantes/anthurium/veitchii", decision: "RIGHTS_PROVEN_KEEP", source: "Wikimedia Commons — File:Anthurium veitchii-King Anthurium.jpg", license: "CC BY-SA 4.0", botanicalIdentity: "Fichier et catégorie Commons : Anthurium veitchii", finalMediaStatus: "VERIFIED_MEDIA" },
   { route: "/plantes/philodendron/billietiae", decision: "RIGHTS_PROVEN_KEEP", source: "Wikimedia Commons — Philodendron billietiae 0zz, 1zz et 2zz", license: "CC BY-SA 4.0", botanicalIdentity: "Trois vues nommées Philodendron billietiae au Fairchild Tropical Botanic Garden", finalMediaStatus: "VERIFIED_MEDIA" },
   { route: "/plantes/asparagus/plumosus", decision: "REMOVE_AND_USE_HONEST_MEDIA_GAP", source: "Ancien asset local sans provenance démontrée", license: "Aucune preuve réutilisable", botanicalIdentity: "Non retenue sans provenance ni preuve d’identité", finalMediaStatus: "HONEST_MEDIA_GAP" },
