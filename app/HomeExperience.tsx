@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { homeUniverseMedia } from "@/lib/home-universe-media";
 import { Arrow } from "./SiteChrome";
 
 const universes = [
@@ -8,24 +9,21 @@ const universes = [
     title: "Plantes",
     copy: "Raretés végétales, plantes d’intérieur et encyclopédie pour choisir selon votre lumière et votre quotidien.",
     href: "/plantes",
-    image: "/collection-plantes-rares-tibaldo-jungle-lille.jpg",
-    alt: "Collection de plantes rares et tropicales chez Tibaldo Jungle à Lille",
+    media: homeUniverseMedia.plants,
   },
   {
     number: "02",
     title: "Substrats",
     copy: "Terreau, écorces, fibres et minéraux vendus en vrac, avec un mélange adapté aux besoins des racines.",
     href: "/substrats",
-    image: "/substrats-horticoles-vrac-tibaldo-jungle-lille.jpg",
-    alt: "Substrats horticoles proposés en vrac à Lille",
+    media: homeUniverseMedia.substrates,
   },
   {
     number: "03",
     title: "Le Studio",
     copy: "Découvrez la nouvelle adresse Tibaldo Jungle, ses plantes, ses matières et les conseils proposés sur place à Lille.",
     href: "/contact",
-    image: "/media/projet-boutique-tibaldo-jungle-lille.webp",
-    alt: "Façade du Studio Végétal Tibaldo Jungle à Lille",
+    media: homeUniverseMedia.studio,
   },
 ];
 
@@ -46,8 +44,8 @@ export default function HomeExperience() {
         </header>
         <div className="home-hub-grid">
           {universes.map((item) => (
-            <a href={item.href} key={item.title} data-reveal>
-              <Image unoptimized src={item.image} alt={item.alt} width="900" height="1100" loading="lazy" />
+            <a href={item.href} key={item.title} data-reveal data-owner-media-slot={item.media.slot}>
+              <Image unoptimized src={item.media.src} alt={item.media.alt} width={item.media.width} height={item.media.height} loading="lazy" style={{ objectPosition: item.media.objectPosition }} />
               <span className="home-hub-shade" aria-hidden="true" />
               <small>{item.number}</small><div><h3>{item.title}</h3><p>{item.copy}</p><strong>Découvrir <Arrow /></strong></div>
             </a>
