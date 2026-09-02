@@ -6,7 +6,7 @@ import styles from "./BotanicalHubLeafPlate.module.css";
 export default function BotanicalHubLeafPlate({ data, variant = "chapter" }: { data: BotanicalHubLeafPlateData; variant?: "chapter" | "hero-background" }) {
   if (variant === "hero-background") {
     return <div className={styles.heroBackground} data-botanical-hub-leaf-plate={data.genus} data-leaf-plate-variant={variant} aria-hidden="true">
-      {data.heroLeafAssets?.map((asset, index) => <span className={styles.heroLeaf} data-hero-leaf={index + 1} key={asset}><Image unoptimized src={asset} alt="" width={720} height={720} priority={index < 4} /></span>)}
+      {data.heroTableauAsset ? <Image className={styles.heroTableau} unoptimized src={data.heroTableauAsset} alt="" width={1536} height={1024} priority /> : null}
     </div>;
   }
   return <section className={styles.section} data-botanical-hub-leaf-plate={data.genus} data-leaf-plate-variant={variant} aria-labelledby={`leaf-plate-${data.genus}`}>

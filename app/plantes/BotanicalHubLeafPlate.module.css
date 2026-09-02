@@ -20,15 +20,9 @@
 .legend strong { display: block; font-family: var(--font-serif, Georgia, serif); font-size: clamp(.98rem, 1.3vw, 1.15rem); font-weight: 520; line-height: 1.15; }
 .legend small { display: block; margin-top: .35rem; color: rgb(23 62 48 / .68); font-size: .72rem; line-height: 1.3; }
 .caption { max-width: 55rem; margin: 1.1rem 0 0; color: rgb(23 62 48 / .68); font-size: .76rem; line-height: 1.55; }
-.heroBackground { position: absolute; z-index: 2; inset: 0; overflow: hidden; pointer-events: none; opacity: .76; -webkit-mask-image: linear-gradient(180deg, transparent 3%, #000 15%, #000 80%, transparent 100%); mask-image: linear-gradient(180deg, transparent 3%, #000 15%, #000 80%, transparent 100%); }
-.heroLeaf { position: absolute; display: block; filter: saturate(.72) contrast(1.08); opacity: .48; }
-.heroLeaf img { display: block; width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 1.2rem 2rem rgb(0 0 0 / .2)); }
-.heroLeaf[data-hero-leaf="1"] { right: -5%; bottom: -11%; width: min(40vw, 650px); aspect-ratio: 1.08; opacity: .72; transform: rotate(10deg); }
-.heroLeaf[data-hero-leaf="2"] { right: 24%; top: 13%; width: min(23vw, 350px); aspect-ratio: .78; transform: rotate(-13deg); }
-.heroLeaf[data-hero-leaf="3"] { right: 4%; top: 11%; width: min(17vw, 250px); aspect-ratio: .82; opacity: .56; transform: rotate(14deg); }
-.heroLeaf[data-hero-leaf="4"] { left: 39%; bottom: -7%; width: min(20vw, 300px); aspect-ratio: 1; opacity: .34; transform: rotate(-31deg); }
-.heroLeaf[data-hero-leaf="5"] { right: 8%; bottom: -3%; width: min(29vw, 440px); aspect-ratio: 1.02; opacity: .52; transform: rotate(-7deg); }
-.heroLeaf[data-hero-leaf="6"] { right: 36%; top: -8%; width: min(18vw, 270px); aspect-ratio: .82; opacity: .32; transform: rotate(18deg); }
+.heroBackground { position: absolute; z-index: 2; inset: 0; overflow: hidden; pointer-events: none; }
+.heroBackground::after { position: absolute; z-index: 1; inset: 0; content: ""; background: linear-gradient(90deg, rgb(6 39 29 / .96) 0%, rgb(6 39 29 / .82) 30%, rgb(6 39 29 / .28) 61%, transparent 82%), linear-gradient(180deg, transparent 0 38%, rgb(6 39 29 / .24) 58%, #06271d 100%); }
+.heroTableau { position: absolute; top: -8%; right: -4%; display: block; width: min(76vw, 1160px); height: auto; opacity: .68; object-fit: contain; filter: saturate(.76) contrast(1.08) drop-shadow(0 1.2rem 2.5rem rgb(0 0 0 / .16)); -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 55%, rgb(0 0 0 / .72) 72%, transparent 100%); mask-image: linear-gradient(180deg, #000 0%, #000 55%, rgb(0 0 0 / .72) 72%, transparent 100%); }
 @media (max-width: 700px) {
   .section { padding: 4.5rem 0; }
   .heading { grid-template-columns: 1fr; gap: 1.4rem; }
@@ -41,12 +35,6 @@
   .legend a { min-height: 4.4rem; padding-right: .65rem; }
   .legend strong { font-size: 1rem; }
   .legend small { font-size: .74rem; }
-  .heroBackground { opacity: .7; -webkit-mask-image: linear-gradient(180deg, transparent 2%, #000 12%, #000 84%, transparent 100%); mask-image: linear-gradient(180deg, transparent 2%, #000 12%, #000 84%, transparent 100%); }
-  .heroLeaf[data-hero-leaf="1"] { right: -30%; bottom: -3%; width: 82vw; opacity: .7; transform: rotate(13deg); }
-  .heroLeaf[data-hero-leaf="2"] { right: -11%; top: 13%; width: 42vw; opacity: .52; transform: rotate(-14deg); }
-  .heroLeaf[data-hero-leaf="3"] { right: 49%; top: 12%; width: 31vw; opacity: .4; transform: rotate(13deg); }
-  .heroLeaf[data-hero-leaf="4"] { display: none; }
-  .heroLeaf[data-hero-leaf="5"] { right: 38%; bottom: -7%; width: 58vw; opacity: .35; transform: rotate(-12deg); }
-  .heroLeaf[data-hero-leaf="6"] { display: none; }
+  .heroBackground::after { background: linear-gradient(90deg, rgb(6 39 29 / .78) 0%, rgb(6 39 29 / .48) 58%, rgb(6 39 29 / .2) 100%), linear-gradient(180deg, transparent 0 27%, rgb(6 39 29 / .2) 43%, rgb(6 39 29 / .9) 69%, #06271d 88%); }
+  .heroTableau { top: 5.4rem; right: -17%; width: 136vw; max-width: none; opacity: .62; filter: saturate(.72) contrast(1.08) drop-shadow(0 .8rem 1.8rem rgb(0 0 0 / .14)); -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 46%, rgb(0 0 0 / .72) 69%, transparent 100%); mask-image: linear-gradient(180deg, #000 0%, #000 46%, rgb(0 0 0 / .72) 69%, transparent 100%); }
 }
-@media (prefers-reduced-motion: reduce) { .heroLeaf { transform: none !important; } }

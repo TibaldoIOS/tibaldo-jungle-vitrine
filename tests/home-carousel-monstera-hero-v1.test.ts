@@ -30,6 +30,6 @@ test("Monstera alone receives the decorative hero-background leaf field", () => 
   assert.match(hub, /variant="hero-background"/);
   assert.match(hub, /genre !== "monstera" && leafPlate/);
   assert.equal(botanicalHubLeafPlates.monstera?.leaves.length, 6);
-  assert.equal(botanicalHubLeafPlates.monstera?.heroLeafAssets?.length, 6);
+  assert.match(botanicalHubLeafPlates.monstera?.heroTableauAsset ?? "", /monstera-leaf-tableau-transparent\.webp$/);
   assert.doesNotMatch(hub, /variant="hero-signature"/);
 });
