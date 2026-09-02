@@ -4,7 +4,10 @@ import { isEditorialPlaceholder, isInternalPhotoProductionCopy, isPhotoProductio
 
 export const verifiedMediaApiContractVersion = "1.0";
 
-const canonicalMediaPath = (path: string) => path.replace(/^\/media\//, "/");
+const canonicalMediaPath = (path: string) =>
+  path === "/media/anthurium-pallidiflorum-feuillage-tibaldo-jungle.webp"
+    ? path
+    : path.replace(/^\/media\//, "/");
 
 export function exactVerifiedPrimaryMedia(plant: PlantEntry) {
   return plant.gallery.find((image) =>

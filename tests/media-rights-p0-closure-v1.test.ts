@@ -49,7 +49,7 @@ test("restores Pallidiflorum from the exact Owner-authorized URL without the sta
   const plant = getPlant("anthurium", "pallidiflorum");
   assert.ok(plant);
   assert.equal(plant.gallery.length, 1);
-  assert.equal(plant.gallery[0].src, "/anthurium-pallidiflorum-feuillage-tibaldo-jungle.webp");
+  assert.equal(plant.gallery[0].src, "/media/anthurium-pallidiflorum-feuillage-tibaldo-jungle.webp");
   assert.equal(plant.gallery[0].alt, "Anthurium pallidiflorum aux longues feuilles rubanées et retombantes");
   assert.equal(plant.gallery[0].width, 1080);
   assert.equal(plant.gallery[0].height, 1080);

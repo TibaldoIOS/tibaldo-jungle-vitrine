@@ -7,10 +7,10 @@ import { mediaRegistryVersionFor, toVerifiedMediaApiFields } from "../lib/plants
 const plant = getPlant("anthurium", "pallidiflorum");
 assert.ok(plant);
 const image = plant.gallery[0];
-const asset = new URL(`../public${image.src}`, import.meta.url);
+const asset = new URL(`../public${image.src.replace(/^\/media\//, "/")}`, import.meta.url);
 
 test("Pallidiflorum uses the exact controlled Owner-authorized WebP", () => {
-  assert.equal(image.src, "/anthurium-pallidiflorum-feuillage-tibaldo-jungle.webp");
+  assert.equal(image.src, "/media/anthurium-pallidiflorum-feuillage-tibaldo-jungle.webp");
   assert.equal(image.alt, "Anthurium pallidiflorum aux longues feuilles rubanées et retombantes");
   assert.equal(image.width, 1080);
   assert.equal(image.height, 1080);
@@ -25,7 +25,7 @@ test("strict Jungle media API resolves Pallidiflorum by exact canonical identity
   const contract = toVerifiedMediaApiFields(plant, mediaRegistryVersionFor(plants));
   assert.equal(contract.identity_status, "EXACT_CANONICAL_IDENTITY");
   assert.equal(contract.media_status, "VERIFIED_MEDIA");
-  assert.equal(contract.primary_media_url, `${process.env.NEXT_PUBLIC_JUNGLE_ORIGIN}/anthurium-pallidiflorum-feuillage-tibaldo-jungle.webp`);
+  assert.equal(contract.primary_media_url, `${process.env.NEXT_PUBLIC_JUNGLE_ORIGIN}/media/anthurium-pallidiflorum-feuillage-tibaldo-jungle.webp`);
   assert.equal(contract.primary_media_alt, image.alt);
   assert.equal(contract.primary_media_source_url, image.license?.sourceUrl);
 });
