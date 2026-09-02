@@ -20,9 +20,9 @@
 .legend strong { display: block; font-family: var(--font-serif, Georgia, serif); font-size: clamp(.98rem, 1.3vw, 1.15rem); font-weight: 520; line-height: 1.15; }
 .legend small { display: block; margin-top: .35rem; color: rgb(23 62 48 / .68); font-size: .72rem; line-height: 1.3; }
 .caption { max-width: 55rem; margin: 1.1rem 0 0; color: rgb(23 62 48 / .68); font-size: .76rem; line-height: 1.55; }
-.heroBackground { position: absolute; z-index: 2; inset: 0; overflow: hidden; pointer-events: none; }
-.heroBackground::after { position: absolute; z-index: 1; inset: 0; content: ""; background: linear-gradient(90deg, rgb(6 39 29 / .96) 0%, rgb(6 39 29 / .82) 30%, rgb(6 39 29 / .28) 61%, transparent 82%), linear-gradient(180deg, transparent 0 38%, rgb(6 39 29 / .24) 58%, #06271d 100%); }
-.heroTableau { position: absolute; top: -8%; right: -4%; display: block; width: min(76vw, 1160px); height: auto; opacity: .68; object-fit: contain; filter: saturate(.76) contrast(1.08) drop-shadow(0 1.2rem 2.5rem rgb(0 0 0 / .16)); -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 55%, rgb(0 0 0 / .72) 72%, transparent 100%); mask-image: linear-gradient(180deg, #000 0%, #000 55%, rgb(0 0 0 / .72) 72%, transparent 100%); }
+.heroBackground { position: absolute; z-index: 2; inset: 0; overflow: hidden; isolation: isolate; pointer-events: none; }
+.heroBackground::after { position: absolute; z-index: 1; inset: 0; content: ""; background: linear-gradient(90deg, rgb(6 39 29 / .97) 0%, rgb(6 39 29 / .84) 29%, rgb(6 39 29 / .3) 61%, transparent 84%), linear-gradient(180deg, transparent 0 32%, rgb(6 39 29 / .18) 48%, rgb(6 39 29 / .84) 76%, #06271d 100%); }
+.heroReferenceBoard { position: absolute; top: -17%; right: -1%; display: block; width: min(73vw, 1050px); height: auto; opacity: .78; object-fit: contain; mix-blend-mode: multiply; filter: saturate(.88) contrast(1.08); -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 52%, rgb(0 0 0 / .78) 68%, transparent 94%); mask-image: linear-gradient(180deg, #000 0%, #000 52%, rgb(0 0 0 / .78) 68%, transparent 94%); }
 @media (max-width: 700px) {
   .section { padding: 4.5rem 0; }
   .heading { grid-template-columns: 1fr; gap: 1.4rem; }
@@ -35,6 +35,6 @@
   .legend a { min-height: 4.4rem; padding-right: .65rem; }
   .legend strong { font-size: 1rem; }
   .legend small { font-size: .74rem; }
-  .heroBackground::after { background: linear-gradient(90deg, rgb(6 39 29 / .78) 0%, rgb(6 39 29 / .48) 58%, rgb(6 39 29 / .2) 100%), linear-gradient(180deg, transparent 0 27%, rgb(6 39 29 / .2) 43%, rgb(6 39 29 / .9) 69%, #06271d 88%); }
-  .heroTableau { top: 5.4rem; right: -17%; width: 136vw; max-width: none; opacity: .62; filter: saturate(.72) contrast(1.08) drop-shadow(0 .8rem 1.8rem rgb(0 0 0 / .14)); -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 46%, rgb(0 0 0 / .72) 69%, transparent 100%); mask-image: linear-gradient(180deg, #000 0%, #000 46%, rgb(0 0 0 / .72) 69%, transparent 100%); }
+  .heroBackground::after { background: linear-gradient(90deg, rgb(6 39 29 / .78) 0%, rgb(6 39 29 / .5) 58%, rgb(6 39 29 / .22) 100%), linear-gradient(180deg, transparent 0 28%, rgb(6 39 29 / .18) 42%, rgb(6 39 29 / .9) 70%, #06271d 90%); }
+  .heroReferenceBoard { top: 4.25rem; right: -24%; width: 148vw; max-width: none; opacity: .76; filter: saturate(.86) contrast(1.08); -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 52%, rgb(0 0 0 / .76) 68%, transparent 91%); mask-image: linear-gradient(180deg, #000 0%, #000 52%, rgb(0 0 0 / .76) 68%, transparent 91%); }
 }

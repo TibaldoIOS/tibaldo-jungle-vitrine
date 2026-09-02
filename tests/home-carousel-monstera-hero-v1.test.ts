@@ -7,6 +7,8 @@ import { botanicalHubLeafPlates } from "../lib/plants/botanical-hub-leaf-plates.
 const carousel = readFileSync(new URL("../app/HomeUniverseCarousel.tsx", import.meta.url), "utf8");
 const globalCss = readFileSync(new URL("../app/globals.css", import.meta.url), "utf8");
 const hub = readFileSync(new URL("../app/plantes/GoldenGenusHub.tsx", import.meta.url), "utf8");
+const leafPlate = readFileSync(new URL("../app/plantes/BotanicalHubLeafPlate.tsx", import.meta.url), "utf8");
+const referenceProvenance = JSON.parse(readFileSync(new URL("../media-provenance/monstera-leaf-identification-beta-reference-v1.json", import.meta.url), "utf8"));
 
 test("mobile homepage carousel preserves all three media slots and starts with Plants", () => {
   assert.match(carousel, /title: "Plantes"[\s\S]*title: "Substrats"[\s\S]*title: "Le Studio"/);
@@ -25,11 +27,15 @@ test("carousel exposes accessible, user-controlled indicators", () => {
   assert.match(carousel, /prefers-reduced-motion: reduce/);
 });
 
-test("Monstera alone receives the decorative hero-background leaf field", () => {
+test("Monstera alone receives the Owner-provided beta reference board", () => {
   assert.match(hub, /genre === "monstera" && leafPlate/);
   assert.match(hub, /variant="hero-background"/);
   assert.match(hub, /genre !== "monstera" && leafPlate/);
   assert.equal(botanicalHubLeafPlates.monstera?.leaves.length, 6);
-  assert.match(botanicalHubLeafPlates.monstera?.heroTableauAsset ?? "", /monstera-leaf-tableau-transparent\.webp$/);
+  assert.match(botanicalHubLeafPlates.monstera?.heroReferenceBoardAsset ?? "", /monstera-leaf-identification-owner-reference-v1\.webp$/);
+  assert.match(leafPlate, /heroReferenceBoard/);
+  assert.doesNotMatch(leafPlate, /heroTableauAsset|monstera-leaf-tableau-transparent/);
+  assert.equal(referenceProvenance.provenance_status, "OWNER_PROVIDED_REFERENCE_FOR_BETA_REVIEW");
+  assert.equal(referenceProvenance.public_promotion_allowed, false);
   assert.doesNotMatch(hub, /variant="hero-signature"/);
 });

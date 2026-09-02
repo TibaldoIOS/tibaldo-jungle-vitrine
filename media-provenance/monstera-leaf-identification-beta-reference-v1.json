@@ -1,0 +1,24 @@
+{
+  "id": "monstera-leaf-identification-beta-reference-v1",
+  "local_asset": "/beta-reference/monstera-leaf-identification-owner-reference-v1.webp",
+  "source_filename": "Photo 1.jpg",
+  "source_sha256": "e80362a1a1a4c1dfa9ee3698d745c765539cd4ec951231825d28f5859b96b743",
+  "source_dimensions": "1080x1080",
+  "source_received_date": "2026-09-02",
+  "provenance_status": "OWNER_PROVIDED_REFERENCE_FOR_BETA_REVIEW",
+  "visible_attribution": "@REROOTGARDENS",
+  "rights_status": "PUBLIC_RIGHTS_NOT_CONFIRMED",
+  "allowed_scope": "JUNGLE_BETA_VISUAL_PROTOTYPE_ONLY",
+  "public_promotion_allowed": false,
+  "permitted_processing": [
+    "FORMAT_CONVERSION",
+    "WEB_COMPRESSION",
+    "CSS_CROP_POSITION_SCALE_FADE_BLEND"
+  ],
+  "prohibited_processing": [
+    "GENERATIVE_EDIT",
+    "TRACING",
+    "LEAF_EXTRACTION",
+    "ILLUSTRATION_RECONSTRUCTION"
+  ]
+}
