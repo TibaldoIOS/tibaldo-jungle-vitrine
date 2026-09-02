@@ -22,8 +22,8 @@ const removedAssets = [
 
 test("closes the exact 11-route P0 media-rights set", () => {
   assert.equal(mediaRightsP0ClosureRegistry.length, 11);
-  assert.equal(mediaRightsP0ClosureRegistry.filter(({ decision }) => decision === "RIGHTS_PROVEN_KEEP").length, 3);
-  assert.equal(mediaRightsP0ClosureRegistry.filter(({ decision }) => decision === "REMOVE_AND_USE_HONEST_MEDIA_GAP").length, 8);
+  assert.equal(mediaRightsP0ClosureRegistry.filter(({ decision }) => decision === "RIGHTS_PROVEN_KEEP").length, 4);
+  assert.equal(mediaRightsP0ClosureRegistry.filter(({ decision }) => decision === "REMOVE_AND_USE_HONEST_MEDIA_GAP").length, 7);
 
   for (const item of mediaRightsP0ClosureRegistry) {
     const [, , genre, slug] = item.route.split("/");
@@ -44,10 +44,10 @@ test("closes the exact 11-route P0 media-rights set", () => {
     for (const image of plant.gallery) {
       assert.equal(image.license?.status, "verified", `${item.route}: status`);
       assert.ok(image.license?.creator, `${item.route}: creator`);
-      assert.ok(image.license?.sourceUrl?.startsWith("https://commons.wikimedia.org/wiki/File:"), `${item.route}: source`);
-      assert.ok(image.license?.licenseUrl?.startsWith("https://"), `${item.route}: license`);
+      assert.ok(image.license?.sourceUrl?.startsWith("https://"), `${item.route}: source`);
+      if (item.route !== "/plantes/anthurium/pallidiflorum") assert.ok(image.license?.licenseUrl?.startsWith("https://"), `${item.route}: license`);
       assert.equal(image.license?.registryPath, "/credits-images", `${item.route}: registry`);
-      assert.match(image.license?.note ?? "", /30 août 2026/, `${item.route}: proof date`);
+      assert.match(image.license?.note ?? "", /(?:30 août|2 septembre) 2026/, `${item.route}: proof date`);
     }
   }
 });

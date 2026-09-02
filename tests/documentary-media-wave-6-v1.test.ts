@@ -11,11 +11,11 @@ const contract = (genre: string, slug: string) => {
   return { plant, api: toVerifiedMediaApiFields(plant, registryVersion), image: exactVerifiedPrimaryMedia(plant) };
 };
 
-test("Wave 6 admits exactly two newly verified documentary identities", () => {
+test("Wave 6 plus the Owner-authorized Pallidiflorum restore expose 75 verified identities", () => {
   const contracts = plants.map((plant) => toVerifiedMediaApiFields(plant, registryVersion));
   assert.equal(contracts.length, 96);
-  assert.equal(contracts.filter(({ media_status }) => media_status === "VERIFIED_MEDIA").length, 74);
-  assert.equal(contracts.filter(({ media_status }) => media_status === "HONEST_MEDIA_GAP").length, 22);
+  assert.equal(contracts.filter(({ media_status }) => media_status === "VERIFIED_MEDIA").length, 75);
+  assert.equal(contracts.filter(({ media_status }) => media_status === "HONEST_MEDIA_GAP").length, 21);
 });
 
 test("Cycas revoluta and Philodendron Brasil expose exact licensed media", () => {
@@ -32,8 +32,8 @@ test("Cycas revoluta and Philodendron Brasil expose exact licensed media", () =>
   }
 });
 
-test("sensitive identities remain honest gaps and Eddo remains untouched", () => {
-  for (const [genre, slug] of [["alocasia", "imperial-red"], ["anthurium", "pallidiflorum"], ["monstera", "esqueleto"]]) {
+test("remaining sensitive identities stay honest gaps and Eddo remains untouched", () => {
+  for (const [genre, slug] of [["alocasia", "imperial-red"], ["monstera", "esqueleto"]]) {
     assert.equal(contract(genre, slug).api.media_status, "HONEST_MEDIA_GAP");
     assert.equal(contract(genre, slug).api.primary_media_url, null);
   }

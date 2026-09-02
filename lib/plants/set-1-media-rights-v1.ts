@@ -155,7 +155,9 @@ export const set1NextMediaCertificationReviews: readonly Set1NextMediaCertificat
 ] as const;
 
 const blockedRoutes = new Set([
-  ...set1MediaRightsRegistry.map(({ route }) => route),
+  ...set1MediaRightsRegistry
+    .map(({ route }) => route)
+    .filter((route) => route !== "/plantes/anthurium/pallidiflorum"),
   set1MarantaVerifyOnly.route,
 ]);
 

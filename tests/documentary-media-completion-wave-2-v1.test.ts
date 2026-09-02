@@ -27,7 +27,7 @@ test("Wave 2 batch 1 publishes only exact, licensed and visually accepted photog
 
 test("Wave 2 batch 1 reduces honest gaps without weakening sensitive exclusions", () => {
   const gaps = plants.filter((plant) => documentaryGallery(plant).length === 0);
-  assert.equal(gaps.length, 22);
+  assert.equal(gaps.length, 21);
 
   for (const [genre, slug] of [
     ["monstera", "thai-constellation"],
