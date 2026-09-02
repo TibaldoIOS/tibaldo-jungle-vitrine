@@ -15,9 +15,9 @@ test("fails safe when the supplied Plants file duplicates the substrate photogra
   assert.equal(homeUniverseMedia.plants.src, "/collection-plantes-rares-tibaldo-jungle-lille.jpg");
 });
 
-test("records Owner-media provenance without an external licence dependency", () => {
+test("records Owner-media provenance and fails closed on the ambiguous filename", () => {
   const report = JSON.parse(readFileSync("reports/home-universe-owner-media-provenance-v1.json", "utf8"));
   const substrate = report.assets.find((asset: { slot: string }) => asset.slot === "HOME_UNIVERSE_SUBSTRATES");
   assert.equal(substrate.rights_basis, "OWNER_PROVIDED_MEDIA");
-  assert.equal(substrate.external_license_required, false);
+  assert.equal(substrate.external_license_required, "OWNER_CONFIRMATION_REQUIRED");
 });

@@ -19,7 +19,8 @@
       "local_sha256": "22c312d1dacfc7fe7e5064c2f0462f09807044903030a15d82bc3d2419499660",
       "transformation": "Resize 1200 px sans agrandissement, encodage AVIF qualité 66, aucun changement morphologique",
       "rights_basis": "OWNER_PROVIDED_MEDIA",
-      "external_license_required": false
+      "external_license_required": "OWNER_CONFIRMATION_REQUIRED",
+      "rights_note": "Le nom du fichier mentionne un photographe et Unsplash ; aucune fiche source ni preuve de cession distincte n'a été fournie. Le média reste utilisable pour la revue BÊTA, mais sa promotion PUBLIC exige confirmation Owner ou preuve de licence/source."
     },
     {
       "slot": "HOME_UNIVERSE_STUDIO",
