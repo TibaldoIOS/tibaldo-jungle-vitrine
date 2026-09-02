@@ -5,20 +5,20 @@ export type HomeUniverseMedia = {
   width: number;
   height: number;
   objectPosition: string;
-  provenance: "OWNER_PROVIDED_MEDIA" | "CURRENT_JUNGLE_MEDIA";
+  provenance: "TIBALDO_OWNER_MEDIA" | "CURRENT_JUNGLE_MEDIA";
   ownerMediaRequired: boolean;
 };
 
 export const homeUniverseMedia = {
   plants: {
     slot: "HOME_UNIVERSE_PLANTS",
-    src: "/collection-plantes-rares-tibaldo-jungle-lille.jpg",
-    alt: "Collection de plantes rares et tropicales chez Tibaldo Jungle à Lille",
-    width: 900,
-    height: 1100,
+    src: "/owner-media/home-universes/home-universe-plants-owner-v1.avif",
+    alt: "Mur végétal Tibaldo composé de feuillages tropicaux à Lille",
+    width: 1536,
+    height: 1024,
     objectPosition: "center center",
-    provenance: "CURRENT_JUNGLE_MEDIA",
-    ownerMediaRequired: true,
+    provenance: "TIBALDO_OWNER_MEDIA",
+    ownerMediaRequired: false,
   },
   substrates: {
     slot: "HOME_UNIVERSE_SUBSTRATES",
@@ -27,7 +27,7 @@ export const homeUniverseMedia = {
     width: 1200,
     height: 2467,
     objectPosition: "center 54%",
-    provenance: "OWNER_PROVIDED_MEDIA",
+    provenance: "TIBALDO_OWNER_MEDIA",
     ownerMediaRequired: false,
   },
   studio: {

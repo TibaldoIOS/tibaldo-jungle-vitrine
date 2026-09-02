@@ -1,31 +1,55 @@
 {
-  "contract": "HOME_UNIVERSE_OWNER_MEDIA_V1",
+  "contract": "HOME_UNIVERSE_OWNER_MEDIA_V2",
   "recorded_at": "2026-09-02",
   "assets": [
     {
       "slot": "HOME_UNIVERSE_PLANTS",
-      "status": "OWNER_MEDIA_REQUIRED",
-      "rendered_asset": "/collection-plantes-rares-tibaldo-jungle-lille.jpg",
-      "note": "Le fichier AVIF transmis est un dérivé de la photographie de substrats, et non un mur végétal distinct. Le visuel courant est conservé afin de ne pas attribuer une photographie erronée à la carte Plantes."
+      "status": "TIBALDO_OWNER_MEDIA",
+      "author": "OWNER_TIBALDO",
+      "source": "OWNER_PROVIDED",
+      "rights": "OWNER_CONTROLLED",
+      "third_party_license": "NONE_REQUIRED",
+      "source_asset": "/collection-plantes-rares-tibaldo-jungle-lille.jpg",
+      "source_dimensions": "1536x1024",
+      "source_sha256": "605f709bfbc9776aa3b23baa944553071614cf8e18a06ec5ebd23ab779c342f2",
+      "local_asset": "/owner-media/home-universes/home-universe-plants-owner-v1.avif",
+      "local_dimensions": "1536x1024",
+      "local_sha256": "6f8ca67675fcb14b44cbc83917a25396a3ef8524f317ce8b322ec198672e5699",
+      "local_bytes": 392387,
+      "transformation": "Encodage AVIF qualité 72 à la définition source, aucun agrandissement ni changement morphologique",
+      "object_position": "center center",
+      "content_check": "Mur végétal Tibaldo distinct : végétation dense et grands feuillages verts"
     },
     {
       "slot": "HOME_UNIVERSE_SUBSTRATES",
-      "status": "OWNER_PROVIDED_MEDIA",
-      "received_file": "nupo-deyon-daniel-RVsfSNXC08g-unsplash.jpg",
+      "status": "TIBALDO_OWNER_MEDIA",
+      "author": "OWNER_TIBALDO",
+      "source": "OWNER_PROVIDED",
+      "rights": "OWNER_CONTROLLED",
+      "third_party_license": "NONE_REQUIRED",
       "received_dimensions": "1969x4048",
       "received_sha256": "d0a69e74b6baa0e8bcb0739efa597f1018048d33ed2d86354d78bce7ed37ce82",
       "local_asset": "/owner-media/home-universes/home-universe-substrates-owner-v1.avif",
       "local_dimensions": "1200x2467",
       "local_sha256": "22c312d1dacfc7fe7e5064c2f0462f09807044903030a15d82bc3d2419499660",
+      "local_bytes": 403237,
       "transformation": "Resize 1200 px sans agrandissement, encodage AVIF qualité 66, aucun changement morphologique",
-      "rights_basis": "OWNER_PROVIDED_MEDIA",
-      "external_license_required": "OWNER_CONFIRMATION_REQUIRED",
-      "rights_note": "Le nom du fichier mentionne un photographe et Unsplash ; aucune fiche source ni preuve de cession distincte n'a été fournie. Le média reste utilisable pour la revue BÊTA, mais sa promotion PUBLIC exige confirmation Owner ou preuve de licence/source."
+      "object_position": "center 54%"
     },
     {
       "slot": "HOME_UNIVERSE_STUDIO",
       "status": "UNCHANGED",
       "rendered_asset": "/media/projet-boutique-tibaldo-jungle-lille.webp"
     }
-  ]
+  ],
+  "plants_substrates_distinct_evidence": {
+    "status": "PASS",
+    "plants_source_dimensions": "1536x1024",
+    "substrates_asset_dimensions": "1200x2467",
+    "plants_source_sha256": "605f709bfbc9776aa3b23baa944553071614cf8e18a06ec5ebd23ab779c342f2",
+    "substrates_asset_sha256": "22c312d1dacfc7fe7e5064c2f0462f09807044903030a15d82bc3d2419499660",
+    "normalized_mean_absolute_difference": 40.9032,
+    "normalized_correlation": 0.025222,
+    "visual_inspection": "PASS_DISTINCT_CONTENT"
+  }
 }
