@@ -1,31 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { homeUniverseMedia } from "@/lib/home-universe-media";
 import { Arrow } from "./SiteChrome";
-
-const universes = [
-  {
-    number: "01",
-    title: "Plantes",
-    copy: "Raretés végétales, plantes d’intérieur et encyclopédie pour choisir selon votre lumière et votre quotidien.",
-    href: "/plantes",
-    media: homeUniverseMedia.plants,
-  },
-  {
-    number: "02",
-    title: "Substrats",
-    copy: "Terreau, écorces, fibres et minéraux vendus en vrac, avec un mélange adapté aux besoins des racines.",
-    href: "/substrats",
-    media: homeUniverseMedia.substrates,
-  },
-  {
-    number: "03",
-    title: "Le Studio",
-    copy: "Découvrez la nouvelle adresse Tibaldo Jungle, ses plantes, ses matières et les conseils proposés sur place à Lille.",
-    href: "/contact",
-    media: homeUniverseMedia.studio,
-  },
-];
+import HomeUniverseCarousel from "./HomeUniverseCarousel";
 
 const services = [
   { number: "01", title: "SOS Plantes", copy: "Comprendre les symptômes avant d’agir.", href: "/sos-plantes" },
@@ -42,15 +18,7 @@ export default function HomeExperience() {
           <div><p className="section-kicker">Explorer le Studio</p><h2 id="home-hub-title">Trois univers.<br /><em>Une même exigence.</em></h2></div>
           <p>Entrez directement dans la sélection qui vous intéresse. Chaque univers possède sa propre page, ses conseils et ses disponibilités.</p>
         </header>
-        <div className="home-hub-grid">
-          {universes.map((item) => (
-            <a href={item.href} key={item.title} data-reveal data-owner-media-slot={item.media.slot}>
-              <Image unoptimized src={item.media.src} alt={item.media.alt} width={item.media.width} height={item.media.height} loading="lazy" style={{ objectPosition: item.media.objectPosition }} />
-              <span className="home-hub-shade" aria-hidden="true" />
-              <small>{item.number}</small><div><h3>{item.title}</h3><p>{item.copy}</p><strong>Découvrir <Arrow /></strong></div>
-            </a>
-          ))}
-        </div>
+        <HomeUniverseCarousel />
       </section>
 
       <section className="home-core-services">

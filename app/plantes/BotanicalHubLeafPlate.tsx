@@ -3,8 +3,8 @@ import Link from "next/link";
 import type { BotanicalHubLeafPlateData } from "@/lib/plants/botanical-hub-leaf-plates";
 import styles from "./BotanicalHubLeafPlate.module.css";
 
-export default function BotanicalHubLeafPlate({ data }: { data: BotanicalHubLeafPlateData }) {
-  return <section className={styles.section} data-botanical-hub-leaf-plate={data.genus} aria-labelledby={`leaf-plate-${data.genus}`}>
+export default function BotanicalHubLeafPlate({ data, variant = "chapter" }: { data: BotanicalHubLeafPlateData; variant?: "chapter" | "hero-signature" }) {
+  return <section className={`${styles.section} ${variant === "hero-signature" ? styles.heroSignature : ""}`} data-botanical-hub-leaf-plate={data.genus} data-leaf-plate-variant={variant} aria-labelledby={`leaf-plate-${data.genus}`}>
     <div className="shell">
       <header className={styles.heading} data-reveal>
         <div><p className={styles.eyebrow}>Quelques silhouettes du genre</p><h2 id={`leaf-plate-${data.genus}`}>{data.title}</h2></div>
