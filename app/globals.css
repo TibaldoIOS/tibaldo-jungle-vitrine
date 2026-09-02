@@ -2190,6 +2190,25 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
 @media(max-width:600px){.home-hub{padding-top:75px;padding-bottom:75px}.home-hub-grid{display:flex;overflow-x:auto;margin-right:-16px;padding-right:16px;scroll-snap-type:x mandatory;scrollbar-width:none}.home-hub-grid>a,.home-hub-grid>a:last-child{flex:0 0 82vw;min-height:500px;grid-column:auto;scroll-snap-align:start}.home-hub-grid p{min-height:0}.home-core-services{padding:75px 0}.home-core-services-inner{gap:48px}.home-core-services-inner>div>a{grid-template-columns:38px 1fr auto;gap:12px;min-height:125px}.home-core-services h3{font-size:27px}.home-studio-compact{min-height:0;margin-top:75px;margin-bottom:75px}.home-studio-compact figure{min-height:370px}.home-studio-compact>div{padding:52px 24px}.home-studio-facts{grid-template-columns:1fr}.home-expertise-strip{padding:80px 0}.home-expertise-strip nav{grid-template-columns:1fr}.home-expertise-strip nav a{border-right:0;border-bottom:1px solid rgba(255,255,255,.22)}.home-expertise-strip nav a:last-child{border-bottom:0}}
 @media(prefers-reduced-motion:reduce){.home-hub-grid img,.home-core-services-inner>div>a,.home-expertise-strip nav a{transition:none}.home-hub-grid>a:hover img{transform:none}}
 
+/* V66 — Three Universes: intentional, touch-native mobile carousel. */
+.home-hub-indicators{display:none}
+@media(max-width:600px){
+  .home-hub{padding-bottom:max(96px,calc(75px + env(safe-area-inset-bottom)))}
+  .home-hub-carousel{width:calc(100% + 5vw);margin-right:-5vw}
+  .home-hub-grid{gap:12px;overscroll-behavior-inline:contain;padding-right:12vw;scroll-padding-inline:0;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+  .home-hub-grid:focus-visible{outline:2px solid #7d9b65;outline-offset:5px}
+  .home-hub-grid>a,.home-hub-grid>a:last-child{flex:0 0 min(86vw,370px);min-height:500px;scroll-snap-align:start;scroll-snap-stop:always}
+  .home-hub-grid>a:first-child{margin-left:0}
+  .home-hub-grid>a>div{padding:30px 26px}
+  .home-hub-grid p{font-size:12px}
+  .home-hub-indicators{display:flex;align-items:center;justify-content:center;gap:2px;width:calc(100% - 5vw);padding:13px 0 0}
+  .home-hub-indicators button{display:grid;width:40px;height:40px;place-items:center;padding:0;border:0;background:transparent;cursor:pointer}
+  .home-hub-indicators button span{display:block;width:17px;height:2px;background:rgba(21,59,44,.24);transition:width .25s ease,background .25s ease}
+  .home-hub-indicators button[aria-current="true"] span{width:28px;background:#153b2c}
+  .home-hub-indicators button:focus-visible{outline:2px solid #153b2c;outline-offset:-5px}
+}
+@media(prefers-reduced-motion:reduce){.home-hub-grid{scroll-behavior:auto}.home-hub-indicators button span{transition:none}}
+
 /* Genus Hub Content System V2.1 — primitives activated only on Anthurium. */
 .anth-v21-compositions{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px;margin-top:12px}
 .genus-feature{position:relative;min-width:0;overflow:hidden;color:var(--forest)}
