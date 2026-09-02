@@ -14,6 +14,8 @@ import body from "./GoldenGroupBodyBaseline.module.css";
 import hero from "./GoldenGroupHeroBaseline.module.css";
 import mobile from "./GoldenGroupMobileBaseline.module.css";
 import canonical from "./GoldenGroupCanonical.module.css";
+import BotanicalHubLeafPlate from "./BotanicalHubLeafPlate";
+import { botanicalHubLeafPlates } from "@/lib/plants/botanical-hub-leaf-plates";
 
 export type GoldenGroupGuide = {
   name: string;
@@ -86,6 +88,7 @@ export default function GoldenGenusHub({ genre, guide, plants, editorials = [], 
   const navigationGenres = [...new Map(plants.map((plant) => [plant.genre, plant.genreLabel])).entries()];
   const gapCount = displayPlants.filter((plant) => !plant.gallery.length).length;
   const heroCopy = groupHeroCopy(genre, guide);
+  const leafPlate = botanicalHubLeafPlates[genre];
 
   return (
     <main className={`${golden.page} ${body.groupPage} editorial-page`} data-golden-group-v25={genre} data-golden-group-v1={genre}>
@@ -110,6 +113,8 @@ export default function GoldenGenusHub({ genre, guide, plants, editorials = [], 
         <HubChapterMarker number="01" label="Comprendre le groupe" />
         <div><h2>Un langage commun.<br /><em>Des formes singulières.</em></h2><div className={`${golden.groupIntroCopy} ${body.bodyCopy}`}><p>{guide.lead}</p><p>{guide.origin}</p></div>{facts.length ? <dl className={canonical.factBand}>{facts.map((fact) => <div key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}</dl> : null}</div>
       </section>
+
+      {leafPlate ? <BotanicalHubLeafPlate data={leafPlate} /> : null}
 
       <section className={`${golden.groupPassport} ${body.passport} ${mobile.passportTransition}`} aria-labelledby={`golden-group-passport-${genre}`}>
         <div className={`${golden.groupPassportHeading} shell`} data-reveal>
