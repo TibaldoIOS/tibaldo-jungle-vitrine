@@ -9,16 +9,17 @@
       "source": "OWNER_PROVIDED",
       "rights": "OWNER_CONTROLLED",
       "third_party_license": "NONE_REQUIRED",
-      "source_asset": "/collection-plantes-rares-tibaldo-jungle-lille.jpg",
-      "source_dimensions": "1536x1024",
-      "source_sha256": "605f709bfbc9776aa3b23baa944553071614cf8e18a06ec5ebd23ab779c342f2",
+      "authoritative_source_filename": "6236800F-5444-484E-82B1-DB06D08721A9.jpeg",
+      "ingested_local_source": "IMG_9676.JPG",
+      "source_dimensions": "3213x5712",
+      "source_sha256": "e63ed6cb0557239a5d87ed37c3450b68cfd2e634bfe861e5c5d42d2b444fe074",
       "local_asset": "/owner-media/home-universes/home-universe-plants-owner-v1.avif",
-      "local_dimensions": "1536x1024",
-      "local_sha256": "6f8ca67675fcb14b44cbc83917a25396a3ef8524f317ce8b322ec198672e5699",
-      "local_bytes": 392387,
-      "transformation": "Encodage AVIF qualité 72 à la définition source, aucun agrandissement ni changement morphologique",
-      "object_position": "center center",
-      "content_check": "Mur végétal Tibaldo distinct : végétation dense et grands feuillages verts"
+      "local_dimensions": "1200x2133",
+      "local_sha256": "505650fc3c8fd8370a16ee771b5d499408496507345e70c4434e757f74051551",
+      "local_bytes": 656368,
+      "transformation": "Resize 1200 px sans agrandissement, encodage AVIF qualité 70, aucun changement morphologique",
+      "object_position": "center 48%",
+      "content_check": "PASS : grandes feuilles de Colocasia mouillées au premier plan, mur végétal dense et feuillage central vert vif"
     },
     {
       "slot": "HOME_UNIVERSE_SUBSTRATES",
@@ -44,12 +45,12 @@
   ],
   "plants_substrates_distinct_evidence": {
     "status": "PASS",
-    "plants_source_dimensions": "1536x1024",
+    "plants_source_dimensions": "3213x5712",
     "substrates_asset_dimensions": "1200x2467",
-    "plants_source_sha256": "605f709bfbc9776aa3b23baa944553071614cf8e18a06ec5ebd23ab779c342f2",
+    "plants_source_sha256": "e63ed6cb0557239a5d87ed37c3450b68cfd2e634bfe861e5c5d42d2b444fe074",
     "substrates_asset_sha256": "22c312d1dacfc7fe7e5064c2f0462f09807044903030a15d82bc3d2419499660",
-    "normalized_mean_absolute_difference": 40.9032,
-    "normalized_correlation": 0.025222,
+    "normalized_mean_absolute_difference": 64.5009,
+    "normalized_correlation": 0.058874,
     "visual_inspection": "PASS_DISTINCT_CONTENT"
   }
 }

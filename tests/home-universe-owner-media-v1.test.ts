@@ -15,8 +15,8 @@ test("uses both verified Owner photographs and preserves the Studio", () => {
 
 test("keeps the Plants and Substrates Owner assets distinct", () => {
   assert.notEqual(homeUniverseMedia.plants.src, homeUniverseMedia.substrates.src);
-  assert.equal(homeUniverseMedia.plants.width, 1536);
-  assert.equal(homeUniverseMedia.plants.height, 1024);
+  assert.equal(homeUniverseMedia.plants.width, 1200);
+  assert.equal(homeUniverseMedia.plants.height, 2133);
   assert.equal(homeUniverseMedia.substrates.width, 1200);
   assert.equal(homeUniverseMedia.substrates.height, 2467);
 });
