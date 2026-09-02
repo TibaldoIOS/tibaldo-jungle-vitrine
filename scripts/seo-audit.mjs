@@ -71,7 +71,7 @@ const paths = locs
   .map((location) => new URL(location).pathname);
 const duplicateLocations = locs.filter((location, index) => locs.indexOf(location) !== index);
 const nonPublicLocations = locs.filter((location) => !location.startsWith(`${publicOrigin}/`) && location !== publicOrigin);
-if (locs.length !== 156) errors.push(`Sitemap contient ${locs.length} URL, attendu 156`);
+if (locs.length !== 157) errors.push(`Sitemap contient ${locs.length} URL, attendu 157`);
 if (duplicateLocations.length) errors.push(`Sitemap contient ${duplicateLocations.length} doublon(s)`);
 if (nonPublicLocations.length) errors.push(`Sitemap contient ${nonPublicLocations.length} hôte(s) non PUBLIC`);
 if (/beta-jungle|localhost|chatgpt\.site/i.test(xml)) errors.push("Sitemap contient une référence de staging");

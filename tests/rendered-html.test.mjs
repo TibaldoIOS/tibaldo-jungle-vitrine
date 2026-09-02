@@ -1091,7 +1091,11 @@ test("renders the Local Species SEO V1 pilot without inventing commerce", async 
   assert.match(hub, /href=["']\/plantes\/anthurium\/veitchii["']/i);
 
   const boutique = await (await render("/boutique-plantes-lille")).text();
-  assert.match(boutique, /<title>Boutique de plantes à Lille \| TIBALDO Jungle<\/title>/i);
+  assert.match(boutique, /<title>Boutique de plantes rares à Lille \| TIBALDO Jungle<\/title>/i);
+  assert.match(
+    boutique,
+    /Boutique de plantes rares et tropicales à Lille : conseils, rempotage et sélection selon les arrivages au Studio Végétal — TIBALDO Jungle\./i,
+  );
   assert.match(boutique, /href=["']\/plantes\/anthurium["']/i);
   assert.match(boutique, /href=["']\/plantes\/monstera\/thai-constellation["']/i);
   assert.match(boutique, /"@type":\["GardenStore","Florist","LocalBusiness"\]/i);

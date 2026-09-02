@@ -40,7 +40,8 @@ export default function Home() {
           <p className="eyebrow"><span /> Nouvelle boutique · Lille</p>
           <h1 aria-label="Plantes rares et tropicales à Lille"><span className="hero-line" aria-hidden="true"><span>Plantes rares</span></span><span className="hero-line" aria-hidden="true"><span>&amp; tropicales <em>à Lille.</em></span></span></h1>
           <p className="hero-copy">Plantes d’intérieur et d’extérieur, espèces exotiques, pépites rares et conseils passionnés.</p>
-          <div className="hero-actions"><Link className="button button-light" href="/plantes">Découvrir les plantes <Arrow /></Link><a className="hero-shop-link" data-action="shop" href={shopUrl()}>Voir la boutique en ligne <Arrow /></a></div>
+          <p className="hero-preopening-copy"><strong>Le Studio se prépare.</strong>{"\u00a0"}La Jungle est déjà ouverte.</p>
+          <div className="hero-actions"><Link className="button button-light" href="/plantes">Explorer la Jungle <Arrow /></Link><Link className="hero-shop-link" href="/contact">Préparer ma visite <Arrow /></Link></div>
         </div>
       </section>
 

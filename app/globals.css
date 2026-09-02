@@ -3700,3 +3700,29 @@ body:has(.conversion-dock){padding-bottom:calc(76px + env(safe-area-inset-bottom
   .canonical-species-photo-reveal > div::after,.botanical-photo-book-media::after { display: none; }
   .canonical-taxonomy-more summary span { transition: none; }
 }
+
+/* PUBLIC pre-opening: informative, crawl-neutral and never blocking. */
+.public-preopening-signal { position: relative; z-index: 1200; color: #092c20; background: #e6c84f; border-bottom: 1px solid rgb(9 44 32 / .16); }
+.public-preopening-signal-inner { display: flex; min-height: 42px; align-items: center; justify-content: space-between; gap: 20px; padding-block: 8px; }
+.public-preopening-signal p { margin: 0; font-size: 11px; line-height: 1.45; letter-spacing: .015em; }
+.public-preopening-signal strong { font-weight: 820; }
+.public-preopening-signal a { flex: 0 0 auto; color: inherit; font-size: 9px; font-weight: 800; letter-spacing: .1em; text-decoration: none; text-transform: uppercase; }
+.public-preopening-signal a span { margin-left: .3rem; }
+.hero-preopening-copy { max-width: 38rem; margin: 16px 0 0; color: #dfebca; font-size: clamp(13px, 1.3vw, 16px); line-height: 1.55; }
+.hero-preopening-copy strong { color: #fff; font-weight: 760; }
+
+/* Restored editorial methodology page, updated for the current publication. */
+.methodology-content { max-width: 960px; margin-top: clamp(2rem,5vw,5rem); margin-bottom: clamp(2rem,5vw,5rem); }
+.methodology-content > header { margin-bottom: 3rem; }
+.methodology-content > section { display: grid; grid-template-columns: 3rem 1fr; gap: 1.25rem; padding: 1.75rem 0; border-top: 1px solid rgb(23 61 45 / .18); }
+.methodology-content > section > span { font-size: .75rem; letter-spacing: .12em; }
+.methodology-content > section h2 { margin: 0 0 .75rem; }
+.methodology-content > aside { padding: 1.5rem; background: #f4f0e5; border-radius: 1.25rem; }
+.methodology-content a { color: inherit; text-underline-offset: .2em; }
+
+@media(max-width:600px){
+  .public-preopening-signal-inner { align-items: flex-start; gap: 10px; padding-block: 9px; }
+  .public-preopening-signal p { max-width: 24ch; font-size: 10px; }
+  .public-preopening-signal a { padding-top: 2px; font-size: 8px; text-align: right; }
+  .methodology-content > section { grid-template-columns: 2rem 1fr; }
+}

@@ -7,6 +7,7 @@ import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter } from "../SiteChrome";
 import BotanicalFaq from "./BotanicalFaq";
 import BotanicalPhotoBook from "./BotanicalPhotoBook";
+import CycasLocalGuide from "./CycasLocalGuide";
 import DeliciosaOwnerHero from "./DeliciosaOwnerHero";
 import PlantNeedsVisualSystem from "./PlantNeedsVisualSystem";
 import PlantSectionNav from "./PlantSectionNav";
@@ -99,6 +100,7 @@ export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
   const revealImage = gallery[0];
   const bookImages = gallery.slice(1);
   const isDeliciosa = plant.genre === "monstera" && plant.slug === "deliciosa";
+  const isCycasRevoluta = plant.genre === "cycas" && plant.slug === "revoluta";
   const faq = [
     ...plant.faq.filter((item) => !isInternalPhotoProductionCopy(item.question) && !isInternalPhotoProductionCopy(item.answer)),
     { question: `Quand rempoter ${plant.displayName} ?`, answer: plant.care.repotting },
@@ -205,6 +207,8 @@ export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
             <div className={golden.relatedTrack}>{plant.comparisons.map((item, index) => <Link href={comparisonHref(plant, item.name)} key={item.name} data-reveal><span>0{index + 1}</span><strong>{item.name}</strong><p>{item.difference}</p><b>Comparer <Arrow /></b></Link>)}</div>
           </section>
 
+          {isCycasRevoluta ? <CycasLocalGuide plant={plant} /> : null}
+
           <div className={golden.speciesFaq}><BotanicalFaq items={faq} title="Tout savoir avant de lui faire une place." /></div>
           <section className={golden.speciesClosing} id="conseils" data-reveal><div><p className="section-kicker">07 · Continuer au Studio</p><h2>Observer longtemps.<br /><em>Corriger doucement.</em></h2><p>{advice[1] ?? advice[0] ?? plant.subtitle}</p></div><nav aria-label={`Continuer après la fiche ${plant.displayName}`}><Link href={`/plantes/${plant.genre}`}>Explorer les {plant.genreLabel} <Arrow /></Link><Link href="/sos-plantes">SOS Plantes <Arrow /></Link>{revealImage ? <Link href="/credits-images">Crédits photographiques <Arrow /></Link> : null}</nav></section>
         </div>
@@ -212,6 +216,7 @@ export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
 
       {plant.genre === "anthurium" && plant.slug === "veitchii" ? <SpeciesLocalStudio speciesName="Anthurium veitchii" genusName="Anthurium" genusSlug="anthurium" /> : null}
       {plant.genre === "monstera" && plant.slug === "thai-constellation" ? <SpeciesLocalStudio speciesName="Monstera deliciosa ‘Thai Constellation’" genusName="Monstera" genusSlug="monstera" /> : null}
+      {isCycasRevoluta ? <SpeciesLocalStudio speciesName="Cycas revoluta" genusName="Cycas" genusSlug="cycas" /> : null}
       <SiteFooter compactTransit />
       {plant.shopUrl ? <PlantShopBar shopUrl={plant.shopUrl} plantName={plant.botanicalName} /> : null}
     </main>

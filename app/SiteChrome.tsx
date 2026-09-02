@@ -95,7 +95,7 @@ export function SiteFooter({ compactTransit = false }: { compactTransit?: boolea
       <div className="shell footer-bottom" data-reveal>
         <span>© 2026 Studio Végétal · TIBALDO Jungle · Lille</span>
         <span>Pruvost Romain EI · SIRET 518 102 603 00074 · TVA FR94 518 102 603 · RNE 518 102 603</span>
-        <nav className="footer-legal" aria-label="Informations légales"><Link className="footer-legal-primary" href="/conditions-generales-de-vente">Consulter les CGV</Link><Link href="/programme-fidelite">Fidélité</Link><Link href="/cartes-cadeaux">Cartes cadeaux</Link><Link href="/politique-confidentialite">Confidentialité</Link><Link href="/mentions-legales">Mentions légales</Link><Link href="/credits-images">Crédits photos</Link></nav>
+        <nav className="footer-legal" aria-label="Informations légales"><Link className="footer-legal-primary" href="/conditions-generales-de-vente">Consulter les CGV</Link><Link href="/methodologie-sources">Méthodologie &amp; sources</Link><Link href="/programme-fidelite">Fidélité</Link><Link href="/cartes-cadeaux">Cartes cadeaux</Link><Link href="/politique-confidentialite">Confidentialité</Link><Link href="/mentions-legales">Mentions légales</Link><Link href="/credits-images">Crédits photos</Link></nav>
       </div>
     </footer>
   );

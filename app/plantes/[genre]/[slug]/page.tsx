@@ -20,6 +20,8 @@ const localPilotTitles: Record<string, string> = {
     "Anthurium veitchii : entretien et conseils | TIBALDO Jungle",
   "monstera/thai-constellation":
     "Monstera deliciosa ‘Thai Constellation’ : entretien et conseils | TIBALDO Jungle",
+  "cycas/revoluta":
+    "Cycas revoluta : culture et hivernage à Lille | TIBALDO Jungle",
 };
 
 const isLocalSpeciesPilot = (genre: string, slug: string) =>
@@ -47,7 +49,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const image = plant.gallery.find(isDocumentaryImage);
   const title = localPilotTitles[`${genre}/${slug}`] ?? plant.seo.title;
   const description = isLocalSpeciesPilot(genre, slug)
-    ? `${plant.seo.description.replace(/\s*(Découvrez|Disponibilité)[^.]*\.?$/i, "")} Fiche botanique indépendante des disponibilités du Studio Végétal — TIBALDO Jungle à Lille.`
+    ? genre === "cycas" && slug === "revoluta"
+      ? "Cultiver un Cycas revoluta à Lille : lumière, drainage, pot, froid et hivernage dans le Nord. Guide botanique et conseils du Studio TIBALDO Jungle."
+      : `${plant.seo.description.replace(/\s*(Découvrez|Disponibilité)[^.]*\.?$/i, "")} Fiche botanique indépendante des disponibilités du Studio Végétal — TIBALDO Jungle à Lille.`
     : plant.seo.description;
   const socialImages = image
     ? [
@@ -100,6 +104,10 @@ export default async function Page({ params }: Props) {
       ? deliciosaNextFaq
       : plant.faq;
   const localPilot = isLocalSpeciesPilot(genre, slug);
+  const description =
+    genre === "cycas" && slug === "revoluta"
+      ? "Cultiver un Cycas revoluta à Lille : lumière, drainage, pot, froid et hivernage dans le Nord. Guide botanique et conseils du Studio TIBALDO Jungle."
+      : plant.seo.description;
   const organization = localPilot
     ? {
         "@type": "Organization",
@@ -138,7 +146,7 @@ export default async function Page({ params }: Props) {
         "@type": "Article",
         "@id": `${url}#article`,
         headline: plant.botanicalName,
-        description: plant.seo.description,
+        description,
         datePublished: plant.publishedAt,
         dateModified: plant.updatedAt,
         mainEntityOfPage: { "@type": "WebPage", "@id": url },

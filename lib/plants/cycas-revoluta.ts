@@ -90,6 +90,7 @@ export const cycasRevoluta: PlantEntry = {
   faq: [
     { question: "Le Cycas revoluta est-il un palmier ?", answer: "Non. Sa couronne rappelle un palmier, mais il appartient aux Cycadales, une lignée de gymnospermes très différente des Arecaceae." },
     { question: "Peut-on cultiver un Cycas dehors à Lille ?", answer: "Oui pendant la belle saison et, pour un sujet acclimaté, dans un emplacement très abrité et drainant. En pot, protégez les racines du gel durable et de la pluie froide ; une serre froide lumineuse ou un local hors gel reste la solution la plus sûre." },
+    { question: "Quand hiverner un Cycas revoluta à Lille ?", answer: "Anticipez une période de gel durable, un vent froid ou un substrat qui reste humide. En pot, placez alors le Cycas dans un espace lumineux, ventilé et hors gel, puis réduisez les arrosages sans dessécher complètement les racines." },
     { question: "Quelle est la rusticité du Cycas revoluta ?", answer: "Elle ne se résume pas à un chiffre. La durée du gel, le vent, l’humidité, le drainage, l’âge et l’acclimatation comptent. Les frondes sont endommagées avant le caudex et les racines en pot sont particulièrement exposées." },
     { question: "Pourquoi mon Cycas ne pousse-t-il pas ?", answer: "Il pousse très lentement et par poussées espacées. Si le caudex est ferme et les racines saines, plusieurs mois sans nouvelle fronde ne sont pas forcément inquiétants." },
     { question: "Quand arroser un Cycas en pot ?", answer: "Après un séchage marqué du mélange. Arrosez à fond puis laissez égoutter ; espacez nettement en hiver et par faible lumière." },
@@ -125,5 +126,5 @@ export const cycasRevoluta: PlantEntry = {
     { label: "Merck Veterinary Manual — ornamental plants toxic to animals", url: "https://www.merckvetmanual.com/toxicology/poisonous-plants/houseplants-and-ornamentals-toxic-to-animals" },
   ],
   publishedAt: "2026-08-20",
-  updatedAt: "2026-08-20",
+  updatedAt: "2026-09-02",
 };

@@ -6,6 +6,7 @@ import ConversionTracker from "./ConversionTracker";
 import { BetaEnvironmentBanner } from "./BetaEnvironmentBanner";
 import SafeLinkMaskLayer from "./SafeLinkMaskLayer";
 import JunglePrelaunchCurtain from "./JunglePrelaunchCurtain";
+import PublicPreopeningSignal from "./PublicPreopeningSignal";
 import { SHOP_ORIGIN } from "@/lib/environment";
 import {
   betaOnlyRobots,
@@ -97,6 +98,7 @@ export default function RootLayout({
           inert={prelaunchCurtainActive || undefined}
           aria-hidden={prelaunchCurtainActive || undefined}
         >
+          {isPublicJungleDeployment ? <PublicPreopeningSignal /> : null}
           {children}
         </div>
         <ConversionDock inert={prelaunchCurtainActive} />

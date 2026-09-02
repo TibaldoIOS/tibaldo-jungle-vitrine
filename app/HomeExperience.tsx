@@ -68,7 +68,7 @@ export default function HomeExperience() {
       </section>
 
       <section className="home-expertise-strip" aria-label="L’approche Tibaldo Jungle">
-        <div className="shell" data-reveal><p className="section-kicker">L’expertise Tibaldo</p><h2>Observer. Comprendre.<br /><em>Conseiller sans sur-vendre.</em></h2><p>Une sélection passionnée, une culture suivie entre Lille et Wattignies et des conseils adaptés à la réalité de votre intérieur.</p><nav><Link href="/conseils">Lire les conseils <Arrow /></Link><Link href="/plantes">Explorer l’encyclopédie <Arrow /></Link><Link href="/coulisses">Voir les coulisses <Arrow /></Link></nav></div>
+        <div className="shell" data-reveal><p className="section-kicker">L’expertise Tibaldo</p><h2>Observer. Comprendre.<br /><em>Conseiller sans sur-vendre.</em></h2><p>Des plantes préparées et cultivées à Wattignies, puis accueillies au Studio Végétal situé à Lille, avec des conseils adaptés à la réalité de votre intérieur.</p><nav><Link href="/conseils">Lire les conseils <Arrow /></Link><Link href="/plantes">Explorer l’encyclopédie <Arrow /></Link><Link href="/coulisses">Voir les coulisses <Arrow /></Link></nav></div>
       </section>
     </>
   );
