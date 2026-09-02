@@ -11,6 +11,7 @@ import BotanicalPhotoBook from "./BotanicalPhotoBook";
 import CycasLocalGuide from "./CycasLocalGuide";
 import DeliciosaOwnerHero from "./DeliciosaOwnerHero";
 import PlantNeedsVisualSystem from "./PlantNeedsVisualSystem";
+import SpeciesCareLinks from "./SpeciesCareLinks";
 import PlantSectionNav from "./PlantSectionNav";
 import PlantShopBar from "./PlantShopBar";
 import PlantSpeciesHero from "./PlantSpeciesHero";
@@ -70,6 +71,7 @@ export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
   const bookImages = gallery.slice(1);
   const isDeliciosa = plant.genre === "monstera" && plant.slug === "deliciosa";
   const isCycasRevoluta = plant.genre === "cycas" && plant.slug === "revoluta";
+  const isBanana = plant.genre === "musa" || plant.genre === "ensete";
   const faq = [
     ...plant.faq.filter((item) => !isInternalPhotoProductionCopy(item.question) && !isInternalPhotoProductionCopy(item.answer)),
     { question: `Quand rempoter ${plant.displayName} ?`, answer: plant.care.repotting },
@@ -150,6 +152,7 @@ export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
             <header data-reveal><p className="section-kicker">03 · Les bons équilibres</p><h2 id={`golden-needs-${plant.genre}-${plant.slug}`}>Comprendre ses besoins,<br /><em>puis observer.</em></h2><p>Chaque besoin relie une méthode concrète aux signes lisibles sur la plante.</p></header>
             <PlantNeedsVisualSystem plant={plant} />
           </section>
+          <SpeciesCareLinks plant={plant} />
 
           {editorials?.length ? (
             <section className={canonical.editorialChapters} aria-labelledby={`golden-editorial-${plant.genre}-${plant.slug}`}>
@@ -179,7 +182,7 @@ export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
           {isCycasRevoluta ? <CycasLocalGuide plant={plant} /> : null}
 
           <div className={golden.speciesFaq}><BotanicalFaq items={faq} title="Tout savoir avant de lui faire une place." /></div>
-          <section className={golden.speciesClosing} id="conseils" data-reveal><div><p className="section-kicker">07 · Continuer au Studio</p><h2>Observer longtemps.<br /><em>Corriger doucement.</em></h2><p>{advice[1] ?? advice[0] ?? plant.subtitle}</p></div><nav aria-label={`Continuer après la fiche ${plant.displayName}`}><Link href={`/plantes/${plant.genre}`}>Explorer les {plant.genreLabel} <Arrow /></Link><Link href="/sos-plantes">SOS Plantes <Arrow /></Link>{revealImage ? <Link href="/credits-images">Crédits photographiques <Arrow /></Link> : null}</nav></section>
+          <section className={golden.speciesClosing} id="conseils" data-reveal><div><p className="section-kicker">07 · Continuer au Studio</p><h2>Observer longtemps.<br /><em>Corriger doucement.</em></h2><p>{advice[1] ?? advice[0] ?? plant.subtitle}</p></div><nav aria-label={`Continuer après la fiche ${plant.displayName}`}><Link href={`/plantes/${plant.genre}`}>Explorer les {plant.genreLabel} <Arrow /></Link>{isBanana ? <Link href="/plantes/bananiers">Comparer Musa et Ensete <Arrow /></Link> : null}<Link href="/sos-plantes">SOS Plantes <Arrow /></Link>{revealImage ? <Link href="/credits-images">Crédits photographiques <Arrow /></Link> : null}</nav></section>
         </div>
       </div>
 
