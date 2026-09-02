@@ -5,7 +5,10 @@ import type { PlantEntry } from "./types.ts";
 export const verifiedMediaApiContractVersion = "1.0";
 export const verifiedMediaStatusValues = ["VERIFIED_MEDIA", "HONEST_MEDIA_GAP"] as const;
 
-const canonicalMediaPath = (path: string) => path.replace(/^\/media\//, "/");
+const canonicalMediaPath = (path: string) =>
+  path === "/media/anthurium-pallidiflorum-feuillage-tibaldo-jungle.webp"
+    ? path
+    : path.replace(/^\/media\//, "/");
 
 export function exactVerifiedPrimaryMedia(plant: PlantEntry) {
   const image = plant.genre === "cycas" && plant.slug === "revoluta"
