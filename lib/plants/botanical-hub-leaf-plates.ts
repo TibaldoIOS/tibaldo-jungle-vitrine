@@ -24,6 +24,7 @@ export type BotanicalHubLeafPlateData = {
   title: string;
   description: string;
   plateAsset: `/media/hub-leaf-plates-v1/${string}.webp`;
+  heroLeafAssets?: readonly `/hub-leaf-plates-v1/hero-background/${string}.webp`[];
   altText: string;
   caption: string;
   leaves: readonly BotanicalLeafPlateEntry[];
@@ -35,6 +36,14 @@ export const botanicalHubLeafPlates: Partial<Record<string, BotanicalHubLeafPlat
     title: "Fenêtres, découpes, élancements.",
     description: "Du limbe juvénile entier aux feuilles adultes profondément ouvertes, le genre Monstera fait évoluer sa silhouette avec l’âge et les conditions de croissance.",
     plateAsset: "/media/hub-leaf-plates-v1/monstera-leaf-plate-v1.webp",
+    heroLeafAssets: [
+      "/hub-leaf-plates-v1/hero-background/monstera-deliciosa-leaf.webp",
+      "/hub-leaf-plates-v1/hero-background/monstera-adansonii-leaf.webp",
+      "/hub-leaf-plates-v1/hero-background/monstera-dubia-leaf.webp",
+      "/hub-leaf-plates-v1/hero-background/monstera-standleyana-leaf.webp",
+      "/hub-leaf-plates-v1/hero-background/monstera-pinnatipartita-leaf.webp",
+      "/hub-leaf-plates-v1/hero-background/monstera-subpinnata-leaf.webp",
+    ],
     altText: "Planche illustrée de six silhouettes de feuilles du genre Monstera, entières, perforées, découpées et allongées.",
     caption: "Interprétations botaniques originales d’après les morphologies documentées par les fiches Jungle ; les proportions restent illustratives.",
     leaves: [

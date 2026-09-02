@@ -20,11 +20,15 @@
 .legend strong { display: block; font-family: var(--font-serif, Georgia, serif); font-size: clamp(.98rem, 1.3vw, 1.15rem); font-weight: 520; line-height: 1.15; }
 .legend small { display: block; margin-top: .35rem; color: rgb(23 62 48 / .68); font-size: .72rem; line-height: 1.3; }
 .caption { max-width: 55rem; margin: 1.1rem 0 0; color: rgb(23 62 48 / .68); font-size: .76rem; line-height: 1.55; }
-.heroSignature { position: relative; z-index: 4; margin-top: -5.5rem; padding-top: 0; background: linear-gradient(180deg, transparent 0 5.5rem, #f2efe5 5.5rem, #ebe7da 100%); }
-.heroSignature > :global(.shell) { padding-top: clamp(2.2rem, 4vw, 4.6rem); border-top: 1px solid rgb(241 238 220 / .34); background: #f2efe5; box-shadow: 0 -2.2rem 5rem rgb(3 24 17 / .16); }
-.heroSignature .heading { grid-template-columns: minmax(15rem, .62fr) minmax(18rem, 1.38fr); margin-bottom: clamp(1.7rem, 3.5vw, 3.2rem); }
-.heroSignature .heading h2 { font-size: clamp(2.7rem, 4.6vw, 5.4rem); }
-.heroSignature .plate { box-shadow: 0 1.4rem 4rem rgb(18 48 37 / .09); }
+.heroBackground { position: absolute; z-index: 2; inset: 0; overflow: hidden; pointer-events: none; opacity: .76; -webkit-mask-image: linear-gradient(180deg, transparent 3%, #000 15%, #000 80%, transparent 100%); mask-image: linear-gradient(180deg, transparent 3%, #000 15%, #000 80%, transparent 100%); }
+.heroLeaf { position: absolute; display: block; filter: saturate(.72) contrast(1.08); opacity: .48; }
+.heroLeaf img { display: block; width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 1.2rem 2rem rgb(0 0 0 / .2)); }
+.heroLeaf[data-hero-leaf="1"] { right: -5%; bottom: -11%; width: min(40vw, 650px); aspect-ratio: 1.08; opacity: .72; transform: rotate(10deg); }
+.heroLeaf[data-hero-leaf="2"] { right: 24%; top: 13%; width: min(23vw, 350px); aspect-ratio: .78; transform: rotate(-13deg); }
+.heroLeaf[data-hero-leaf="3"] { right: 4%; top: 11%; width: min(17vw, 250px); aspect-ratio: .82; opacity: .56; transform: rotate(14deg); }
+.heroLeaf[data-hero-leaf="4"] { left: 39%; bottom: -7%; width: min(20vw, 300px); aspect-ratio: 1; opacity: .34; transform: rotate(-31deg); }
+.heroLeaf[data-hero-leaf="5"] { right: 8%; bottom: -3%; width: min(29vw, 440px); aspect-ratio: 1.02; opacity: .52; transform: rotate(-7deg); }
+.heroLeaf[data-hero-leaf="6"] { right: 36%; top: -8%; width: min(18vw, 270px); aspect-ratio: .82; opacity: .32; transform: rotate(18deg); }
 @media (max-width: 700px) {
   .section { padding: 4.5rem 0; }
   .heading { grid-template-columns: 1fr; gap: 1.4rem; }
@@ -37,9 +41,12 @@
   .legend a { min-height: 4.4rem; padding-right: .65rem; }
   .legend strong { font-size: 1rem; }
   .legend small { font-size: .74rem; }
-  .heroSignature { margin-top: -2.25rem; padding-top: 0; background: linear-gradient(180deg, transparent 0 2.25rem, #f2efe5 2.25rem, #ebe7da 100%); }
-  .heroSignature > :global(.shell) { padding-top: 2.2rem; box-shadow: 0 -1.2rem 2.8rem rgb(3 24 17 / .14); }
-  .heroSignature .heading { grid-template-columns: 1fr; margin-bottom: 1.6rem; }
-  .heroSignature .heading h2 { max-width: 11ch; font-size: clamp(2.5rem, 12vw, 3.5rem); }
-  .heroSignature .plate { margin-right: -1rem; margin-left: -1rem; }
+  .heroBackground { opacity: .7; -webkit-mask-image: linear-gradient(180deg, transparent 2%, #000 12%, #000 84%, transparent 100%); mask-image: linear-gradient(180deg, transparent 2%, #000 12%, #000 84%, transparent 100%); }
+  .heroLeaf[data-hero-leaf="1"] { right: -30%; bottom: -3%; width: 82vw; opacity: .7; transform: rotate(13deg); }
+  .heroLeaf[data-hero-leaf="2"] { right: -11%; top: 13%; width: 42vw; opacity: .52; transform: rotate(-14deg); }
+  .heroLeaf[data-hero-leaf="3"] { right: 49%; top: 12%; width: 31vw; opacity: .4; transform: rotate(13deg); }
+  .heroLeaf[data-hero-leaf="4"] { display: none; }
+  .heroLeaf[data-hero-leaf="5"] { right: 38%; bottom: -7%; width: 58vw; opacity: .35; transform: rotate(-12deg); }
+  .heroLeaf[data-hero-leaf="6"] { display: none; }
 }
+@media (prefers-reduced-motion: reduce) { .heroLeaf { transform: none !important; } }

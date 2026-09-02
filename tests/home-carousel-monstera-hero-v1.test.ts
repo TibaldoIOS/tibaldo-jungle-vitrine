@@ -25,9 +25,11 @@ test("carousel exposes accessible, user-controlled indicators", () => {
   assert.match(carousel, /prefers-reduced-motion: reduce/);
 });
 
-test("Monstera alone receives the hero-signature plate placement", () => {
+test("Monstera alone receives the decorative hero-background leaf field", () => {
   assert.match(hub, /genre === "monstera" && leafPlate/);
-  assert.match(hub, /variant="hero-signature"/);
+  assert.match(hub, /variant="hero-background"/);
   assert.match(hub, /genre !== "monstera" && leafPlate/);
   assert.equal(botanicalHubLeafPlates.monstera?.leaves.length, 6);
+  assert.equal(botanicalHubLeafPlates.monstera?.heroLeafAssets?.length, 6);
+  assert.doesNotMatch(hub, /variant="hero-signature"/);
 });

@@ -3,8 +3,13 @@ import Link from "next/link";
 import type { BotanicalHubLeafPlateData } from "@/lib/plants/botanical-hub-leaf-plates";
 import styles from "./BotanicalHubLeafPlate.module.css";
 
-export default function BotanicalHubLeafPlate({ data, variant = "chapter" }: { data: BotanicalHubLeafPlateData; variant?: "chapter" | "hero-signature" }) {
-  return <section className={`${styles.section} ${variant === "hero-signature" ? styles.heroSignature : ""}`} data-botanical-hub-leaf-plate={data.genus} data-leaf-plate-variant={variant} aria-labelledby={`leaf-plate-${data.genus}`}>
+export default function BotanicalHubLeafPlate({ data, variant = "chapter" }: { data: BotanicalHubLeafPlateData; variant?: "chapter" | "hero-background" }) {
+  if (variant === "hero-background") {
+    return <div className={styles.heroBackground} data-botanical-hub-leaf-plate={data.genus} data-leaf-plate-variant={variant} aria-hidden="true">
+      {data.heroLeafAssets?.map((asset, index) => <span className={styles.heroLeaf} data-hero-leaf={index + 1} key={asset}><Image unoptimized src={asset} alt="" width={720} height={720} priority={index < 4} /></span>)}
+    </div>;
+  }
+  return <section className={styles.section} data-botanical-hub-leaf-plate={data.genus} data-leaf-plate-variant={variant} aria-labelledby={`leaf-plate-${data.genus}`}>
     <div className="shell">
       <header className={styles.heading} data-reveal>
         <div><p className={styles.eyebrow}>Quelques silhouettes du genre</p><h2 id={`leaf-plate-${data.genus}`}>{data.title}</h2></div>

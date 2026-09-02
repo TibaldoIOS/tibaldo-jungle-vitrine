@@ -99,6 +99,7 @@ export default function GoldenGenusHub({ genre, guide, plants, editorials = [], 
           {media ? <Image unoptimized src={media.src} alt="" width={media.width} height={media.height} priority /> : <div className={canonical.groupMediaGap}><span>{title.slice(0, 1)}</span><small>Photographie collective<br />à documenter</small></div>}
         </div>
         <div className={`${hero.forestFade} ${mobile.mobileFade}`} aria-hidden="true" />
+        {genre === "monstera" && leafPlate ? <BotanicalHubLeafPlate data={leafPlate} variant="hero-background" /> : null}
         <div className={`${hero.heroContent} ${mobile.mobileContent} shell`}>
           <div className={`${hero.heroCopy} ${mobile.mobileCopy}`}>
             <p className={`${hero.heroEyebrow} ${mobile.mobileEyebrow}`}>{label} · Univers botanique</p>
@@ -108,8 +109,6 @@ export default function GoldenGenusHub({ genre, guide, plants, editorials = [], 
           </div>
         </div>
       </section>
-
-      {genre === "monstera" && leafPlate ? <BotanicalHubLeafPlate data={leafPlate} variant="hero-signature" /> : null}
 
       <section className={`${golden.groupIntro} ${mobile.introTransition} shell`} data-reveal>
         <HubChapterMarker number="01" label="Comprendre le groupe" />
