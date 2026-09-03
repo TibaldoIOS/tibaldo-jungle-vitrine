@@ -78,9 +78,9 @@ test("indexability and future sitemap contracts remain frozen", () => {
   assert.equal(expectedPublicSitemapUrlCount, 176);
 });
 
-test("current documentary media contract contains 75 verified species and 21 honest gaps", () => {
+test("current documentary media contract contains 76 verified species and 20 honest gaps", () => {
   const gaps = plants.filter((plant) => documentaryGallery(plant).length === 0);
   assert.equal(plants.length, 96);
-  assert.equal(plants.length - gaps.length, 75);
-  assert.equal(gaps.length, 21);
+  assert.equal(plants.length - gaps.length, 76);
+  assert.equal(gaps.length, 20);
 });
