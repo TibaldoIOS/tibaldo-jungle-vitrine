@@ -1,0 +1,54 @@
+.guide { color: #163e30; background: #f5f2e8; }
+.section { padding: 80px 0; scroll-margin-top: 32px; }
+.guide h2 { font-family: var(--font-display, Georgia, serif); font-size: clamp(36px,5vw,70px); line-height: 1.06; font-weight: 400; letter-spacing: -.035em; margin: 14px 0 25px; }
+.guide h3 { font-family: var(--font-display, Georgia, serif); font-size: clamp(27px,3vw,39px); line-height: 1.12; font-weight: 400; margin: 10px 0 16px; }
+.guide h4 { font-family: var(--font-display, Georgia, serif); font-size: 27px; line-height: 1.15; margin: 8px 0 12px; font-weight: 400; }
+.guide p { font-size: 16px; line-height: 1.65; margin: 0 0 16px; }
+.guide a { text-underline-offset: 5px; }
+.guide a:focus-visible, .guide summary:focus-visible { outline: 3px solid #638825; outline-offset: 5px; }
+.guide em { font-weight: 400; }
+.lead { max-width: 740px; }
+.finder { background: #e1e8cf; }
+.finder h2 { max-width: 780px; }
+.choices { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 10px; margin: 30px 0 24px; }
+.choices a { display: flex; justify-content: space-between; align-items: center; min-height: 60px; padding: 14px 18px; border: 1px solid #9eae8c; border-radius: 4px; color: #153a2c; background: #f7f6eb; text-decoration: none; font-size: 16px; gap: 8px; }
+.choices a:hover { background: #c5db91; }
+.guide .note { font-size: 14px; max-width: 850px; line-height: 1.6; }
+.group { margin-top: 64px; }
+.groupHeading { display: flex; gap: 25px; max-width: 820px; margin-bottom: 20px; }
+.number { font-family: Georgia,serif; font-size: 48px; color: #748754; line-height: 1; }
+.mix { display: grid; grid-template-columns: 1fr 1.5fr; gap: 38px; border-top: 1px solid #bdc4ae; padding: 27px 20px; scroll-margin-top: 30px; border-radius: 3px; }
+.mix:last-child { border-bottom: 1px solid #bdc4ae; }
+.mix:target { background: #e3edcb; outline: 2px solid #527830; outline-offset: 3px; }
+.guide .profile { font-size: 12px; letter-spacing: .065em; text-transform: uppercase; font-weight: 600; margin-bottom: 8px; }
+.guide .plants { font-size: 14px; }
+.guide summary { cursor: pointer; padding: 8px 0; font-size: 14px; line-height: 1.5; }
+.guide details p { font-size: 14px; margin-top: 12px; }
+.guide details a, .components a, .nutrition a { font-size: 14px; }
+.hubLinks { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 12px; }
+.hubLinks a { padding: 8px 0; font-size: 13px; }
+.interlude { background: #193f31; color: #f4f3e5; }
+.interlude .questions { list-style: decimal-leading-zero; padding-left: 35px; display: grid; grid-template-columns: 1fr 1fr; gap: 28px 60px; margin: 36px 0; }
+.questions li { padding-left: 12px; font-size: 21px; line-height: 1.4; }
+.questions li::marker { color: #c5dc91; font-size: 15px; }
+.universal { border-top: 1px solid #6b8270; padding-top: 22px; max-width: 900px; }
+.components { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 28px; margin-top: 40px; }
+.components article { border-top: 1px solid #9baa8d; padding-top: 24px; }
+.components .number { display: block; margin-bottom: 26px; }
+.textLink { display: inline-block; margin-top: 30px; padding: 12px 0; }
+.mineral { background: #c9d995; }
+.mineralInner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.guide .mineralNames { font-size: 20px; }
+.nutrition { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin: 36px 0; }
+.nutrition > div { border-top: 3px solid #638046; padding-top: 18px; }
+.nutrition article { border-top: 1px solid #c5c9b9; padding: 22px 0; }
+.matching { background: #e9ebde; }
+.matchList { display: grid; grid-template-columns: 1fr 1fr; gap: 0 50px; }
+.matchList a { display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1px solid #bdc4ae; font-size: 14px; text-decoration: none; }
+.matchList a span:last-child { text-align: right; }
+.sources { margin-top: 35px; }
+.sources ul { columns: 2; padding-left: 20px; }
+.sources li { padding: 8px 0; }
+@media(max-width:900px) { .choices, .components { grid-template-columns: repeat(2,minmax(0,1fr)); } .mix { gap: 20px; } }
+@media(max-width:600px) { .section { padding: 52px 0; } .guide h2 { font-size: 39px; } .choices { gap: 8px; } .choices a { font-size: 14px; padding: 12px; min-height: 56px; } .mix { grid-template-columns: 1fr; gap: 4px; padding: 24px 8px; } .group { margin-top: 42px; } .groupHeading { gap: 16px; } .number { font-size: 36px; } .components { gap: 26px 18px; } .components h3 { font-size: 26px; overflow-wrap: anywhere; } .components p { font-size: 15px; } .mineralInner, .nutrition, .matchList { grid-template-columns: 1fr; gap: 22px; } .interlude .questions { grid-template-columns: 1fr; gap: 22px; } .questions li { font-size: 20px; } .matchList { gap: 0; } .sources ul { columns: 1; } }
+@media(prefers-reduced-motion:reduce) { .guide *, .guide { scroll-behavior: auto !important; } }
