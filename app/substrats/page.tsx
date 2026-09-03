@@ -6,6 +6,8 @@ import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 import { substrates, substrateProfiles } from "./data";
 import OpeningEventLink from "../OpeningEventLink";
 import SubstrateSelection from "./SubstrateSelection";
+import styles from "./selection.module.css";
+import { supplierMedia } from "./supplier-media";
 
 export const metadata: Metadata = {
   title: "Substrats en vrac à Lille | Guide Tibaldo Jungle",
@@ -59,8 +61,8 @@ export default function SubstratesPage() {
     <main className="editorial-page substrate-page">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <ScrollReveal />
-      <section className="inner-hero substrate-hero">
-        <div className="inner-hero-texture" aria-hidden="true" />
+      <section className={`inner-hero substrate-hero ${styles.photoHero}`}>
+        <Image unoptimized src={supplierMedia.rempotage.src} width={1456} height={971} alt="" priority className={styles.heroPhoto} />
         <div className="inner-hero-shade" aria-hidden="true" />
         <SiteHeader />
         <div className="shell inner-hero-content">
@@ -75,7 +77,7 @@ export default function SubstratesPage() {
         <div className="shell inner-hero-index" aria-hidden="true"><span>13 mélanges</span><span>Comprendre la matière</span><span>Conseils au Studio</span></div>
       </section>
 
-      <section className="substrate-manifesto shell" data-reveal>
+      <section className={`substrate-manifesto shell ${styles.manifesto}`}>
         <div><p className="section-kicker">Le substrat n’est pas un détail</p><h2>Tout commence<br />sous la surface.</h2></div>
         <div className="manifesto-copy">
           <p>Une plante peut avoir la bonne lumière et le bon arrosage, mais peiner si ses racines manquent d’air. Chez Tibaldo Jungle, le substrat se pense comme un milieu vivant : il doit soutenir, respirer, drainer et garder juste ce qu’il faut d’humidité.</p>

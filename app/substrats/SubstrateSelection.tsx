@@ -1,4 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
+import { substrates } from "./data";
+import { supplierMedia, supplierMediaRights } from "./supplier-media";
 import { mixGroups, readyMixes, plantMixMapping, selectedComponents, mineral, nutrition, sourceRegistry, sourceReviewedAt } from "./selection";
 import styles from "./selection.module.css";
 
@@ -20,13 +23,18 @@ export default function SubstrateSelection() {
       <div className="shell">
         <p className="section-kicker">02 · Notre sélection SYBASoil</p>
         <h2 id="mixes-title">Le bon mélange.<br /><em>Une raison de le choisir.</em></h2>
-        <p className={styles.lead}>Treize mélanges Sybotanica, relus par Jungle pour comprendre leurs différences. Ils ne sont pas fabriqués par Tibaldo. Ce guide n’annonce ni disponibilité, ni prix.</p>
+        <p className={styles.lead}>Treize mélanges Sybotanica, quatre façons de penser les racines. Notre sélection se découvre par besoin, pas par recette universelle.</p>
+        <div className={styles.supplierStory}>
+          <figure><Image unoptimized src={supplierMedia.collection.src} width={1000} height={560} alt={supplierMedia.collection.alt} loading="lazy" /><figcaption>Sybotanica · photographie du kit presse officiel</figcaption></figure>
+          <div><p className="section-kicker">Sybotanica × le regard Jungle</p><h3>Le mélange.<br /><em>Et ce qu’il change.</em></h3><p>Des matières visibles, des profils différents, une question simple : de quoi vos racines ont-elles besoin ? Jungle vous aide à lire cette sélection du fabricant.</p><a className={styles.supplierLink} href="https://www.sybotanica.com/">Découvrir le site Sybotanica <span aria-hidden="true">↗</span></a><p className={styles.note}>Produits fabriqués par Sybotanica, pas par Tibaldo. Disponibilité et conditionnement à confirmer au Studio.</p></div>
+        </div>
+        <nav className={styles.groupNav} aria-label="Les quatre profils de substrat">{mixGroups.map((group,index)=><a key={group.id} href={`profil-${group.id}`.replace(/^/,"#")}><span>0{index+1}</span>{group.label} <span aria-hidden="true">↓</span></a>)}</nav>
         {mixGroups.map((group, index) => <div className={styles.group} key={group.id}>
-          <header className={styles.groupHeading}><span className={styles.number}>0{index + 1}</span><div><p className="section-kicker">{group.label}</p><h3>{group.title}</h3><p>{group.intro}</p></div></header>
+          <header id={`profil-${group.id}`} className={styles.groupHeading}><span className={styles.number}>0{index + 1}</span><div><p className="section-kicker">{group.label}</p><h3>{group.title}</h3><p>{group.intro}</p></div></header>
           <div className={styles.mixList}>
             {readyMixes.filter(mix => mix.group === group.id).map(mix => <article id={`mix-${mix.id}`} key={mix.id} className={styles.mix} tabIndex={-1}>
               <div><p className={styles.profile}>{mix.profile}</p><h4>{mix.name}</h4><p className={styles.plants}>Pour {mix.plants.join(" · ")}</p></div>
-              <div><p>{mix.why}</p><details><summary>Lire les composants & la source</summary><p>{mix.ingredients}. Liste indicative, non exhaustive.</p><a href={mix.source}>Fiche fabricant — {mix.name} ↗</a></details>
+              <div><p>{mix.why}</p><details><summary>Ce qu’il y a dans le mélange <span aria-hidden="true">+</span></summary><p>{mix.ingredients}. Liste indicative, non exhaustive.</p></details><a className={styles.productLink} href={mix.source}>Voir {mix.name} chez Sybotanica ↗</a>
                 <div className={styles.hubLinks}>{mix.hubs.map(hub => <Link key={hub} href={`/plantes/${hub}`}>Explorer {hub === "fougeres" ? "les fougères" : hub} ↗</Link>)}</div>
               </div>
             </article>)}
@@ -44,6 +52,7 @@ export default function SubstrateSelection() {
     <section id="selection-composants" className={styles.section} aria-labelledby="components-title"><div className="shell">
       <p className="section-kicker">03 · La fonction avant la recette</p><h2 id="components-title">Composer<br /><em>son propre mélange.</em></h2>
       <div className={styles.components}>{selectedComponents.map((item, index) => <article key={item.id}><span className={styles.number}>0{index + 1}</span><p className={styles.profile}>{item.role}</p><h3>{item.name}</h3><p>{item.text}</p><a href={item.source}>Lire la fiche fabricant ↗</a></article>)}</div>
+      <div className={styles.materialGallery}>{["ecorce-de-pin","perlite","sphaigne-sechee"].map(slug=>{const item=substrates.find(s=>s.slug===slug)!;return <Link key={slug} href={`/substrats/${slug}`}><Image unoptimized src={item.image} width={600} height={460} alt={item.imageAlt} loading="lazy"/><span>{item.name} <span aria-hidden="true">↗</span></span></Link>;})}</div><p className={styles.note}>La matériauthèque Jungle : vues de matières, pas des photographies des mélanges Sybotanica.</p>
       <a className={styles.textLink} href="#composants">Retrouver les neuf guides de matières Jungle ↓</a>
     </div></section>
 
@@ -61,8 +70,8 @@ export default function SubstrateSelection() {
 
     <section className={`${styles.section} ${styles.matching}`} aria-labelledby="matching-title"><div className="shell">
       <p className="section-kicker">Le mémo Jungle</p><h2 id="matching-title">De la plante<br /><em>au mélange.</em></h2>
-      <div className={styles.matchList}>{plantMixMapping.map(item => <a key={item.plant} href={`#mix-${item.mixId}`}><span>{item.plant}</span><span>{item.mixName} ↗</span></a>)}</div>
-      <details className={styles.sources}><summary>Sources & méthode éditoriale · {sourceRegistry.length} fiches</summary><p>Fiches fabricant consultées le {sourceReviewedAt}. Synthèses originales en français ; ingrédients principaux uniquement. Les noms commerciaux peuvent évoluer. Les promesses absolues de prévention des maladies ne sont pas reprises. Les photographies de produits ne sont pas utilisées, faute de droits établis.</p><ul>{sourceRegistry.map(item => <li key={item.url}><a href={item.url}>{item.name} ↗</a></li>)}</ul></details>
+      <details className={styles.memo}><summary>Consulter les {plantMixMapping.length} correspondances plante → mélange</summary><div className={styles.matchList}>{plantMixMapping.map(item => <a key={item.plant} href={`#mix-${item.mixId}`}><span>{item.plant}</span><span>{item.mixName} ↗</span></a>)}</div></details>
+      <details className={styles.sources}><summary>Sources, photographies & méthode · {sourceRegistry.length} fiches</summary><p>Fiches fabricant consultées le {sourceReviewedAt}. Synthèses originales en français ; ingrédients principaux uniquement. Les noms commerciaux peuvent évoluer. Les promesses absolues de prévention des maladies ne sont pas reprises.</p><p>{supplierMediaRights.credit}. Deux photographies issues de la médiathèque mise à disposition pour un usage commercial. Les packshots individuels du catalogue ne sont pas repris.</p><a href={supplierMediaRights.evidence}>Autorisation et médiathèque officielle ↗</a><ul>{sourceRegistry.map(item => <li key={item.url}><a href={item.url}>{item.name} ↗</a></li>)}</ul></details>
     </div></section>
   </div>;
 }
