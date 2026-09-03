@@ -57,7 +57,7 @@ const verifiedMediaByRoute: Readonly<Record<string, readonly PlantImage[]>> = {
     ),
   )],
   "/plantes/anthurium/clarinervium": [image(
-    "/documentary-media-wave-2-v1/anthurium-clarinervium-owner-2026-09.webp",
+    "/media/documentary-media-wave-2-v1/anthurium-clarinervium-owner-2026-09.webp",
     "Anthurium clarinervium aux feuilles veloutées vert sombre et nervures claires",
     "Anthurium clarinervium · photographie fournie par l’Owner, droits de réutilisation confirmés.",
     2000,
