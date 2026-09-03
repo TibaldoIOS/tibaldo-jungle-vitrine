@@ -14,7 +14,7 @@ export default function GenusSpeciesCarousel({ genre, genusName, plants }: {
       <header>
         <p className="section-kicker">Toutes les fiches du genre</p>
         <h2 id={`genus-carousel-${genre}`}>Explorer les <em>{genusName}.</em></h2>
-        <p>{plants.length ? `${plants.length} ${plants.length > 1 ? "espèces et cultivars documentés" : "fiche documentée"}, sans confondre encyclopédie et disponibilité en boutique.` : "Les premières fiches documentées rejoindront ici l’encyclopédie."}</p>
+        <p>{plants.length ? `${plants.length} ${plants.length > 1 ? "espèces et cultivars documentés" : "variété documentée"}, sans confondre encyclopédie et disponibilité en boutique.` : "Les premières fiches documentées rejoindront ici l’encyclopédie."}</p>
       </header>
       {plants.length ? (
         <div className="genus-carousel-track" aria-label={`Toutes les fiches ${genusName}`}>
