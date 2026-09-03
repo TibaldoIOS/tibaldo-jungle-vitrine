@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { Arrow } from "../SiteChrome";
+import VarietyCount from "./VarietyCount";
 
 export type CompactBotanicalIndexItem = {
   slug: string;
@@ -11,18 +12,19 @@ export type CompactBotanicalIndexItem = {
 
 export default function CompactBotanicalIndex({ items }: { items: CompactBotanicalIndexItem[] }) {
   return (
-    <nav className="plants-compact-index" aria-label="Index complet des genres botaniques">
-      {items.map((item, index) => (
+    <>
+    <p className="plants-index-scroll-hint" id="botanical-index-scroll-hint">{items.length} genres · Faites défiler pour explorer</p>
+    <nav className="plants-compact-index" aria-label="Index complet des genres botaniques" aria-describedby="botanical-index-scroll-hint" tabIndex={0}>
+      {items.map((item) => (
         <Link href={`/plantes/${item.slug}`} key={item.slug}>
-          <span>{String(index + 1).padStart(2, "0")}</span>
           <span>
             <strong>{item.name}</strong>
-            <small>{item.descriptor}</small>
           </span>
-          <em>{item.count} {item.count > 1 ? "fiches" : "fiche"}</em>
+          <em><VarietyCount count={item.count} /></em>
           <Arrow />
         </Link>
       ))}
     </nav>
+    </>
   );
 }

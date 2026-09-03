@@ -68,7 +68,7 @@ function HubChapterMarker({ number, label }: { number: string; label: string }) 
   return <div className={body.chapterMarker} data-hub-chapter-marker><span>{number}</span><strong>{label}</strong><i aria-hidden="true" /></div>;
 }
 
-export default function GoldenGenusHub({ genre, guide, plants, editorials = [], label = "Genre végétal", title = guide.name, additionalStory = [] }: {
+export default function GoldenGenusHub({ genre, guide, plants, editorials = [], title = guide.name, additionalStory = [] }: {
   genre: string;
   guide: GoldenGroupGuide;
   plants: readonly PlantEntry[];
@@ -102,7 +102,6 @@ export default function GoldenGenusHub({ genre, guide, plants, editorials = [], 
         {genre === "monstera" && leafPlate ? <BotanicalHubLeafPlate data={leafPlate} variant="hero-background" /> : null}
         <div className={`${hero.heroContent} ${mobile.mobileContent} shell`}>
           <div className={`${hero.heroCopy} ${mobile.mobileCopy}`}>
-            <p className={`${hero.heroEyebrow} ${mobile.mobileEyebrow}`}>{label} · Univers botanique</p>
             <h1 className={mobile.mobileTitle} data-title-fit={title.length >= 15 ? "extra-long" : title.length >= 9 ? "long" : "default"} id={`golden-group-title-${genre}`}>Les <em>{title}.</em></h1>
             <p className={`${hero.heroIntroduction} ${mobile.mobileIntroduction}`}>{heroCopy}</p>
             <p className={`${hero.heroNote} ${mobile.mobileNote}`}>{media ? "Une photographie documentaire contrôlée ouvre le groupe sans prétendre représenter toutes ses formes." : "Un manque de média reste explicite : aucun spécimen documentaire n’est fabriqué pour compléter la page."}</p>
@@ -131,7 +130,7 @@ export default function GoldenGenusHub({ genre, guide, plants, editorials = [], 
       <section className={`${golden.groupSpecies} ${body.groupSpecies}`} aria-labelledby={`golden-group-species-${genre}`}>
         <div className="shell"><HubChapterMarker number="03" label={genre === "bananiers" ? "Explorer les genres" : "Explorer le genre"} /></div>
         <div id={`golden-group-species-${genre}`}><GenusSpeciesCarousel genre={genre} genusName={title} plants={displayPlants} /></div>
-        <p className={`${golden.indexNote} ${body.indexNote} shell`} data-reveal>{displayPlants.length ? `${displayPlants.length} ${displayPlants.length > 1 ? "fiches sont documentées" : "fiche est documentée"}. ${gapCount ? `${gapCount} ${gapCount > 1 ? "fiches conservent" : "fiche conserve"} un manque de photographie réelle plutôt qu’un visuel non vérifié.` : "Les médias présentés restent distincts du stock du Shop."}` : "Aucune fiche spécifique n’est encore publiée ; le guide de groupe reste accessible sans inventer de plante ni de photographie."}</p>
+        <p className={`${golden.indexNote} ${body.indexNote} shell`} data-reveal>{displayPlants.length ? `${displayPlants.length} ${displayPlants.length > 1 ? "variétés sont documentées" : "variété est documentée"}. ${gapCount ? `${gapCount} ${gapCount > 1 ? "fiches conservent" : "fiche conserve"} un manque de photographie réelle plutôt qu’un visuel non vérifié.` : "Les médias présentés restent distincts du stock du Shop."}` : "Aucune fiche spécifique n’est encore publiée ; le guide de groupe reste accessible sans inventer de plante ni de photographie."}</p>
       </section>
 
       <section className={`${golden.groupStory} ${body.groupStory}`} aria-labelledby={`golden-group-story-${genre}`}>

@@ -9,6 +9,7 @@ import type { PlantExplorerItem } from "./PlantExplorer";
 import StudioAccessCompact from "./StudioAccessCompact";
 import BotanicalMotif from "./BotanicalMotif";
 import CompactBotanicalIndex from "./CompactBotanicalIndex";
+import VarietyCount from "./VarietyCount";
 import PlantsHeroMedia from "./PlantsHeroMedia";
 import { isInternalPhotoProductionCopy } from "@/lib/plants/types";
 import { documentaryGallery } from "@/lib/plants/documentary-media";
@@ -130,18 +131,17 @@ export default function PlantsPage() {
       <section className="shell plants-editorial-genera" aria-labelledby="featured-genera-title">
         <header data-reveal><p className="section-kicker">Quatre portes d’entrée</p><h2 id="featured-genera-title">Des formes.<br /><em>Des milieux.</em></h2><p>Quatre genres pour entrer dans l’encyclopédie par la feuille, le port et la manière d’habiter l’espace.</p></header>
         <div className="plants-editorial-genera-list">
-          {featuredFamilies.map((family, index) => {
+          {featuredFamilies.map((family) => {
             const image = featuredImages[family.slug];
             return <Link href={`/plantes/${family.slug}`} className="plants-editorial-genus" key={family.slug} data-reveal>
               <div className="plants-editorial-genus-media">
                 <Image unoptimized src={image.src} alt={image.alt} width={1200} height={900} sizes="(max-width: 700px) 100vw, 55vw" />
               </div>
               <div className="plants-editorial-genus-copy">
-                <span>{String(index + 1).padStart(2, "0")} · {family.eyebrow}</span>
                 <h3>{family.name}</h3>
                 <p>{family.description}</p>
                 <small>{image.note}</small>
-                <strong>{speciesCount(family.slug)} {speciesCount(family.slug) > 1 ? "fiches" : "fiche"} <Arrow /></strong>
+                <strong><VarietyCount count={speciesCount(family.slug)} /> <Arrow /></strong>
               </div>
             </Link>;
           })}
