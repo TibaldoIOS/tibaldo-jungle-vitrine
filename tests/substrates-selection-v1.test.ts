@@ -37,7 +37,8 @@ test("only two authorized press photographs, exact bytes and local delivery", ()
   const expected=["3db8dcc78a2eeccd76c2a8ae4014ea634dfec979c9e19cb73b5fb6896e4d3f58","ea642ab22fbe44ca9fd691d99d657a9faeef8d83f82dc8e9e361c0754c92e18a"];
   Object.values(supplierMedia).forEach((media,index)=>{
     assert.ok(media.source.startsWith("https://drive.google.com/file/d/"));
-    assert.equal(createHash("sha256").update(readFileSync(`public${media.src}`)).digest("hex"),expected[index]);
+    assert.ok(media.src.startsWith("/media/supplier-media/"));
+    assert.equal(createHash("sha256").update(readFileSync(`public${media.src.slice("/media".length)}`)).digest("hex"),expected[index]);
     assert.ok(media.alt.length>20);
   });
 });
