@@ -6,7 +6,8 @@ export const verifiedMediaApiContractVersion = "1.0";
 export const verifiedMediaStatusValues = ["VERIFIED_MEDIA", "HONEST_MEDIA_GAP"] as const;
 
 const canonicalMediaPath = (path: string) =>
-  path === "/media/anthurium-pallidiflorum-feuillage-tibaldo-jungle.webp"
+  path === "/media/anthurium-pallidiflorum-feuillage-tibaldo-jungle.webp" ||
+  path === "/media/documentary-media-wave-2-v1/anthurium-clarinervium-owner-2026-09.webp"
     ? path
     : path.replace(/^\/media\//, "/");
 

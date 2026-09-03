@@ -38,7 +38,9 @@ test("every verified media record has complete rights, a beta URL and a real ass
 });
 
 test("priority product identities return exact verified media or an honest gap", () => {
-  assert.equal(entry("anthurium", "clarinervium").media_status, "VERIFIED_MEDIA");
+  const clarinervium = entry("anthurium", "clarinervium");
+  assert.equal(clarinervium.media_status, "VERIFIED_MEDIA");
+  assert.match(clarinervium.primary_media_url!, /\/media\/documentary-media-wave-2-v1\/anthurium-clarinervium-owner-2026-09\.webp$/);
   assert.equal(entry("epipremnum", "aureum").media_status, "VERIFIED_MEDIA");
   assert.equal(entry("alocasia", "imperial-red").media_status, "HONEST_MEDIA_GAP");
   assert.equal(entry("anthurium", "pallidiflorum").media_status, "VERIFIED_MEDIA");
