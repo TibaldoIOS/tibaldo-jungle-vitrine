@@ -28,11 +28,11 @@ test("Wave 3 publishes ten exact documentary photographs with complete rights ev
   }
 });
 
-test("later waves and the Owner-authorized Pallidiflorum restore reduce honest gaps to 21", () => {
+test("later waves and Owner-authorized media reduce honest gaps to 20", () => {
   const gaps = plants.filter((plant) => documentaryGallery(plant).length === 0);
   assert.equal(plants.length, 96);
-  assert.equal(gaps.length, 21);
-  assert.equal(plants.length - gaps.length, 75);
+  assert.equal(gaps.length, 20);
+  assert.equal(plants.length - gaps.length, 76);
   for (const [genre, slug] of [
     ["monstera", "esqueleto"],
     ["monstera", "thai-constellation"],
@@ -42,7 +42,6 @@ test("later waves and the Owner-authorized Pallidiflorum restore reduce honest g
     ["anthurium", "papillilaminum-dark-phoenix"],
     ["alocasia", "imperial-red"],
     ["philodendron", "royal-queen"],
-    ["musa", "florida-variegata"],
   ]) {
     const plant = getPlant(genre, slug);
     assert.ok(plant, `${genre}/${slug}`);

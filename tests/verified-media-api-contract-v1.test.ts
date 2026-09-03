@@ -15,8 +15,8 @@ test("verified media API classifies all 96 canonical entries without fuzzy assoc
   const contracts = plants.map((plant) => toVerifiedMediaApiFields(plant, registryVersion));
   assert.equal(contracts.length, 96);
   assert.equal(new Set(contracts.map(({ jungle_slug }) => jungle_slug)).size, 96);
-  assert.equal(contracts.filter(({ media_status }) => media_status === "VERIFIED_MEDIA").length, 75);
-  assert.equal(contracts.filter(({ media_status }) => media_status === "HONEST_MEDIA_GAP").length, 21);
+  assert.equal(contracts.filter(({ media_status }) => media_status === "VERIFIED_MEDIA").length, 76);
+  assert.equal(contracts.filter(({ media_status }) => media_status === "HONEST_MEDIA_GAP").length, 20);
   assert.match(registryVersion, /^jungle-media-v1-[0-9a-f]{8}$/);
 });
 
