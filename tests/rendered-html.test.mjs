@@ -1081,8 +1081,8 @@ test("renders the Local Species SEO V1 pilot without inventing commerce", async 
     assert.match(html, new RegExp(`href=["']${genusPath.replaceAll("/", "\\/")}["']`, "i"), path);
     assert.match(html, /href=["']\/plantes["']/i, path);
     assert.match(html, /href=["']\/boutique-plantes-lille["']/i, path);
-    assert.match(html, /Les disponibilités et les prix varient selon les arrivages/i, path);
-    assert.doesNotMatch(html, /offre commerciale autoritaire|La fiche encyclopédique ne constitue pas une annonce/i, path);
+    assert.match(html, /Cette fiche botanique ne constitue pas un état du stock/i, path);
+    assert.match(html, /son prix et sa disponibilité sont indiqués[^]*par le Shop Tibaldo/i, path);
     assert.match(html, /"@type":\["GardenStore","LocalBusiness"\]/i, path);
     assert.match(html, /"name":"TIBALDO Jungle"/i, path);
     assert.doesNotMatch(html, /"@type":"Product"|"@type":"Offer"/i, path);

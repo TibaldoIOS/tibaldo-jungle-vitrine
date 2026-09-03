@@ -72,6 +72,13 @@ export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
   const isDeliciosa = plant.genre === "monstera" && plant.slug === "deliciosa";
   const isCycasRevoluta = plant.genre === "cycas" && plant.slug === "revoluta";
   const isBanana = plant.genre === "musa" || plant.genre === "ensete";
+  const isHeadingPilot = new Set([
+    "alocasia/imperial-red",
+    "anthurium/clarinervium",
+    "anthurium/pallidiflorum",
+    "anthurium/veitchii",
+    "monstera/thai-constellation",
+  ]).has(`${plant.genre}/${plant.slug}`);
   const faq = [
     ...plant.faq.filter((item) => !isInternalPhotoProductionCopy(item.question) && !isInternalPhotoProductionCopy(item.answer)),
     { question: `Quand rempoter ${plant.displayName} ?`, answer: plant.care.repotting },
@@ -87,12 +94,12 @@ export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
         <aside className={golden.chapterRail}><PlantSectionNav /></aside>
         <div className={golden.speciesStory}>
           <section className={golden.speciesIntro} data-reveal>
-            <p className="section-kicker">Portrait botanique</p>
+            <p className="section-kicker">{isHeadingPilot ? "Portrait botanique · Entretien et besoins" : "Portrait botanique"}</p>
             <div><h2>{plant.displayName}.<br /><em>Une présence à comprendre.</em></h2>{description.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
           </section>
 
           <section className={golden.identity} id="identite" aria-labelledby={`golden-identity-${plant.genre}-${plant.slug}`}>
-            <header data-reveal><p className="section-kicker">01 · Identité</p><h2 id={`golden-identity-${plant.genre}-${plant.slug}`}>Un nom précis.<br /><em>Un milieu à respecter.</em></h2></header>
+            <header data-reveal><p className="section-kicker">01 · Identité botanique</p><h2 id={`golden-identity-${plant.genre}-${plant.slug}`}>Un nom précis.<br /><em>Un milieu à respecter.</em></h2></header>
             <div className={golden.identityEditorial} data-reveal>
               <div className={golden.identityName}><span>Nom botanique</span><strong><ScientificName name={plant.botanicalName} /></strong>{plant.taxonomy.commonNames.length ? <small>{[...new Set(plant.taxonomy.commonNames)].join(" · ")}</small> : null}</div>
               <dl className={golden.identityRows}>
@@ -149,7 +156,7 @@ export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
           )}
 
           <section className={golden.needs} id="entretien" aria-labelledby={`golden-needs-${plant.genre}-${plant.slug}`}>
-            <header data-reveal><p className="section-kicker">03 · Les bons équilibres</p><h2 id={`golden-needs-${plant.genre}-${plant.slug}`}>Comprendre ses besoins,<br /><em>puis observer.</em></h2><p>Chaque besoin relie une méthode concrète aux signes lisibles sur la plante.</p></header>
+            <header data-reveal><p className="section-kicker">{isHeadingPilot ? "03 · Lumière, arrosage, humidité et substrat" : "03 · Les bons équilibres"}</p><h2 id={`golden-needs-${plant.genre}-${plant.slug}`}>Comprendre ses besoins,<br /><em>puis observer.</em></h2><p>Chaque besoin relie une méthode concrète aux signes lisibles sur la plante.</p></header>
             <PlantNeedsVisualSystem plant={plant} />
           </section>
           <SpeciesCareLinks plant={plant} />
@@ -169,7 +176,7 @@ export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
           )}
 
           <section className={golden.diagnostic} id="problemes" aria-labelledby={`golden-diagnostic-${plant.genre}-${plant.slug}`}>
-            <header data-reveal><p className="section-kicker">05 · Diagnostic prudent</p><h2 id={`golden-diagnostic-${plant.genre}-${plant.slug}`}>Lire ce que la plante raconte.</h2></header>
+            <header data-reveal><p className="section-kicker">{isHeadingPilot ? "05 · Problèmes fréquents · Diagnostic prudent" : "05 · Diagnostic prudent"}</p><h2 id={`golden-diagnostic-${plant.genre}-${plant.slug}`}>Lire ce que la plante raconte.</h2></header>
             <div className={golden.diagnosticList}>{plant.problems.map((problem, index) => <details key={problem.title} data-reveal><summary><span>0{index + 1}</span><strong>{problem.title}</strong><i className={canonical.plusMark} aria-hidden="true" /></summary><div><p><b>Cause probable.</b> {problem.cause}</p><p><b>Le bon réflexe.</b> {problem.advice}</p></div></details>)}</div>
             <aside className={golden.sosBridge} data-reveal><div><span>Un doute persiste ?</span><p>Une photographie aide à documenter le problème ; elle ne remplace pas la validation humaine Tibaldo.</p></div><Link href="/sos-plantes">Demander un avis · SOS Plantes <Arrow /></Link></aside>
           </section>
