@@ -89,3 +89,46 @@
 @media(max-width:800px) { .supplierStory { grid-template-columns: 1fr; } .supplierStory figure { min-height: 310px; } .supplierStory > div { padding: 28px; } .groupNav { grid-template-columns: 1fr 1fr; } .groupNav a { border-bottom: 1px solid #adb99a; } .materialGallery img { height: 180px; } }
 @media(max-width:600px) { .section { padding: 52px 0; } .guide h2 { font-size: 39px; } .choices { gap: 8px; } .choices a { font-size: 14px; padding: 12px; min-height: 48px; } .mixList { grid-template-columns: 1fr; } .mix { gap: 4px; padding: 25px; } .group { margin-top: 42px; } .groupHeading { gap: 16px; } .number { font-size: 36px; } .components { gap: 26px 18px; } .components h3 { font-size: 26px; overflow-wrap: anywhere; } .components p { font-size: 15px; } .mineralInner, .nutrition, .matchList { grid-template-columns: 1fr; gap: 22px; } .interlude .questions { grid-template-columns: 1fr; gap: 22px; } .questions li { font-size: 20px; } .matchList { gap: 0; } .sources ul { columns: 1; } .materialGallery { grid-template-columns: 1fr; } .materialGallery a { border-radius: 12px; display: grid; grid-template-columns: 110px 1fr; align-items: center; } .materialGallery img { height: 130px; } .materialGallery a > span { font-size: 24px; } .heroPhoto { object-position: 59% center; } .manifesto { padding-top: 45px; padding-bottom: 45px; } }
 @media(prefers-reduced-motion:reduce) { .guide *, .guide { scroll-behavior: auto !important; } }
+
+/* Product collection: authentic packaging, full framing, no decorative reveal. */
+.mixList { grid-template-columns: minmax(0,1fr); gap: 28px; }
+.mix { display: grid; grid-template-columns: minmax(0,38fr) minmax(0,62fr); gap: 0; padding: 0; border-radius: 22px; scroll-margin-top: 100px; }
+.packshot { margin: 0; min-width: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; background: #f6f3ec; border-radius: 20px; padding: 24px; }
+.packshot img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: contain; }
+.packshot figcaption { font-size: 10px; letter-spacing: .13em; color: #52634d; padding-top: 12px; }
+.mixCopy { min-width: 0; align-self: center; padding: clamp(26px,4vw,52px); }
+.mix .mixCopy h4 { font-size: clamp(34px,4vw,52px); margin-top: 0; }
+.mix .plants { font-size: 16px; margin-top: 16px; }
+.mix:nth-child(even) { grid-template-columns: minmax(0,62fr) minmax(0,38fr); }
+.mix:nth-child(even) .packshot { order: 2; }
+.mix:target .packshot { outline: 3px solid #638825; outline-offset: -7px; background: #f1f5e5; }
+.components { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 32px; }
+.components article { border-top: 0; padding: 0; background: #ececdb; border-radius: 20px; min-width: 0; }
+.components .packshot { padding: 24px 50px; }
+.componentCopy { padding: 26px 32px 32px; }
+.components .number { float: right; margin: 0 0 12px 18px; font-size: 35px; }
+.components a, .nutrition a { display: inline-flex; align-items: center; min-height: 44px; }
+.mineral .packshot { max-width: 430px; margin-top: 30px; }
+.nutrition article { display: grid; grid-template-columns: minmax(0,42fr) minmax(0,58fr); gap: 22px; align-items: center; }
+.nutrition article > div { min-width: 0; }
+.nutrition .packshot { padding: 12px; }
+.nutrition .packshot figcaption { font-size: 9px; letter-spacing: .05em; }
+.nutrition h4 { overflow-wrap: anywhere; }
+@media(max-width:1000px) {
+  .nutrition { gap: 28px; }
+  .nutrition article { grid-template-columns: minmax(0,1fr); gap: 18px; }
+  .nutrition .packshot { padding: 24px; }
+}
+@media(max-width:600px) {
+  .mix, .mix:nth-child(even) { grid-template-columns: minmax(0,1fr); gap: 0; }
+  .mix:nth-child(even) .packshot { order: 0; }
+  .mix .packshot { padding: 18px 28px; }
+  .mixCopy { padding: 26px; }
+  .mix .mixCopy h4 { font-size: 37px; }
+  .components { grid-template-columns: minmax(0,1fr); gap: 24px; }
+  .components .packshot { padding: 20px 32px; }
+  .componentCopy { padding: 24px; }
+  .nutrition .packshot { padding: 26px 42px; }
+  .nutrition article { padding: 24px 0; }
+  .mineralInner { gap: 30px; }
+}

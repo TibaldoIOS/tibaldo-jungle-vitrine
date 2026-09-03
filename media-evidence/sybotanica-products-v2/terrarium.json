@@ -1,0 +1,214 @@
+{
+  "id": 6212142563510,
+  "title": "Terrarium Mix",
+  "handle": "terrarium-substrate-mix-5-liter",
+  "description": "<p dir=\"ltr\">A terrarium substrate mix suited for any tropical or subtropical setup. The substrate holds moisture very well without becoming wet, plants will root steadily in it and springtails, isopods and reptiles will love it. The natural look makes it a great addition to any nature-like setup.</p>\n<p dir=\"ltr\" style=\"text-align: center;\"><iframe title=\"YouTube video player\" src=\"https://www.youtube.com/embed/UmdRs0ChQuo?si=W5oWjF0JhMOXipAe\" height=\"315\" width=\"560\"></iframe></p>",
+  "published_at": "2021-01-28T22:56:15+01:00",
+  "created_at": "2021-01-21T20:12:41+01:00",
+  "vendor": "Premium SYBASoil",
+  "type": "Houseplants Mixes",
+  "tags": [
+    "ABG_Mix",
+    "BigMac_Terrarium",
+    "Bioactive_tanks",
+    "Diy_kit_terrarium",
+    "DIY_SOIL_MIX",
+    "Hydroponic_gardening",
+    "import_2021_01_21_191112",
+    "Isopod_springtail",
+    "NOT-ON-SALE",
+    "Organic_substrate",
+    "Raw Materials",
+    "review-inventory",
+    "review-pricing",
+    "Substrate_terrarium",
+    "Terrarium_kit_sub",
+    "Terrarium_soil_mix",
+    "Tropical_isopod_s",
+    "Vivarium_paludarium"
+  ],
+  "price": 1299,
+  "price_min": 1299,
+  "price_max": 1299,
+  "available": true,
+  "price_varies": false,
+  "compare_at_price": null,
+  "compare_at_price_min": 0,
+  "compare_at_price_max": 0,
+  "compare_at_price_varies": false,
+  "variants": [
+    {
+      "id": 42999034904815,
+      "title": "5L",
+      "option1": "5L",
+      "option2": null,
+      "option3": null,
+      "sku": "SYB323",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 69666116141383,
+        "product_id": 6212142563510,
+        "position": 1,
+        "created_at": "2025-12-03T07:26:31+01:00",
+        "updated_at": "2025-12-03T07:43:35+01:00",
+        "alt": "Resealable bag of dark terrarium soil mix with spilled substrate, terrarium substrate",
+        "width": 2048,
+        "height": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Terrarium_93eb64a5-bd73-4c08-b6c7-6f09d4ffcd4d.jpg?v=1764744215",
+        "variant_ids": [
+          42999034904815
+        ]
+      },
+      "available": true,
+      "name": "Terrarium Mix - 5L",
+      "public_title": "5L",
+      "options": [
+        "5L"
+      ],
+      "price": 1299,
+      "weight": 2000,
+      "compare_at_price": null,
+      "inventory_management": "shopify",
+      "barcode": "8720615162239",
+      "featured_media": {
+        "alt": "Resealable bag of dark terrarium soil mix with spilled substrate, terrarium substrate",
+        "id": 55932492316999,
+        "position": 1,
+        "preview_image": {
+          "aspect_ratio": 1,
+          "height": 2048,
+          "width": 2048,
+          "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Terrarium_93eb64a5-bd73-4c08-b6c7-6f09d4ffcd4d.jpg?v=1764744215"
+        }
+      },
+      "quantity_rule": {
+        "min": 1,
+        "max": null,
+        "increment": 1
+      },
+      "quantity_price_breaks": [],
+      "requires_selling_plan": false,
+      "selling_plan_allocations": []
+    }
+  ],
+  "images": [
+    "//cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Terrarium_93eb64a5-bd73-4c08-b6c7-6f09d4ffcd4d.jpg?v=1764744215",
+    "//cdn.shopify.com/s/files/1/0531/2367/8390/products/Terrariummix.jpg?v=1764744215",
+    "//cdn.shopify.com/s/files/1/0531/2367/8390/products/Terrariumsubstratemixingredients.jpg?v=1766824283",
+    "//cdn.shopify.com/s/files/1/0531/2367/8390/files/Terrarium.jpg?v=1766824283",
+    "//cdn.shopify.com/s/files/1/0531/2367/8390/files/TerrariumHill.jpg?v=1766824283",
+    "//cdn.shopify.com/s/files/1/0531/2367/8390/files/TerrariumZoom.jpg?v=1766824283"
+  ],
+  "featured_image": "//cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Terrarium_93eb64a5-bd73-4c08-b6c7-6f09d4ffcd4d.jpg?v=1764744215",
+  "options": [
+    {
+      "name": "Size",
+      "position": 1,
+      "values": [
+        "5L"
+      ]
+    }
+  ],
+  "url": "/products/terrarium-substrate-mix-5-liter",
+  "media": [
+    {
+      "alt": "Resealable bag of dark terrarium soil mix with spilled substrate, terrarium substrate",
+      "id": 55932492316999,
+      "position": 1,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2048,
+        "width": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Terrarium_93eb64a5-bd73-4c08-b6c7-6f09d4ffcd4d.jpg?v=1764744215"
+      },
+      "aspect_ratio": 1,
+      "height": 2048,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Terrarium_93eb64a5-bd73-4c08-b6c7-6f09d4ffcd4d.jpg?v=1764744215",
+      "width": 2048
+    },
+    {
+      "alt": "Hand holding clump of dried sphagnum moss with roots, terrarium substrate",
+      "id": 31748198334703,
+      "position": 2,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2048,
+        "width": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/products/Terrariummix.jpg?v=1764744215"
+      },
+      "aspect_ratio": 1,
+      "height": 2048,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/products/Terrariummix.jpg?v=1764744215",
+      "width": 2048
+    },
+    {
+      "alt": "Hand holding soil, moss, charcoal, bark mix, terrarium substrate",
+      "id": 31748198301935,
+      "position": 3,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2048,
+        "width": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/products/Terrariumsubstratemixingredients.jpg?v=1766824283"
+      },
+      "aspect_ratio": 1,
+      "height": 2048,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/products/Terrariumsubstratemixingredients.jpg?v=1766824283",
+      "width": 2048
+    },
+    {
+      "alt": "Dark soil mix with white roots and wood chunks",
+      "id": 45384212316487,
+      "position": 4,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2048,
+        "width": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/Terrarium.jpg?v=1766824283"
+      },
+      "aspect_ratio": 1,
+      "height": 2048,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/Terrarium.jpg?v=1766824283",
+      "width": 2048
+    },
+    {
+      "alt": "Close-up of dark soil mix with roots and fibers",
+      "id": 45384212349255,
+      "position": 5,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2048,
+        "width": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/TerrariumHill.jpg?v=1766824283"
+      },
+      "aspect_ratio": 1,
+      "height": 2048,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/TerrariumHill.jpg?v=1766824283",
+      "width": 2048
+    },
+    {
+      "alt": "Close-up of dark soil mix with roots and debris",
+      "id": 45384212382023,
+      "position": 6,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2048,
+        "width": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/TerrariumZoom.jpg?v=1766824283"
+      },
+      "aspect_ratio": 1,
+      "height": 2048,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/TerrariumZoom.jpg?v=1766824283",
+      "width": 2048
+    }
+  ],
+  "requires_selling_plan": false,
+  "selling_plan_groups": []
+}

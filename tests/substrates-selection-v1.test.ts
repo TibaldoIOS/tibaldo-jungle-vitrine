@@ -21,10 +21,10 @@ test("editorial groups and encyclopedia destinations exist", () => {
     for (const slug of mix.hubs) assert.ok(plantFamilies.some(g => g.slug === slug && g.available), slug);
   }
 });
-test("product source registry does not grant rights to individual packshots; no runtime supplier fetch", () => {
+test("product source registry records bounded partner use; no runtime supplier fetch", () => {
   for (const entry of sourceRegistry) {
     assert.equal(new URL(entry.url).hostname, "www.sybotanica.com");
-    assert.equal(entry.reviewedAt, "2026-09-03"); assert.equal(entry.mediaRights, "NOT_ESTABLISHED_NO_SUPPLIER_IMAGE_USED");
+    assert.equal(entry.reviewedAt, "2026-09-03"); assert.equal(entry.mediaRights, "OWNER_CONFIRMED_PARTNERSHIP_BETA_USE");
   }
   const component = readFileSync("app/substrats/SubstrateSelection.tsx", "utf8");
   assert.doesNotMatch(component, /fetch\(|useEffect|use client|<iframe/);
@@ -33,7 +33,7 @@ test("product source registry does not grant rights to individual packshots; no 
 test("only two authorized press photographs, exact bytes and local delivery", () => {
   assert.equal(Object.keys(supplierMedia).length,2);
   assert.equal(supplierMediaRights.evidence,"https://www.sybotanica.com/pages/press");
-  assert.equal(supplierMediaRights.packshotRights,"NOT_ESTABLISHED_NOT_USED");
+  assert.equal(supplierMediaRights.packshotRights,"OWNER_CONFIRMED_PARTNERSHIP_BETA_USE");
   const expected=["3db8dcc78a2eeccd76c2a8ae4014ea634dfec979c9e19cb73b5fb6896e4d3f58","ea642ab22fbe44ca9fd691d99d657a9faeef8d83f82dc8e9e361c0754c92e18a"];
   Object.values(supplierMedia).forEach((media,index)=>{
     assert.ok(media.source.startsWith("https://drive.google.com/file/d/"));

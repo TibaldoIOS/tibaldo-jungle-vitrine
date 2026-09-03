@@ -1,0 +1,287 @@
+{
+  "id": 7464598208751,
+  "title": "Hoya Mix",
+  "handle": "hoya-soil-mix-5l",
+  "description": "<p><b><i>This SYBASoil mix can contain live worms!</i></b></p>\n<h2>How to Use the Hoya Soil Mix</h2>\n<p><span style=\"font-weight: 400;\">Using the mix is easy! Start with removing as much of the old soil as possible. Gently squeeze the pot while holding it sideways to loosen up the plant. Run the roots under lukewarm tap water to remove the last pieces and bits.</span></p>\n<p><span style=\"font-weight: 400;\">Also, make sure to remove any dead foliage that may still be on the plant using scissors. Now your plant is ready for its fresh Hoya soil. Add a small layer of Hoya mix at the bottom of the pot.</span></p>\n<p><span style=\"font-weight: 400;\">Place the plant in the pot, and slowly add Hoya soil to the sides to fill it up. Make sure that the point where the roots meet the plant is just buried under the Hoya soil.</span></p>\n<p><span style=\"font-weight: 400;\">Lightly pat the Hoya mix down into the pot. Make sure to water the Hoya mix thoroughly after repotting, as this helps settle the mix and roots down.</span></p>\n<h2>Why the Hoya Mix Works</h2>\n<p><span style=\"font-weight: 400;\">This hoya mix contains everything your Hoya could be asking for. The added activated carbon helps prevent root-rot-related issues. There is lots of orchid bark &amp; coco husk to support space &amp; aeration for the larger roots. The mix drains relatively quickly as Hoyas prefer to be left to dry between watering.</span></p>\n<ul></ul>\n<h2>The Original Habitat of the Hoya Plants</h2>\n<p><span style=\"font-weight: 400;\">Hoya’s originate from tropical Asia, the Pacific Islands and Australia. They are usually trailing or climbing vines and are epiphytic, meaning they can grow out of the soil on surfaces like trees &amp; rocks. They are comparable to aroid care, except the hoya mix can dry out more often in between watering.</span></p>\n<h2>How to Care for Hoya Plants</h2>\n<p><span style=\"font-weight: 400;\">Hoya’s thrive on bright, indirect sunlight and can be left to dry for quite a bit. Similar to succulents, you can check to see if a hoya is thirsty by feeling the leaves. If they are not as plump as before they are probably thirsty and can use a drink.</span><br></p>\n<ul></ul>",
+  "published_at": "2021-12-11T14:54:53+01:00",
+  "created_at": "2021-11-29T21:18:56+01:00",
+  "vendor": "Premium SYBASoil",
+  "type": "Houseplants Mixes",
+  "tags": [
+    "guarantee",
+    "NOT-ON-SALE"
+  ],
+  "price": 499,
+  "price_min": 499,
+  "price_max": 1299,
+  "available": true,
+  "price_varies": true,
+  "compare_at_price": null,
+  "compare_at_price_min": 0,
+  "compare_at_price_max": 0,
+  "compare_at_price_varies": false,
+  "variants": [
+    {
+      "id": 53723703312711,
+      "title": "1L",
+      "option1": "1L",
+      "option2": null,
+      "option3": null,
+      "sku": "SYB015-1",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 74227866206535,
+        "product_id": 7464598208751,
+        "position": 8,
+        "created_at": "2026-04-17T11:22:03+02:00",
+        "updated_at": "2026-04-17T11:22:07+02:00",
+        "alt": "Resealable soil bag with pink flower graphics, standing on soil",
+        "width": 2048,
+        "height": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_1LPouch_Hoya.jpg?v=1776417727",
+        "variant_ids": [
+          53723703312711
+        ]
+      },
+      "available": false,
+      "name": "Hoya Mix - 1L",
+      "public_title": "1L",
+      "options": [
+        "1L"
+      ],
+      "price": 499,
+      "weight": 500,
+      "compare_at_price": null,
+      "inventory_management": "shopify",
+      "barcode": "8720615167791",
+      "featured_media": {
+        "alt": "Resealable soil bag with pink flower graphics, standing on soil",
+        "id": 58007905632583,
+        "position": 8,
+        "preview_image": {
+          "aspect_ratio": 1,
+          "height": 2048,
+          "width": 2048,
+          "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_1LPouch_Hoya.jpg?v=1776417727"
+        }
+      },
+      "quantity_rule": {
+        "min": 1,
+        "max": null,
+        "increment": 1
+      },
+      "quantity_price_breaks": [],
+      "requires_selling_plan": false,
+      "selling_plan_allocations": []
+    },
+    {
+      "id": 42999033135343,
+      "title": "5L",
+      "option1": "5L",
+      "option2": null,
+      "option3": null,
+      "sku": "SYB917",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 69665988215111,
+        "product_id": 7464598208751,
+        "position": 1,
+        "created_at": "2025-12-03T07:25:36+01:00",
+        "updated_at": "2025-12-03T07:41:53+01:00",
+        "alt": "Bag of Hoya premium soil mix with pile, best soil for hoya",
+        "width": 2048,
+        "height": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Hoya_2c07a22d-a8aa-4ae9-a656-8d06567bcb8f.jpg?v=1764744113",
+        "variant_ids": [
+          42999033135343
+        ]
+      },
+      "available": true,
+      "name": "Hoya Mix - 5L",
+      "public_title": "5L",
+      "options": [
+        "5L"
+      ],
+      "price": 1299,
+      "weight": 2400,
+      "compare_at_price": null,
+      "inventory_management": "shopify",
+      "barcode": "8720615165650",
+      "featured_media": {
+        "alt": "Bag of Hoya premium soil mix with pile, best soil for hoya",
+        "id": 55932365209927,
+        "position": 1,
+        "preview_image": {
+          "aspect_ratio": 1,
+          "height": 2048,
+          "width": 2048,
+          "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Hoya_2c07a22d-a8aa-4ae9-a656-8d06567bcb8f.jpg?v=1764744113"
+        }
+      },
+      "quantity_rule": {
+        "min": 1,
+        "max": null,
+        "increment": 1
+      },
+      "quantity_price_breaks": [],
+      "requires_selling_plan": false,
+      "selling_plan_allocations": []
+    }
+  ],
+  "images": [
+    "//cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Hoya_2c07a22d-a8aa-4ae9-a656-8d06567bcb8f.jpg?v=1764744113",
+    "//cdn.shopify.com/s/files/1/0531/2367/8390/products/Hoyasoilmix.jpg?v=1764744113",
+    "//cdn.shopify.com/s/files/1/0531/2367/8390/products/Hoyasoilmixlifestylephoto_1.jpg?v=1764744113",
+    "//cdn.shopify.com/s/files/1/0531/2367/8390/products/Hoyasoilmixlifestylephoto_2.jpg?v=1764744113",
+    "//cdn.shopify.com/s/files/1/0531/2367/8390/files/Hoya.jpg?v=1764744113",
+    "//cdn.shopify.com/s/files/1/0531/2367/8390/files/HoyaHill.jpg?v=1764744113",
+    "//cdn.shopify.com/s/files/1/0531/2367/8390/files/HoyaZoom.jpg?v=1764744113",
+    "//cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_1LPouch_Hoya.jpg?v=1776417727"
+  ],
+  "featured_image": "//cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Hoya_2c07a22d-a8aa-4ae9-a656-8d06567bcb8f.jpg?v=1764744113",
+  "options": [
+    {
+      "name": "Size",
+      "position": 1,
+      "values": [
+        "1L",
+        "5L"
+      ]
+    }
+  ],
+  "url": "/products/hoya-soil-mix-5l",
+  "media": [
+    {
+      "alt": "Bag of Hoya premium soil mix with pile, best soil for hoya",
+      "id": 55932365209927,
+      "position": 1,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2048,
+        "width": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Hoya_2c07a22d-a8aa-4ae9-a656-8d06567bcb8f.jpg?v=1764744113"
+      },
+      "aspect_ratio": 1,
+      "height": 2048,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Hoya_2c07a22d-a8aa-4ae9-a656-8d06567bcb8f.jpg?v=1764744113",
+      "width": 2048
+    },
+    {
+      "alt": "Hand holding chunky brown potting mix with perlite, best soil for hoya",
+      "id": 31748196172015,
+      "position": 2,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2048,
+        "width": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/products/Hoyasoilmix.jpg?v=1764744113"
+      },
+      "aspect_ratio": 1,
+      "height": 2048,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/products/Hoyasoilmix.jpg?v=1764744113",
+      "width": 2048
+    },
+    {
+      "alt": "Wavy variegated Hoya leaves in green and pink, best soil for hoya",
+      "id": 31748196237551,
+      "position": 3,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2048,
+        "width": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/products/Hoyasoilmixlifestylephoto_1.jpg?v=1764744113"
+      },
+      "aspect_ratio": 1,
+      "height": 2048,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/products/Hoyasoilmixlifestylephoto_1.jpg?v=1764744113",
+      "width": 2048
+    },
+    {
+      "alt": "Close-up of glossy Hoya leaves and stems in pot",
+      "id": 31748196270319,
+      "position": 4,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2048,
+        "width": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/products/Hoyasoilmixlifestylephoto_2.jpg?v=1764744113"
+      },
+      "aspect_ratio": 1,
+      "height": 2048,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/products/Hoyasoilmixlifestylephoto_2.jpg?v=1764744113",
+      "width": 2048
+    },
+    {
+      "alt": "Close-up of dark soil mix with perlite specks",
+      "id": 45384226767175,
+      "position": 5,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2048,
+        "width": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/Hoya.jpg?v=1764744113"
+      },
+      "aspect_ratio": 1,
+      "height": 2048,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/Hoya.jpg?v=1764744113",
+      "width": 2048
+    },
+    {
+      "alt": "Close-up of dark soil mix with perlite and roots",
+      "id": 45384226799943,
+      "position": 6,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2048,
+        "width": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/HoyaHill.jpg?v=1764744113"
+      },
+      "aspect_ratio": 1,
+      "height": 2048,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/HoyaHill.jpg?v=1764744113",
+      "width": 2048
+    },
+    {
+      "alt": "Close-up of dark soil mix with perlite chunks",
+      "id": 45384226832711,
+      "position": 7,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2048,
+        "width": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/HoyaZoom.jpg?v=1764744113"
+      },
+      "aspect_ratio": 1,
+      "height": 2048,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/HoyaZoom.jpg?v=1764744113",
+      "width": 2048
+    },
+    {
+      "alt": "Resealable soil bag with pink flower graphics, standing on soil",
+      "id": 58007905632583,
+      "position": 8,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2048,
+        "width": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_1LPouch_Hoya.jpg?v=1776417727"
+      },
+      "aspect_ratio": 1,
+      "height": 2048,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_1LPouch_Hoya.jpg?v=1776417727",
+      "width": 2048
+    }
+  ],
+  "requires_selling_plan": false,
+  "selling_plan_groups": []
+}

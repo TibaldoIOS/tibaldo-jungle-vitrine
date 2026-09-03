@@ -4,6 +4,7 @@ import { substrates } from "./data";
 import { supplierMedia, supplierMediaRights } from "./supplier-media";
 import { mixGroups, readyMixes, plantMixMapping, selectedComponents, mineral, nutrition, sourceRegistry, sourceReviewedAt } from "./selection";
 import styles from "./selection.module.css";
+import ProductPackshot from "./ProductPackshot";
 
 export default function SubstrateSelection() {
   return <div className={styles.guide} data-substrate-guide>
@@ -33,8 +34,9 @@ export default function SubstrateSelection() {
           <header id={`profil-${group.id}`} className={styles.groupHeading}><span className={styles.number}>0{index + 1}</span><div><p className="section-kicker">{group.label}</p><h3>{group.title}</h3><p>{group.intro}</p></div></header>
           <div className={styles.mixList}>
             {readyMixes.filter(mix => mix.group === group.id).map(mix => <article id={`mix-${mix.id}`} key={mix.id} className={styles.mix} tabIndex={-1}>
-              <div><p className={styles.profile}>{mix.profile}</p><h4>{mix.name}</h4><p className={styles.plants}>Pour {mix.plants.join(" · ")}</p></div>
-              <div><p>{mix.why}</p><details><summary>Ce qu’il y a dans le mélange <span aria-hidden="true">+</span></summary><p>{mix.ingredients}. Liste indicative, non exhaustive.</p></details><a className={styles.productLink} href={mix.source}>Voir {mix.name} chez Sybotanica ↗</a>
+              <ProductPackshot id={mix.id} />
+              <div className={styles.mixCopy}><h4>{mix.name}</h4><p className={styles.profile}>{mix.profile}</p><p className={styles.plants}>Pour {mix.plants.join(" · ")}</p>
+                <p>{mix.why}</p><details><summary>Ce qu’il y a dans le mélange <span aria-hidden="true">+</span></summary><p>{mix.ingredients}. Liste indicative, non exhaustive.</p></details><a className={styles.productLink} href={mix.source}>Voir {mix.name} chez Sybotanica ↗</a>
                 <div className={styles.hubLinks}>{mix.hubs.map(hub => <Link key={hub} href={`/plantes/${hub}`}>Explorer {hub === "fougeres" ? "les fougères" : hub} ↗</Link>)}</div>
               </div>
             </article>)}
@@ -51,27 +53,27 @@ export default function SubstrateSelection() {
 
     <section id="selection-composants" className={styles.section} aria-labelledby="components-title"><div className="shell">
       <p className="section-kicker">03 · La fonction avant la recette</p><h2 id="components-title">Composer<br /><em>son propre mélange.</em></h2>
-      <div className={styles.components}>{selectedComponents.map((item, index) => <article key={item.id}><span className={styles.number}>0{index + 1}</span><p className={styles.profile}>{item.role}</p><h3>{item.name}</h3><p>{item.text}</p><a href={item.source}>Lire la fiche fabricant ↗</a></article>)}</div>
+      <div className={styles.components}>{selectedComponents.map((item, index) => <article key={item.id}><ProductPackshot id={item.id} /><div className={styles.componentCopy}><span className={styles.number}>0{index + 1}</span><h3>{item.name}</h3><p className={styles.profile}>{item.role}</p><p>{item.text}</p><a href={item.source}>Lire la fiche fabricant ↗</a></div></article>)}</div>
       <div className={styles.materialGallery}>{["ecorce-de-pin","perlite","sphaigne-sechee"].map(slug=>{const item=substrates.find(s=>s.slug===slug)!;return <Link key={slug} href={`/substrats/${slug}`}><Image unoptimized src={item.image} width={600} height={460} alt={item.imageAlt} loading="lazy"/><span>{item.name} <span aria-hidden="true">↗</span></span></Link>;})}</div><p className={styles.note}>La matériauthèque Jungle : vues de matières, pas des photographies des mélanges Sybotanica.</p>
       <a className={styles.textLink} href="#composants">Retrouver les neuf guides de matières Jungle ↓</a>
     </div></section>
 
     <section id="mineral" className={`${styles.section} ${styles.mineral}`} aria-labelledby="mineral-title"><div className={`shell ${styles.mineralInner}`}>
-      <div><p className="section-kicker">04 · Changer de milieu</p><h2 id="mineral-title">Passer<br /><em>au minéral.</em></h2><p className={styles.mineralNames}>{mineral.name}</p></div>
+      <div><p className="section-kicker">04 · Changer de milieu</p><h2 id="mineral-title">Passer<br /><em>au minéral.</em></h2><p className={styles.mineralNames}>{mineral.name}</p><ProductPackshot id="mineral" /></div>
       <div><p className={styles.profile}>{mineral.currentName}</p><p>{mineral.text}</p><p className={styles.note}>La nutrition se gère séparément dans cette base non fertilisée. Une transition de culture se prépare : elle n’est pas un remède universel à une plante en difficulté.</p><a href={mineral.source}>Comprendre la base minérale ↗</a></div>
     </div></section>
 
     <section id="nutrition" className={styles.section} aria-labelledby="nutrition-title"><div className="shell">
       <p className="section-kicker">05 · Accompagner la croissance</p><h2 id="nutrition-title">Nourrir,<br /><em>sans surcharger.</em></h2>
       <p className={styles.lead}>Le substrat porte les racines ; la fertilisation apporte des éléments nutritifs. Avant tout ajout, vérifiez ce que contient déjà le mélange et suivez la notice du produit exact.</p>
-      <div className={styles.nutrition}>{["slow", "liquid"].map(mode => <div key={mode}><h3>{mode === "slow" ? "Libération lente" : "Nutrition liquide"}</h3><p>{mode === "slow" ? "Un apport progressif dans le substrat." : "Un apport dilué dans l’eau d’arrosage."}</p>{nutrition.filter(item => item.mode === mode).map(item => <article key={item.id}><p className={styles.profile}>{item.for}</p><h4>{item.name}</h4><p>{item.text}</p><a href={item.source}>Consulter la notice ↗</a></article>)}</div>)}</div>
+      <div className={styles.nutrition}>{["slow", "liquid"].map(mode => <div key={mode}><h3>{mode === "slow" ? "Libération lente" : "Nutrition liquide"}</h3><p>{mode === "slow" ? "Un apport progressif dans le substrat." : "Un apport dilué dans l’eau d’arrosage."}</p>{nutrition.filter(item => item.mode === mode).map(item => <article key={item.id}><ProductPackshot id={item.id} /><div><h4>{item.name}</h4><p className={styles.profile}>{item.for}</p><p>{item.text}</p><a href={item.source}>Consulter la notice ↗</a></div></article>)}</div>)}</div>
       <p className={styles.note}>Ne cumulez pas les apports par défaut. Certains mélanges sont déjà fertilisés ; le fabricant prévoit une période sans ajout après rempotage. Les plantes carnivores ne relèvent pas automatiquement de ces programmes de nutrition. Aucun dosage universel n’est proposé ici.</p>
     </div></section>
 
     <section className={`${styles.section} ${styles.matching}`} aria-labelledby="matching-title"><div className="shell">
       <p className="section-kicker">Le mémo Jungle</p><h2 id="matching-title">De la plante<br /><em>au mélange.</em></h2>
       <details className={styles.memo}><summary>Consulter les {plantMixMapping.length} correspondances plante → mélange</summary><div className={styles.matchList}>{plantMixMapping.map(item => <a key={item.plant} href={`#mix-${item.mixId}`}><span>{item.plant}</span><span>{item.mixName} ↗</span></a>)}</div></details>
-      <details className={styles.sources}><summary>Sources, photographies & méthode · {sourceRegistry.length} fiches</summary><p>Fiches fabricant consultées le {sourceReviewedAt}. Synthèses originales en français ; ingrédients principaux uniquement. Les noms commerciaux peuvent évoluer. Les promesses absolues de prévention des maladies ne sont pas reprises.</p><p>{supplierMediaRights.credit}. Deux photographies issues de la médiathèque mise à disposition pour un usage commercial. Les packshots individuels du catalogue ne sont pas repris.</p><a href={supplierMediaRights.evidence}>Autorisation et médiathèque officielle ↗</a><ul>{sourceRegistry.map(item => <li key={item.url}><a href={item.url}>{item.name} ↗</a></li>)}</ul></details>
+      <details className={styles.sources}><summary>Sources, photographies & méthode · {sourceRegistry.length} fiches</summary><p>Fiches fabricant consultées le {sourceReviewedAt}. Synthèses originales en français ; ingrédients principaux uniquement. Les noms commerciaux peuvent évoluer. Les promesses absolues de prévention des maladies ne sont pas reprises.</p><p>{supplierMediaRights.credit}. Deux photographies issues de la médiathèque mise à disposition pour un usage commercial. Visuels des 24 produits : Sybotanica, depuis les fiches officielles ci-dessous, présentés dans le cadre du partenariat déclaré par Tibaldo. Conditionnements illustratifs : formats et disponibilité à confirmer au Studio.</p><a href={supplierMediaRights.evidence}>Autorisation et médiathèque officielle du kit presse ↗</a><ul>{sourceRegistry.map(item => <li key={item.url}><a href={item.url}>{item.name} ↗</a></li>)}</ul></details>
     </div></section>
   </div>;
 }
