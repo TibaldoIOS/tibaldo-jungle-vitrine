@@ -11,7 +11,16 @@ const materials = [
   { token: "vermiculite", href: "/substrats/vermiculite", label: "Vermiculite" },
 ] as const;
 
+const pilotSpecies = new Set([
+  "alocasia/imperial-red",
+  "anthurium/clarinervium",
+  "anthurium/pallidiflorum",
+  "anthurium/veitchii",
+  "monstera/thai-constellation",
+]);
+
 export default function SpeciesCareLinks({ plant }: { plant: PlantEntry }) {
+  if (!pilotSpecies.has(`${plant.genre}/${plant.slug}`)) return null;
   const substrate = plant.care.substrate.toLocaleLowerCase("fr-FR");
   const materialLinks = materials.filter((item) => substrate.includes(item.token)).slice(0, 2);
 

@@ -32,8 +32,9 @@ export default function SpeciesLocalStudio({
           sur la lumière, l’arrosage, les racines et le substrat.
         </p>
         <p>
-          Les disponibilités et les prix varient selon les arrivages. Consultez
-          le Shop ou contactez le Studio pour connaître la sélection du moment.
+          Cette fiche botanique ne constitue pas un état du stock. Lorsqu’une
+          offre commerciale existe, son prix et sa disponibilité sont indiqués
+          par le Shop Tibaldo.
         </p>
       </div>
       <aside className="species-local-studio-card" aria-label="Adresse et liens utiles">
