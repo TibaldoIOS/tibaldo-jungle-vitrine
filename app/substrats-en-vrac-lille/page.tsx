@@ -1,6 +1,41 @@
 import type { Metadata } from "next";
 import LocalSeoPage from "../LocalSeoPage";
+import { substrateLocalCommerce as local, substrateLocalFaq } from "../substrats/local-commerce";
 
-export const metadata: Metadata = { title: "Substrats en vrac à Lille | Terreau, perlite, sphaigne", description: "Substrats pour plantes en vrac à Lille : terreau, perlite, sphaigne, écorce, zéolite et mélanges chez Tibaldo Jungle.", alternates: { canonical: "/substrats-en-vrac-lille" }, openGraph: { title: "Substrats en vrac pour plantes à Lille", description: "Achetez la juste quantité ou composez un mélange adapté avec Tibaldo Jungle à Lille.", url: "/substrats-en-vrac-lille", images: [{ url: "/substrats/perlite-substrat-plantes-lille.jpg", alt: "Perlite et substrats en vrac chez Tibaldo Jungle à Lille" }] } };
+const title = "Sybotanica & substrats en vrac à Lille | TIBALDO Jungle";
+const description = "Revendeur Sybotanica à Lille : substrats, conseil et retrait au Studio. Achat sur place, téléphone ou click & collect selon disponibilité. Ouverture le 26 septembre.";
 
-export default function SubstratsVracLille() { return <LocalSeoPage canonical="/substrats-en-vrac-lille" eyebrow="Substrats en vrac · Lille" title="La juste matière" accent="dans la juste quantité." intro="Terreau, perlite, sphaigne, écorce, zéolite : composez un substrat adapté sans multiplier les sacs." sectionTitle="Un bon substrat" sectionAccent="est un équilibre vivant." paragraphs={["Le substrat ne sert pas seulement à tenir une plante droite. Il organise la circulation de l’air, la disponibilité de l’eau et la stabilité des racines. Deux plantes installées dans la même pièce peuvent avoir besoin de mélanges très différents selon leur origine, leur système racinaire et votre manière d’arroser.", "À Lille, Tibaldo Jungle propose des composants horticoles en vrac pour acheter la quantité utile et éviter le gaspillage. Vous pouvez repartir avec un composant seul ou demander un mélange préparé selon votre plante : terreau Signature, écorce de pin, chips de coco, perlite, sphaigne séchée, charbon actif, billes d’argile, vermiculite et zéolite."]} highlights={[{ title: "À la juste quantité", copy: "Achetez ce dont vous avez besoin pour un pot, une collection ou un projet de multiplication." }, { title: "Mélanges personnalisés", copy: "La granulométrie et la rétention sont ajustées à la plante, au contenant et à votre fréquence d’arrosage." }, { title: "Conseil pédagogique", copy: "Chaque composant est expliqué : son rôle, ses limites et les plantes auxquelles il convient réellement." }]} faq={[{ question: "Où acheter de la perlite ou de la sphaigne à Lille ?", answer: "Tibaldo Jungle propose des composants de substrat en vrac au 3 place de l’Arbonnoise à Lille, notamment perlite, sphaigne séchée, écorce." }, { question: "Puis-je acheter une petite quantité de substrat ?", answer: "Oui. La vente en vrac permet d’acheter une quantité adaptée à un seul rempotage comme à plusieurs plantes." }, { question: "Pouvez-vous préparer un mélange pour mon Alocasia ou mon Anthurium ?", answer: "Oui. Le mélange est ajusté selon l’espèce, le pot, la lumière de votre intérieur et votre manière d’arroser." }, { question: "Quel substrat choisir pour éviter la pourriture ?", answer: "Il n’existe pas de recette universelle. Un mélange plus aéré peut aider, mais le volume du pot, la lumière et le rythme d’arrosage doivent aussi être examinés." }]} links={[{ href: "/substrats", label: "Guide des composants", copy: "Comparer les propriétés et les usages de chaque matière." }, { href: "/rempotage", label: "Rempotage à Lille", copy: "Faire observer les racines et choisir un mélange adapté." }, { href: "/plantes", label: "Besoins des plantes", copy: "Retrouver les conseils de substrat dans chaque fiche végétale." }]} />; }
+export const metadata: Metadata = {
+  title, description,
+  alternates: { canonical: "/substrats-en-vrac-lille" },
+  openGraph: { title, description, url: "/substrats-en-vrac-lille", images: [{ url: "/substrats/perlite-substrat-plantes-lille.jpg", alt: "Perlite et substrats en vrac chez Tibaldo Jungle à Lille" }] },
+};
+
+export default function SubstratsVracLille() {
+  return <LocalSeoPage canonical="/substrats-en-vrac-lille"
+    eyebrow="Revendeur Sybotanica · Lille"
+    title="Vos substrats à Lille,"
+    accent="le conseil en plus."
+    intro="Mélanges Sybotanica et composants horticoles en vrac : choisissez pour votre plante, préparez votre achat et retrouvez-nous au Studio Végétal."
+    notice={{ eyebrow: "Préparer l’ouverture", title: `Rendez-vous le ${local.openingDate}`, copy: "Achat sur place au Studio, contact par téléphone ou click & collect via le Shop lorsque les références et le retrait sont activés. Vérifiez le mélange, le volume et le conditionnement avant de vous déplacer." }}
+    sectionTitle="Une matière adaptée."
+    sectionAccent="Une adresse à Lille."
+    paragraphs={[
+      "TIBALDO Jungle est revendeur Sybotanica au Studio Végétal, 3 place de l’Arbonnoise, 59000 Lille, près du métro Cormontaigne. À partir du 26 septembre 2026, le conseil sur place vous aide à choisir selon la plante, le pot, la lumière et vos habitudes d’arrosage. Pour préparer votre visite, appelez le 07 43 72 70 79.",
+      "Mélange aéré pour les racines d’un Monstera ou d’un Anthurium, rétention plus régulière pour une Calathea, drainage pour un cactus : la fonction compte avant le nom du sac. Le guide compare 13 mélanges Sybotanica ; il ne représente pas un inventaire en temps réel.",
+      "La matériauthèque Jungle présente aussi terreau, écorce de pin, chips de coco, perlite, sphaigne séchée, charbon actif, billes d’argile, vermiculite et zéolite. La vente en vrac permet de rechercher la quantité utile pour un rempotage. Vérifiez avec le Studio le format proposé : une référence Sybotanica n’est pas automatiquement vendue en vrac.",
+      local.nearby, local.metro, local.region,
+    ]}
+    highlights={[
+      { title: "Choisir sur place", copy: "Au Studio de Lille dès l’ouverture, échangez sur votre plante et choisissez parmi les références disponibles. Le volume du pot et vos conditions de culture guident le conseil." },
+      { title: "Préparer par téléphone", copy: "Au 07 43 72 70 79, précisez la plante, le mélange envisagé et le volume. Confirmez avec nous la disponibilité et les modalités avant de faire le déplacement." },
+      { title: "Retirer après commande", copy: local.shopNotice + " Attendez la confirmation de préparation avant le retrait à Lille." },
+    ]}
+    faq={[...substrateLocalFaq]}
+    links={[
+      { href: "/substrats", label: "Choisir son mélange Sybotanica", copy: "Comparer les mélanges par plante, comprendre les composants et retrouver les sources du fabricant." },
+      { href: "/rempotage", label: "Rempotage à Lille", copy: "Faire observer les racines et discuter du pot et du substrat adaptés." },
+      { href: "/contact", label: "Contacter le Studio", copy: "Préparer votre visite, vérifier un conditionnement ou poser une question avant de venir." },
+    ]}
+  />;
+}

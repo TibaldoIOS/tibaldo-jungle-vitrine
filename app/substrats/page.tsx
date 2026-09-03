@@ -8,10 +8,11 @@ import OpeningEventLink from "../OpeningEventLink";
 import SubstrateSelection from "./SubstrateSelection";
 import styles from "./selection.module.css";
 import { supplierMedia } from "./supplier-media";
+import LocalSubstrateVisit from "./LocalSubstrateVisit";
 
 export const metadata: Metadata = {
-  title: "Substrats en vrac à Lille | Guide Tibaldo Jungle",
-  description: "Comprendre terreau, perlite, sphaigne, écorce et zéolite pour composer un substrat adapté à chaque plante d’intérieur.",
+  title: "Substrats Sybotanica : guide & conseils à Lille | TIBALDO Jungle",
+  description: "Comparez 13 mélanges Sybotanica et les composants en vrac. Conseil au Studio de Lille, achat sur place, téléphone et click & collect selon disponibilité.",
   alternates: { canonical: "/substrats" },
   keywords: ["substrats en vrac Lille", "terreau Lille", "perlite Lille", "sphaigne Lille", "écorce de pin Lille", "zéolite Lille"],
   openGraph: {
@@ -19,8 +20,8 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "/substrats",
     siteName: "Studio Végétal — Tibaldo Jungle",
-    title: "Substrats en vrac à Lille | Guide Tibaldo Jungle",
-    description: "Découvrez le rôle de dix composants et apprenez à composer un mélange adapté aux racines de vos plantes d’intérieur.",
+    title: "Substrats Sybotanica : guide & conseils à Lille | TIBALDO Jungle",
+    description: "Treize mélanges Sybotanica, neuf guides de matières et le conseil du Studio lillois pour choisir un substrat adapté à vos plantes.",
     images: [{ url: "/advice-rempotage.jpg", width: 1200, height: 630, alt: "Substrats et rempotage pour plantes d’intérieur à Lille" }],
   },
 };
@@ -31,9 +32,9 @@ const structuredData = {
     {
       "@type": "CollectionPage",
       "@id": "https://jungle.tibaldo.fr/substrats#page",
-      name: "Substrats en vrac à Lille",
+      name: "Guide des substrats Sybotanica et composants en vrac à Lille",
       url: "https://jungle.tibaldo.fr/substrats",
-      description: "Composants horticoles en vrac et conseils de mélange pour plantes d’intérieur à Lille.",
+      description: "Guide de choix des mélanges Sybotanica et des composants horticoles, avec conseil au Studio Végétal de Lille.",
       isPartOf: { "@id": "https://jungle.tibaldo.fr/#website" },
       about: { "@id": "https://jungle.tibaldo.fr/#store" },
       mainEntity: { "@id": "https://jungle.tibaldo.fr/substrats#list" },
@@ -66,12 +67,13 @@ export default function SubstratesPage() {
         <div className="inner-hero-shade" aria-hidden="true" />
         <SiteHeader />
         <div className="shell inner-hero-content">
-          <p className="eyebrow"><span /> Substrats en vrac · Lille</p>
+          <p className="eyebrow"><span /> Substrats Sybotanica & matières en vrac · Lille</p>
           <h1><span className="hero-line"><span>La matière juste,</span></span><span className="hero-line"><span>pour des racines <em>vivantes.</em></span></span></h1>
           <p>Aéré, drainant, rétenteur ou minéral : trouvez un mélange adapté à votre plante et comprenez ce qu’il apporte à ses racines.</p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
             <a className="button button-light" href="#trouver">Trouver mon substrat <Arrow /></a>
             <a className="button button-light" href="#selection-composants">Comprendre les composants <Arrow /></a>
+            <a className="button button-light" href="#acheter-a-lille">Achat & retrait à Lille <Arrow /></a>
           </div>
         </div>
         <div className="shell inner-hero-index" aria-hidden="true"><span>13 mélanges</span><span>Comprendre la matière</span><span>Conseils au Studio</span></div>
@@ -81,10 +83,11 @@ export default function SubstratesPage() {
         <div><p className="section-kicker">Le substrat n’est pas un détail</p><h2>Tout commence<br />sous la surface.</h2></div>
         <div className="manifesto-copy">
           <p>Une plante peut avoir la bonne lumière et le bon arrosage, mais peiner si ses racines manquent d’air. Chez Tibaldo Jungle, le substrat se pense comme un milieu vivant : il doit soutenir, respirer, drainer et garder juste ce qu’il faut d’humidité.</p>
-          <p>Au Studio Végétal de Lille, nous vous aidons à choisir le volume utile et à lire les propriétés d’un mélange. La sélection Sybotanica présentée ici est un guide : disponibilité et conditionnement restent à confirmer au Studio.</p>
+          <p>TIBALDO Jungle, revendeur Sybotanica à Lille, vous aide à choisir le volume utile et à lire les propriétés d’un mélange. Le Studio ouvre le 26 septembre 2026. La sélection présentée ici est un guide : disponibilité et conditionnement restent à confirmer au Studio.</p>
         </div>
       </section>
 
+      <LocalSubstrateVisit />
       <SubstrateSelection />
 
       <section className="substrate-collection" id="composants">

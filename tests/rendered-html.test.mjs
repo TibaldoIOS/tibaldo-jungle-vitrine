@@ -110,7 +110,10 @@ test("renders the substrates collection with local SEO metadata", async () => {
   assert.equal(response.status, 200);
   const html = await response.text();
 
-  assert.match(html, /<title>Substrats en vrac à Lille/i);
+  assert.match(html, /<title>Substrats Sybotanica : guide &amp; conseils à Lille/i);
+  assert.match(html, /href="tel:\+33743727079"/);
+  assert.match(html, /id="acheter-a-lille"/);
+  assert.match(html, /références publiées avec le retrait activé/);
   assert.match(html, /rel=["']canonical["'][^>]*href=["']https:\/\/jungle\.tibaldo\.fr\/substrats["']/i);
   assert.match(html, /CollectionPage/i);
   assert.match(html, /ItemList/i);
@@ -120,6 +123,23 @@ test("renders the substrates collection with local SEO metadata", async () => {
   assert.match(html, /Zéolite/i);
   assert.match(html, /src=["']\/substrats\/terreau-signature-substrat-plantes-lille\.jpg["']/i);
   assert.match(html, /src=["']\/substrats\/sphaigne-sechee-substrat-plantes-lille-v2\.png["']/i);
+});
+
+test("local substrates buying page keeps one Lille store and seven factual FAQ answers", async () => {
+  const response = await render("/substrats-en-vrac-lille");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /Revendeur Sybotanica/);
+  assert.match(html, /26 septembre 2026/);
+  assert.match(html, /Pas-de-Calais/);
+  assert.match(html, /lieu de culture de Wattignies/);
+  const schemas = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(match => JSON.parse(match[1]));
+  const nodes = schemas.flatMap(schema => schema["@graph"] ?? [schema]);
+  const faq = nodes.find(node => node["@type"] === "FAQPage");
+  assert.equal(faq.mainEntity.length, 7);
+  for (const question of faq.mainEntity) assert.ok(html.includes(question.name));
+  assert.ok(nodes.some(node => node["@id"] === "https://jungle.tibaldo.fr/#store"));
+  assert.ok(!nodes.some(node => ["Offer", "Product"].includes(node["@type"])));
 });
 
 test("the shared carousel renders every Monstera entry after P1", async () => {
