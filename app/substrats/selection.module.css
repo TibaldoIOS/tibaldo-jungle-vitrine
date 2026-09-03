@@ -33,6 +33,7 @@
 .supplierStory figcaption { position: absolute; bottom: 0; left: 0; right: 0; padding: 30px 20px 15px; background: linear-gradient(transparent,#0b201ae6); font-size: 12px; }
 .supplierStory > div { padding: 42px; align-self: center; }
 .supplierStory h3 { font-size: clamp(36px,4vw,54px); }
+.supplierStory :global(.section-kicker), .interlude :global(.section-kicker) { color: #c7d7b1; }
 .supplierLink { display: flex; justify-content: space-between; padding: 18px 20px; background: #d0e898; color: #163e30; text-decoration: none; border-radius: 30px; margin: 25px 0; font-weight: 600; }
 .groupNav { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); border-top: 1px solid #adb99a; border-bottom: 1px solid #adb99a; }
 .groupNav a { padding: 22px 16px; text-decoration: none; font-size: 14px; display: flex; align-items: center; gap: 10px; border-right: 1px solid #adb99a; }
