@@ -1,0 +1,890 @@
+[
+  {
+    "id": "aroid",
+    "product": "Aroid Mix",
+    "family": "mix",
+    "sourceUrl": "https://www.sybotanica.com/products/premium-aroid-soil-mix-5-liter",
+    "sourceType": "OFFICIAL_SYBOTANICA_PRODUCT_PAGE",
+    "officialSybotanica": true,
+    "manufacturerTitle": "Aroid Mix (Monstera e.t.c.)",
+    "manufacturerProductId": 6750548951222,
+    "mediaId": 55932475670855,
+    "originalUrl": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Aroid.jpg?v=1764744202",
+    "manufacturerAlt": "Standing 5L pouch of chunky dark mix with monstera leaf illustrations, aroid mix",
+    "originalSha256": "56adb8a99254f1d8e9f3b831619fe786bcaf7f6c60cb10d8dcae1a9ecf150cda",
+    "originalWidth": 2048,
+    "originalHeight": 2048,
+    "credit": "Sybotanica",
+    "rightsBasis": "OWNER_CONFIRMED_PARTNERSHIP_PUBLIC_PRODUCT_PRESENTATION_2026_09_04",
+    "publicPromotion": "OWNER_CONFIRMED_PUBLIC_PARTNERSHIP_USE_2026_09_04",
+    "aiGenerated": false,
+    "processing": "Resize and WebP compression only. Full image and packaging retained.",
+    "variants": [
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-aroid-400.webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 21772,
+        "sha256": "78255a76ce6387be35b4882f25a9f99e4989cb2859de7df13d01093285241747"
+      },
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-aroid-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 70488,
+        "sha256": "c6a2b5708fd7148453c21b03484ad0552ada7be085fd02b105d80c06f2588f9b"
+      }
+    ]
+  },
+  {
+    "id": "alocasia",
+    "product": "Alocasia Mix",
+    "family": "mix",
+    "sourceUrl": "https://www.sybotanica.com/products/premium-alocasia-soil-mix-5-liter",
+    "sourceType": "OFFICIAL_SYBOTANICA_PRODUCT_PAGE",
+    "officialSybotanica": true,
+    "manufacturerTitle": "Alocasia Mix",
+    "manufacturerProductId": 6960989405366,
+    "mediaId": 55932404728135,
+    "originalUrl": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Alocasia_c49ec22b-3579-448e-86d7-4f04d8a15fc0.jpg?v=1764744164",
+    "manufacturerAlt": "Standing 5L pouch of dark mix with red-veined leaf illustrations, best soil for alocasia",
+    "originalSha256": "7d605a40a95136401e84e518b95b29322b7fbef8098719af673d168807c8560b",
+    "originalWidth": 2048,
+    "originalHeight": 2048,
+    "credit": "Sybotanica",
+    "rightsBasis": "OWNER_CONFIRMED_PARTNERSHIP_PUBLIC_PRODUCT_PRESENTATION_2026_09_04",
+    "publicPromotion": "OWNER_CONFIRMED_PUBLIC_PARTNERSHIP_USE_2026_09_04",
+    "aiGenerated": false,
+    "processing": "Resize and WebP compression only. Full image and packaging retained.",
+    "variants": [
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-alocasia-400.webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 22054,
+        "sha256": "ea846e8e74107645c3140ba0d937ae3a39ae9505f6a7bddbb60a8cdb35372e4d"
+      },
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-alocasia-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 73434,
+        "sha256": "9f6d5a527d9653fc35369acb7fb8ba855dccc0f70d62a33088299f03f52e7d64"
+      }
+    ]
+  },
+  {
+    "id": "anthurium",
+    "product": "Anthurium Mix",
+    "family": "mix",
+    "sourceUrl": "https://www.sybotanica.com/products/premium-anthurium-soil-mix-5-liter",
+    "sourceType": "OFFICIAL_SYBOTANICA_PRODUCT_PAGE",
+    "officialSybotanica": true,
+    "manufacturerTitle": "Anthurium Mix",
+    "manufacturerProductId": 6957554204854,
+    "mediaId": 55932436644167,
+    "originalUrl": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Anthurium_8f779ce8-a5f7-4f90-877c-d1e660cf5f01.jpg?v=1764744174",
+    "manufacturerAlt": "Bag of chunky dark soil mix with anthurium graphic, anthurium soil",
+    "originalSha256": "9b6a3e748920cbd592c143883975a1255af5bc58c2259ef1147fc60e64cea0e6",
+    "originalWidth": 2048,
+    "originalHeight": 2048,
+    "credit": "Sybotanica",
+    "rightsBasis": "OWNER_CONFIRMED_PARTNERSHIP_PUBLIC_PRODUCT_PRESENTATION_2026_09_04",
+    "publicPromotion": "OWNER_CONFIRMED_PUBLIC_PARTNERSHIP_USE_2026_09_04",
+    "aiGenerated": false,
+    "processing": "Resize and WebP compression only. Full image and packaging retained.",
+    "variants": [
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-anthurium-400.webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 20676,
+        "sha256": "351794b66e621e99b8c8e403f0659b1f74695cb98456218b5b9b7b66998e4c1e"
+      },
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-anthurium-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 67476,
+        "sha256": "daf7dfa893ff3ed86468c7e47e752b85bcb6c47a7d8dd7a20c3fcc749db097e4"
+      }
+    ]
+  },
+  {
+    "id": "hoya",
+    "product": "Hoya Mix",
+    "family": "mix",
+    "sourceUrl": "https://www.sybotanica.com/products/hoya-soil-mix-5l",
+    "sourceType": "OFFICIAL_SYBOTANICA_PRODUCT_PAGE",
+    "officialSybotanica": true,
+    "manufacturerTitle": "Hoya Mix",
+    "manufacturerProductId": 7464598208751,
+    "mediaId": 55932365209927,
+    "originalUrl": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Hoya_2c07a22d-a8aa-4ae9-a656-8d06567bcb8f.jpg?v=1764744113",
+    "manufacturerAlt": "Bag of Hoya premium soil mix with pile, best soil for hoya",
+    "originalSha256": "172fc3deb02c32ee7d8b107d73bf42b5c2649acc65be88059795f32e2866fcbb",
+    "originalWidth": 2048,
+    "originalHeight": 2048,
+    "credit": "Sybotanica",
+    "rightsBasis": "OWNER_CONFIRMED_PARTNERSHIP_PUBLIC_PRODUCT_PRESENTATION_2026_09_04",
+    "publicPromotion": "OWNER_CONFIRMED_PUBLIC_PARTNERSHIP_USE_2026_09_04",
+    "aiGenerated": false,
+    "processing": "Resize and WebP compression only. Full image and packaging retained.",
+    "variants": [
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-hoya-400.webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 22452,
+        "sha256": "219e4027be6e13180ab07e8a94c0af0d2ad7491ab13d6525684f56e298936118"
+      },
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-hoya-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 75416,
+        "sha256": "83ad2ed09bd242a52b6760ed6220b463dba7a2d04770d1f5c6cf0b1e9c3dde96"
+      }
+    ]
+  },
+  {
+    "id": "syngonium",
+    "product": "Syngonium Mix",
+    "family": "mix",
+    "sourceUrl": "https://www.sybotanica.com/products/premium-syngonium-soil-mix-5-liter",
+    "sourceType": "OFFICIAL_SYBOTANICA_PRODUCT_PAGE",
+    "officialSybotanica": true,
+    "manufacturerTitle": "Syngonium Mix",
+    "manufacturerProductId": 6960987734198,
+    "mediaId": 55932423045447,
+    "originalUrl": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Syngonium_4a05b19a-95f6-45ff-b428-c611dbce9efd.jpg?v=1764744170",
+    "manufacturerAlt": "Resealable bag of dark soil mix with leaf graphics, best soil for syngonium",
+    "originalSha256": "481efad8628f892b0b3993f2cce3400d553c2d37b73829c70f5757e45aa84543",
+    "originalWidth": 2048,
+    "originalHeight": 2048,
+    "credit": "Sybotanica",
+    "rightsBasis": "OWNER_CONFIRMED_PARTNERSHIP_PUBLIC_PRODUCT_PRESENTATION_2026_09_04",
+    "publicPromotion": "OWNER_CONFIRMED_PUBLIC_PARTNERSHIP_USE_2026_09_04",
+    "aiGenerated": false,
+    "processing": "Resize and WebP compression only. Full image and packaging retained.",
+    "variants": [
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-syngonium-400.webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 23892,
+        "sha256": "ee5da16eeb63c4216e50dc0721a5966cb0165aa874bdb21656a37b2647bb42c1"
+      },
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-syngonium-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 76216,
+        "sha256": "23dd879a410a9a476477a51474012400550bcd6e42e7bab377a80213e94f6d05"
+      }
+    ]
+  },
+  {
+    "id": "calathea-maranta",
+    "product": "Calathea & Maranta Mix",
+    "family": "mix",
+    "sourceUrl": "https://www.sybotanica.com/products/premium-calathea-maranta-mix-5-liter",
+    "sourceType": "OFFICIAL_SYBOTANICA_PRODUCT_PAGE",
+    "officialSybotanica": true,
+    "manufacturerTitle": "Calathea & Maranta Mix",
+    "manufacturerProductId": 6898618892470,
+    "mediaId": 55932443722055,
+    "originalUrl": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Calathea_Maranta_028fe10e-e2b1-4602-a52f-2269627f56ba.jpg?v=1764744183",
+    "manufacturerAlt": "Standing 5L pouch of dark mix with yellow calathea leaf illustrations, best soil for calathea",
+    "originalSha256": "ea262fc60aba66fe1d126c21e195b84fe2c38cb94e1e3788944fa8e003cab31d",
+    "originalWidth": 2048,
+    "originalHeight": 2048,
+    "credit": "Sybotanica",
+    "rightsBasis": "OWNER_CONFIRMED_PARTNERSHIP_PUBLIC_PRODUCT_PRESENTATION_2026_09_04",
+    "publicPromotion": "OWNER_CONFIRMED_PUBLIC_PARTNERSHIP_USE_2026_09_04",
+    "aiGenerated": false,
+    "processing": "Resize and WebP compression only. Full image and packaging retained.",
+    "variants": [
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-calathea-maranta-400.webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 22986,
+        "sha256": "61b965d00bddfae065ec0f8b8f26f85f09b72b74d98e39b696815c69d29113a4"
+      },
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-calathea-maranta-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 74544,
+        "sha256": "a2878e94d30b2b7c724bcfaccb0fbe084004c130345bfa53f2a2d78620ca69b8"
+      }
+    ]
+  },
+  {
+    "id": "fern",
+    "product": "Fern Mix",
+    "family": "mix",
+    "sourceUrl": "https://www.sybotanica.com/products/premium-fern-soil-mix-5-liter",
+    "sourceType": "OFFICIAL_SYBOTANICA_PRODUCT_PAGE",
+    "officialSybotanica": true,
+    "manufacturerTitle": "Fern Mix",
+    "manufacturerProductId": 6960990060726,
+    "mediaId": 55932393029959,
+    "originalUrl": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Fern_5fedf7d3-4e26-4b0d-aaf7-3dc93568e8c4.jpg?v=1764744132",
+    "manufacturerAlt": "Fern soil mix bag with spilled dark substrate, best soil for ferns",
+    "originalSha256": "b7273112bc3190c8405642dfdd89fd77da2af30cfc9598c9d6f886c10177818e",
+    "originalWidth": 2048,
+    "originalHeight": 2048,
+    "credit": "Sybotanica",
+    "rightsBasis": "OWNER_CONFIRMED_PARTNERSHIP_PUBLIC_PRODUCT_PRESENTATION_2026_09_04",
+    "publicPromotion": "OWNER_CONFIRMED_PUBLIC_PARTNERSHIP_USE_2026_09_04",
+    "aiGenerated": false,
+    "processing": "Resize and WebP compression only. Full image and packaging retained.",
+    "variants": [
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-fern-400.webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 21506,
+        "sha256": "ac8602afa1db1524d83c6ead44f0649a62d5503a2fe92b8389a7661826ae3213"
+      },
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-fern-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 70712,
+        "sha256": "30d1bcae99055866d565ddfad50c7cb41297952ea5144f6a9b091b88b2e9405d"
+      }
+    ]
+  },
+  {
+    "id": "cacti",
+    "product": "Cacti & Succulent Mix",
+    "family": "mix",
+    "sourceUrl": "https://www.sybotanica.com/products/cacti-and-succulent-soil-mix-5-liter",
+    "sourceType": "OFFICIAL_SYBOTANICA_PRODUCT_PAGE",
+    "officialSybotanica": true,
+    "manufacturerTitle": "Cacti & Succulent Mix",
+    "manufacturerProductId": 6212142629046,
+    "mediaId": 55932482421063,
+    "originalUrl": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Cacti_Succulent_8ce6ad6b-1ae7-4762-8fc9-b2d2ec746742.jpg?v=1764744210",
+    "manufacturerAlt": "Standing 5L pouch of dark gritty mix with cactus, a bag of cactus and succulent soil",
+    "originalSha256": "44d851bc24d69f14f3e462271aed51e33c40e6e07bd20713890148420f5723b6",
+    "originalWidth": 2048,
+    "originalHeight": 2048,
+    "credit": "Sybotanica",
+    "rightsBasis": "OWNER_CONFIRMED_PARTNERSHIP_PUBLIC_PRODUCT_PRESENTATION_2026_09_04",
+    "publicPromotion": "OWNER_CONFIRMED_PUBLIC_PARTNERSHIP_USE_2026_09_04",
+    "aiGenerated": false,
+    "processing": "Resize and WebP compression only. Full image and packaging retained.",
+    "variants": [
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-cacti-400.webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 20274,
+        "sha256": "4d4d2ccb406c895e1a8eed7669fbce4152500d6becf25d0f4ebfc2654f56d219"
+      },
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-cacti-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 66066,
+        "sha256": "85f6a2a7caa86767bd33649c2efc0d7fa0b17d5b4dd27db65e2e358057714d99"
+      }
+    ]
+  },
+  {
+    "id": "bonsai",
+    "product": "Bonsai Mix",
+    "family": "mix",
+    "sourceUrl": "https://www.sybotanica.com/products/premium-bonsai-soil-mix-5-liter",
+    "sourceType": "OFFICIAL_SYBOTANICA_PRODUCT_PAGE",
+    "officialSybotanica": true,
+    "manufacturerTitle": "Bonsai Mix",
+    "manufacturerProductId": 6802669142198,
+    "mediaId": 55932456534343,
+    "originalUrl": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Bonsai_49e3ce1f-f4f4-4681-93d6-d1cf6294f5da.jpg?v=1764744188",
+    "manufacturerAlt": "Standing 5L pouch of dark gritty mix with bonsai tree illustrations, bonsai soil",
+    "originalSha256": "2ddf6172c47ccda56b9dcade582bd575332ec5c11c6145717f99bf92ac27b0c5",
+    "originalWidth": 2048,
+    "originalHeight": 2048,
+    "credit": "Sybotanica",
+    "rightsBasis": "OWNER_CONFIRMED_PARTNERSHIP_PUBLIC_PRODUCT_PRESENTATION_2026_09_04",
+    "publicPromotion": "OWNER_CONFIRMED_PUBLIC_PARTNERSHIP_USE_2026_09_04",
+    "aiGenerated": false,
+    "processing": "Resize and WebP compression only. Full image and packaging retained.",
+    "variants": [
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-bonsai-400.webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 19004,
+        "sha256": "5b1323bb1393ab84b49743cbe1537cb3c24fb13662428188c2c7519acf6d2a23"
+      },
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-bonsai-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 61332,
+        "sha256": "d02756d90df8a87e181f09d8f4317a36b2314c7846fcbc0aeca7c59fa015bcd7"
+      }
+    ]
+  },
+  {
+    "id": "ficus",
+    "product": "Ficus Mix",
+    "family": "mix",
+    "sourceUrl": "https://www.sybotanica.com/products/premium-ficus-soil-mix-5-liter",
+    "sourceType": "OFFICIAL_SYBOTANICA_PRODUCT_PAGE",
+    "officialSybotanica": true,
+    "manufacturerTitle": "Ficus Mix",
+    "manufacturerProductId": 6962012422326,
+    "mediaId": 55932383232327,
+    "originalUrl": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Ficus_be61aee6-c0b9-4502-8440-07488c6fa05c.jpg?v=1764744125",
+    "manufacturerAlt": "Standing 5L pouch of dark mix with orange ficus leaf illustrations, best soil for ficus",
+    "originalSha256": "0999759dff93003ca41679f2a355d0070b2ace6d5493789137fdd870752df7e9",
+    "originalWidth": 2048,
+    "originalHeight": 2048,
+    "credit": "Sybotanica",
+    "rightsBasis": "OWNER_CONFIRMED_PARTNERSHIP_PUBLIC_PRODUCT_PRESENTATION_2026_09_04",
+    "publicPromotion": "OWNER_CONFIRMED_PUBLIC_PARTNERSHIP_USE_2026_09_04",
+    "aiGenerated": false,
+    "processing": "Resize and WebP compression only. Full image and packaging retained.",
+    "variants": [
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-ficus-400.webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 21870,
+        "sha256": "7a094556c7307420c8de2b07f8f12efd5414782e52678344e45ab954d17bdd7f"
+      },
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-ficus-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 70744,
+        "sha256": "c4591fe0d19f0b26897ac72b9f9509008679feed743b25b8376cbe35d11458b0"
+      }
+    ]
+  },
+  {
+    "id": "orchid",
+    "product": "Orchid Mix",
+    "family": "mix",
+    "sourceUrl": "https://www.sybotanica.com/products/orchid-mix-5l",
+    "sourceType": "OFFICIAL_SYBOTANICA_PRODUCT_PAGE",
+    "officialSybotanica": true,
+    "manufacturerTitle": "Orchid Mix",
+    "manufacturerProductId": 7464597520623,
+    "mediaId": 55932373369159,
+    "originalUrl": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Orchid_332a8e7c-63fe-44a0-a51e-87a1e5f46566.jpg?v=1764744119",
+    "manufacturerAlt": "Standing 5L pouch of chunky bark with pink orchid illustrations, best soil for orchids",
+    "originalSha256": "43d96b34c9e8c8a93b3863a26f0e7edbac6bffb6170d0e0a66111425129178ad",
+    "originalWidth": 2048,
+    "originalHeight": 2048,
+    "credit": "Sybotanica",
+    "rightsBasis": "OWNER_CONFIRMED_PARTNERSHIP_PUBLIC_PRODUCT_PRESENTATION_2026_09_04",
+    "publicPromotion": "OWNER_CONFIRMED_PUBLIC_PARTNERSHIP_USE_2026_09_04",
+    "aiGenerated": false,
+    "processing": "Resize and WebP compression only. Full image and packaging retained.",
+    "variants": [
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-orchid-400.webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 19896,
+        "sha256": "c37beb59402b573a31f37c2f6bef8cfc363b21a3f2f6bb079cb6b4319ce518aa"
+      },
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-orchid-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 65206,
+        "sha256": "e887d35983e361d03820d026d12e0490f468586d58dd22d0022178f2a3ba900c"
+      }
+    ]
+  },
+  {
+    "id": "carnivorous",
+    "product": "Carnivorous Mix",
+    "family": "mix",
+    "sourceUrl": "https://www.sybotanica.com/products/premium-carnivorous-soil-mix-5-liter",
+    "sourceType": "OFFICIAL_SYBOTANICA_PRODUCT_PAGE",
+    "officialSybotanica": true,
+    "manufacturerTitle": "Carnivorous Mix",
+    "manufacturerProductId": 6802661834934,
+    "mediaId": 55932466626887,
+    "originalUrl": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Carnivorous_afafd2fd-9c02-4468-abd3-21a63cb80cb0.jpg?v=1764744196",
+    "manufacturerAlt": "Bag of dark carnivorous plant soil mix with spilled soil",
+    "originalSha256": "73554736b08a7c75e7ecfb1bb5697fa09098265fa18e4ad10ef936cb7b8dcf8c",
+    "originalWidth": 2048,
+    "originalHeight": 2048,
+    "credit": "Sybotanica",
+    "rightsBasis": "OWNER_CONFIRMED_PARTNERSHIP_PUBLIC_PRODUCT_PRESENTATION_2026_09_04",
+    "publicPromotion": "OWNER_CONFIRMED_PUBLIC_PARTNERSHIP_USE_2026_09_04",
+    "aiGenerated": false,
+    "processing": "Resize and WebP compression only. Full image and packaging retained.",
+    "variants": [
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-carnivorous-400.webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 20454,
+        "sha256": "bb608018f6e994dabaa0c4e51443f3982666820c5ae38a96067748b291eeaaa4"
+      },
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-carnivorous-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 67166,
+        "sha256": "9f3db49742258f7eea3992472ca837a8d0935266903c0f9b0818fa719bb3e74a"
+      }
+    ]
+  },
+  {
+    "id": "terrarium",
+    "product": "Terrarium Mix",
+    "family": "mix",
+    "sourceUrl": "https://www.sybotanica.com/products/terrarium-substrate-mix-5-liter",
+    "sourceType": "OFFICIAL_SYBOTANICA_PRODUCT_PAGE",
+    "officialSybotanica": true,
+    "manufacturerTitle": "Terrarium Mix",
+    "manufacturerProductId": 6212142563510,
+    "mediaId": 55932492316999,
+    "originalUrl": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Terrarium_93eb64a5-bd73-4c08-b6c7-6f09d4ffcd4d.jpg?v=1764744215",
+    "manufacturerAlt": "Resealable bag of dark terrarium soil mix with spilled substrate, terrarium substrate",
+    "originalSha256": "a047dc0f34a897bd8500f3ecf08601f45b0b4057bb4451f66e21a8e3ecbc9f27",
+    "originalWidth": 2048,
+    "originalHeight": 2048,
+    "credit": "Sybotanica",
+    "rightsBasis": "OWNER_CONFIRMED_PARTNERSHIP_PUBLIC_PRODUCT_PRESENTATION_2026_09_04",
+    "publicPromotion": "OWNER_CONFIRMED_PUBLIC_PARTNERSHIP_USE_2026_09_04",
+    "aiGenerated": false,
+    "processing": "Resize and WebP compression only. Full image and packaging retained.",
+    "variants": [
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-terrarium-400.webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 15410,
+        "sha256": "032afee48553054a6d43cd631268c6e4e0d6b8d5ae60cbf53440081a882fb072"
+      },
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-terrarium-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 50994,
+        "sha256": "e9d8553a96ede7aa0fe4edac2c5cde768db31ad0f6475b4f08c17d40c405085c"
+      }
+    ]
+  },
+  {
+    "id": "coco-coir",
+    "product": "Coco coir",
+    "family": "component",
+    "sourceUrl": "https://www.sybotanica.com/products/coco-coir-5liter-soil-component",
+    "sourceType": "OFFICIAL_SYBOTANICA_PRODUCT_PAGE",
+    "officialSybotanica": true,
+    "manufacturerTitle": "Coco Coir",
+    "manufacturerProductId": 6212142530742,
+    "mediaId": 57490484691271,
+    "originalUrl": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_3L_CocoCoir_dc47f0a8-0fcc-4198-baef-f41ee46271d3.jpg?v=1773211039",
+    "manufacturerAlt": "Standing pouch of coco coir with spilled substrate",
+    "originalSha256": "8288f0c342660d8cbdee7f8ce403addbf6d086bf8d099986229679bab1782cb6",
+    "originalWidth": 2048,
+    "originalHeight": 2048,
+    "credit": "Sybotanica",
+    "rightsBasis": "OWNER_CONFIRMED_PARTNERSHIP_PUBLIC_PRODUCT_PRESENTATION_2026_09_04",
+    "publicPromotion": "OWNER_CONFIRMED_PUBLIC_PARTNERSHIP_USE_2026_09_04",
+    "aiGenerated": false,
+    "processing": "Resize and WebP compression only. Full image and packaging retained.",
+    "variants": [
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-coco-coir-400.webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 14146,
+        "sha256": "795ac0be80afadfe6117d389dc791b9b8ba1d5835480a717bc6d0c9ee1f110da"
+      },
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-coco-coir-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 49270,
+        "sha256": "3da5f973bf288f04deaf086c79d4984fbd2ad9a80edb786ba1fafe9861d578be"
+      }
+    ]
+  },
+  {
+    "id": "sphagnum",
+    "product": "Sphaigne",
+    "family": "component",
+    "sourceUrl": "https://www.sybotanica.com/products/sphagnum-moss-5-liter",
+    "sourceType": "OFFICIAL_SYBOTANICA_PRODUCT_PAGE",
+    "officialSybotanica": true,
+    "manufacturerTitle": "Sphagnum Moss",
+    "manufacturerProductId": 6212142727350,
+    "mediaId": 57490484265287,
+    "originalUrl": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5L_SphagnumMoss.jpg?v=1778070122",
+    "manufacturerAlt": "Bag of dried sphagnum moss with spilled contents",
+    "originalSha256": "9e794360f1b333edbf727010b250fbb6cea4978d379de7f3b094969957d95a51",
+    "originalWidth": 2048,
+    "originalHeight": 2048,
+    "credit": "Sybotanica",
+    "rightsBasis": "OWNER_CONFIRMED_PARTNERSHIP_PUBLIC_PRODUCT_PRESENTATION_2026_09_04",
+    "publicPromotion": "OWNER_CONFIRMED_PUBLIC_PARTNERSHIP_USE_2026_09_04",
+    "aiGenerated": false,
+    "processing": "Resize and WebP compression only. Full image and packaging retained.",
+    "variants": [
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-sphagnum-400.webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 24064,
+        "sha256": "4b866db15824ce0353626dfdd0e28520f9676bbacf38c3d951bf8232f87a65d2"
+      },
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-sphagnum-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 79480,
+        "sha256": "1f93567546e2269d912036dd5adb8dd565660c062170362d175982a9bfafd2a5"
+      }
+    ]
+  },
+  {
+    "id": "carbon",
+    "product": "Charbon actif",
+    "family": "component",
+    "sourceUrl": "https://www.sybotanica.com/products/activated-carbon-pellets-1-2-5-liter",
+    "sourceType": "OFFICIAL_SYBOTANICA_PRODUCT_PAGE",
+    "officialSybotanica": true,
+    "manufacturerTitle": "Activated Carbon",
+    "manufacturerProductId": 6212142071990,
+    "mediaId": 57490487181639,
+    "originalUrl": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_3L_ActivatedCarbon_290784ed-2eca-4651-a8cd-c2d6126f4add.jpg?v=1773211119",
+    "manufacturerAlt": "Standing 3L pouch of black cylindrical carbon pellets with pellets spilled below",
+    "originalSha256": "6c19ac893737cf3a33d75f2dcc1bcd3692c4b2f06d46eadfa4509652588970dc",
+    "originalWidth": 2048,
+    "originalHeight": 2048,
+    "credit": "Sybotanica",
+    "rightsBasis": "OWNER_CONFIRMED_PARTNERSHIP_PUBLIC_PRODUCT_PRESENTATION_2026_09_04",
+    "publicPromotion": "OWNER_CONFIRMED_PUBLIC_PARTNERSHIP_USE_2026_09_04",
+    "aiGenerated": false,
+    "processing": "Resize and WebP compression only. Full image and packaging retained.",
+    "variants": [
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-carbon-400.webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 13640,
+        "sha256": "15d2647ee15ce146e50b274b7a8a18a215fdad32def066e78ba00ec0a9214daa"
+      },
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-carbon-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 34860,
+        "sha256": "fde56ef1f977d1d51a7cda4a56100b3b422e2c67b551b19ffc7bb58bd18b90e3"
+      }
+    ]
+  },
+  {
+    "id": "zeolite",
+    "product": "Zéolite",
+    "family": "component",
+    "sourceUrl": "https://www.sybotanica.com/products/zeolite-houseplants-5-8mm",
+    "sourceType": "OFFICIAL_SYBOTANICA_PRODUCT_PAGE",
+    "officialSybotanica": true,
+    "manufacturerTitle": "Zeolite",
+    "manufacturerProductId": 8842030973255,
+    "mediaId": 57490459820359,
+    "originalUrl": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_3L_Zeolite_32f7f071-ab3b-469b-a5cd-6ce7caa06ffa.jpg?v=1773210671",
+    "manufacturerAlt": "Standing 3L pouch of pale green zeolite granules with granules spilled below, zeolite for plants",
+    "originalSha256": "4a1515aaec6ad0b875c984ac72eb727827d77844a3d3e58879d972e47f328f24",
+    "originalWidth": 2048,
+    "originalHeight": 2048,
+    "credit": "Sybotanica",
+    "rightsBasis": "OWNER_CONFIRMED_PARTNERSHIP_PUBLIC_PRODUCT_PRESENTATION_2026_09_04",
+    "publicPromotion": "OWNER_CONFIRMED_PUBLIC_PARTNERSHIP_USE_2026_09_04",
+    "aiGenerated": false,
+    "processing": "Resize and WebP compression only. Full image and packaging retained.",
+    "variants": [
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-zeolite-400.webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 21242,
+        "sha256": "ba113f37963d827016c74fbfc2747fea2e9bd54f00b2ef299067ef6b85d7f692"
+      },
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-zeolite-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 61406,
+        "sha256": "251487a6c9bc2682ef0060e79575f13931c319af117861e203d7069a8c47a9ca"
+      }
+    ]
+  },
+  {
+    "id": "mineral",
+    "product": "SYBA-Hydro / Vulkastrat",
+    "family": "mineral",
+    "sourceUrl": "https://www.sybotanica.com/products/syba-hydro-vulkastrat-3l",
+    "sourceType": "OFFICIAL_SYBOTANICA_PRODUCT_PAGE",
+    "officialSybotanica": true,
+    "manufacturerTitle": "Base Mineral Mix (SYBA-Hydro, Unfertilised)",
+    "manufacturerProductId": 7634166317295,
+    "mediaId": 45551473295687,
+    "originalUrl": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBA-Hydromix5LSYBASoil.jpg?v=1773649458",
+    "manufacturerAlt": "Clear bag of mineral hydro mix with spilled granules, syba hydro mix",
+    "originalSha256": "275d0c214f3f00f5c540f54649238a2149f47fbb5af924e013c743f03f515a19",
+    "originalWidth": 2048,
+    "originalHeight": 2048,
+    "credit": "Sybotanica",
+    "rightsBasis": "OWNER_CONFIRMED_PARTNERSHIP_PUBLIC_PRODUCT_PRESENTATION_2026_09_04",
+    "publicPromotion": "OWNER_CONFIRMED_PUBLIC_PARTNERSHIP_USE_2026_09_04",
+    "aiGenerated": false,
+    "processing": "Resize and WebP compression only. Full image and packaging retained.",
+    "variants": [
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-mineral-400.webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 19972,
+        "sha256": "3f8b372639b0f26088e89cc3ecef79318367ae9c68a0b18dba5e7d92841027c5"
+      },
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-mineral-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 60884,
+        "sha256": "cc7f0779c7ba7ccb671a0e1dfe37638c21653d6dc5e5f2ce5bcd4a982a8f2737"
+      }
+    ]
+  },
+  {
+    "id": "tropical-slow",
+    "product": "Tropical Slow Release",
+    "family": "nutrition",
+    "sourceUrl": "https://www.sybotanica.com/products/tropical-slow-release-plant-food-for-houseplants",
+    "sourceType": "OFFICIAL_SYBOTANICA_PRODUCT_PAGE",
+    "officialSybotanica": true,
+    "manufacturerTitle": "Tropical Slow-Release Plant Food",
+    "manufacturerProductId": 9770938761543,
+    "mediaId": 54916085219655,
+    "originalUrl": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/PlantFood_Tropical_v1.jpg?v=1758870765",
+    "manufacturerAlt": "Jar of tropical plant food granules with label",
+    "originalSha256": "ee358337dda490d8b3008f594735a4047cb2a7d8b3f6979fe29a418b3c58f2b1",
+    "originalWidth": 2048,
+    "originalHeight": 2048,
+    "credit": "Sybotanica",
+    "rightsBasis": "OWNER_CONFIRMED_PARTNERSHIP_PUBLIC_PRODUCT_PRESENTATION_2026_09_04",
+    "publicPromotion": "OWNER_CONFIRMED_PUBLIC_PARTNERSHIP_USE_2026_09_04",
+    "aiGenerated": false,
+    "processing": "Resize and WebP compression only. Full image and packaging retained.",
+    "variants": [
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-tropical-slow-400.webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 17660,
+        "sha256": "a6b82317fd00248b3d48c8e597bca05b7c41a669c33ebda38e12e634b2ef304b"
+      },
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-tropical-slow-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 45850,
+        "sha256": "9190105d916fdcf7e8d2f94a761b2a4c80c09f20225bfec35d6c9752a4ea7e61"
+      }
+    ]
+  },
+  {
+    "id": "orchid-slow",
+    "product": "Orchid Slow Release",
+    "family": "nutrition",
+    "sourceUrl": "https://www.sybotanica.com/products/orchid-slow-release-plant-food-for-houseplants",
+    "sourceType": "OFFICIAL_SYBOTANICA_PRODUCT_PAGE",
+    "officialSybotanica": true,
+    "manufacturerTitle": "Orchid Slow-Release Plant Food",
+    "manufacturerProductId": 9770937942343,
+    "mediaId": 54916085645639,
+    "originalUrl": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/PlantFood_Orchid_v1.jpg?v=1758870770",
+    "manufacturerAlt": "Black jar of orchid plant food pellets, slow release orchid fertilizer",
+    "originalSha256": "7958fd8a1497db3ebd9a62f67e2a9bae300dd0f51a4038258b5cb64c39fcd7d6",
+    "originalWidth": 2048,
+    "originalHeight": 2048,
+    "credit": "Sybotanica",
+    "rightsBasis": "OWNER_CONFIRMED_PARTNERSHIP_PUBLIC_PRODUCT_PRESENTATION_2026_09_04",
+    "publicPromotion": "OWNER_CONFIRMED_PUBLIC_PARTNERSHIP_USE_2026_09_04",
+    "aiGenerated": false,
+    "processing": "Resize and WebP compression only. Full image and packaging retained.",
+    "variants": [
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-orchid-slow-400.webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 17504,
+        "sha256": "bd6cf9d43354e85ee926ec8b4f6dcc48c8205d9ccf212f0b7ec797e5be15a0a5"
+      },
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-orchid-slow-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 45150,
+        "sha256": "8d464a86175e96e558c63e083b03f57938bcf293f2c17ef8ec2035dce4e2f760"
+      }
+    ]
+  },
+  {
+    "id": "cacti-slow",
+    "product": "Cacti Slow Release",
+    "family": "nutrition",
+    "sourceUrl": "https://www.sybotanica.com/products/cacti-slow-release-plant-food-for-houseplants",
+    "sourceType": "OFFICIAL_SYBOTANICA_PRODUCT_PAGE",
+    "officialSybotanica": true,
+    "manufacturerTitle": "Cacti Slow-Release Plant Food",
+    "manufacturerProductId": 9770939744583,
+    "mediaId": 54916110057799,
+    "originalUrl": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/PlantFood_Cactil_v1.jpg?v=1758870853",
+    "manufacturerAlt": "Jar of granular cacti plant food with cactus graphic label, cacti slow-release plant food",
+    "originalSha256": "b06f004789227bca5bbb4106f32fff4aafb7a73d9f0510397eebd135dc0801f0",
+    "originalWidth": 2048,
+    "originalHeight": 2048,
+    "credit": "Sybotanica",
+    "rightsBasis": "OWNER_CONFIRMED_PARTNERSHIP_PUBLIC_PRODUCT_PRESENTATION_2026_09_04",
+    "publicPromotion": "OWNER_CONFIRMED_PUBLIC_PARTNERSHIP_USE_2026_09_04",
+    "aiGenerated": false,
+    "processing": "Resize and WebP compression only. Full image and packaging retained.",
+    "variants": [
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-cacti-slow-400.webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 15632,
+        "sha256": "f245d8f335158fc03cf6eea979b2133ce54f78cbb24108665d493db5f2d60690"
+      },
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-cacti-slow-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 41178,
+        "sha256": "70e9a6286c434968f9b6864f6f8e4ee38771e3dbeb28aef19e9db94738c0fddc"
+      }
+    ]
+  },
+  {
+    "id": "tropical-liquid",
+    "product": "Tropical Bio Liquid",
+    "family": "nutrition",
+    "sourceUrl": "https://www.sybotanica.com/products/tropical-bio-liquid-plant-food-for-houseplants",
+    "sourceType": "OFFICIAL_SYBOTANICA_PRODUCT_PAGE",
+    "officialSybotanica": true,
+    "manufacturerTitle": "Tropical Liquid Plant Food",
+    "manufacturerProductId": 9770935288135,
+    "mediaId": 54916088168775,
+    "originalUrl": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/PlantFoodLiquid_BIO_Tropical_v1.jpg?v=1759498021",
+    "manufacturerAlt": "Dark pump bottle with tan tropical leaf label, bio plant food",
+    "originalSha256": "10df1154a2a4402881af7510ce4b1a5cc48171a13eece7c17911f683dcbd535a",
+    "originalWidth": 2048,
+    "originalHeight": 2048,
+    "credit": "Sybotanica",
+    "rightsBasis": "OWNER_CONFIRMED_PARTNERSHIP_PUBLIC_PRODUCT_PRESENTATION_2026_09_04",
+    "publicPromotion": "OWNER_CONFIRMED_PUBLIC_PARTNERSHIP_USE_2026_09_04",
+    "aiGenerated": false,
+    "processing": "Resize and WebP compression only. Full image and packaging retained.",
+    "variants": [
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-tropical-liquid-400.webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 10312,
+        "sha256": "6d2553b9383a9d1afc1a614d5989a85a64da38c72ea294fc60c13a094654f071"
+      },
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-tropical-liquid-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 27230,
+        "sha256": "8ecc78a4d09a872cdde2be61045582f13f7aa49a6cd7a5eb7c47929b87e02a21"
+      }
+    ]
+  },
+  {
+    "id": "orchid-liquid",
+    "product": "Orchid Bio Liquid",
+    "family": "nutrition",
+    "sourceUrl": "https://www.sybotanica.com/products/orchid-bio-liquid-plant-food-for-houseplants",
+    "sourceType": "OFFICIAL_SYBOTANICA_PRODUCT_PAGE",
+    "officialSybotanica": true,
+    "manufacturerTitle": "Orchid Liquid Plant Food",
+    "manufacturerProductId": 8008929706223,
+    "mediaId": 54916089217351,
+    "originalUrl": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/PlantFoodLiquid_BIO_Orchid_v1.jpg?v=1759498017",
+    "manufacturerAlt": "Dark pump bottle with beige orchid-themed label, 500ml, orchid liquid plant food",
+    "originalSha256": "50dfdda7dedbf1147c9f3799c50d4c709f3d5500d71753201d0928b57b6b59aa",
+    "originalWidth": 2048,
+    "originalHeight": 2048,
+    "credit": "Sybotanica",
+    "rightsBasis": "OWNER_CONFIRMED_PARTNERSHIP_PUBLIC_PRODUCT_PRESENTATION_2026_09_04",
+    "publicPromotion": "OWNER_CONFIRMED_PUBLIC_PARTNERSHIP_USE_2026_09_04",
+    "aiGenerated": false,
+    "processing": "Resize and WebP compression only. Full image and packaging retained.",
+    "variants": [
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-orchid-liquid-400.webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 10312,
+        "sha256": "c197c37aadbdbd53fa00adfc19719f8a8a528a674c4b1cca7356d56301aed134"
+      },
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-orchid-liquid-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 26916,
+        "sha256": "6bc07e938c76c707ca2072f9ece4ddc1bdf371ca3b6ad234bd572c94212dde29"
+      }
+    ]
+  },
+  {
+    "id": "cacti-liquid",
+    "product": "Cacti Bio Liquid",
+    "family": "nutrition",
+    "sourceUrl": "https://www.sybotanica.com/products/cacti-bio-liquid-plant-food-for-houseplants",
+    "sourceType": "OFFICIAL_SYBOTANICA_PRODUCT_PAGE",
+    "officialSybotanica": true,
+    "manufacturerTitle": "Cacti Liquid Plant Food",
+    "manufacturerProductId": 9770937090375,
+    "mediaId": 54916086628679,
+    "originalUrl": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/PlantFoodLiquid_BIO_Cacti_v1_1a1570db-087c-41c2-bb78-8ccda9f09c86.jpg?v=1759498025",
+    "manufacturerAlt": "Dark pump bottle with tan cacti fertilizer label, cacti liquid plant food",
+    "originalSha256": "91199a5b947211c0b6ea02f0f758193e6b86fe2512bc224a45d63f9b484a5bb0",
+    "originalWidth": 2048,
+    "originalHeight": 2048,
+    "credit": "Sybotanica",
+    "rightsBasis": "OWNER_CONFIRMED_PARTNERSHIP_PUBLIC_PRODUCT_PRESENTATION_2026_09_04",
+    "publicPromotion": "OWNER_CONFIRMED_PUBLIC_PARTNERSHIP_USE_2026_09_04",
+    "aiGenerated": false,
+    "processing": "Resize and WebP compression only. Full image and packaging retained.",
+    "variants": [
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-cacti-liquid-400.webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 9618,
+        "sha256": "f97bffa164dec33942494c43a54d8f4badd240dc9b3dffec0f1278ac10e7fe65"
+      },
+      {
+        "src": "/media/supplier-media/sybotanica/products/sybotanica-cacti-liquid-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 25492,
+        "sha256": "9d752a73786f15f8d4ecd7aa3242fc88f45a7b079d41026d142f92be97e3184c"
+      }
+    ]
+  }
+]
