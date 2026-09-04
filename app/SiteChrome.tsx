@@ -28,7 +28,6 @@ export function SiteHeader({ light = false }: { light?: boolean }) {
         <Link href="/rempotage">Rempotage</Link>
         <Link href="/conseils">Conseils</Link>
         <Link href="/services">Services</Link>
-        <a className="nav-shop" href={shopUrl()}>Boutique <Arrow /></a>
       </nav>
 
       <MobileJungleMenu />
@@ -38,6 +37,7 @@ export function SiteHeader({ light = false }: { light?: boolean }) {
           <a href="https://www.instagram.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Instagram Tibaldo Jungle"><InstagramIcon /></a>
           <a href="https://www.facebook.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Facebook Tibaldo Jungle"><FacebookIcon /></a>
         </div>
+        <a className="header-shop" href={shopUrl()}>Boutique <Arrow /></a>
         <Link className="header-cta" data-action="route" href="/contact">Nous trouver <Arrow /></Link>
       </div>
     </header>
