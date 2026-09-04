@@ -3748,3 +3748,28 @@ body:has(.conversion-dock){padding-bottom:calc(76px + env(safe-area-inset-bottom
   .canonical-species-photo-reveal > div::after,.botanical-photo-book-media::after { display: none; }
   .canonical-taxonomy-more summary span { transition: none; }
 }
+
+/* Pre-opening polish: home-only contrast, unchanged photograph and geometry. */
+#accueil.hero .hero-shade {
+  background:
+    linear-gradient(180deg, rgba(7,31,22,.66), transparent 180px),
+    radial-gradient(ellipse at 32% 48%, rgba(7,31,22,.28), transparent 68%),
+    linear-gradient(90deg, rgba(7,31,22,.9) 0%, rgba(9,39,27,.68) 42%, rgba(9,29,21,.1) 78%),
+    linear-gradient(0deg, rgba(4,24,17,.56) 0%, transparent 40%);
+}
+@media (max-width: 700px) {
+  #accueil.hero .hero-shade {
+    background:
+      linear-gradient(180deg, rgba(7,31,22,.7), transparent 170px),
+      radial-gradient(ellipse at 42% 49%, rgba(7,31,22,.52) 0%, rgba(7,31,22,.4) 38%, transparent 74%),
+      linear-gradient(90deg, rgba(7,31,22,.9) 0%, rgba(9,39,27,.68) 42%, rgba(9,29,21,.1) 78%),
+      linear-gradient(0deg, rgba(4,24,17,.56) 0%, transparent 40%);
+  }
+}
+/* Keep existing dock dimensions, hit areas, destinations and safe-area spacing. */
+.conversion-dock a {
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 750;
+  letter-spacing: .04em;
+}

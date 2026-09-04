@@ -27,9 +27,9 @@ test("carousel exposes accessible, user-controlled indicators", () => {
   assert.match(carousel, /prefers-reduced-motion: reduce/);
 });
 
-test("Monstera alone receives the Owner-provided beta reference board", () => {
-  assert.match(hub, /genre === "monstera" && leafPlate/);
-  assert.match(hub, /variant="hero-background"/);
+test("Monstera restores the photographic hero and archives rather than deletes the reference board", () => {
+  assert.doesNotMatch(hub, /variant="hero-background"/);
+  assert.match(hub, /src=\{media.src\}/);
   assert.match(hub, /genre !== "monstera" && leafPlate/);
   assert.equal(botanicalHubLeafPlates.monstera?.leaves.length, 6);
   assert.match(botanicalHubLeafPlates.monstera?.heroReferenceBoardAsset ?? "", /monstera-leaf-identification-owner-reference-v1\.webp$/);
