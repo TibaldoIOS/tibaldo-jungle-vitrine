@@ -21,6 +21,7 @@ import { applyDocumentaryMediaCompletionWave4V1 } from "./documentary-media-comp
 import { applyDocumentaryMediaCompletionWave5V1 } from "./documentary-media-completion-wave-5-v1.ts";
 import { applyOwnerMusaFloridaVariegataMediaV1 } from "./owner-musa-florida-variegata-media-v1.ts";
 import { applyOwnerMonsteraThaiConstellationMediaV1 } from "./owner-monstera-thai-constellation-media-v1.ts";
+import { applyOwnerMonsteraMintMediaV1 } from "./owner-monstera-mint-media-v1.ts";
 
 export const plantFamilies = [
   { slug: "strelitzia", name: "Strelitzia", eyebrow: "Oiseaux de paradis", description: "Les cinq espèces acceptées du genre Strelitzia : du compact reginae aux grands alba, caudata et nicolai, avec une lecture claire des appellations « Augusta ».", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle de Strelitzia à ajouter", available: true },
@@ -197,7 +198,7 @@ const rawPlants: PlantEntry[] = [{
   publishedAt: "2026-08-06", updatedAt: "2026-08-06",
 }, ...newArrivalPlants, ...requestedPlants, ...afternoonPlants, ...encyclopediaV19ExpansionPlants, ...prayerPlants, ...encyclopediaV2Step1Plants, ...encyclopediaV2Step2Plants, cycasRevoluta, dicksoniaAntarctica, ...agaveFatsiaStrelitziaPlants, ...encyclopediaP1Plants, ...speciesMediaExpansionV1Plants];
 
-export const plants: PlantEntry[] = applyOwnerMonsteraThaiConstellationMediaV1(applyOwnerMusaFloridaVariegataMediaV1(applyDocumentaryMediaCompletionWave5V1(applyDocumentaryMediaCompletionWave4V1(applyDocumentaryMediaCompletionWave3V1(applyDocumentaryMediaCompletionWave2V1(applyDocumentaryMediaCompletionWaveV1(applyNightMediaSafety(applyMediaRightsP0Closure(applySet1MediaRightsGate(rawPlants))))))))));
+export const plants: PlantEntry[] = applyOwnerMonsteraMintMediaV1(applyOwnerMonsteraThaiConstellationMediaV1(applyOwnerMusaFloridaVariegataMediaV1(applyDocumentaryMediaCompletionWave5V1(applyDocumentaryMediaCompletionWave4V1(applyDocumentaryMediaCompletionWave3V1(applyDocumentaryMediaCompletionWave2V1(applyDocumentaryMediaCompletionWaveV1(applyNightMediaSafety(applyMediaRightsP0Closure(applySet1MediaRightsGate(rawPlants)))))))))));
 
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);

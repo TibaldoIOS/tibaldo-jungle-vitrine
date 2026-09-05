@@ -19,6 +19,7 @@ const laterVerifiedRoutes = new Set([
   ...[...documentaryMediaWaveV1Registry, ...documentaryMediaWave2V1Registry, ...documentaryMediaWave3V1Registry, ...documentaryMediaWave4V1Registry, ...documentaryMediaWave5V1Registry].map(({ route }) => route),
   "/plantes/anthurium/pallidiflorum",
   "/plantes/monstera/thai-constellation",
+  "/plantes/monstera/mint",
 ]);
 
 const routeToPlant = (route: string) => {
