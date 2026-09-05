@@ -28,7 +28,7 @@ const compactDate = (value: string) => new Date(value).toISOString().replace(/[-
 export function EventActions({ event }: { event: JungleEvent }) {
   const [weather, setWeather] = useState<string | null>(null);
   const url = typeof window === "undefined" ? `https://jungle.tibaldo.fr/evenements/${event.slug}/` : window.location.href;
-  const text = `${event.title} — ${new Intl.DateTimeFormat("fr-FR", { dateStyle: "long" }).format(new Date(event.startAt))}`;
+  const text = `${event.title} — ${new Intl.DateTimeFormat("fr-FR", { dateStyle: "long", timeZone: "Europe/Paris" }).format(new Date(event.startAt))}`;
   const googleCalendar = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&dates=${compactDate(event.startAt)}/${compactDate(event.endAt ?? event.startAt)}&details=${encodeURIComponent(event.excerpt)}&location=${encodeURIComponent(`${event.address}, ${event.postalCode} ${event.city}`)}`;
   const downloadIcs = () => {
     const content = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Tibaldo Jungle//Evenements//FR", "BEGIN:VEVENT", `UID:${event.id}@jungle.tibaldo.fr`, `DTSTART:${compactDate(event.startAt)}`, `DTEND:${compactDate(event.endAt ?? event.startAt)}`, `SUMMARY:${event.title}`, `DESCRIPTION:${event.excerpt.replace(/\n/g, " ")}`, `LOCATION:${event.address}, ${event.postalCode} ${event.city}`, `URL:https://jungle.tibaldo.fr/evenements/${event.slug}/`, "END:VEVENT", "END:VCALENDAR"].join("\r\n");
@@ -69,5 +69,5 @@ export function EventFilters({ events }: { events: JungleEvent[] }) {
 
 export function EventCard({ event }: { event: JungleEvent }) {
   const date = new Date(event.startAt);
-  return <Link className="event-card" href={`/evenements/${event.slug}`}><div><Image unoptimized className={event.slug === "ouverture-tibaldo-jungle-lille" ? "event-cover-storefront" : undefined} src={event.coverImage} alt={`Illustration de ${event.title}`} loading="lazy" width="1200" height="800" /><span>{event.category}</span></div><section><time dateTime={event.startAt}>{new Intl.DateTimeFormat("fr-FR", { day: "2-digit", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit" }).format(date)}</time><h2>{event.title}</h2><p>{event.excerpt}</p><small>{event.venueName} · {event.city}</small><strong>Découvrir <b>↗</b></strong></section></Link>;
+  return <Link className="event-card" href={`/evenements/${event.slug}`}><div><Image unoptimized className={event.slug === "ouverture-tibaldo-jungle-lille" ? "event-cover-storefront" : undefined} src={event.coverImage} alt={`Illustration de ${event.title}`} loading="lazy" width="1200" height="800" /><span>{event.category}</span></div><section><time dateTime={event.startAt}>{new Intl.DateTimeFormat("fr-FR", { day: "2-digit", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit", timeZone: "Europe/Paris" }).format(date)}</time><h2>{event.title}</h2><p>{event.excerpt}</p><small>{event.venueName} · {event.city}</small><strong>Découvrir <b>↗</b></strong></section></Link>;
 }

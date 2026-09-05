@@ -868,7 +868,7 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
 .event-detail-hero-copy h1 { max-width: 820px; margin: 24px 0 28px; font: 400 clamp(54px, 5.4vw, 88px)/.92 Georgia, serif; letter-spacing: -.045em; text-wrap: balance; }
 .event-detail-hero-copy > p:last-child { max-width: 690px; color: rgba(255,255,255,.78); font: 400 18px/1.65 Georgia, serif; }
 .event-essential { background: var(--forest); color: #fff; }
-.event-essential > div { display: grid; grid-template-columns: repeat(3, 1fr); }
+.event-essential > div { display: grid; grid-template-columns: repeat(4, 1fr); }
 .event-essential > div > div { min-height: 145px; padding: 35px 45px; border-right: 1px solid rgba(255,255,255,.14); }
 .event-essential span { display: block; margin-bottom: 17px; color: var(--sage); font-size: 7px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
 .event-essential strong { font: 400 19px/1.45 Georgia, serif; }

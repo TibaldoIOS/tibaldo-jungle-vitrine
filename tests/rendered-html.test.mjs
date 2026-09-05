@@ -765,6 +765,11 @@ test("renders the opening event with complete crawlable SEO data", async () => {
   assert.match(html, /"isAccessibleForFree":true/i);
   assert.match(html, /"@type":"FAQPage"/i);
   assert.match(html, /"@type":"BreadcrumbList"/i);
+  assert.match(html, /"startDate":"2026-09-26T10:00:00\+02:00"/i);
+  assert.match(html, /"endDate":"2026-09-26T19:00:00\+02:00"/i);
+  assert.match(html, /Horaires[\s\S]{0,500}10:00[\s\S]{0,100}—[\s\S]{0,100}19:00/i);
+  assert.doesNotMatch(html, /Horaires[\s\S]{0,500}08:00[\s\S]{0,100}—[\s\S]{0,100}17:00/i);
+  assert.match(html, /Libre et gratuite · sans réservation/i);
   assert.match(html, /26 septembre 2026/i);
   assert.doesNotMatch(html, /Que faire à Lille ce week-end/i);
 });
