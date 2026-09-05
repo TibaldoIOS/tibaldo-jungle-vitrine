@@ -190,6 +190,7 @@ export default async function EventPage({ params }: Props) {
                 day: "numeric",
                 month: "long",
                 year: "numeric",
+                timeZone: "Europe/Paris",
               }).format(start)}
             </strong>
           </div>
@@ -199,15 +200,22 @@ export default async function EventPage({ params }: Props) {
               {new Intl.DateTimeFormat("fr-FR", {
                 hour: "2-digit",
                 minute: "2-digit",
+                timeZone: "Europe/Paris",
               }).format(start)}
               {end &&
-                ` — ${new Intl.DateTimeFormat("fr-FR", { hour: "2-digit", minute: "2-digit" }).format(end)}`}
+                ` — ${new Intl.DateTimeFormat("fr-FR", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Paris" }).format(end)}`}
             </strong>
           </div>
           <div>
             <span>Adresse</span>
             <strong>{fullAddress}</strong>
           </div>
+          {isOpening && (
+            <div>
+              <span>Entrée</span>
+              <strong>Libre et gratuite · sans réservation</strong>
+            </div>
+          )}
         </div>
       </section>
       <section className="shell event-story">
@@ -258,25 +266,22 @@ export default async function EventPage({ params }: Props) {
             </header>
             <div data-reveal>
               <p>
-                À la recherche d’un événement à Lille, d’une sortie gratuite
-                dans le Nord ou d’une activité originale dans la métropole
-                lilloise ? L’ouverture de Tibaldo Jungle invite habitants,
-                familles, étudiants, amateurs de décoration et collectionneurs à
-                découvrir une nouvelle boutique de plantes rares et exotiques.
+                Le samedi 26 septembre, de 10 h à 19 h, Tibaldo Jungle ouvre
+                son Studio Végétal au 3 place de l’Arbonnoise. Cette sortie
+                gratuite et sans réservation accueille aussi bien les curieux et
+                les familles que les collectionneurs de plantes.
               </p>
               <p>
                 Cette journée portes ouvertes permet de visiter le Studio
                 Végétal, d’échanger autour de l’entretien des plantes
                 d’intérieur, de découvrir des substrats en vrac et de profiter
-                de conseils de rempotage. Une idée de sortie à Lille pour le
-                week-end, à vivre seul, en famille ou entre amis, sans
-                réservation.
+                de conseils de rempotage. Vous pouvez passer librement pendant
+                la journée, avant une sortie en soirée si vous le souhaitez.
               </p>
               <p>
-                Située au 3 place de l’Arbonnoise à Lille, la boutique est
-                facilement accessible depuis Lille-Centre, Wazemmes,
-                Vauban-Esquermes, Lambersart, Loos et les communes de la
-                métropole européenne de Lille.
+                Le Studio se trouve dans le quartier Vauban-Esquermes, à
+                quelques pas du métro Cormontaigne sur la ligne 2. Les
+                informations d’accès et de stationnement sont indiquées plus bas.
               </p>
             </div>
           </div>
