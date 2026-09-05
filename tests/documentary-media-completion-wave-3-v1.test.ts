@@ -28,14 +28,13 @@ test("Wave 3 publishes ten exact documentary photographs with complete rights ev
   }
 });
 
-test("later waves and Owner-authorized media reduce honest gaps to 20", () => {
+test("later waves and Owner-authorized media reduce honest gaps to 19", () => {
   const gaps = plants.filter((plant) => documentaryGallery(plant).length === 0);
   assert.equal(plants.length, 96);
-  assert.equal(gaps.length, 20);
-  assert.equal(plants.length - gaps.length, 76);
+  assert.equal(gaps.length, 19);
+  assert.equal(plants.length - gaps.length, 77);
   for (const [genre, slug] of [
     ["monstera", "esqueleto"],
-    ["monstera", "thai-constellation"],
     ["monstera", "mint"],
     ["monstera", "burle-marx-flame"],
     ["anthurium", "delta-force"],

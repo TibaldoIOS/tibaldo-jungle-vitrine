@@ -18,6 +18,7 @@ import { documentaryMediaWave5V1Registry } from "../lib/plants/documentary-media
 const laterVerifiedRoutes = new Set([
   ...[...documentaryMediaWaveV1Registry, ...documentaryMediaWave2V1Registry, ...documentaryMediaWave3V1Registry, ...documentaryMediaWave4V1Registry, ...documentaryMediaWave5V1Registry].map(({ route }) => route),
   "/plantes/anthurium/pallidiflorum",
+  "/plantes/monstera/thai-constellation",
 ]);
 
 const routeToPlant = (route: string) => {

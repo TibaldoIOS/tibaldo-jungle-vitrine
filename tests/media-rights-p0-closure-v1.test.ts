@@ -8,6 +8,7 @@ import { documentaryMediaWave2V1Registry } from "../lib/plants/documentary-media
 import { documentaryMediaWave3V1Registry } from "../lib/plants/documentary-media-completion-wave-3-v1.ts";
 
 const laterVerifiedRoutes = new Set([...documentaryMediaWaveV1Registry, ...documentaryMediaWave2V1Registry, ...documentaryMediaWave3V1Registry].map(({ route }) => route));
+const ownerVerifiedRoutes = new Set(["/plantes/monstera/thai-constellation"]);
 
 const removedAssets = [
   "/anthurium-pallidiflorum-cascade.webp",
@@ -30,7 +31,7 @@ test("closes the exact 11-route P0 media-rights set", () => {
     const plant = getPlant(genre, slug);
     assert.ok(plant, item.route);
     if (item.decision === "REMOVE_AND_USE_HONEST_MEDIA_GAP") {
-      if (laterVerifiedRoutes.has(item.route)) {
+      if (laterVerifiedRoutes.has(item.route) || ownerVerifiedRoutes.has(item.route)) {
         assert.equal(plant.gallery[0].license?.status, "verified", item.route);
         continue;
       }

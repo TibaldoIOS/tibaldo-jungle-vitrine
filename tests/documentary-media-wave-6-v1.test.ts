@@ -11,11 +11,11 @@ const contract = (genre: string, slug: string) => {
   return { plant, api: toVerifiedMediaApiFields(plant, registryVersion), image: exactVerifiedPrimaryMedia(plant) };
 };
 
-test("Wave 6 plus Owner-authorized media expose 76 verified identities", () => {
+test("Wave 6 plus Owner-authorized media expose 77 verified identities", () => {
   const contracts = plants.map((plant) => toVerifiedMediaApiFields(plant, registryVersion));
   assert.equal(contracts.length, 96);
-  assert.equal(contracts.filter(({ media_status }) => media_status === "VERIFIED_MEDIA").length, 76);
-  assert.equal(contracts.filter(({ media_status }) => media_status === "HONEST_MEDIA_GAP").length, 20);
+  assert.equal(contracts.filter(({ media_status }) => media_status === "VERIFIED_MEDIA").length, 77);
+  assert.equal(contracts.filter(({ media_status }) => media_status === "HONEST_MEDIA_GAP").length, 19);
 });
 
 test("Cycas revoluta and Philodendron Brasil expose exact licensed media", () => {
@@ -56,5 +56,15 @@ test("Owner photo for Musa Florida Variegata is exact, verified, and locally pre
   assert.equal(image?.width, 1284);
   assert.equal(image?.height, 1230);
   assert.match(image?.alt ?? "", /Musa.*Florida Variegata/i);
+  assert.ok(existsSync(new URL(`../public${image?.src}`, import.meta.url)));
+});
+
+test("Owner photo for Monstera Thai Constellation is exact, verified, and locally present", () => {
+  const { api, image } = contract("monstera", "thai-constellation");
+  assert.equal(api.media_status, "VERIFIED_MEDIA");
+  assert.match(api.primary_media_url, /owner-media\/monstera\/monstera-thai-constellation-owner-2026-09\.webp$/);
+  assert.equal(image?.width, 1365);
+  assert.equal(image?.height, 2048);
+  assert.match(image?.alt ?? "", /Monstera.*Thai Constellation/i);
   assert.ok(existsSync(new URL(`../public${image?.src}`, import.meta.url)));
 });
