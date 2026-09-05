@@ -176,6 +176,12 @@ export default async function EventPage({ params }: Props) {
           <p className="eyebrow">
             <span /> {event.category} · {event.city}
           </p>
+          {isOpening && (
+            <p className="event-opening-quickfacts">
+              Samedi 26 septembre 2026 · 10h–19h · entrée gratuite<br />
+              3 place de l’Arbonnoise, Lille · sans réservation
+            </p>
+          )}
           <h1>{event.title}</h1>
           <p>{event.excerpt}</p>
         </div>
