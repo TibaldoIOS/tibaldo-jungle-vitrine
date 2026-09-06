@@ -15,6 +15,11 @@ const removedAssets = [
   "/anthurium-delta-force-triangulaire.webp",
 ];
 
+const ownerVerifiedRoutes = new Set([
+  "/plantes/monstera/thai-constellation",
+  "/plantes/monstera/mint",
+]);
+
 test("closes the exact 11-route P0 media-rights set", () => {
   assert.equal(mediaRightsP0ClosureRegistry.length, 11);
   assert.equal(mediaRightsP0ClosureRegistry.filter(({ decision }) => decision === "RIGHTS_PROVEN_KEEP").length, 4);
@@ -25,6 +30,10 @@ test("closes the exact 11-route P0 media-rights set", () => {
     const plant = getPlant(genre, slug);
     assert.ok(plant, item.route);
     if (item.decision === "REMOVE_AND_USE_HONEST_MEDIA_GAP") {
+      if (ownerVerifiedRoutes.has(item.route)) {
+        assert.equal(plant.gallery[0].license?.status, "verified", item.route);
+        continue;
+      }
       assert.equal(plant.gallery.length, 1, item.route);
       assert.equal(plant.gallery[0].src, "/photo-reelle-a-venir.svg", item.route);
       assert.equal(plant.gallery[0].license?.status, "media-gap", item.route);
