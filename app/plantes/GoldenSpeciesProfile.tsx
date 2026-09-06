@@ -3,6 +3,7 @@ import Link from "next/link";
 import { plants } from "@/lib/plants/catalog";
 import type { PlantEntry } from "@/lib/plants/types";
 import { isEditorialPlaceholder, isInternalPhotoProductionCopy, isPhotoProductionPlaceholder } from "@/lib/plants/types";
+import { publicMediaCredit } from "@/lib/plants/public-media-credit";
 import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter } from "../SiteChrome";
 import BotanicalFaq from "./BotanicalFaq";
@@ -25,7 +26,7 @@ const mediaOverrides: Record<string, PlantImage[]> = {
   "pilea/peperomioides": [{
     src: "/pilea-peperomioides-plante.jpg",
     alt: "Pilea peperomioides aux feuilles rondes portées par de longs pétioles",
-    caption: "Photographie réelle réutilisable, créditée dans le registre média Jungle.",
+    caption: "Feuillage rond de Pilea peperomioides.",
     width: 1280,
     height: 1707,
     license: {
@@ -166,14 +167,14 @@ export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
                 <div className={golden.archCopy} data-reveal><p className="section-kicker">Portail botanique · 1,65 seconde</p><h2 id={`golden-arch-${plant.genre}-${plant.slug}`}>Un portrait réel.<br /><em>Une transition signature.</em></h2><p>{specimenNote}</p></div>
                 <figure className={golden.archFigure} data-reveal>
                   <div className={golden.archMedia}><Image unoptimized src={revealImage.src} alt={revealImage.alt} width={revealImage.width} height={revealImage.height} loading="eager" /></div>
-                  <figcaption><span>Photographie réelle contrôlée</span><p>{revealImage.caption}</p></figcaption>
+                  <figcaption><span>{publicMediaCredit(revealImage)}</span><p>{revealImage.caption}</p></figcaption>
                 </figure>
               </div>
             </section>
           ) : (
             <section className={golden.photoBookGap} data-media-state="honest-gap" data-reveal>
               <div><p className="section-kicker">Portrait documentaire</p><h2>Une absence assumée.<br /><em>Aucune image fabriquée.</em></h2></div>
-              <p>Aucune photographie documentaire vérifiée n’est présentée pour {plant.botanicalName}. La génération Golden demeure intacte et les informations botaniques restent accessibles.</p>
+              <p>Aucune photographie documentaire n’est présentée pour {plant.botanicalName}. La génération Golden demeure intacte et les informations botaniques restent accessibles.</p>
             </section>
           )}
 
@@ -191,8 +192,8 @@ export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
 
           {bookImages.length ? <BotanicalPhotoBook plant={plant} images={bookImages} /> : (
             <section className={golden.photoBookGap} aria-labelledby={`golden-book-${plant.genre}-${plant.slug}`} data-reveal>
-              <div><p className="section-kicker">Carnet photographique</p><h2 id={`golden-book-${plant.genre}-${plant.slug}`}>Une vue vérifiée.<br /><em>Pas de galerie fabriquée.</em></h2></div>
-              <p>Les vues documentaires disponibles ne sont pas dupliquées artificiellement. De nouvelles pages seront ajoutées uniquement avec des photographies distinctes et vérifiées.</p>
+              <div><p className="section-kicker">Carnet photographique</p><h2 id={`golden-book-${plant.genre}-${plant.slug}`}>Une vue disponible.<br /><em>Pas de galerie fabriquée.</em></h2></div>
+              <p>Les vues documentaires disponibles ne sont pas dupliquées artificiellement. De nouvelles pages seront ajoutées uniquement avec des photographies distinctes et identifiées.</p>
             </section>
           )}
 
