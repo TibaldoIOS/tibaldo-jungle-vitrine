@@ -2,7 +2,7 @@ import type { PlantEntry, PlantMediaLicense } from "./types";
 
 const license: PlantMediaLicense = {
   status: "verified",
-  creator: "Owner Tibaldo · photographie personnelle",
+  creator: "TIBALDO",
   license: "Droits de réutilisation confirmés par l’Owner",
   licenseUrl: "",
   sourceUrl: "owner-provided://tibaldo/monstera-thai-constellation-2026-09-05",
@@ -13,7 +13,7 @@ const license: PlantMediaLicense = {
 const gallery: PlantEntry["gallery"] = [{
   src: "/owner-media/monstera/monstera-thai-constellation-owner-2026-09.webp",
   alt: "Monstera deliciosa ‘Thai Constellation’ aux feuilles fenêtrées vert foncé, mouchetées de crème",
-  caption: "Monstera deliciosa ‘Thai Constellation’ · photographie personnelle fournie par l’Owner Tibaldo, droits de réutilisation confirmés.",
+  caption: "Monstera deliciosa ‘Thai Constellation’ · Photo : TIBALDO.",
   width: 1365,
   height: 2048,
   license,

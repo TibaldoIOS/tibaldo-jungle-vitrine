@@ -2,7 +2,7 @@ import type { PlantEntry, PlantMediaLicense } from "./types";
 
 const license: PlantMediaLicense = {
   status: "verified",
-  creator: "Owner Tibaldo · photographie personnelle",
+  creator: "TIBALDO",
   license: "Droits de réutilisation confirmés par l’Owner",
   licenseUrl: "",
   sourceUrl: "owner-provided://tibaldo/monstera-mint-2026-09-05",
@@ -13,7 +13,7 @@ const license: PlantMediaLicense = {
 const gallery: PlantEntry["gallery"] = [{
   src: "/owner-media/monstera/monstera-mint-owner-2026-09.webp",
   alt: "Monstera deliciosa ‘Mint’ aux grandes feuilles fenêtrées, marbrées de vert menthe et de crème",
-  caption: "Monstera deliciosa ‘Mint’ · photographie personnelle fournie par l’Owner Tibaldo, droits de réutilisation confirmés.",
+  caption: "Monstera deliciosa ‘Mint’ · Photo : TIBALDO.",
   width: 1080,
   height: 1350,
   license,
