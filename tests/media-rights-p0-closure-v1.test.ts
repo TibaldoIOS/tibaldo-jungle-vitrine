@@ -8,7 +8,7 @@ import { documentaryMediaWave2V1Registry } from "../lib/plants/documentary-media
 import { documentaryMediaWave3V1Registry } from "../lib/plants/documentary-media-completion-wave-3-v1.ts";
 
 const laterVerifiedRoutes = new Set([...documentaryMediaWaveV1Registry, ...documentaryMediaWave2V1Registry, ...documentaryMediaWave3V1Registry].map(({ route }) => route));
-const ownerVerifiedRoutes = new Set(["/plantes/monstera/thai-constellation", "/plantes/monstera/mint"]);
+const ownerVerifiedRoutes = new Set(["/plantes/epipremnum/marble-queen", "/plantes/monstera/thai-constellation", "/plantes/monstera/mint"]);
 
 const removedAssets = [
   "/anthurium-pallidiflorum-cascade.webp",

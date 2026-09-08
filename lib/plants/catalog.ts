@@ -1,3 +1,4 @@
+import { applyOwnerMarbleQueenMediaV1 } from "./owner-marble-queen-media-v1.ts";
 import type { PlantEntry } from "./types";
 import { prayerPlants } from "./prayer-plants.ts";
 import { newArrivalPlants } from "./new-arrivals.ts";
@@ -198,7 +199,7 @@ const rawPlants: PlantEntry[] = [{
   publishedAt: "2026-08-06", updatedAt: "2026-08-06",
 }, ...newArrivalPlants, ...requestedPlants, ...afternoonPlants, ...encyclopediaV19ExpansionPlants, ...prayerPlants, ...encyclopediaV2Step1Plants, ...encyclopediaV2Step2Plants, cycasRevoluta, dicksoniaAntarctica, ...agaveFatsiaStrelitziaPlants, ...encyclopediaP1Plants, ...speciesMediaExpansionV1Plants];
 
-export const plants: PlantEntry[] = applyOwnerMonsteraMintMediaV1(applyOwnerMonsteraThaiConstellationMediaV1(applyOwnerMusaFloridaVariegataMediaV1(applyDocumentaryMediaCompletionWave5V1(applyDocumentaryMediaCompletionWave4V1(applyDocumentaryMediaCompletionWave3V1(applyDocumentaryMediaCompletionWave2V1(applyDocumentaryMediaCompletionWaveV1(applyNightMediaSafety(applyMediaRightsP0Closure(applySet1MediaRightsGate(rawPlants)))))))))));
+export const plants: PlantEntry[] = applyOwnerMarbleQueenMediaV1(applyOwnerMonsteraMintMediaV1(applyOwnerMonsteraThaiConstellationMediaV1(applyOwnerMusaFloridaVariegataMediaV1(applyDocumentaryMediaCompletionWave5V1(applyDocumentaryMediaCompletionWave4V1(applyDocumentaryMediaCompletionWave3V1(applyDocumentaryMediaCompletionWave2V1(applyDocumentaryMediaCompletionWaveV1(applyNightMediaSafety(applyMediaRightsP0Closure(applySet1MediaRightsGate(rawPlants))))))))))));
 
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);

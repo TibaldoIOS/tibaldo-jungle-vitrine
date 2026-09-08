@@ -144,7 +144,7 @@ export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
                 <div className={golden.archCopy} data-reveal><p className="section-kicker">Portail botanique · 1,65 seconde</p><h2 id={`golden-arch-${plant.genre}-${plant.slug}`}>Un portrait réel.<br /><em>Une transition signature.</em></h2><p>{specimenNote}</p></div>
                 <figure className={golden.archFigure} data-reveal>
                   <div className={golden.archMedia}><Image unoptimized src={revealImage.src} alt={revealImage.alt} width={revealImage.width} height={revealImage.height} loading="eager" /></div>
-                  <figcaption><span>Photographie réelle contrôlée</span><p>{revealImage.caption}</p></figcaption>
+                  <figcaption><span>{plant.genre === "epipremnum" && plant.slug === "marble-queen" ? "Marble Queen" : "Photographie réelle contrôlée"}</span><p>{revealImage.caption}</p></figcaption>
                 </figure>
               </div>
             </section>
