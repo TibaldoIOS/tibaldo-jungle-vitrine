@@ -10,9 +10,9 @@ const license: PlantMediaLicense = {
 };
 
 const gallery: PlantEntry["gallery"] = [
-  { src: "/owner-media/marble-queen/img-0017-1200.webp", alt: "Epipremnum aureum ‘Marble Queen’ en pot, au feuillage vert marbré de blanc crème vu de dessus", caption: "Le feuillage marbré de Marble Queen. Photo : TIBALDO", width: 1200, height: 1500, license },
-  { src: "/owner-media/marble-queen/img-0018-1200.webp", alt: "Détail des feuilles de Marble Queen, avec leurs marbrures vertes et blanc crème et quelques gouttes d’eau", caption: "Les marbrures et la surface des feuilles. Photo : TIBALDO", width: 1200, height: 1500, license },
-  { src: "/owner-media/marble-queen/img-0019-1200.webp", alt: "Epipremnum aureum ‘Marble Queen’ vu de trois quarts, avec ses feuilles panachées au-dessus du pot noir", caption: "Le port de la plante vu de trois quarts. Photo : TIBALDO", width: 1200, height: 1500, license },
+  { src: "/owner-media/marble-queen/epipremnum-marble-queen-plante-tibaldo-1200.webp", alt: "Pothos Marble Queen en pot, vu de dessus, aux feuilles en cœur marbrées de vert et de blanc crème.", caption: "Le feuillage marbré de Marble Queen. Photo : TIBALDO", width: 1200, height: 1500, license },
+  { src: "/owner-media/marble-queen/epipremnum-marble-queen-detail-panachure-tibaldo-1200.webp", alt: "Gros plan sur les feuilles du pothos Marble Queen, marbrées de vert et de blanc crème, avec quelques gouttes d’eau.", caption: "Les marbrures et la surface des feuilles. Photo : TIBALDO", width: 1200, height: 1500, license },
+  { src: "/owner-media/marble-queen/epipremnum-marble-queen-vue-trois-quarts-tibaldo-1200.webp", alt: "Pothos Marble Queen vu de trois quarts, avec son feuillage vert et blanc crème au-dessus d’un pot noir.", caption: "Le port de la plante vu de trois quarts. Photo : TIBALDO", width: 1200, height: 1500, license },
 ];
 
 export const applyOwnerMarbleQueenMediaV1 = (plants: PlantEntry[]): PlantEntry[] => plants.map((plant) => (
