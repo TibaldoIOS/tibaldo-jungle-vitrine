@@ -72,5 +72,10 @@
     "asset": "painted_plaster_wall",
     "source": "https://polyhaven.com/a/painted_plaster_wall",
     "license": "https://polyhaven.com/license"
+  },
+  {
+    "asset": "hessian_380",
+    "source": "https://polyhaven.com/a/hessian_380",
+    "license": "https://polyhaven.com/license"
   }
 ]

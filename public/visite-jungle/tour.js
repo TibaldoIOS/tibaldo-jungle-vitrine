@@ -11,26 +11,26 @@ renderer.setPixelRatio(Math.min(devicePixelRatio,mobile?1.5:2));renderer.setSize
 renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.02;
 renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.shadowMap.autoUpdate=false;host.appendChild(renderer.domElement);
 const scene=new THREE.Scene();scene.background=new THREE.Color('#d6d8d1');
-scene.add(new THREE.HemisphereLight(0xe8efff,0x79624a,.8));
-const sun=new THREE.DirectionalLight(0xffeed7,3.0);sun.position.set(-3,5,4);sun.target.position.set(1,0,-5);sun.castShadow=true;
+scene.add(new THREE.HemisphereLight(0xfff2df,0x715037,.75));
+const sun=new THREE.DirectionalLight(0xffe7c9,2.4);sun.position.set(-3,5,4);sun.target.position.set(1,0,-5);sun.castShadow=true;
 sun.shadow.mapSize.set(mobile?1024:2048,mobile?1024:2048);Object.assign(sun.shadow.camera,{left:-6,right:6,top:8,bottom:-5,near:.5,far:24});sun.shadow.normalBias=.02;sun.shadow.bias=-.00015;scene.add(sun,sun.target);
 for(const z of [-1.6,-4.1,-6.6]){const l=new THREE.PointLight(0xffe6c6,24,8,2);l.position.set(0,2.72,z);scene.add(l);}
 // Soft central shadow light anchors pots even away from the window.
-const fill=new THREE.PointLight(0xfff2df,14,10,2);fill.position.set(0,2.70,-4);fill.castShadow=true;fill.shadow.mapSize.set(512,512);fill.shadow.normalBias=.025;scene.add(fill);
+const fill=new THREE.PointLight(0xffc787,24,10,2);fill.position.set(-.35,2.17,-3.55);fill.castShadow=true;fill.shadow.mapSize.set(512,512);fill.shadow.normalBias=.025;scene.add(fill);
 const camera=new THREE.PerspectiveCamera(mobile?66:64,innerWidth/innerHeight,.045,50);camera.rotation.order='YXZ';camera.position.set(1.83,EYE_HEIGHT,-.48);
-const stops=[{x:1.83,z:-.48,yaw:.23,pitch:0},{x:.02,z:-2.6,yaw:-1.0,pitch:-.18},{x:-.7,z:-5.5,yaw:Math.PI/2,pitch:0},{x:0,z:-5.95,yaw:Math.PI,pitch:0}];
+const stops=[{x:1.83,z:-.48,yaw:.23,pitch:0},{x:1.1,z:-3.55,yaw:1.55,pitch:-.15},{x:1.2,z:-1.15,yaw:-.8,pitch:0},{x:-.5,z:-6.10,yaw:Math.PI,pitch:0}];
 let yaw=.23,pitch=0,loaded=false,waypoints=[],destination=null;const velocity={x:0,z:0};
 const keys=new Set(),stick={x:0,y:0},dot=document.querySelector('#dot');
 function cancelWalk(){waypoints=[];destination=null;document.querySelectorAll('[data-stop]').forEach(b=>b.setAttribute('aria-pressed','false'));}
 function go(i){if(!loaded)return;canvas.focus({preventScroll:true});keys.clear();stick.x=stick.y=0;destination=stops[i];waypoints=route(camera.position,destination);document.querySelectorAll('[data-stop]').forEach((b,j)=>b.setAttribute('aria-pressed',String(j===i)));}
 document.querySelectorAll('[data-stop]').forEach(b=>b.addEventListener('click',()=>go(+b.dataset.stop)));
 const draco=new DRACOLoader().setDecoderPath('./vendor/draco/').setWorkerLimit(2);
-new GLTFLoader().setDRACOLoader(draco).load('./jungle.glb?v=realism2',g=>{
+new GLTFLoader().setDRACOLoader(draco).load('./jungle.glb?v=style3',g=>{
  scene.add(g.scene);
  const mirror=new Reflector(new THREE.PlaneGeometry(.36,2.1),{textureWidth:mobile?256:512,textureHeight:mobile?512:1024,color:0xe5e5e5,clipBias:.003});mirror.position.set(-1.36,1.05,-7.36);scene.add(mirror);
  g.scene.traverse(o=>{if(!o.isMesh)return;const materials=Array.isArray(o.material)?o.material:[o.material];
  o.castShadow=true;o.receiveShadow=true;if(materials.some(m=>m.name==='Miroir')){o.visible=false;return;}
- for(const m of materials){if(/Vitrage/.test(m.name)){o.castShadow=false;m.depthWrite=false;}if(/Feuillage|Nervures|leaves|Leaf/i.test(m.name)){m.side=THREE.DoubleSide;}
+ for(const m of materials){if(/Ampoule/.test(m.name))o.castShadow=false;if(/Vitrage/.test(m.name)){o.castShadow=false;m.depthWrite=false;}if(/Feuillage|Nervures|leaves|Leaf/i.test(m.name)){m.side=THREE.DoubleSide;}
  if(/Plafond|Enduit/.test(o.name))o.castShadow=false;
  for(const key of ['map','normalMap','roughnessMap'])if(m[key])m[key].anisotropy=Math.min(8,renderer.capabilities.getMaxAnisotropy());
  }

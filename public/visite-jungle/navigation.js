@@ -3,7 +3,7 @@ import {pots} from './layout.js';
 export const EYE_HEIGHT=1.65;
 const radius=.23;
 export const obstacles=[
- {x:-2.42,z:-1.5,w:.45,d:1.15},{x:-2.42,z:-3,w:.45,d:1.15},{x:2.43,z:-5.6,w:.4,d:1.55},
+ {x:-2.42,z:-1.5,w:.45,d:1.15},{x:-2.42,z:-3,w:.45,d:1.15},{x:2.43,z:-5.6,w:.4,d:1.85},
  {x:-2.60,z:-3.98,w:.30,d:.34},{x:2.60,z:-3.98,w:.30,d:.34},
  ...pots
 ];
