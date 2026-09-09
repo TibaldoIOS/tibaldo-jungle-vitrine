@@ -9,6 +9,8 @@ export const metadata: Metadata = {
 };
 
 const credits: readonly [string, string, string, string, string?][] = [
+  ["Epipremnum aureum ‘Marble Queen’", "Photo : TIBALDO", "Photographies botaniques · recadrage et conversion WebP", "owner-provided://tibaldo/marble-queen-2026-09-08"],
+  ["Pilea peperomioides", "Photo : TIBALDO", "Photographies botaniques · recadrage et conversion WebP", "owner-provided://tibaldo/pilea-peperomioides-2026-09-08"],
   ["Herbier du genre Alocasia · Alocasia reginula", "Obsidian Soul", "CC0", "https://commons.wikimedia.org/wiki/File:Alocasia_reginula_(Philippines)_02.jpg"],
   ["Herbier du genre Alocasia · Alocasia portei", "Obsidian Soul", "CC0", "https://commons.wikimedia.org/wiki/File:Alocasia_portei_(Philippines)_young_plant_01.jpg"],
   ["Herbier du genre Alocasia · Alocasia nycteris", "Obsidian Soul", "CC0", "https://commons.wikimedia.org/wiki/File:Alocasia_nycteris_(Philippines)_Batwing_alocasia_0004.jpg"],

@@ -8,6 +8,8 @@ import { eventFallbacks } from "@/lib/events/catalog";
 import { getPublicEvent, listPublicEvents } from "@/lib/events/repository";
 import { EventActions, EventCard, EventCountdown } from "../EventTools";
 import GpsChooser from "../../GpsChooser";
+import LocalPresence from "../../LocalPresence";
+import { jungleLocalIdentity } from "@/lib/jungle-local-identity";
 
 type Props = { params: Promise<{ slug: string }> };
 export const dynamic = "force-dynamic";
@@ -361,7 +363,7 @@ export default async function EventPage({ params }: Props) {
               <br />
               {event.postalCode} {event.city}
             </p>
-            <GpsChooser address={fullAddress} />
+            {isOpening ? <><a className="button button-green" href={jungleLocalIdentity.mapsUrl} target="_blank" rel="noopener noreferrer">Itinéraire</a><LocalPresence /></> : <GpsChooser address={fullAddress} />}
             {event.facebookUrl && (
               <a
                 className="event-facebook-button"

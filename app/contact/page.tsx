@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import LocalPresence from "../LocalPresence";
 import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 import { jungleLocalIdentity } from "@/lib/jungle-local-identity";
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const gpsLinks = {
-  google: "https://www.google.com/maps/dir/?api=1&destination=3%20place%20de%20l%27Arbonnoise%2C%2059000%20Lille",
+  google: jungleLocalIdentity.mapsUrl,
   apple: "https://maps.apple.com/?daddr=3%20place%20de%20l%27Arbonnoise%2C%2059000%20Lille",
   waze: "https://www.waze.com/ul?q=3%20place%20de%20l%27Arbonnoise%2C%2059000%20Lille&navigate=yes",
 };
@@ -42,10 +43,7 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
-      <div className="contact-map reveal-right" data-reveal>
-        <iframe title="Carte de Tibaldo Jungle, 3 place de l’Arbonnoise à Lille" src="https://www.google.com/maps?q=3%20place%20de%20l%27Arbonnoise%2C%2059000%20Lille&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
-        <div className="contact-map-label"><span>TIBALDO Jungle · Studio Végétal</span><strong>{jungleLocalIdentity.streetAddress} · {jungleLocalIdentity.city}</strong></div>
-      </div>
+      <LocalPresence />
     </section>
     <SiteFooter />
   </main>;

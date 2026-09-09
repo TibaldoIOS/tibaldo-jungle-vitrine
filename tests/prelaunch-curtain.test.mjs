@@ -42,12 +42,12 @@ test("ordinary and crawler user agents receive the same accessible publication",
   }
 });
 
-test("switch is explicit, PUBLIC-only and keeps the Safe Link Mask mounted", () => {
+test("curtain switch stays explicit without the obsolete Shop mask", () => {
   const config = readFileSync(new URL("../lib/public-prelaunch.ts", import.meta.url), "utf8");
   const layout = readFileSync(new URL("../app/layout.tsx", import.meta.url), "utf8");
   assert.match(config, /PUBLIC_PRELAUNCH_CURTAIN\s*=\s*false/);
   assert.match(config, /isPublicDeployment\s*&&\s*curtainEnabled/);
-  assert.match(layout, /<SafeLinkMaskLayer/);
+  assert.doesNotMatch(layout, /<SafeLinkMaskLayer/);
   assert.match(layout, /<JunglePrelaunchCurtain/);
   assert.match(layout, /isPublicPrelaunchCurtainActive/);
 });

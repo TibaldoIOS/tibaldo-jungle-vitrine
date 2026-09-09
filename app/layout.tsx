@@ -4,13 +4,12 @@ import "./globals.css";
 import ConversionDock from "./ConversionDock";
 import ConversionTracker from "./ConversionTracker";
 import { BetaEnvironmentBanner } from "./BetaEnvironmentBanner";
-import SafeLinkMaskLayer from "./SafeLinkMaskLayer";
 import JunglePrelaunchCurtain from "./JunglePrelaunchCurtain";
 import PublicPreopeningSignal from "./PublicPreopeningSignal";
-import { SHOP_ORIGIN } from "@/lib/environment";
 import {
   betaOnlyRobots,
   isPublicJungleDeployment,
+  jungleOrigin,
 } from "@/lib/deployment-mode";
 import { isPublicPrelaunchCurtainActive } from "@/lib/public-prelaunch";
 
@@ -25,7 +24,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jungle.tibaldo.fr"),
+  metadataBase: new URL(jungleOrigin),
   title: "TIBALDO Jungle — Studio Végétal à Lille",
   description:
     "Nouveauté à Lille : Studio Végétal Tibaldo Jungle, boutique de plantes rares et exotiques. Ouverture le 26 septembre 2026, rempotage gratuit.",
@@ -103,9 +102,6 @@ export default function RootLayout({
         </div>
         <ConversionDock inert={prelaunchCurtainActive} />
         <ConversionTracker />
-        {isPublicJungleDeployment ? (
-          <SafeLinkMaskLayer shopOrigin={SHOP_ORIGIN} />
-        ) : null}
         {prelaunchCurtainActive ? <JunglePrelaunchCurtain /> : null}
       </body>
     </html>

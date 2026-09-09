@@ -1,4 +1,5 @@
 import Image from "next/image";
+import LocalPresence from "./LocalPresence";
 import Link from "next/link";
 import { shopUrl } from "@/lib/environment";
 import { jungleLocalIdentity } from "@/lib/jungle-local-identity";
@@ -87,7 +88,7 @@ export function SiteFooter({ compactTransit = false }: { compactTransit?: boolea
         </div>
         <div className="footer-links">
           <div><span>Explorer</span><Link href="/boutique-plantes-lille">Boutique plantes Lille</Link><Link href="/plantes">Plantes</Link><Link href="/conseils">Conseils plantes</Link><Link href="/sos-plantes">SOS Plantes</Link><Link href="/rempotage">Bar à rempotage</Link><Link href="/fleurs">Catalogue de fleurs</Link><Link href="/substrats-en-vrac-lille">Substrats en vrac Lille</Link><Link href="/pots-cache-pots-lille">Pots et cache-pots à Lille</Link><Link href="/coulisses">Les coulisses</Link><a href="https://tibaldo.fr/qui-suis-je">Qui suis-je ?</a><Link href="/livraison-plantes-lille">Livraison de plantes</Link><Link href="/fleurs-sur-commande-lille">Fleurs et bouquets sur commande</Link><Link href="/evenements">Événements</Link><Link href="/services">Nos services</Link></div>
-          <div className="social-links"><span>Nous suivre</span><a href="https://www.instagram.com/tibaldojungle" target="_blank" rel="noreferrer">Instagram</a><a href="https://www.facebook.com/tibaldojungle" target="_blank" rel="noreferrer">Facebook</a></div>
+          <LocalPresence compact />
           <div><span>Horaires</span><p>Mardi · 14h–19h<br />Mercredi–samedi · 10h–19h<br />Dimanche · 10h–13h</p></div>
           <div><span>Venir & écrire</span><p>{jungleLocalIdentity.streetAddress}<br />{jungleLocalIdentity.postalCode} {jungleLocalIdentity.city}<br /><a href={`tel:${jungleLocalIdentity.phoneE164}`}>{jungleLocalIdentity.phoneDisplay}</a></p><a className="footer-email" href={`mailto:${jungleLocalIdentity.email}`}>{jungleLocalIdentity.email}</a></div>
         </div>

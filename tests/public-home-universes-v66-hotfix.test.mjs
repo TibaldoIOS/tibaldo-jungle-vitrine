@@ -36,7 +36,7 @@ test("the V78 public opening and rights gates remain intact", async () => {
   const home = await read("app/HomeExperience.tsx");
   assert.match(prelaunch, /PUBLIC_PRELAUNCH_CURTAIN = false/);
   assert.match(layout, /PublicPreopeningSignal/);
-  assert.match(layout, /SafeLinkMaskLayer/);
+  assert.doesNotMatch(layout, /SafeLinkMaskLayer/);
   assert.match(boutique, /Boutique de plantes rares à Lille/);
   assert.match(home, /préparées et cultivées à Wattignies/);
   assert.doesNotMatch(home + layout, /monstera-leaf-identification-owner-reference|@REROOTGARDENS|beta-reference/i);

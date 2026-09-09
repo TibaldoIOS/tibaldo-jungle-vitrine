@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 import { shopUrl } from "@/lib/environment";
-
-const destination = "3 place de l'Arbonnoise, 59000 Lille";
+import { jungleLocalIdentity } from "@/lib/jungle-local-identity";
 
 export default function ConversionDock({
   inert = false,
@@ -21,7 +20,7 @@ export default function ConversionDock({
         SOS Plantes
       </Link>
       <a
-        href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destination)}`}
+        href={jungleLocalIdentity.mapsUrl}
         target="_blank"
         rel="noreferrer"
         data-action="route"

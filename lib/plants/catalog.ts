@@ -13,6 +13,8 @@ import { encyclopediaP1Plants } from "./encyclopedia-p1-expansion.ts";
 import { applyMediaRightsP0Closure } from "./media-rights-p0-closure-v1.ts";
 import { applyOwnerMonsteraThaiConstellationMediaV1 } from "./owner-monstera-thai-constellation-media-v1.ts";
 import { applyOwnerMonsteraMintMediaV1 } from "./owner-monstera-mint-media-v1.ts";
+import { applyOwnerMarbleQueenMediaV1 } from "./owner-marble-queen-media-v1.ts";
+import { applyOwnerPileaMediaV1 } from "./owner-pilea-media-v1.ts";
 
 export const plantFamilies = [
   { slug: "strelitzia", name: "Strelitzia", eyebrow: "Oiseaux de paradis", description: "Les cinq espèces acceptées du genre Strelitzia : du compact reginae aux grands alba, caudata et nicolai, avec une lecture claire des appellations « Augusta ».", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle de Strelitzia à ajouter", available: true },
@@ -50,7 +52,7 @@ export const plantFamilies = [
 
 const rawPlants: PlantEntry[] = [{
   slug: "imperial-red", genre: "alocasia", genreLabel: "Alocasia", botanicalName: "Alocasia ‘Imperial Red’", displayName: "Imperial Red",
-  subtitle: "Une Alocasia architecturale aux pétioles rouge bordeaux.", family: "Araceae", origin: "Hybride horticole tropical",
+  subtitle: "Une Alocasia architecturale aux pétioles rouge bordeaux, parfois recherchée sous l’ordre inversé « Red Imperial ».", family: "Araceae", origin: "Hybride horticole tropical",
   taxonomy: { order: "Alismatales", family: "Araceae", genus: "Alocasia", species: "Hybride horticole", cultivar: "Imperial Red", commonNames: ["Oreille d’éléphant Imperial Red", "Alocasia à pétioles rouges"] },
   filters: { temperatureMin: 15, temperatureIdeal: [18, 28], humidityIdeal: [60, 80], light: "vive", watering: "régulier", substrateTags: ["aroïdes", "aéré", "drainant", "organique"], growthRate: "rapide", habits: ["terrestre", "dressé"], adultSizeCm: 250, needsSupport: false, variegated: false, collection: true, flowering: false, petToxic: true, humanToxic: true, regions: ["Asie tropicale", "Océanie"] },
   habitat: "Hybride horticole issu d’espèces terrestres des forêts tropicales humides, cultivé dans une lumière filtrée et un sol organique très respirant.",
@@ -103,7 +105,7 @@ const rawPlants: PlantEntry[] = [{
     { src: "/hero-jungle.jpg", alt: "Grande plante tropicale dans un intérieur lumineux", caption: "Une lumière vive favorise un port plus dense.", width: 2000, height: 1333 },
     { src: "/advice-rempotage.jpg", alt: "Conseil de rempotage pour une plante tropicale", caption: "Le volume du pot et l’aération du mélange sont déterminants.", width: 1200, height: 1800 },
   ],
-  seo: { title: "Alocasia Imperial Red : entretien et pétioles rouges", description: "Entretien de l’Alocasia Imperial Red : lumière, arrosage, substrat, toxicité et problèmes. Découvrez notre spécimen de 160 cm à Lille.", keywords: ["Alocasia Imperial Red entretien", "Alocasia pétioles rouges", "Alocasia Lille", "plante XXL Lille"] },
+  seo: { title: "Alocasia Imperial Red : entretien et pétioles rouges", description: "Entretien de l’Alocasia Imperial Red, parfois recherchée comme Red Imperial : lumière, arrosage, substrat, toxicité et problèmes. Découvrez notre spécimen de 160 cm à Lille.", keywords: ["Alocasia Imperial Red entretien", "Alocasia Red Imperial", "Alocasia pétioles rouges", "Alocasia Lille", "plante XXL Lille"] },
   sources: [{ label: "NC State Extension", url: "https://plants.ces.ncsu.edu/plants/alocasia/common-name/alocasia/" }, { label: "ASPCA", url: "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/alocasia" }, { label: "Aroidpedia", url: "https://www.aroidpedia.com/journal/alocasia-imperial-red" }],
   publishedAt: "2026-08-06", updatedAt: "2026-08-06",
 }, {
@@ -189,11 +191,11 @@ const rawPlants: PlantEntry[] = [{
   publishedAt: "2026-08-06", updatedAt: "2026-08-06",
 }, ...newArrivalPlants, ...requestedPlants, ...afternoonPlants, ...encyclopediaV19ExpansionPlants, ...prayerPlants, ...encyclopediaV2Step1Plants, ...encyclopediaV2Step2Plants, cycasRevoluta, dicksoniaAntarctica, ...agaveFatsiaStrelitziaPlants, ...encyclopediaP1Plants];
 
-export const plants: PlantEntry[] = applyOwnerMonsteraMintMediaV1(
+export const plants: PlantEntry[] = applyOwnerPileaMediaV1(applyOwnerMarbleQueenMediaV1(applyOwnerMonsteraMintMediaV1(
   applyOwnerMonsteraThaiConstellationMediaV1(
     applyMediaRightsP0Closure(rawPlants),
   ),
-);
+)));
 
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);

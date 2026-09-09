@@ -20,7 +20,6 @@ const structuredData = {
       openingDate: "2026-09-26",
       areaServed: [{ "@type": "City", name: "Lille" }, { "@type": "AdministrativeArea", name: "Nord" }],
       knowsAbout: ["Plantes rares", "Plantes d’intérieur", "Rempotage de plantes", "Substrats horticoles en vrac", "Studio végétal"],
-      sameAs: ["https://www.instagram.com/tibaldojungle", "https://www.facebook.com/tibaldojungle"],
     },
     jungleOrganizationStructuredData(),
     { "@type": "WebSite", "@id": "https://jungle.tibaldo.fr/#website", url: jungleLocalIdentity.canonicalStoreUrl, name: jungleLocalIdentity.brandName, alternateName: jungleLocalIdentity.storeName, publisher: { "@id": jungleLocalIdentity.organizationId }, inLanguage: "fr-FR" },
@@ -36,6 +35,9 @@ export default function Home() {
       <section className="hero" id="accueil">
         <div className="hero-photo" aria-hidden="true" /><div className="hero-shade" aria-hidden="true" />
         <SiteHeader />
+        <p className="hero-local-coordinates" aria-label={`Latitude ${jungleLocalIdentity.latitude} nord, longitude ${jungleLocalIdentity.longitude} est`}>
+          {jungleLocalIdentity.latitude}° N · {jungleLocalIdentity.longitude}° E
+        </p>
         <div className="hero-content shell">
           <p className="eyebrow"><span /> Nouvelle boutique · Lille</p>
           <h1 aria-label="Plantes rares et tropicales à Lille"><span className="hero-line" aria-hidden="true"><span>Plantes rares</span></span><span className="hero-line" aria-hidden="true"><span>&amp; tropicales <em>à Lille.</em></span></span></h1>

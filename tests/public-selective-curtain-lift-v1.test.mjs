@@ -13,10 +13,10 @@ const boutique = read("app/boutique-plantes-lille/page.tsx");
 const methodology = read("app/methodologie-sources/page.tsx");
 const leafRegistry = read("lib/plants/catalog.ts");
 
-test("PUBLIC curtain is off while the Safe Link Mask and non-blocking signal remain", () => {
+test("PUBLIC curtain is off, Shop links are direct and the non-blocking signal remains", () => {
   assert.match(config, /PUBLIC_PRELAUNCH_CURTAIN\s*=\s*false/);
   assert.match(layout, /<PublicPreopeningSignal/);
-  assert.match(layout, /<SafeLinkMaskLayer/);
+  assert.doesNotMatch(layout, /<SafeLinkMaskLayer/);
   assert.match(signal, /La Jungle est ouverte en ligne/);
   assert.match(signal, /26 septembre/);
   assert.doesNotMatch(signal, /position:\s*fixed|aria-modal|role="dialog"/);

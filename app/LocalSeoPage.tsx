@@ -1,4 +1,5 @@
 import Image from "next/image";
+import LocalPresence from "./LocalPresence";
 import ScrollReveal from "./ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "./SiteChrome";
 import { jungleLocalIdentity, jungleStoreStructuredData } from "@/lib/jungle-local-identity";
@@ -91,8 +92,8 @@ export default function LocalSeoPage(props: LocalPageProps) {
     </div></section>
 
     <section className="shell local-seo-visit" id="informations">
-      <div data-reveal><p className="section-kicker">Boutique physique</p><h2>Une adresse végétale<br /><em>au cœur de Lille.</em></h2><p><strong>{jungleLocalIdentity.storeName}</strong><br />{jungleLocalIdentity.streetAddress}, {jungleLocalIdentity.postalCode} {jungleLocalIdentity.city}<br />Mardi · 14h–19h<br />Mercredi–samedi · 10h–19h<br />Dimanche · 10h–13h</p><a className="button button-green" href="https://www.google.com/maps/dir/?api=1&destination=3%20place%20de%20l%27Arbonnoise%2C%2059000%20Lille" target="_blank" rel="noreferrer">Ouvrir l’itinéraire <Arrow /></a></div>
-      {visitVisual ? <figure className="local-seo-visit-visual"><Image unoptimized src={visitVisual.src} alt={visitVisual.alt} width="1280" height="960" loading="lazy" /><figcaption>{visitVisual.caption}</figcaption></figure> : <iframe title={`Carte pour ${props.title} chez Tibaldo Jungle à Lille`} src="https://www.google.com/maps?q=3%20place%20de%20l%27Arbonnoise%2C%2059000%20Lille&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />}
+      <div data-reveal><p className="section-kicker">Boutique physique</p><h2>Une adresse végétale<br /><em>au cœur de Lille.</em></h2><p><strong>{jungleLocalIdentity.storeName}</strong><br />{jungleLocalIdentity.streetAddress}, {jungleLocalIdentity.postalCode} {jungleLocalIdentity.city}<br />Mardi · 14h–19h<br />Mercredi–samedi · 10h–19h<br />Dimanche · 10h–13h</p><a className="button button-green" href={jungleLocalIdentity.mapsUrl} target="_blank" rel="noreferrer">Ouvrir l’itinéraire <Arrow /></a></div>
+      {props.canonical === "/boutique-plantes-lille" ? <LocalPresence /> : visitVisual ? <figure className="local-seo-visit-visual"><Image unoptimized src={visitVisual.src} alt={visitVisual.alt} width="1280" height="960" loading="lazy" /><figcaption>{visitVisual.caption}</figcaption></figure> : <iframe title={`Carte pour ${props.title} chez Tibaldo Jungle à Lille`} src="https://www.google.com/maps?q=3%20place%20de%20l%27Arbonnoise%2C%2059000%20Lille&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />}
     </section>
 
     <section className="local-seo-links"><div className="shell"><header data-reveal><p className="section-kicker">Continuer la visite</p><h2>Explorer le Studio.</h2></header><div>{props.links.map((link) => { const visual = linkVisuals[link.href] ?? linkVisuals["/plantes"]; return <a href={link.href} key={link.href} data-reveal><div className="local-seo-link-visual"><Image unoptimized src={visual.src} alt={visual.alt} loading="lazy"/><span aria-hidden="true"/></div><div className="local-seo-link-copy"><h3>{link.label}</h3><p>{link.copy}</p><strong>Découvrir <Arrow /></strong></div></a>; })}</div></div></section>

@@ -1,0 +1,13 @@
+.block { display: block; width: 100%; box-sizing: border-box; color: #103d2e; background: #edf0e5; border: 1px solid #b8c6ad; border-radius: 3px; padding: clamp(22px, 4vw, 42px); align-self: start; min-width: 0; }
+.block .heading { color: inherit; margin: 0 0 20px; font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+.block:not(.compact) { margin-block: 16px; }
+.block a { display: flex; align-items: center; gap: 14px; min-height: 52px; padding: 10px 0; color: inherit; border-bottom: 1px solid #bac8b5; font-size: 15px; font-weight: 600; text-decoration: none; }
+.block a:last-child { border-bottom: 0; }
+.block a:hover { text-decoration: underline; text-underline-offset: 5px; }
+.block a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+.block svg { width: 23px; height: 23px; flex: 0 0 23px; }
+.block a span { color: inherit; font-size: inherit; letter-spacing: normal; text-transform: none; margin: 0; }
+.block b { margin-left: auto; font-weight: 400; }
+.block.compact { padding: 0; border: 0; background: transparent; color: inherit; }
+.compact a { font-size: 13px; min-height: 44px; gap: 9px; }
+.compact .heading { font-size: 10px; }

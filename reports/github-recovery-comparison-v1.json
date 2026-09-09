@@ -1,0 +1,1650 @@
+{
+  "github": "14f29f06d3b9daaf48f5f0e7517c78dd554fd751",
+  "candidate": "e17d8e3a639f81ce64e0442bf6f4d6a906183ef5",
+  "files": [
+    {
+      "path": ".openai/hosting.json",
+      "status": "M",
+      "category": "BUILD/DEPLOYMENT_METADATA",
+      "decision": "BETA_IDENTITY_PRESERVED_PUBLIC_USES_HOSTING_PUBLIC"
+    },
+    {
+      "path": "JUNGLE_DOCUMENTARY_MEDIA_COMPLETION_WAVE_V1_REPORT.txt",
+      "status": "D",
+      "category": "CONTENT",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "app/HomeExperience.tsx",
+      "status": "M",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/PublicPreopeningSignal.tsx",
+      "status": "A",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/ScrollReveal.tsx",
+      "status": "M",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/SiteChrome.tsx",
+      "status": "M",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/boutique-plantes-lille/page.tsx",
+      "status": "M",
+      "category": "ROUTES",
+      "decision": "PRESERVE_GITHUB"
+    },
+    {
+      "path": "app/coulisses/page.tsx",
+      "status": "M",
+      "category": "ROUTES",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/credits-images/page.tsx",
+      "status": "M",
+      "category": "ROUTES",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/evenements/EventTools.tsx",
+      "status": "M",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/evenements/[slug]/page.tsx",
+      "status": "M",
+      "category": "ROUTES",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/globals.css",
+      "status": "M",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/layout.tsx",
+      "status": "M",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/liens/page.module.css",
+      "status": "A",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/liens/page.tsx",
+      "status": "A",
+      "category": "ROUTES",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/methodologie-sources/page.tsx",
+      "status": "A",
+      "category": "ROUTES",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/page.tsx",
+      "status": "M",
+      "category": "ROUTES",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/plantes/BotanicalHubLeafPlate.module.css",
+      "status": "D",
+      "category": "CONTENT",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "app/plantes/BotanicalHubLeafPlate.tsx",
+      "status": "D",
+      "category": "CONTENT",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "app/plantes/CompactBotanicalIndex.tsx",
+      "status": "M",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/plantes/CycasLocalGuide.module.css",
+      "status": "M",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/plantes/CycasLocalGuide.tsx",
+      "status": "M",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/plantes/GenusSpeciesCarousel.tsx",
+      "status": "M",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/plantes/GoldenGenusHub.tsx",
+      "status": "M",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/plantes/GoldenGroupHeroBaseline.module.css",
+      "status": "M",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/plantes/GoldenGroupMobileBaseline.module.css",
+      "status": "M",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/plantes/GoldenSpeciesProfile.tsx",
+      "status": "M",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/plantes/PlantExplorer.tsx",
+      "status": "M",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/plantes/PlantFamilyDirectory.module.css",
+      "status": "M",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/plantes/PlantFamilyDirectory.tsx",
+      "status": "M",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/plantes/SpeciesCareLinks.module.css",
+      "status": "D",
+      "category": "SEO/GEO",
+      "decision": "PRESERVE_GITHUB"
+    },
+    {
+      "path": "app/plantes/SpeciesCareLinks.tsx",
+      "status": "D",
+      "category": "SEO/GEO",
+      "decision": "PRESERVE_GITHUB"
+    },
+    {
+      "path": "app/plantes/VarietyCount.tsx",
+      "status": "A",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/plantes/[genre]/page.tsx",
+      "status": "M",
+      "category": "ROUTES",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/plantes/famille/[family]/page.tsx",
+      "status": "M",
+      "category": "ROUTES",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/plantes/page.tsx",
+      "status": "M",
+      "category": "ROUTES",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/sitemap.xml/route.ts",
+      "status": "M",
+      "category": "SEO/GEO",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/substrats-en-vrac-lille/page.tsx",
+      "status": "M",
+      "category": "ROUTES",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/substrats/LocalSubstrateVisit.tsx",
+      "status": "A",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/substrats/ProductPackshot.tsx",
+      "status": "A",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/substrats/SubstrateSelection.tsx",
+      "status": "A",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/substrats/local-commerce.ts",
+      "status": "A",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/substrats/page.tsx",
+      "status": "M",
+      "category": "ROUTES",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/substrats/product-media.json",
+      "status": "A",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/substrats/selection.module.css",
+      "status": "A",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/substrats/selection.ts",
+      "status": "A",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "app/substrats/supplier-media.ts",
+      "status": "A",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "docs/OWNER-URL-MEDIA-INGESTION-STANDARD.md",
+      "status": "M",
+      "category": "EVIDENCE",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "lib/plants/botanical-hub-leaf-plates.ts",
+      "status": "D",
+      "category": "CONTENT",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "lib/plants/catalog.ts",
+      "status": "M",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "lib/plants/documentary-media-completion-wave-2-v1.ts",
+      "status": "D",
+      "category": "CONTENT",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "lib/plants/documentary-media-completion-wave-3-v1.ts",
+      "status": "D",
+      "category": "CONTENT",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "lib/plants/documentary-media-completion-wave-4-v1.ts",
+      "status": "D",
+      "category": "CONTENT",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "lib/plants/documentary-media-completion-wave-5-v1.ts",
+      "status": "D",
+      "category": "CONTENT",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "lib/plants/documentary-media-completion-wave-v1.ts",
+      "status": "D",
+      "category": "CONTENT",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "lib/plants/documentary-media.ts",
+      "status": "D",
+      "category": "CONTENT",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "lib/plants/encyclopedia-v19-expansion.ts",
+      "status": "M",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "lib/plants/family-hub-content.ts",
+      "status": "D",
+      "category": "CONTENT",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "lib/plants/night-media-safety-v1.ts",
+      "status": "D",
+      "category": "CONTENT",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "lib/plants/owner-monstera-mint-media-v1.ts",
+      "status": "A",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "lib/plants/owner-monstera-thai-constellation-media-v1.ts",
+      "status": "A",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "lib/plants/public-media-credit.ts",
+      "status": "A",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "lib/plants/set-1-media-rights-v1.ts",
+      "status": "D",
+      "category": "CONTENT",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "lib/plants/species-media-expansion-v1.ts",
+      "status": "D",
+      "category": "CONTENT",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "lib/plants/verified-group-media.ts",
+      "status": "D",
+      "category": "CONTENT",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "lib/plants/verified-media-api-contract.ts",
+      "status": "M",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "lib/public-prelaunch.ts",
+      "status": "M",
+      "category": "CONTENT",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "lib/seo/family-indexability-contract.ts",
+      "status": "D",
+      "category": "SEO/GEO",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "lib/seo/indexability.ts",
+      "status": "M",
+      "category": "SEO/GEO",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "media-evidence/sybotanica-products-v2/alocasia.json",
+      "status": "A",
+      "category": "EVIDENCE",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "media-evidence/sybotanica-products-v2/anthurium.json",
+      "status": "A",
+      "category": "EVIDENCE",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "media-evidence/sybotanica-products-v2/aroid.json",
+      "status": "A",
+      "category": "EVIDENCE",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "media-evidence/sybotanica-products-v2/bonsai.json",
+      "status": "A",
+      "category": "EVIDENCE",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "media-evidence/sybotanica-products-v2/cacti-liquid.json",
+      "status": "A",
+      "category": "EVIDENCE",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "media-evidence/sybotanica-products-v2/cacti-slow.json",
+      "status": "A",
+      "category": "EVIDENCE",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "media-evidence/sybotanica-products-v2/cacti.json",
+      "status": "A",
+      "category": "EVIDENCE",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "media-evidence/sybotanica-products-v2/calathea-maranta.json",
+      "status": "A",
+      "category": "EVIDENCE",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "media-evidence/sybotanica-products-v2/carbon.json",
+      "status": "A",
+      "category": "EVIDENCE",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "media-evidence/sybotanica-products-v2/carnivorous.json",
+      "status": "A",
+      "category": "EVIDENCE",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "media-evidence/sybotanica-products-v2/coco-coir.json",
+      "status": "A",
+      "category": "EVIDENCE",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "media-evidence/sybotanica-products-v2/fern.json",
+      "status": "A",
+      "category": "EVIDENCE",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "media-evidence/sybotanica-products-v2/ficus.json",
+      "status": "A",
+      "category": "EVIDENCE",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "media-evidence/sybotanica-products-v2/hoya.json",
+      "status": "A",
+      "category": "EVIDENCE",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "media-evidence/sybotanica-products-v2/mineral.json",
+      "status": "A",
+      "category": "EVIDENCE",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "media-evidence/sybotanica-products-v2/orchid-liquid.json",
+      "status": "A",
+      "category": "EVIDENCE",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "media-evidence/sybotanica-products-v2/orchid-slow.json",
+      "status": "A",
+      "category": "EVIDENCE",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "media-evidence/sybotanica-products-v2/orchid.json",
+      "status": "A",
+      "category": "EVIDENCE",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "media-evidence/sybotanica-products-v2/sphagnum.json",
+      "status": "A",
+      "category": "EVIDENCE",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "media-evidence/sybotanica-products-v2/syngonium.json",
+      "status": "A",
+      "category": "EVIDENCE",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "media-evidence/sybotanica-products-v2/terrarium.json",
+      "status": "A",
+      "category": "EVIDENCE",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "media-evidence/sybotanica-products-v2/tropical-liquid.json",
+      "status": "A",
+      "category": "EVIDENCE",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "media-evidence/sybotanica-products-v2/tropical-slow.json",
+      "status": "A",
+      "category": "EVIDENCE",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "media-evidence/sybotanica-products-v2/zeolite.json",
+      "status": "A",
+      "category": "EVIDENCE",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "media-provenance/monstera-leaf-identification-beta-reference-v1.json",
+      "status": "D",
+      "category": "CONTENT",
+      "decision": "RIGHTS_BLOCKED"
+    },
+    {
+      "path": "package.json",
+      "status": "M",
+      "category": "BUILD/DEPLOYMENT_METADATA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/beta-reference/monstera-leaf-identification-owner-reference-v1.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "RIGHTS_BLOCKED"
+    },
+    {
+      "path": "public/documentary-media-wave-2-v1/anthurium-clarinervium.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-2-v1/anthurium-regale.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-2-v1/anthurium-warocqueanum.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-2-v1/monstera-adansonii.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-2-v1/philodendron-gloriosum.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-3-v1/alocasia-macrorrhizos.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-3-v1/alocasia-odora.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-3-v1/alocasia-sinuata.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-3-v1/alocasia-zebrina.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-3-v1/chlorophytum-comosum.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-3-v1/dicksonia-antarctica.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-3-v1/plumeria-rubra.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-3-v1/strelitzia-juncea.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-3-v1/strelitzia-nicolai.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-3-v1/strelitzia-reginae.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-4-v1/alocasia-longiloba.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-4-v1/monstera-subpinnata.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-4-v1/philodendron-grazielae.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-4-v1/strelitzia-caudata.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-5-v1/agave-variegata.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-5-v1/fatsia-spiders-web.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-6-v1/cycas-revoluta-documentaire.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-6-v1/philodendron-hederaceum-brasil.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-v1/alocasia-baginda.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-v1/alocasia-micholitziana.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-v1/alocasia-reginula.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-v1/aloe-vera.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-v1/anthurium-forgetii.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-v1/anthurium-magnificum.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-v1/anthurium-papillilaminum.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-v1/asparagus-setaceus.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-v1/disocactus-anguliger.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-v1/monstera-dubia.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-v1/monstera-obliqua.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-v1/monstera-pinnatipartita.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-v1/monstera-siltepecana.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-v1/musa-basjoo.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-v1/pilea-cadierei.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-v1/strelitzia-alba.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/documentary-media-wave-v1/yucca-rostrata.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/hub-leaf-plates-v1/alocasia-leaf-plate-v1.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/hub-leaf-plates-v1/anthurium-leaf-plate-v1.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/hub-leaf-plates-v1/monstera-leaf-plate-v1.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/hub-leaf-plates-v1/philodendron-leaf-plate-v1.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/hub-media-wave-4-v1/ensete.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/hub-media-wave-4-v1/fatsia.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/hub-media-wave-5-v1/hub-agave.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/hub-media-wave-5-v1/hub-equisetum.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/hub-media-wave-5-v1/hub-maranta.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/owner-media/monstera/monstera-mint-owner-2026-09.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/owner-media/monstera/monstera-thai-constellation-owner-2026-09.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/species-expansion-v1/alocasia-portei.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/species-expansion-v1/anthurium-pedatoradiatum.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/species-expansion-v1/anthurium-radicans.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/species-expansion-v1/goeppertia-orbifolia.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/species-expansion-v1/monstera-acuminata.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/species-expansion-v1/monstera-spruceana.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/species-expansion-v1/nephrolepis-exaltata.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/species-expansion-v1/philodendron-brandtianum.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/species-expansion-v1/philodendron-erubescens.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/species-expansion-v1/philodendron-squamiferum.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/species-expansion-v1/philodendron-verrucosum.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/species-expansion-v1/pilea-involucrata.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/species-expansion-v1/schlumbergera-truncata.webp",
+      "status": "D",
+      "category": "MEDIA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-alocasia-400.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-alocasia-800.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-anthurium-400.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-anthurium-800.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-aroid-400.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-aroid-800.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-bonsai-400.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-bonsai-800.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-cacti-400.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-cacti-800.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-cacti-liquid-400.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-cacti-liquid-800.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-cacti-slow-400.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-cacti-slow-800.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-calathea-maranta-400.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-calathea-maranta-800.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-carbon-400.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-carbon-800.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-carnivorous-400.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-carnivorous-800.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-coco-coir-400.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-coco-coir-800.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-fern-400.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-fern-800.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-ficus-400.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-ficus-800.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-hoya-400.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-hoya-800.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-mineral-400.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-mineral-800.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-orchid-400.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-orchid-800.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-orchid-liquid-400.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-orchid-liquid-800.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-orchid-slow-400.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-orchid-slow-800.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-sphagnum-400.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-sphagnum-800.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-syngonium-400.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-syngonium-800.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-terrarium-400.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-terrarium-800.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-tropical-liquid-400.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-tropical-liquid-800.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-tropical-slow-400.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-tropical-slow-800.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-zeolite-400.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/products/sybotanica-zeolite-800.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/rempotage-mains-substrat.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "public/supplier-media/sybotanica/selection-substrats-sybotanica.webp",
+      "status": "A",
+      "category": "MEDIA",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "reports/JUNGLE_NIGHT_AUDIT_V1.md",
+      "status": "D",
+      "category": "EVIDENCE",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "reports/JUNGLE_SET_1_MEDIA_RIGHTS_AUDIT_V1.md",
+      "status": "D",
+      "category": "EVIDENCE",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "reports/JUNGLE_SET_2_STABILIZED_CAPTURE_PROTOCOL_V1.md",
+      "status": "D",
+      "category": "EVIDENCE",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "reports/JUNGLE_SPECIES_MEDIA_EXPANSION_V1.md",
+      "status": "D",
+      "category": "EVIDENCE",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "reports/SUBSTRATS_PUBLIC_PARTNER_PROMOTION_V1.md",
+      "status": "A",
+      "category": "EVIDENCE",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "reports/TIBALDO_JUNGLE_HUB_HERO_MEDIA_DOCUMENTARY_SPECIES_MEDIA_WAVE_5_V1.txt",
+      "status": "D",
+      "category": "EVIDENCE",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "reports/TIBALDO_JUNGLE_WAVE_5_V54_DEPLOYMENT_CLOSURE_RUNTIME_RECERTIFICATION_V1.txt",
+      "status": "D",
+      "category": "EVIDENCE",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "reports/home-universe-owner-media-provenance-v1.json",
+      "status": "D",
+      "category": "EVIDENCE",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "reports/jungle-night-hubs-v1.csv",
+      "status": "D",
+      "category": "EVIDENCE",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "reports/jungle-night-hubs-v1.json",
+      "status": "D",
+      "category": "EVIDENCE",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "reports/jungle-night-missing-species-v1.csv",
+      "status": "D",
+      "category": "EVIDENCE",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "reports/jungle-night-missing-species-v1.json",
+      "status": "D",
+      "category": "EVIDENCE",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "reports/jungle-night-owner-photo-plan-v1.md",
+      "status": "D",
+      "category": "EVIDENCE",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "reports/jungle-night-photo-sourcing-v1.csv",
+      "status": "D",
+      "category": "EVIDENCE",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "reports/jungle-night-photo-sourcing-v1.json",
+      "status": "D",
+      "category": "EVIDENCE",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "reports/jungle-night-public-crawl-v1.csv",
+      "status": "D",
+      "category": "EVIDENCE",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "reports/jungle-night-public-crawl-v1.json",
+      "status": "D",
+      "category": "EVIDENCE",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "reports/jungle-night-route-inventory-v1.csv",
+      "status": "D",
+      "category": "EVIDENCE",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "reports/jungle-night-route-inventory-v1.json",
+      "status": "D",
+      "category": "EVIDENCE",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "reports/jungle-night-species-media-v1.csv",
+      "status": "D",
+      "category": "EVIDENCE",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "reports/jungle-night-species-media-v1.json",
+      "status": "D",
+      "category": "EVIDENCE",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "reports/species-media-inventory-after-expansion-v1.json",
+      "status": "D",
+      "category": "EVIDENCE",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "scripts/night-enrichment-audit.mjs",
+      "status": "D",
+      "category": "BUILD/DEPLOYMENT_METADATA",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "scripts/public-sitemap-contract.mjs",
+      "status": "D",
+      "category": "SEO/GEO",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "scripts/seo-audit.mjs",
+      "status": "M",
+      "category": "SEO/GEO",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "tests/asparagaceae-responsive-v1.test.mjs",
+      "status": "D",
+      "category": "TEST",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "tests/beta-environment.test.mjs",
+      "status": "M",
+      "category": "TEST",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "tests/botanical-hub-leaf-plates-v1.test.ts",
+      "status": "D",
+      "category": "TEST",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "tests/canonical-golden-fidelity.test.mjs",
+      "status": "M",
+      "category": "TEST",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "tests/cycas-local-geo-v1.test.ts",
+      "status": "M",
+      "category": "TEST",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "tests/deployment-artifact-contract.test.mjs",
+      "status": "M",
+      "category": "TEST",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "tests/documentary-media-completion-wave-2-v1.test.ts",
+      "status": "D",
+      "category": "TEST",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "tests/documentary-media-completion-wave-3-v1.test.ts",
+      "status": "D",
+      "category": "TEST",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "tests/documentary-media-completion-wave-4-v1.test.ts",
+      "status": "D",
+      "category": "TEST",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "tests/documentary-media-completion-wave-5-v1.test.ts",
+      "status": "D",
+      "category": "TEST",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "tests/documentary-media-completion-wave-v1.test.ts",
+      "status": "D",
+      "category": "TEST",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "tests/documentary-media-wave-6-v1.test.ts",
+      "status": "D",
+      "category": "TEST",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "tests/encyclopedia-p1-expansion.test.ts",
+      "status": "M",
+      "category": "TEST",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "tests/final-media-completion-v1.test.ts",
+      "status": "M",
+      "category": "TEST",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "tests/home-carousel-monstera-hero-v1.test.ts",
+      "status": "D",
+      "category": "TEST",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "tests/home-universe-owner-media-v1.test.ts",
+      "status": "D",
+      "category": "TEST",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "tests/hub-indexability-sitemap-v1.test.ts",
+      "status": "D",
+      "category": "SEO/GEO",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "tests/links-public-final.test.mjs",
+      "status": "A",
+      "category": "TEST",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "tests/media-rights-p0-closure-v1.test.ts",
+      "status": "M",
+      "category": "TEST",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "tests/night-enrichment-v1.test.ts",
+      "status": "D",
+      "category": "TEST",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "tests/pallidiflorum-owner-media-v1.test.ts",
+      "status": "A",
+      "category": "TEST",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "tests/plant-contract.test.ts",
+      "status": "M",
+      "category": "TEST",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "tests/plant-family-ux-v1.test.mjs",
+      "status": "A",
+      "category": "TEST",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "tests/prelaunch-curtain.test.mjs",
+      "status": "M",
+      "category": "TEST",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "tests/public-home-universes-v66-hotfix.test.mjs",
+      "status": "A",
+      "category": "TEST",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "tests/public-media-editorial-language.test.ts",
+      "status": "A",
+      "category": "TEST",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "tests/public-selective-curtain-lift-v1.test.mjs",
+      "status": "A",
+      "category": "TEST",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "tests/public-sitemap-link-contract.test.mjs",
+      "status": "D",
+      "category": "SEO/GEO",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "tests/rendered-html.test.mjs",
+      "status": "M",
+      "category": "TEST",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "tests/scroll-reveal-navigation-v1.test.mjs",
+      "status": "A",
+      "category": "TEST",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "tests/seo-geo-wave-1.test.mjs",
+      "status": "D",
+      "category": "SEO/GEO",
+      "decision": "PRESERVE_GITHUB"
+    },
+    {
+      "path": "tests/set-1-media-rights-v1.test.ts",
+      "status": "D",
+      "category": "TEST",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "tests/species-media-expansion-v1.test.ts",
+      "status": "D",
+      "category": "TEST",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "tests/substrates-local-commerce-v1.test.ts",
+      "status": "A",
+      "category": "TEST",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "tests/substrates-product-media-v2.test.ts",
+      "status": "A",
+      "category": "TEST",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "tests/substrates-public-promotion-v1.test.mjs",
+      "status": "A",
+      "category": "TEST",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "tests/substrates-selection-v1.test.ts",
+      "status": "A",
+      "category": "TEST",
+      "decision": "RECOVER_CANDIDATE"
+    },
+    {
+      "path": "tests/v48-hub-grid-h1-remediation-v1.test.ts",
+      "status": "D",
+      "category": "TEST",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    },
+    {
+      "path": "tests/verified-media-api-contract-v1.test.ts",
+      "status": "D",
+      "category": "TEST",
+      "decision": "KEEP_GITHUB_HISTORY_NOT_ACTIVE"
+    }
+  ]
+}
