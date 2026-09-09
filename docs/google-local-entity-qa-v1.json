@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-09",
+  "scope": "SOURCE_ONLY_LOCAL_PUBLIC_BUILD",
+  "base": "8cc51055ba314d51cbdb6f13f7767e20eb670439",
+  "routes": ["/", "/contact", "/boutique-plantes-lille", "/evenements/ouverture-tibaldo-jungle-lille"],
+  "widths": [390, 430, 820, 1280, 1440],
+  "browser": "Codex in-app browser, local Wrangler Worker",
+  "matrix_combinations": 20,
+  "document_horizontal_overflow": 0,
+  "clipped_social_links": 0,
+  "social_touch_height_css_px": {"main": 52, "footer": 44},
+  "hero_coordinates": "50.5872384° N · 3.0572544° E",
+  "visual_review": "Hero at five widths; social block in Contact, Boutique, opening event and footer; keyboard focus visible",
+  "targeted_tests": "8/8 PASS",
+  "build_public": "PASS",
+  "typecheck": "PASS",
+  "lint": "PASS",
+  "seo_audit": "PASS: 157 URLs, 11 Labs 404, 10 direct redirects",
+  "secret_scan": "PASS_BOUNDED_CHANGED_FILES",
+  "limitations": [
+    "No deployed runtime certification: deployments expressly forbidden.",
+    "Coordinates supplied by Owner, not independently geocoded.",
+    "OpenAgenda listing confirmed by Owner; exact URL not recovered or fabricated.",
+    "Existing header Nous trouver extends beyond Hero at 1280; header layout/styles unchanged, outside bounded patch.",
+    "Existing build warnings for two /media/ CSS images remain unchanged."
+  ],
+  "no_live_reviews": true,
+  "no_fake_ratings": true,
+  "frozen_source_modified": false,
+  "beta_deployed": false,
+  "public_deployed": false
+}

@@ -3759,3 +3759,5 @@ body:has(.conversion-dock){padding-bottom:calc(76px + env(safe-area-inset-bottom
   .public-preopening-signal a { padding-top: 2px; font-size: 8px; text-align: right; }
   .methodology-content > section { grid-template-columns: 2rem 1fr; }
 }
+.hero-local-coordinates { position: absolute; z-index: 2; right: 18px; top: 35%; margin: 0; writing-mode: vertical-rl; color: #f6f4e8; font-size: clamp(16px, 1.6vw, 22px); font-weight: 650; letter-spacing: .1em; line-height: 1.4; text-shadow: 0 1px 6px #08291e, 0 0 16px #08291e; pointer-events: none; }
+@media (max-width: 600px) { .hero-local-coordinates { right: 4px; top: 34%; font-size: 15px; letter-spacing: .03em; } }
