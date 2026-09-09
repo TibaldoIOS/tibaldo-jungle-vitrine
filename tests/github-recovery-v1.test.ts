@@ -40,4 +40,5 @@ test("build modes and approved public work remain separate", () => {
   assert.notEqual(JSON.parse(read(".openai/hosting.json").toString()).project_id, JSON.parse(read(".openai/hosting.public.json").toString()).project_id);
   assert.doesNotMatch(read("app/plantes/GoldenGenusHub.tsx").toString(), /monstera-leaf-identification-owner-reference/);
   assert.match(read("app/plantes/GoldenSpeciesProfile.tsx").toString(), /SpeciesCareLinks/);
+  assert.match(read("app/layout.tsx").toString(), /metadataBase: new URL\(jungleOrigin\)/);
 });
