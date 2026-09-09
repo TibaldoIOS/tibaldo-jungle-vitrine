@@ -1,0 +1,292 @@
+{
+  "id": 7464597520623,
+  "title": "Orchid Mix",
+  "handle": "orchid-mix-5l",
+  "description": "<h2>How to Use the Orchid Soil Mix</h2>\n<p><span style=\"font-weight: 400;\">Using the mix is easy! Start with removing as much of the old soil as possible. Gently squeeze the pot while holding it sideways to loosen up the plant. Run the roots under lukewarm tap water to remove the last pieces and bits.</span></p>\n<p><span style=\"font-weight: 400;\">Also, make sure to remove any dead foliage that may still be on the plant using scissors. Now your plant is ready for its fresh Orchid soil. Add a small layer of Orchid mix at the bottom of the pot.</span></p>\n<p><span style=\"font-weight: 400;\">Place the plant in the pot, and slowly add Orchid soil to the sides to fill it up. Make sure that the point where the roots meet the plant is just buried under the Orchid soil.</span></p>\n<p><span style=\"font-weight: 400;\">Lightly pat the Orchid mix down into the pot. Make sure to water the Orchid mix thoroughly after repotting, as this helps settle the mix and roots down.</span></p>\n<h2>Why the Orchid Mix Works</h2>\n<p><span style=\"font-weight: 400;\">This blend contains everything your orchid could be for. Orchids are a little different to most houseplants. As most orchids are epiphytes (plants that don't grow in soil) they prefer a substrate with lots of aeration and space.</span></p>\n<p><span style=\"font-weight: 400;\">To support this there is lots of orchid bark. The sphagnum moss helps retain humidity around the plant roots. Orchids will also do well in terrariums! The perfect general orchid mix.</span></p>\n<ul></ul>\n<h2>The Original Habitat of the Orchid Plants</h2>\n<p><span style=\"font-weight: 400;\">Most orchids are found in tropical forests in Central America and South America. They have thick larger roots that need airflow and humidity to thrive.</span></p>\n<h2>How to Care for Orchid Plants</h2>\n<p><span style=\"font-weight: 400;\">While there are many types of orchids, we will outline a general care guide. Most orchids prefer bright, indirect sunlight. Avoid direct sunlight as it will scorch the leaves and flowers. Contrary to popular belief, orchids are pretty easy to care for.</span></p>\n<p><span style=\"font-weight: 400;\">Do note that if you decide to change up your mix, the more sphagnum there is, the less water it needs. Vice versa, the more bark, the more water it needs. Sphagnum holds onto the water for a longer period of time.</span></p>\n<p><span style=\"font-weight: 400;\">**Improved recipe with smaller orchid bark to fit smaller pots**</span></p>\n<ul></ul>",
+  "published_at": "2021-12-11T14:54:32+01:00",
+  "created_at": "2021-11-29T21:16:27+01:00",
+  "vendor": "Premium SYBASoil",
+  "type": "Houseplants Mixes",
+  "tags": [
+    "guarantee",
+    "keiki",
+    "NOT-ON-SALE"
+  ],
+  "price": 499,
+  "price_min": 499,
+  "price_max": 3499,
+  "available": true,
+  "price_varies": true,
+  "compare_at_price": null,
+  "compare_at_price_min": 0,
+  "compare_at_price_max": 0,
+  "compare_at_price_varies": false,
+  "variants": [
+    {
+      "id": 53723703279943,
+      "title": "1L",
+      "option1": "1L",
+      "option2": null,
+      "option3": null,
+      "sku": "SYB011-1",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 74227866239303,
+        "product_id": 7464597520623,
+        "position": 4,
+        "created_at": "2026-04-17T11:22:03+02:00",
+        "updated_at": "2026-04-17T11:22:07+02:00",
+        "alt": "Standing 1L pouch of chunky bark with pink orchid illustrations",
+        "width": 2048,
+        "height": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_1LPouch_Orchid.jpg?v=1776417727",
+        "variant_ids": [
+          53723703279943
+        ]
+      },
+      "available": false,
+      "name": "Orchid Mix - 1L",
+      "public_title": "1L",
+      "options": [
+        "1L"
+      ],
+      "price": 499,
+      "weight": 500,
+      "compare_at_price": null,
+      "inventory_management": "shopify",
+      "barcode": "8720615167739",
+      "featured_media": {
+        "alt": "Standing 1L pouch of chunky bark with pink orchid illustrations",
+        "id": 58007905665351,
+        "position": 4,
+        "preview_image": {
+          "aspect_ratio": 1,
+          "height": 2048,
+          "width": 2048,
+          "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_1LPouch_Orchid.jpg?v=1776417727"
+        }
+      },
+      "quantity_rule": {
+        "min": 1,
+        "max": null,
+        "increment": 1
+      },
+      "quantity_price_breaks": [],
+      "requires_selling_plan": false,
+      "selling_plan_allocations": []
+    },
+    {
+      "id": 42999034183919,
+      "title": "5L",
+      "option1": "5L",
+      "option2": null,
+      "option3": null,
+      "sku": "SYB1312",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 69665996374343,
+        "product_id": 7464597520623,
+        "position": 1,
+        "created_at": "2025-12-03T07:25:39+01:00",
+        "updated_at": "2025-12-03T07:41:59+01:00",
+        "alt": "Standing 5L pouch of chunky bark with pink orchid illustrations, best soil for orchids",
+        "width": 2048,
+        "height": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Orchid_332a8e7c-63fe-44a0-a51e-87a1e5f46566.jpg?v=1764744119",
+        "variant_ids": [
+          42999034183919
+        ]
+      },
+      "available": true,
+      "name": "Orchid Mix - 5L",
+      "public_title": "5L",
+      "options": [
+        "5L"
+      ],
+      "price": 1299,
+      "weight": 1700,
+      "compare_at_price": null,
+      "inventory_management": "shopify",
+      "barcode": "8720516165728",
+      "featured_media": {
+        "alt": "Standing 5L pouch of chunky bark with pink orchid illustrations, best soil for orchids",
+        "id": 55932373369159,
+        "position": 1,
+        "preview_image": {
+          "aspect_ratio": 1,
+          "height": 2048,
+          "width": 2048,
+          "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Orchid_332a8e7c-63fe-44a0-a51e-87a1e5f46566.jpg?v=1764744119"
+        }
+      },
+      "quantity_rule": {
+        "min": 1,
+        "max": null,
+        "increment": 1
+      },
+      "quantity_price_breaks": [],
+      "requires_selling_plan": false,
+      "selling_plan_allocations": []
+    },
+    {
+      "id": 54347577262407,
+      "title": "20L",
+      "option1": "20L",
+      "option2": null,
+      "option3": null,
+      "sku": "SYB20L11",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 77420707971399,
+        "product_id": 7464597520623,
+        "position": 5,
+        "created_at": "2026-07-15T12:38:27+02:00",
+        "updated_at": "2026-07-15T12:38:31+02:00",
+        "alt": "Standing 20L pouch of chunky bark with pink orchid illustrations",
+        "width": 2048,
+        "height": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_20LPouch_Orchid_8faf699d-ac18-4139-9f83-46a4b873b6ae.jpg?v=1784111911",
+        "variant_ids": [
+          54347577262407
+        ]
+      },
+      "available": true,
+      "name": "Orchid Mix - 20L",
+      "public_title": "20L",
+      "options": [
+        "20L"
+      ],
+      "price": 3499,
+      "weight": 500,
+      "compare_at_price": null,
+      "inventory_management": "shopify",
+      "barcode": null,
+      "featured_media": {
+        "alt": "Standing 20L pouch of chunky bark with pink orchid illustrations",
+        "id": 59693380043079,
+        "position": 5,
+        "preview_image": {
+          "aspect_ratio": 1,
+          "height": 2048,
+          "width": 2048,
+          "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_20LPouch_Orchid_8faf699d-ac18-4139-9f83-46a4b873b6ae.jpg?v=1784111911"
+        }
+      },
+      "quantity_rule": {
+        "min": 1,
+        "max": null,
+        "increment": 1
+      },
+      "quantity_price_breaks": [],
+      "requires_selling_plan": false,
+      "selling_plan_allocations": []
+    }
+  ],
+  "images": [
+    "//cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Orchid_332a8e7c-63fe-44a0-a51e-87a1e5f46566.jpg?v=1764744119",
+    "//cdn.shopify.com/s/files/1/0531/2367/8390/files/15_77c344ee-415d-4c47-bb30-3cd26fd47e01.jpg?v=1774085355",
+    "//cdn.shopify.com/s/files/1/0531/2367/8390/products/Orchidsoilmix.jpg?v=1774085355",
+    "//cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_1LPouch_Orchid.jpg?v=1776417727",
+    "//cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_20LPouch_Orchid_8faf699d-ac18-4139-9f83-46a4b873b6ae.jpg?v=1784111911"
+  ],
+  "featured_image": "//cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Orchid_332a8e7c-63fe-44a0-a51e-87a1e5f46566.jpg?v=1764744119",
+  "options": [
+    {
+      "name": "Size",
+      "position": 1,
+      "values": [
+        "1L",
+        "5L",
+        "20L"
+      ]
+    }
+  ],
+  "url": "/products/orchid-mix-5l",
+  "media": [
+    {
+      "alt": "Standing 5L pouch of chunky bark with pink orchid illustrations, best soil for orchids",
+      "id": 55932373369159,
+      "position": 1,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2048,
+        "width": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Orchid_332a8e7c-63fe-44a0-a51e-87a1e5f46566.jpg?v=1764744119"
+      },
+      "aspect_ratio": 1,
+      "height": 2048,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Orchid_332a8e7c-63fe-44a0-a51e-87a1e5f46566.jpg?v=1764744119",
+      "width": 2048
+    },
+    {
+      "alt": "Pink and white phalaenopsis orchids flowering in clear plastic pots, best soil for orchids",
+      "id": 57630661214535,
+      "position": 2,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2048,
+        "width": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/15_77c344ee-415d-4c47-bb30-3cd26fd47e01.jpg?v=1774085355"
+      },
+      "aspect_ratio": 1,
+      "height": 2048,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/15_77c344ee-415d-4c47-bb30-3cd26fd47e01.jpg?v=1774085355",
+      "width": 2048
+    },
+    {
+      "alt": "Open palm holding chunky bark pieces mixed with dried sphagnum moss, best soil for orchids",
+      "id": 31748197023983,
+      "position": 3,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2048,
+        "width": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/products/Orchidsoilmix.jpg?v=1774085355"
+      },
+      "aspect_ratio": 1,
+      "height": 2048,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/products/Orchidsoilmix.jpg?v=1774085355",
+      "width": 2048
+    },
+    {
+      "alt": "Standing 1L pouch of chunky bark with pink orchid illustrations",
+      "id": 58007905665351,
+      "position": 4,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2048,
+        "width": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_1LPouch_Orchid.jpg?v=1776417727"
+      },
+      "aspect_ratio": 1,
+      "height": 2048,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_1LPouch_Orchid.jpg?v=1776417727",
+      "width": 2048
+    },
+    {
+      "alt": "Standing 20L pouch of chunky bark with pink orchid illustrations",
+      "id": 59693380043079,
+      "position": 5,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2048,
+        "width": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_20LPouch_Orchid_8faf699d-ac18-4139-9f83-46a4b873b6ae.jpg?v=1784111911"
+      },
+      "aspect_ratio": 1,
+      "height": 2048,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_20LPouch_Orchid_8faf699d-ac18-4139-9f83-46a4b873b6ae.jpg?v=1784111911",
+      "width": 2048
+    }
+  ],
+  "requires_selling_plan": false,
+  "selling_plan_groups": []
+}

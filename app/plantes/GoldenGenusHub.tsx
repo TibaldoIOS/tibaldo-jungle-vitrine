@@ -1,9 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { PlantEntry, Level } from "@/lib/plants/types";
-import { isInternalPhotoProductionCopy } from "@/lib/plants/types";
-import { documentaryGallery, isDocumentaryPlantImage } from "@/lib/plants/documentary-media";
-import { verifiedGroupMediaByGenre } from "@/lib/plants/verified-group-media";
+import { isEditorialPlaceholder, isInternalPhotoProductionCopy, isPhotoProductionPlaceholder } from "@/lib/plants/types";
 import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 import BotanicalFaq from "./BotanicalFaq";
@@ -14,8 +12,6 @@ import body from "./GoldenGroupBodyBaseline.module.css";
 import hero from "./GoldenGroupHeroBaseline.module.css";
 import mobile from "./GoldenGroupMobileBaseline.module.css";
 import canonical from "./GoldenGroupCanonical.module.css";
-import BotanicalHubLeafPlate from "./BotanicalHubLeafPlate";
-import { botanicalHubLeafPlates } from "@/lib/plants/botanical-hub-leaf-plates";
 
 export type GoldenGroupGuide = {
   name: string;
@@ -53,22 +49,40 @@ const groupHeroCopy = (genre: string, guide: GoldenGroupGuide) => {
     .join(" ");
 };
 
+const isDocumentaryImage = (image: PlantEntry["gallery"][number]) =>
+  !isPhotoProductionPlaceholder(image.src) &&
+  !isEditorialPlaceholder(image.src) &&
+  image.license?.status !== "media-gap" &&
+  !isInternalPhotoProductionCopy(`${image.alt} ${image.caption}`) &&
+  !/interprétation éditoriale|illustration générée|image générée/i.test(`${image.alt} ${image.caption}`);
+
 const firstGroupMedia = (genre: string, plants: readonly PlantEntry[]): GroupMedia | null => {
-  const override = verifiedGroupMediaByGenre[genre];
-  if (override) return override;
-  const image = plants.flatMap((plant) => plant.gallery).find(isDocumentaryPlantImage);
+  if (genre === "pilea") return null;
+  const image = plants.flatMap((plant) => plant.gallery).find(isDocumentaryImage);
   return image ? { ...image, rights: image.license?.status === "verified" ? "verified" : "controlled-beta" } : null;
 };
 
 const preparedPlants = (genre: string, plants: readonly PlantEntry[]) => plants.map((plant) => {
-  return { ...plant, gallery: documentaryGallery(plant) };
+  if (genre === "pilea" && plant.slug === "peperomioides") {
+    return {
+      ...plant,
+      gallery: [{
+        src: "/pilea-peperomioides-plante.jpg",
+        alt: "Pilea peperomioides aux feuilles rondes portées par de longs pétioles",
+        caption: "Photographie réelle et réutilisable déjà créditée dans Jungle.",
+        width: 1280,
+        height: 1707,
+      }],
+    };
+  }
+  return { ...plant, gallery: plant.gallery.filter(isDocumentaryImage) };
 });
 
 function HubChapterMarker({ number, label }: { number: string; label: string }) {
   return <div className={body.chapterMarker} data-hub-chapter-marker><span>{number}</span><strong>{label}</strong><i aria-hidden="true" /></div>;
 }
 
-export default function GoldenGenusHub({ genre, guide, plants, editorials = [], label = "Genre végétal", title = guide.name, additionalStory = [] }: {
+export default function GoldenGenusHub({ genre, guide, plants, editorials = [], title = guide.name, additionalStory = [] }: {
   genre: string;
   guide: GoldenGroupGuide;
   plants: readonly PlantEntry[];
@@ -88,22 +102,19 @@ export default function GoldenGenusHub({ genre, guide, plants, editorials = [], 
   const navigationGenres = [...new Map(plants.map((plant) => [plant.genre, plant.genreLabel])).entries()];
   const gapCount = displayPlants.filter((plant) => !plant.gallery.length).length;
   const heroCopy = groupHeroCopy(genre, guide);
-  const leafPlate = botanicalHubLeafPlates[genre];
 
   return (
     <main className={`${golden.page} ${body.groupPage} editorial-page`} data-golden-group-v25={genre} data-golden-group-v1={genre}>
       <ScrollReveal />
-      <section className={`${hero.landscapeHero} ${mobile.mobileHero}`} aria-labelledby={`golden-group-title-${genre}`} data-group-media-state={media ? media.rights : "honest-gap"} data-pilea-public-media-gate={genre === "pilea" ? "resolved-with-verified-cc0-species-photo" : undefined}>
+      <section className={`${hero.landscapeHero} ${mobile.mobileHero}`} aria-labelledby={`golden-group-title-${genre}`} data-group-media-state={media ? media.rights : "honest-gap"} data-pilea-public-media-gate={genre === "pilea" ? "blocked-pending-rights-proof-or-owner-original" : undefined}>
         <SiteHeader />
         <div className={`${hero.landscapeMedia} ${mobile.mobileMedia}`} aria-hidden="true">
           {media ? <Image unoptimized src={media.src} alt="" width={media.width} height={media.height} priority /> : <div className={canonical.groupMediaGap}><span>{title.slice(0, 1)}</span><small>Photographie collective<br />à documenter</small></div>}
         </div>
         <div className={`${hero.forestFade} ${mobile.mobileFade}`} aria-hidden="true" />
-        {genre === "monstera" && leafPlate ? <BotanicalHubLeafPlate data={leafPlate} variant="hero-background" /> : null}
         <div className={`${hero.heroContent} ${mobile.mobileContent} shell`}>
           <div className={`${hero.heroCopy} ${mobile.mobileCopy}`}>
-            <p className={`${hero.heroEyebrow} ${mobile.mobileEyebrow}`}>{label} · Univers botanique</p>
-            <h1 className={mobile.mobileTitle} data-title-fit={title.length >= 15 ? "extra-long" : title.length >= 9 ? "long" : "default"} id={`golden-group-title-${genre}`}>Les <em>{title}.</em></h1>
+            <h1 className={mobile.mobileTitle} id={`golden-group-title-${genre}`}>Les <em>{title}.</em></h1>
             <p className={`${hero.heroIntroduction} ${mobile.mobileIntroduction}`}>{heroCopy}</p>
             <p className={`${hero.heroNote} ${mobile.mobileNote}`}>{media ? "Une photographie documentaire contrôlée ouvre le groupe sans prétendre représenter toutes ses formes." : "Un manque de média reste explicite : aucun spécimen documentaire n’est fabriqué pour compléter la page."}</p>
           </div>
@@ -114,8 +125,6 @@ export default function GoldenGenusHub({ genre, guide, plants, editorials = [], 
         <HubChapterMarker number="01" label="Comprendre le groupe" />
         <div><h2>Un langage commun.<br /><em>Des formes singulières.</em></h2><div className={`${golden.groupIntroCopy} ${body.bodyCopy}`}><p>{guide.lead}</p><p>{guide.origin}</p></div>{facts.length ? <dl className={canonical.factBand}>{facts.map((fact) => <div key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}</dl> : null}</div>
       </section>
-
-      {genre !== "monstera" && leafPlate ? <BotanicalHubLeafPlate data={leafPlate} /> : null}
 
       <section className={`${golden.groupPassport} ${body.passport} ${mobile.passportTransition}`} aria-labelledby={`golden-group-passport-${genre}`}>
         <div className={`${golden.groupPassportHeading} shell`} data-reveal>
@@ -131,7 +140,7 @@ export default function GoldenGenusHub({ genre, guide, plants, editorials = [], 
       <section className={`${golden.groupSpecies} ${body.groupSpecies}`} aria-labelledby={`golden-group-species-${genre}`}>
         <div className="shell"><HubChapterMarker number="03" label={genre === "bananiers" ? "Explorer les genres" : "Explorer le genre"} /></div>
         <div id={`golden-group-species-${genre}`}><GenusSpeciesCarousel genre={genre} genusName={title} plants={displayPlants} /></div>
-        <p className={`${golden.indexNote} ${body.indexNote} shell`} data-reveal>{displayPlants.length ? `${displayPlants.length} ${displayPlants.length > 1 ? "fiches sont documentées" : "fiche est documentée"}. ${gapCount ? `${gapCount} ${gapCount > 1 ? "fiches conservent" : "fiche conserve"} un manque de photographie réelle plutôt qu’un visuel non vérifié.` : "Les médias présentés restent distincts du stock du Shop."}` : "Aucune fiche spécifique n’est encore publiée ; le guide de groupe reste accessible sans inventer de plante ni de photographie."}</p>
+        <p className={`${golden.indexNote} ${body.indexNote} shell`} data-reveal>{displayPlants.length ? `${displayPlants.length} ${displayPlants.length > 1 ? "variétés sont documentées" : "variété est documentée"}. ${gapCount ? `${gapCount} ${gapCount > 1 ? "fiches conservent" : "fiche conserve"} un manque de photographie réelle plutôt qu’un visuel non vérifié.` : "Les médias présentés restent distincts du stock du Shop."}` : "Aucune fiche spécifique n’est encore publiée ; le guide de groupe reste accessible sans inventer de plante ni de photographie."}</p>
       </section>
 
       <section className={`${golden.groupStory} ${body.groupStory}`} aria-labelledby={`golden-group-story-${genre}`}>

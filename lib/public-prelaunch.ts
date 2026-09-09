@@ -4,7 +4,7 @@
  * Set this single value to false to remove the prelaunch curtain. The public
  * pages, their metadata and the Safe Link Mask remain unchanged.
  */
-export const PUBLIC_PRELAUNCH_CURTAIN = true;
+export const PUBLIC_PRELAUNCH_CURTAIN = false;
 
 export function isPublicPrelaunchCurtainActive(
   isPublicDeployment: boolean,

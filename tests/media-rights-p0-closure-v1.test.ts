@@ -3,11 +3,6 @@ import { readFileSync } from "node:fs";
 import { test } from "node:test";
 import { getPlant, plantFamilies } from "../lib/plants/catalog.ts";
 import { mediaRightsP0ClosureRegistry } from "../lib/plants/media-rights-p0-closure-v1.ts";
-import { documentaryMediaWaveV1Registry } from "../lib/plants/documentary-media-completion-wave-v1.ts";
-import { documentaryMediaWave2V1Registry } from "../lib/plants/documentary-media-completion-wave-2-v1.ts";
-import { documentaryMediaWave3V1Registry } from "../lib/plants/documentary-media-completion-wave-3-v1.ts";
-
-const laterVerifiedRoutes = new Set([...documentaryMediaWaveV1Registry, ...documentaryMediaWave2V1Registry, ...documentaryMediaWave3V1Registry].map(({ route }) => route));
 
 const removedAssets = [
   "/anthurium-pallidiflorum-cascade.webp",
@@ -20,6 +15,11 @@ const removedAssets = [
   "/anthurium-delta-force-triangulaire.webp",
 ];
 
+const ownerVerifiedRoutes = new Set([
+  "/plantes/monstera/thai-constellation",
+  "/plantes/monstera/mint",
+]);
+
 test("closes the exact 11-route P0 media-rights set", () => {
   assert.equal(mediaRightsP0ClosureRegistry.length, 11);
   assert.equal(mediaRightsP0ClosureRegistry.filter(({ decision }) => decision === "RIGHTS_PROVEN_KEEP").length, 4);
@@ -30,7 +30,7 @@ test("closes the exact 11-route P0 media-rights set", () => {
     const plant = getPlant(genre, slug);
     assert.ok(plant, item.route);
     if (item.decision === "REMOVE_AND_USE_HONEST_MEDIA_GAP") {
-      if (laterVerifiedRoutes.has(item.route)) {
+      if (ownerVerifiedRoutes.has(item.route)) {
         assert.equal(plant.gallery[0].license?.status, "verified", item.route);
         continue;
       }
@@ -45,11 +45,27 @@ test("closes the exact 11-route P0 media-rights set", () => {
       assert.equal(image.license?.status, "verified", `${item.route}: status`);
       assert.ok(image.license?.creator, `${item.route}: creator`);
       assert.ok(image.license?.sourceUrl?.startsWith("https://"), `${item.route}: source`);
-      if (item.route !== "/plantes/anthurium/pallidiflorum") assert.ok(image.license?.licenseUrl?.startsWith("https://"), `${item.route}: license`);
+      if (item.route !== "/plantes/anthurium/pallidiflorum") {
+        assert.ok(image.license?.licenseUrl?.startsWith("https://"), `${item.route}: license`);
+      }
       assert.equal(image.license?.registryPath, "/credits-images", `${item.route}: registry`);
       assert.match(image.license?.note ?? "", /(?:30 août|2 septembre) 2026/, `${item.route}: proof date`);
     }
   }
+});
+
+test("restores Pallidiflorum from the exact Owner-authorized URL without the stale asset", () => {
+  const plant = getPlant("anthurium", "pallidiflorum");
+  assert.ok(plant);
+  assert.equal(plant.gallery.length, 1);
+  assert.equal(plant.gallery[0].src, "/media/anthurium-pallidiflorum-feuillage-tibaldo-jungle.webp");
+  assert.equal(plant.gallery[0].alt, "Anthurium pallidiflorum aux longues feuilles rubanées et retombantes");
+  assert.equal(plant.gallery[0].width, 1080);
+  assert.equal(plant.gallery[0].height, 1080);
+  assert.equal(plant.gallery[0].license?.status, "verified");
+  assert.equal(plant.gallery[0].license?.sourceUrl, "https://www.driftlessbotanicals.net/wp-content/uploads/2024/12/Anth-Pallidiflorum.jpeg");
+  assert.match(plant.gallery[0].license?.license ?? "", /Owner TIBALDO/);
+  assert.doesNotMatch(JSON.stringify(plant), /anthurium-pallidiflorum-cascade\.webp/);
 });
 
 test("does not expose removed rights-unknown assets through canonical plant or group data", () => {

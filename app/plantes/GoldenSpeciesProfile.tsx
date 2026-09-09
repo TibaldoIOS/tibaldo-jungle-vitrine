@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { plants } from "@/lib/plants/catalog";
 import type { PlantEntry } from "@/lib/plants/types";
-import { isInternalPhotoProductionCopy } from "@/lib/plants/types";
-import { documentaryGallery } from "@/lib/plants/documentary-media";
+import { isEditorialPlaceholder, isInternalPhotoProductionCopy, isPhotoProductionPlaceholder } from "@/lib/plants/types";
+import { publicMediaCredit } from "@/lib/plants/public-media-credit";
 import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter } from "../SiteChrome";
 import BotanicalFaq from "./BotanicalFaq";
@@ -21,6 +21,38 @@ import golden from "./GoldenBaseline.module.css";
 import canonical from "./GoldenSpeciesCanonical.module.css";
 
 type SnapshotTone = "light" | "water" | "humidity" | "temperature" | "difficulty";
+type PlantImage = PlantEntry["gallery"][number];
+
+const mediaOverrides: Record<string, PlantImage[]> = {
+  "pilea/peperomioides": [{
+    src: "/pilea-peperomioides-plante.jpg",
+    alt: "Pilea peperomioides aux feuilles rondes portées par de longs pétioles",
+    caption: "Feuillage rond de Pilea peperomioides.",
+    width: 1280,
+    height: 1707,
+    license: {
+      status: "verified",
+      creator: "Husky",
+      license: "CC0 1.0",
+      licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/",
+      registryPath: "/credits-images",
+      note: "Photographie réelle déjà contrôlée dans Jungle.",
+    },
+  }],
+};
+
+const isDocumentaryImage = (image: PlantImage) =>
+  !isPhotoProductionPlaceholder(image.src) &&
+  !isEditorialPlaceholder(image.src) &&
+  image.license?.status !== "media-gap" &&
+  !isInternalPhotoProductionCopy(`${image.alt} ${image.caption}`) &&
+  !/interprétation éditoriale|illustration générée|image générée/i.test(`${image.alt} ${image.caption}`);
+
+const documentaryGallery = (plant: PlantEntry) => {
+  const source = mediaOverrides[`${plant.genre}/${plant.slug}`] ?? plant.gallery;
+  return source.filter((image, index, images) => isDocumentaryImage(image) && images.findIndex((candidate) => candidate.src === image.src) === index);
+};
+
 const firstSentence = (value: string, fallback: string) => {
   const sentence = value.trim().match(/^.*?[.!?](?:\s|$)/)?.[0]?.trim();
   return sentence || value.trim() || fallback;
@@ -137,14 +169,14 @@ export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
                 <div className={golden.archCopy} data-reveal><p className="section-kicker">Portail botanique · 1,65 seconde</p><h2 id={`golden-arch-${plant.genre}-${plant.slug}`}>Un portrait réel.<br /><em>Une transition signature.</em></h2><p>{specimenNote}</p></div>
                 <figure className={golden.archFigure} data-reveal>
                   <div className={golden.archMedia}><Image unoptimized src={revealImage.src} alt={revealImage.alt} width={revealImage.width} height={revealImage.height} loading="eager" /></div>
-                  <figcaption><span>Photographie réelle contrôlée</span><p>{revealImage.caption}</p></figcaption>
+                  <figcaption><span>{publicMediaCredit(revealImage)}</span><p>{revealImage.caption}</p></figcaption>
                 </figure>
               </div>
             </section>
           ) : (
             <section className={golden.photoBookGap} data-media-state="honest-gap" data-reveal>
               <div><p className="section-kicker">Portrait documentaire</p><h2>Une absence assumée.<br /><em>Aucune image fabriquée.</em></h2></div>
-              <p>Aucune photographie documentaire vérifiée n’est présentée pour {plant.botanicalName}. La génération Golden demeure intacte et les informations botaniques restent accessibles.</p>
+              <p>Aucune photographie documentaire n’est présentée pour {plant.botanicalName}. La génération Golden demeure intacte et les informations botaniques restent accessibles.</p>
             </section>
           )}
 
@@ -163,8 +195,8 @@ export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
 
           {bookImages.length ? <BotanicalPhotoBook plant={plant} images={bookImages} /> : (
             <section className={golden.photoBookGap} aria-labelledby={`golden-book-${plant.genre}-${plant.slug}`} data-reveal>
-              <div><p className="section-kicker">Carnet photographique</p><h2 id={`golden-book-${plant.genre}-${plant.slug}`}>Une vue vérifiée.<br /><em>Pas de galerie fabriquée.</em></h2></div>
-              <p>Les vues documentaires disponibles ne sont pas dupliquées artificiellement. De nouvelles pages seront ajoutées uniquement avec des photographies distinctes et vérifiées.</p>
+              <div><p className="section-kicker">Carnet photographique</p><h2 id={`golden-book-${plant.genre}-${plant.slug}`}>Une vue disponible.<br /><em>Pas de galerie fabriquée.</em></h2></div>
+              <p>Les vues documentaires disponibles ne sont pas dupliquées artificiellement. De nouvelles pages seront ajoutées uniquement avec des photographies distinctes et identifiées.</p>
             </section>
           )}
 

@@ -68,7 +68,7 @@ test("tous les encyclopedia_slug restent uniques", () => {
 
 test("Dicksonia antarctica ajoute une seule identité botanique centrale", () => {
   const dicksonia = plants.find((entry) => entry.genre === "dicksonia" && entry.slug === "antarctica");
-  assert.equal(plants.length, 96);
+  assert.equal(plants.length, 76);
   assert.equal(dicksonia?.botanicalName, "Dicksonia antarctica");
   assert.equal(dicksonia?.taxonomy.family, "Dicksoniaceae");
   assert.equal(dicksonia?.taxonomy.order, "Cyatheales");
@@ -113,8 +113,8 @@ test("l’étape 2 ajoute quatre identités Bananiers sans taille commerciale", 
   assert.equal(florida?.taxonomy.cultivar, "Florida Variegata");
 });
 
-test("V19 reste intact après les expansions des genres majeurs", () => {
-  const expected = { monstera: 15, anthurium: 17, alocasia: 16 } as const;
+test("V19 reste intact après l’expansion P1 des genres majeurs", () => {
+  const expected = { monstera: 12, anthurium: 14, alocasia: 13 } as const;
   for (const [genre, count] of Object.entries(expected)) {
     const entries = plants.filter((plant) => plant.genre === genre);
     assert.equal(entries.length, count, genre);
@@ -170,11 +170,14 @@ test("V19 publie les deux libellés Monstera prudents demandés", () => {
   ]);
 });
 
-test("l’audit nocturne retire Esqueleto du rendu documentaire tant que l’identité reste insuffisante", () => {
+test("V20 documente Esqueleto avec une photographie réelle, licenciée et taxonomiquement prudente", () => {
   const esqueleto = plants.find((entry) => entry.genre === "monstera" && entry.slug === "esqueleto");
-  assert.equal(esqueleto?.gallery[0].src, "/photo-reelle-a-venir.svg");
-  assert.equal(esqueleto?.gallery[0].license?.status, "media-gap");
-  assert.match(esqueleto?.gallery[0].license?.note ?? "", /PHOTO_DOUBTFUL/);
+  assert.equal(esqueleto?.gallery[0].src, "/media/monstera-esqueleto-feuille-mature-fenestrations.webp");
+  assert.equal(esqueleto?.gallery[0].license?.status, "verified");
+  assert.equal(esqueleto?.gallery[0].license?.creator, "Janadume");
+  assert.equal(esqueleto?.gallery[0].license?.license, "CC BY-SA 4.0");
+  assert.match(esqueleto?.gallery[0].license?.sourceUrl ?? "", /commons\.wikimedia\.org/);
+  assert.match(esqueleto?.gallery[0].license?.note ?? "", /nom horticole non établi/i);
   assert.equal(existsSync(new URL("../public/monstera-esqueleto-feuille-mature-fenestrations.webp", import.meta.url)), true);
 });
 

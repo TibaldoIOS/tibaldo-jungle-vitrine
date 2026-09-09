@@ -1,0 +1,187 @@
+{
+  "identity": "Epipremnum aureum 'Marble Queen'",
+  "canonicalSlug": "plantes/epipremnum/marble-queen",
+  "creator": "TIBALDO",
+  "credit": "Photo : TIBALDO",
+  "source": "Owner/TIBALDO",
+  "conversationId": "6a98800e-4770-83eb-9e70-ede85b60478a",
+  "rightsEvidence": "Owner states these are their photographs and explicitly authorizes reuse in Caisse, Shop and Jungle in the request dated 2026-09-08.",
+  "processing": "EXIF orientation, crop, Lanczos downsample, WebP. No generated pixels, retouching or color adjustment. Derivatives contain no EXIF/GPS.",
+  "files": [
+    {
+      "file": "IMG_0017.JPG",
+      "sha256": "28c04be8b372eaa66ba764df4a342e21986b48d5e5bad196d26b764425330bed",
+      "bytes": 3091302,
+      "width": 3213,
+      "height": 5712
+    },
+    {
+      "file": "work/jungle/public/owner-media/marble-queen/epipremnum-marble-queen-plante-tibaldo-600.webp",
+      "source": "IMG_0017.JPG",
+      "crop": [
+        0,
+        650,
+        3213,
+        4666
+      ],
+      "width": 600,
+      "height": 750,
+      "bytes": 41852,
+      "sha256": "9d73129ff24aaf64605aacc4cd99a9848727bf558267871c6abc38f2c7263214"
+    },
+    {
+      "file": "work/jungle/public/owner-media/marble-queen/epipremnum-marble-queen-plante-tibaldo-1200.webp",
+      "source": "IMG_0017.JPG",
+      "crop": [
+        0,
+        650,
+        3213,
+        4666
+      ],
+      "width": 1200,
+      "height": 1500,
+      "bytes": 119542,
+      "sha256": "2fda42d51f40d5fa2e30a477244e24b927872153e0fdd1ee4e5aa48975df9f25"
+    },
+    {
+      "file": "work/shop/public/owner-media/marble-queen/epipremnum-marble-queen-plante-tibaldo-192.webp",
+      "source": "IMG_0017.JPG",
+      "crop": [
+        0,
+        650,
+        3213,
+        4666
+      ],
+      "width": 192,
+      "height": 240,
+      "bytes": 6660,
+      "sha256": "e8cee72ebcf8854203999af3bae4aef32c5b5e3dd858c635b13e23b02980dbf9"
+    },
+    {
+      "file": "work/shop/public/owner-media/marble-queen/epipremnum-marble-queen-plante-tibaldo-480.webp",
+      "source": "IMG_0017.JPG",
+      "crop": [
+        0,
+        650,
+        3213,
+        4666
+      ],
+      "width": 480,
+      "height": 600,
+      "bytes": 29160,
+      "sha256": "5cc69ea47d30fcc107b5309e3fe0a386fc2955af9b72e60abc4d9e265b9652a1"
+    },
+    {
+      "file": "work/shop/public/owner-media/marble-queen/epipremnum-marble-queen-plante-tibaldo-960.webp",
+      "source": "IMG_0017.JPG",
+      "crop": [
+        0,
+        650,
+        3213,
+        4666
+      ],
+      "width": 960,
+      "height": 1200,
+      "bytes": 85924,
+      "sha256": "2b430f5663bbe0b606cbe9811d9762d7241a46bfff5ea2644de43a4e2d5a9fd0"
+    },
+    {
+      "file": "work/caisse/public/owner-media/marble-queen/epipremnum-marble-queen-plante-tibaldo-192.webp",
+      "source": "IMG_0017.JPG",
+      "crop": [
+        0,
+        1120,
+        3213,
+        4333
+      ],
+      "width": 192,
+      "height": 192,
+      "bytes": 6572,
+      "sha256": "69132c8cd5cc988dbfea085ee3e7e6fba41cb5f16557843f32d6e22d2fa27aad"
+    },
+    {
+      "file": "work/caisse/public/owner-media/marble-queen/epipremnum-marble-queen-plante-tibaldo-640.webp",
+      "source": "IMG_0017.JPG",
+      "crop": [
+        0,
+        1120,
+        3213,
+        4333
+      ],
+      "width": 640,
+      "height": 640,
+      "bytes": 45912,
+      "sha256": "aaf7295e23d22fe351231763d0436cefc3bfe26d82018d87da76abe32f453b3c"
+    },
+    {
+      "file": "IMG_0018.JPG",
+      "sha256": "dfd94709d0e530e3f8cb72a32e9c25762ea8ceebea2f55908b8e6204de1cb47f",
+      "bytes": 3321529,
+      "width": 3213,
+      "height": 5712
+    },
+    {
+      "file": "work/jungle/public/owner-media/marble-queen/epipremnum-marble-queen-detail-panachure-tibaldo-600.webp",
+      "source": "IMG_0018.JPG",
+      "crop": [
+        0,
+        700,
+        3213,
+        4716
+      ],
+      "width": 600,
+      "height": 750,
+      "bytes": 55544,
+      "sha256": "509214a53c3c254d7f5d4b0f2750b862a59187758a3c483ee3234ce8d055d8e2"
+    },
+    {
+      "file": "work/jungle/public/owner-media/marble-queen/epipremnum-marble-queen-detail-panachure-tibaldo-1200.webp",
+      "source": "IMG_0018.JPG",
+      "crop": [
+        0,
+        700,
+        3213,
+        4716
+      ],
+      "width": 1200,
+      "height": 1500,
+      "bytes": 151054,
+      "sha256": "9fad185631ba987e6158dbbcdf9cf3dc59c9755aab40fec040f0933746ab49e7"
+    },
+    {
+      "file": "IMG_0019.JPG",
+      "sha256": "506bb3cec629b7975ca237bebc83936e5927921c6d8608e7cdd04d4dbfa363b7",
+      "bytes": 2884084,
+      "width": 3213,
+      "height": 5712
+    },
+    {
+      "file": "work/jungle/public/owner-media/marble-queen/epipremnum-marble-queen-vue-trois-quarts-tibaldo-600.webp",
+      "source": "IMG_0019.JPG",
+      "crop": [
+        0,
+        850,
+        3213,
+        4866
+      ],
+      "width": 600,
+      "height": 750,
+      "bytes": 40006,
+      "sha256": "b69d0ce3057baa761deec02784dbb2376509f9001ce2aaee28e026252e9fc41d"
+    },
+    {
+      "file": "work/jungle/public/owner-media/marble-queen/epipremnum-marble-queen-vue-trois-quarts-tibaldo-1200.webp",
+      "source": "IMG_0019.JPG",
+      "crop": [
+        0,
+        850,
+        3213,
+        4866
+      ],
+      "width": 1200,
+      "height": 1500,
+      "bytes": 101658,
+      "sha256": "5e7223509907c0f5deded893a0526547f4415d1a235e3d9279f1a1865f8e5910"
+    }
+  ]
+}

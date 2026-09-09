@@ -127,7 +127,7 @@ test("the shared carousel renders every Monstera entry after P1", async () => {
   assert.equal(response.status, 200);
   const html = await response.text();
   assert.match(html, /class="genus-species-carousel shell"/);
-  assert.equal((html.match(/class="genus-carousel-card/g) ?? []).length, 15);
+  assert.equal((html.match(/class="genus-carousel-card/g) ?? []).length, 12);
   for (const slug of ["deliciosa", "thai-constellation", "albo-variegata", "esqueleto", "burle-marx-flame", "dubia", "obliqua", "siltepecana", "pinnatipartita", "standleyana"]) {
     assert.match(html, new RegExp(`href="/plantes/monstera/${slug}"`));
   }
@@ -165,8 +165,7 @@ test("V20 exposes the eleven-dimensional needs language on canonical species", a
   const response = await render("/plantes/monstera/esqueleto");
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.doesNotMatch(html, /monstera-esqueleto-feuille-mature-fenestrations\.webp/);
-  assert.match(html, /Aucune image fabriquée/i);
+  assert.match(html, /monstera-esqueleto-feuille-mature-fenestrations\.webp/);
   assert.equal((html.match(/class="plant-need plant-need-/g) ?? []).length, 11);
   assert.match(html, /Carnet photographique/);
   for (const label of ["Lumière", "Arrosage", "Température", "Humidité", "Substrat", "Fertilisation", "Rempotage", "Croissance", "Support", "Toxicité", "Difficulté"]) assert.match(html, new RegExp(label));
@@ -627,8 +626,8 @@ test("V23 Golden Pilea prototypes remain isolated and expose two distinct editor
   assert.match(groupHtml, /Golden Group/);
   assert.match(groupHtml, /pilea-planche-formes-textures\.webp/);
   assert.match(groupHtml, /ni un inventaire taxonomique exhaustif ni une disponibilité boutique/i);
-  assert.equal((groupHtml.match(/class="genus-carousel-card/g) ?? []).length, 3);
-  assert.match(groupHtml, /Photographie réelle[\s\S]*(?:à documenter|Pilea cadierei)/i);
+  assert.equal((groupHtml.match(/class="genus-carousel-card/g) ?? []).length, 2);
+  assert.match(groupHtml, /Photographie réelle[\s\S]*à documenter/i);
 
   const speciesResponse = await render("/lab/v23/golden-species/pilea-peperomioides");
   assert.equal(speciesResponse.status, 200);
@@ -766,6 +765,13 @@ test("renders the opening event with complete crawlable SEO data", async () => {
   assert.match(html, /"isAccessibleForFree":true/i);
   assert.match(html, /"@type":"FAQPage"/i);
   assert.match(html, /"@type":"BreadcrumbList"/i);
+  assert.match(html, /"startDate":"2026-09-26T10:00:00\+02:00"/i);
+  assert.match(html, /"endDate":"2026-09-26T19:00:00\+02:00"/i);
+  assert.match(html, /Horaires[\s\S]{0,500}10:00[\s\S]{0,100}—[\s\S]{0,100}19:00/i);
+  assert.doesNotMatch(html, /Horaires[\s\S]{0,500}08:00[\s\S]{0,100}—[\s\S]{0,100}17:00/i);
+  assert.match(html, /Libre et gratuite · sans réservation/i);
+  assert.match(html, /Samedi 26 septembre 2026 · 10h–19h · entrée gratuite/i);
+  assert.match(html, /3 place de l’Arbonnoise, Lille · sans réservation/i);
   assert.match(html, /26 septembre 2026/i);
   assert.doesNotMatch(html, /Que faire à Lille ce week-end/i);
 });
@@ -859,7 +865,7 @@ test("returns 404 for an unknown encyclopedia plant page", async () => {
   assert.equal(response.status, 404);
 });
 
-test("renders Dicksonia, its hierarchy and its verified documentary hero", async () => {
+test("renders Dicksonia, its hierarchy and the shared species hero fallback", async () => {
   for (const path of ["/plantes/dicksonia", "/plantes/famille/dicksoniaceae", "/plantes/dicksonia/antarctica"]) {
     const response = await render(path);
     assert.equal(response.status, 200, path);
@@ -868,13 +874,12 @@ test("renders Dicksonia, its hierarchy and its verified documentary hero", async
   assert.match(plantsHtml, /href=["']\/plantes\/dicksonia["']/i);
   const speciesHtml = await (await render("/plantes/dicksonia/antarctica")).text();
   assert.match(speciesHtml, /<h1[^>]*>[\s\S]*?Dicksonia[\s\S]*?antarctica[\s\S]*?<\/h1>/i);
-  assert.match(speciesHtml, /documentary-media-wave-3-v1\/dicksonia-antarctica\.webp/i);
-  assert.doesNotMatch(speciesHtml, /has-editorial-fallback/i);
+  assert.match(speciesHtml, /has-editorial-fallback/i);
   assert.match(speciesHtml, /data-golden-species-v(?:1|25)="dicksonia\/antarctica"/i);
   assert.match(speciesHtml, /rel=["']canonical["'][^>]+plantes\/dicksonia\/antarctica/i);
   assert.doesNotMatch(speciesHtml, /Dictyonia/i);
   const api = await (await render("/api/encyclopedie/plantes")).json();
-  assert.equal(api.length, 96);
+  assert.equal(api.length, 76);
   assert.ok(api.some((entry) => entry.encyclopediaSlug === "plantes/dicksonia/antarctica"));
 });
 
@@ -891,9 +896,7 @@ test("renders the Agave, Fatsia and five-species Strelitzia cluster", async () =
     const html = await response.text();
     assert.match(html, /<h1/i, path);
     assert.match(html, /rel=["']canonical["']/i, path);
-    if (["/plantes/agave/americana-variegata", "/plantes/fatsia/japonica-spiders-web"].includes(path)) assert.match(html, /documentary-media-wave-5-v1/i, path);
-    if (path === "/plantes/strelitzia/caudata") assert.match(html, /documentary-media-wave-4-v1/i, path);
-    if (["/plantes/strelitzia/juncea", "/plantes/strelitzia/nicolai", "/plantes/strelitzia/reginae"].includes(path)) assert.match(html, /documentary-media-wave-3-v1/i, path);
+    if (path.split("/").length === 4) assert.match(html, /has-editorial-fallback/i, path);
     assert.doesNotMatch(html, /\/_vinext\/image/i, path);
     assert.match(html, /noindex/i, path);
   }
@@ -902,8 +905,8 @@ test("renders the Agave, Fatsia and five-species Strelitzia cluster", async () =
   assert.match(hub, /synonyme de S\. alba/i);
   assert.doesNotMatch(hub, /href=["']\/plantes\/strelitzia\/augusta/i);
   const api = await (await render("/api/v2/encyclopedie/plantes")).json();
-  assert.equal(api.length, 96);
-  assert.equal(new Set(api.map((entry) => entry.encyclopediaSlug)).size, 96);
+  assert.equal(api.length, 76);
+  assert.equal(new Set(api.map((entry) => entry.encyclopediaSlug)).size, 76);
 });
 
 test("final convergence renders one shared Golden Group system with honest genus media", async () => {
@@ -922,9 +925,8 @@ test("final convergence renders one shared Golden Group system with honest genus
   }
 
   const pilea = await (await render("/plantes/pilea")).text();
-  assert.match(pilea, /data-group-media-state=["']verified["']/i);
-  assert.match(pilea, /data-pilea-public-media-gate=["']resolved-with-verified-cc0-species-photo["']/i);
-  assert.match(pilea, /pilea-peperomioides-plante\.jpg/i);
+  assert.match(pilea, /data-group-media-state=["']honest-gap["']/i);
+  assert.match(pilea, /data-pilea-public-media-gate=["']blocked-pending-rights-proof-or-owner-original["']/i);
   assert.doesNotMatch(pilea, /pilea-planche-formes-textures\.webp/i);
   for (const genre of ["strelitzia", "chlorophytum", "alocasia", "dicksonia", "monstera", "anthurium"]) {
     const html = await (await render(`/plantes/${genre}`)).text();
@@ -957,8 +959,8 @@ test("final convergence keeps representative canonical surfaces Golden and BETA-
     assert.doesNotMatch(html, /thai-profile-v3|veitchii-profile-v2|veitchii-v2-id-grid|species-next-page/i, route);
   }
 
-  const chlorophytumMedia = await (await render("/plantes/chlorophytum/comosum")).text();
-  assert.match(chlorophytumMedia, /documentary-media-wave-3-v1\/chlorophytum-comosum\.webp/i);
+  const mediaGap = await (await render("/plantes/pilea/cadierei")).text();
+  assert.match(mediaGap, /Aucune image fabriquée|Aucune photographie documentaire vérifiée/i);
   const richMedia = await (await render("/plantes/cycas/revoluta")).text();
   assert.match(richMedia, /botanical-photo-book/i);
 
@@ -1096,7 +1098,11 @@ test("renders the Local Species SEO V1 pilot without inventing commerce", async 
   assert.match(hub, /href=["']\/plantes\/anthurium\/veitchii["']/i);
 
   const boutique = await (await render("/boutique-plantes-lille")).text();
-  assert.match(boutique, /<title>Boutique de plantes à Lille \| TIBALDO Jungle<\/title>/i);
+  assert.match(boutique, /<title>Boutique de plantes rares à Lille \| TIBALDO Jungle<\/title>/i);
+  assert.match(
+    boutique,
+    /Boutique de plantes rares et tropicales à Lille : conseils, rempotage et sélection selon les arrivages au Studio Végétal — TIBALDO Jungle\./i,
+  );
   assert.match(boutique, /href=["']\/plantes\/anthurium["']/i);
   assert.match(boutique, /href=["']\/plantes\/monstera\/thai-constellation["']/i);
   assert.match(boutique, /"@type":\["GardenStore","Florist","LocalBusiness"\]/i);

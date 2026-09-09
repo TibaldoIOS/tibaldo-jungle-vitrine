@@ -15,9 +15,7 @@ test("Cycas local guide is limited to the exact species pilot", () => {
 
 test("Cycas local guide provides a direct answer and useful internal routes", () => {
   assert.match(guide, /Peut-on cultiver un Cycas revoluta à Lille/);
-  for (const href of ["/plantes/cycas", "/substrats", "/rempotage", "/boutique-plantes-lille"]) {
-    assert.ok(guide.includes(`href="${href}"`), `missing ${href}`);
-  }
+  for (const href of ["/plantes/cycas", "/substrats", "/rempotage", "/boutique-plantes-lille"]) assert.ok(guide.includes(`href="${href}"`), `missing ${href}`);
 });
 
 test("Cycas stays an Article without Product or Offer schema", () => {

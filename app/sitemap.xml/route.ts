@@ -59,6 +59,7 @@ export async function GET() {
       path,
       modified,
     })),
+    { path: "/methodologie-sources", modified: "2026-09-02" },
     {
       path: "/plantes/bananiers",
       modified: lastModifiedDefaults.taxonomy,

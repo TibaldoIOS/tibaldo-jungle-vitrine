@@ -5,10 +5,14 @@ import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 import { substrates, substrateProfiles } from "./data";
 import OpeningEventLink from "../OpeningEventLink";
+import SubstrateSelection from "./SubstrateSelection";
+import styles from "./selection.module.css";
+import { supplierMedia } from "./supplier-media";
+import LocalSubstrateVisit from "./LocalSubstrateVisit";
 
 export const metadata: Metadata = {
-  title: "Substrats en vrac à Lille | Guide Tibaldo Jungle",
-  description: "Comprendre terreau, perlite, sphaigne, écorce et zéolite pour composer un substrat adapté à chaque plante d’intérieur.",
+  title: "Substrats Sybotanica : guide & conseils à Lille | TIBALDO Jungle",
+  description: "Comparez 13 mélanges Sybotanica et les composants en vrac. Conseil au Studio de Lille, achat sur place, téléphone et click & collect selon disponibilité.",
   alternates: { canonical: "/substrats" },
   keywords: ["substrats en vrac Lille", "terreau Lille", "perlite Lille", "sphaigne Lille", "écorce de pin Lille", "zéolite Lille"],
   openGraph: {
@@ -16,9 +20,15 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "/substrats",
     siteName: "Studio Végétal — Tibaldo Jungle",
-    title: "Substrats en vrac à Lille | Guide Tibaldo Jungle",
-    description: "Découvrez le rôle de dix composants et apprenez à composer un mélange adapté aux racines de vos plantes d’intérieur.",
-    images: [{ url: "/advice-rempotage.jpg", width: 1200, height: 630, alt: "Substrats et rempotage pour plantes d’intérieur à Lille" }],
+    title: "Substrats Sybotanica : guide & conseils à Lille | TIBALDO Jungle",
+    description: "Treize mélanges Sybotanica, neuf guides de matières et le conseil du Studio lillois pour choisir un substrat adapté à vos plantes.",
+    images: [{ url: supplierMedia.collection.src, width: supplierMedia.collection.width, height: supplierMedia.collection.height, alt: supplierMedia.collection.alt }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Substrats Sybotanica : guide & conseils à Lille | TIBALDO Jungle",
+    description: "Treize mélanges Sybotanica et le conseil du Studio lillois pour choisir un substrat adapté à vos plantes.",
+    images: [supplierMedia.collection.src],
   },
 };
 
@@ -28,9 +38,9 @@ const structuredData = {
     {
       "@type": "CollectionPage",
       "@id": "https://jungle.tibaldo.fr/substrats#page",
-      name: "Substrats en vrac à Lille",
+      name: "Guide des substrats Sybotanica et composants en vrac à Lille",
       url: "https://jungle.tibaldo.fr/substrats",
-      description: "Composants horticoles en vrac et conseils de mélange pour plantes d’intérieur à Lille.",
+      description: "Guide de choix des mélanges Sybotanica et des composants horticoles, avec conseil au Studio Végétal de Lille.",
       isPartOf: { "@id": "https://jungle.tibaldo.fr/#website" },
       about: { "@id": "https://jungle.tibaldo.fr/#store" },
       mainEntity: { "@id": "https://jungle.tibaldo.fr/substrats#list" },
@@ -58,26 +68,33 @@ export default function SubstratesPage() {
     <main className="editorial-page substrate-page">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <ScrollReveal />
-      <section className="inner-hero substrate-hero">
-        <div className="inner-hero-texture" aria-hidden="true" />
+      <section className={`inner-hero substrate-hero ${styles.photoHero}`}>
+        <Image unoptimized src={supplierMedia.rempotage.src} width={1456} height={971} alt="" priority className={styles.heroPhoto} />
         <div className="inner-hero-shade" aria-hidden="true" />
         <SiteHeader />
         <div className="shell inner-hero-content">
-          <p className="eyebrow"><span /> Substrats en vrac · Lille</p>
+          <p className="eyebrow"><span /> Substrats Sybotanica & matières en vrac · Lille</p>
           <h1><span className="hero-line"><span>La matière juste,</span></span><span className="hero-line"><span>pour des racines <em>vivantes.</em></span></span></h1>
-          <p>Terreau, écorces, fibres et minéraux : composez un mélange adapté à votre plante, dans la quantité réellement nécessaire.</p>
-          <a className="button button-light" href="#composants">Explorer les composants <Arrow /></a>
+          <p>Aéré, drainant, rétenteur ou minéral : trouvez un mélange adapté à votre plante et comprenez ce qu’il apporte à ses racines.</p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
+            <a className="button button-light" href="#trouver">Trouver mon substrat <Arrow /></a>
+            <a className="button button-light" href="#selection-composants">Comprendre les composants <Arrow /></a>
+            <a className="button button-light" href="#acheter-a-lille">Achat & retrait à Lille <Arrow /></a>
+          </div>
         </div>
-        <div className="shell inner-hero-index" aria-hidden="true"><span>9 composants</span><span>Vente au détail</span><span>Conseils sur place</span></div>
+        <div className="shell inner-hero-index" aria-hidden="true"><span>13 mélanges</span><span>Comprendre la matière</span><span>Conseils au Studio</span></div>
       </section>
 
-      <section className="substrate-manifesto shell" data-reveal>
+      <section className={`substrate-manifesto shell ${styles.manifesto}`}>
         <div><p className="section-kicker">Le substrat n’est pas un détail</p><h2>Tout commence<br />sous la surface.</h2></div>
         <div className="manifesto-copy">
           <p>Une plante peut avoir la bonne lumière et le bon arrosage, mais peiner si ses racines manquent d’air. Chez Tibaldo Jungle, le substrat se pense comme un milieu vivant : il doit soutenir, respirer, drainer et garder juste ce qu’il faut d’humidité.</p>
-          <p>Au Studio Végétal de Lille, chaque composant est disponible en vrac. Vous repartez avec le volume utile, une lecture simple de ses propriétés et, si vous le souhaitez, une recette ajustée à votre plante.</p>
+          <p>TIBALDO Jungle, revendeur Sybotanica à Lille, vous aide à choisir le volume utile et à lire les propriétés d’un mélange. Le Studio ouvre le 26 septembre 2026. La sélection présentée ici est un guide : disponibilité et conditionnement restent à confirmer au Studio.</p>
         </div>
       </section>
+
+      <LocalSubstrateVisit />
+      <SubstrateSelection />
 
       <section className="substrate-collection" id="composants">
         <div className="shell collection-heading" data-reveal>
@@ -85,7 +102,8 @@ export default function SubstratesPage() {
           <h2>Neuf composants.<br /><em>Une infinité d’équilibres.</em></h2>
           <p>Chaque matière joue un rôle précis. Découvrez son toucher, son comportement et les plantes auxquelles elle convient.</p>
         </div>
-        <div className="shell material-list">
+        <details className="shell"><summary style={{ cursor: "pointer", padding: "24px 0", fontSize: "18px" }}>Ouvrir les neuf guides de matières Jungle</summary>
+        <div className="material-list">
           {substrates.map((item) => (
             <article className="material-card" id={item.slug} key={item.slug} data-reveal>
               <div className={`material-visual material-${item.tone}`}>
@@ -105,7 +123,7 @@ export default function SubstratesPage() {
               </div>
             </article>
           ))}
-        </div>
+        </div></details>
       </section>
 
       <section className="mix-guide">

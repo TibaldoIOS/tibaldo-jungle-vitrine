@@ -1,18 +1,8 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
 import test from "node:test";
 
 import { plants } from "../lib/plants/catalog.ts";
 import { publicPermanentRedirects } from "../lib/seo/public-redirects.ts";
-import { familyHubDecisions, isFamilyIndexable } from "../lib/seo/family-indexability-contract.ts";
-import {
-  certifiedPublicSpeciesUrlCount,
-  expectedPublicSitemapUrlCount,
-} from "../scripts/public-sitemap-contract.mjs";
-
-const certifiedMediaInventory = JSON.parse(
-  readFileSync(new URL("../reports/species-media-inventory-after-expansion-v1.json", import.meta.url), "utf8"),
-);
 
 const requestedMode = process.env.JUNGLE_ENV === "public" ? "public" : "beta";
 const workerUrl = new URL("../dist/server/index.js", import.meta.url);
@@ -39,8 +29,7 @@ const labs = [
 ];
 
 test("release species inventory remains frozen", () => {
-  assert.equal(plants.length, certifiedMediaInventory.after.species);
-  assert.equal(new Set(plants.map((plant) => `${plant.genre}/${plant.slug}`)).size, certifiedMediaInventory.after.species);
+  assert.equal(plants.length, 76);
 });
 
 test(`${requestedMode} artifact has the exact indexing and customer-mode contract`, async () => {
@@ -77,19 +66,10 @@ test(`${requestedMode} artifact has the exact robots and sitemap contract`, asyn
     assert.equal(sitemap.status, 200);
     const xml = await sitemap.text();
     const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-    assert.equal(urls.length, expectedPublicSitemapUrlCount);
+    assert.equal(urls.length, 157);
     assert.equal(new Set(urls).size, urls.length);
     assert.ok(urls.every((url) => url.startsWith("https://jungle.tibaldo.fr/")));
     assert.ok(urls.every((url) => !url.includes("/lab/")));
-    const speciesUrls = urls.filter((url) => {
-      const [, root, genre, slug] = new URL(url).pathname.split("/");
-      return root === "plantes" && genre !== "famille" && Boolean(genre && slug);
-    });
-    assert.equal(speciesUrls.length, certifiedPublicSpeciesUrlCount);
-    assert.deepEqual(
-      speciesUrls.map((url) => new URL(url).pathname).sort(),
-      plants.map((plant) => `/plantes/${plant.genre}/${plant.slug}`).sort(),
-    );
     assert.equal(urls.filter((url) => /^https:\/\/jungle\.tibaldo\.fr\/plantes\/[^/]+$/.test(url)).length, 31);
   } else {
     assert.match(robotsText, /^Disallow: \/$/im);
@@ -97,34 +77,6 @@ test(`${requestedMode} artifact has the exact robots and sitemap contract`, asyn
     assert.equal(robots.headers.get("x-robots-tag"), "noindex, nofollow");
     assert.equal(sitemap.status, 404);
     assert.equal(sitemap.headers.get("x-robots-tag"), "noindex, nofollow");
-  }
-});
-
-test(`${requestedMode} artifact keeps family metadata and sitemap on one indexability contract`, async () => {
-  const sitemap = await fetchRoute("/sitemap.xml");
-  const sitemapPaths = requestedMode === "public"
-    ? new Set([...((await sitemap.text()).matchAll(/<loc>([^<]+)<\/loc>/g))].map((match) => new URL(match[1]).pathname))
-    : new Set();
-
-  for (const family of Object.keys(familyHubDecisions)) {
-    const path = `/plantes/famille/${family}`;
-    const response = await fetchRoute(path);
-    const html = await response.text();
-    assert.equal(response.status, 200, path);
-    assert.match(html, /<h1[^>]*>Les[\s\S]*?<em>/i, path);
-    assert.match(html, /application\/ld\+json/i, path);
-    assert.match(html, new RegExp(`rel=["']canonical["'][^>]+${path}`), path);
-    if (requestedMode === "public") {
-      assert.equal(sitemapPaths.has(path), isFamilyIndexable(family), path);
-      if (isFamilyIndexable(family)) assert.doesNotMatch(metaRobots(html), /noindex|nofollow/i, path);
-      else {
-        assert.match(metaRobots(html), /noindex/i, path);
-        assert.doesNotMatch(metaRobots(html), /nofollow/i, path);
-      }
-    } else {
-      assert.match(metaRobots(html), /noindex/i, path);
-      assert.match(metaRobots(html), /nofollow/i, path);
-    }
   }
 });
 

@@ -1,0 +1,192 @@
+{
+  "species": "Pilea peperomioides",
+  "encyclopediaSlug": "plantes/pilea/peperomioides",
+  "creator": "TIBALDO",
+  "publicCredit": "Photo : TIBALDO",
+  "authorization": "Explicit user instruction, 2026-09-08",
+  "conversation": "6a98800e-4770-83eb-9e70-ede85b60478a",
+  "processing": "EXIF orientation; deterministic crop and Lanczos resize; WebP quality 85; no generation, no colour changes, no EXIF/GPS in web files",
+  "sources": [
+    {
+      "original": "IMG_0023.JPG",
+      "width": 3213,
+      "height": 5712,
+      "sha256": "eb25ff4c89665a7d177aad6586f9a95312c6317c27283026ae6463db8b6ab5c2",
+      "alt": "Pilea peperomioides en pot, feuilles rondes vertes portées par de longs pétioles",
+      "derivatives": [
+        {
+          "app": "jungle",
+          "path": "/owner-media/pilea-peperomioides/pilea-peperomioides-plante-tibaldo-600.webp",
+          "width": 600,
+          "height": 750,
+          "bytes": 35648,
+          "crop": [
+            0,
+            962,
+            3213,
+            4978
+          ],
+          "sha256": "b4e81cb6b80c0138bb1b5eda17c4dba8f1dc255a5559f19d7b81964d7ba92d78"
+        },
+        {
+          "app": "jungle",
+          "path": "/owner-media/pilea-peperomioides/pilea-peperomioides-plante-tibaldo-1200.webp",
+          "width": 1200,
+          "height": 1500,
+          "bytes": 101946,
+          "crop": [
+            0,
+            962,
+            3213,
+            4978
+          ],
+          "sha256": "aab8636a252ecae26d0b68f3e529804d8566ff03d3c7cc14cbbca891c0dc0a4a"
+        },
+        {
+          "app": "shop",
+          "path": "/owner-media/pilea-peperomioides/pilea-peperomioides-plante-tibaldo-192.webp",
+          "width": 192,
+          "height": 240,
+          "bytes": 6558,
+          "crop": [
+            0,
+            962,
+            3213,
+            4978
+          ],
+          "sha256": "c54fee2da4166afa137fa578e505d2a43fe99e7fb513dd568bbd4b08e1147784"
+        },
+        {
+          "app": "shop",
+          "path": "/owner-media/pilea-peperomioides/pilea-peperomioides-plante-tibaldo-480.webp",
+          "width": 480,
+          "height": 600,
+          "bytes": 25278,
+          "crop": [
+            0,
+            962,
+            3213,
+            4978
+          ],
+          "sha256": "d4145ce710142901da63a0c3863ee3d445dd38c33305d9625fe7d2aaf24b54a5"
+        },
+        {
+          "app": "shop",
+          "path": "/owner-media/pilea-peperomioides/pilea-peperomioides-plante-tibaldo-960.webp",
+          "width": 960,
+          "height": 1200,
+          "bytes": 73858,
+          "crop": [
+            0,
+            962,
+            3213,
+            4978
+          ],
+          "sha256": "9bd70c99db26b6188f5e8c874d5fdb254bb54a301da6f150d7212cee728969f9"
+        },
+        {
+          "app": "caisse",
+          "path": "/owner-media/pilea-peperomioides/pilea-peperomioides-plante-tibaldo-192.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 6206,
+          "crop": [
+            0,
+            1364,
+            3213,
+            4577
+          ],
+          "sha256": "eca0df4a20d9e9ab33f6a0c8fa58c1df67561f562423e219e0947feae34763b9"
+        },
+        {
+          "app": "caisse",
+          "path": "/owner-media/pilea-peperomioides/pilea-peperomioides-plante-tibaldo-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 38384,
+          "crop": [
+            0,
+            1364,
+            3213,
+            4577
+          ],
+          "sha256": "ca6333378a6182689251f1131af72128347738f0d3d2e133a0927b1b2efdd210"
+        }
+      ]
+    },
+    {
+      "original": "IMG_0024.JPG",
+      "width": 3213,
+      "height": 5712,
+      "sha256": "e3b27b445bed17f9f9987830b3947a6c7f09c79f0ef2b4de70ca2e0402bdb51e",
+      "alt": "Feuillage du Pilea peperomioides, avec ses feuilles rondes et ses longs pétioles",
+      "derivatives": [
+        {
+          "app": "jungle",
+          "path": "/owner-media/pilea-peperomioides/pilea-peperomioides-feuillage-tibaldo-600.webp",
+          "width": 600,
+          "height": 750,
+          "bytes": 49348,
+          "crop": [
+            0,
+            848,
+            3213,
+            4864
+          ],
+          "sha256": "64d6585ff733235571ad0ce3f3b228231d3c47a2f2c8a90c5d472d9ea9ec7d80"
+        },
+        {
+          "app": "jungle",
+          "path": "/owner-media/pilea-peperomioides/pilea-peperomioides-feuillage-tibaldo-1200.webp",
+          "width": 1200,
+          "height": 1500,
+          "bytes": 122930,
+          "crop": [
+            0,
+            848,
+            3213,
+            4864
+          ],
+          "sha256": "3528953464eaf792f6cb9859a0e5da96a61ad6d17658d9decc52c5b67e74a8e9"
+        }
+      ]
+    },
+    {
+      "original": "IMG_0025.JPG",
+      "width": 3213,
+      "height": 5712,
+      "sha256": "2396adb90a297f63d06cba60757bfbb2611345ee4f36c175194fb0384fe57d5e",
+      "alt": "Détail des feuilles peltées du Pilea peperomioides, couvertes de gouttes d’eau",
+      "derivatives": [
+        {
+          "app": "jungle",
+          "path": "/owner-media/pilea-peperomioides/pilea-peperomioides-detail-tibaldo-600.webp",
+          "width": 600,
+          "height": 750,
+          "bytes": 44630,
+          "crop": [
+            0,
+            848,
+            3213,
+            4864
+          ],
+          "sha256": "f157f777258c83b065a95bcb899fc05a8f3ce3ea3922ba6e7bb503320707534c"
+        },
+        {
+          "app": "jungle",
+          "path": "/owner-media/pilea-peperomioides/pilea-peperomioides-detail-tibaldo-1200.webp",
+          "width": 1200,
+          "height": 1500,
+          "bytes": 113972,
+          "crop": [
+            0,
+            848,
+            3213,
+            4864
+          ],
+          "sha256": "3514ace339a6db05a3814d34e8f16e74452092e92a3d22416f279fbdd2051a2c"
+        }
+      ]
+    }
+  ]
+}

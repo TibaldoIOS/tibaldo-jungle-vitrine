@@ -9,9 +9,9 @@ import type { PlantExplorerItem } from "./PlantExplorer";
 import StudioAccessCompact from "./StudioAccessCompact";
 import BotanicalMotif from "./BotanicalMotif";
 import CompactBotanicalIndex from "./CompactBotanicalIndex";
+import VarietyCount from "./VarietyCount";
 import PlantsHeroMedia from "./PlantsHeroMedia";
 import { isInternalPhotoProductionCopy } from "@/lib/plants/types";
-import { documentaryGallery } from "@/lib/plants/documentary-media";
 
 const SearchIcon = () => <svg className="plants-search-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="4.75"/><path d="m12 12 4 4"/></svg>;
 
@@ -27,13 +27,13 @@ export const metadata: Metadata = {
     siteName: "Studio Végétal — Tibaldo Jungle",
     title: "Encyclopédie des plantes d’intérieur et tropicales",
     description: "Recherchez une plante par son nom, sa famille botanique ou ses besoins et consultez les guides Tibaldo Jungle.",
-    images: [{ url: "/alocasia-cuprea-feuillage.jpg", width: 1280, height: 1539, alt: "Feuillage documenté d’Alocasia cuprea" }],
+    images: [{ url: "/media/alocasia-imperial-red.webp", width: 1024, height: 1536, alt: "Encyclopédie végétale Tibaldo Jungle à Lille" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Encyclopédie végétale Tibaldo Jungle",
     description: "Genres, espèces, cultivars et conseils de culture pour trouver une plante adaptée à votre intérieur.",
-    images: ["/alocasia-cuprea-feuillage.jpg"],
+    images: ["/media/alocasia-imperial-red.webp"],
   },
 };
 
@@ -84,7 +84,7 @@ export default function PlantsPage() {
       petToxic: plant.filters.petToxic,
     },
     difficulty: plant.care.difficulty,
-    image: documentaryGallery(plant)[0],
+    image: plant.gallery[0],
   }));
   const structuredData = {
     "@context": "https://schema.org",
@@ -130,18 +130,17 @@ export default function PlantsPage() {
       <section className="shell plants-editorial-genera" aria-labelledby="featured-genera-title">
         <header data-reveal><p className="section-kicker">Quatre portes d’entrée</p><h2 id="featured-genera-title">Des formes.<br /><em>Des milieux.</em></h2><p>Quatre genres pour entrer dans l’encyclopédie par la feuille, le port et la manière d’habiter l’espace.</p></header>
         <div className="plants-editorial-genera-list">
-          {featuredFamilies.map((family, index) => {
+          {featuredFamilies.map((family) => {
             const image = featuredImages[family.slug];
             return <Link href={`/plantes/${family.slug}`} className="plants-editorial-genus" key={family.slug} data-reveal>
               <div className="plants-editorial-genus-media">
                 <Image unoptimized src={image.src} alt={image.alt} width={1200} height={900} sizes="(max-width: 700px) 100vw, 55vw" />
               </div>
               <div className="plants-editorial-genus-copy">
-                <span>{String(index + 1).padStart(2, "0")} · {family.eyebrow}</span>
                 <h3>{family.name}</h3>
                 <p>{family.description}</p>
                 <small>{image.note}</small>
-                <strong>{speciesCount(family.slug)} {speciesCount(family.slug) > 1 ? "fiches" : "fiche"} <Arrow /></strong>
+                <strong><VarietyCount count={speciesCount(family.slug)} /> <Arrow /></strong>
               </div>
             </Link>;
           })}

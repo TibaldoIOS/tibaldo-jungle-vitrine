@@ -1,0 +1,286 @@
+{
+  "id": 6960987734198,
+  "title": "Syngonium Mix",
+  "handle": "premium-syngonium-soil-mix-5-liter",
+  "description": "<p><b><i>This SYBASoil mix can contain live worms!</i></b></p>\n<h2>How to Use the Syngonium Soil Mix</h2>\n<p><span style=\"font-weight: 400;\">Using the mix is easy! Start with removing as much of the old soil as possible. Gently squeeze the pot while holding it sideways to loosen up the plant. Run the roots under lukewarm tap water to remove the last pieces and bits.</span></p>\n<p><span style=\"font-weight: 400;\">Also, make sure to remove any dead foliage that may still be on the plant using scissors. Now your plant is ready for its fresh Syngonium soil. Add a small layer of Syngonium mix at the bottom of the pot.</span></p>\n<p><span style=\"font-weight: 400;\">Place the plant in the pot, and slowly add Syngonium soil to the sides to fill it up. Make sure that the point where the roots meet the plant is just buried under the Syngonium soil.</span></p>\n<p><span style=\"font-weight: 400;\">Lightly pat the Syngonium mix down into the pot. Make sure to water the Syngonium mix thoroughly after repotting, as this helps settle the mix and roots down.</span></p>\n<h2>Why the Syngonium Mix Works</h2>\n<p><span style=\"font-weight: 400;\">The combination of pumice, coco husk, and perlite creates an airy substrate that gives the roots the oxygen they crave. As Syngoniums thrive in humid environments, there is extra activated carbon added to help against the heightened risk of mold and negative microbial presence. The perfect Syngonium mix!</span></p>\n<ul></ul>\n<h2>The Original Habitat of the Syngonium Plants</h2>\n<p><span style=\"font-weight: 400;\">Like Alocasia, Calathea &amp; Maranta, the Syngoniums come from tropical forests with well-draining, moist and fertile soil. They grow under the canopy in Central America and prefer shadier conditions to thrive. This Syngonium mix mimics that habitat.</span></p>\n<h2>How to Care for Syngonium Plants</h2>\n<p><span style=\"font-weight: 400;\">Syngonium care is pretty similar to other aroid care, but they are a little fussier. They prefer warm temperatures and high humidity. Do make sure to spray your Syngonium once in a while if you live in a dry area.</span></p>\n<p><span style=\"font-weight: 400;\">Syngonium requires a bit more water than regular aroids, be sure to not let your Syngonium mix dry out too much. Place your Syngonium in a bright, indirect spot and you will be sure to have a happy plant!</span></p>",
+  "published_at": "2021-08-20T18:12:59+02:00",
+  "created_at": "2021-08-19T14:08:00+02:00",
+  "vendor": "Premium SYBASoil",
+  "type": "Houseplants Mixes",
+  "tags": [
+    "Component_soil",
+    "Diy_soil_mixture",
+    "ferns_fittonia",
+    "guarantee",
+    "import_2021_01_21_191112",
+    "Maranta_calathea",
+    "Mixture_addition",
+    "Monstera_fittonia",
+    "NOT-ON-SALE",
+    "Photos_alocasia",
+    "review-inventory",
+    "review-pricing",
+    "Soil_mix_addition",
+    "Substrate_terrarium",
+    "Syngonium",
+    "Terrarium_soil_mix",
+    "Tropical_house",
+    "Tropical_houseplant"
+  ],
+  "price": 499,
+  "price_min": 499,
+  "price_max": 1299,
+  "available": true,
+  "price_varies": true,
+  "compare_at_price": null,
+  "compare_at_price_min": 0,
+  "compare_at_price_max": 0,
+  "compare_at_price_varies": false,
+  "variants": [
+    {
+      "id": 53723395653959,
+      "title": "1L",
+      "option1": "1L",
+      "option2": null,
+      "option3": null,
+      "sku": "SYB013-1",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 74227866468679,
+        "product_id": 6960987734198,
+        "position": 7,
+        "created_at": "2026-04-17T11:22:04+02:00",
+        "updated_at": "2026-04-17T11:22:07+02:00",
+        "alt": "Resealable soil bag labeled Syngonium premium soil mix",
+        "width": 2048,
+        "height": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_1LPouch_Syngonium_2049c8c7-fe65-4ff3-a2e4-99b27e290691.jpg?v=1776417727",
+        "variant_ids": [
+          53723395653959
+        ]
+      },
+      "available": false,
+      "name": "Syngonium Mix - 1L",
+      "public_title": "1L",
+      "options": [
+        "1L"
+      ],
+      "price": 499,
+      "weight": 500,
+      "compare_at_price": null,
+      "inventory_management": "shopify",
+      "barcode": "8720615167807",
+      "featured_media": {
+        "alt": "Resealable soil bag labeled Syngonium premium soil mix",
+        "id": 58007905927495,
+        "position": 7,
+        "preview_image": {
+          "aspect_ratio": 1,
+          "height": 2048,
+          "width": 2048,
+          "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_1LPouch_Syngonium_2049c8c7-fe65-4ff3-a2e4-99b27e290691.jpg?v=1776417727"
+        }
+      },
+      "quantity_rule": {
+        "min": 1,
+        "max": null,
+        "increment": 1
+      },
+      "quantity_price_breaks": [],
+      "requires_selling_plan": false,
+      "selling_plan_allocations": []
+    },
+    {
+      "id": 42999034577135,
+      "title": "5L",
+      "option1": "5L",
+      "option2": null,
+      "option3": null,
+      "sku": "SYB989",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": {
+        "id": 69666046181703,
+        "product_id": 6960987734198,
+        "position": 1,
+        "created_at": "2025-12-03T07:26:01+01:00",
+        "updated_at": "2025-12-03T07:42:50+01:00",
+        "alt": "Resealable bag of dark soil mix with leaf graphics, best soil for syngonium",
+        "width": 2048,
+        "height": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Syngonium_4a05b19a-95f6-45ff-b428-c611dbce9efd.jpg?v=1764744170",
+        "variant_ids": [
+          42999034577135
+        ]
+      },
+      "available": true,
+      "name": "Syngonium Mix - 5L",
+      "public_title": "5L",
+      "options": [
+        "5L"
+      ],
+      "price": 1299,
+      "weight": 3000,
+      "compare_at_price": null,
+      "inventory_management": "shopify",
+      "barcode": "8720615163762",
+      "featured_media": {
+        "alt": "Resealable bag of dark soil mix with leaf graphics, best soil for syngonium",
+        "id": 55932423045447,
+        "position": 1,
+        "preview_image": {
+          "aspect_ratio": 1,
+          "height": 2048,
+          "width": 2048,
+          "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Syngonium_4a05b19a-95f6-45ff-b428-c611dbce9efd.jpg?v=1764744170"
+        }
+      },
+      "quantity_rule": {
+        "min": 1,
+        "max": null,
+        "increment": 1
+      },
+      "quantity_price_breaks": [],
+      "requires_selling_plan": false,
+      "selling_plan_allocations": []
+    }
+  ],
+  "images": [
+    "//cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Syngonium_4a05b19a-95f6-45ff-b428-c611dbce9efd.jpg?v=1764744170",
+    "//cdn.shopify.com/s/files/1/0531/2367/8390/products/Syngoniumsoilmix.jpg?v=1770197844",
+    "//cdn.shopify.com/s/files/1/0531/2367/8390/products/Syngoniumsoilmixlifestylephoto_2.jpg?v=1770197844",
+    "//cdn.shopify.com/s/files/1/0531/2367/8390/files/Syngonium.jpg?v=1770197844",
+    "//cdn.shopify.com/s/files/1/0531/2367/8390/files/SyngoniumHill.jpg?v=1770197844",
+    "//cdn.shopify.com/s/files/1/0531/2367/8390/files/SyngoniumZoom.jpg?v=1770197844",
+    "//cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_1LPouch_Syngonium_2049c8c7-fe65-4ff3-a2e4-99b27e290691.jpg?v=1776417727"
+  ],
+  "featured_image": "//cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Syngonium_4a05b19a-95f6-45ff-b428-c611dbce9efd.jpg?v=1764744170",
+  "options": [
+    {
+      "name": "Size",
+      "position": 1,
+      "values": [
+        "1L",
+        "5L"
+      ]
+    }
+  ],
+  "url": "/products/premium-syngonium-soil-mix-5-liter",
+  "media": [
+    {
+      "alt": "Resealable bag of dark soil mix with leaf graphics, best soil for syngonium",
+      "id": 55932423045447,
+      "position": 1,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2048,
+        "width": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Syngonium_4a05b19a-95f6-45ff-b428-c611dbce9efd.jpg?v=1764744170"
+      },
+      "aspect_ratio": 1,
+      "height": 2048,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_5LPouch_Syngonium_4a05b19a-95f6-45ff-b428-c611dbce9efd.jpg?v=1764744170",
+      "width": 2048
+    },
+    {
+      "alt": "Hand holding potting mix with perlite and roots, best soil for syngonium",
+      "id": 31748197679343,
+      "position": 2,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2048,
+        "width": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/products/Syngoniumsoilmix.jpg?v=1770197844"
+      },
+      "aspect_ratio": 1,
+      "height": 2048,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/products/Syngoniumsoilmix.jpg?v=1770197844",
+      "width": 2048
+    },
+    {
+      "alt": "Variegated green and cream speckled Syngonium leaves close-up, best soil for syngonium",
+      "id": 31748197777647,
+      "position": 3,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2048,
+        "width": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/products/Syngoniumsoilmixlifestylephoto_2.jpg?v=1770197844"
+      },
+      "aspect_ratio": 1,
+      "height": 2048,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/products/Syngoniumsoilmixlifestylephoto_2.jpg?v=1770197844",
+      "width": 2048
+    },
+    {
+      "alt": "Close-up of dark soil mix with perlite chunks",
+      "id": 45384215298375,
+      "position": 4,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2048,
+        "width": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/Syngonium.jpg?v=1770197844"
+      },
+      "aspect_ratio": 1,
+      "height": 2048,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/Syngonium.jpg?v=1770197844",
+      "width": 2048
+    },
+    {
+      "alt": "Close-up of dark soil mix with perlite chunks, best soil for syngonium",
+      "id": 45384215331143,
+      "position": 5,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2048,
+        "width": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SyngoniumHill.jpg?v=1770197844"
+      },
+      "aspect_ratio": 1,
+      "height": 2048,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SyngoniumHill.jpg?v=1770197844",
+      "width": 2048
+    },
+    {
+      "alt": "Close-up of dark soil mix with perlite and bark",
+      "id": 45384215363911,
+      "position": 6,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2048,
+        "width": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SyngoniumZoom.jpg?v=1770197844"
+      },
+      "aspect_ratio": 1,
+      "height": 2048,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SyngoniumZoom.jpg?v=1770197844",
+      "width": 2048
+    },
+    {
+      "alt": "Resealable soil bag labeled Syngonium premium soil mix",
+      "id": 58007905927495,
+      "position": 7,
+      "preview_image": {
+        "aspect_ratio": 1,
+        "height": 2048,
+        "width": 2048,
+        "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_1LPouch_Syngonium_2049c8c7-fe65-4ff3-a2e4-99b27e290691.jpg?v=1776417727"
+      },
+      "aspect_ratio": 1,
+      "height": 2048,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0531/2367/8390/files/SYBASoil_1LPouch_Syngonium_2049c8c7-fe65-4ff3-a2e4-99b27e290691.jpg?v=1776417727",
+      "width": 2048
+    }
+  ],
+  "requires_selling_plan": false,
+  "selling_plan_groups": []
+}

@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function ScrollReveal() {
+  const pathname = usePathname();
   useEffect(() => {
     const root = document.documentElement;
     const elements = Array.from(
@@ -43,6 +45,8 @@ export default function ScrollReveal() {
         ...node.querySelectorAll<HTMLElement>("[data-reveal]"),
       ];
       added.forEach((element) => {
+        // Streaming/client transitions can insert content after the initial
+        // query. Such content must never inherit an unobserved hidden state.
         registered.add(element);
         element.classList.add("is-visible");
       });
@@ -118,7 +122,7 @@ export default function ScrollReveal() {
       if (animationFrame) window.cancelAnimationFrame(animationFrame);
       root.classList.remove("reveal-ready");
     };
-  }, []);
+  }, [pathname]);
 
   return null;
 }

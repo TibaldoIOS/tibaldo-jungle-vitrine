@@ -1,9 +1,8 @@
 import { jungleOrigin } from "../deployment-mode.ts";
-import { cycasRevolutaVerifiedApiMedia, documentaryGallery } from "./documentary-media.ts";
 import type { PlantEntry } from "./types.ts";
+import { isEditorialPlaceholder, isInternalPhotoProductionCopy, isPhotoProductionPlaceholder } from "./types.ts";
 
 export const verifiedMediaApiContractVersion = "1.0";
-export const verifiedMediaStatusValues = ["VERIFIED_MEDIA", "HONEST_MEDIA_GAP"] as const;
 
 const canonicalMediaPath = (path: string) =>
   path === "/media/anthurium-pallidiflorum-feuillage-tibaldo-jungle.webp"
@@ -11,18 +10,16 @@ const canonicalMediaPath = (path: string) =>
     : path.replace(/^\/media\//, "/");
 
 export function exactVerifiedPrimaryMedia(plant: PlantEntry) {
-  const image = plant.genre === "cycas" && plant.slug === "revoluta"
-    ? cycasRevolutaVerifiedApiMedia
-    : documentaryGallery(plant)[0];
-  if (
-    !image ||
-    image.license?.status !== "verified" ||
-    !image.license.creator ||
-    !image.license.sourceUrl ||
-    !image.license.license ||
-    !image.license.registryPath
-  ) return null;
-  return image;
+  return plant.gallery.find((image) =>
+    image.license?.status === "verified" &&
+    Boolean(image.license.creator) &&
+    Boolean(image.license.sourceUrl) &&
+    Boolean(image.license.license) &&
+    Boolean(image.license.registryPath) &&
+    !isPhotoProductionPlaceholder(image.src) &&
+    !isEditorialPlaceholder(image.src) &&
+    !isInternalPhotoProductionCopy(`${image.alt} ${image.caption}`)
+  ) ?? null;
 }
 
 const fnv1a = (input: string) => {

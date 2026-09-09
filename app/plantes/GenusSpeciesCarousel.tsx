@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { PlantEntry } from "@/lib/plants/types";
-import { publicPlantImageAlt } from "@/lib/plants/types";
-import { documentaryGallery } from "@/lib/plants/documentary-media";
+import { isPhotoProductionPlaceholder, publicPlantImageAlt } from "@/lib/plants/types";
 import { Arrow } from "../SiteChrome";
 
 export default function GenusSpeciesCarousel({ genre, genusName, plants }: {
@@ -11,17 +10,17 @@ export default function GenusSpeciesCarousel({ genre, genusName, plants }: {
   plants: readonly PlantEntry[];
 }) {
   return (
-    <section className="genus-species-carousel shell" aria-labelledby={`genus-carousel-${genre}`} data-long-grid-visible>
-      <header data-reveal>
+    <section className="genus-species-carousel shell" aria-labelledby={`genus-carousel-${genre}`} data-reveal>
+      <header>
         <p className="section-kicker">Toutes les fiches du genre</p>
         <h2 id={`genus-carousel-${genre}`}>Explorer les <em>{genusName}.</em></h2>
-        <p>{plants.length ? `${plants.length} ${plants.length > 1 ? "espèces et cultivars documentés" : "fiche documentée"}, sans confondre encyclopédie et disponibilité en boutique.` : "Les premières fiches documentées rejoindront ici l’encyclopédie."}</p>
+        <p>{plants.length ? `${plants.length} ${plants.length > 1 ? "espèces et cultivars documentés" : "variété documentée"}, sans confondre encyclopédie et disponibilité en boutique.` : "Les premières fiches documentées rejoindront ici l’encyclopédie."}</p>
       </header>
       {plants.length ? (
         <div className="genus-carousel-track" aria-label={`Toutes les fiches ${genusName}`}>
           {plants.map((plant) => {
-            const image = documentaryGallery(plant)[0];
-            const hasPhoto = Boolean(image);
+            const image = plant.gallery[0];
+            const hasPhoto = image && !isPhotoProductionPlaceholder(image.src);
             return (
               <Link className={`genus-carousel-card${hasPhoto ? " has-photo" : " has-media-gap"}`} href={`/plantes/${plant.genre}/${plant.slug}`} key={`${plant.genre}/${plant.slug}`}>
                 <div className="genus-carousel-media">
