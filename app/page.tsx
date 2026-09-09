@@ -5,6 +5,8 @@ import { Arrow, SiteFooter, SiteHeader } from "./SiteChrome";
 import { plantFamilies } from "@/lib/plants/catalog";
 import { substrates } from "./substrats/data";
 import HomeExperience from "./HomeExperience";
+import HomeOpeningBanner from "./HomeOpeningBanner";
+import promoStyles from "./HomeOpeningBanner.module.css";
 import { shopUrl } from "@/lib/environment";
 import { jungleLocalIdentity, jungleOrganizationStructuredData, jungleStoreStructuredData } from "@/lib/jungle-local-identity";
 
@@ -32,9 +34,10 @@ export default function Home() {
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <ScrollReveal />
-      <section className="hero" id="accueil">
+      <section className={`hero ${promoStyles.hero}`} id="accueil">
         <div className="hero-photo" aria-hidden="true" /><div className="hero-shade" aria-hidden="true" />
         <SiteHeader />
+        <HomeOpeningBanner />
         <p className="hero-local-coordinates" aria-label={`Latitude ${jungleLocalIdentity.latitude} nord, longitude ${jungleLocalIdentity.longitude} est`}>
           {jungleLocalIdentity.latitude}° N · {jungleLocalIdentity.longitude}° E
         </p>
@@ -46,8 +49,6 @@ export default function Home() {
           <div className="hero-actions"><Link className="button button-light" href="/plantes">Explorer la Jungle <Arrow /></Link><Link className="hero-shop-link" href="/contact">Préparer ma visite <Arrow /></Link><a className="hero-shop-link" href="/visite-jungle/index.html">Visiter la Jungle en 3D <Arrow /></a></div>
         </div>
       </section>
-
-      <aside className="opening-banner" aria-label="Annonce de la grande ouverture"><div className="opening-banner-glow" aria-hidden="true" /><Link className="shell opening-banner-inner" href="/evenements/ouverture-tibaldo-jungle-lille"><span className="opening-badge"><strong>26</strong><small>SEP</small></span><p><span className="opening-live"><i aria-hidden="true" /> Événement à venir</span><strong>Grande ouverture · 26 septembre 2026 · Lille</strong><span>Rempotage gratuit toute l’année · découvrez le Studio et indiquez votre présence.</span></p><span className="opening-banner-cta">Découvrir l’événement <b aria-hidden="true">↗</b></span><span className="opening-arrow" aria-hidden="true">↓</span></Link></aside>
 
       {false ? <><section className="home-categories" aria-labelledby="home-categories-title">
         <div className="shell home-categories-heading" data-reveal><div><p className="section-kicker">L’encyclopédie végétale</p><h2 id="home-categories-title">Choisir une famille.<br /><em>Suivre sa curiosité.</em></h2></div><p>Parcourez les plantes par univers botanique avant de lancer une recherche précise.</p></div>
