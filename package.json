@@ -8,7 +8,7 @@
   "scripts": {
     "install:ci": "bash scripts/install-ci.sh",
     "dev": "JUNGLE_ENV=beta NEXT_PUBLIC_JUNGLE_ENV=beta NEXT_PUBLIC_JUNGLE_ORIGIN=https://beta-jungle.tibaldo.fr NEXT_PUBLIC_SHOP_URL=https://beta-shop.tibaldo.fr NEXT_PUBLIC_JUNGLE_BANNER='MODE BÊTA / TEST — ENVIRONNEMENT DE DÉMONSTRATION' WRANGLER_LOG_PATH=.wrangler/wrangler.log vite",
-    "build": "npm run build:public",
+    "build": "npm run build:beta",
     "build:beta": "JUNGLE_ENV=beta NEXT_PUBLIC_JUNGLE_ENV=beta bash scripts/build-verified.sh",
     "build:public": "JUNGLE_ENV=public NEXT_PUBLIC_JUNGLE_ENV=public bash scripts/build-verified.sh",
     "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
