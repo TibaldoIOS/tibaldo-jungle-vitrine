@@ -94,6 +94,12 @@ const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
 
+    // The virtual tour is a self-contained, same-origin static experience.
+    if (url.pathname.startsWith("/visite-jungle/")) {
+      return withDeploymentHeaders(request, await env.ASSETS.fetch(request));
+    }
+
+
     // Sites may dispatch files that physically exist in the static bundle
     // before the Worker runs. Public editorial media therefore uses a stable
     // virtual prefix: the request reaches the Worker, which fetches the
