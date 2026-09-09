@@ -62,7 +62,14 @@ function withDeploymentHeaders(request: Request, response: Response): Response {
   headers.set("X-Content-Type-Options", "nosniff");
   headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
   headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=(), payment=(), usb=()");
-  headers.set("Content-Security-Policy", CONTENT_SECURITY_POLICY);
+  const isTour = pathname.startsWith("/visite-jungle/");
+  const policy = isTour
+    ? CONTENT_SECURITY_POLICY
+        .replace("script-src 'self' 'unsafe-inline'", "script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'")
+        .replace("connect-src 'self'", "connect-src 'self' blob:")
+    : CONTENT_SECURITY_POLICY;
+  headers.set("Content-Security-Policy", policy);
+  if (isTour) headers.set("Cache-Control", "public, max-age=0, must-revalidate");
 
   // Stable, non-fingerprinted editorial media may change between BETA reviews,
   // so cache it for one day rather than indefinitely. Hashed application assets

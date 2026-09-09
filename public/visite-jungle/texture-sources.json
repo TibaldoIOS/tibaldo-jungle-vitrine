@@ -1,0 +1,76 @@
+[
+  {
+    "file": "wood_planks_grey_Diffuse_1k.jpg",
+    "source": "https://polyhaven.com/a/wood_planks_grey",
+    "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/wood_planks_grey/wood_planks_grey_diff_1k.jpg",
+    "license": "https://polyhaven.com/license"
+  },
+  {
+    "file": "wood_planks_grey_Rough_1k.jpg",
+    "source": "https://polyhaven.com/a/wood_planks_grey",
+    "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/wood_planks_grey/wood_planks_grey_rough_1k.jpg",
+    "license": "https://polyhaven.com/license"
+  },
+  {
+    "file": "wood_planks_grey_nor_gl_1k.jpg",
+    "source": "https://polyhaven.com/a/wood_planks_grey",
+    "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/wood_planks_grey/wood_planks_grey_nor_gl_1k.jpg",
+    "license": "https://polyhaven.com/license"
+  },
+  {
+    "file": "oak_veneer_01_Diffuse_1k.jpg",
+    "source": "https://polyhaven.com/a/oak_veneer_01",
+    "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/oak_veneer_01/oak_veneer_01_diff_1k.jpg",
+    "license": "https://polyhaven.com/license"
+  },
+  {
+    "file": "oak_veneer_01_Rough_1k.jpg",
+    "source": "https://polyhaven.com/a/oak_veneer_01",
+    "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/oak_veneer_01/oak_veneer_01_rough_1k.jpg",
+    "license": "https://polyhaven.com/license"
+  },
+  {
+    "file": "oak_veneer_01_nor_gl_1k.jpg",
+    "source": "https://polyhaven.com/a/oak_veneer_01",
+    "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/oak_veneer_01/oak_veneer_01_nor_gl_1k.jpg",
+    "license": "https://polyhaven.com/license"
+  },
+  {
+    "file": "potted_plant_02_leaves_diff_1k.jpg",
+    "source": "https://polyhaven.com/a/potted_plant_02",
+    "download": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/potted_plant_02/potted_plant_02_leaves_diff_1k.jpg",
+    "license": "https://polyhaven.com/license"
+  },
+  {
+    "file": "potted_plant_02_leaves_rough_1k.jpg",
+    "source": "https://polyhaven.com/a/potted_plant_02",
+    "download": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/potted_plant_02/potted_plant_02_leaves_rough_1k.jpg",
+    "license": "https://polyhaven.com/license"
+  },
+  {
+    "file": "potted_plant_02_leaves_nor_gl_1k.jpg",
+    "source": "https://polyhaven.com/a/potted_plant_02",
+    "download": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/potted_plant_02/potted_plant_02_leaves_nor_gl_1k.jpg",
+    "license": "https://polyhaven.com/license"
+  },
+  {
+    "asset": "potted_plant_01",
+    "source": "https://polyhaven.com/a/potted_plant_01",
+    "license": "https://polyhaven.com/license"
+  },
+  {
+    "asset": "potted_plant_02",
+    "source": "https://polyhaven.com/a/potted_plant_02",
+    "license": "https://polyhaven.com/license"
+  },
+  {
+    "asset": "fern_02",
+    "source": "https://polyhaven.com/a/fern_02",
+    "license": "https://polyhaven.com/license"
+  },
+  {
+    "asset": "painted_plaster_wall",
+    "source": "https://polyhaven.com/a/painted_plaster_wall",
+    "license": "https://polyhaven.com/license"
+  }
+]
