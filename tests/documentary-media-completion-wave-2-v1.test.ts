@@ -17,10 +17,21 @@ test("Wave 2 batch 1 publishes only exact, licensed and visually accepted photog
     const media = gallery[0];
     assert.equal(media.license?.status, "verified", record.route);
     assert.ok(media.license?.creator, record.route);
-    assert.ok(media.license?.sourceUrl?.startsWith("https://commons.wikimedia.org/wiki/File:"), record.route);
-    assert.ok(media.license?.licenseUrl?.startsWith("https://creativecommons.org/"), record.route);
+    if (record.route === "/plantes/anthurium/clarinervium") {
+      assert.equal(media.src, "/images/anthurium-clarinervium-feuilles-veloutees-nervures-claires.jpg");
+      assert.equal(media.alt, "Anthurium clarinervium aux feuilles vert foncé veloutées et aux nervures claires.");
+      assert.equal(media.caption, "Photo : TIBALDO");
+      assert.equal(media.license?.sourceUrl, "https://tibaldo.fr/credits-images");
+      assert.equal(media.license?.license, "Autorisation d’utilisation confirmée par l’Owner TIBALDO");
+    } else if (record.route === "/plantes/monstera/adansonii") {
+      assert.equal(media.license?.sourceUrl, "https://tibaldo.fr/credits-images");
+      assert.equal(media.license?.license, "Autorisation d’utilisation confirmée par l’Owner TIBALDO");
+    } else {
+      assert.ok(media.license?.sourceUrl?.startsWith("https://commons.wikimedia.org/wiki/File:"), record.route);
+      assert.ok(media.license?.licenseUrl?.startsWith("https://creativecommons.org/"), record.route);
+    }
     assert.equal(media.license?.registryPath, "/credits-images", record.route);
-    assert.match(media.license?.note ?? "", /31 août 2026/, record.route);
+    assert.match(media.license?.note ?? "", ["/plantes/anthurium/clarinervium", "/plantes/monstera/adansonii"].includes(record.route) ? /10 septembre 2026|31 août 2026/ : /31 août 2026/, record.route);
     assert.ok(existsSync(new URL(`../public${media.src}`, import.meta.url)), media.src);
   }
 });

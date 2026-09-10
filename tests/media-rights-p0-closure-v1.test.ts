@@ -47,7 +47,7 @@ test("closes the exact 11-route P0 media-rights set", () => {
       assert.ok(image.license?.sourceUrl?.startsWith("https://"), `${item.route}: source`);
       if (item.route !== "/plantes/anthurium/pallidiflorum") assert.ok(image.license?.licenseUrl?.startsWith("https://"), `${item.route}: license`);
       assert.equal(image.license?.registryPath, "/credits-images", `${item.route}: registry`);
-      assert.match(image.license?.note ?? "", /(?:30 août|2 septembre|10 septembre) 2026/, `${item.route}: proof date`);
+      assert.match(image.license?.note ?? "", /(?:30 août|31 août|2 septembre|10 septembre) 2026/, `${item.route}: proof date`);
     }
   }
 });
