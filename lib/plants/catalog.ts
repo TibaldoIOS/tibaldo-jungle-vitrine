@@ -259,6 +259,27 @@ if (burlePhotoPlantIndex !== -1) {
 }], mediaNeeds: [] };
 }
 
+// Owner photo wave PHOTO-20260910-SILTEPECANA-01.
+const siltepecanaPhotoPlantIndex = plants.findIndex((plant) => plant.genre === "monstera" && plant.slug === "siltepecana");
+if (siltepecanaPhotoPlantIndex !== -1) {
+  const plant = plants[siltepecanaPhotoPlantIndex];
+  plants[siltepecanaPhotoPlantIndex] = { ...plant, gallery: [{
+  "src": "/media/owner-media/monstera-siltepecana/monstera-siltepecana-plante-en-suspension.webp",
+  "alt": "Monstera siltepecana en suspension, aux tiges retombantes et aux feuilles argentées parcourues de nervures vertes.",
+  "caption": "Photo : TIBALDO",
+  "width": 1206,
+  "height": 1305,
+  "license": {
+    "status": "verified",
+    "creator": "TIBALDO",
+    "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO",
+    "sourceUrl": "owner-provided://tibaldo/photo-20260910-siltepecana-01/siltepecana",
+    "registryPath": "/credits-images",
+    "note": "Photographie fournie par l’Owner ; identité confirmée par le nom original et la correspondance SHA256. Provenance : docs/media-provenance/photo-20260910-siltepecana-01.json."
+  }
+}], mediaNeeds: [] };
+}
+
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
 export const getPlantsByGenre = (genre: string) => plants.filter((plant) => plant.genre === genre);

@@ -1,0 +1,53 @@
+{
+  "batch_id": "PHOTO-20260910-SILTEPECANA-01",
+  "public_source_before": "c281e4e689443cdf7213a5866d1c2b5874f85df1",
+  "public_version_before": 100,
+  "deployment_before": "appgdep_6aa317f3214c8191905d752d9e3eb4b1",
+  "photos": [
+    {
+      "owner_identity": "Monstera siltepecana",
+      "canonical_slug": "plantes/monstera/siltepecana",
+      "original_filename": "Monstera siltepecana.png",
+      "original_sha256": "f2b31e26644e85d2af563fd048db4949955c8f55d852856c7dba2f0b3823588b",
+      "asset_path": "/owner-media/monstera-siltepecana/monstera-siltepecana-plante-en-suspension.webp",
+      "public_path": "/media/owner-media/monstera-siltepecana/monstera-siltepecana-plante-en-suspension.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/monstera-siltepecana/monstera-siltepecana-plante-en-suspension.webp",
+      "sha256": "603e055ca5b043fb86103027fdedb7c2734380b2a9f883911a1e4e60b9906699",
+      "alt": "Monstera siltepecana en suspension, aux tiges retombantes et aux feuilles argentées parcourues de nervures vertes.",
+      "credit": "Photo : TIBALDO",
+      "creator": "TIBALDO",
+      "provenance": "OWNER",
+      "rights": "Owner-supplied photograph, publication authorized by standing Owner policy",
+      "role": "WHOLE_PLANT",
+      "dimensions": [
+        1206,
+        1305
+      ],
+      "bytes": 300498,
+      "previous_gallery": [
+        {
+          "src": "/photo-reelle-a-venir.svg",
+          "alt": "Illustration botanique décorative de Monstera siltepecana",
+          "caption": "Média non documentaire : aucune photographie de Monstera siltepecana n’est actuellement vérifiée dans le registre du dépôt.",
+          "width": 1200,
+          "height": 1500,
+          "license": {
+            "status": "media-gap",
+            "registryPath": "/credits-images",
+            "note": "Placeholder existant ; ne pas le traiter comme une preuve d’identification botanique."
+          }
+        }
+      ],
+      "private_metadata_removed": true
+    }
+  ],
+  "processing": "Real WebP quality88 method6. No crop, upscale or generative alteration. Exact original attachment byte match. Private metadata stripped.",
+  "shop": "PENDING",
+  "caisse": "PENDING",
+  "allowed_paths": [
+    "lib/plants/catalog.ts",
+    "public/owner-media/monstera-siltepecana/monstera-siltepecana-plante-en-suspension.webp",
+    "docs/media-provenance/photo-20260910-siltepecana-01.json",
+    "tests/photo-siltepecana-owner-v1.test.ts"
+  ]
+}
