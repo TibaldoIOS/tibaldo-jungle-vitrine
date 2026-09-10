@@ -197,6 +197,47 @@ export const plants: PlantEntry[] = applyOwnerPileaMediaV1(applyOwnerMarbleQueen
   ),
 )));
 
+// Owner photo wave PHOTO-20260910-MONSTERA-01: exact existing canonical media entries.
+const esqueletoOwnerMediaPlantIndex = plants.findIndex((plant) => plant.genre === "monstera" && plant.slug === "esqueleto");
+if (esqueletoOwnerMediaPlantIndex !== -1) {
+  const esqueletoOwnerMediaPlant = plants[esqueletoOwnerMediaPlantIndex];
+  plants[esqueletoOwnerMediaPlantIndex] = { ...esqueletoOwnerMediaPlant, gallery: [{
+  "src": "/media/owner-media/monstera-esqueleto/monstera-esqueleto-feuille-detail.webp",
+  "alt": "Feuille de Monstera sp. ‘Esqueleto’ vue de près, aux grandes ouvertures allongées de part et d’autre de la nervure centrale.",
+  "caption": "Photo : TIBALDO",
+  "width": 1086,
+  "height": 1448,
+  "license": {
+    "status": "verified",
+    "creator": "TIBALDO",
+    "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO",
+    "sourceUrl": "owner-provided://tibaldo/photo-20260910-monstera-01/esqueleto",
+    "registryPath": "/credits-images",
+    "note": "Photographie fournie par l’Owner ; identité confirmée par le nom original du fichier. Original conservé et SHA-256 documenté dans docs/media-provenance/photo-20260910-monstera-01.json. Conversion WebP sans recadrage ni génération."
+  }
+}, ...esqueletoOwnerMediaPlant.gallery] };
+}
+
+const dubiaOwnerMediaPlantIndex = plants.findIndex((plant) => plant.genre === "monstera" && plant.slug === "dubia");
+if (dubiaOwnerMediaPlantIndex !== -1) {
+  const dubiaOwnerMediaPlant = plants[dubiaOwnerMediaPlantIndex];
+  plants[dubiaOwnerMediaPlantIndex] = { ...dubiaOwnerMediaPlant, gallery: [{
+  "src": "/media/owner-media/monstera-dubia/monstera-dubia-plante-sur-planche.webp",
+  "alt": "Monstera dubia en pot, aux feuilles vertes et argentées plaquées en alternance contre une planche en bois.",
+  "caption": "Photo : TIBALDO",
+  "width": 1086,
+  "height": 1448,
+  "license": {
+    "status": "verified",
+    "creator": "TIBALDO",
+    "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO",
+    "sourceUrl": "owner-provided://tibaldo/photo-20260910-monstera-01/dubia",
+    "registryPath": "/credits-images",
+    "note": "Photographie fournie par l’Owner ; identité confirmée par le nom original du fichier. Original conservé et SHA-256 documenté dans docs/media-provenance/photo-20260910-monstera-01.json. Conversion WebP sans recadrage ni génération."
+  }
+}], mediaNeeds: [] };
+}
+
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
 export const getPlantsByGenre = (genre: string) => plants.filter((plant) => plant.genre === genre);

@@ -1,0 +1,115 @@
+{
+  "batch_id": "PHOTO-20260910-MONSTERA-01",
+  "date": "2026-09-10",
+  "public_before": {
+    "source": "979673c58b5774ff62360f1ea8fcc72c995ea45d",
+    "version": 97,
+    "deployment": "appgdep_6aa29fa249688191812aeb0f74fb6b38"
+  },
+  "authorization": "Owner simple media mode V1 and original filename identity rule V1 in this task",
+  "provenance": "OWNER",
+  "credit": "Photo : TIBALDO",
+  "photos": [
+    {
+      "owner_identity": "Monstera sp. ‘Esqueleto’",
+      "canonical_slug": "plantes/monstera/esqueleto",
+      "original_filename": "Monstera sp. ‘Esqueleto.jpeg",
+      "original_sha256": "73184df3585dfe07e6992551ea3430712149c32e5cf120e1e9eebc757861e456",
+      "original_archive": "/Users/tibaldo/Developer/TIBALDO/safety/photo-20260910-monstera-01/originals/Monstera sp. ‘Esqueleto.jpeg",
+      "filename_identity_byte_match": true,
+      "role": "LEAF_DETAIL",
+      "alt": "Feuille de Monstera sp. ‘Esqueleto’ vue de près, aux grandes ouvertures allongées de part et d’autre de la nervure centrale.",
+      "public_path": "/media/owner-media/monstera-esqueleto/monstera-esqueleto-feuille-detail.webp",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 213868,
+      "sha256": "0307959a2ffc55834cc85bbd701b5fa08cd401506ae9ddad2a136a1eb563fb6c",
+      "processing": "EXIF orientation; sRGB normalization if profile present; WebP quality 88 method 6; no crop, no upscale, no generative edits; new pixels-only encoding removes EXIF/GPS/XMP/IPTC",
+      "source_metadata_presence": {
+        "exif_present": false,
+        "icc_present": false
+      },
+      "duplicate_check": "No exact file duplicate in current PUBLIC assets; historical archive coverage partial",
+      "previous_media": "KEEP_AS_SECONDARY",
+      "existing_alts": [
+        "Monstera sp. ‘Esqueleto’ historique présentant une grande feuille mature fortement fenêtrée"
+      ],
+      "previous_gallery": [
+        {
+          "src": "/media/monstera-esqueleto-feuille-mature-fenestrations.webp",
+          "alt": "Monstera sp. ‘Esqueleto’ historique présentant une grande feuille mature fortement fenêtrée",
+          "caption": "Spécimen photographié en 2008, aujourd’hui documenté sous le nom horticole Monstera ‘Esqueleto’ ; il était alors mal étiqueté M. epipremnoides · photographie Janadume · adaptation WebP sans recadrage",
+          "width": 1024,
+          "height": 1280,
+          "license": {
+            "status": "verified",
+            "creator": "Janadume",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Monstera_%27Esqueleto%27.png",
+            "registryPath": "/credits-images",
+            "note": "Photographie réelle datée du 25 avril 2008. Adaptation : conversion WebP sans recadrage. Le fichier portait alors une identification erronée ; la fiche conserve le nom horticole non établi et n’en déduit aucune espèce botanique."
+          }
+        }
+      ],
+      "alt_exact_duplicate": false,
+      "alt_review": "PASS: new view description specifies central vein openings for Esqueleto and alternating leaves on wooden board for Dubia",
+      "visual_quality": "PASS: original composition and botanical detail retained",
+      "asset_path": "/owner-media/monstera-esqueleto/monstera-esqueleto-feuille-detail.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/monstera-esqueleto/monstera-esqueleto-feuille-detail.webp"
+    },
+    {
+      "owner_identity": "Monstera dubia",
+      "canonical_slug": "plantes/monstera/dubia",
+      "original_filename": "Monstera dubia.png",
+      "original_sha256": "1cf63671ef674db1f8cf1252ee4c026a31d057e311d0281dd405ae8ce2582858",
+      "original_archive": "/Users/tibaldo/Developer/TIBALDO/safety/photo-20260910-monstera-01/originals/Monstera dubia.png",
+      "filename_identity_byte_match": true,
+      "role": "WHOLE_PLANT",
+      "alt": "Monstera dubia en pot, aux feuilles vertes et argentées plaquées en alternance contre une planche en bois.",
+      "public_path": "/media/owner-media/monstera-dubia/monstera-dubia-plante-sur-planche.webp",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 258882,
+      "sha256": "780f23a43180537c88b3c1d638a487549a0dbafe90ee51a2e428a48b049202e9",
+      "processing": "EXIF orientation; sRGB normalization if profile present; WebP quality 88 method 6; no crop, no upscale, no generative edits; new pixels-only encoding removes EXIF/GPS/XMP/IPTC",
+      "source_metadata_presence": {
+        "exif_present": false,
+        "icc_present": false
+      },
+      "duplicate_check": "No exact file duplicate in current PUBLIC assets; historical archive coverage partial",
+      "previous_media": "PLACEHOLDER_RETAINED_ON_DISK",
+      "existing_alts": [
+        "Illustration botanique décorative de Monstera dubia"
+      ],
+      "previous_gallery": [
+        {
+          "src": "/photo-reelle-a-venir.svg",
+          "alt": "Illustration botanique décorative de Monstera dubia",
+          "caption": "Média non documentaire : aucune photographie de Monstera dubia n’est actuellement vérifiée dans le registre du dépôt.",
+          "width": 1200,
+          "height": 1500,
+          "license": {
+            "status": "media-gap",
+            "registryPath": "/credits-images",
+            "note": "Placeholder existant ; ne pas le traiter comme une preuve d’identification botanique."
+          }
+        }
+      ],
+      "alt_exact_duplicate": false,
+      "alt_review": "PASS: new view description specifies central vein openings for Esqueleto and alternating leaves on wooden board for Dubia",
+      "visual_quality": "PASS: original composition and botanical detail retained",
+      "asset_path": "/owner-media/monstera-dubia/monstera-dubia-plante-sur-planche.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/monstera-dubia/monstera-dubia-plante-sur-planche.webp"
+    }
+  ],
+  "allowed_paths": [
+    "lib/plants/catalog.ts",
+    "docs/media-provenance/photo-20260910-monstera-01.json",
+    "tests/photo-monstera-owner-v1.test.ts",
+    "public/owner-media/monstera-esqueleto/monstera-esqueleto-feuille-detail.webp",
+    "public/owner-media/monstera-dubia/monstera-dubia-plante-sur-planche.webp",
+    "tests/plant-contract.test.ts"
+  ],
+  "delivery_note": "Existing virtual /media/ prefix used for image/webp MIME; stored assets remain under public/owner-media. Existing API removes virtual prefix; no resolver change."
+}
