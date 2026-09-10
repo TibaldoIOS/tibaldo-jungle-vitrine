@@ -1,0 +1,148 @@
+{
+  "batch_id": "PHOTO-20260910-MONSTERA-TRIO-01",
+  "photo_count_received": 4,
+  "photos": [
+    {
+      "owner_identity": "Monstera obliqua",
+      "canonical_slug": "plantes/monstera/obliqua",
+      "original_filename": "Monstera obliqua.png",
+      "original_sha256": "8c1319e52685302a05cc2238b844ef59a12ced687c16e6061300f9e89148e72d",
+      "asset_path": "/owner-media/monstera-obliqua/monstera-obliqua-feuilles-fenestrees.webp",
+      "public_path": "/media/owner-media/monstera-obliqua/monstera-obliqua-feuilles-fenestrees.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/monstera-obliqua/monstera-obliqua-feuilles-fenestrees.webp",
+      "sha256": "ded3f8dad4ab17cb97dd1377b1d6a320aadfd98dc9b92ede651917366ec60d8b",
+      "alt": "Feuilles de Monstera obliqua aux grandes ouvertures irrégulières, près d’un tuteur fibreux.",
+      "credit": "Photo : TIBALDO",
+      "creator": "TIBALDO",
+      "provenance": "OWNER",
+      "rights": "Owner-supplied photograph, publication authorized by standing Owner policy",
+      "role": "LEAF_DETAIL",
+      "dimensions": [
+        1122,
+        1402
+      ],
+      "original_dimensions": [
+        1122,
+        1402
+      ],
+      "bytes": 241402,
+      "previous_gallery": [
+        {
+          "src": "/photo-reelle-a-venir.svg",
+          "alt": "Illustration botanique décorative de Monstera obliqua",
+          "caption": "Média non documentaire : aucune photographie de Monstera obliqua n’est actuellement vérifiée dans le registre du dépôt.",
+          "width": 1200,
+          "height": 1500,
+          "license": {
+            "status": "media-gap",
+            "registryPath": "/credits-images",
+            "note": "Placeholder existant ; ne pas le traiter comme une preuve d’identification botanique."
+          }
+        }
+      ],
+      "private_metadata_removed": true
+    },
+    {
+      "owner_identity": "Monstera pinnatipartita",
+      "canonical_slug": "plantes/monstera/pinnatipartita",
+      "original_filename": "Monstera pinnatipartita.jpeg",
+      "original_sha256": "8249ea7fe02cfcd1910dd9b10542ce2bb0bb1ffa7898e9f99b8206332a4ece79",
+      "asset_path": "/owner-media/monstera-pinnatipartita/monstera-pinnatipartita-plante-en-pot.webp",
+      "public_path": "/media/owner-media/monstera-pinnatipartita/monstera-pinnatipartita-plante-en-pot.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/monstera-pinnatipartita/monstera-pinnatipartita-plante-en-pot.webp",
+      "sha256": "76d007fed80da327760391c1cceaedd59fae70a2c25ffddcfb99612a12b8d9f0",
+      "alt": "Monstera pinnatipartita en pot, aux grandes feuilles profondément divisées, avec une inflorescence claire près des tiges.",
+      "credit": "Photo : TIBALDO",
+      "creator": "TIBALDO",
+      "provenance": "OWNER",
+      "rights": "Owner-supplied photograph, publication authorized by standing Owner policy",
+      "role": "WHOLE_PLANT",
+      "dimensions": [
+        1600,
+        2133
+      ],
+      "original_dimensions": [
+        3000,
+        4000
+      ],
+      "bytes": 361900,
+      "previous_gallery": [
+        {
+          "src": "/photo-reelle-a-venir.svg",
+          "alt": "Illustration botanique décorative de Monstera pinnatipartita",
+          "caption": "Média non documentaire : aucune photographie de Monstera pinnatipartita n’est actuellement vérifiée dans le registre du dépôt.",
+          "width": 1200,
+          "height": 1500,
+          "license": {
+            "status": "media-gap",
+            "registryPath": "/credits-images",
+            "note": "Placeholder existant ; ne pas le traiter comme une preuve d’identification botanique."
+          }
+        }
+      ],
+      "private_metadata_removed": true
+    },
+    {
+      "owner_identity": "Monstera standleyana",
+      "canonical_slug": "plantes/monstera/standleyana",
+      "original_filename": "Monstera standleyana.png",
+      "original_sha256": "b4700f619b630f3612428fbb7b2f8b11c132498763f95a0dbae91bab7977e118",
+      "asset_path": "/owner-media/monstera-standleyana/monstera-standleyana-feuillage-panache.webp",
+      "public_path": "/media/owner-media/monstera-standleyana/monstera-standleyana-feuillage-panache.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/monstera-standleyana/monstera-standleyana-feuillage-panache.webp",
+      "sha256": "83b0d40a5e0bdfc2d5b9b07ab518a226d0c09686b5533bed9c82cc6a93bc3e30",
+      "alt": "Monstera standleyana en pot strié, aux feuilles allongées vertes mouchetées de crème et aux tiges retombantes.",
+      "credit": "Photo : TIBALDO",
+      "creator": "TIBALDO",
+      "provenance": "OWNER",
+      "rights": "Owner-supplied photograph, publication authorized by standing Owner policy",
+      "role": "WHOLE_PLANT",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "original_dimensions": [
+        1254,
+        1254
+      ],
+      "bytes": 282016,
+      "previous_gallery": [
+        {
+          "src": "/photo-reelle-a-venir.svg",
+          "alt": "Illustration botanique décorative de Monstera standleyana",
+          "caption": "Média non documentaire : aucune photographie de Monstera standleyana n’est actuellement vérifiée dans le registre du dépôt.",
+          "width": 1200,
+          "height": 1500,
+          "license": {
+            "status": "media-gap",
+            "registryPath": "/credits-images",
+            "note": "Placeholder existant ; ne pas le traiter comme une preuve d’identification botanique."
+          }
+        }
+      ],
+      "private_metadata_removed": true
+    }
+  ],
+  "duplicates": [
+    {
+      "plant": "Monstera siltepecana",
+      "original_sha256": "f2b31e26644e85d2af563fd048db4949955c8f55d852856c7dba2f0b3823588b",
+      "status": "DUPLICATE",
+      "existing_version": 101
+    }
+  ],
+  "public_source_before": "2a1101f490fb0316a3ea3ce0ad1170a91be0fdde",
+  "public_version_before": 101,
+  "deployment_before": "appgdep_6aa319582c348191be80f6a090a72c5b",
+  "processing": "Real WebP quality88 method6; orientation and sRGB normalization, bounded resize without upscale, private metadata stripped. No crop or generative alteration.",
+  "allowed_paths": [
+    "lib/plants/catalog.ts",
+    "docs/media-provenance/photo-20260910-monstera-trio-01.json",
+    "tests/photo-monstera-trio-owner-v1.test.ts",
+    "public/owner-media/monstera-obliqua/monstera-obliqua-feuilles-fenestrees.webp",
+    "public/owner-media/monstera-pinnatipartita/monstera-pinnatipartita-plante-en-pot.webp",
+    "public/owner-media/monstera-standleyana/monstera-standleyana-feuillage-panache.webp"
+  ],
+  "shop": "PENDING",
+  "caisse": "PENDING"
+}

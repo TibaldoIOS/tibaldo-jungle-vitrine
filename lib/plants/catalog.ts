@@ -280,6 +280,67 @@ if (siltepecanaPhotoPlantIndex !== -1) {
 }], mediaNeeds: [] };
 }
 
+// Owner photo wave PHOTO-20260910-MONSTERA-TRIO-01.
+const obliquaPhotoPlantIndex = plants.findIndex((plant) => plant.genre === "monstera" && plant.slug === "obliqua");
+if (obliquaPhotoPlantIndex !== -1) {
+  const plant = plants[obliquaPhotoPlantIndex];
+  plants[obliquaPhotoPlantIndex] = { ...plant, gallery: [{
+  "src": "/media/owner-media/monstera-obliqua/monstera-obliqua-feuilles-fenestrees.webp",
+  "alt": "Feuilles de Monstera obliqua aux grandes ouvertures irrégulières, près d’un tuteur fibreux.",
+  "caption": "Photo : TIBALDO",
+  "width": 1122,
+  "height": 1402,
+  "license": {
+    "status": "verified",
+    "creator": "TIBALDO",
+    "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO",
+    "sourceUrl": "owner-provided://tibaldo/photo-20260910-monstera-trio-01/obliqua",
+    "registryPath": "/credits-images",
+    "note": "Photographie fournie par l’Owner ; identité confirmée par le fichier original et son SHA256. Provenance : docs/media-provenance/photo-20260910-monstera-trio-01.json."
+  }
+}], mediaNeeds: [] };
+}
+
+const pinnatipartitaPhotoPlantIndex = plants.findIndex((plant) => plant.genre === "monstera" && plant.slug === "pinnatipartita");
+if (pinnatipartitaPhotoPlantIndex !== -1) {
+  const plant = plants[pinnatipartitaPhotoPlantIndex];
+  plants[pinnatipartitaPhotoPlantIndex] = { ...plant, gallery: [{
+  "src": "/media/owner-media/monstera-pinnatipartita/monstera-pinnatipartita-plante-en-pot.webp",
+  "alt": "Monstera pinnatipartita en pot, aux grandes feuilles profondément divisées, avec une inflorescence claire près des tiges.",
+  "caption": "Photo : TIBALDO",
+  "width": 1600,
+  "height": 2133,
+  "license": {
+    "status": "verified",
+    "creator": "TIBALDO",
+    "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO",
+    "sourceUrl": "owner-provided://tibaldo/photo-20260910-monstera-trio-01/pinnatipartita",
+    "registryPath": "/credits-images",
+    "note": "Photographie fournie par l’Owner ; identité confirmée par le fichier original et son SHA256. Provenance : docs/media-provenance/photo-20260910-monstera-trio-01.json."
+  }
+}], mediaNeeds: [] };
+}
+
+const standleyanaPhotoPlantIndex = plants.findIndex((plant) => plant.genre === "monstera" && plant.slug === "standleyana");
+if (standleyanaPhotoPlantIndex !== -1) {
+  const plant = plants[standleyanaPhotoPlantIndex];
+  plants[standleyanaPhotoPlantIndex] = { ...plant, gallery: [{
+  "src": "/media/owner-media/monstera-standleyana/monstera-standleyana-feuillage-panache.webp",
+  "alt": "Monstera standleyana en pot strié, aux feuilles allongées vertes mouchetées de crème et aux tiges retombantes.",
+  "caption": "Photo : TIBALDO",
+  "width": 1254,
+  "height": 1254,
+  "license": {
+    "status": "verified",
+    "creator": "TIBALDO",
+    "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO",
+    "sourceUrl": "owner-provided://tibaldo/photo-20260910-monstera-trio-01/standleyana",
+    "registryPath": "/credits-images",
+    "note": "Photographie fournie par l’Owner ; identité confirmée par le fichier original et son SHA256. Provenance : docs/media-provenance/photo-20260910-monstera-trio-01.json."
+  }
+}], mediaNeeds: [] };
+}
+
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
 export const getPlantsByGenre = (genre: string) => plants.filter((plant) => plant.genre === genre);
