@@ -4,6 +4,16 @@ import { readFileSync, existsSync } from 'node:fs';
 import { editorialArticles, editorialMedia, getEditorialArticle } from '../lib/editorial/catalog.ts';
 import { editorialStructuredData } from '../lib/editorial/seo.ts';
 import { plants } from '../lib/plants/catalog.ts';
+import { halfMoonPhoto } from '../lib/editorial/half-moon-photo.ts';
+import { createHash } from 'node:crypto';
+
+test('supplied Half Moon editorial photograph retains exact integrity and cautious caption', () => {
+  assert.equal(createHash('sha256').update(readFileSync(`public${halfMoonPhoto.src}`)).digest('hex'), halfMoonPhoto.provenance.derivativeSha256);
+  assert.equal(halfMoonPhoto.width, 1254); assert.equal(halfMoonPhoto.height, 1254);
+  assert.equal(halfMoonPhoto.provenance.realPhotographyConfirmed, true);
+  assert.match(halfMoonPhoto.caption, /ne suffit pas à identifier un cultivar/);
+  assert.doesNotMatch(halfMoonPhoto.alt, /Owner|Thai|VERIFIED/);
+});
 
 test('one real pilot, reusable chapters, valid references and real internal destinations', () => {
   assert.equal(editorialArticles.length, 1);

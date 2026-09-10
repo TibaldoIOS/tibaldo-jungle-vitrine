@@ -2,8 +2,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { editorialMedia, getEditorialArticle, type EditorialArticle, type EditorialCallout } from '@/lib/editorial/catalog';
 import { publicMediaCredit } from '@/lib/plants/public-media-credit';
+import { halfMoonPhoto } from '@/lib/editorial/half-moon-photo';
 
 export function EditorialFigure({ article, detail = false }: { article: EditorialArticle; detail?: boolean }) {
+  if (detail && article.slug === 'monstera-half-moon') return <figure className="oeil-figure oeil-reader-photo">
+    <Image unoptimized src={halfMoonPhoto.src} width={halfMoonPhoto.width} height={halfMoonPhoto.height} alt={halfMoonPhoto.alt} loading="lazy" sizes="(max-width: 700px) 100vw, 700px"/>
+    <figcaption>{halfMoonPhoto.caption}</figcaption>
+  </figure>;
   const image = editorialMedia(article);
   return <figure className={`oeil-figure${detail ? ' oeil-detail' : ''}`}>
     {image ? <Image unoptimized src={image.src} width={image.width} height={image.height} alt={detail ? `Détail du feuillage moucheté de crème de Monstera deliciosa ‘Thai Constellation’` : image.alt} priority={!detail} loading={detail ? 'lazy' : undefined} sizes={detail ? '(max-width: 700px) 100vw, 800px' : '(max-width: 700px) 100vw, 50vw'}/> : <div className="oeil-media-gap">Observer sans inventer une image.</div>}
