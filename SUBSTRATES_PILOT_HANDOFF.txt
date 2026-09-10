@@ -1,0 +1,89 @@
+TIBALDO_JUNGLE_SUBSTRATES_RICH_PAGES_SHOP_BRIDGE_V1
+DATE=2026-09-10
+FINAL_STATUS=PARTIAL
+SOURCE_BASE=979673c58b5774ff62360f1ea8fcc72c995ea45d (PUBLIC V97 source)
+BRANCH=feat/substrates-rich-pages-v1
+
+SUBSTRATES_HUB_AUDITED=YES
+Existing source: app/substrats/selection.ts, SubstrateSelection.tsx,
+product-media.json, ProductPackshot.tsx, data.ts and [slug]/page.tsx.
+13 mixes: aroid, alocasia, anthurium, hoya, syngonium, calathea-maranta,
+fern, cacti, bonsai, ficus, orchid, carnivorous, terrarium.
+4 components: coco-coir, sphagnum, carbon, zeolite.
+1 mineral reference: SYBA-Hydro / Vulkastrat (SYBAStones Base Mix).
+6 nutrition references: tropical/orchid/cacti, slow/liquid.
+24 existing packshots, each with 400/800 responsive derivatives.
+These two derivatives are not two distinct gallery photographs.
+9 existing educational slugs: terreau-signature, ecorce-de-pin, chips-coco,
+perlite, sphaigne-sechee, charbon-actif, billes-argile, vermiculite, zeolite.
+
+AROID_MIX_PILOT=PARTIAL
+AROID_MIX_ROUTE=/substrats/aroid-mix
+RICH_SUBSTRATE_PAGES_CREATED=1_LOCAL_ONLY
+RICH_SUBSTRATE_PAGES_UPDATED=0
+MULTI_IMAGE_GALLERY=NO (two distinct inline photographs, no gallery controls)
+MEDIA_PROVENANCE=PASS
+New texture source and hash: app/substrats/aroid-mix/media-provenance.json.
+Original editorial copy: uses, documented composition, repotting, watering,
+four FAQs, related plant/guide links, unavailable commerce presentation.
+Supplier credit remains Sybotanica, never TIBALDO photography.
+
+SHOP_BRIDGE=NOT_READY
+Observed https://shop.tibaldo.fr/api/catalogue: HTTP 404 shop_coming_soon.
+Read-only source app/api/catalogue/route.ts confirms this gate.
+Its potential published response has product id/slug/size/price/quantity,
+but no proven Aroid product mapping, offer id, VAT, or canonical product URL.
+No supplier id has been substituted for a Shop id.
+DIRECT_ADD_TO_CART=NO
+ZERO_STOCK_GATING=NOT_CERTIFIED_NO_CANONICAL_FEED
+FAKE_STOCK_CREATED=NO
+No price or stock number. Display: Disponibilite a confirmer.
+No live receipt, commerce, Shop or Backend mutation.
+
+SYBOTANICA_COMMERCIAL_CTA_REMOVED=NO
+PUBLIC_COMMERCIAL_SYBOTANICA_OUTBOUND_CTA_COUNT=13_PRIMARY_MIX_CTAS
+Source hub remains unchanged pending complete pilot gate.
+Live raw HTML contained 50 supplier href instances including repeated
+serialization/citations; not 50 independent commercial buttons.
+No other product page scaled before pilot completion.
+
+SEO=PARTIAL
+Pilot unique title/description/H1/canonical/OG, Article and BreadcrumbList.
+No fabricated Product or Offer schema. Pilot rendered without beta URL leak.
+Existing URLs, schema, sitemap and all existing pages untouched.
+Hub incoming link and sitemap entry intentionally not released yet.
+
+BUILD=PASS (npm run build:public)
+TYPECHECK=PASS
+TARGETED_TESTS=PASS_2_OF_2
+LINT=PASS_WITH_4_WARNINGS (pilot img rule and unused inline suppressions)
+TESTS=FAIL_HISTORICAL_SUITE_NOT_RELEASE_CERTIFIED
+Historical suite run against PUBLIC artifact includes failing BETA noindex,
+hidden LAB/prototype, old metadata and media-rights assertions.
+Not classified wholesale as pre-existing without a baseline rerun.
+No unrelated test expectations changed to force a green result.
+DIFF_CHECK=PASS
+SECRET_SCAN=BOUNDED_NEW_FILES_ONLY
+
+MOBILE=PARTIAL
+Local official Worker preview, real browser viewport emulation:
+390/430/820/1280/1440 Hero visually inspected; document overflow false.
+390 FAQ interaction passed; loaded images had no broken entries.
+All rendered same-origin href paths returned HTTP 200 locally.
+1280 inherited header right-side control appears clipped; not redesigned.
+Full all-section/all-width certification and remote QA NOT completed.
+No claim of physical iPhone or deployed PUBLIC QA.
+
+PUBLIC_DEPLOYED=NO
+BETA_DEPLOYED=NO
+CAISSE_MUTATED=NO
+STOCK_MUTATED=NO
+SHOP_MUTATED=NO
+BACKEND_MUTATED=NO
+DNS_MUTATED=NO
+EVENT_MUTATED=NO
+MASTER_HANDOFF_READY=YES
+NEXT_SINGLE_ACTION=Provide the certified Shop mapping/feed for Aroid Mix
+(canonical product/offer ids, formats, public product URL and availability)
+so the pilot commercial gate can be completed before scaling other pages.
+STOP=YES

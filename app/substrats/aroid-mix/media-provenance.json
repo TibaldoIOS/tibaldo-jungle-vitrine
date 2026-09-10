@@ -1,0 +1,21 @@
+{
+  "product": "Aroid Mix",
+  "source": "https://www.sybotanica.com/products/premium-aroid-soil-mix-5-liter",
+  "reviewedAt": "2026-09-10",
+  "rights": "OWNER_CONFIRMED_PARTNERSHIP_PUBLIC_PRODUCT_PRESENTATION_2026_09_04",
+  "credit": "Sybotanica",
+  "packshot": "Existing product-media.json exact aroid entry; derivatives preserved",
+  "additionalMedia": {
+    "url": "/media/supplier-media/sybotanica/products/aroid-mix-texture-main.jpg",
+    "local": "public/supplier-media/sybotanica/products/aroid-mix-texture-main.jpg",
+    "sourceUrl": "https://cdn.shopify.com/s/files/1/0531/2367/8390/products/Aroidmix.jpg?v=1772008868&width=1200",
+    "sha256": "504a23b808eee31210f14dd492a7eb20e4afaa1014ad319e4ec71709d00ac688",
+    "width": 1200,
+    "height": 1200,
+    "alt": "Une main tient Aroid Mix : fibres brunes, fragments de coco et grains blancs de perlite.",
+    "processing": "Supplier CDN resize only, no generative editing",
+    "visualInspection": "PASS_HAND_HOLDING_SUBSTRATE"
+  },
+  "commercialMapping": "UNRESOLVED_SHOP_PUBLIC_CATALOGUE_404_SHOP_COMING_SOON",
+  "supplierVariantsAreNotShopOffers": true
+}
