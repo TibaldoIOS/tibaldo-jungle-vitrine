@@ -6,7 +6,7 @@ import { documentaryGallery } from "../lib/plants/documentary-media.ts";
 import { documentaryMediaWave2V1Registry } from "../lib/plants/documentary-media-completion-wave-2-v1.ts";
 
 test("Wave 2 batch 1 publishes only exact, licensed and visually accepted photographs", () => {
-  assert.equal(documentaryMediaWave2V1Registry.length, 5);
+  assert.equal(documentaryMediaWave2V1Registry.length, 6);
 
   for (const record of documentaryMediaWave2V1Registry) {
     const [, , genre, slug] = record.route.split("/");
@@ -26,24 +26,29 @@ test("Wave 2 batch 1 publishes only exact, licensed and visually accepted photog
     } else if (record.route === "/plantes/monstera/adansonii") {
       assert.equal(media.license?.sourceUrl, "https://tibaldo.fr/credits-images");
       assert.equal(media.license?.license, "Autorisation d’utilisation confirmée par l’Owner TIBALDO");
+    } else if (record.route === "/plantes/monstera/burle-marx-flame") {
+      assert.equal(media.src, "/images/monstera-burle-marx-flame-feuilles-decoupees.jpg");
+      assert.equal(media.alt, "Monstera ‘Burle Marx Flame’ en pot, aux feuilles vertes profondément découpées.");
+      assert.equal(media.caption, "Photo : TIBALDO");
+      assert.equal(media.license?.sourceUrl, "https://tibaldo.fr/credits-images");
+      assert.equal(media.license?.license, "Autorisation d’utilisation confirmée par l’Owner TIBALDO");
     } else {
       assert.ok(media.license?.sourceUrl?.startsWith("https://commons.wikimedia.org/wiki/File:"), record.route);
       assert.ok(media.license?.licenseUrl?.startsWith("https://creativecommons.org/"), record.route);
     }
     assert.equal(media.license?.registryPath, "/credits-images", record.route);
-    assert.match(media.license?.note ?? "", ["/plantes/anthurium/clarinervium", "/plantes/monstera/adansonii"].includes(record.route) ? /10 septembre 2026|31 août 2026/ : /31 août 2026/, record.route);
+    assert.match(media.license?.note ?? "", ["/plantes/anthurium/clarinervium", "/plantes/monstera/adansonii", "/plantes/monstera/burle-marx-flame"].includes(record.route) ? /10 septembre 2026|31 août 2026/ : /31 août 2026/, record.route);
     assert.ok(existsSync(new URL(`../public${media.src}`, import.meta.url)), media.src);
   }
 });
 
 test("Wave 2 batch 1 reduces honest gaps without weakening sensitive exclusions", () => {
   const gaps = plants.filter((plant) => documentaryGallery(plant).length === 0);
-  assert.equal(gaps.length, 21);
+  assert.equal(gaps.length, 20);
 
   for (const [genre, slug] of [
     ["monstera", "thai-constellation"],
     ["monstera", "mint"],
-    ["monstera", "burle-marx-flame"],
     ["monstera", "esqueleto"],
     ["philodendron", "royal-queen"],
     ["alocasia", "imperial-red"],

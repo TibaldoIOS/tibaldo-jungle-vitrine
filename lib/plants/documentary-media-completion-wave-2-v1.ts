@@ -56,6 +56,20 @@ const verifiedMediaByRoute: Readonly<Record<string, readonly PlantImage[]>> = {
       "L’Owner TIBALDO a fourni cette photographie pour publication sur Jungle et Shop. Le JPEG source 799 × 1000 (SHA-256 3f21c5ebabf5f0774cfefb3bebd938fed753d9112af3c4920083269419e9929f) montre un Monstera adansonii en pot aux feuilles naturellement perforées.",
     ),
   )],
+  "/plantes/monstera/burle-marx-flame": [image(
+    "/images/monstera-burle-marx-flame-feuilles-decoupees.jpg",
+    "Monstera ‘Burle Marx Flame’ en pot, aux feuilles vertes profondément découpées.",
+    "Photo : TIBALDO",
+    1856,
+    1909,
+    verifiedLicense(
+      "TIBALDO (photographie fournie par l’Owner)",
+      "Autorisation d’utilisation confirmée par l’Owner TIBALDO",
+      "https://tibaldo.fr/credits-images",
+      "https://tibaldo.fr/credits-images",
+      "L’Owner TIBALDO a fourni cette photographie pour publication sur Jungle et Shop. Le JPEG source 1856 × 1909 (SHA-256 ea72d4a55dac08d96dcef6bec5b2327eec55327e0315d7d614780cf5f633fa6f) montre une Monstera ‘Burle Marx Flame’ en pot aux feuilles vertes profondément découpées.",
+    ),
+  )],
   "/plantes/anthurium/clarinervium": [image(
     "/images/anthurium-clarinervium-feuilles-veloutees-nervures-claires.jpg",
     "Anthurium clarinervium aux feuilles vert foncé veloutées et aux nervures claires.",
