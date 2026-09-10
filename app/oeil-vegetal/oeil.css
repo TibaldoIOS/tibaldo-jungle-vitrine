@@ -27,6 +27,8 @@
 .oeil-article-heading h1{margin:24px 0;line-height:.98;font-size:clamp(58px,6.6vw,94px);letter-spacing:-.055em}
 .oeil-article-heading h1>span{display:block}.oeil-article-heading h1>em{display:block;font-size:.54em;line-height:1.14;margin-top:22px;letter-spacing:-.035em}
 .oeil-article-heading h1>em{text-wrap:balance}
+.oeil-page .oeil-toc{display:block}
+@media(min-width:901px) and (max-width:1380px){.oeil-chrome .header-cta{display:none}}
 .oeil-standfirst{font-size:1.125rem;line-height:1.65;max-width:37ch}.oeil-byline{font-size:.8125rem;line-height:1.6}
 .oeil-figure{margin:0;min-width:0}.oeil-figure>img{display:block;width:100%;height:620px;object-fit:cover;object-position:center 40%}
 .oeil-figure figcaption{font-size:.8125rem;line-height:1.6;padding:14px 0;color:#4d6355}.oeil-figure figcaption a{text-decoration:underline;text-underline-offset:3px}
