@@ -7,5 +7,6 @@ test("Monstera hub hero uses the supplied Owner image with its exact accessible 
   assert.match(source, /src: "\/monstera-collection-feuilles-tibaldo\.webp"/);
   assert.match(source, /alt: "Composition de feuilles de Monstera, aux formes, découpes et panachures variées\."/);
   assert.match(source, /if \(genre === "monstera"\) return monsteraHeroMedia/);
+  assert.match(source, /src=\{media\.src\} alt=\{media\.alt\}/);
   assert.ok(existsSync("public/monstera-collection-feuilles-tibaldo.webp"));
 });
