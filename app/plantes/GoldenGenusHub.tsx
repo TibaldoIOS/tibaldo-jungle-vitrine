@@ -7,6 +7,7 @@ import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 import BotanicalFaq from "./BotanicalFaq";
 import GenusSpeciesCarousel from "./GenusSpeciesCarousel";
 import PlantCarePassport from "./PlantCarePassport";
+import MonsteraScrollNarrative from "./MonsteraScrollNarrative";
 import golden from "./GoldenBaseline.module.css";
 import body from "./GoldenGroupBodyBaseline.module.css";
 import hero from "./GoldenGroupHeroBaseline.module.css";
@@ -144,6 +145,8 @@ export default function GoldenGenusHub({ genre, guide, plants, editorials = [], 
         <HubChapterMarker number="01" label="Comprendre le groupe" />
         <div><h2>Un langage commun.<br /><em>Des formes singulières.</em></h2><div className={`${golden.groupIntroCopy} ${body.bodyCopy}`}><p>{guide.lead}</p><p>{guide.origin}</p></div>{facts.length ? <dl className={canonical.factBand}>{facts.map((fact) => <div key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}</dl> : null}</div>
       </section>
+
+      {genre === "monstera" ? <MonsteraScrollNarrative /> : null}
 
       <section className={`${golden.groupPassport} ${body.passport} ${mobile.passportTransition}`} aria-labelledby={`golden-group-passport-${genre}`}>
         <div className={`${golden.groupPassportHeading} shell`} data-reveal>
