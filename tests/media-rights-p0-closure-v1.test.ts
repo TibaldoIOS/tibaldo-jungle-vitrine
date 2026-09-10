@@ -22,8 +22,8 @@ const ownerVerifiedRoutes = new Set([
 
 test("closes the exact 11-route P0 media-rights set", () => {
   assert.equal(mediaRightsP0ClosureRegistry.length, 11);
-  assert.equal(mediaRightsP0ClosureRegistry.filter(({ decision }) => decision === "RIGHTS_PROVEN_KEEP").length, 4);
-  assert.equal(mediaRightsP0ClosureRegistry.filter(({ decision }) => decision === "REMOVE_AND_USE_HONEST_MEDIA_GAP").length, 7);
+  assert.equal(mediaRightsP0ClosureRegistry.filter(({ decision }) => decision === "RIGHTS_PROVEN_KEEP").length, 5);
+  assert.equal(mediaRightsP0ClosureRegistry.filter(({ decision }) => decision === "REMOVE_AND_USE_HONEST_MEDIA_GAP").length, 6);
 
   for (const item of mediaRightsP0ClosureRegistry) {
     const [, , genre, slug] = item.route.split("/");
@@ -49,7 +49,7 @@ test("closes the exact 11-route P0 media-rights set", () => {
         assert.ok(image.license?.licenseUrl?.startsWith("https://"), `${item.route}: license`);
       }
       assert.equal(image.license?.registryPath, "/credits-images", `${item.route}: registry`);
-      assert.match(image.license?.note ?? "", /(?:30 août|2 septembre) 2026/, `${item.route}: proof date`);
+      assert.match(image.license?.note ?? "", /(?:30 août|2 septembre|10 septembre) 2026/, `${item.route}: proof date`);
     }
   }
 });
