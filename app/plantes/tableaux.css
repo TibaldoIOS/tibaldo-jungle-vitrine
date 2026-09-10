@@ -1,0 +1,37 @@
+.plants-tableaux-page .plants-hub-hero{min-height:0}
+.plants-tableaux-page .inner-hero-content{padding-top:48px;padding-bottom:42px}
+.plants-tableaux-page .plants-hub-manifesto{padding-top:40px;padding-bottom:36px;gap:22px}
+.plants-tableaux-page .plants-hub-manifesto h2{font-size:clamp(28px,3vw,42px)}
+.plants-tableaux-page .plants-hub-editorial-copy{max-width:680px}
+.plants-tableaux-page summary{cursor:pointer;padding:14px 0;min-height:44px}
+.tableaux-editorial-details{padding-bottom:24px}
+.tableaux-heading h2{font-family:Georgia,serif}
+.plants-tableaux-page .plants-hub-editorial-copy p{font-size:16px;break-inside:avoid}
+.botanical-tableaux{padding-top:24px;padding-bottom:50px}
+.tableaux-heading{display:flex;align-items:end;justify-content:space-between;gap:36px;margin-bottom:26px}
+.tableaux-heading h2{font-size:clamp(32px,3.5vw,48px);line-height:1.08;margin:10px 0 0}
+.tableaux-heading>p{max-width:360px;font-size:16px;line-height:1.6}
+.tableaux-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.botanical-tableau{position:relative;display:block;height:350px;overflow:hidden;isolation:isolate;background:#193d32;color:#fff9eb;text-decoration:none;border-radius:3px}
+.tableau-photo{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform 850ms ease}
+.botanical-tableau:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,31,24,.1),rgba(8,31,24,.05) 30%,rgba(8,31,24,.92));z-index:1;transition:background 600ms}
+.tableau-number{position:absolute;top:18px;left:20px;z-index:2;font-size:12px;letter-spacing:.12em;background:#15392cba;padding:5px 8px}
+.tableau-copy{position:absolute;bottom:22px;left:20px;right:20px;z-index:2}
+.tableau-copy h3{font-family:var(--font-serif,Georgia,serif);font-size:clamp(25px,2.25vw,34px);font-weight:400;line-height:1.15;margin:7px 0 12px;overflow-wrap:anywhere;transition:transform 600ms}
+.tableau-count{font-size:12px;letter-spacing:.065em}
+.tableau-signature{font-size:14px;line-height:1.45;margin:0 0 14px;max-height:0;opacity:0;overflow:hidden;transition:opacity 500ms,max-height 600ms}
+.tableau-explore{display:flex;justify-content:space-between;border-top:1px solid #f5edcf66;padding-top:10px;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.tableau-explore span{font-size:19px}
+.tableau-neutral{background:linear-gradient(135deg,#244b3c,#143729)}
+.tableau-neutral-note{position:absolute;top:80px;left:20px;right:20px;color:#d4dec8;font-size:14px;border-top:1px solid #d4dec844;padding-top:16px}
+.botanical-tableau:focus-visible{outline:3px solid #a76445;outline-offset:5px}
+.botanical-tableau:focus-visible .tableau-signature{max-height:100px;opacity:1}
+.botanical-tableau:focus-visible .tableau-photo{transform:scale(1.035)}
+@media(hover:hover) and (pointer:fine){.botanical-tableau:hover .tableau-photo{transform:scale(1.035)}.botanical-tableau:hover .tableau-signature{max-height:100px;opacity:1}.botanical-tableau:hover h3{transform:translateY(-3px)}}
+.plants-tableaux-page .plants-all-genera-v3{padding-top:38px;padding-bottom:38px}
+.plants-tableaux-page .plants-all-genera-v3 h2{font-size:clamp(28px,3vw,42px)}
+.plants-tableaux-page .plants-hub-collection{padding-top:42px;padding-bottom:42px}
+.plants-tableaux-page{padding-bottom:calc(100px + env(safe-area-inset-bottom))}
+@media(max-width:1099px){.tableaux-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.botanical-tableau{height:330px}.tableau-copy h3{font-size:32px}}
+@media(max-width:639px){.tableaux-grid{grid-template-columns:1fr;gap:16px}.botanical-tableau{height:268px}.tableaux-heading{display:block}.tableaux-heading>p{margin-top:16px}.plants-tableaux-page .plants-hub-editorial-copy{columns:1}.plants-tableaux-page .plants-hub-manifesto{display:block}.tableau-copy h3{font-size:32px}.tableau-signature{max-height:80px;opacity:1;font-size:14px}.tableau-copy{bottom:18px}.plants-tableaux-page .inner-hero-content{padding-top:24px;padding-bottom:28px}}
+@media(prefers-reduced-motion:reduce){.botanical-tableau *{transition:none!important;transform:none!important}.tableau-signature{max-height:100px;opacity:1}}

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import type { Metadata } from "next";
 import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
@@ -7,9 +6,9 @@ import { plantFamilies, plants, studioCollection } from "@/lib/plants/catalog";
 import PlantExplorer from "./PlantExplorer";
 import type { PlantExplorerItem } from "./PlantExplorer";
 import StudioAccessCompact from "./StudioAccessCompact";
-import BotanicalMotif from "./BotanicalMotif";
 import CompactBotanicalIndex from "./CompactBotanicalIndex";
-import VarietyCount from "./VarietyCount";
+import FeaturedTableaux from "./FeaturedTableaux";
+import "./tableaux.css";
 import PlantsHeroMedia from "./PlantsHeroMedia";
 import { isInternalPhotoProductionCopy } from "@/lib/plants/types";
 
@@ -40,19 +39,9 @@ export const metadata: Metadata = {
 export default function PlantsPage() {
   const pageUrl = "https://jungle.tibaldo.fr/plantes";
   const primaryPlantFamilies = plantFamilies;
-  const featuredSlugs = ["monstera", "anthurium", "alocasia", "philodendron"];
-  const featuredFamilies = featuredSlugs
-    .map((slug) => primaryPlantFamilies.find((family) => family.slug === slug))
-    .filter((family): family is (typeof primaryPlantFamilies)[number] => Boolean(family));
   const speciesCount = (slug: string) => {
     if (slug === "bananiers") return plants.filter((plant) => ["musa", "ensete"].includes(plant.genre)).length;
     return plants.filter((plant) => plant.genre === slug).length;
-  };
-  const featuredImages: Record<string, { src: string; alt: string; note: string }> = {
-    monstera: { src: "/media/monstera-deliciosa-feuilles.jpg", alt: "Feuillage découpé d’un Monstera deliciosa", note: "Silhouettes graphiques et croissance grimpante" },
-    anthurium: { src: "/media/anthurium-veitchii-king.jpg", alt: "Longue feuille nervurée d’un Anthurium veitchii", note: "Textures, nervures et feuillages de collection" },
-    alocasia: { src: "/media/alocasia-cuprea-feuillage.jpg", alt: "Feuillage métallique d’un Alocasia cuprea", note: "Contrastes métalliques et besoins précis" },
-    philodendron: { src: "/media/philodendron-hastatum-feuillage.jpg", alt: "Feuillage argenté d’un Philodendron hastatum", note: "Lianes tropicales et ports très variés" },
   };
   const directoryItems = primaryPlantFamilies.map((family) => ({ slug: family.slug, name: family.name, descriptor: family.eyebrow, count: speciesCount(family.slug) }));
   const publicStudioCollection = studioCollection.map((group) => ({
@@ -95,7 +84,7 @@ export default function PlantsPage() {
     ],
   };
   return (
-    <main className="editorial-page plants-library-page" id="haut-plantes">
+    <main className="editorial-page plants-library-page plants-tableaux-page" id="haut-plantes">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <ScrollReveal />
       <section className="inner-hero compact-inner-hero plants-hub-hero">
@@ -120,32 +109,18 @@ export default function PlantsPage() {
         <div>
           <h2>Lire la plante.<br /><em>Suivre son milieu.</em></h2>
           <div className="plants-hub-editorial-copy">
+            <p>Une feuille, un port, un rythme : découvrez les indices qui relient chaque plante à son milieu et aux gestes de culture.</p>
+            <details><summary>Notre regard sur les plantes</summary>
             <p>Une plante tropicale ne se résume pas à une silhouette. Sa feuille, son port, ses racines et son rythme racontent un milieu : sous-bois humide, lisière lumineuse, tronc d’arbre ou sol drainant. Cette encyclopédie relie ces indices visibles aux gestes de culture, sans transformer le vivant en recette universelle.</p>
             <p>Chaque genre ouvre une manière différente d’observer. Les Monstera grimpent et se transforment avec la lumière ; les Anthurium révèlent une diversité de textures et d’exigences ; les Alocasia réagissent vite aux écarts d’arrosage ; les Philodendron explorent des ports rampants, dressés ou lianescents. Les fiches rassemblent identité botanique, conditions, entretien, diagnostic et comparaisons utiles.</p>
             <p>Commencez par un grand univers, parcourez l’index complet ou recherchez directement un nom. L’objectif reste le même : reconnaître la plante que vous avez devant vous, comprendre ses signaux et lui offrir un environnement cohérent.</p>
+            </details>
           </div>
         </div>
       </section>
 
-      <section className="shell plants-editorial-genera" aria-labelledby="featured-genera-title">
-        <header data-reveal><p className="section-kicker">Quatre portes d’entrée</p><h2 id="featured-genera-title">Des formes.<br /><em>Des milieux.</em></h2><p>Quatre genres pour entrer dans l’encyclopédie par la feuille, le port et la manière d’habiter l’espace.</p></header>
-        <div className="plants-editorial-genera-list">
-          {featuredFamilies.map((family) => {
-            const image = featuredImages[family.slug];
-            return <Link href={`/plantes/${family.slug}`} className="plants-editorial-genus" key={family.slug} data-reveal>
-              <div className="plants-editorial-genus-media">
-                <Image unoptimized src={image.src} alt={image.alt} width={1200} height={900} sizes="(max-width: 700px) 100vw, 55vw" />
-              </div>
-              <div className="plants-editorial-genus-copy">
-                <h3>{family.name}</h3>
-                <p>{family.description}</p>
-                <small>{image.note}</small>
-                <strong><VarietyCount count={speciesCount(family.slug)} /> <Arrow /></strong>
-              </div>
-            </Link>;
-          })}
-        </div>
-      </section>
+      <FeaturedTableaux />
+      <details className="shell tableaux-editorial-details"><summary>Comprendre les grands genres</summary><div>{plantFamilies.filter((family) => ["monstera", "anthurium", "alocasia", "philodendron"].includes(family.slug)).map((family) => <p key={family.slug}><strong>{family.name}.</strong> {family.description}</p>)}</div></details>
 
       <section className="plants-all-genera-v3" id="index-botanique" aria-labelledby="all-genera-title">
         <div className="shell"><header data-reveal><p className="section-kicker">Index botanique complet</p><h2 id="all-genera-title">Trente et un genres.<br/><em>Un seul index.</em></h2><p>Une lecture compacte pour rejoindre chaque genre sans répéter une seconde galerie de grandes cartes.</p></header><CompactBotanicalIndex items={directoryItems} /></div>
@@ -154,7 +129,6 @@ export default function PlantsPage() {
       <PlantExplorer plants={explorerItems} />
 
       <section className="plants-hub-sos-v3" data-reveal>
-        <BotanicalMotif genre="chlorophytum" />
         <div className="shell plants-hub-sos-v3-inner"><div><p className="section-kicker">Une plante vous inquiète ?</p><h2>Observer.<br/><em>Puis agir.</em></h2><p>Un dossier clair aide Tibaldo à relire les indices sans transformer une photographie en diagnostic automatique certain.</p></div><div className="plants-sos-signs"><span>01 · Photographier</span><span>02 · Donner le contexte</span><span>03 · Faire valider</span></div><Link className="button button-light" href="/sos-plantes">Ouvrir SOS Plantes <Arrow /></Link></div>
       </section>
 
