@@ -43,17 +43,17 @@ const ccBySa4 = "https://creativecommons.org/licenses/by-sa/4.0/";
 
 const verifiedMediaByRoute: Readonly<Record<string, readonly PlantImage[]>> = {
   "/plantes/monstera/adansonii": [image(
-    "/documentary-media-wave-2-v1/monstera-adansonii.webp",
-    "Feuille adulte fenêtrée de Monstera adansonii dans son habitat au Costa Rica",
-    "Monstera adansonii observée au Costa Rica · photographie documentaire réelle.",
-    1365,
-    2048,
+    "/images/monstera-adansonii-plante-feuilles-perforees.jpg",
+    "Monstera adansonii en pot, aux feuilles vertes perforées.",
+    "Monstera adansonii en pot, aux feuilles naturellement perforées.",
+    799,
+    1000,
     verifiedLicense(
-      "Jacob Rehage",
-      "CC0 1.0",
-      cc0,
-      "https://commons.wikimedia.org/wiki/File:Monstera_adansonii_112059105.jpg",
-      "La fiche Commons et l’observation iNaturalist revue identifient Monstera adansonii au Costa Rica. Adaptation locale : conversion WebP sans transformation morphologique.",
+      "TIBALDO (image fournie par l’Owner)",
+      "Autorisation d’utilisation confirmée par l’Owner TIBALDO",
+      "https://tibaldo.fr/credits-images",
+      "https://tibaldo.fr/credits-images",
+      "L’Owner TIBALDO a fourni cette photographie pour publication sur Jungle et Shop. Le JPEG source 799 × 1000 (SHA-256 3f21c5ebabf5f0774cfefb3bebd938fed753d9112af3c4920083269419e9929f) montre un Monstera adansonii en pot aux feuilles naturellement perforées.",
     ),
   )],
   "/plantes/anthurium/clarinervium": [image(
