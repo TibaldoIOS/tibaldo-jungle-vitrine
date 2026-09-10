@@ -152,7 +152,7 @@ export default function RepottingGoldenPage() {
     <section className={styles.visit} id="venir" aria-labelledby="visit-title"><div className="shell">
       <header data-reveal><p className={styles.kicker}>05 · Venir</p><h2 id="visit-title">Votre plante.<br /><em>Notre table de travail.</em></h2></header>
       <div className={styles.visitDetails}>
-        <article data-reveal><span>Adresse</span><h3>{jungleLocalIdentity.streetAddress}<br />{jungleLocalIdentity.postalCode} {jungleLocalIdentity.city}</h3><p>Studio Végétal — TIBALDO Jungle</p></article>
+        <article data-reveal><span>Adresse</span><h3>{jungleLocalIdentity.streetAddress}<br />{jungleLocalIdentity.postalCode} {jungleLocalIdentity.city}</h3><p><Link href="/boutique-plantes-lille">Découvrir le Studio Végétal — TIBALDO Jungle</Link></p></article>
         <article data-reveal><span>Horaires</span><h3>Mardi · 14 h–19 h<br />Mercredi–samedi · 10 h–19 h<br />Dimanche · 10 h–13 h</h3><p>Lundi fermé.</p></article>
         <article data-reveal><span>Avant de venir</span><h3>Une plante classique peut venir sans rendez-vous.</h3><p>Un passage par semaine et par compte client. Pour plusieurs plantes ou un sujet hors normes, contactez-nous.</p></article>
       </div>

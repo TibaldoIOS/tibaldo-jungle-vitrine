@@ -1,0 +1,15 @@
+{
+  "route": "/boutique-plantes-lille",
+  "sourceRegistry": "lib/home-universe-media.ts#plants",
+  "provenance": "TIBALDO_OWNER_MEDIA",
+  "source": "/owner-media/home-universes/home-universe-plants-owner-v1.avif",
+  "sourceSha256": "505650fc3c8fd8370a16ee771b5d499408496507345e70c4434e757f74051551",
+  "derivative": "/local-studio/mur-vegetal-tibaldo-640.avif",
+  "derivativeSha256": "5c86f5b93704b3b3d3c87260c7202f62a3fc219ac81988f7a2b6d616feb514bf",
+  "width": 640,
+  "height": 1138,
+  "bytes": 184830,
+  "processing": "resize and AVIF compression only",
+  "captionBoundary": "Real TIBALDO vegetal wall, not asserted to be current shop interior or available stock",
+  "localProofGap": "No newly proven facade/interior photograph added; existing generic storefront imagery not reused without stronger provenance."
+}

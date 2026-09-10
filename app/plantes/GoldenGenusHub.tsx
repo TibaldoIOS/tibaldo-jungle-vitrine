@@ -160,7 +160,7 @@ export default function GoldenGenusHub({ genre, guide, plants, editorials = [], 
       </section>
 
       <section className={`${golden.groupClosing} ${body.groupClosing}`} data-reveal>
-        <div className="shell"><HubChapterMarker number="07" label="Continuer au Studio" /><h2>Observer les formes.<br /><em>Choisir ensuite.</em></h2><p>Une fiche Jungle documente une plante ; elle ne prétend jamais qu’elle est disponible en boutique. Le stock reste autoritaire côté Shop.</p><nav><Link href="/plantes">Explorer l’encyclopédie <Arrow /></Link><Link href="/contact">Venir au Studio <Arrow /></Link></nav>{guide.sources.length ? <small className={canonical.sources}>Sources : {guide.sources.map((source, index) => <span key={source.url}>{index ? " · " : ""}<a href={source.url} target="_blank" rel="noreferrer">{source.label}</a></span>)}</small> : null}</div>
+        <div className="shell"><HubChapterMarker number="07" label="Continuer au Studio" /><h2>Observer les formes.<br /><em>Choisir ensuite.</em></h2><p>Une fiche Jungle documente une plante ; elle ne prétend jamais qu’elle est disponible en boutique. Le stock reste autoritaire côté Shop.</p><nav><Link href="/plantes">Explorer l’encyclopédie <Arrow /></Link><Link href={['monstera', 'anthurium', 'alocasia', 'philodendron'].includes(genre) ? '/boutique-plantes-lille' : '/contact'}>Venir au Studio <Arrow /></Link></nav>{guide.sources.length ? <small className={canonical.sources}>Sources : {guide.sources.map((source, index) => <span key={source.url}>{index ? " · " : ""}<a href={source.url} target="_blank" rel="noreferrer">{source.label}</a></span>)}</small> : null}</div>
       </section>
       <SiteFooter compactTransit />
     </main>

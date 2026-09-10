@@ -43,7 +43,7 @@ export default function ServicesPage() {
         {
           title: "Projets végétaux",
           copy: "Imaginer une sélection de plantes pour la maison, un commerce, des bureaux ou un événement.",
-          href: "/contact",
+          href: "/boutique-plantes-lille",
         },
         {
           title: "Murs végétaux naturels",
