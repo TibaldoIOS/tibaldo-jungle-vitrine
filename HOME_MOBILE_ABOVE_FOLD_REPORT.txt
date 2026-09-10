@@ -1,0 +1,88 @@
+MISSION=TIBALDO_JUNGLE_HOMEPAGE_MOBILE_ABOVE_FOLD_UX_FIX_V1
+DATE=2026-09-10
+FINAL_STATUS=PARTIAL_PENDING_IPHONE_SAFARI_REVIEW
+SOURCE_PUBLIC_VERSION=97
+SOURCE_PUBLIC_COMMIT=979673c58b5774ff62360f1ea8fcc72c995ea45d
+BRANCH=feat/home-mobile-above-fold-v1
+
+MOBILE_BEFORE_AUDITED=YES
+Measured real PUBLIC at 390x844 and 430x932, at scroll top:
+Announcement=77px; header=80px; event card=267.77px.
+Hero content starts=424.77px; dock=49px.
+
+LOCAL_AFTER (both mobile widths):
+Announcement=45px; header=68px; event card=118.54px.
+Hero content starts=231.54px; gain=193.23px; dock=46px.
+390 Explorer CTA bottom=601.45px, dock top=794px.
+430 Explorer CTA bottom=616.80px, dock top=882px.
+390x660 short viewport: CTA bottom=601.45px, dock top=610px.
+
+ANNOUNCEMENT_COMPACTED=YES
+HEADER_COMPACTED=YES
+SOCIAL_LINKS_MOVED_TO_MENU=YES_EXISTING_MENU_LINKS_RETAINED
+EVENT_BLOCK_COMPACTED=YES
+HERO_VISIBLE_EARLIER=YES
+HERO_TITLE_CONTRAST=PASS_VISUAL_LOCAL
+GPS_MOBILE_HIDDEN=YES
+FIXED_ACTION_DOCK_COMPACTED=YES (49 to 46px; 44px touch targets)
+SAFARI_SAFE_AREA=NOT_FULLY_CERTIFIED
+Safe-area inset respected in dock offset and content/footer reserve.
+No fixed viewport height crops the mobile Hero; content stays in normal flow.
+Actual iOS Safari dynamic browser toolbar and nonzero safe-area not tested.
+Desktop browser viewport emulation is NOT physical iPhone certification.
+
+390_QA=PASS_LOCAL_BROWSER
+430_QA=PASS_LOCAL_BROWSER
+820_QA=PASS_NON_REGRESSION
+1280_QA=PASS_NON_REGRESSION
+1440_QA=PASS_NON_REGRESSION
+At 820/1280/1440 header, Hero-content top and H1 height exactly match PUBLIC.
+HORIZONTAL_OVERFLOW=NONE_AT_TESTED_WIDTHS
+MENU_SOCIAL_LINKS=PASS_VISIBLE_INSTAGRAM_FACEBOOK
+FOOTER_KEYBOARD_ACCESS=PASS
+390x660: footer bottom 593.77px, dock begins 610px after focusing last link.
+CONSOLE_ERRORS=0_OBSERVED
+Photo unchanged. Mobile local overlay only. Desktop stylesheet unchanged.
+
+BUILD=PASS_PUBLIC_BUILD
+TESTS=PASS_4_OF_4_TARGETED
+TYPECHECK=PASS
+LINT_TARGETED=PASS
+LINT_GLOBAL=FAIL_UNCHANGED_3D_VENDOR_FILES
+Global lint reports 43 errors / 139 warnings, principally vendored Three.js
+under public/visite-jungle/vendor. Those files are outside this patch.
+No source/test changes made to hide those errors.
+DIFF_CHECK=PASS
+SECRET_SCAN=PASS_BOUNDED_PATCH
+
+CHANGED_SCOPE=
+app/HomeMobile.module.css: homepage-only mobile presentation.
+app/HomeOpeningBanner.module.css: compact mobile event presentation only.
+app/PublicPreopeningSignal.tsx: compact label alternative.
+app/globals.css: hide alternative by default outside mobile homepage.
+app/page.tsx: scoped homepage class.
+tests/home-mobile-above-fold.test.mjs: four bounded regression tests.
+No Event data or HomeOpeningBanner text changes.
+
+CAPTURES_DIRECTORY=/Users/tibaldo/Developer/TIBALDO/safety/home-mobile-2026-09-10
+BEFORE_390=before-390.png
+AFTER_390=after-390.png
+BEFORE_430=before-430.png
+AFTER_430=after-430.png
+Preview used built Worker with a local Node/static-asset adapter after
+Wrangler local runtime accepted no requests. No hosted runtime changed.
+
+PUBLICATION=WAITING_OWNER_REVIEW
+PUBLIC_MUTATED=NO
+BETA_MUTATED=NO
+CAISSE_MUTATED=NO
+SHOP_MUTATED=NO
+EVENT_DATA_MUTATED=NO
+OPENAGENDA_MUTATED=NO
+DNS_MUTATED=NO
+SUBSTRATES_BRANCH_MUTATED=NO
+SUBSTRATES_HEAD=97a5fececd63b0a397cd95f464e5dd2289ca5e45
+MASTER_HANDOFF_READY=YES
+NEXT_SINGLE_ACTION=Review mobile before/after and complete actual iPhone
+Safari toolbar/safe-area validation before authorizing isolated publication.
+STOP=YES

@@ -1,0 +1,52 @@
+/* Homepage-only compact opening. Other routes and desktop retain their layout. */
+@media (max-width: 600px) {
+  :global(body):has(.home) :global(.public-preopening-signal-inner) {
+    min-height: 44px;
+    padding-block: 0;
+  }
+  :global(body):has(.home) :global(.public-preopening-signal p),
+  :global(body):has(.home) :global(.preopening-full) { display: none; }
+  :global(body):has(.home) :global(.preopening-compact) { display: inline; margin: 0; }
+  :global(body):has(.home) :global(.public-preopening-signal a) {
+    display: flex; align-items: center; justify-content: space-between;
+    min-height: 44px; width: 100%; padding: 4px 0;
+    font-size: 13px; letter-spacing: .015em; text-transform: none;
+  }
+  .home :global(.hero > .site-header) { height: 68px; flex-shrink: 0; gap: 8px; }
+  .home :global(.hero .header-socials),
+  .home :global(.hero .brand-location) { display: none; }
+  .home :global(.hero .brand) { gap: 8px; }
+  .home :global(.hero .brand-logo) { width: 40px; height: 40px; }
+  .home :global(.hero .brand-wordmark strong > span) { font-size: 11px; letter-spacing: .07em; }
+  .home :global(.hero .brand-wordmark small) { font-size: 10px; letter-spacing: .02em; }
+  .home :global(.hero .header-actions) { margin-left: auto; }
+  .home :global(.hero .header-shop) {
+    display: inline-flex; align-items: center; justify-content: center; gap: 5px;
+    min-height: 44px; padding: 0 10px; border-radius: 24px;
+    color: var(--forest-dark); background: var(--sage); font-size: 12px; font-weight: 800;
+  }
+  .home :global(.hero .header-shop svg) { width: 14px; height: 14px; }
+  .home :global(.hero .mobile-menu-trigger) { width: 44px; height: 44px; min-height: 44px; }
+  .home :global(.hero .mobile-jungle-menu) { margin-left: 0; }
+  .home :global(.hero-local-coordinates) { display: none; }
+  .home :global(.hero) { height: auto; min-height: 0; }
+  .home :global(.hero .hero-content) { padding-top: 20px; padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
+  .home :global(.hero .hero-shade) {
+    background: linear-gradient(90deg, rgb(7 31 22 / .82), rgb(7 31 22 / .42) 68%, rgb(7 31 22 / .12)), linear-gradient(180deg, rgb(7 31 22 / .7), transparent 38%, rgb(7 31 22 / .62));
+  }
+  .home :global(.hero h1) { margin: 14px 0 18px; font-size: clamp(44px, 12.8vw, 56px); line-height: 1; }
+  .home :global(.hero h1 em) { color: #f1eee3; text-shadow: 0 2px 12px rgb(4 24 17 / .8); }
+  .home :global(.hero .eyebrow) { font-size: 12px; color: #f1eee3; letter-spacing: .1em; }
+  .home :global(.hero .hero-copy) { font-size: 16px; line-height: 1.5; color: #fff; }
+  .home :global(.hero .hero-preopening-copy) { margin-top: 10px; font-size: 13px; }
+  .home :global(.hero .hero-actions) { margin-top: 20px; gap: 12px; }
+  .home :global(.hero-actions > a) { min-height: 44px; display: inline-flex; align-items: center; scroll-margin-block: 24px calc(90px + env(safe-area-inset-bottom, 0px)); }
+  .home :global(.hero-actions .hero-shop-link) { font-size: 12px; padding-bottom: 0; }
+  :global(body):has(.home) :global(.conversion-dock) {
+    padding: 0; border-radius: 24px; bottom: calc(4px + env(safe-area-inset-bottom, 0px));
+  }
+  :global(body):has(.home) :global(.conversion-dock a) {
+    min-height: 44px; padding: 6px 4px; font-size: 12px; font-weight: 800; letter-spacing: 0;
+  }
+  :global(body):has(.home) { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
+}

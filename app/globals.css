@@ -3736,6 +3736,7 @@ body:has(.conversion-dock){padding-bottom:calc(76px + env(safe-area-inset-bottom
 
 /* PUBLIC pre-opening: informative, crawl-neutral and never blocking. */
 .public-preopening-signal { position: relative; z-index: 1200; color: #092c20; background: #e6c84f; border-bottom: 1px solid rgb(9 44 32 / .16); }
+.preopening-compact { display: none; }
 .public-preopening-signal-inner { display: flex; min-height: 42px; align-items: center; justify-content: space-between; gap: 20px; padding-block: 8px; }
 .public-preopening-signal p { margin: 0; font-size: 11px; line-height: 1.45; letter-spacing: .015em; }
 .public-preopening-signal strong { font-weight: 820; }

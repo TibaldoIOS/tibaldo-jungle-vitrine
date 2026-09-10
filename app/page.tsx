@@ -7,6 +7,7 @@ import { substrates } from "./substrats/data";
 import HomeExperience from "./HomeExperience";
 import HomeOpeningBanner from "./HomeOpeningBanner";
 import promoStyles from "./HomeOpeningBanner.module.css";
+import mobileStyles from "./HomeMobile.module.css";
 import { shopUrl } from "@/lib/environment";
 import { jungleLocalIdentity, jungleOrganizationStructuredData, jungleStoreStructuredData } from "@/lib/jungle-local-identity";
 
@@ -31,7 +32,7 @@ const structuredData = {
 
 export default function Home() {
   return (
-    <main>
+    <main className={mobileStyles.home}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <ScrollReveal />
       <section className={`hero ${promoStyles.hero}`} id="accueil">
