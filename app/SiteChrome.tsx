@@ -4,6 +4,7 @@ import Link from "next/link";
 import { shopUrl } from "@/lib/environment";
 import { jungleLocalIdentity } from "@/lib/jungle-local-identity";
 import MobileJungleMenu from "./MobileJungleMenu";
+import { isBetaJungleDeployment } from "@/lib/deployment-mode";
 
 const Arrow = () => <svg className="jungle-arrow-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M5 15 15 5M7 5h8v8" /></svg>;
 const InstagramIcon = () => <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4.25" /><circle className="social-icon-dot" cx="17.4" cy="6.8" r="1" /></svg>;
@@ -87,7 +88,7 @@ export function SiteFooter({ compactTransit = false }: { compactTransit?: boolea
           <p>Plantes d’intérieur, plantes rares,<br />rempotage et substrats en vrac à Lille.</p>
         </div>
         <div className="footer-links">
-          <div><span>Explorer</span><Link href="/boutique-plantes-lille">Boutique plantes Lille</Link><Link href="/plantes">Plantes</Link><Link href="/conseils">Conseils plantes</Link><Link href="/sos-plantes">SOS Plantes</Link><Link href="/rempotage">Bar à rempotage</Link><Link href="/fleurs">Catalogue de fleurs</Link><Link href="/substrats-en-vrac-lille">Substrats en vrac Lille</Link><Link href="/pots-cache-pots-lille">Pots et cache-pots à Lille</Link><Link href="/coulisses">Les coulisses</Link><a href="https://tibaldo.fr/qui-suis-je">Qui suis-je ?</a><Link href="/livraison-plantes-lille">Livraison de plantes</Link><Link href="/fleurs-sur-commande-lille">Fleurs et bouquets sur commande</Link><Link href="/evenements">Événements</Link><Link href="/services">Nos services</Link></div>
+          <div><span>Explorer</span>{isBetaJungleDeployment && <Link href="/oeil-vegetal">L’Œil végétal</Link>}<Link href="/boutique-plantes-lille">Boutique plantes Lille</Link><Link href="/plantes">Plantes</Link><Link href="/conseils">Conseils plantes</Link><Link href="/sos-plantes">SOS Plantes</Link><Link href="/rempotage">Bar à rempotage</Link><Link href="/fleurs">Catalogue de fleurs</Link><Link href="/substrats-en-vrac-lille">Substrats en vrac Lille</Link><Link href="/pots-cache-pots-lille">Pots et cache-pots à Lille</Link><Link href="/coulisses">Les coulisses</Link><a href="https://tibaldo.fr/qui-suis-je">Qui suis-je ?</a><Link href="/livraison-plantes-lille">Livraison de plantes</Link><Link href="/fleurs-sur-commande-lille">Fleurs et bouquets sur commande</Link><Link href="/evenements">Événements</Link><Link href="/services">Nos services</Link></div>
           <LocalPresence compact />
           <div><span>Horaires</span><p>Mardi · 14h–19h<br />Mercredi–samedi · 10h–19h<br />Dimanche · 10h–13h</p></div>
           <div><span>Venir & écrire</span><p>{jungleLocalIdentity.streetAddress}<br />{jungleLocalIdentity.postalCode} {jungleLocalIdentity.city}<br /><a href={`tel:${jungleLocalIdentity.phoneE164}`}>{jungleLocalIdentity.phoneDisplay}</a></p><a className="footer-email" href={`mailto:${jungleLocalIdentity.email}`}>{jungleLocalIdentity.email}</a></div>
