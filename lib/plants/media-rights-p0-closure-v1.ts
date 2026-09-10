@@ -94,6 +94,15 @@ const verifiedLicensesByRoute: Readonly<Record<string, readonly PlantMediaLicens
       note: "Preuve contrôlée le 30 août 2026. Le fichier local est strictement identique au dérivé Commons 1920 px (SHA-256 7aef20c3c5d362e123962f60cf4e80d190295fe654565e31c1c1b3dc02d199b1). L’auteur Chhe a dédié l’œuvre au domaine public et la fiche Commons identifie Philodendron melanochrysum.",
     }),
   ],
+  "/plantes/monstera/adansonii": [
+    verifiedLicense({
+      creator: "TIBALDO (image fournie par l’Owner)",
+      license: "Autorisation d’utilisation confirmée par l’Owner TIBALDO",
+      licenseUrl: "https://tibaldo.fr/credits-images",
+      sourceUrl: "https://tibaldo.fr/credits-images",
+      note: "Preuve contrôlée le 10 septembre 2026. L’Owner TIBALDO a fourni cette photographie pour publication sur Jungle et Shop. Le JPEG source 799 × 1000 (SHA-256 3f21c5ebabf5f0774cfefb3bebd938fed753d9112af3c4920083269419e9929f) montre un Monstera adansonii en pot aux feuilles naturellement perforées.",
+    }),
+  ],
 };
 
 const honestGapRoutes = new Set([
@@ -102,7 +111,6 @@ const honestGapRoutes = new Set([
   "/plantes/epiphyllum/anguliger",
   "/plantes/monstera/thai-constellation",
   "/plantes/monstera/mint",
-  "/plantes/monstera/adansonii",
   "/plantes/anthurium/delta-force",
 ]);
 
@@ -115,7 +123,7 @@ export const mediaRightsP0ClosureRegistry: readonly RightsDecision[] = [
   { route: "/plantes/epiphyllum/anguliger", decision: "REMOVE_AND_USE_HONEST_MEDIA_GAP", source: "Ancien asset local sans provenance démontrée", license: "Aucune preuve réutilisable", botanicalIdentity: "Non retenue sans correspondance source exacte", finalMediaStatus: "HONEST_MEDIA_GAP" },
   { route: "/plantes/monstera/thai-constellation", decision: "REMOVE_AND_USE_HONEST_MEDIA_GAP", source: "Ancienne composition locale issue d’une photographie fournie sans preuve de droits archivée", license: "Aucune preuve réutilisable", botanicalIdentity: "Identité cultivar non prouvée par une source licenciée", finalMediaStatus: "HONEST_MEDIA_GAP" },
   { route: "/plantes/monstera/mint", decision: "REMOVE_AND_USE_HONEST_MEDIA_GAP", source: "Ancienne composition locale issue d’une photographie fournie sans preuve de droits archivée", license: "Aucune preuve réutilisable", botanicalIdentity: "Nom horticole et clone non prouvés", finalMediaStatus: "HONEST_MEDIA_GAP" },
-  { route: "/plantes/monstera/adansonii", decision: "REMOVE_AND_USE_HONEST_MEDIA_GAP", source: "Ancienne composition locale sans provenance démontrée", license: "Aucune preuve réutilisable", botanicalIdentity: "Non retenue sans correspondance source exacte", finalMediaStatus: "HONEST_MEDIA_GAP" },
+  { route: "/plantes/monstera/adansonii", decision: "RIGHTS_PROVEN_KEEP", source: "Photographie fournie par l’Owner TIBALDO", license: "Autorisation d’utilisation confirmée par l’Owner TIBALDO", botanicalIdentity: "Monstera adansonii identifié par les feuilles étroites et naturellement perforées", finalMediaStatus: "VERIFIED_MEDIA" },
   { route: "/plantes/anthurium/delta-force", decision: "REMOVE_AND_USE_HONEST_MEDIA_GAP", source: "Ancienne composition locale issue d’une photographie fournie sans preuve de droits archivée", license: "Aucune preuve réutilisable", botanicalIdentity: "Traçabilité clonale de ‘Delta Force’ non prouvée par le média", finalMediaStatus: "HONEST_MEDIA_GAP" },
   { route: "/plantes/philodendron/melanochrysum", decision: "RIGHTS_PROVEN_KEEP", source: "Wikimedia Commons — File:PhilodendronMelanochrysum.jpg", license: "Domaine public", botanicalIdentity: "Fichier et catégorie Commons : Philodendron melanochrysum", finalMediaStatus: "VERIFIED_MEDIA" },
 ];
