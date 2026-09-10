@@ -111,5 +111,14 @@
     "public/owner-media/monstera-dubia/monstera-dubia-plante-sur-planche.webp",
     "tests/plant-contract.test.ts"
   ],
-  "delivery_note": "Existing virtual /media/ prefix used for image/webp MIME; stored assets remain under public/owner-media. Existing API removes virtual prefix; no resolver change."
+  "delivery_note": "Existing virtual /media/ prefix used for image/webp MIME; stored assets remain under public/owner-media. Existing API removes virtual prefix; no resolver change.",
+  "release_archive_gate": {
+    "required_file_count": 292,
+    "exclude": [
+      "AppleDouble metadata",
+      "local Wrangler emulator state"
+    ],
+    "superseded_saved_version": 98,
+    "superseded_version_deployed": false
+  }
 }
