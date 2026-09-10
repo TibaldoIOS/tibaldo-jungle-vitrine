@@ -28,8 +28,8 @@ test("night media safety removes exactly the two unsafe documentary renderings",
   }
 });
 
-test("seven group heroes reuse only locally available, proven assets", () => {
-  assert.deepEqual(Object.keys(verifiedGroupMediaByGenre).sort(), ["cactus", "ensete", "epipremnum", "fatsia", "peperomia", "philodendron", "pilea"]);
+test("eleven group heroes reuse only locally available, proven assets", () => {
+  assert.deepEqual(Object.keys(verifiedGroupMediaByGenre).sort(), ["agave", "cactus", "ensete", "epipremnum", "equisetum", "fatsia", "maranta", "monstera", "peperomia", "philodendron", "pilea"]);
   for (const media of Object.values(verifiedGroupMediaByGenre)) {
     assert.equal(media.rights, "verified");
     assert.equal(media.license?.status, "verified");

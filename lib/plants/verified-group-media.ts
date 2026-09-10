@@ -5,6 +5,23 @@ export type VerifiedGroupMedia = PlantEntry["gallery"][number] & {
 };
 
 export const verifiedGroupMediaByGenre: Readonly<Record<string, VerifiedGroupMedia>> = {
+  monstera: {
+    src: "/monstera-collection-feuilles-tibaldo.webp",
+    alt: "Composition de feuilles de Monstera, aux formes, découpes et panachures variées.",
+    caption: "Collection de feuilles de Monstera · Photo fournie par TIBALDO.",
+    width: 1254,
+    height: 1254,
+    rights: "verified",
+    license: {
+      status: "verified",
+      creator: "TIBALDO",
+      license: "Autorisation d’utilisation confirmée par TIBALDO",
+      licenseUrl: "https://tibaldo.fr/credits-images",
+      sourceUrl: "https://tibaldo.fr/credits-images",
+      registryPath: "/credits-images",
+      note: "Hero Monstera · image fournie par l’Owner TIBALDO ; conversion WebP sans recadrage.",
+    },
+  },
   agave: {
     src:"/hub-media-wave-5-v1/hub-agave.webp",alt:"Collection botanique de rosettes d’Agave aux formes variées",caption:"Collection d’Agave · Kenizzer · CC BY-SA 4.0.",width:1600,height:1200,rights:"verified",
     license:{status:"verified",creator:"Kenizzer",license:"CC BY-SA 4.0",licenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/",sourceUrl:"https://commons.wikimedia.org/wiki/File:Agave_collection_summer_2020.jpg",registryPath:"/credits-images",note:"Hero Wave 5 · collection de plusieurs Agave ; redimensionnement et conversion WebP."},

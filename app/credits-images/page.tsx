@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 };
 
 const credits: readonly [string, string, string, string, string?][] = [
+  ["Hero Monstera · collection de feuilles", "TIBALDO", "Autorisation d’utilisation confirmée par TIBALDO · conversion WebP sans recadrage", "https://tibaldo.fr/credits-images"],
   ["Hero Fatsia · Fatsia japonica", "Dinkum", "CC0 1.0 · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Fatsia_japonica_leaves.jpg", "https://creativecommons.org/publicdomain/zero/1.0/"],
   ["Hero Ensete · Ensete ventricosum", "Rotational", "Domaine public · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Ensete_ventricosum00.jpg", "https://creativecommons.org/publicdomain/mark/1.0/"],
   ["Philodendron grazielae", "Krzysztof Ziarnek, Kenraiz", "CC BY-SA 4.0 · redimensionnement et conversion WebP", "https://commons.wikimedia.org/wiki/File:Philodendron_grazielae_kz1.jpg", "https://creativecommons.org/licenses/by-sa/4.0/"],
