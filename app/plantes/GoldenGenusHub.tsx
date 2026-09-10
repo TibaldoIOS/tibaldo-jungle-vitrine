@@ -30,6 +30,24 @@ export type GoldenGroupGuide = {
 
 type GroupMedia = PlantEntry["gallery"][number] & { rights: "verified" | "controlled-beta" };
 
+const monsteraHeroMedia: GroupMedia = {
+  src: "/monstera-collection-feuilles-tibaldo.webp",
+  alt: "Composition de feuilles de Monstera, aux formes, découpes et panachures variées.",
+  caption: "Collection de feuilles de Monstera · Photo fournie par TIBALDO.",
+  width: 1254,
+  height: 1254,
+  rights: "verified",
+  license: {
+    status: "verified",
+    creator: "TIBALDO",
+    license: "Autorisation d’utilisation confirmée par TIBALDO",
+    licenseUrl: "https://tibaldo.fr/credits-images",
+    sourceUrl: "https://tibaldo.fr/credits-images",
+    registryPath: "/credits-images",
+    note: "Hero Monstera · image fournie par l’Owner TIBALDO ; conversion WebP sans recadrage.",
+  },
+};
+
 const pileaHeroCopy = "Les Pilea forment un genre de la famille des Urticaceae bien plus vaste que la seule plante à monnaie chinoise. Rampants, compacts ou texturés, ils déploient des feuilles rondes, gaufrées, argentées ou minuscules : une diversité graphique adaptée aux petits espaces et aux étagères lumineuses. Pour leur culture en intérieur, placez-les dans une lumière douce à vive, tournez régulièrement les formes dressées et arrosez sans saturer le substrat, après un léger séchage en surface. Ce guide Tibaldo Jungle aide à ajuster leur entretien selon l’espèce. À Lille, l’hiver moins lumineux ralentit notamment le Pilea peperomioides : ses arrosages doivent alors s’espacer.";
 
 const safeSentence = (value: string) => {
@@ -57,6 +75,7 @@ const isDocumentaryImage = (image: PlantEntry["gallery"][number]) =>
   !/interprétation éditoriale|illustration générée|image générée/i.test(`${image.alt} ${image.caption}`);
 
 const firstGroupMedia = (genre: string, plants: readonly PlantEntry[]): GroupMedia | null => {
+  if (genre === "monstera") return monsteraHeroMedia;
   if (genre === "pilea") return null;
   const image = plants.flatMap((plant) => plant.gallery).find(isDocumentaryImage);
   return image ? { ...image, rights: image.license?.status === "verified" ? "verified" : "controlled-beta" } : null;
