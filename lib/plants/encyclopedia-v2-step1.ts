@@ -104,11 +104,11 @@ export const encyclopediaV2Step1Plants = [
       "À la réception, stabilisez d’abord lumière, chaleur et arrosage avant d’envisager un rempotage.",
     ],
     gallery: [{
-      src: "/photo-reelle-a-venir.svg",
-      alt: "Photographie réelle d’Anthurium clarinervium à ajouter",
-      caption: "Photographie du spécimen à réaliser au Studio Végétal ; aucun visuel généré n’est utilisé pour identifier cette plante.",
+      src: "/images/anthurium-clarinervium-feuilles-veloutees-nervures-claires.jpg",
+      alt: "Anthurium clarinervium aux feuilles vert foncé veloutées et aux nervures claires.",
+      caption: "Photo : TIBALDO",
       width: 1200,
-      height: 1500,
+      height: 1200,
     }],
     seo: {
       title: "Anthurium clarinervium : entretien, arrosage et substrat",

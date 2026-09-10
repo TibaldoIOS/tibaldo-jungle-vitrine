@@ -94,6 +94,15 @@ const verifiedLicensesByRoute: Readonly<Record<string, readonly PlantMediaLicens
       note: "Preuve contrôlée le 30 août 2026. Le fichier local est strictement identique au dérivé Commons 1920 px (SHA-256 7aef20c3c5d362e123962f60cf4e80d190295fe654565e31c1c1b3dc02d199b1). L’auteur Chhe a dédié l’œuvre au domaine public et la fiche Commons identifie Philodendron melanochrysum.",
     }),
   ],
+  "/plantes/anthurium/clarinervium": [
+    verifiedLicense({
+      creator: "TIBALDO (photographie fournie par l’Owner)",
+      license: "Autorisation d’utilisation confirmée par l’Owner TIBALDO",
+      licenseUrl: "https://tibaldo.fr/credits-images",
+      sourceUrl: "https://tibaldo.fr/credits-images",
+      note: "Preuve contrôlée le 10 septembre 2026. L’Owner TIBALDO a fourni cette photographie personnelle pour publication dans Jungle, Caisse et Shop. Le JPEG source 1200 × 1200 (SHA-256 e1a1a0e72967cdfd37b0930f81e3d0cc4cf58d99945fe3108e56c75059f3b49c) montre un Anthurium clarinervium aux feuilles veloutées et aux nervures claires.",
+    }),
+  ],
   "/plantes/monstera/adansonii": [
     verifiedLicense({
       creator: "TIBALDO (image fournie par l’Owner)",
