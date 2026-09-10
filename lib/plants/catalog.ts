@@ -238,6 +238,27 @@ if (dubiaOwnerMediaPlantIndex !== -1) {
 }], mediaNeeds: [] };
 }
 
+// Authorized third-party photo supplied by Owner: PHOTO-20260910-BURLE-01.
+const burlePhotoPlantIndex = plants.findIndex((plant) => plant.genre === "monstera" && plant.slug === "burle-marx-flame");
+if (burlePhotoPlantIndex !== -1) {
+  const plant = plants[burlePhotoPlantIndex];
+  plants[burlePhotoPlantIndex] = { ...plant, gallery: [{
+  "src": "/media/owner-media/monstera-burle-marx-flame/monstera-burle-marx-flame-plante-entiere.webp",
+  "alt": "Monstera Burle Marx’s Flame en pot sur un support noir, aux feuilles vertes profondément découpées sur fond blanc.",
+  "caption": "Photo : Rare Plant Fairy",
+  "width": 1856,
+  "height": 1909,
+  "license": {
+    "status": "verified",
+    "creator": "Rare Plant Fairy",
+    "license": "Autorisation de publication sur Jungle confirmée par l’Owner TIBALDO",
+    "sourceUrl": "owner-provided://tibaldo/photo-20260910-burle-01/rare-plant-fairy",
+    "registryPath": "/credits-images",
+    "note": "Photographie de Rare Plant Fairy fournie par l’Owner, qui confirme l’autorisation de publication. Provenance et empreinte documentées dans docs/media-provenance/photo-20260910-burle-01.json."
+  }
+}], mediaNeeds: [] };
+}
+
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
 export const getPlantsByGenre = (genre: string) => plants.filter((plant) => plant.genre === genre);

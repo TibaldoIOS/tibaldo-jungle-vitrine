@@ -1,0 +1,49 @@
+{
+  "batch_id": "PHOTO-20260910-BURLE-01",
+  "public_source_before": "f6bc5d05d19be26d0526586788517ce2a7dd1496",
+  "public_version_before": 99,
+  "deployment_before": "appgdep_6aa311cb036c8191a3ebf99030557928",
+  "photos": [
+    {
+      "owner_identity": "Burle Marx Flame",
+      "canonical_slug": "plantes/monstera/burle-marx-flame",
+      "original_filename": "codex-clipboard-b1731284-ce89-4984-b250-4d59883cf61f.jpg",
+      "identity_filename": "Burle_Marx_Flame_Grower_s_Choice_2025-11-21_WEEK_47_-_3.jpg.webp",
+      "original_sha256": "ea72d4a55dac08d96dcef6bec5b2327eec55327e0315d7d614780cf5f633fa6f",
+      "asset_path": "/owner-media/monstera-burle-marx-flame/monstera-burle-marx-flame-plante-entiere.webp",
+      "public_path": "/media/owner-media/monstera-burle-marx-flame/monstera-burle-marx-flame-plante-entiere.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/monstera-burle-marx-flame/monstera-burle-marx-flame-plante-entiere.webp",
+      "sha256": "d1d547b0f100f925a5919294224da35f2918b3f7a586c1e188bd2286dfdc952a",
+      "alt": "Monstera Burle Marx’s Flame en pot sur un support noir, aux feuilles vertes profondément découpées sur fond blanc.",
+      "credit": "Photo : Rare Plant Fairy",
+      "creator": "Rare Plant Fairy",
+      "provenance": "OWNER_SUPPLIED_THIRD_PARTY",
+      "rights": "Owner explicitly confirmed permission to publish on Jungle in this conversation",
+      "role": "WHOLE_PLANT",
+      "dimensions": [
+        1856,
+        1909
+      ],
+      "bytes": 217074,
+      "previous_gallery": [
+        {
+          "src": "/photo-reelle-a-venir.svg",
+          "alt": "Photographie réelle de Monstera sp. ‘Burle Marx’s Flame’ à ajouter",
+          "caption": "Photographie réelle du spécimen Monstera sp. ‘Burle Marx’s Flame’ à réaliser au Studio avant publication.",
+          "width": 1200,
+          "height": 1500
+        }
+      ],
+      "private_metadata_removed": true
+    }
+  ],
+  "processing": "Owner supplied already unsigned image; no additional crop, signature removal, upscale or generative alteration. WebP quality88 method6, orientation normalized, metadata stripped.",
+  "shop": "PENDING",
+  "caisse": "PENDING",
+  "allowed_paths": [
+    "lib/plants/catalog.ts",
+    "public/owner-media/monstera-burle-marx-flame/monstera-burle-marx-flame-plante-entiere.webp",
+    "docs/media-provenance/photo-20260910-burle-01.json",
+    "tests/photo-burle-authorized-v1.test.ts"
+  ]
+}
