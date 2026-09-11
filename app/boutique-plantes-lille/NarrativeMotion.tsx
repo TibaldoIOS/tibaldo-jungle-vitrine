@@ -15,7 +15,17 @@ export default function NarrativeMotion() {
       }
     }, { threshold: 0.12 });
     document.querySelectorAll('[data-narrative]').forEach(el => observer.observe(el));
-    return () => observer.disconnect();
+    const scene = document.querySelector<HTMLElement>('#services-studio');
+    const steps = [...(scene?.querySelectorAll('article') ?? [])];
+    const journey = new IntersectionObserver(entries => {
+      const current = entries.filter(entry => entry.isIntersecting)
+        .sort((a, b) => Math.abs(a.boundingClientRect.top - window.innerHeight * .35) - Math.abs(b.boundingClientRect.top - window.innerHeight * .35))[0];
+      if (!current || !scene) return;
+      scene.dataset.activeService = String(steps.findIndex(step => step === current.target) + 1);
+      steps.forEach(step => step.toggleAttribute('data-current', step === current.target));
+    }, { rootMargin: '-20% 0px -45% 0px', threshold: 0 });
+    steps.forEach(step => journey.observe(step));
+    return () => { observer.disconnect(); journey.disconnect(); };
   }, []);
   return null;
 }
