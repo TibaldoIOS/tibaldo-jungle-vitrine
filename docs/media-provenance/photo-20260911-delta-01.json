@@ -1,0 +1,54 @@
+{
+  "batch_id": "PHOTO-20260911-DELTA-01",
+  "photos": [
+    {
+      "owner_identity": "Anthurium delta force",
+      "canonical_slug": "plantes/anthurium/delta-force",
+      "original_filename": "1-Image-collée-1.jpg",
+      "original_sha256": "bfe7fa506fb52067640d8d2c2c2724eb4c5387333f798fbb8aaf2de39b04d27d",
+      "asset_path": "/owner-media/anthurium-delta-force/anthurium-delta-force-plante-en-pot.webp",
+      "public_path": "/media/owner-media/anthurium-delta-force/anthurium-delta-force-plante-en-pot.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/anthurium-delta-force/anthurium-delta-force-plante-en-pot.webp",
+      "sha256": "ce83064675bb2a5679fcac17dd07916d914e346d662c02c598b1aa2a97235b97",
+      "alt": "Anthurium ‘Delta Force’ en pot blanc bordé de doré, avec une grande feuille vert foncé parcourue de nervures claires.",
+      "credit": "Photo : TIBALDO",
+      "creator": "TIBALDO",
+      "provenance": "OWNER",
+      "rights": "Owner supplied image under standing publication authorization; explicit botanical identity confirmed 2026-09-11",
+      "role": "WHOLE_PLANT",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "bytes": 204256,
+      "previous_gallery": [
+        {
+          "src": "/photo-reelle-a-venir.svg",
+          "alt": "Aucune photographie documentaire vérifiée de Anthurium ‘Delta Force’ n’est publiée",
+          "caption": "Manque média explicite : aucune photographie sans preuve de droits n’est affichée.",
+          "width": 1200,
+          "height": 1500,
+          "license": {
+            "status": "media-gap",
+            "registryPath": "/credits-images",
+            "note": "P0 droits média du 30 août 2026 : l’ancien média de /plantes/anthurium/delta-force a été retiré du rendu, faute de preuve de droits réutilisables et d’identité botanique suffisamment documentée."
+          }
+        }
+      ],
+      "private_metadata_removed": true
+    }
+  ],
+  "public_source_before": "0ca538ef474243f3644b924f9ee068cec5dffbfb",
+  "public_version_before": 105,
+  "deployment_before": "appgdep_6aa32e02812481919fecb237a087d5d3",
+  "processing": "Real WebP quality88 method6, no crop/upscale/generation. Private EXIF and Photoshop metadata removed. New Owner original; historical media-rights audit remains historical and is not reused as authorization.",
+  "allowed_paths": [
+    "lib/plants/catalog.ts",
+    "app/credits-images/page.tsx",
+    "docs/media-provenance/photo-20260911-delta-01.json",
+    "tests/photo-delta-owner-v1.test.ts",
+    "public/owner-media/anthurium-delta-force/anthurium-delta-force-plante-en-pot.webp"
+  ],
+  "shop": "PENDING",
+  "caisse": "PENDING"
+}

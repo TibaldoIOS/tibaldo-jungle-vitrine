@@ -341,6 +341,27 @@ if (standleyanaPhotoPlantIndex !== -1) {
 }], mediaNeeds: [] };
 }
 
+// Owner photo wave PHOTO-20260911-DELTA-01.
+const deltaPhotoPlantIndex = plants.findIndex((plant) => plant.genre === "anthurium" && plant.slug === "delta-force");
+if (deltaPhotoPlantIndex !== -1) {
+  const plant = plants[deltaPhotoPlantIndex];
+  plants[deltaPhotoPlantIndex] = { ...plant, gallery: [{
+  "src": "/media/owner-media/anthurium-delta-force/anthurium-delta-force-plante-en-pot.webp",
+  "alt": "Anthurium ‘Delta Force’ en pot blanc bordé de doré, avec une grande feuille vert foncé parcourue de nervures claires.",
+  "caption": "Photo : TIBALDO",
+  "width": 1254,
+  "height": 1254,
+  "license": {
+    "status": "verified",
+    "creator": "TIBALDO",
+    "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO",
+    "sourceUrl": "owner-provided://tibaldo/photo-20260911-delta-01/delta-force",
+    "registryPath": "/credits-images",
+    "note": "Nouvelle photographie fournie par l’Owner avec identité botanique explicitement confirmée. Original et SHA256 archivés : docs/media-provenance/photo-20260911-delta-01.json. Ne réutilise pas l’ancien média retiré."
+  }
+}], mediaNeeds: [] };
+}
+
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
 export const getPlantsByGenre = (genre: string) => plants.filter((plant) => plant.genre === genre);
