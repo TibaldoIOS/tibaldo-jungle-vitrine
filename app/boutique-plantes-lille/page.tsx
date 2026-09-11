@@ -5,7 +5,8 @@ import ScrollReveal from '../ScrollReveal';
 import LocalPresence from '../LocalPresence';
 import { jungleLocalIdentity as studio, jungleStoreStructuredData } from '@/lib/jungle-local-identity';
 import { jungleOrigin, betaOnlyRobots } from '@/lib/deployment-mode';
-import styles from './boutique.module.css';
+import styles from './gallery.module.css';
+import { homeUniverseMedia } from '@/lib/home-universe-media';
 import NarrativeMotion from './NarrativeMotion';
 
 const title = 'Boutique de plantes tropicales et vertes à Lille | TIBALDO Jungle';
@@ -38,7 +39,7 @@ export default function BoutiquePlantesLille() {
     <ScrollReveal/>
     <NarrativeMotion/>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, '\\u003c') }}/>
-    <section className={styles.hero}><SiteHeader/>
+    <section className={styles.hero}><img className={styles.heroImage} src={homeUniverseMedia.plants.src} alt="" width={1200} height={2133} fetchPriority="high"/><SiteHeader/>
       <div className={`shell ${styles.heroCopy}`}>
         <p className={styles.kicker}>Studio Végétal — TIBALDO Jungle · Lille</p>
         <h1><span>Une boutique de plantes </span><em>tropicales, vertes et rares</em><span> à Lille.</span></h1>
@@ -50,9 +51,9 @@ export default function BoutiquePlantesLille() {
     <section className={`shell ${styles.section} ${styles.selectionScene}`} id="selection">
       <header><p className={styles.kicker}>01 · La sélection</p><h2>Du premier feuillage<br/><em>à la plante de collection.</em></h2></header>
       <div className={styles.selection}>
-        <article tabIndex={0} aria-label="Le quotidien" data-narrative><div className={styles.panelIdentity} aria-hidden="true"><small>01</small><b>Vivre</b></div><span>Le quotidien</span><h3>Des plantes vertes à vivre.</h3><p>Une première plante, un feuillage généreux ou un grand sujet pour structurer une pièce : le choix commence par votre intérieur. Des plantes accessibles côtoient des formats plus imposants, selon les arrivages.</p></article>
-        <article tabIndex={0} aria-label="L’envie d’explorer" data-narrative><div className={styles.panelIdentity} aria-hidden="true"><small>02</small><b>Explorer</b></div><span>L’envie d’explorer</span><h3>Une sensibilité tropicale.</h3><p>Monstera, Anthurium, Alocasia et Philodendron : des formes et des besoins variés, à découvrir sans confondre l’attrait d’une plante exotique avec sa facilité de culture.</p></article>
-        <article tabIndex={0} aria-label="Le regard du collectionneur" data-narrative><div className={styles.panelIdentity} aria-hidden="true"><small>03</small><b>Collectionner</b></div><span>Le regard du collectionneur</span><h3>Des plantes singulières.</h3><p>Port, enracinement, feuillage et qualité du sujet guident la sélection. Les plantes rares ou de collection ne sont pas promises en permanence : renseignez-vous pour une recherche précise.</p></article>
+        <article tabIndex={0} aria-label="Le quotidien" data-narrative><figure className={styles.tableauPhoto}><img src="/owner-media/pilea-peperomioides/pilea-peperomioides-plante-tibaldo-600.webp" alt="Pilea peperomioides en pot, aux feuilles rondes vertes" width={600} height={750} loading="lazy" decoding="async"/><figcaption>Photo : TIBALDO</figcaption></figure><div className={styles.panelIdentity} aria-hidden="true"><small>01</small><b>Vivre</b></div><span>Le quotidien</span><h3>Des plantes vertes à vivre.</h3><p>Une première plante, un feuillage généreux ou un grand sujet pour structurer une pièce : le choix commence par votre intérieur. Des plantes accessibles côtoient des formats plus imposants, selon les arrivages.</p></article>
+        <article tabIndex={0} aria-label="L’envie d’explorer" data-narrative><figure className={styles.tableauPhoto}><img src="/owner-media/home-universes/home-universe-plants-owner-v1.avif" alt="Grandes feuilles au premier plan du mur végétal TIBALDO" width={1200} height={2133} loading="lazy" decoding="async"/><figcaption>Photo : TIBALDO</figcaption></figure><div className={styles.panelIdentity} aria-hidden="true"><small>02</small><b>Explorer</b></div><span>L’envie d’explorer</span><h3>Une sensibilité tropicale.</h3><p>Monstera, Anthurium, Alocasia et Philodendron : des formes et des besoins variés, à découvrir sans confondre l’attrait d’une plante exotique avec sa facilité de culture.</p></article>
+        <article tabIndex={0} aria-label="Le regard du collectionneur" data-narrative><figure className={styles.tableauPhoto}><img src="/owner-media/monstera/monstera-mint-owner-2026-09.webp" alt="Feuillage marbré vert menthe et crème de Monstera deliciosa Mint" width={1080} height={1350} loading="lazy" decoding="async"/><figcaption>Photo : TIBALDO</figcaption></figure><div className={styles.panelIdentity} aria-hidden="true"><small>03</small><b>Collectionner</b></div><span>Le regard du collectionneur</span><h3>Des plantes singulières.</h3><p>Port, enracinement, feuillage et qualité du sujet guident la sélection. Les plantes rares ou de collection ne sont pas promises en permanence : renseignez-vous pour une recherche précise.</p></article>
       </div>
     </section>
     <section className={styles.choose} id="chez-vous"><div className={`shell ${styles.chooseInner}`}>
@@ -60,7 +61,7 @@ export default function BoutiquePlantesLille() {
       <div className={styles.chooseBottom}><ul className={styles.factors} aria-label="Les quatre repères pour choisir">{['Lumière','Espace','Humidité','Expérience'].map((factor,i)=><li key={factor} tabIndex={0}><span aria-hidden="true">0{i+1}</span>{factor}</li>)}</ul><div><p>Lumière, espace, humidité, expérience : apportez une photo de votre pièce pour choisir une plante à l’aise chez vous.</p><Link href="/plantes" className={styles.textLink}>Comprendre ses besoins dans l’Encyclopédie <Arrow/></Link></div></div>
     </div></section>
     <section className={`shell ${styles.section} ${styles.serviceScene}`} id="services-studio">
-      <header><p className={styles.kicker}>03 · Au Studio</p><h2>Le conseil ne s’arrête pas<br/><em>au choix de la plante.</em></h2><div className={styles.actionStage} aria-hidden="true">{['Choisir','Rempoter','Composer','Habiller','Soigner','Livrer'].map(verb=><span key={verb}>{verb}<i>↗</i></span>)}</div></header>
+      <header><p className={styles.kicker}>03 · Au Studio</p><h2>Le conseil ne s’arrête pas<br/><em>au choix de la plante.</em></h2><figure className={styles.materialPhoto}><img src={homeUniverseMedia.substrates.src} alt={homeUniverseMedia.substrates.alt} width={1200} height={2467} loading="lazy" decoding="async"/><figcaption>Matières & textures · Photo : TIBALDO</figcaption></figure><div className={styles.actionStage} aria-hidden="true">{['Choisir','Rempoter','Composer','Habiller','Soigner','Livrer'].map(verb=><span key={verb}>{verb}<i>↗</i></span>)}</div></header>
       <div className={styles.services}>{services.map(([name,copy,href],i)=><article key={href} data-narrative><span className={styles.serviceNumber} aria-hidden="true">0{i+1}</span><div><span className={styles.mobileVerb} aria-hidden="true">{['Choisir','Rempoter','Composer','Habiller','Soigner','Livrer'][i]}</span><h3><Link href={href}>{name} <Arrow/></Link></h3><p>{copy}</p></div></article>)}</div>
     </section>
     <section className={styles.visit} id="informations"><div className={`shell ${styles.split}`}>

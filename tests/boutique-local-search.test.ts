@@ -14,13 +14,22 @@ test('one local page, exact approved title, semantic intent and no permanent-sto
 });
 test('six services remain; wall removed only from landing, two questions and compact access',()=>{
   for(const route of ['/conseils','/rempotage','/substrats-en-vrac-lille','/pots-cache-pots-lille','/sos-plantes','/livraison-plantes-lille']) assert.ok(page.includes(route));
-  assert.doesNotMatch(page,/regard-vegetal|homeUniverseMedia|Découvrir le service/);
+  assert.doesNotMatch(page,/regard-vegetal|Découvrir le service/);
   assert.match(page,/<SiteFooter compactTransit\/>/);
   assert.match(page,/href="\/contact"/);
   const questions=page.split('const questions = [')[1].split('];')[0];
   assert.equal((questions.match(/\['/g)||[]).length,2);
   assert.match(page,/Approfondir dans l’Encyclopédie/);
   for(const path of ['public/owner-media/home-universes/home-universe-plants-owner-v1.avif','public/local-studio/mur-vegetal-tibaldo-640.avif','app/SiteChrome.tsx']) assert.equal(execFileSync('git',['diff','456770b168f0adc2e8be92a3bd29a09085516efb','--',path],{encoding:'utf8'}),'');
+});
+test('gallery redesign reuses controlled photos and preserves accessible static fallback',()=>{
+  const css=readFileSync('app/boutique-plantes-lille/gallery.module.css','utf8');
+  assert.match(page,/import styles from '.\/gallery.module.css'/);
+  assert.equal((page.match(/className=\{styles.tableauPhoto\}/g)||[]).length,3);
+  assert.match(page,/fetchPriority="high"/);
+  assert.equal((page.match(/loading="lazy"/g)||[]).length,4);
+  for(const rule of ['prefers-reduced-motion:reduce','focus-visible','@media(max-width:700px)','animation:none!important']) assert.ok(css.includes(rule));
+  assert.doesNotMatch(css,/scroll-snap-type|height:100vh/);
 });
 test('eight contextual routes point toward local landing without changing other genus destinations',()=>{
   const hubs=readFileSync('app/plantes/GoldenGenusHub.tsx','utf8');
