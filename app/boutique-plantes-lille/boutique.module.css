@@ -54,6 +54,14 @@
 .serviceScene:has(.services article:nth-child(4):is(:hover,:focus-within)) .actionStage>span:nth-child(4),
 .serviceScene:has(.services article:nth-child(5):is(:hover,:focus-within)) .actionStage>span:nth-child(5),
 .serviceScene:has(.services article:nth-child(6):is(:hover,:focus-within)) .actionStage>span:nth-child(6){opacity:1;transform:none}
+/* Keyboard focus wins over an idle pointer on another row. */
+.serviceScene:has(.services article:focus-within) .actionStage>span{opacity:0!important}
+.serviceScene:has(.services article:nth-child(1):focus-within) .actionStage>span:nth-child(1),
+.serviceScene:has(.services article:nth-child(2):focus-within) .actionStage>span:nth-child(2),
+.serviceScene:has(.services article:nth-child(3):focus-within) .actionStage>span:nth-child(3),
+.serviceScene:has(.services article:nth-child(4):focus-within) .actionStage>span:nth-child(4),
+.serviceScene:has(.services article:nth-child(5):focus-within) .actionStage>span:nth-child(5),
+.serviceScene:has(.services article:nth-child(6):focus-within) .actionStage>span:nth-child(6){opacity:1!important}
 
 .questionScene{display:grid;grid-template-columns:.7fr 1.3fr;gap:60px}.questions{display:block;min-width:0}
 .questions details{border-top:1px solid #9aa88e;transition:background 250ms}.questions details:last-child{border-bottom:1px solid #9aa88e}

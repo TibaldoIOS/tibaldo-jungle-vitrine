@@ -59,6 +59,8 @@ test('narrative CSS has focus equivalents, mobile fallback and reduced-motion ov
   for(const rule of [':focus-within',':focus-visible','prefers-reduced-motion:reduce','animation:none!important','transition:none!important','.serviceScene>header{position:static','@media(hover:hover)']) assert.ok(css.includes(rule),rule);
   assert.match(page,/article tabIndex=\{0\}/);
   assert.match(page,/li key=\{factor\} tabIndex=\{0\}/);
+  assert.ok(css.includes('.serviceScene:has(.services article:focus-within) .actionStage>span{opacity:0!important}'));
+  for(let i=1;i<=6;i++) assert.ok(css.includes(`article:nth-child(${i}):focus-within) .actionStage>span:nth-child(${i})`));
 });
 test('motion is progressive enhancement, finite and scoped; no media or dependency change',()=>{
   const motion=readFileSync('app/boutique-plantes-lille/NarrativeMotion.tsx','utf8');
