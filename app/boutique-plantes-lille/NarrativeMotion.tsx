@@ -32,7 +32,40 @@ export default function NarrativeMotion() {
       if (current) chapters.forEach(chapter => chapter.toggleAttribute('data-current', chapter === current.target));
     }, { rootMargin: '-15% 0px -40% 0px', threshold: 0 });
     chapters.forEach(chapter => selection.observe(chapter));
-    return () => { observer.disconnect(); journey.disconnect(); selection.disconnect(); };
+    const selectionScene = document.querySelector<HTMLElement>('#selection');
+    const choice = document.querySelector<HTMLElement>('#chez-vous');
+    let frame = 0;
+    const clamp = (value: number) => Math.max(0, Math.min(1, value));
+    const paint = () => {
+      frame = 0;
+      const desktop = window.innerWidth > 700;
+      selectionScene?.toggleAttribute('data-scroll-scenes', desktop && !reduced.matches);
+      chapters.forEach((chapter, index) => {
+        const element = chapter as HTMLElement;
+        const next = chapters[index + 1]?.getBoundingClientRect();
+        const progress = desktop && next ? clamp((420 - next.top) / 320) : 0;
+        element.style.setProperty('--handover', String(progress));
+      });
+      if (choice) {
+        const progress = clamp((window.innerHeight - choice.getBoundingClientRect().top) / (window.innerHeight * .8));
+        choice.style.setProperty('--arrival', String(reduced.matches ? 1 : progress));
+      }
+    };
+    const schedule = () => { if (!frame) frame = requestAnimationFrame(paint); };
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    reduced.addEventListener('change', schedule);
+    paint();
+    return () => {
+      observer.disconnect(); journey.disconnect(); selection.disconnect();
+      window.removeEventListener('scroll', schedule);
+      window.removeEventListener('resize', schedule);
+      reduced.removeEventListener('change', schedule);
+      cancelAnimationFrame(frame);
+      selectionScene?.removeAttribute('data-scroll-scenes');
+      chapters.forEach(chapter => (chapter as HTMLElement).style.removeProperty('--handover'));
+      choice?.style.removeProperty('--arrival');
+    };
   }, []);
   return null;
 }

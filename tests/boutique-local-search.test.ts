@@ -67,7 +67,14 @@ test('motion is progressive enhancement, finite and scoped; no media or dependen
   const motion=readFileSync('app/boutique-plantes-lille/NarrativeMotion.tsx','utf8');
   assert.match(motion,/reduced.matches/);
   assert.match(motion,/observer.unobserve/);
-  assert.doesNotMatch(motion,/setInterval|requestAnimationFrame|style.opacity/);
+  assert.doesNotMatch(motion,/setInterval|style.opacity|preventDefault/);
+  // Scroll-driven handovers schedule one frame per user event, never an idle loop.
+  assert.match(motion,/if \(!frame\) frame = requestAnimationFrame\(paint\)/);
+  assert.match(motion,/cancelAnimationFrame\(frame\)/);
+  assert.match(motion,/addEventListener\('scroll', schedule, \{ passive: true \}\)/);
+  assert.match(motion,/removeEventListener\('scroll', schedule\)/);
+  const paintBody=motion.split('const paint = () => {')[1].split('const schedule')[0];
+  assert.doesNotMatch(paintBody,/requestAnimationFrame|schedule\(/);
   const base='ff31edf5b878dd60a43277d68708aef5fd41debe';
   for(const path of ['package.json','package-lock.json','public','app/SiteChrome.tsx','app/ScrollReveal.tsx']) assert.equal(execFileSync('git',['diff',base,'--',path],{encoding:'utf8'}),'',path);
 });

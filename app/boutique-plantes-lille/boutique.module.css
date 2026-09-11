@@ -197,4 +197,23 @@
 .selection article:before{left:-27px;top:26px}
 .selection .panelIdentity{gap:10px;margin-bottom:13px}.selection .panelIdentity b{font-size:clamp(32px,9vw,40px)}
 }
-@media print{.page :global(.skip-link){display:none!important}.page :global([data-reveal]){opacity:1!important;transform:none!important;filter:none!important}.selectionScene>header{position:static}}
+/* Chapters replace one another through normal document scroll, with a static fallback. */
+@media(min-width:701px) and (prefers-reduced-motion:no-preference){
+.selectionScene[data-scroll-scenes]{align-items:start;isolation:isolate}
+.selectionScene[data-scroll-scenes] .selection{border:0;padding-left:0}
+.selectionScene[data-scroll-scenes] .selection article{position:sticky;top:100px;min-height:360px;padding:36px 32px 42px;margin-bottom:90px;background:#e8eddf;border-top:1px solid #8c9d7c;transform-origin:50% 0;transform:translateY(calc(var(--handover,0) * -22px)) scale(calc(1 - var(--handover,0) * .07));animation:none;transition:none;box-shadow:0 -14px 30px #173e3009}
+.selectionScene[data-scroll-scenes] .selection article:nth-child(2){background:#cedbbb}
+.selectionScene[data-scroll-scenes] .selection article:nth-child(3){background:#173e30;color:#f7f5ef;margin-bottom:0}
+.selectionScene[data-scroll-scenes] .selection article:before{display:none}
+.selectionScene[data-scroll-scenes] .selection article:nth-child(3) :is(b,small,span,h3,p){color:inherit}
+.selectionScene[data-scroll-scenes] .selection .panelIdentity{margin-bottom:30px}
+.selectionScene[data-scroll-scenes] .selection .panelIdentity b{font-size:clamp(34px,4vw,60px)}
+.selectionScene[data-scroll-scenes] .selection article:focus-visible{outline:3px solid #be673e;outline-offset:5px;z-index:4;transform:none}
+.choose header[data-entered] h2>span{animation:none;transform:translateX(calc((1 - var(--arrival,1)) * -70px))}
+.choose header[data-entered] h2>em{animation:none;transform:translateX(calc((1 - var(--arrival,1)) * 70px))}
+}
+@media(max-width:700px) and (prefers-reduced-motion:no-preference){
+.selection article[data-entered]{animation:mobileChapter 700ms cubic-bezier(.16,.7,.2,1) both}
+@keyframes mobileChapter{from{transform:translateY(28px) scale(.96);opacity:.65}to{transform:none;opacity:1}}
+}
+@media print{.page :global(.skip-link){display:none!important}.page :global([data-reveal]){opacity:1!important;transform:none!important;filter:none!important}.selectionScene>header,.selectionScene[data-scroll-scenes] .selection article{position:static;transform:none}}
