@@ -56,6 +56,7 @@ test('native folds keep SSR answers, semantic controls and keyboard activation',
 });
 test('narrative CSS has focus equivalents, mobile fallback and reduced-motion override',()=>{
   const css=readFileSync('app/boutique-plantes-lille/boutique.module.css','utf8');
+  assert.doesNotMatch(css,/h2 br\{display:none\}/,'Keep a word boundary when the question heading wraps on mobile');
   for(const rule of [':focus-within',':focus-visible','prefers-reduced-motion:reduce','animation:none!important','transition:none!important','.serviceScene>header{position:static','@media(hover:hover)']) assert.ok(css.includes(rule),rule);
   assert.match(page,/article tabIndex=\{0\}/);
   assert.match(page,/li key=\{factor\} tabIndex=\{0\}/);

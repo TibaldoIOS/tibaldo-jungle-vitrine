@@ -80,7 +80,7 @@
 .heroCopy>.lead{animation:arrive 340ms 140ms both}.heroCopy>.actions,.heroCopy>.opening{animation:arrive 350ms 180ms both}
 .page [data-entered]{animation:ink 450ms both}.selection article:nth-child(2)[data-entered]{animation-delay:70ms}.selection article:nth-child(3)[data-entered]{animation-delay:140ms}.visit [data-entered]{animation-duration:400ms}.questions details[open] .answer{animation:arrive 220ms both}
 }
-@media(max-width:1050px){.serviceScene{gap:32px}.actionStage>span{font-size:42px}.questionScene{grid-template-columns:1fr;gap:6px}.questionScene>header h2 br{display:none}}
+@media(max-width:1050px){.serviceScene{gap:32px}.actionStage>span{font-size:42px}.questionScene{grid-template-columns:1fr;gap:6px}}
 @media(max-width:900px){.selection{gap:8px}.selection article{padding:20px 16px}.panelIdentity b{font-size:25px}.chooseBottom{gap:35px}}
 @media(max-width:700px){
 .selection{display:block;margin-top:24px}.selection article{padding:20px;margin-top:10px;transform:none!important}.selection article:nth-child(2){margin-left:10px}.selection article:nth-child(3){margin-left:20px}
