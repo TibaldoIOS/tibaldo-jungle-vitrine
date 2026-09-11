@@ -25,7 +25,14 @@ export default function NarrativeMotion() {
       steps.forEach(step => step.toggleAttribute('data-current', step === current.target));
     }, { rootMargin: '-20% 0px -45% 0px', threshold: 0 });
     steps.forEach(step => journey.observe(step));
-    return () => { observer.disconnect(); journey.disconnect(); };
+    const chapters = [...document.querySelectorAll('#selection article')];
+    const selection = new IntersectionObserver(entries => {
+      const current = entries.filter(entry => entry.isIntersecting)
+        .sort((a, b) => Math.abs(a.boundingClientRect.top - window.innerHeight * .35) - Math.abs(b.boundingClientRect.top - window.innerHeight * .35))[0];
+      if (current) chapters.forEach(chapter => chapter.toggleAttribute('data-current', chapter === current.target));
+    }, { rootMargin: '-15% 0px -40% 0px', threshold: 0 });
+    chapters.forEach(chapter => selection.observe(chapter));
+    return () => { observer.disconnect(); journey.disconnect(); selection.disconnect(); };
   }, []);
   return null;
 }

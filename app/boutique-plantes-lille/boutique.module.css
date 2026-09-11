@@ -170,4 +170,31 @@
 .questionScene{padding-top:40px;padding-bottom:40px}.questions summary{grid-template-columns:20px 1fr 32px;gap:9px;padding:22px 0}.questions summary h3{font-size:23px}.questions details[open] .answer{margin-left:28px;padding-left:16px}
 }
 @media(prefers-reduced-motion:reduce){.selection article{translate:none!important}.services article>div{transform:none!important}}
-@media print{.page :global(.skip-link){display:none!important}.page :global([data-reveal]){opacity:1!important;transform:none!important;filter:none!important}}
+/* One continuous selection journey; native scrolling, never a pinned viewport. */
+.selectionScene{position:relative;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.4fr);gap:7%;align-items:start}
+.selectionScene>header{position:sticky;top:72px;padding-bottom:32px}
+.selectionScene>header h2{font-size:clamp(32px,3.3vw,48px)}
+.selection{position:relative;margin-top:0;padding-left:30px;border-left:1px solid #a9b59b}
+.selection article,.selection article:nth-child(2),.selection article:nth-child(3){display:block;padding:28px 0 40px;min-height:0;border-top:0;margin:0;background:transparent}
+.selection article:before{content:'';position:absolute;left:-36px;top:39px;width:10px;height:10px;border:1px solid #748460;border-radius:50%;background:#f7f5ef}
+.selection .panelIdentity{display:flex;align-items:baseline;gap:14px;margin-bottom:20px}
+.selection .panelIdentity b{font-size:clamp(36px,4.4vw,64px);padding-left:0}
+.selection article>p{max-width:48ch;margin-top:12px}
+.selection article:last-child{padding-bottom:8px}
+.selection article[data-current]:before{background:#536c3c;box-shadow:0 0 0 5px #e5eadb}
+.selection article[data-current] .panelIdentity b{color:#536c3c}
+.choose:before{background:radial-gradient(ellipse at 75% 0,#43604480,transparent 70%)}
+@media(min-width:701px) and (prefers-reduced-motion:no-preference){
+.choose header[data-entered] h2>span{animation:phraseLeft 900ms cubic-bezier(.2,.7,.2,1) both}
+.choose header[data-entered] h2>em{animation:phraseRight 1100ms cubic-bezier(.2,.7,.2,1) both}
+@keyframes phraseLeft{from{transform:translateX(-22px)}to{transform:none}}
+@keyframes phraseRight{from{transform:translateX(22px)}to{transform:none}}
+}
+@media(max-width:700px){
+.selectionScene{display:block}.selectionScene>header{position:static;padding-bottom:0}
+.selection{margin-top:28px;padding-left:21px}
+.selection article,.selection article:nth-child(2),.selection article:nth-child(3){padding:16px 0 28px}
+.selection article:before{left:-27px;top:26px}
+.selection .panelIdentity{gap:10px;margin-bottom:13px}.selection .panelIdentity b{font-size:clamp(32px,9vw,40px)}
+}
+@media print{.page :global(.skip-link){display:none!important}.page :global([data-reveal]){opacity:1!important;transform:none!important;filter:none!important}.selectionScene>header{position:static}}
