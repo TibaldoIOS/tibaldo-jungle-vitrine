@@ -38,6 +38,33 @@ test('only commercial coordinates change in canonical identity; metadata and inb
   assert.equal(readFileSync('lib/jungle-local-identity.ts','utf8'),old.replace('50.5872384','50.6251203').replace('3.0572544','3.0394823'));
   const oldPage=execFileSync('git',['show',`${base}:app/boutique-plantes-lille/page.tsx`],{encoding:'utf8'});
   assert.equal(page.match(/const title[\s\S]*?const services/)?.[0],oldPage.match(/const title[\s\S]*?const services/)?.[0]);
-  assert.equal(page.match(/<h1>[\s\S]*?<\/h1>/)?.[0],oldPage.match(/<h1>[\s\S]*?<\/h1>/)?.[0]);
+  assert.equal(page.match(/<h1>[\s\S]*?<\/h1>/)?.[0].replace(/<[^>]+>/g,''),oldPage.match(/<h1>[\s\S]*?<\/h1>/)?.[0].replace(/<[^>]+>/g,''));
   for(const path of ['app/plantes/GoldenGenusHub.tsx','app/services/page.tsx','app/rempotage/page.tsx','app/pots-cache-pots-lille/page.tsx','app/sos-plantes/page.tsx']) assert.equal(execFileSync('git',['diff',base,'--',path],{encoding:'utf8'}),'');
+});
+test('Wave 1.1 copy, services, questions and local identity are locked',()=>{
+  const base='ff31edf5b878dd60a43277d68708aef5fd41debe';
+  const old=execFileSync('git',['show',`${base}:app/boutique-plantes-lille/page.tsx`],{encoding:'utf8'});
+  assert.equal(page.match(/const services[\s\S]*?export default/)?.[0],old.match(/const services[\s\S]*?export default/)?.[0]);
+  for(const paragraph of old.matchAll(/<p(?: [^>]*)?>([^<{]+)<\/p>/g)) assert.ok(page.includes(paragraph[1]),paragraph[1]);
+  assert.equal(execFileSync('git',['diff',base,'--','lib/jungle-local-identity.ts'],{encoding:'utf8'}),'');
+});
+test('native folds keep SSR answers, semantic controls and keyboard activation',()=>{
+  assert.match(page,/<details key=\{question\}>/);
+  assert.match(page,/<summary>/);
+  assert.match(page,/<p>\{answer\}<\/p>/);
+  assert.doesNotMatch(page,/onMouseEnter|onTouchStart|preventDefault|dangerouslySetInnerHTML.*answer/);
+});
+test('narrative CSS has focus equivalents, mobile fallback and reduced-motion override',()=>{
+  const css=readFileSync('app/boutique-plantes-lille/boutique.module.css','utf8');
+  for(const rule of [':focus-within',':focus-visible','prefers-reduced-motion:reduce','animation:none!important','transition:none!important','.serviceScene>header{position:static','@media(hover:hover)']) assert.ok(css.includes(rule),rule);
+  assert.match(page,/article tabIndex=\{0\}/);
+  assert.match(page,/li key=\{factor\} tabIndex=\{0\}/);
+});
+test('motion is progressive enhancement, finite and scoped; no media or dependency change',()=>{
+  const motion=readFileSync('app/boutique-plantes-lille/NarrativeMotion.tsx','utf8');
+  assert.match(motion,/reduced.matches/);
+  assert.match(motion,/observer.unobserve/);
+  assert.doesNotMatch(motion,/setInterval|requestAnimationFrame|style.opacity/);
+  const base='ff31edf5b878dd60a43277d68708aef5fd41debe';
+  for(const path of ['package.json','package-lock.json','public','app/SiteChrome.tsx','app/ScrollReveal.tsx']) assert.equal(execFileSync('git',['diff',base,'--',path],{encoding:'utf8'}),'',path);
 });
