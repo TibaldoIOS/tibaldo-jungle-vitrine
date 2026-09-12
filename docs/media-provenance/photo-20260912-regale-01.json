@@ -1,0 +1,49 @@
+{
+  "batch_id": "PHOTO-20260912-REGALE-01",
+  "photos": [
+    {
+      "owner_identity": "Anthurium regale",
+      "canonical_slug": "plantes/anthurium/regale",
+      "original_filename": "anthurium regale.png",
+      "original_sha256": "56fb3d97bd0bde5cdbfde64186d3da2f54857fa51770066de4b0c1c46e01dedc",
+      "asset_path": "/owner-media/anthurium-regale/anthurium-regale-feuille-detail.webp",
+      "public_path": "/media/owner-media/anthurium-regale/anthurium-regale-feuille-detail.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/anthurium-regale/anthurium-regale-feuille-detail.webp",
+      "sha256": "fe05c888953418ad06c5afb3da57d83a1bde08a2374958f21d41724f2df9ed0f",
+      "alt": "Grande feuille d’Anthurium regale vue de face, au limbe vert foncé en cœur parcouru de nervures crème.",
+      "credit": "Photo : TIBALDO",
+      "creator": "TIBALDO",
+      "provenance": "OWNER",
+      "rights": "Standing Owner publication authorization; identity from exact attachment/original byte match",
+      "role": "LEAF_DETAIL",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "bytes": 261720,
+      "previous_gallery": [
+        {
+          "src": "/photo-reelle-a-venir.svg",
+          "alt": "Photographie réelle de Anthurium regale à ajouter",
+          "caption": "Photographie réelle du spécimen Anthurium regale à réaliser au Studio avant publication.",
+          "width": 1200,
+          "height": 1500
+        }
+      ],
+      "private_metadata_removed": true
+    }
+  ],
+  "public_source_before": "616a912a9ce854a905468a6ea2e113c58bf2d18b",
+  "public_version_before": 106,
+  "deployment_before": "appgdep_6aa44a5c4e9c81919b0eb84f6650b33d",
+  "processing": "Real WebP quality88 method6, no crop/upscale/generation, private metadata stripped.",
+  "allowed_paths": [
+    "lib/plants/catalog.ts",
+    "app/credits-images/page.tsx",
+    "docs/media-provenance/photo-20260912-regale-01.json",
+    "tests/photo-regale-owner-v1.test.ts",
+    "public/owner-media/anthurium-regale/anthurium-regale-feuille-detail.webp"
+  ],
+  "shop": "PENDING",
+  "caisse": "PENDING"
+}

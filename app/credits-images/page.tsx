@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 };
 
 const credits: readonly [string, string, string, string, string?][] = [
+  ["Anthurium regale", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260912-regale-01/regale"],
   ["Anthurium ‘Delta Force’", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260911-delta-01/delta-force"],
   ["Hero Monstera · collection de feuilles", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/monstera-collection-2026-09-11"],
   ["Epipremnum aureum ‘Marble Queen’", "Photo : TIBALDO", "Photographies botaniques · recadrage et conversion WebP", "owner-provided://tibaldo/marble-queen-2026-09-08"],

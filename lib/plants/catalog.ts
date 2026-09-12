@@ -362,6 +362,27 @@ if (deltaPhotoPlantIndex !== -1) {
 }], mediaNeeds: [] };
 }
 
+// Owner photo wave PHOTO-20260912-REGALE-01.
+const regalePhotoPlantIndex = plants.findIndex((plant) => plant.genre === "anthurium" && plant.slug === "regale");
+if (regalePhotoPlantIndex !== -1) {
+  const plant = plants[regalePhotoPlantIndex];
+  plants[regalePhotoPlantIndex] = { ...plant, gallery: [{
+  "src": "/media/owner-media/anthurium-regale/anthurium-regale-feuille-detail.webp",
+  "alt": "Grande feuille d’Anthurium regale vue de face, au limbe vert foncé en cœur parcouru de nervures crème.",
+  "caption": "Photo : TIBALDO",
+  "width": 1086,
+  "height": 1448,
+  "license": {
+    "status": "verified",
+    "creator": "TIBALDO",
+    "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO",
+    "sourceUrl": "owner-provided://tibaldo/photo-20260912-regale-01/regale",
+    "registryPath": "/credits-images",
+    "note": "Photographie fournie par l’Owner ; identité confirmée par fichier original et SHA256. Provenance : docs/media-provenance/photo-20260912-regale-01.json."
+  }
+}], mediaNeeds: [] };
+}
+
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
 export const getPlantsByGenre = (genre: string) => plants.filter((plant) => plant.genre === genre);
