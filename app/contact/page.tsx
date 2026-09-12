@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import LocalPresence from "../LocalPresence";
 import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
@@ -29,6 +30,9 @@ export default function ContactPage() {
       <div className="contact-map-copy" data-reveal>
         <p className="section-kicker">Votre itinéraire</p>
         <h2>Venez découvrir<br />le Studio Végétal.</h2>
+        <p>Notre jardinerie urbaine ouvre à Lille le 26 septembre 2026 : un lieu pour choisir vos plantes, trouver un substrat adapté et demander conseil.</p>
+        <p>Besoin d’une <Link href="/livraison-plantes-lille">livraison de plantes</Link> ou de <Link href="/fleurs-sur-commande-lille">fleurs sur commande</Link> ? Contactez le Studio pour préparer votre demande.</p>
+        <p>Pour la location de matériel de soirée, retrouvez notre activité dédiée sur <a href="https://evenement.tibaldo.fr/">TIBALDO Événement</a>.</p>
         <div className="contact-details">
           <p><span>Adresse</span><strong>{jungleLocalIdentity.streetAddress}<br />{jungleLocalIdentity.postalCode} {jungleLocalIdentity.city}</strong></p>
           <p><span>Horaires</span><strong>Mardi · 14h–19h<br />Mercredi–samedi · 10h–19h<br />Dimanche · 10h–13h</strong></p>

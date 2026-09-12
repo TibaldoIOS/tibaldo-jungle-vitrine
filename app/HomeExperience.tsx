@@ -6,7 +6,7 @@ import HomeUniverseCarousel from "./HomeUniverseCarousel";
 const services = [
   { number: "01", title: "SOS Plantes", copy: "Comprendre les symptômes avant d’agir.", href: "/sos-plantes" },
   { number: "02", title: "Rempotage", copy: "Observer les racines et ajuster le mélange.", href: "/rempotage" },
-  { number: "03", title: "Livraison", copy: "Faire arriver votre plante à Lille et dans la MEL.", href: "/livraison-plantes-lille" },
+  { number: "03", title: "Livraison de plantes", copy: "Faire arriver votre plante à Lille et dans la MEL.", href: "/livraison-plantes-lille" },
   { number: "04", title: "Mur végétal naturel", copy: "Créer un paysage vivant sur mesure, avec ou sans entretien.", href: "/mur-vegetal-naturel-lille" },
 ];
 
@@ -30,7 +30,7 @@ export default function HomeExperience() {
 
       <section className="home-studio-compact shell" data-reveal>
         <figure><Image unoptimized src="/media/projet-boutique-tibaldo-jungle-lille.webp" alt="Création du Studio Végétal Tibaldo Jungle à Lille" width="1200" height="900" loading="lazy" /></figure>
-        <div><p className="section-kicker">Le Studio Végétal</p><h2>À Lille,<br /><em>près de vos plantes.</em></h2><p>Tibaldo Jungle est une boutique de plantes rares et exotiques, mais aussi un lieu de conseil. La sélection, le rempotage et les substrats sont pensés ensemble pour éviter les achats inutiles et accompagner durablement chaque plante.</p><div className="home-studio-facts"><span><small>Adresse</small>3 place de l’Arbonnoise</span><span><small>Ouverture</small>26 septembre 2026</span></div><Link className="button button-green" href="/contact">Préparer ma visite <Arrow /></Link></div>
+        <div><p className="section-kicker">Le Studio Végétal</p><h2>À Lille,<br /><em>près de vos plantes.</em></h2><p>Tibaldo Jungle est un magasin de plantes rares et exotiques, mais aussi un lieu de conseil. La sélection, le rempotage et les substrats sont pensés ensemble pour éviter les achats inutiles et accompagner durablement chaque plante.</p><p>Pour offrir ou préparer un événement, découvrez aussi nos <Link href="/fleurs-sur-commande-lille">fleurs sur commande</Link>, avec retrait au Studio ou livraison selon votre projet.</p><div className="home-studio-facts"><span><small>Adresse</small>3 place de l’Arbonnoise</span><span><small>Ouverture</small>26 septembre 2026</span></div><Link className="button button-green" href="/contact">Préparer ma visite <Arrow /></Link></div>
       </section>
 
       <section className="home-expertise-strip" aria-label="L’approche Tibaldo Jungle">
