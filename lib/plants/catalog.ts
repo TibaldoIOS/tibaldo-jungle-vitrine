@@ -383,6 +383,27 @@ if (regalePhotoPlantIndex !== -1) {
 }], mediaNeeds: [] };
 }
 
+// Owner photo wave PHOTO-20260912-PHOENIX-01.
+const phoenixPhotoPlantIndex = plants.findIndex((plant) => plant.genre === "anthurium" && plant.slug === "papillilaminum-dark-phoenix");
+if (phoenixPhotoPlantIndex !== -1) {
+  const plant = plants[phoenixPhotoPlantIndex];
+  plants[phoenixPhotoPlantIndex] = { ...plant, gallery: [{
+  "src": "/media/owner-media/anthurium-papillilaminum-dark-phoenix/anthurium-papillilaminum-dark-phoenix-plante-en-pot.webp",
+  "alt": "Anthurium papillilaminum × ‘Dark Phoenix’ en pot sombre, aux grandes feuilles vert foncé au relief marqué.",
+  "caption": "Photo : TIBALDO",
+  "width": 1428,
+  "height": 1101,
+  "license": {
+    "status": "verified",
+    "creator": "TIBALDO",
+    "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO",
+    "sourceUrl": "owner-provided://tibaldo/photo-20260912-phoenix-01/papillilaminum-dark-phoenix",
+    "registryPath": "/credits-images",
+    "note": "Photographie fournie par l’Owner ; identité du croisement confirmée par fichier original et SHA256. Provenance : docs/media-provenance/photo-20260912-phoenix-01.json."
+  }
+}], mediaNeeds: [] };
+}
+
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
 export const getPlantsByGenre = (genre: string) => plants.filter((plant) => plant.genre === genre);

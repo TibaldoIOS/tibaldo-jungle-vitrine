@@ -1,0 +1,49 @@
+{
+  "batch_id": "PHOTO-20260912-PHOENIX-01",
+  "photos": [
+    {
+      "owner_identity": "Anthurium papillilaminum × ‘Dark Phoenix’",
+      "canonical_slug": "plantes/anthurium/papillilaminum-dark-phoenix",
+      "original_filename": "Anthurium papillilaminum × ‘Dark Phoenix.png",
+      "original_sha256": "595d0e7176afd4ace8df326f4ac9906a220bcce22aeb378205e004c291e0b76b",
+      "asset_path": "/owner-media/anthurium-papillilaminum-dark-phoenix/anthurium-papillilaminum-dark-phoenix-plante-en-pot.webp",
+      "public_path": "/media/owner-media/anthurium-papillilaminum-dark-phoenix/anthurium-papillilaminum-dark-phoenix-plante-en-pot.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/anthurium-papillilaminum-dark-phoenix/anthurium-papillilaminum-dark-phoenix-plante-en-pot.webp",
+      "sha256": "b80c230c942d9413fb53b6f47d9110f7cbe4cf912e132f9f799a79af5c7d1d3d",
+      "alt": "Anthurium papillilaminum × ‘Dark Phoenix’ en pot sombre, aux grandes feuilles vert foncé au relief marqué.",
+      "credit": "Photo : TIBALDO",
+      "creator": "TIBALDO",
+      "provenance": "OWNER",
+      "rights": "Standing Owner publication authorization; identity from exact attachment/original byte match",
+      "role": "WHOLE_PLANT",
+      "dimensions": [
+        1428,
+        1101
+      ],
+      "bytes": 281378,
+      "previous_gallery": [
+        {
+          "src": "/photo-reelle-a-venir.svg",
+          "alt": "Photographie réelle de Anthurium papillilaminum × ‘Dark Phoenix’ à ajouter",
+          "caption": "Photographie réelle du spécimen Anthurium papillilaminum × ‘Dark Phoenix’ à réaliser au Studio avant publication.",
+          "width": 1200,
+          "height": 1500
+        }
+      ],
+      "private_metadata_removed": true
+    }
+  ],
+  "public_source_before": "9b8b5f16fd1f28c1da39af4cdd752020286122ed",
+  "public_version_before": 107,
+  "deployment_before": "appgdep_6aa521d3ead48191a587e56b8cd52ed3",
+  "processing": "Real WebP quality88 method6; no crop/upscale/generation; private metadata stripped.",
+  "allowed_paths": [
+    "lib/plants/catalog.ts",
+    "app/credits-images/page.tsx",
+    "docs/media-provenance/photo-20260912-phoenix-01.json",
+    "tests/photo-phoenix-owner-v1.test.ts",
+    "public/owner-media/anthurium-papillilaminum-dark-phoenix/anthurium-papillilaminum-dark-phoenix-plante-en-pot.webp"
+  ],
+  "shop": "PENDING",
+  "caisse": "PENDING"
+}
