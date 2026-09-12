@@ -445,6 +445,26 @@ if (forgetiiPhotoPlantIndex !== -1) {
 }], mediaNeeds: [] };
 }
 
+const papillilaminumPhotoPlantIndex = plants.findIndex((plant) => plant.genre === "anthurium" && plant.slug === "papillilaminum");
+if (papillilaminumPhotoPlantIndex !== -1) {
+  const plant = plants[papillilaminumPhotoPlantIndex];
+  plants[papillilaminumPhotoPlantIndex] = { ...plant, gallery: [{
+  "src": "/media/owner-media/anthurium-papillilaminum/anthurium-papillilaminum-plante-en-pot.webp",
+  "alt": "Anthurium papillilaminum en pot blanc sur fond sombre, aux longues feuilles vert foncé parcourues de fines nervures claires.",
+  "caption": "Photo : TIBALDO",
+  "width": 1536,
+  "height": 1024,
+  "license": {
+    "status": "verified",
+    "creator": "TIBALDO",
+    "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO",
+    "sourceUrl": "owner-provided://tibaldo/photo-20260912-papillilaminum-01/papillilaminum",
+    "registryPath": "/credits-images",
+    "note": "Photographie fournie par l’Owner ; identité confirmée par fichier original et comparaison SHA256. Provenance : docs/media-provenance/photo-20260912-papillilaminum-01.json."
+  }
+}], mediaNeeds: [] };
+}
+
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
 export const getPlantsByGenre = (genre: string) => plants.filter((plant) => plant.genre === genre);

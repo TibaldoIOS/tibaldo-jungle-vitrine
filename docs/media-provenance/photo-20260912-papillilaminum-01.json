@@ -1,0 +1,54 @@
+{
+  "batch_id": "PHOTO-20260912-PAPILLILAMINUM-01",
+  "photos": [
+    {
+      "owner_identity": "Anthurium papillilaminum",
+      "canonical_slug": "plantes/anthurium/papillilaminum",
+      "original_filename": "Anthurium papillilaminum.png",
+      "original_sha256": "0db2929b6f7b4721bedfea5e88b40ec1846777744c61404083efe2af54f77bb1",
+      "asset_path": "/owner-media/anthurium-papillilaminum/anthurium-papillilaminum-plante-en-pot.webp",
+      "public_path": "/media/owner-media/anthurium-papillilaminum/anthurium-papillilaminum-plante-en-pot.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/anthurium-papillilaminum/anthurium-papillilaminum-plante-en-pot.webp",
+      "sha256": "883bea4cbcd9db699f60a6d38af36b0056ab9de7b88d61f6150a69baa80cb14c",
+      "alt": "Anthurium papillilaminum en pot blanc sur fond sombre, aux longues feuilles vert foncé parcourues de fines nervures claires.",
+      "credit": "Photo : TIBALDO",
+      "creator": "TIBALDO",
+      "provenance": "OWNER",
+      "rights": "Standing Owner authorization; exact named original byte match",
+      "role": "WHOLE_PLANT",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 115172,
+      "previous_gallery": [
+        {
+          "src": "/photo-reelle-a-venir.svg",
+          "alt": "Illustration botanique décorative de Anthurium papillilaminum",
+          "caption": "Média non documentaire : aucune photographie de Anthurium papillilaminum n’est actuellement vérifiée dans le registre du dépôt.",
+          "width": 1200,
+          "height": 1500,
+          "license": {
+            "status": "media-gap",
+            "registryPath": "/credits-images",
+            "note": "Placeholder existant ; ne pas le traiter comme une preuve d’identification botanique."
+          }
+        }
+      ],
+      "private_metadata_removed": true
+    }
+  ],
+  "public_source_before": "00b19d71bb94a36c02ea8e60f1166dfb7f926608",
+  "public_version_before": 110,
+  "deployment_before": "appgdep_6aa53879e19c81919a725919b770a56d",
+  "processing": "Real WebP quality88 method6; no crop/upscale/generation; private metadata stripped.",
+  "allowed_paths": [
+    "lib/plants/catalog.ts",
+    "app/credits-images/page.tsx",
+    "docs/media-provenance/photo-20260912-papillilaminum-01.json",
+    "tests/photo-papillilaminum-owner-v1.test.ts",
+    "public/owner-media/anthurium-papillilaminum/anthurium-papillilaminum-plante-en-pot.webp"
+  ],
+  "shop": "PENDING",
+  "caisse": "PENDING"
+}
