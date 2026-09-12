@@ -1,0 +1,54 @@
+{
+  "batch_id": "PHOTO-20260912-FORGETII-01",
+  "photos": [
+    {
+      "owner_identity": "Anthurium forgetii",
+      "canonical_slug": "plantes/anthurium/forgetii",
+      "original_filename": "Anthurium forgetii.png",
+      "original_sha256": "8cfbb4a5e30074de3163bb2978bc6b3b8b6ced0aadfc50c652986171d2eb0d64",
+      "asset_path": "/owner-media/anthurium-forgetii/anthurium-forgetii-feuillage-detail.webp",
+      "public_path": "/media/owner-media/anthurium-forgetii/anthurium-forgetii-feuillage-detail.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/anthurium-forgetii/anthurium-forgetii-feuillage-detail.webp",
+      "sha256": "892bf590044ed9d299e4a812d672eff982ef03edb35046bd9dc307956f605e77",
+      "alt": "Feuilles superposées d’Anthurium forgetii, aux motifs vert clair rayonnant autour des nervures.",
+      "credit": "Photo : TIBALDO",
+      "creator": "TIBALDO",
+      "provenance": "OWNER",
+      "rights": "Standing Owner authorization; exact named original byte match",
+      "role": "LEAF_DETAIL",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 373832,
+      "previous_gallery": [
+        {
+          "src": "/photo-reelle-a-venir.svg",
+          "alt": "Illustration botanique décorative de Anthurium forgetii",
+          "caption": "Média non documentaire : aucune photographie de Anthurium forgetii n’est actuellement vérifiée dans le registre du dépôt.",
+          "width": 1200,
+          "height": 1500,
+          "license": {
+            "status": "media-gap",
+            "registryPath": "/credits-images",
+            "note": "Placeholder existant ; ne pas le traiter comme une preuve d’identification botanique."
+          }
+        }
+      ],
+      "private_metadata_removed": true
+    }
+  ],
+  "public_source_before": "21697d534096c2b427ff66b49e6014a272062082",
+  "public_version_before": 109,
+  "deployment_before": "appgdep_6aa52ed9057c8191974cc89115824bd1",
+  "processing": "Real WebP quality88 method6; no crop/upscale/generation; private metadata stripped.",
+  "allowed_paths": [
+    "lib/plants/catalog.ts",
+    "app/credits-images/page.tsx",
+    "docs/media-provenance/photo-20260912-forgetii-01.json",
+    "tests/photo-forgetii-owner-v1.test.ts",
+    "public/owner-media/anthurium-forgetii/anthurium-forgetii-feuillage-detail.webp"
+  ],
+  "shop": "PENDING",
+  "caisse": "PENDING"
+}

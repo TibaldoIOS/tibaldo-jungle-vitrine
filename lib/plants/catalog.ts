@@ -425,6 +425,26 @@ if (silverPhotoPlantIndex !== -1) {
 }], mediaNeeds: [] };
 }
 
+const forgetiiPhotoPlantIndex = plants.findIndex((plant) => plant.genre === "anthurium" && plant.slug === "forgetii");
+if (forgetiiPhotoPlantIndex !== -1) {
+  const plant = plants[forgetiiPhotoPlantIndex];
+  plants[forgetiiPhotoPlantIndex] = { ...plant, gallery: [{
+  "src": "/media/owner-media/anthurium-forgetii/anthurium-forgetii-feuillage-detail.webp",
+  "alt": "Feuilles superposées d’Anthurium forgetii, aux motifs vert clair rayonnant autour des nervures.",
+  "caption": "Photo : TIBALDO",
+  "width": 1536,
+  "height": 1024,
+  "license": {
+    "status": "verified",
+    "creator": "TIBALDO",
+    "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO",
+    "sourceUrl": "owner-provided://tibaldo/photo-20260912-forgetii-01/forgetii",
+    "registryPath": "/credits-images",
+    "note": "Photographie fournie par l’Owner ; identité confirmée par fichier original et comparaison SHA256. Provenance : docs/media-provenance/photo-20260912-forgetii-01.json."
+  }
+}], mediaNeeds: [] };
+}
+
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
 export const getPlantsByGenre = (genre: string) => plants.filter((plant) => plant.genre === genre);
