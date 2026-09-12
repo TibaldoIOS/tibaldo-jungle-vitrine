@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "./IphoneSafariUx.css";
 import ConversionDock from "./ConversionDock";
 import ConversionTracker from "./ConversionTracker";
 import { BetaEnvironmentBanner } from "./BetaEnvironmentBanner";

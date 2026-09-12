@@ -70,10 +70,16 @@ export default function ScrollReveal() {
     const updateMotion = () => {
       animationFrame = 0;
       const viewportHeight = window.innerHeight;
+      // Complete layout reads before any style writes in this frame.
+      const heroHeight = hero?.offsetHeight ?? 1;
+      const parallaxFrames = parallaxElements.map((element) => ({
+        element,
+        rect: (element.parentElement ?? element).getBoundingClientRect(),
+      }));
 
       if (hero) {
         const progress = Math.min(
-          Math.max(window.scrollY / Math.max(hero.offsetHeight, 1), 0),
+          Math.max(window.scrollY / Math.max(heroHeight, 1), 0),
           1,
         );
 
@@ -86,9 +92,7 @@ export default function ScrollReveal() {
         );
       }
 
-      parallaxElements.forEach((element) => {
-        const frame = element.parentElement ?? element;
-        const rect = frame.getBoundingClientRect();
+      parallaxFrames.forEach(({ element, rect }) => {
 
         if (rect.bottom < -120 || rect.top > viewportHeight + 120) return;
 

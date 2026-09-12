@@ -1,0 +1,33 @@
+/* Bounded Safari hotfix: deterministic icon, measured dock clearance, composited motion. */
+:root { --jungle-dock-clearance: calc(80px + env(safe-area-inset-bottom, 0px)); }
+html:has(.conversion-dock) { scroll-padding-bottom: var(--jungle-dock-clearance); }
+body:has(.conversion-dock) { padding-bottom: var(--jungle-dock-clearance); }
+.public-preopening-signal a { display: inline-flex; align-items: center; gap: .3rem; }
+.public-preopening-signal .jungle-arrow-icon { flex: 0 0 16px; width: 16px; height: 16px; }
+
+@media (max-width: 800px) {
+  .conversion-dock { background: #062f22; backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .conversion-dock a { min-height: 44px; }
+  .home-safari-ux .hero > .hero-content { padding-bottom: var(--jungle-dock-clearance); }
+  .home-safari-ux .home-hub { padding-bottom: max(75px, var(--jungle-dock-clearance)); }
+  /* Keep arrivals and parallax; remove only full-surface animated filters. */
+  .home-safari-ux .hero-photo { animation-name: safari-photo-arrival; }
+  .home-safari-ux .hero-content .eyebrow,
+  .home-safari-ux .hero-copy,
+  .home-safari-ux .hero-actions { animation-name: safari-content-arrival; }
+  .reveal-ready .home-safari-ux [data-reveal] {
+    filter: none;
+    transition-property: opacity, transform;
+    will-change: auto;
+  }
+  /* Static painted texture; the existing pseudo-element transforms still animate. */
+  .home-safari-ux .opening-photo { animation: none; }
+}
+@keyframes safari-photo-arrival {
+  from { transform: translate3d(0, var(--hero-photo-y), 0) scale(calc(var(--hero-photo-scale) + .07)); }
+  to { transform: translate3d(0, var(--hero-photo-y), 0) scale(var(--hero-photo-scale)); }
+}
+@keyframes safari-content-arrival {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}

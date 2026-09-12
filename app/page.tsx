@@ -31,7 +31,7 @@ const structuredData = {
 
 export default function Home() {
   return (
-    <main>
+    <main className="home-safari-ux">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <ScrollReveal />
       <section className={`hero ${promoStyles.hero}`} id="accueil">
