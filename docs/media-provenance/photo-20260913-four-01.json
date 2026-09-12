@@ -1,0 +1,120 @@
+{
+  "batch_id": "PHOTO-20260913-FOUR-01",
+  "public_source_before": "3a50b9aa22953c8085b36c06ab75655f42fe6780",
+  "public_version_before": 116,
+  "photos": [
+    {
+      "original_filename": "Anthurium warocqueanum.png",
+      "original_sha256": "aefd30807222b2dca834470700d328bad7ef888dd151cc50448312c06ca37870",
+      "filename": "anthurium-warocqueanum-feuillage-en-serre.webp",
+      "sha256": "6267922a111906c01d42485dfde887d8974b7929a161bf36f1fa3b9fee60d936",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "alt": "Anthurium warocqueanum en serre, aux longues feuilles pendantes vert foncé marquées de nervures claires.",
+      "credit": "Photo : TIBALDO",
+      "provenance": "OWNER",
+      "canonical_slug": "plantes/anthurium/warocqueanum",
+      "status": "READY",
+      "source_metadata_keys": [],
+      "owner_identity": "Anthurium warocqueanum",
+      "asset_path": "/owner-media/anthurium-warocqueanum/anthurium-warocqueanum-feuillage-en-serre.webp",
+      "public_path": "/media/owner-media/anthurium-warocqueanum/anthurium-warocqueanum-feuillage-en-serre.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/anthurium-warocqueanum/anthurium-warocqueanum-feuillage-en-serre.webp",
+      "bytes": 310502,
+      "creator": "TIBALDO",
+      "rights": "Autorisation Owner permanente",
+      "role": "HABIT",
+      "private_metadata_removed": true
+    },
+    {
+      "original_filename": "Anthurium luxurians .png",
+      "original_sha256": "2fb726a7510d91cf8e3cdc2490009a6f785fd8c69e9f537937132cda177cd599",
+      "filename": "anthurium-luxurians-feuilles-gaufrees.webp",
+      "sha256": "64a868a78e1e963c229a9cecae9d34cf266c43a34989aae350592c00d2db3828",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alt": "Feuilles gaufrées d’Anthurium luxurians, l’une cuivrée et l’autre vert foncé aux reflets argentés.",
+      "credit": "Photo : TIBALDO",
+      "provenance": "OWNER",
+      "canonical_slug": "plantes/anthurium/luxurians",
+      "status": "READY",
+      "source_metadata_keys": [],
+      "owner_identity": "Anthurium luxurians",
+      "asset_path": "/owner-media/anthurium-luxurians/anthurium-luxurians-feuilles-gaufrees.webp",
+      "public_path": "/media/owner-media/anthurium-luxurians/anthurium-luxurians-feuilles-gaufrees.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/anthurium-luxurians/anthurium-luxurians-feuilles-gaufrees.webp",
+      "bytes": 283648,
+      "creator": "TIBALDO",
+      "rights": "Autorisation Owner permanente",
+      "role": "HABIT",
+      "private_metadata_removed": true
+    },
+    {
+      "original_filename": "colocasia metalica.png",
+      "canonical_slug": "plantes/colocasia/metallica",
+      "filename": "colocasia-metallica-feuillage-exterieur.webp",
+      "alt": "Grandes feuilles de Colocasia ‘Metallica’ aux reflets bleutés, portées par des pétioles sombres en extérieur.",
+      "original_sha256": "36dc90e9f5468e2a42fed6bf39e74e317d92fd67842292ab23811a47a6594ea8",
+      "source_metadata_keys": [],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "owner_identity": "colocasia metalica",
+      "asset_path": "/owner-media/colocasia-metallica/colocasia-metallica-feuillage-exterieur.webp",
+      "public_path": "/media/owner-media/colocasia-metallica/colocasia-metallica-feuillage-exterieur.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/colocasia-metallica/colocasia-metallica-feuillage-exterieur.webp",
+      "sha256": "e2e1ba22c677483074436dab7a314c665985397c446f747ace6817349d2decb3",
+      "bytes": 282350,
+      "credit": "Photo : TIBALDO",
+      "creator": "TIBALDO",
+      "provenance": "OWNER",
+      "rights": "Autorisation Owner permanente",
+      "role": "HABIT",
+      "private_metadata_removed": true,
+      "status": "READY"
+    },
+    {
+      "original_filename": "Dracaena trifasciata ‘Black Diamond’.png",
+      "canonical_slug": "plantes/sansevieria/black-diamond",
+      "filename": "dracaena-trifasciata-black-diamond-feuilles-detail.webp",
+      "alt": "Feuilles dressées et pointues de Dracaena trifasciata ‘Black Diamond’, marbrées de vert clair sur fond vert sombre.",
+      "original_sha256": "9d0b34ca1dc9541b1673add993125c83e7bad2ebf7ff5c931a7dd8e7479082fa",
+      "source_metadata_keys": [],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "owner_identity": "Dracaena trifasciata ‘Black Diamond’",
+      "asset_path": "/owner-media/sansevieria-black-diamond/dracaena-trifasciata-black-diamond-feuilles-detail.webp",
+      "public_path": "/media/owner-media/sansevieria-black-diamond/dracaena-trifasciata-black-diamond-feuilles-detail.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/sansevieria-black-diamond/dracaena-trifasciata-black-diamond-feuilles-detail.webp",
+      "sha256": "28216f3431bc78a7ca55efd778d574496e8a8376ba89e4ae56a61c50dbda015f",
+      "bytes": 214942,
+      "credit": "Photo : TIBALDO",
+      "creator": "TIBALDO",
+      "provenance": "OWNER",
+      "rights": "Autorisation Owner permanente",
+      "role": "LEAF_DETAIL",
+      "private_metadata_removed": true,
+      "status": "READY"
+    }
+  ],
+  "processing": "WebP quality88 method6, orientation, no crop, no upscale, no generative alteration; metadata stripped",
+  "shop_status": "EXACT_MAPPING_NOT_PROVEN",
+  "caisse_status": "EXACT_MAPPING_NOT_PROVEN",
+  "allowed_paths": [
+    "docs/media-provenance/photo-20260913-four-01.json",
+    "lib/plants/catalog.ts",
+    "app/credits-images/page.tsx",
+    "tests/photo-four-owner-v1.test.ts",
+    "public/owner-media/anthurium-warocqueanum/anthurium-warocqueanum-feuillage-en-serre.webp",
+    "public/owner-media/anthurium-luxurians/anthurium-luxurians-feuilles-gaufrees.webp",
+    "public/owner-media/colocasia-metallica/colocasia-metallica-feuillage-exterieur.webp",
+    "public/owner-media/sansevieria-black-diamond/dracaena-trifasciata-black-diamond-feuilles-detail.webp"
+  ]
+}

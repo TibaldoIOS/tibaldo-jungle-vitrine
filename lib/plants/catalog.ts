@@ -490,6 +490,30 @@ if (magnificumPhotoPlantIndex !== -1) {
 }], mediaNeeds: [] };
 }
 
+const fourPhotoIndex0 = plants.findIndex(p => p.genre === "anthurium" && p.slug === "warocqueanum");
+if (fourPhotoIndex0 !== -1) {
+ const plant = plants[fourPhotoIndex0];
+ plants[fourPhotoIndex0] = {...plant, gallery: [{"src": "/media/owner-media/anthurium-warocqueanum/anthurium-warocqueanum-feuillage-en-serre.webp", "alt": "Anthurium warocqueanum en serre, aux longues feuilles pendantes vert foncé marquées de nervures claires.", "caption": "Photo : TIBALDO", "width": 1448, "height": 1086, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260913-four-01/warocqueanum", "registryPath": "/credits-images", "note": "Identité Owner confirmée par fichier original et SHA256. Provenance : docs/media-provenance/photo-20260913-four-01.json"}}, ...plant.gallery.filter(m => m.src !== "/photo-reelle-a-venir.svg")], mediaNeeds: []};
+}
+
+const fourPhotoIndex1 = plants.findIndex(p => p.genre === "anthurium" && p.slug === "luxurians");
+if (fourPhotoIndex1 !== -1) {
+ const plant = plants[fourPhotoIndex1];
+ plants[fourPhotoIndex1] = {...plant, gallery: [{"src": "/media/owner-media/anthurium-luxurians/anthurium-luxurians-feuilles-gaufrees.webp", "alt": "Feuilles gaufrées d’Anthurium luxurians, l’une cuivrée et l’autre vert foncé aux reflets argentés.", "caption": "Photo : TIBALDO", "width": 1536, "height": 1024, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260913-four-01/luxurians", "registryPath": "/credits-images", "note": "Identité Owner confirmée par fichier original et SHA256. Provenance : docs/media-provenance/photo-20260913-four-01.json"}}, ...plant.gallery.filter(m => m.src !== "/photo-reelle-a-venir.svg")], mediaNeeds: []};
+}
+
+const fourPhotoIndex2 = plants.findIndex(p => p.genre === "colocasia" && p.slug === "metallica");
+if (fourPhotoIndex2 !== -1) {
+ const plant = plants[fourPhotoIndex2];
+ plants[fourPhotoIndex2] = {...plant, gallery: [{"src": "/media/owner-media/colocasia-metallica/colocasia-metallica-feuillage-exterieur.webp", "alt": "Grandes feuilles de Colocasia ‘Metallica’ aux reflets bleutés, portées par des pétioles sombres en extérieur.", "caption": "Photo : TIBALDO", "width": 1536, "height": 1024, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260913-four-01/metallica", "registryPath": "/credits-images", "note": "Identité Owner confirmée par fichier original et SHA256. Provenance : docs/media-provenance/photo-20260913-four-01.json"}}, ...plant.gallery.filter(m => m.src !== "/photo-reelle-a-venir.svg")], mediaNeeds: []};
+}
+
+const fourPhotoIndex3 = plants.findIndex(p => p.genre === "sansevieria" && p.slug === "black-diamond");
+if (fourPhotoIndex3 !== -1) {
+ const plant = plants[fourPhotoIndex3];
+ plants[fourPhotoIndex3] = {...plant, gallery: [{"src": "/media/owner-media/sansevieria-black-diamond/dracaena-trifasciata-black-diamond-feuilles-detail.webp", "alt": "Feuilles dressées et pointues de Dracaena trifasciata ‘Black Diamond’, marbrées de vert clair sur fond vert sombre.", "caption": "Photo : TIBALDO", "width": 1536, "height": 1024, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260913-four-01/black-diamond", "registryPath": "/credits-images", "note": "Identité Owner confirmée par fichier original et SHA256. Provenance : docs/media-provenance/photo-20260913-four-01.json"}}, ...plant.gallery.filter(m => m.src !== "/photo-reelle-a-venir.svg")], mediaNeeds: []};
+}
+
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
 export const getPlantsByGenre = (genre: string) => plants.filter((plant) =>
