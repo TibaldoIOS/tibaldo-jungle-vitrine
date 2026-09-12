@@ -11,6 +11,8 @@ export default function ScrollReveal() {
       document.querySelectorAll<HTMLElement>("[data-reveal]"),
     );
     const hero = document.querySelector<HTMLElement>(".hero");
+    const home = document.querySelector(".home-safari-ux");
+    const mobileHomeMotion = window.matchMedia("(max-width: 800px)");
     const parallaxElements = Array.from(
       document.querySelectorAll<HTMLElement>("[data-parallax]"),
     );
@@ -114,15 +116,35 @@ export default function ScrollReveal() {
       animationFrame = window.requestAnimationFrame(updateMotion);
     };
 
-    scheduleMotion();
-    window.addEventListener("scroll", scheduleMotion, { passive: true });
-    window.addEventListener("resize", scheduleMotion);
+    // On mobile home, keep one-shot reveals but do not fade readable text or
+    // repaint parallax layers on every finger scroll. Rebind on rotation.
+    const syncMotion = () => {
+      window.removeEventListener("scroll", scheduleMotion);
+      window.removeEventListener("resize", scheduleMotion);
+      if (animationFrame) window.cancelAnimationFrame(animationFrame);
+      animationFrame = 0;
+      if (reducedMotion.matches || (home && mobileHomeMotion.matches)) {
+        ["--hero-photo-y", "--hero-photo-scale", "--hero-content-y", "--hero-content-opacity"].forEach(
+          (property) => hero?.style.removeProperty(property),
+        );
+        parallaxElements.forEach((element) => element.style.removeProperty("--parallax-y"));
+        return;
+      }
+      scheduleMotion();
+      window.addEventListener("scroll", scheduleMotion, { passive: true });
+      window.addEventListener("resize", scheduleMotion);
+    };
+    syncMotion();
+    mobileHomeMotion.addEventListener("change", syncMotion);
+    reducedMotion.addEventListener("change", syncMotion);
 
     return () => {
       observer.disconnect();
       mutationObserver.disconnect();
       window.removeEventListener("scroll", scheduleMotion);
       window.removeEventListener("resize", scheduleMotion);
+      mobileHomeMotion.removeEventListener("change", syncMotion);
+      reducedMotion.removeEventListener("change", syncMotion);
       if (animationFrame) window.cancelAnimationFrame(animationFrame);
       root.classList.remove("reveal-ready");
     };

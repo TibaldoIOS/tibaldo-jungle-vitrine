@@ -10,18 +10,69 @@ body:has(.conversion-dock) { padding-bottom: var(--jungle-dock-clearance); }
   .conversion-dock a { min-height: 44px; }
   .home-safari-ux .hero > .hero-content { padding-bottom: var(--jungle-dock-clearance); }
   .home-safari-ux .home-hub { padding-bottom: max(75px, var(--jungle-dock-clearance)); }
-  /* Keep arrivals and parallax; remove only full-surface animated filters. */
-  .home-safari-ux .hero-photo { animation-name: safari-photo-arrival; }
+  /* Keep short arrivals, without the continuous mobile scroll fade/parallax. */
+  .home-safari-ux .hero > .hero-content { opacity: 1; transform: none; will-change: auto; }
+  .home-safari-ux [data-parallax] { will-change: auto; }
+  .home-safari-ux .hero-photo { animation-name: safari-photo-arrival; animation-duration: .5s; will-change: auto; }
   .home-safari-ux .hero-content .eyebrow,
   .home-safari-ux .hero-copy,
-  .home-safari-ux .hero-actions { animation-name: safari-content-arrival; }
+  .home-safari-ux .hero-actions { animation-name: safari-content-arrival; animation-duration: .28s; animation-delay: 0s; }
   .reveal-ready .home-safari-ux [data-reveal] {
     filter: none;
     transition-property: opacity, transform;
+    transition-duration: .28s;
+    transition-delay: 0s;
     will-change: auto;
+  }
+  .reveal-ready .home-safari-ux [data-reveal] :where(.section-kicker, h2, h3),
+  .reveal-ready .home-safari-ux [data-reveal] > :where(p, ul, .button, .intro-copy) {
+    transition-duration: .28s;
+    transition-delay: 0s;
   }
   /* Static painted texture; the existing pseudo-element transforms still animate. */
   .home-safari-ux .opening-photo { animation: none; }
+}
+@media (max-width: 600px) {
+  /* Identity/menu first, social/shop actions second: no shrinking into overlap. */
+  .home-safari-ux .site-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8px 12px;
+    height: auto;
+    padding-block: 12px;
+  }
+  .home-safari-ux .site-header .brand { min-width: 0; gap: 10px; }
+  .home-safari-ux .site-header .brand-wordmark { min-width: 0; }
+  .home-safari-ux .site-header .brand-wordmark strong { white-space: normal; line-height: 1.2; }
+  .home-safari-ux .site-header .mobile-jungle-menu { grid-column: 2; grid-row: 1; margin: 0; order: 0; }
+  .home-safari-ux .site-header .mobile-menu-trigger { width: 44px; height: 44px; }
+  .home-safari-ux .site-header .header-actions {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    order: 0;
+    margin: 0;
+    gap: 12px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+  .home-safari-ux .site-header .header-socials a { width: 44px; height: 44px; }
+  .home-safari-ux .site-header .header-shop {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 0 16px;
+    border: 1px solid var(--sage);
+    border-radius: 999px;
+    background: var(--sage);
+    color: var(--forest);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
 }
 @keyframes safari-photo-arrival {
   from { transform: translate3d(0, var(--hero-photo-y), 0) scale(calc(var(--hero-photo-scale) + .07)); }
