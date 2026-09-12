@@ -28,8 +28,8 @@ const labs = [
   "/lab/v25-4/golden-hub/pilea",
 ];
 
-test("release species inventory remains frozen", () => {
-  assert.equal(plants.length, 76);
+test("release includes the nine verified editorial identities", () => {
+  assert.equal(plants.length, 85);
 });
 
 test(`${requestedMode} artifact has the exact indexing and customer-mode contract`, async () => {
@@ -66,11 +66,11 @@ test(`${requestedMode} artifact has the exact robots and sitemap contract`, asyn
     assert.equal(sitemap.status, 200);
     const xml = await sitemap.text();
     const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-    assert.equal(urls.length, 157);
+    assert.equal(urls.length, 170);
     assert.equal(new Set(urls).size, urls.length);
     assert.ok(urls.every((url) => url.startsWith("https://jungle.tibaldo.fr/")));
     assert.ok(urls.every((url) => !url.includes("/lab/")));
-    assert.equal(urls.filter((url) => /^https:\/\/jungle\.tibaldo\.fr\/plantes\/[^/]+$/.test(url)).length, 31);
+    assert.equal(urls.filter((url) => /^https:\/\/jungle\.tibaldo\.fr\/plantes\/[^/]+$/.test(url)).length, 34);
   } else {
     assert.match(robotsText, /^Disallow: \/$/im);
     assert.doesNotMatch(robotsText, /^Sitemap:/im);
