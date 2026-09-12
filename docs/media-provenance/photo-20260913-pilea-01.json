@@ -1,0 +1,41 @@
+{
+  "batch_id": "PHOTO-20260913-PILEA-01",
+  "public_source_before": "ab8b688f9471f5cec0cf427bca2c248ac1f58ea8",
+  "public_version_before": 118,
+  "photos": [
+    {
+      "owner_identity": "Pilea Peperomioides",
+      "canonical_slug": "plantes/pilea/peperomioides",
+      "original_filename": "Pilea Peperomioides.png",
+      "original_sha256": "e59ead5bab91bba50520b088b9c7d17b733d8bc842ae61a6a138a7b9368f2f6f",
+      "asset_path": "/owner-media/pilea-peperomioides/pilea-peperomioides-plante-lumiere-fenetre.webp",
+      "public_path": "/media/owner-media/pilea-peperomioides/pilea-peperomioides-plante-lumiere-fenetre.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/pilea-peperomioides/pilea-peperomioides-plante-lumiere-fenetre.webp",
+      "sha256": "d313d6d6f98ab3fb854caef94707a8671572ff1c650c6a3621c9c4229176e690",
+      "alt": "Pilea peperomioides en pot de terre cuite près d’une fenêtre, aux feuilles rondes éclairées de côté.",
+      "credit": "Photo : TIBALDO",
+      "creator": "TIBALDO",
+      "provenance": "OWNER",
+      "rights": "Autorisation Owner permanente",
+      "role": "WHOLE_PLANT",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 228220,
+      "private_metadata_removed": true
+    }
+  ],
+  "previous_media": "Three Owner photos and Husky CC0 retained in gallery",
+  "processing": "WebP quality88 method6, no crop, no upscale, no generative alteration",
+  "allowed_paths": [
+    "docs/media-provenance/photo-20260913-pilea-01.json",
+    "lib/plants/catalog.ts",
+    "app/credits-images/page.tsx",
+    "app/plantes/GoldenSpeciesProfile.tsx",
+    "app/plantes/GoldenGenusHub.tsx",
+    "public/owner-media/pilea-peperomioides/pilea-peperomioides-plante-lumiere-fenetre.webp",
+    "tests/photo-pilea-owner-v1.test.ts"
+  ],
+  "deployment_before": "appgdep_6aa5e61f11108191990380e842b9d3d5"
+}

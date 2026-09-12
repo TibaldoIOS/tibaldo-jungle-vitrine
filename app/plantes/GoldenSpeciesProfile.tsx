@@ -24,21 +24,7 @@ type SnapshotTone = "light" | "water" | "humidity" | "temperature" | "difficulty
 type PlantImage = PlantEntry["gallery"][number];
 
 const mediaOverrides: Record<string, PlantImage[]> = {
-  "pilea/peperomioides": [{
-    src: "/pilea-peperomioides-plante.jpg",
-    alt: "Pilea peperomioides aux feuilles rondes portées par de longs pétioles",
-    caption: "Feuillage rond de Pilea peperomioides.",
-    width: 1280,
-    height: 1707,
-    license: {
-      status: "verified",
-      creator: "Husky",
-      license: "CC0 1.0",
-      licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/",
-      registryPath: "/credits-images",
-      note: "Photographie réelle déjà contrôlée dans Jungle.",
-    },
-  }],
+  "pilea/peperomioides": plants.find(p => p.genre === "pilea" && p.slug === "peperomioides")?.gallery ?? [],
 };
 
 const isDocumentaryImage = (image: PlantImage) =>

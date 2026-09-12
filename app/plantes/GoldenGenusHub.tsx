@@ -86,13 +86,7 @@ const preparedPlants = (genre: string, plants: readonly PlantEntry[]) => plants.
   if (genre === "pilea" && plant.slug === "peperomioides") {
     return {
       ...plant,
-      gallery: [{
-        src: "/pilea-peperomioides-plante.jpg",
-        alt: "Pilea peperomioides aux feuilles rondes portées par de longs pétioles",
-        caption: "Photographie réelle et réutilisable déjà créditée dans Jungle.",
-        width: 1280,
-        height: 1707,
-      }],
+      gallery: plant.gallery.filter(isDocumentaryImage),
     };
   }
   return { ...plant, gallery: plant.gallery.filter(isDocumentaryImage) };

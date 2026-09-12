@@ -514,6 +514,12 @@ if (fourPhotoIndex3 !== -1) {
  plants[fourPhotoIndex3] = {...plant, gallery: [{"src": "/media/owner-media/sansevieria-black-diamond/dracaena-trifasciata-black-diamond-feuilles-detail.webp", "alt": "Feuilles dressées et pointues de Dracaena trifasciata ‘Black Diamond’, marbrées de vert clair sur fond vert sombre.", "caption": "Photo : TIBALDO", "width": 1536, "height": 1024, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260913-four-01/black-diamond", "registryPath": "/credits-images", "note": "Identité Owner confirmée par fichier original et SHA256. Provenance : docs/media-provenance/photo-20260913-four-01.json"}}, ...plant.gallery.filter(m => m.src !== "/photo-reelle-a-venir.svg")], mediaNeeds: []};
 }
 
+const pileaPhotoIndex = plants.findIndex(p => p.genre === "pilea" && p.slug === "peperomioides");
+if (pileaPhotoIndex !== -1) {
+ const plant = plants[pileaPhotoIndex];
+ plants[pileaPhotoIndex] = {...plant, gallery: [{"src": "/media/owner-media/pilea-peperomioides/pilea-peperomioides-plante-lumiere-fenetre.webp", "alt": "Pilea peperomioides en pot de terre cuite près d’une fenêtre, aux feuilles rondes éclairées de côté.", "caption": "Photo : TIBALDO", "width": 1536, "height": 1024, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260913-pilea-01/peperomioides", "registryPath": "/credits-images", "note": "Identité Owner confirmée par fichier original et SHA256. Provenance : docs/media-provenance/photo-20260913-pilea-01.json"}}, ...plant.gallery, {"src": "/pilea-peperomioides-plante.jpg", "alt": "Pilea peperomioides aux feuilles rondes portées par de longs pétioles", "caption": "Feuillage rond de Pilea peperomioides.", "width": 1280, "height": 1707, "license": {"status": "verified", "creator": "Husky", "license": "CC0 1.0", "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/", "registryPath": "/credits-images", "note": "Photographie historique déjà contrôlée dans Jungle."}}], mediaNeeds: []};
+}
+
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
 export const getPlantsByGenre = (genre: string) => plants.filter((plant) =>
