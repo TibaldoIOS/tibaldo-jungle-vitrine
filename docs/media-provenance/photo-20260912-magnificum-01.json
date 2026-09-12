@@ -1,0 +1,54 @@
+{
+  "batch_id": "PHOTO-20260912-MAGNIFICUM-01",
+  "photos": [
+    {
+      "owner_identity": "Anthurium magnificum Linden",
+      "canonical_slug": "plantes/anthurium/magnificum",
+      "original_filename": "Anthurium magnificum Linden.png",
+      "original_sha256": "f67ec1368888599d25b588290dbf3a0cd4c357d34ce7b72af7a27949bfc40934",
+      "asset_path": "/owner-media/anthurium-magnificum/anthurium-magnificum-feuille-detail.webp",
+      "public_path": "/media/owner-media/anthurium-magnificum/anthurium-magnificum-feuille-detail.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/anthurium-magnificum/anthurium-magnificum-feuille-detail.webp",
+      "sha256": "eacdcb8fbcf49f583ae792c4e5211a83e6f639dd89809928893d275f2bb7ab9e",
+      "alt": "Feuille d’Anthurium magnificum Linden couverte de gouttelettes, aux nervures claires sur un limbe vert foncé.",
+      "credit": "Photo : TIBALDO",
+      "creator": "TIBALDO",
+      "provenance": "OWNER",
+      "rights": "Standing Owner authorization; exact named original byte match",
+      "role": "LEAF_DETAIL",
+      "dimensions": [
+        1429,
+        1100
+      ],
+      "bytes": 303052,
+      "previous_gallery": [
+        {
+          "src": "/photo-reelle-a-venir.svg",
+          "alt": "Illustration botanique décorative de Anthurium magnificum",
+          "caption": "Média non documentaire : aucune photographie de Anthurium magnificum n’est actuellement vérifiée dans le registre du dépôt.",
+          "width": 1200,
+          "height": 1500,
+          "license": {
+            "status": "media-gap",
+            "registryPath": "/credits-images",
+            "note": "Placeholder existant ; ne pas le traiter comme une preuve d’identification botanique."
+          }
+        }
+      ],
+      "private_metadata_removed": true
+    }
+  ],
+  "public_source_before": "a58d69d73c7ab72473930675d3455c99007547ee",
+  "public_version_before": 111,
+  "deployment_before": "appgdep_6aa539d37c588191bb9f152adb256de4",
+  "processing": "Real WebP quality88 method6; no crop/upscale/generation; private metadata stripped.",
+  "allowed_paths": [
+    "lib/plants/catalog.ts",
+    "app/credits-images/page.tsx",
+    "docs/media-provenance/photo-20260912-magnificum-01.json",
+    "tests/photo-magnificum-owner-v1.test.ts",
+    "public/owner-media/anthurium-magnificum/anthurium-magnificum-feuille-detail.webp"
+  ],
+  "shop": "PENDING",
+  "caisse": "PENDING"
+}

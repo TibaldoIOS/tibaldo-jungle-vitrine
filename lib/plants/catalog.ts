@@ -465,6 +465,26 @@ if (papillilaminumPhotoPlantIndex !== -1) {
 }], mediaNeeds: [] };
 }
 
+const magnificumPhotoPlantIndex = plants.findIndex((plant) => plant.genre === "anthurium" && plant.slug === "magnificum");
+if (magnificumPhotoPlantIndex !== -1) {
+  const plant = plants[magnificumPhotoPlantIndex];
+  plants[magnificumPhotoPlantIndex] = { ...plant, gallery: [{
+  "src": "/media/owner-media/anthurium-magnificum/anthurium-magnificum-feuille-detail.webp",
+  "alt": "Feuille d’Anthurium magnificum Linden couverte de gouttelettes, aux nervures claires sur un limbe vert foncé.",
+  "caption": "Photo : TIBALDO",
+  "width": 1429,
+  "height": 1100,
+  "license": {
+    "status": "verified",
+    "creator": "TIBALDO",
+    "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO",
+    "sourceUrl": "owner-provided://tibaldo/photo-20260912-magnificum-01/magnificum",
+    "registryPath": "/credits-images",
+    "note": "Photographie fournie par l’Owner ; identité confirmée par fichier original et comparaison SHA256. Provenance : docs/media-provenance/photo-20260912-magnificum-01.json."
+  }
+}], mediaNeeds: [] };
+}
+
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
 export const getPlantsByGenre = (genre: string) => plants.filter((plant) => plant.genre === genre);
