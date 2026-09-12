@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 };
 
 const credits: readonly [string, string, string, string, string?][] = [
+  ["Anthurium forgetii dark form × ‘Silver Blush’", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260912-silver-01/forgetii-dark-form-silver-blush"],
   ["Anthurium papillilaminum × ‘Dark Phoenix’", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260912-phoenix-01/papillilaminum-dark-phoenix"],
   ["Anthurium regale", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260912-regale-01/regale"],
   ["Anthurium ‘Delta Force’", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260911-delta-01/delta-force"],

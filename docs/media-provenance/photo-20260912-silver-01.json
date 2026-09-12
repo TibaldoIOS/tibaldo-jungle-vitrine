@@ -1,0 +1,49 @@
+{
+  "batch_id": "PHOTO-20260912-SILVER-01",
+  "photos": [
+    {
+      "owner_identity": "Anthurium forgetii dark form × ‘Silver Blush’",
+      "canonical_slug": "plantes/anthurium/forgetii-dark-form-silver-blush",
+      "original_filename": "Anthurium forgetii dark form × ‘Silver Blush’.png",
+      "original_sha256": "a74773136eb41883756337ec2ae5f87a5f7a4fe1ec8c9ad8ec1e562708165c3b",
+      "asset_path": "/owner-media/anthurium-forgetii-dark-form-silver-blush/anthurium-forgetii-dark-form-silver-blush-plante-en-pot.webp",
+      "public_path": "/media/owner-media/anthurium-forgetii-dark-form-silver-blush/anthurium-forgetii-dark-form-silver-blush-plante-en-pot.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/anthurium-forgetii-dark-form-silver-blush/anthurium-forgetii-dark-form-silver-blush-plante-en-pot.webp",
+      "sha256": "7ebe481326b634ff7fd4b25f036ad0af4c28aa94b54f4933404905afd860cd33",
+      "alt": "Anthurium forgetii dark form × ‘Silver Blush’ en pot moucheté, aux feuilles vertes soulignées de larges nervures argentées.",
+      "credit": "Photo : TIBALDO",
+      "creator": "TIBALDO",
+      "provenance": "OWNER",
+      "rights": "Standing Owner publication authorization; identity from exact attachment/original byte match",
+      "role": "WHOLE_PLANT",
+      "dimensions": [
+        1429,
+        1101
+      ],
+      "bytes": 265654,
+      "previous_gallery": [
+        {
+          "src": "/photo-reelle-a-venir.svg",
+          "alt": "Photographie réelle de Anthurium forgetii dark form × ‘Silver Blush’ à ajouter",
+          "caption": "Photographie réelle du spécimen Anthurium forgetii dark form × ‘Silver Blush’ à réaliser au Studio avant publication.",
+          "width": 1200,
+          "height": 1500
+        }
+      ],
+      "private_metadata_removed": true
+    }
+  ],
+  "public_source_before": "171b6b7a2e95c50f49d80eba311c2d489ead2e54",
+  "public_version_before": 108,
+  "deployment_before": "appgdep_6aa52826f59481919cf7444be5f84e10",
+  "processing": "Real WebP quality88 method6; no crop/upscale/generation; private metadata stripped.",
+  "allowed_paths": [
+    "lib/plants/catalog.ts",
+    "app/credits-images/page.tsx",
+    "docs/media-provenance/photo-20260912-silver-01.json",
+    "tests/photo-silver-owner-v1.test.ts",
+    "public/owner-media/anthurium-forgetii-dark-form-silver-blush/anthurium-forgetii-dark-form-silver-blush-plante-en-pot.webp"
+  ],
+  "shop": "PENDING",
+  "caisse": "PENDING"
+}

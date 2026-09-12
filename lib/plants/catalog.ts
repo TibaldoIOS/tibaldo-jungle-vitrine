@@ -404,6 +404,27 @@ if (phoenixPhotoPlantIndex !== -1) {
 }], mediaNeeds: [] };
 }
 
+// Owner photo wave PHOTO-20260912-SILVER-01.
+const silverPhotoPlantIndex = plants.findIndex((plant) => plant.genre === "anthurium" && plant.slug === "forgetii-dark-form-silver-blush");
+if (silverPhotoPlantIndex !== -1) {
+  const plant = plants[silverPhotoPlantIndex];
+  plants[silverPhotoPlantIndex] = { ...plant, gallery: [{
+  "src": "/media/owner-media/anthurium-forgetii-dark-form-silver-blush/anthurium-forgetii-dark-form-silver-blush-plante-en-pot.webp",
+  "alt": "Anthurium forgetii dark form × ‘Silver Blush’ en pot moucheté, aux feuilles vertes soulignées de larges nervures argentées.",
+  "caption": "Photo : TIBALDO",
+  "width": 1429,
+  "height": 1101,
+  "license": {
+    "status": "verified",
+    "creator": "TIBALDO",
+    "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO",
+    "sourceUrl": "owner-provided://tibaldo/photo-20260912-silver-01/forgetii-dark-form-silver-blush",
+    "registryPath": "/credits-images",
+    "note": "Photographie fournie par l’Owner ; identité du croisement confirmée par fichier original et SHA256. Provenance : docs/media-provenance/photo-20260912-silver-01.json."
+  }
+}], mediaNeeds: [] };
+}
+
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
 export const getPlantsByGenre = (genre: string) => plants.filter((plant) => plant.genre === genre);
