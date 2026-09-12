@@ -32,7 +32,7 @@ const publicAssetPath = (src: string) =>
   src.startsWith("/media/") ? `public/${src.slice("/media/".length)}` : `public${src}`;
 
 test("la collection actuelle conserve les médias existants et les neuf nouveaux manques honnêtes", () => {
-  assert.equal(plants.length, 85);
+  assert.equal(plants.length, 87);
   const counts = { complete: 0, partial: 0, gap: 0 };
   for (const plant of plants) {
     const count = documentaryGallery(plant).length;
@@ -40,7 +40,7 @@ test("la collection actuelle conserve les médias existants et les neuf nouveaux
     else if (count >= 1) counts.partial += 1;
     else counts.gap += 1;
   }
-  assert.deepEqual(counts, { complete: 3, partial: 37, gap: 45 });
+  assert.deepEqual(counts, { complete: 3, partial: 37, gap: 47 });
 });
 
 test("les dix nouvelles fiches qualifiées ont uniquement des médias locaux, sourcés et licenciés", () => {

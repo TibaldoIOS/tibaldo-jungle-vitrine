@@ -13,8 +13,7 @@ test("nine distinct canonical identities; existing Zebrina and Pink Princess rem
   }
 });
 test("unresolved supplier names do not become species or availability claims", () => {
-  assert.equal(getPlant("sansevieria", "black-diamond"), undefined);
-  assert.equal(getPlant("colocasia", "metallica"), undefined);
+  // Black Diamond / Metallica were resolved separately after this batch; see horticultural-identities-v1.
   assert.match(getPlant("beaucarnea", "recurvata")!.faq[0].answer, /étiquette fournisseur imprécise/);
   for (const p of stockIdentityPlants) {
     assert.equal(p.shopUrl, undefined);

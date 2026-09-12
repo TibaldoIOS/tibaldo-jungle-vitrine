@@ -26,7 +26,7 @@ const expectedRoutes = [
 test("P1 ajoute exactement les douze routes approuvées au catalogue V32", () => {
   assert.equal(encyclopediaP1Plants.length, 12);
   assert.deepEqual(encyclopediaP1Routes, expectedRoutes);
-  assert.equal(plants.length, 85);
+  assert.equal(plants.length, 87);
   assert.equal(plantFamilies.length, 34);
   for (const route of expectedRoutes) {
     const [, , genre, slug] = route.split("/");
@@ -99,7 +99,7 @@ test("les hubs majeurs atteignent les nouveaux totaux sans créer de groupe", ()
   assert.equal(plants.filter((plant) => plant.genre === "philodendron").length, 9);
   assert.equal(plants.filter((plant) => plant.genre === "monstera").length, 12);
   for (const genre of ["ficus", "hoya", "syngonium", "sansevieria"] as const) {
-    assert.equal(plants.filter((plant) => plant.genre === genre).length, ["hoya", "sansevieria"].includes(genre) ? 2 : 1, genre);
+    assert.equal(plants.filter((plant) => plant.genre === genre).length, genre === "sansevieria" ? 3 : genre === "hoya" ? 2 : 1, genre);
     assert.ok(plantFamilies.some((family) => family.slug === genre), genre);
   }
 });

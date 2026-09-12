@@ -11,6 +11,7 @@ import { agaveFatsiaStrelitziaPlants } from "./agave-fatsia-strelitzia.ts";
 import { encyclopediaV19ExpansionPlants } from "./encyclopedia-v19-expansion.ts";
 import { encyclopediaP1Plants } from "./encyclopedia-p1-expansion.ts";
 import { stockIdentityPlants } from "./stock-identities-v1.ts";
+import { horticulturalIdentityPlants } from "./horticultural-identities-v1.ts";
 import { applyMediaRightsP0Closure } from "./media-rights-p0-closure-v1.ts";
 import { applyOwnerMonsteraThaiConstellationMediaV1 } from "./owner-monstera-thai-constellation-media-v1.ts";
 import { applyOwnerMonsteraMintMediaV1 } from "./owner-monstera-mint-media-v1.ts";
@@ -193,7 +194,7 @@ const rawPlants: PlantEntry[] = [{
   seo: { title: "Pilea peperomioides : entretien et plante à monnaie Lille", description: "Guide du Pilea peperomioides : lumière, arrosage, rejets, substrat et problèmes. Retrouvez la plante à monnaie chinoise à Lille.", keywords: ["Pilea peperomioides entretien", "plante monnaie chinoise Lille", "Pilea Lille", "Pilea animaux", "bouture Pilea"] },
   sources: [{ label: "Kew Science", url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:855664-1/general-information" }, { label: "NC State Extension", url: "https://plants.ces.ncsu.edu/plants/pilea-peperomioides/" }, { label: "Plantes Pour Tous — fiche consultée", url: "https://plantespourtous.co/products/pilea-peperomioides" }],
   publishedAt: "2026-08-06", updatedAt: "2026-08-06",
-}, ...newArrivalPlants, ...requestedPlants, ...afternoonPlants, ...encyclopediaV19ExpansionPlants, ...prayerPlants, ...encyclopediaV2Step1Plants, ...encyclopediaV2Step2Plants, cycasRevoluta, dicksoniaAntarctica, ...agaveFatsiaStrelitziaPlants, ...encyclopediaP1Plants, ...stockIdentityPlants];
+}, ...newArrivalPlants, ...requestedPlants, ...afternoonPlants, ...encyclopediaV19ExpansionPlants, ...prayerPlants, ...encyclopediaV2Step1Plants, ...encyclopediaV2Step2Plants, cycasRevoluta, dicksoniaAntarctica, ...agaveFatsiaStrelitziaPlants, ...encyclopediaP1Plants, ...stockIdentityPlants, ...horticulturalIdentityPlants];
 
 export const plants: PlantEntry[] = applyOwnerPileaMediaV1(applyOwnerMarbleQueenMediaV1(applyOwnerMonsteraMintMediaV1(
   applyOwnerMonsteraThaiConstellationMediaV1(

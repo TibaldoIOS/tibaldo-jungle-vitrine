@@ -29,7 +29,7 @@ const labs = [
 ];
 
 test("release includes the nine verified editorial identities", () => {
-  assert.equal(plants.length, 85);
+  assert.equal(plants.length, 87);
 });
 
 test(`${requestedMode} artifact has the exact indexing and customer-mode contract`, async () => {
@@ -66,7 +66,7 @@ test(`${requestedMode} artifact has the exact robots and sitemap contract`, asyn
     assert.equal(sitemap.status, 200);
     const xml = await sitemap.text();
     const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-    assert.equal(urls.length, 170);
+    assert.equal(urls.length, 172);
     assert.equal(new Set(urls).size, urls.length);
     assert.ok(urls.every((url) => url.startsWith("https://jungle.tibaldo.fr/")));
     assert.ok(urls.every((url) => !url.includes("/lab/")));
