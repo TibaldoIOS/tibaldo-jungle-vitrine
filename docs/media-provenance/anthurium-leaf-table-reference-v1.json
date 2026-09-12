@@ -1,0 +1,14 @@
+{
+  "source": "Owner attachment codex-clipboard-7a970111-0f5d-4383-b62f-224620b3d76a.png",
+  "source_sha256": "ba24bc8e70bcfea6358372a95f616998ac4b23bf48915b97dc935a4aaadcb580",
+  "asset": "/owner-media/anthurium-board/anthurium-leaf-table-owner-reference-v1.webp",
+  "asset_sha256": "44bc198132361e502d774b0b4798061c70533968b49f8edca099438d637dcfb5",
+  "dimensions": [1427, 1102],
+  "bytes": 262406,
+  "provenance": "OWNER_PROVIDED_REFERENCE_FOR_BETA_REVIEW",
+  "public_rights_confirmed": false,
+  "identity_certification": "Source labels preserved, not independently certified",
+  "processing": "Whole-image WebP quality 88; CSS crop, brightness and gradient; no leaf extraction or generative processing",
+  "ai_generation_performed": false,
+  "public_promotion": "Owner review and rights confirmation required"
+}

@@ -12,6 +12,9 @@ import body from "./GoldenGroupBodyBaseline.module.css";
 import hero from "./GoldenGroupHeroBaseline.module.css";
 import mobile from "./GoldenGroupMobileBaseline.module.css";
 import canonical from "./GoldenGroupCanonical.module.css";
+import { isBetaJungleDeployment } from '@/lib/deployment-mode';
+import AnthuriumLeafTable, { anthuriumBoard } from './AnthuriumLeafTable';
+import leafTable from './AnthuriumLeafTable.module.css';
 
 export type GoldenGroupGuide = {
   name: string;
@@ -102,24 +105,27 @@ export default function GoldenGenusHub({ genre, guide, plants, editorials = [], 
   const navigationGenres = [...new Map(plants.map((plant) => [plant.genre, plant.genreLabel])).entries()];
   const gapCount = displayPlants.filter((plant) => !plant.gallery.length).length;
   const heroCopy = groupHeroCopy(genre, guide);
+  const showAnthuriumBoard = genre === 'anthurium' && isBetaJungleDeployment;
 
   return (
     <main className={`${golden.page} ${body.groupPage} editorial-page`} data-golden-group-v25={genre} data-golden-group-v1={genre}>
       <ScrollReveal />
-      <section className={`${hero.landscapeHero} ${mobile.mobileHero}`} aria-labelledby={`golden-group-title-${genre}`} data-group-media-state={media ? media.rights : "honest-gap"} data-pilea-public-media-gate={genre === "pilea" ? "blocked-pending-rights-proof-or-owner-original" : undefined}>
+      <section className={`${hero.landscapeHero} ${mobile.mobileHero} ${showAnthuriumBoard ? leafTable.hero : ''}`} aria-labelledby={`golden-group-title-${genre}`} data-group-media-state={showAnthuriumBoard ? 'owner-reference-beta-review' : media ? media.rights : "honest-gap"} data-pilea-public-media-gate={genre === "pilea" ? "blocked-pending-rights-proof-or-owner-original" : undefined}>
         <SiteHeader />
-        <div className={`${hero.landscapeMedia} ${mobile.mobileMedia}`} aria-hidden="true">
-          {media ? <Image unoptimized src={media.src} alt="" width={media.width} height={media.height} priority /> : <div className={canonical.groupMediaGap}><span>{title.slice(0, 1)}</span><small>Photographie collective<br />à documenter</small></div>}
+        <div className={`${hero.landscapeMedia} ${mobile.mobileMedia} ${showAnthuriumBoard ? leafTable.media : ''}`} aria-hidden="true">
+          {showAnthuriumBoard ? <Image unoptimized {...anthuriumBoard} alt="" priority/> : media ? <Image unoptimized src={media.src} alt="" width={media.width} height={media.height} priority /> : <div className={canonical.groupMediaGap}><span>{title.slice(0, 1)}</span><small>Photographie collective<br />à documenter</small></div>}
         </div>
-        <div className={`${hero.forestFade} ${mobile.mobileFade}`} aria-hidden="true" />
-        <div className={`${hero.heroContent} ${mobile.mobileContent} shell`}>
+        <div className={`${hero.forestFade} ${mobile.mobileFade} ${showAnthuriumBoard ? leafTable.fade : ''}`} aria-hidden="true" />
+        <div className={`${hero.heroContent} ${mobile.mobileContent} ${showAnthuriumBoard ? leafTable.content : ''} shell`}>
           <div className={`${hero.heroCopy} ${mobile.mobileCopy}`}>
             <h1 className={mobile.mobileTitle} id={`golden-group-title-${genre}`}>Les <em>{title}.</em></h1>
             <p className={`${hero.heroIntroduction} ${mobile.mobileIntroduction}`}>{heroCopy}</p>
-            <p className={`${hero.heroNote} ${mobile.mobileNote}`}>{media ? "Une photographie documentaire contrôlée ouvre le groupe sans prétendre représenter toutes ses formes." : "Un manque de média reste explicite : aucun spécimen documentaire n’est fabriqué pour compléter la page."}</p>
+            <p className={`${hero.heroNote} ${mobile.mobileNote}`}>{showAnthuriumBoard ? 'Une planche illustrative pour parcourir la diversité des feuillages.' : media ? "Une photographie documentaire contrôlée ouvre le groupe sans prétendre représenter toutes ses formes." : "Un manque de média reste explicite : aucun spécimen documentaire n’est fabriqué pour compléter la page."}</p>
           </div>
         </div>
       </section>
+
+      {showAnthuriumBoard && <AnthuriumLeafTable/>}
 
       <section className={`${golden.groupIntro} ${mobile.introTransition} shell`} data-reveal>
         <HubChapterMarker number="01" label="Comprendre le groupe" />
