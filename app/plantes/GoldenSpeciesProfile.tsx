@@ -176,7 +176,7 @@ export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
           ) : (
             <section className={golden.photoBookGap} data-media-state="honest-gap" data-reveal>
               <div><p className="section-kicker">Portrait documentaire</p><h2>Une absence assumée.<br /><em>Aucune image fabriquée.</em></h2></div>
-              <p>Aucune photographie documentaire n’est présentée pour {plant.botanicalName}. La génération Golden demeure intacte et les informations botaniques restent accessibles.</p>
+              <p>Aucune photographie documentaire n’est présentée pour {plant.botanicalName}.{plant.showSources ? " Les informations botaniques restent accessibles sans image de substitution." : " La génération Golden demeure intacte et les informations botaniques restent accessibles."}</p>
             </section>
           )}
 
@@ -193,7 +193,7 @@ export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
             </section>
           ) : null}
 
-          {bookImages.length ? <BotanicalPhotoBook plant={plant} images={bookImages} /> : (
+          {bookImages.length ? <BotanicalPhotoBook plant={plant} images={bookImages} /> : plant.showSources && !gallery.length ? null : (
             <section className={golden.photoBookGap} aria-labelledby={`golden-book-${plant.genre}-${plant.slug}`} data-reveal>
               <div><p className="section-kicker">Carnet photographique</p><h2 id={`golden-book-${plant.genre}-${plant.slug}`}>Une vue disponible.<br /><em>Pas de galerie fabriquée.</em></h2></div>
               <p>Les vues documentaires disponibles ne sont pas dupliquées artificiellement. De nouvelles pages seront ajoutées uniquement avec des photographies distinctes et identifiées.</p>
@@ -212,6 +212,11 @@ export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
           </section>
 
           {isCycasRevoluta ? <CycasLocalGuide plant={plant} /> : null}
+
+          {plant.showSources ? <section className={canonical.editorialChapters} aria-labelledby="sources-botaniques">
+            <header><p className="section-kicker">Références</p><h2 id="sources-botaniques">Sources botaniques<br /><em>et horticoles.</em></h2><p>Les conseils de culture ne constituent ni une mesure de spécimen du Studio ni une promesse de disponibilité.</p></header>
+            <ul>{plant.sources.map((source) => <li key={source.url}><a href={source.url}>{source.label}</a></li>)}</ul>
+          </section> : null}
 
           <div className={golden.speciesFaq}><BotanicalFaq items={faq} title="Tout savoir avant de lui faire une place." /></div>
           <section className={golden.speciesClosing} id="conseils" data-reveal><div><p className="section-kicker">07 · Continuer au Studio</p><h2>Observer longtemps.<br /><em>Corriger doucement.</em></h2><p>{advice[1] ?? advice[0] ?? plant.subtitle}</p></div><nav aria-label={`Continuer après la fiche ${plant.displayName}`}><Link href={`/plantes/${plant.genre}`}>Explorer les {plant.genreLabel} <Arrow /></Link>{isBanana ? <Link href="/plantes/bananiers">Comparer Musa et Ensete <Arrow /></Link> : null}<Link href="/sos-plantes">SOS Plantes <Arrow /></Link>{revealImage ? <Link href="/credits-images">Crédits photographiques <Arrow /></Link> : null}</nav></section>

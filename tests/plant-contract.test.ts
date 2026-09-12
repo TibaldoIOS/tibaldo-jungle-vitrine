@@ -68,7 +68,7 @@ test("tous les encyclopedia_slug restent uniques", () => {
 
 test("Dicksonia antarctica ajoute une seule identité botanique centrale", () => {
   const dicksonia = plants.find((entry) => entry.genre === "dicksonia" && entry.slug === "antarctica");
-  assert.equal(plants.length, 76);
+  assert.equal(plants.length, 85);
   assert.equal(dicksonia?.botanicalName, "Dicksonia antarctica");
   assert.equal(dicksonia?.taxonomy.family, "Dicksoniaceae");
   assert.equal(dicksonia?.taxonomy.order, "Cyatheales");

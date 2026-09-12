@@ -20,7 +20,7 @@ export type PlantExplorerItem = {
     watering: string;
     temperatureMin: number;
     habits: string[];
-    petToxic: boolean;
+    petToxic: boolean | null;
   };
   difficulty: number;
   image: { src: string; alt: string; width: number; height: number };
@@ -54,7 +54,7 @@ export default function PlantExplorer({ plants }: { plants: readonly PlantExplor
       && plant.difficulty <= Number(difficulty)
       && (!temperature || plant.filters.temperatureMin <= Number(temperature))
       && (!habit || plant.filters.habits.includes(habit))
-      && (!petSafe || !plant.filters.petToxic);
+      && (!petSafe || plant.filters.petToxic === false);
   }), [plants, query, family, genus, light, watering, difficulty, temperature, habit, petSafe]);
   const hasActiveFilters = Boolean(query || family || genus || light || watering || difficulty !== "5" || temperature || habit || petSafe);
 

@@ -1,4 +1,5 @@
 import { bananaGuides } from "./banana-guides";
+import { stockFernGuides } from "./stock-fern-guides-v1";
 
 const simpleGuide = (name: string, botanicalName: string, lead: string, origin: string, imageAlt: string) => ({
   name,
@@ -23,6 +24,11 @@ const simpleGuide = (name: string, botanicalName: string, lead: string, origin: 
 });
 
 const simpleGuides = {
+  beaucarnea: {
+    ...simpleGuide("Beaucarnea", "Beaucarnea", "Des plantes à base renflée et feuilles étroites, dont le pied-d’éléphant Beaucarnea recurvata.", "Beaucarnea appartient aux Asparagaceae. La fiche recurvata concerne une espèce mexicaine ; elle ne permet pas d’identifier un lot vendu sous le seul nom du genre.", "Photographie de Beaucarnea à documenter"),
+    care: { difficulty: 2, light: 5, water: 1, humidity: 1, substrate: "Succulentes, très drainant", nutrition: "Modérée en croissance" },
+    sources: [{ label: "RHS — Beaucarnea recurvata", url: "https://www.rhs.org.uk/plants/1993/beaucarnea-recurvata/details" }],
+  },
   agave: {
     ...simpleGuide("Agave", "Agave", "Des rosettes succulentes sculpturales qui demandent soleil, espace et drainage, avec des précautions adaptées aux épines et à la sève.", "Le genre Agave appartient aux Asparagaceae et est originaire des Amériques, principalement du Mexique.", "Photographie réelle d’un Agave à ajouter"),
     care: { difficulty: 3, light: 5, water: 1, humidity: 1, substrate: "Très minéral et drainant", nutrition: "Faible pendant la croissance" },
@@ -70,6 +76,7 @@ const simpleGuides = {
 };
 
 export const familyGuides = {
+  ...stockFernGuides,
   ...simpleGuides,
   ...bananaGuides,
   alocasia: {

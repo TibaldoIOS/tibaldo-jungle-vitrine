@@ -30,8 +30,9 @@ export type PlantFilters = {
   variegated: boolean;
   collection: boolean;
   flowering: boolean;
-  petToxic: boolean;
-  humanToxic: boolean;
+  // null means unestablished, never an assurance of safety.
+  petToxic: boolean | null;
+  humanToxic: boolean | null;
   regions: string[];
 };
 export type PlantEntry = {
@@ -52,6 +53,7 @@ export type PlantEntry = {
   gallery: { src: string; alt: string; caption: string; width: number; height: number; license?: PlantMediaLicense }[];
   seo: { title: string; description: string; keywords: string[] };
   sources: { label: string; url: string }[];
+  showSources?: boolean;
   shopUrl?: string;
   publishedAt: string; updatedAt: string;
 };

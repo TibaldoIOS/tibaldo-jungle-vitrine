@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
 import test from "node:test";
 import { plants } from "../lib/plants/catalog.ts";
+import { encyclopediaP1Plants } from "../lib/plants/encyclopedia-p1-expansion.ts";
 import type { PlantEntry } from "../lib/plants/types.ts";
 import { isEditorialPlaceholder, isInternalPhotoProductionCopy } from "../lib/plants/types.ts";
 
@@ -30,8 +31,8 @@ const documentaryGallery = (plant: (typeof plants)[number]) => {
 const publicAssetPath = (src: string) =>
   src.startsWith("/media/") ? `public/${src.slice("/media/".length)}` : `public${src}`;
 
-test("la complétion média conserve 76 fiches et intègre les huit retraits P0 en manque honnête", () => {
-  assert.equal(plants.length, 76);
+test("la collection actuelle conserve les médias existants et les neuf nouveaux manques honnêtes", () => {
+  assert.equal(plants.length, 85);
   const counts = { complete: 0, partial: 0, gap: 0 };
   for (const plant of plants) {
     const count = documentaryGallery(plant).length;
@@ -39,12 +40,12 @@ test("la complétion média conserve 76 fiches et intègre les huit retraits P0 
     else if (count >= 1) counts.partial += 1;
     else counts.gap += 1;
   }
-  assert.deepEqual(counts, { complete: 2, partial: 19, gap: 55 });
+  assert.deepEqual(counts, { complete: 3, partial: 37, gap: 45 });
 });
 
 test("les dix nouvelles fiches qualifiées ont uniquement des médias locaux, sourcés et licenciés", () => {
   const remainingP1Gaps = new Set(["alocasia/melo", "anthurium/luxurians"]);
-  const p1 = plants.slice(-12);
+  const p1 = encyclopediaP1Plants;
   assert.equal(p1.length, 12);
   for (const plant of p1) {
     const key = `${plant.genre}/${plant.slug}`;
