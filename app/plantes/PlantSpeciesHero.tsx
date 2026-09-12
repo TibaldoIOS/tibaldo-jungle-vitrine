@@ -7,6 +7,7 @@ import {
 import Link from "next/link";
 import { SiteHeader } from "../SiteChrome";
 import ScientificName from "./ScientificName";
+import layout from "./BlackDiamondHero.module.css";
 
 export default function PlantSpeciesHero({ plant }: { plant: PlantEntry }) {
   const image = plant.gallery[0];
@@ -15,7 +16,7 @@ export default function PlantSpeciesHero({ plant }: { plant: PlantEntry }) {
     plant.genre === "dicksonia" && plant.slug === "antarctica";
   return (
     <section
-      className={`plant-profile-hero plant-profile-hero-${plant.genre}-${plant.slug} ${hasPhoto ? "has-photo" : "has-editorial-fallback"}`}
+      className={`plant-profile-hero plant-profile-hero-${plant.genre}-${plant.slug} ${hasPhoto ? "has-photo" : "has-editorial-fallback"} ${plant.genre === "sansevieria" && plant.slug === "black-diamond" ? layout.hero : ""}`}
     >
       {hasPhoto ? (
         <Image unoptimized
