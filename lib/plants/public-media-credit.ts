@@ -3,11 +3,22 @@ import type { PlantEntry } from "./types.ts";
 type PlantImage = PlantEntry["gallery"][number];
 
 /** Visitor-facing attribution intentionally excludes internal rights workflow. */
-export function publicMediaCredit(image: PlantImage) {
+export function publicMediaCreator(image: PlantImage) {
   const creator = image.license?.creator?.trim();
   const publicCreator = creator
     ?.replace(/\s*\([^)]*(?:owner|source fournie|validation|certifi)[^)]*\)/gi, "")
     .replace(/\s*·\s*(?:source fournie|source autorisée|droits? confirmés?).*$/gi, "")
     .trim();
-  return publicCreator ? `Photo : ${publicCreator}` : "Photographie botanique";
+  return publicCreator || null;
+}
+
+export function publicMediaCredit(image: PlantImage) {
+  const creator = publicMediaCreator(image);
+  return creator ? `Photo : ${creator}` : "Photographie botanique";
+}
+
+/** Public attribution is not the internal authorization/audit record. */
+export function publicMediaLicense(image: PlantImage) {
+  const license = image.license?.license;
+  return license && /\bOwner\b/i.test(license) ? "Utilisation avec autorisation" : license ?? null;
 }

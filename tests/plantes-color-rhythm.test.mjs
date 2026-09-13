@@ -9,7 +9,11 @@ test('Plants color chapter preserves source copy, metadata, cards and shared des
   const before = execFileSync('git', ['show', `4ee919f58928cbb996f2d985601bed668858b98b:${path}`], {encoding:'utf8'});
   const after = readFileSync(path,'utf8');
   const normalize = s => s.replace(/import rhythm[^\n]*\n/,'').replace(/className=\{`plants-editorial-genera \$\{rhythm.chapter\}`\}/,'className="shell plants-editorial-genera"').replace('<div className="shell"><div className="plants-editorial-genera-list">','<div className="plants-editorial-genera-list">').replace('</div></div>\n      </section>','</div>\n      </section>');
-  assert.equal(normalize(after),before);
+  // The media privacy patch changes only server-to-browser image projection.
+  // Its rendered/serialized output has dedicated media-surface coverage.
+  const withoutMediaProjection = after.replace(/    \/\/ Whitelist browser props:[\s\S]*?    },\n  \}\)\);/, '    image: plant.gallery[0],\n  }));');
+  assert.notEqual(withoutMediaProjection, after, 'bounded media projection found');
+  assert.equal(normalize(withoutMediaProjection),before);
   for(const p of ['app/globals.css','app/SiteChrome.tsx','app/plantes/GoldenGenusHub.tsx']) assert.equal(readFileSync(p,'utf8'),execFileSync('git',['show',`4ee919f58928cbb996f2d985601bed668858b98b:${p}`],{encoding:'utf8'}));
 });
 

@@ -85,7 +85,13 @@ export default function PlantsPage() {
       petToxic: plant.filters.petToxic,
     },
     difficulty: plant.care.difficulty,
-    image: plant.gallery[0],
+    // Whitelist browser props: rights evidence remains in the server catalogue.
+    image: {
+      src: plant.gallery[0]?.src ?? "/photo-reelle-a-venir.svg",
+      alt: plant.gallery[0]?.alt ?? `Photographie de ${plant.botanicalName} à venir`,
+      width: plant.gallery[0]?.width ?? 1200,
+      height: plant.gallery[0]?.height ?? 1600,
+    },
   }));
   const structuredData = {
     "@context": "https://schema.org",

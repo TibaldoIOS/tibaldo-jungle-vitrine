@@ -1,4 +1,5 @@
 import { jungleOrigin } from "../deployment-mode.ts";
+import { publicMediaCreator, publicMediaLicense } from "./public-media-credit.ts";
 import type { PlantEntry } from "./types.ts";
 import { isEditorialPlaceholder, isInternalPhotoProductionCopy, isPhotoProductionPlaceholder } from "./types.ts";
 
@@ -70,9 +71,11 @@ export function toVerifiedMediaApiFields(plant: PlantEntry, mediaRegistryVersion
     primary_media_alt: image.alt,
     primary_media_width_px: image.width,
     primary_media_height_px: image.height,
-    primary_media_creator: image.license!.creator!,
-    primary_media_source_url: image.license!.sourceUrl!,
-    primary_media_license: image.license!.license!,
+    primary_media_creator: publicMediaCreator(image),
+    primary_media_source_url: image.license!.sourceUrl!.startsWith("owner-provided://")
+      ? new URL("/credits-images", jungleOrigin).toString()
+      : image.license!.sourceUrl!,
+    primary_media_license: publicMediaLicense(image),
     primary_media_license_url: image.license!.licenseUrl ?? null,
   };
 }

@@ -1,0 +1,55 @@
+MISSION=MEDIA_TEST_CONTRACT_RECONCILIATION_BEFORE_PHOTO_RESUME_V1
+DATE=2026-09-13
+SOURCE_BEFORE=25511b05070b4a2581a8e4168dc83fef931c3396
+PUBLIC_VERSION_UNCHANGED=128
+PUBLIC_SOURCE_UNCHANGED=f88e810662416cf0764b937f8600f9147b7852f2
+
+MARBLE_QUEEN_CURRENT_MEDIA_COUNT=3
+MARBLE_QUEEN_MEDIA_RIGHTS=PASS; exact Owner evidence, dimensions and SHA256 of each active derivative verified against docs/media-provenance/marble-queen-owner-2026-09-08.json.
+MARBLE_QUEEN_ROOT_CAUSE=The P0 removal audit was treated as a permanent single-placeholder state. Later approved replacement photographs superseded that state. The former two-route exception only checked the first image and did not cover Marble Queen or Delta Force.
+ORIGINAL_TEST_INVARIANT=Retired unproven assets must not return; active media must be approved or an honest gap must remain.
+STALE_ASSERTION=One placeholder forever for a route historically marked REMOVE_AND_USE_HONEST_MEDIA_GAP.
+MARBLE_QUEEN_RECONCILED_INVARIANT=Historical 11-route/5-keep/6-remove audit stays immutable. Every current image has verified complete evidence and a local file; explicitly documented Owner replacements are permitted. Duplicate URLs, unproven replacements and mixed placeholder/photo arrays are rejected. Exact Marble Queen derivative hashes and dimensions are checked against its existing proof, without freezing the live gallery at three images.
+Negative fixtures prove rejection of missing rights, unapproved Owner URI, duplicate images and mixed placeholders.
+
+PUBLIC_LANGUAGE_VISIBLE_LEAK=NO on the audited species pages; actual internal-data exposure confirmed in browser payloads and API.
+LEAK_SURFACES_BEFORE=/plantes serialized PlantExplorer image props contained full license records; /api/v2/encyclopedie/plantes emitted internal creator/license wording and owner-provided URIs; /credits-images exposed non-navigable owner-provided links.
+INTERNAL_METADATA_ONLY=NO
+PUBLIC_LANGUAGE_ROOT_CAUSE=The original test scanned whole source files instead of public output. Independently, raw image objects crossed the server/client boundary and the verified-media API emitted raw rights strings.
+PUBLIC_LANGUAGE_RECONCILED_SCOPE=All canonical species and genus HTML, /plantes, credits, JSON-LD, embedded serialized browser props, served client JS and actual V1/V2 API response bodies. Unit coverage checks all gallery alts/captions, public credit formatting and API projections.
+ACTUAL_FIX=Whitelist four browser image properties; retain an honest image fallback for empty galleries. Format API attribution without internal authorization wording; replace private Owner source URIs with the public credits URL. Render source links on the credits page only for HTTPS sources. Original source records remain untouched.
+MACHINE_API_COMPATIBILITY=Keep VERIFIED_MEDIA/HONEST_MEDIA_GAP exclusively as documented media_status values. These machine enums are not visitor-facing prose. No API fields removed, no media identity/path/status changed, no consumer system changed.
+LICENSE_SAFETY=CC/public-domain labels retained verbatim. Owner authorization becomes Utilisation avec autorisation only in public projection. Unknown rights remain null, never invented. Creator remains truthful, including Driftless Botanicals rather than TIBALDO for Pallidiflorum.
+CATALOGUE_PROJECTION_PURITY=Tests assert no mutation of source records during formatting.
+
+MEDIA_TARGETED_TESTS=PASS 12/12 (9 unit and 3 rendered surface tests)
+FULL_MEDIA_TESTS=PARTIAL 46/47 across 22 files
+BOTANICAL_AND_RENDERED_TESTS=PASS 150/150 including the 3 new surface tests; original botanical suite 147/147
+PLANT_CONTRACT_TESTS=PASS 14/14
+P1_TESTS=PASS 5/5
+TYPECHECK=PASS
+BUILD=PASS PUBLIC, official build-site.mjs
+LINT_CHANGED_FILES=PASS
+DIFF_CHECK=PASS
+NO_RUNTIME_REGRESSION=PASS targeted candidate rendering; no remote deployment performed
+No existing test deleted or skipped. The color-rhythm test was narrowly reconciled to exclude the explicit image-data projection from its historical source-copy comparison; visual/source-copy guards remain.
+
+ADDITIONAL_PREEXISTING_DEBT_NOT_MODIFIED
+tests/final-media-completion-v1.test.ts
+Test: la collection actuelle conserve les médias existants et les neuf nouveaux manques honnêtes
+First failure: plants.length 97 !== 87. It also freezes historical complete/partial/gap counts at 3/37/47 and contains an obsolete Pilea media override in its local helper.
+This third historical media snapshot was outside the two debts explicitly authorized. The file remains byte-identical. No assertion removed to obtain an artificial full PASS.
+NEXT_ACTION=Authorize bounded semantic reconciliation of this remaining historical snapshot, then rerun the full media gate before Photo publication.
+
+MEDIA_RIGHTS_MUTATED=NO
+CATALOGUE_MUTATED=NO
+MEDIA_FILES_MUTATED=NO
+PLANT_ROUTES_MUTATED=NO
+SHOP_MUTATED=NO
+CAISSE_MUTATED=NO
+BACKEND_MUTATED=NO
+PUBLIC_MUTATED=NO
+NEW_PHOTOS_INGESTED=NO
+PUBLIC_DEPLOYMENT_EXECUTED=NO
+SAFE_FOR_CODEX_PHOTO_RESUME=NO; full media certification still has the third historical test failure.
+FINAL_STATUS=PARTIAL; two requested debts reconciled and proven public-data leaks corrected in source, no publication.
