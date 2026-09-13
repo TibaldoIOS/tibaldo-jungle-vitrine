@@ -532,6 +532,12 @@ if (marantaImperialPhotoIndex1 !== -1) {
  plants[marantaImperialPhotoIndex1] = {...plant, gallery: [{"src": "/media/owner-media/alocasia-imperial-red/alocasia-imperial-red-feuillage-petioles-pourpres.webp", "alt": "Alocasia ‘Imperial Red’ en extérieur, aux grandes feuilles vertes portées par des pétioles pourpres.", "caption": "Photo : TIBALDO", "width": 1536, "height": 1024, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260913-maranta-imperial-01/imperial-red", "registryPath": "/credits-images", "note": "Identité Owner confirmée par fichier original et SHA256. Provenance : docs/media-provenance/photo-20260913-maranta-imperial-01.json"}}, ...plant.gallery.filter(m => m.license?.status === "verified")], mediaNeeds: []};
 }
 
+const cupreaPhotoIndex0 = plants.findIndex(p => p.genre === "alocasia" && p.slug === "cuprea");
+if (cupreaPhotoIndex0 !== -1) {
+ const plant = plants[cupreaPhotoIndex0];
+ plants[cupreaPhotoIndex0] = {...plant, gallery: [{"src": "/media/owner-media/alocasia-cuprea/alocasia-cuprea-feuillage-reflets-cuivres.webp", "alt": "Alocasia cuprea en pot, aux feuilles nervurées brillantes mêlant reflets argentés, verts et cuivrés.", "caption": "Photo : TIBALDO", "width": 1536, "height": 1024, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260913-cuprea-01/cuprea", "registryPath": "/credits-images", "note": "Identité Alocasia cuprea confirmée explicitement par Owner. Provenance : docs/media-provenance/photo-20260913-cuprea-01.json"}}, ...plant.gallery.filter(m => m.license?.status === "verified")], mediaNeeds: []};
+}
+
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
 export const getPlantsByGenre = (genre: string) => plants.filter((plant) =>

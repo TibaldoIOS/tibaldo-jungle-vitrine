@@ -1,0 +1,49 @@
+{
+  "batch_id": "PHOTO-20260913-CUPREA-01",
+  "public_source_before": "7917bba7eb3fc3e61a5ab25b7599771b7b8b28bd",
+  "public_version_before": 122,
+  "photos": [
+    {
+      "original_filename": "alocasia cupra.png",
+      "canonical_slug": "plantes/alocasia/cuprea",
+      "filename": "alocasia-cuprea-feuillage-reflets-cuivres.webp",
+      "alt": "Alocasia cuprea en pot, aux feuilles nervurées brillantes mêlant reflets argentés, verts et cuivrés.",
+      "original_sha256": "4c177623aa4ac85ab45a91a27ed50b068e00fa34df9cfb31074c263a0a013c7c",
+      "source_metadata_keys": [],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "owner_identity": "Alocasia cuprea",
+      "asset_path": "/owner-media/alocasia-cuprea/alocasia-cuprea-feuillage-reflets-cuivres.webp",
+      "public_path": "/media/owner-media/alocasia-cuprea/alocasia-cuprea-feuillage-reflets-cuivres.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/alocasia-cuprea/alocasia-cuprea-feuillage-reflets-cuivres.webp",
+      "sha256": "de1725ad59955d1353bc095a7346a08fc35f45a97ccaa25b772cf6ca8a125e0a",
+      "bytes": 286602,
+      "credit": "Photo : TIBALDO",
+      "creator": "TIBALDO",
+      "provenance": "OWNER",
+      "rights": "Autorisation Owner permanente",
+      "role": "HABIT",
+      "private_metadata_removed": true,
+      "status": "READY",
+      "identity_evidence": "Owner explicit confirmation: yep cuprea",
+      "existing_alt_set": [
+        "Feuille métallique cuivrée et nervurée d’Alocasia cuprea",
+        "Feuillage nervuré vert métallique d’un Alocasia cuprea"
+      ]
+    }
+  ],
+  "processing": "WebP quality88 method6, orientation, no crop, no upscale, no generative alteration; metadata stripped",
+  "shop_status": "EXACT_MAPPING_NOT_PROVEN",
+  "caisse_status": "EXACT_MAPPING_NOT_PROVEN",
+  "allowed_paths": [
+    "docs/media-provenance/photo-20260913-cuprea-01.json",
+    "lib/plants/catalog.ts",
+    "app/credits-images/page.tsx",
+    "tests/photo-cuprea-owner-v1.test.ts",
+    "public/owner-media/alocasia-cuprea/alocasia-cuprea-feuillage-reflets-cuivres.webp"
+  ],
+  "previous_media_policy": "KEEP_AS_SECONDARY: retain existing verified Frank Schulenburg CC BY-SA 3.0 image and its credit",
+  "public_deployment_before": "appgdep_6aa5f7d08cd081919b27f34c51d630c9"
+}
