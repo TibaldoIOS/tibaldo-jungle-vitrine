@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 };
 
 const credits: readonly [string, string, string, string, string?][] = [
+["Monstera deliciosa — Variegata", "Photo : TIBALDO", "Photographie botanique", "owner-provided://tibaldo/photo-20260913-variegata-release-01/deliciosa-variegata"],
 ["Pilea cadierei", "Photo : TIBALDO", "Photographie botanique", "owner-provided://tibaldo/photo-20260913-resume-five-01/cadierei"],
 ["Pilea involucrata ‘Moon Valley’", "Photo : TIBALDO", "Photographie botanique", "owner-provided://tibaldo/photo-20260913-resume-five-01/moon-valley"],
 ["Alocasia zebrina", "Photo : TIBALDO", "Photographie botanique", "owner-provided://tibaldo/photo-20260913-resume-five-01/zebrina"],

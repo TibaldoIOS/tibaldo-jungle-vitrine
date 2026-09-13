@@ -1,0 +1,48 @@
+{
+  "batch_id": "PHOTO-20260913-VARIEGATA-RELEASE-01",
+  "source_before": "9a37f71faf5eecc2c85e274c82ea9526c3429612",
+  "public_version_before": 129,
+  "photos": [
+    {
+      "batch_id": "PHOTO-20260913-VARIEGATA-01",
+      "owner_identity": "Monstera deliciosa — Variegata",
+      "canonical_slug": "plantes/monstera/deliciosa-variegata",
+      "original_filename": "Monstera deliciosa — Variegata.png",
+      "original_sha256": "39f4530cee8e9e169c3ea193a60a4210dc84de52f787f917be2f02812a1a3143",
+      "filename": "monstera-deliciosa-variegata-groupe-plantes-panachees.webp",
+      "derivative_sha256": "531d0d95b92079f52be2a9a8955c1b535572904047bc1092864fd3b5091388c2",
+      "bytes": 245912,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alt": "Groupe de Monstera deliciosa Variegata en pots, aux feuilles découpées mêlant secteurs blancs et marbrures vertes.",
+      "existing_media": {
+        "name": "Monstera deliciosa — Variegata",
+        "gallery": []
+      },
+      "provenance": "OWNER",
+      "credit": "Photo : TIBALDO",
+      "processing": "WebP quality88 method6; no crop, no upscale, no generative alteration; metadata stripped",
+      "status": "READY",
+      "public_source": "4ee919f58928cbb996f2d985601bed668858b98b",
+      "public_version": 127,
+      "baseline_tests": "12_PASS_2_FAIL",
+      "publication": "NOT_DONE",
+      "known_original_matches": [],
+      "asset_path": "/owner-media/monstera-deliciosa-variegata/monstera-deliciosa-variegata-groupe-plantes-panachees.webp",
+      "public_path": "/media/owner-media/monstera-deliciosa-variegata/monstera-deliciosa-variegata-groupe-plantes-panachees.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/monstera-deliciosa-variegata/monstera-deliciosa-variegata-groupe-plantes-panachees.webp",
+      "sha256": "531d0d95b92079f52be2a9a8955c1b535572904047bc1092864fd3b5091388c2",
+      "existing_alt_set": [],
+      "creator": "TIBALDO"
+    }
+  ],
+  "allowed_paths": [
+    "docs/media-provenance/photo-20260913-variegata-release-01.json",
+    "lib/plants/catalog.ts",
+    "app/credits-images/page.tsx",
+    "tests/photo-variegata-release-owner-v1.test.ts",
+    "public/owner-media/monstera-deliciosa-variegata/monstera-deliciosa-variegata-groupe-plantes-panachees.webp"
+  ]
+}
