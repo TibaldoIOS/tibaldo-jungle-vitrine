@@ -1,0 +1,23 @@
+/* Optional illustration framing; GoldenGroupHeroBaseline remains the hero system. */
+.illustration .media img { object-position: center 44%; }
+@media (min-width: 981px) {
+  .illustration h1[id] { font-size: clamp(80px, 9vw, 125px); }
+}
+.illustration::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 auto;
+  height: 180px;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgb(6 39 29 / 72%), rgb(6 39 29 / 48%) 55%, transparent);
+}
+@media (max-width: 980px) {
+  .illustration .media { inset: 0 -18% 0 22%; }
+  .illustration .media img { object-position: center 40%; }
+}
+@media (max-width: 520px) {
+  .illustration h1[id] { font-size: clamp(50px, 15vw, 64px); max-width: 100%; }
+  .illustration .media { inset: 0 -15% auto; height: 274px; }
+  .illustration .media img { object-position: center 38%; }
+}

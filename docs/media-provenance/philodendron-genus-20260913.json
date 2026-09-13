@@ -1,0 +1,14 @@
+{
+  "scope": "/plantes/philodendron Hero only",
+  "source_type": "OWNER_PROVIDED",
+  "permission_evidence": "User supplied this asset with PHILODENDRON_GENUS_HERO_IMAGE_FADE_V1 and EXECUTE_NOW=YES, including PUBLIC deployment.",
+  "visual_type": "GENUS_ILLUSTRATION_NOT_SPECIMEN_PHOTOGRAPH",
+  "original": "docs/media-provenance/originals/philodendron-genus-20260913/owner-original.png",
+  "original_sha256": "a9da7ab25da039a3ddee67331908fb9ef83a8152936e149f990782c295a0241b",
+  "asset": "public/owner-media/philodendron-genus/philodendron-planche-feuilles-tibaldo.webp",
+  "asset_sha256": "717c3f66638936c43f83cc1ba0348e8276c99851cc4e621235737b3f3fdd922b",
+  "dimensions": [1536, 1024],
+  "bytes": 252036,
+  "processing": "cwebp quality 85, no crop or drawing changes; responsive presentation crop is CSS-only",
+  "ai_generated_by_agent": false
+}
