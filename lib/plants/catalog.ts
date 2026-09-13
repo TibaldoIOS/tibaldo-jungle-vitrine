@@ -19,6 +19,8 @@ import { applyOwnerMonsteraThaiConstellationMediaV1 } from "./owner-monstera-tha
 import { applyOwnerMonsteraMintMediaV1 } from "./owner-monstera-mint-media-v1.ts";
 import { applyOwnerMarbleQueenMediaV1 } from "./owner-marble-queen-media-v1.ts";
 import { applyOwnerPileaMediaV1 } from "./owner-pilea-media-v1.ts";
+import { canonicalCoverageAdditions } from "./canonical-coverage-additions-v1.ts";
+import { applyCanonicalQualityFixes } from "./canonical-quality-fixes-v1.ts";
 
 export const plantFamilies = [
   { slug: "beaucarnea", name: "Beaucarnea", eyebrow: "Silhouettes succulentes", description: "Un tronc renflé et une croissance lente : comprendre Beaucarnea recurvata sans le confondre avec un palmier.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie de Beaucarnea à documenter", available: true },
@@ -539,6 +541,11 @@ if (cupreaPhotoIndex0 !== -1) {
  const plant = plants[cupreaPhotoIndex0];
  plants[cupreaPhotoIndex0] = {...plant, gallery: [{"src": "/media/owner-media/alocasia-cuprea/alocasia-cuprea-feuillage-reflets-cuivres.webp", "alt": "Alocasia cuprea en pot, aux feuilles nervurées brillantes mêlant reflets argentés, verts et cuivrés.", "caption": "Photo : TIBALDO", "width": 1536, "height": 1024, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260913-cuprea-01/cuprea", "registryPath": "/credits-images", "note": "Identité Alocasia cuprea confirmée explicitement par Owner. Provenance : docs/media-provenance/photo-20260913-cuprea-01.json"}}, ...plant.gallery.filter(m => m.license?.status === "verified")], mediaNeeds: []};
 }
+
+// Applied after media overlays: no historical photo/provenance record is replaced.
+plants.push(...canonicalCoverageAdditions(plants));
+const qualityEntries = applyCanonicalQualityFixes(plants);
+qualityEntries.forEach((entry, index) => { plants[index] = entry; });
 
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);

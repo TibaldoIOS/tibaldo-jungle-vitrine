@@ -37,11 +37,11 @@ const withHonestMediaGap = (plant: P1PlantDraft): PlantEntry => ({
 export const p1AliasCanonicalMap = {
   "/plantes/alocasia/jacklyn": "/plantes/alocasia/tandurusa",
   "/plantes/alocasia/polly": "/plantes/alocasia/mortfontanensis-polly",
-  "/plantes/alocasia/amazonica": "/plantes/alocasia/mortfontanensis-polly",
+  "/plantes/alocasia/amazonica": "/plantes/alocasia",
   "/plantes/philodendron/scandens": "/plantes/philodendron/hederaceum",
   "/plantes/philodendron/philodendron-scandens": "/plantes/philodendron/hederaceum",
   "/plantes/monstera/albo": "/plantes/monstera/albo-variegata",
-  "/plantes/monstera/variegata": "/plantes/monstera/albo-variegata",
+  "/plantes/monstera/variegata": "/plantes/monstera/deliciosa-variegata",
   "/plantes/monstera/deliciosa-albo": "/plantes/monstera/albo-variegata",
   "/plantes/dracaena/trifasciata": "/plantes/sansevieria/trifasciata",
 } as const;

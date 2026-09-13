@@ -1,0 +1,26 @@
+{
+  "environment": "PUBLIC_COMPILED_CANDIDATE",
+  "baseline_version": 125,
+  "baseline_commit": "fac686942c468680f7ed3618429e661bda564bcd",
+  "typecheck": "PASS",
+  "build_public": "PASS",
+  "lint_changed_files": "PASS",
+  "secret_scan": "PASS_BOUNDED_CHANGED_FILES",
+  "tests": { "passed": 130, "failed": 0, "entity_routes": 97, "alias_redirects": 9, "html_internal_links_and_anchors": "PASS" },
+  "responsive": {
+    "widths": [390,430,820,1280,1440],
+    "paths": ["alocasia/bambino","epipremnum/aureum","pilea/moon-valley","philodendron/spiritus-sancti","philodendron/splendid","philodendron/florida-green","aloe/vera","monstera/deliciosa-variegata"],
+    "checks": 40,
+    "horizontal_overflow": 0,
+    "clipped_h1_text": 0,
+    "h1_count_errors": 0,
+    "broken_loaded_images": 0,
+    "beta_links": 0,
+    "method": "Browser DOM geometry including text Range client rectangles; visual screenshots at 390 and 1440. Not a real iPhone certification."
+  },
+  "visual_fix": "Existing long-name layout reused for new spiritus-sancti and Moon Valley after proven desktop clipping. No genus Hero redesign.",
+  "public_deployment": "NOT_CERTIFIED_BY_THIS_LOCAL_ARTIFACT",
+  "shop_mutated": false,
+  "backend_mutated": false,
+  "caisse_mutated": false
+}

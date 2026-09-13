@@ -1,0 +1,771 @@
+{
+  "methodology": "Exhaustive structural inventory. Factual interventions are bounded to sources in evidence records. Unreviewed scientific claims are not falsely certified.",
+  "new_pages": [
+    "epipremnum/aureum",
+    "pilea/moon-valley",
+    "philodendron/spiritus-sancti",
+    "philodendron/splendid",
+    "philodendron/florida-green",
+    "alocasia/bambino"
+  ],
+  "changed_pages": [
+    "pilea/peperomioides",
+    "epipremnum/marble-queen",
+    "monstera/thai-constellation",
+    "monstera/mint",
+    "philodendron/royal-queen",
+    "philodendron/brasil",
+    "anthurium/regale",
+    "philodendron/gloriosum",
+    "philodendron/grazielae",
+    "monstera/burle-marx-flame",
+    "monstera/esqueleto",
+    "pilea/cadierei",
+    "colocasia/esculenta-eddo",
+    "yucca/rostrata",
+    "aloe/vera",
+    "chlorophytum/comosum",
+    "plumeria/rubra",
+    "equisetum/japonicum",
+    "dicksonia/antarctica",
+    "agave/americana-variegata",
+    "fatsia/japonica-spiders-web",
+    "strelitzia/alba",
+    "strelitzia/caudata",
+    "strelitzia/juncea",
+    "strelitzia/nicolai",
+    "strelitzia/reginae",
+    "monstera/albo-variegata",
+    "sansevieria/black-diamond"
+  ],
+  "content": {
+    "CONTENT_COMPLETE": 38,
+    "CONTENT_GOOD": 57,
+    "CONTENT_THIN": 2
+  },
+  "identity": {
+    "HORTICULTURAL_NAME": 34,
+    "CANONICAL_CLEAR": 60,
+    "AMBIGUOUS": 3
+  },
+  "media": {
+    "OWNER_VALID": 26,
+    "VALID_EXISTING": 18,
+    "MISSING": 53
+  },
+  "duplicate_slugs": [],
+  "duplicate_canonical_names": [],
+  "duplicate_titles": [],
+  "duplicate_descriptions": [],
+  "alias_collisions": [],
+  "duplicated_media": [],
+  "genus_inventory": [
+    {
+      "slug": "beaucarnea",
+      "children": [
+        "beaucarnea/recurvata"
+      ],
+      "intro": "Un tronc renflé et une croissance lente : comprendre Beaucarnea recurvata sans le confondre avec un palmier.",
+      "hero_modified": false
+    },
+    {
+      "slug": "asplenium",
+      "children": [
+        "asplenium/nidus"
+      ],
+      "intro": "Frondes entières en rosette : découvrir Asplenium nidus et distinguer les fougères nid-d’oiseau.",
+      "hero_modified": false
+    },
+    {
+      "slug": "nephrolepis",
+      "children": [
+        "nephrolepis/green-lady",
+        "nephrolepis/green-moment"
+      ],
+      "intro": "Frondes divisées et touffes arquées : découvrir les sélections horticoles de Nephrolepis exaltata.",
+      "hero_modified": false
+    },
+    {
+      "slug": "strelitzia",
+      "children": [
+        "strelitzia/alba",
+        "strelitzia/caudata",
+        "strelitzia/juncea",
+        "strelitzia/nicolai",
+        "strelitzia/reginae"
+      ],
+      "intro": "Les cinq espèces acceptées du genre Strelitzia : du compact reginae aux grands alba, caudata et nicolai, avec une lecture claire des appellations « Augusta ».",
+      "hero_modified": false
+    },
+    {
+      "slug": "agave",
+      "children": [
+        "agave/americana-variegata"
+      ],
+      "intro": "Rosettes armées, soleil et drainage : l’univers Agave commence avec le cultivar panaché Agave americana ‘Variegata’.",
+      "hero_modified": false
+    },
+    {
+      "slug": "fatsia",
+      "children": [
+        "fatsia/japonica-spiders-web"
+      ],
+      "intro": "Arbustes persistants aux grandes feuilles palmées, les Fatsia apportent une présence exotique aux emplacements ombragés et abrités.",
+      "hero_modified": false
+    },
+    {
+      "slug": "bananiers",
+      "children": [],
+      "intro": "Bananiers d’intérieur, de terrasse ou de pleine terre : découvrez les différences entre Musa et Ensete, leur croissance, leur hivernage et quatre identités documentées.",
+      "hero_modified": false
+    },
+    {
+      "slug": "musa",
+      "children": [
+        "musa/basjoo",
+        "musa/sikkimensis-red-tiger",
+        "musa/florida-variegata"
+      ],
+      "intro": "Le genre Musa rassemble des bananiers rhizomateux aux usages et résistances très différents. Trois fiches détaillent Basjoo, Red Tiger et Florida Variegata.",
+      "hero_modified": false
+    },
+    {
+      "slug": "ensete",
+      "children": [
+        "ensete/ventricosum-maurelii"
+      ],
+      "intro": "Proches des Musa mais généralement solitaires, les Ensete forment de puissantes rosettes ornementales. Découvrez Ensete ventricosum Maurelii.",
+      "hero_modified": false
+    },
+    {
+      "slug": "alocasia",
+      "children": [
+        "alocasia/imperial-red",
+        "alocasia/cuprea",
+        "alocasia/zebrina",
+        "alocasia/reginula",
+        "alocasia/micholitziana",
+        "alocasia/baginda",
+        "alocasia/sinuata",
+        "alocasia/longiloba",
+        "alocasia/macrorrhizos",
+        "alocasia/odora",
+        "alocasia/tandurusa",
+        "alocasia/melo",
+        "alocasia/mortfontanensis-polly",
+        "alocasia/frydek-variegata",
+        "alocasia/silver-dragon",
+        "alocasia/red-secret",
+        "alocasia/bambino"
+      ],
+      "intro": "Plantes tropicales architecturales aux feuilles spectaculaires, les Alocasia aiment la lumière vive, la chaleur et un substrat très aéré. Découvrez nos conseils de culture et les Alocasia rares observés au Studio Végétal Tibaldo Jungle à Lille.",
+      "hero_modified": false
+    },
+    {
+      "slug": "anthurium",
+      "children": [
+        "anthurium/pallidiflorum",
+        "anthurium/veitchii",
+        "anthurium/delta-force",
+        "anthurium/regale",
+        "anthurium/papillilaminum-dark-phoenix",
+        "anthurium/forgetii-dark-form-silver-blush",
+        "anthurium/crystallinum",
+        "anthurium/magnificum",
+        "anthurium/forgetii",
+        "anthurium/papillilaminum",
+        "anthurium/clarinervium",
+        "anthurium/warocqueanum",
+        "anthurium/luxurians",
+        "anthurium/wendlingeri"
+      ],
+      "intro": "Des Anthurium d’intérieur fleuris aux espèces botaniques aux feuilles veloutées, ce genre révèle une diversité exceptionnelle. Notre guide détaille lumière, humidité, arrosage et substrat pour cultiver un Anthurium de collection à Lille.",
+      "hero_modified": false
+    },
+    {
+      "slug": "monstera",
+      "children": [
+        "monstera/deliciosa",
+        "monstera/thai-constellation",
+        "monstera/mint",
+        "monstera/adansonii",
+        "monstera/burle-marx-flame",
+        "monstera/esqueleto",
+        "monstera/dubia",
+        "monstera/siltepecana",
+        "monstera/obliqua",
+        "monstera/pinnatipartita",
+        "monstera/standleyana",
+        "monstera/albo-variegata",
+        "monstera/deliciosa-variegata"
+      ],
+      "intro": "Célèbres pour leurs feuilles découpées et leurs fenestrations, les Monstera deviennent de véritables plantes-sculptures lorsqu’ils peuvent grimper. Retrouvez les variétés classiques et rares, ainsi que nos conseils d’entretien adaptés aux intérieurs lillois.",
+      "hero_modified": false
+    },
+    {
+      "slug": "philodendron",
+      "children": [
+        "philodendron/billietiae",
+        "philodendron/royal-queen",
+        "philodendron/melanochrysum",
+        "philodendron/brasil",
+        "philodendron/gloriosum",
+        "philodendron/grazielae",
+        "philodendron/hederaceum",
+        "philodendron/pink-princess",
+        "philodendron/imperial-green",
+        "philodendron/spiritus-sancti",
+        "philodendron/splendid",
+        "philodendron/florida-green"
+      ],
+      "intro": "Grimpants, rampants ou autoportants, les Philodendron offrent une incroyable palette de formes, de couleurs et de textures. Tibaldo Jungle documente leur croissance, leur rempotage et les bons substrats pour réussir leur culture à Lille.",
+      "hero_modified": false
+    },
+    {
+      "slug": "epipremnum",
+      "children": [
+        "epipremnum/marble-queen",
+        "epipremnum/aureum"
+      ],
+      "intro": "Souvent appelés pothos, les Epipremnum sont des lianes tropicales accessibles qui développent de grandes feuilles lorsqu’elles grimpent dans de bonnes conditions. Découvrez comment améliorer leur lumière, leur tuteurage et leur croissance en intérieur à Lille.",
+      "hero_modified": false
+    },
+    {
+      "slug": "asparagus",
+      "children": [
+        "asparagus/plumosus"
+      ],
+      "intro": "Sous leur apparence de fougère, les Asparagus sont des plantes sarmenteuses aux cladodes très fins. Découvrez le Plumosus de l’arrivage, son vrai nom botanique et les gestes qui préservent son feuillage vaporeux.",
+      "hero_modified": false
+    },
+    {
+      "slug": "epiphyllum",
+      "children": [
+        "epiphyllum/anguliger"
+      ],
+      "intro": "Le nom Epiphyllum reste familier pour plusieurs cactus de forêt aux tiges plates et retombantes. Découvrez le cactus zigzag, aujourd’hui classé Disocactus anguliger, sa lumière, son arrosage et sa floraison nocturne.",
+      "hero_modified": false
+    },
+    {
+      "slug": "colocasia",
+      "children": [
+        "colocasia/esculenta-eddo",
+        "colocasia/metallica"
+      ],
+      "intro": "Avec leurs immenses feuilles en oreilles d’éléphant, les Colocasia aiment l’eau, la chaleur et une nutrition généreuse pendant leur croissance. Notre guide explique leur culture en pot, leur saison extérieure et leur hivernage sous le climat de Lille.",
+      "hero_modified": false
+    },
+    {
+      "slug": "pilea",
+      "children": [
+        "pilea/peperomioides",
+        "pilea/cadierei",
+        "pilea/moon-valley"
+      ],
+      "intro": "Le genre Pilea rassemble la plante à monnaie chinoise et de nombreuses espèces compactes, rampantes ou texturées. Apprenez à cultiver, tourner et multiplier le Pilea peperomioides, une plante d’intérieur graphique disponible selon les arrivages à Lille.",
+      "hero_modified": false
+    },
+    {
+      "slug": "peperomia",
+      "children": [],
+      "intro": "Compacts et graphiques, les Peperomia séduisent par leurs feuilles charnues, gaufrées, argentées ou panachées. Découvrez leurs besoins en lumière, leur arrosage modéré et les mélanges drainants conseillés par Tibaldo Jungle à Lille.",
+      "hero_modified": false
+    },
+    {
+      "slug": "cactus",
+      "children": [],
+      "intro": "Des cactus miniatures aux grands cierges sculpturaux, les Cactaceae réunissent des plantes adaptées à la sécheresse mais exigeantes en lumière. Découvrez comment choisir, arroser, rempoter et faire refleurir un cactus dans un intérieur à Lille.",
+      "hero_modified": false
+    },
+    {
+      "slug": "maranta",
+      "children": [
+        "maranta/lemon-lime"
+      ],
+      "intro": "Les Maranta déploient des feuillages peints de nervures rouges, de taches sombres et de nuances veloutées. Découvrez comment préserver leurs couleurs, comprendre le mouvement quotidien de leurs feuilles et réussir leur culture dans un intérieur à Lille.",
+      "hero_modified": false
+    },
+    {
+      "slug": "calathea",
+      "children": [],
+      "intro": "Calathea reste le nom horticole familier de nombreuses plantes aujourd’hui classées dans le genre Goeppertia. Leurs grandes feuilles rayées, rondes ou dessinées demandent lumière douce, chaleur stable et arrosage attentif.",
+      "hero_modified": false
+    },
+    {
+      "slug": "aloe",
+      "children": [
+        "aloe/vera"
+      ],
+      "intro": "Les Aloe sont des succulentes lumineuses aux feuilles charnues. La première fiche documente Aloe vera sans transformer une plante décorative en promesse médicale.",
+      "hero_modified": false
+    },
+    {
+      "slug": "chlorophytum",
+      "children": [
+        "chlorophytum/comosum",
+        "chlorophytum/bonnie",
+        "chlorophytum/ocean"
+      ],
+      "intro": "La plante araignée et ses jeunes plants suspendus rejoignent l’encyclopédie avec une fiche dédiée à Chlorophytum comosum.",
+      "hero_modified": false
+    },
+    {
+      "slug": "yucca",
+      "children": [
+        "yucca/rostrata"
+      ],
+      "intro": "Les Yucca associent résistance, soleil et silhouette graphique. Yucca rostrata ouvre cet univers consacré aux végétaux extérieurs.",
+      "hero_modified": false
+    },
+    {
+      "slug": "cycas",
+      "children": [
+        "cycas/revoluta"
+      ],
+      "intro": "Les Cycas ne sont ni des palmiers ni des fougères. Cet univers commence avec Cycas revoluta, une espèce sculpturale à croissance lente qui demande soleil, drainage et prudence en présence d’animaux.",
+      "hero_modified": false
+    },
+    {
+      "slug": "dicksonia",
+      "children": [
+        "dicksonia/antarctica"
+      ],
+      "intro": "Le genre Dicksonia réunit des fougères arborescentes au stipe fibreux. Découvrez Dicksonia antarctica, son besoin d’humidité et son hivernage nuancé dans le Nord.",
+      "hero_modified": false
+    },
+    {
+      "slug": "plumeria",
+      "children": [
+        "plumeria/rubra"
+      ],
+      "intro": "Floraisons roses ou jaunes, chaleur et repos hivernal : les frangipaniers sont regroupés sans inventer le nom de leurs cultivars.",
+      "hero_modified": false
+    },
+    {
+      "slug": "equisetum",
+      "children": [
+        "equisetum/japonicum"
+      ],
+      "intro": "La prêle japonaise forme des tiges verticales très graphiques et demande une culture maîtrisée pour contenir ses rhizomes.",
+      "hero_modified": false
+    },
+    {
+      "slug": "ficus",
+      "children": [
+        "ficus/elastica"
+      ],
+      "intro": "Arbres et lianes aux silhouettes très diverses, les Ficus demandent une lumière adaptée et un arrosage lu à l’échelle du pot. Ficus elastica ouvre cet univers avec son feuillage coriace et sa croissance arborescente.",
+      "hero_modified": false
+    },
+    {
+      "slug": "syngonium",
+      "children": [
+        "syngonium/podophyllum"
+      ],
+      "intro": "Des jeunes feuilles en pointe de flèche aux formes adultes profondément divisées, les Syngonium changent de silhouette en grandissant. Découvrez leur lumière, leur support et les nombreuses panachures horticoles.",
+      "hero_modified": false
+    },
+    {
+      "slug": "hoya",
+      "children": [
+        "hoya/carnosa",
+        "hoya/callistophylla"
+      ],
+      "intro": "Lianes épiphytes aux feuilles souvent charnues, les Hoya sont appréciés pour leurs formes variées et leurs floraisons en ombelles. Leur réussite repose sur la lumière, l’aération des racines et un arrosage mesuré.",
+      "hero_modified": false
+    },
+    {
+      "slug": "sansevieria",
+      "children": [
+        "sansevieria/trifasciata",
+        "sansevieria/black-gold",
+        "sansevieria/black-diamond"
+      ],
+      "intro": "Toujours connues comme Sansevieria, ces plantes sont désormais rattachées au genre Dracaena. Leurs feuilles verticales, cylindriques ou panachées demandent beaucoup de lumière et peu d’eau.",
+      "hero_modified": false
+    },
+    {
+      "slug": "fougeres",
+      "children": [
+        "dicksonia/antarctica",
+        "asplenium/nidus",
+        "nephrolepis/green-lady",
+        "nephrolepis/green-moment"
+      ],
+      "intro": "Des fougères fines et retombantes aux frondes coriaces ou argentées, cet univers rassemble plusieurs familles botaniques. Chaque future fiche précisera les besoins propres à l’espèce documentée.",
+      "hero_modified": false
+    }
+  ],
+  "issues": [
+    {
+      "id": "anthurium/pallidiflorum",
+      "flags": [
+        "SPECIFIC_SOURCE_NEEDED"
+      ]
+    },
+    {
+      "id": "epiphyllum/anguliger",
+      "flags": [
+        "SPECIFIC_SOURCE_NEEDED"
+      ]
+    },
+    {
+      "id": "monstera/deliciosa",
+      "flags": [
+        "SPECIFIC_SOURCE_NEEDED"
+      ]
+    },
+    {
+      "id": "monstera/mint",
+      "flags": [
+        "SPECIFIC_SOURCE_NEEDED"
+      ]
+    },
+    {
+      "id": "anthurium/regale",
+      "flags": [
+        "FILTERED_INTERNAL_COPY_PRESENT_IN_SOURCE"
+      ]
+    },
+    {
+      "id": "anthurium/papillilaminum-dark-phoenix",
+      "flags": [
+        "GENERIC_PROPAGATION",
+        "SPECIFIC_SOURCE_NEEDED",
+        "FILTERED_INTERNAL_COPY_PRESENT_IN_SOURCE",
+        "IDENTITY_EVIDENCE_REQUIRED"
+      ]
+    },
+    {
+      "id": "anthurium/forgetii-dark-form-silver-blush",
+      "flags": [
+        "GENERIC_PROPAGATION",
+        "SPECIFIC_SOURCE_NEEDED",
+        "FILTERED_INTERNAL_COPY_PRESENT_IN_SOURCE",
+        "IDENTITY_EVIDENCE_REQUIRED"
+      ]
+    },
+    {
+      "id": "philodendron/gloriosum",
+      "flags": [
+        "FILTERED_INTERNAL_COPY_PRESENT_IN_SOURCE"
+      ]
+    },
+    {
+      "id": "philodendron/grazielae",
+      "flags": [
+        "FILTERED_INTERNAL_COPY_PRESENT_IN_SOURCE"
+      ]
+    },
+    {
+      "id": "monstera/burle-marx-flame",
+      "flags": [
+        "FILTERED_INTERNAL_COPY_PRESENT_IN_SOURCE"
+      ]
+    },
+    {
+      "id": "pilea/cadierei",
+      "flags": [
+        "FILTERED_INTERNAL_COPY_PRESENT_IN_SOURCE"
+      ]
+    },
+    {
+      "id": "yucca/rostrata",
+      "flags": [
+        "FILTERED_INTERNAL_COPY_PRESENT_IN_SOURCE"
+      ]
+    },
+    {
+      "id": "aloe/vera",
+      "flags": [
+        "FILTERED_INTERNAL_COPY_PRESENT_IN_SOURCE"
+      ]
+    },
+    {
+      "id": "chlorophytum/comosum",
+      "flags": [
+        "FILTERED_INTERNAL_COPY_PRESENT_IN_SOURCE"
+      ]
+    },
+    {
+      "id": "plumeria/rubra",
+      "flags": [
+        "FILTERED_INTERNAL_COPY_PRESENT_IN_SOURCE"
+      ]
+    },
+    {
+      "id": "equisetum/japonicum",
+      "flags": [
+        "FILTERED_INTERNAL_COPY_PRESENT_IN_SOURCE",
+        "IDENTITY_EVIDENCE_REQUIRED"
+      ]
+    }
+  ],
+  "media_backlog": [
+    {
+      "id": "asparagus/plumosus",
+      "name": "Asparagus setaceus",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "epiphyllum/anguliger",
+      "name": "Disocactus anguliger",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "philodendron/royal-queen",
+      "name": "Philodendron ‘Royal Queen’",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "philodendron/brasil",
+      "name": "Philodendron hederaceum ‘Brasil’",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "philodendron/gloriosum",
+      "name": "Philodendron gloriosum",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "philodendron/grazielae",
+      "name": "Philodendron grazielae",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "pilea/cadierei",
+      "name": "Pilea cadierei",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "yucca/rostrata",
+      "name": "Yucca rostrata",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "aloe/vera",
+      "name": "Aloe vera",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "chlorophytum/comosum",
+      "name": "Chlorophytum comosum",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "plumeria/rubra",
+      "name": "Plumeria rubra",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "equisetum/japonicum",
+      "name": "Equisetum hyemale var. japonicum",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "alocasia/zebrina",
+      "name": "Alocasia zebrina",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "alocasia/reginula",
+      "name": "Alocasia reginula",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "alocasia/micholitziana",
+      "name": "Alocasia micholitziana",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "alocasia/baginda",
+      "name": "Alocasia baginda",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "alocasia/sinuata",
+      "name": "Alocasia sinuata",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "alocasia/longiloba",
+      "name": "Alocasia longiloba",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "alocasia/macrorrhizos",
+      "name": "Alocasia macrorrhizos",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "alocasia/odora",
+      "name": "Alocasia odora",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "musa/basjoo",
+      "name": "Musa basjoo",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "musa/sikkimensis-red-tiger",
+      "name": "Musa sikkimensis 'Red Tiger'",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "musa/florida-variegata",
+      "name": "Musa 'Florida Variegata'",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "ensete/ventricosum-maurelii",
+      "name": "Ensete ventricosum 'Maurelii'",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "cycas/revoluta",
+      "name": "Cycas revoluta",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "dicksonia/antarctica",
+      "name": "Dicksonia antarctica",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "agave/americana-variegata",
+      "name": "Agave americana ‘Variegata’",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "fatsia/japonica-spiders-web",
+      "name": "Fatsia japonica ‘Spider’s Web’",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "strelitzia/alba",
+      "name": "Strelitzia alba",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "strelitzia/caudata",
+      "name": "Strelitzia caudata",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "strelitzia/juncea",
+      "name": "Strelitzia juncea",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "strelitzia/nicolai",
+      "name": "Strelitzia nicolai",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "strelitzia/reginae",
+      "name": "Strelitzia reginae",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "alocasia/melo",
+      "name": "Alocasia melo",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "philodendron/imperial-green",
+      "name": "Philodendron ‘Imperial Green’",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "hoya/callistophylla",
+      "name": "Hoya callistophylla",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "sansevieria/black-gold",
+      "name": "Dracaena trifasciata ‘Black Gold’",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "asplenium/nidus",
+      "name": "Asplenium nidus",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "nephrolepis/green-lady",
+      "name": "Nephrolepis exaltata ‘Green Lady’",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "nephrolepis/green-moment",
+      "name": "Nephrolepis exaltata ‘Green Moment’",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "chlorophytum/bonnie",
+      "name": "Chlorophytum comosum ‘Bonnie’",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "chlorophytum/ocean",
+      "name": "Chlorophytum comosum ‘Ocean’",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "beaucarnea/recurvata",
+      "name": "Beaucarnea recurvata",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "alocasia/frydek-variegata",
+      "name": "Alocasia micholitziana — Frydek Variegata",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "alocasia/silver-dragon",
+      "name": "Alocasia ‘Silver Dragon’",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "alocasia/red-secret",
+      "name": "Alocasia cuprea ‘Red Secret’",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "monstera/deliciosa-variegata",
+      "name": "Monstera deliciosa — Variegata",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "epipremnum/aureum",
+      "name": "Epipremnum aureum",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "pilea/moon-valley",
+      "name": "Pilea involucrata ‘Moon Valley’",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "philodendron/spiritus-sancti",
+      "name": "Philodendron spiritus-sancti",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "philodendron/splendid",
+      "name": "Philodendron ‘Splendid’",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "philodendron/florida-green",
+      "name": "Philodendron — Florida Green",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    },
+    {
+      "id": "alocasia/bambino",
+      "name": "Alocasia — Bambino",
+      "evidence_needed": "Photo + exact plant name and rights. No stock mutation required."
+    }
+  ]
+}

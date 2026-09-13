@@ -1,0 +1,80 @@
+{
+  "commercial_records": [
+    {
+      "PRODUCT_NAME": "Maranta Lemon",
+      "PRODUCT_ID_IF_AVAILABLE": null,
+      "EVIDENCE_SCOPE": "Owner audit reference list 2026-09-13; not a live stock assertion",
+      "CANONICAL_BOTANICAL_IDENTITY": null,
+      "ENCYCLOPEDIA_ENTITY": null,
+      "ENCYCLOPEDIA_URL": null,
+      "MATCH_LEVEL": "AMBIGUOUS_MATCH",
+      "LINKAGE_READY": "NO",
+      "BLOCKER": "Confirmer Lemon Lime sur l’étiquette du produit ; le nom abrégé seul n’est pas une preuve.",
+      "IDENTITY_CONFIDENCE": "INSUFFICIENT",
+      "COMMERCIAL_AVAILABILITY": "NOT_ASSERTED"
+    },
+    {
+      "PRODUCT_NAME": "Beaucarnea",
+      "PRODUCT_ID_IF_AVAILABLE": null,
+      "EVIDENCE_SCOPE": "Owner audit reference list 2026-09-13; not a live stock assertion",
+      "CANONICAL_BOTANICAL_IDENTITY": null,
+      "ENCYCLOPEDIA_ENTITY": null,
+      "ENCYCLOPEDIA_URL": null,
+      "MATCH_LEVEL": "IDENTITY_INSUFFICIENT",
+      "LINKAGE_READY": "NO",
+      "BLOCKER": "Étiquette fournisseur indiquant l’espèce ; la demande de fiche recurvata n’identifie pas l’arrivage générique.",
+      "IDENTITY_CONFIDENCE": "INSUFFICIENT",
+      "COMMERCIAL_AVAILABILITY": "NOT_ASSERTED"
+    },
+    {
+      "PRODUCT_NAME": "Strelitzia augusta",
+      "PRODUCT_ID_IF_AVAILABLE": null,
+      "EVIDENCE_SCOPE": "Owner audit reference list 2026-09-13; not a live stock assertion",
+      "CANONICAL_BOTANICAL_IDENTITY": null,
+      "ENCYCLOPEDIA_ENTITY": null,
+      "ENCYCLOPEDIA_URL": null,
+      "MATCH_LEVEL": "AMBIGUOUS_MATCH",
+      "LINKAGE_READY": "NO",
+      "BLOCKER": "Le synonyme botanique vise alba, mais Augusta est aussi mal appliqué commercialement à nicolai. Exiger une identité fournisseur complète ou des caractères adultes probants.",
+      "IDENTITY_CONFIDENCE": "INSUFFICIENT",
+      "COMMERCIAL_AVAILABILITY": "NOT_ASSERTED"
+    },
+    {
+      "PRODUCT_NAME": "Nepenthes",
+      "PRODUCT_ID_IF_AVAILABLE": null,
+      "EVIDENCE_SCOPE": "Owner audit reference list 2026-09-13; not a live stock assertion",
+      "CANONICAL_BOTANICAL_IDENTITY": null,
+      "ENCYCLOPEDIA_ENTITY": null,
+      "ENCYCLOPEDIA_URL": null,
+      "MATCH_LEVEL": "IDENTITY_INSUFFICIENT",
+      "LINKAGE_READY": "NO",
+      "BLOCKER": "Espèce ou hybride précis sur l’étiquette ; aucune identité déduite d’un mélange.",
+      "IDENTITY_CONFIDENCE": "INSUFFICIENT",
+      "COMMERCIAL_AVAILABILITY": "NOT_ASSERTED"
+    }
+  ],
+  "additional_generic_labels_do_not_create": [
+    "ALOCASIA",
+    "ALOCASIA MELANGE",
+    "CACTUS MELANGE",
+    "PHILODENDRON MIX",
+    "PLANTE VERTE",
+    "NEPENTHES MELANGE"
+  ],
+  "existing_entities": [
+    {
+      "id": "anthurium/papillilaminum-dark-phoenix",
+      "evidence_required": "Étiquette complète du croisement : papi n’est pas une preuve de papillilaminum ; nom et filiation du second parent."
+    },
+    {
+      "id": "anthurium/forgetii-dark-form-silver-blush",
+      "evidence_required": "Étiquette/provenance du croisement et des sélections parentales ; ne pas certifier un cultivar ou clone depuis la photo."
+    },
+    {
+      "id": "equisetum/japonicum",
+      "evidence_required": "Identité complète du fournisseur et caractères du sujet pour résoudre le nom horticole japonicum."
+    }
+  ],
+  "non_blocking_media_backlog": "See ENCYCLOPEDIA_QUALITY_AUDIT_V1.json; photographs do not block factual documentary pages",
+  "one_batched_owner_report": true
+}

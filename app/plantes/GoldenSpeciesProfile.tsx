@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { plants } from "@/lib/plants/catalog";
+import { comparisonTarget } from "@/lib/plants/canonical-identity";
 import type { PlantEntry } from "@/lib/plants/types";
 import { isEditorialPlaceholder, isInternalPhotoProductionCopy, isPhotoProductionPlaceholder } from "@/lib/plants/types";
 import { publicMediaCredit } from "@/lib/plants/public-media-credit";
@@ -62,17 +63,6 @@ function SnapshotItem({ index, label, value, note, tone, level }: {
     </article>
   );
 }
-
-const normalized = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
-
-const comparisonHref = (plant: PlantEntry, name: string) => {
-  const needle = normalized(name);
-  const match = plants.find((candidate) => {
-    const names = [candidate.botanicalName, candidate.displayName, candidate.listingName ?? ""].map(normalized).filter(Boolean);
-    return names.some((candidateName) => candidateName.includes(needle) || needle.includes(candidateName));
-  });
-  return match ? `/plantes/${match.genre}/${match.slug}` : `/plantes/${plant.genre}`;
-};
 
 export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
   const gallery = documentaryGallery(plant);
@@ -194,7 +184,10 @@ export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
 
           <section className={golden.related} id="comparaison" aria-labelledby={`golden-related-${plant.genre}-${plant.slug}`}>
             <header data-reveal><p className="section-kicker">06 · Comparer</p><h2 id={`golden-related-${plant.genre}-${plant.slug}`}>Des silhouettes proches.<br /><em>Des lectures distinctes.</em></h2></header>
-            <div className={golden.relatedTrack}>{plant.comparisons.map((item, index) => <Link href={item.href ?? comparisonHref(plant, item.name)} key={item.name} data-reveal><span>0{index + 1}</span><strong>{item.name}</strong><p>{item.difference}</p><b>Comparer <Arrow /></b></Link>)}</div>
+            <div className={golden.relatedTrack}>{plant.comparisons.map((item, index) => {
+              const target = comparisonTarget(plants, plant, item);
+              return <Link href={target.href} key={item.name} data-reveal><span>0{index + 1}</span><strong>{item.name}</strong><p>{item.difference}</p><b>{target.exact ? "Comparer" : "Explorer le genre"} <Arrow /></b></Link>;
+            })}</div>
           </section>
 
           {isCycasRevoluta ? <CycasLocalGuide plant={plant} /> : null}

@@ -1,0 +1,99 @@
+TIBALDO — ENCYCLOPEDIA CANONICAL COVERAGE AND QUALITY AUDIT V1
+Date: 2026-09-13
+Source baseline: PUBLIC V125, fac686942c468680f7ed3618429e661bda564bcd
+Release state of this document: certified local candidate, NOT evidence of publication.
+
+SCOPE AND EVIDENCE
+The canonical catalog is lib/plants/catalog.ts. The registry and commercial report
+are derived exports, not parallel runtime matching systems. All 91 existing entries,
+their indexed URLs, SEO fields, gallery and rights/provenance records are preserved.
+Six additions bring the candidate to 97 species/horticultural entities. Genus and
+family landing pages are listed separately and are not counted as species.
+
+Every entity received structural identity/content/SEO/media/link triage. The labels
+CONTENT_COMPLETE and CONTENT_GOOD measure documented field coverage, not a claim
+that every historical scientific sentence was freshly reviewed by a botanist.
+Sources already attached to historical entries remain evidence, with limitations
+listed per record. Targeted factual corrections and six additions were researched.
+Two thin ambiguous Anthurium records cannot safely be enriched as certain crosses.
+Three existing identities require evidence: those two Anthurium records and the
+historical Equisetum japonicum label. No uncertain identity was silently invented.
+
+ARTIFACTS
+ENCYCLOPEDIA_CANONICAL_REGISTRY_V1.json: complete entity and source inventory.
+ENCYCLOPEDIA_QUALITY_AUDIT_V1.json: quality triage, changes, genus inventory, media backlog.
+COMMERCIAL_TO_ENCYCLOPEDIA_MAPPING_V1.json: 51 Owner reference names and six prior mappings.
+ENCYCLOPEDIA_OWNER_AMBIGUITIES_V1.json: one consolidated evidence/Owner decision list.
+ENCYCLOPEDIA_BASELINE_V125.json: immutable before snapshot used by preservation tests.
+
+NEW PAGES
+Epipremnum aureum; Pilea involucrata 'Moon Valley'; Philodendron spiritus-sancti;
+Philodendron Splendid; Philodendron — Florida Green; Alocasia — Bambino.
+Florida Green and Bambino are presented as horticultural/commercial names, not
+invented formal species or registered cultivars. The six pages use honest media
+gaps. No inherited picture from a related species was used as documentary proof.
+
+SAFE CORRECTIONS
+28 prior entries receive targeted care, alias, parent-link, safety or field updates.
+Eight epithet-only species fields become binomials without changing indexed URLs.
+Unknown toxicity no longer means a false non-toxic filter; Aloe vera, Plumeria rubra
+and Yucca rostrata warnings use specific institutional sources. Equisetum is not
+flowering. Propagation advice now distinguishes nodes, offsets, rhizomes and seeds.
+Substring-based comparison resolution was replaced by exact, collision-safe names.
+Uncertain comparisons lead to the appropriate genus with an honest link label.
+Philodendron New Red is not asserted to be Royal Queen without identity evidence.
+Monstera Squeleto is a search alias, not a new species.
+
+ROUTES AND DUPLICATES
+No duplicate canonical names or slugs were found; no entity was deleted or merged.
+Nine declared aliases had no compiled redirect routes. Three representative actual
+PUBLIC requests (Jacklyn, amazonica, Variegata) returned 404 before this patch.
+All nine now return 301 in compiled tests. Amazonica points to the genus, not Polly;
+Variegata points to the general deliciosa Variegata page, not automatically Albo.
+Every canonical entity has a legitimate HTML genus referrer. All encyclopedia HTML
+internal destination/fragment checks pass. Existing canonical URLs remain unchanged.
+
+COMMERCIAL LIMIT
+The actual public Shop /api/catalogue request returned 404 while the homepage showed
+the coming-soon publication state. Its existing source contract confirms that this
+endpoint is unavailable in that state. No private catalog access was fabricated.
+The denominator is therefore ONLY the 51 supplied reference names: 24 exact,
+22 horticultural-form, one species-level, two ambiguous and two insufficient.
+47/51 = 92.16% safe documented coverage; it is NOT a certified live-Shop KPI.
+No high-confidence missing page remains within this supplied reference set.
+Beaucarnea does not imply recurvata; Nepenthes mix does not imply a species.
+Maranta Lemon needs the fuller label; Strelitzia augusta needs nomenclatural versus
+commercial usage clarification. All evidence requests are batched in one report.
+
+SOURCE REVIEW LEDGER
+Accepted identity: Kew POWO Epipremnum aureum 87014-1; Philodendron spiritus-sancti
+282667-2. Native-range wording follows those records.
+Moon Valley: RHS plant 49384 and Pilea growing guide; Syngenta's Pilea mollis trade
+label is recorded as discordance, not silently made a formal synonym.
+Splendid: International Aroid Society cultivar gallery, verrucosum x melanochrysum.
+Esqueleto: IAS cultivar entry has no established accepted formal identity; retained
+as horticultural rather than promoted to an invented species.
+Bambino and Florida Green: primary GrowTropicals nursery descriptions establish
+commercial usage and morphology only; parentage/formal cultivar status is not proven.
+RHS Alocasia Polly Bambino is unresolved and does not establish equivalence with Polly.
+Care: RHS growing guides and specific Regale/Plumeria pages; NC State Extension Aloe,
+Pilea cadierei, Yucca rostrata, Colocasia esculenta; UF IFAS Equisetum hyemale.
+Hoya callistophylla safety checked against Singapore NParks species page 6904.
+Exact URLs remain in each catalog entry and the machine-readable registry.
+No source photographs were downloaded or copied. No AI imagery was generated.
+
+LOCAL CERTIFICATION
+PUBLIC build and typecheck pass. Changed-file lint passes; unrelated historic 3D
+lint debt was not modified. Compiled tests cover all 97 entity routes, canonical,
+single H1, JSON-LD, indexability, sitemap, genus links, nine aliases and internal links.
+Browser DOM QA: eight representative/new pages x 390/430/820/1280/1440 = 40 checks;
+zero horizontal overflow, single visible H1, no BETA links or broken loaded images.
+This is desktop responsive-browser evidence, not physical iPhone performance proof.
+Media status uses existing provenance and honest gaps: 26 Owner, 18 valid existing,
+53 missing. Missing pictures do not block factual content.
+
+PUBLICATION SAFETY
+Re-read latest PUBLIC before deployment. Do not overwrite intervening valid work.
+Rollback is the prior exact saved PUBLIC version, not a global branch reset.
+Publication and remote certification must be recorded separately after deployment.
+Shop, Caisse, Backend, commercial prices/stock/publication and genus Heroes unchanged.

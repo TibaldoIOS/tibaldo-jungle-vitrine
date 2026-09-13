@@ -14,9 +14,14 @@ export default function PlantSpeciesHero({ plant }: { plant: PlantEntry }) {
   const hasPhoto = !isEditorialPlaceholder(image?.src);
   const hasBotanicalFallback =
     plant.genre === "dicksonia" && plant.slug === "antarctica";
+  const needsLongNameLayout = [
+    "sansevieria/black-diamond",
+    "philodendron/spiritus-sancti",
+    "pilea/moon-valley",
+  ].includes(`${plant.genre}/${plant.slug}`);
   return (
     <section
-      className={`plant-profile-hero plant-profile-hero-${plant.genre}-${plant.slug} ${hasPhoto ? "has-photo" : "has-editorial-fallback"} ${plant.genre === "sansevieria" && plant.slug === "black-diamond" ? layout.hero : ""}`}
+      className={`plant-profile-hero plant-profile-hero-${plant.genre}-${plant.slug} ${hasPhoto ? "has-photo" : "has-editorial-fallback"} ${needsLongNameLayout ? layout.hero : ""}`}
     >
       {hasPhoto ? (
         <Image unoptimized

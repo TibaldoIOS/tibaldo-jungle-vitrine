@@ -1,4 +1,5 @@
 import { publicPermanentRedirects } from "../lib/seo/public-redirects.ts";
+import { plants } from "../lib/plants/catalog.ts";
 
 const origin = "http://localhost";
 const publicOrigin = "https://jungle.tibaldo.fr";
@@ -71,7 +72,7 @@ const paths = locs
   .map((location) => new URL(location).pathname);
 const duplicateLocations = locs.filter((location, index) => locs.indexOf(location) !== index);
 const nonPublicLocations = locs.filter((location) => !location.startsWith(`${publicOrigin}/`) && location !== publicOrigin);
-if (locs.length !== 157) errors.push(`Sitemap contient ${locs.length} URL, attendu 157`);
+for (const p of plants) if (!paths.includes(`/plantes/${p.genre}/${p.slug}`)) errors.push(`Fiche canonique absente du sitemap: ${p.genre}/${p.slug}`);
 if (duplicateLocations.length) errors.push(`Sitemap contient ${duplicateLocations.length} doublon(s)`);
 if (nonPublicLocations.length) errors.push(`Sitemap contient ${nonPublicLocations.length} hôte(s) non PUBLIC`);
 if (/beta-jungle|localhost|chatgpt\.site/i.test(xml)) errors.push("Sitemap contient une référence de staging");
