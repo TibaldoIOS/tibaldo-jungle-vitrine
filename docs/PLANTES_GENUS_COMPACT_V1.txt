@@ -1,0 +1,38 @@
+MISSION=PLANTES_HUB_GENUS_BLOCKS_COMPACT_SCALE_V1
+DATE=2026-09-13
+SOURCE_BEFORE=3209051a404e4ac3f415ae6c8c316f9f2196505d
+PUBLIC_BASE=f88e810662416cf0764b937f8600f9147b7852f2
+PUBLIC_VERSION=128
+
+PREVIOUS_BLOCK_HEIGHT_BEHAVIOR=Intrinsic portrait image dimensions stretched the grid beyond its nominal 500px minimum. Desktop measured heights: Monstera 1106px, Anthurium 664px, Alocasia 887px, Philodendron 500px.
+NEW_BLOCK_HEIGHT_BEHAVIOR=Shared responsive minimum clamp(480px,40vw,540px), allowed to grow for content rather than clip. Measured all four entries: 512px at 1280, 540px at 1440, 440px at 820. Mobile stacking preserved: 580-602px at 390 and 610px at 430, including both image and text.
+PREVIOUS_IMAGE_BEHAVIOR=In-flow height:100% image retained intrinsic portrait sizing; alternate entries also placed images in the narrower grid track.
+NEW_IMAGE_BEHAVIOR=Absolute image inside existing container, cover without distortion, center 65% positioning, 55% image / 45% text with mirrored tracks on alternate entries. Mobile 4:3 image container. No source asset modified or replaced.
+TEXT_ALIGNMENT=Centered, reduced padding and removed excessive heading top margin; typography and colors unchanged.
+DESKTOP_VERTICAL_REDUCTION_ESTIMATE=35.1% at 1280 and 31.6% at 1440 across the four entries combined, excluding the additional reduction in inter-block spacing. This is an aggregate comparison, not a claim of identical reduction for every formerly unequal block.
+MOBILE_VERTICAL_REDUCTION_ESTIMATE=Approximately 26-30% based on initial PUBLIC measurements.
+
+390=PASS; no overflow or clipped text; stacked
+430=PASS; no overflow or clipped text; stacked
+820=PASS; no overflow or clipped text; alternating 55/45
+1280=PASS; no overflow or clipped text; alternating 55/45
+1440=PASS; no overflow or clipped text; alternating 55/45
+NO_HORIZONTAL_OVERFLOW=YES
+NO_CLIPPED_TEXT=YES
+NO_IMAGE_DISTORTION=YES
+ALL_FOUR_IMAGES_LOADED=YES
+CRITICAL_CONSOLE_ERRORS=0
+PUBLIC_COPY_MEDIA_AND_JSON_LD_COMPARISON=IDENTICAL
+TYPECHECK=PASS
+BUILD=PASS PUBLIC
+TARGETED_TESTS=PASS 29/29
+LINT_CHANGED_TEST=PASS
+DIFF_CHECK=PASS
+
+SCOPE=Only append route-scoped size, spacing and image-position CSS in PlantsColorRhythm.module.css; add focused test and this report. No header, intro, copy, palette, typography, route, image, dock or commerce changes.
+
+PUBLIC_DEPLOYED=NO
+PUBLICATION_GATE=Current source also includes the previously prepared, undeployed media privacy correction 3209051. Publishing latest source would include that separate correction. Owner confirmation was requested before combining the releases. No implicit promotion and no rollback of newer source.
+HISTORICAL_TEST_DEBT=final-media-completion-v1 still freezes total entities at 87; unrelated to compact CSS and not changed here.
+PREVIEW=http://localhost:4219/plantes
+FINAL_STATUS=IMPLEMENTED_VALIDATED_AWAITING_PUBLIC_SCOPE_CONFIRMATION

@@ -27,3 +27,63 @@
   .chapter.chapter > header { padding: 52px 16px; }
   .chapter.chapter > header > p:last-child { font-size: 16px; }
 }
+
+/* Compact genus entries: keep intrinsic portrait images out of grid sizing. */
+.chapter :global(.plants-editorial-genera-list) {
+  gap: clamp(40px, 5vw, 72px);
+}
+
+.chapter :global(.plants-editorial-genus) {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+  min-height: clamp(480px, 40vw, 540px);
+}
+
+.chapter :global(.plants-editorial-genus:nth-child(even)) {
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+}
+
+.chapter :global(.plants-editorial-genus-media) {
+  min-height: 0;
+}
+
+.chapter :global(.plants-editorial-genus-media img) {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 65%;
+}
+
+.chapter :global(.plants-editorial-genus-copy) {
+  min-width: 0;
+  padding: clamp(28px, 3vw, 44px);
+  justify-content: center;
+}
+
+.chapter :global(.plants-editorial-genus-copy h3) {
+  margin-top: 0;
+}
+
+.chapter :global(.plants-editorial-genus-copy small) { margin-top: 18px; }
+.chapter :global(.plants-editorial-genus-copy strong) { margin-top: 24px; }
+
+@media (max-width: 980px) and (min-width: 701px) {
+  .chapter :global(.plants-editorial-genus) { min-height: 440px; }
+  .chapter :global(.plants-editorial-genus-copy) { padding: 24px; }
+}
+
+@media (max-width: 700px) {
+  .chapter :global(.plants-editorial-genus),
+  .chapter :global(.plants-editorial-genus:nth-child(even)) {
+    min-height: 0;
+    grid-template-columns: none;
+  }
+  .chapter :global(.plants-editorial-genus-media) {
+    aspect-ratio: 4 / 3;
+  }
+  .chapter :global(.plants-editorial-genus-copy) {
+    min-height: 0;
+    padding: 28px var(--shell-gutter) 32px;
+  }
+}
