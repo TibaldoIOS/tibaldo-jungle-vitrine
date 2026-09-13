@@ -12,6 +12,7 @@ import CompactBotanicalIndex from "./CompactBotanicalIndex";
 import VarietyCount from "./VarietyCount";
 import PlantsHeroMedia from "./PlantsHeroMedia";
 import { isInternalPhotoProductionCopy } from "@/lib/plants/types";
+import rhythm from "./PlantsColorRhythm.module.css";
 
 const SearchIcon = () => <svg className="plants-search-icon" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="8.5" cy="8.5" r="4.75"/><path d="m12 12 4 4"/></svg>;
 
@@ -127,9 +128,9 @@ export default function PlantsPage() {
         </div>
       </section>
 
-      <section className="shell plants-editorial-genera" aria-labelledby="featured-genera-title">
+      <section className={`plants-editorial-genera ${rhythm.chapter}`} aria-labelledby="featured-genera-title">
         <header data-reveal><p className="section-kicker">Quatre portes d’entrée</p><h2 id="featured-genera-title">Des formes.<br /><em>Des milieux.</em></h2><p>Quatre genres pour entrer dans l’encyclopédie par la feuille, le port et la manière d’habiter l’espace.</p></header>
-        <div className="plants-editorial-genera-list">
+        <div className="shell"><div className="plants-editorial-genera-list">
           {featuredFamilies.map((family) => {
             const image = featuredImages[family.slug];
             return <Link href={`/plantes/${family.slug}`} className="plants-editorial-genus" key={family.slug} data-reveal>
@@ -144,7 +145,7 @@ export default function PlantsPage() {
               </div>
             </Link>;
           })}
-        </div>
+        </div></div>
       </section>
 
       <section className="plants-all-genera-v3" id="index-botanique" aria-labelledby="all-genera-title">

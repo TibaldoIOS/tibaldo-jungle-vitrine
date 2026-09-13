@@ -1,0 +1,29 @@
+/* Route-local chapter rhythm; shared Jungle tokens and card layout stay intact. */
+.chapter.chapter {
+  padding-top: 0;
+}
+
+.chapter.chapter > header {
+  padding: clamp(62px, 8vw, 112px) max(32px, calc((100% - 1180px) / 2));
+  background: var(--forest-dark);
+  color: var(--cream);
+}
+
+.chapter.chapter > header h2,
+.chapter.chapter > header > p:last-child {
+  color: var(--cream);
+}
+
+.chapter.chapter > header h2 em,
+.chapter.chapter > header :global(.section-kicker) {
+  color: var(--sage);
+}
+
+@media (max-width: 900px) {
+  .chapter.chapter > header { padding-inline: 20px; }
+}
+
+@media (max-width: 600px) {
+  .chapter.chapter > header { padding: 52px 16px; }
+  .chapter.chapter > header > p:last-child { font-size: 16px; }
+}
