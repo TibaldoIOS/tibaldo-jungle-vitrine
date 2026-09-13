@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { existsSync } from "node:fs";
 import test from "node:test";
-import { plantFamilies, plants } from "../lib/plants/catalog.ts";
+import { getPlantsByGenre, plantFamilies, plants } from "../lib/plants/catalog.ts";
 import {
   encyclopediaP1Plants,
   encyclopediaP1Routes,
@@ -26,11 +26,10 @@ const expectedRoutes = [
 test("P1 ajoute exactement les douze routes approuvées au catalogue V32", () => {
   assert.equal(encyclopediaP1Plants.length, 12);
   assert.deepEqual(encyclopediaP1Routes, expectedRoutes);
-  assert.equal(plants.length, 87);
-  assert.equal(plantFamilies.length, 34);
   for (const route of expectedRoutes) {
     const [, , genre, slug] = route.split("/");
-    assert.ok(plants.some((plant) => plant.genre === genre && plant.slug === slug), route);
+    assert.equal(plants.filter((plant) => plant.genre === genre && plant.slug === slug).length, 1, route);
+    assert.equal(plantFamilies.filter((family) => family.slug === genre).length, 1, `${genre}: hub canonique unique`);
   }
 });
 
@@ -55,12 +54,17 @@ test("les corrections taxonomiques demandées ont un seul canonique", () => {
 });
 
 test("la table d’alias rassemble les intentions sans créer de route dupliquée", () => {
-  assert.equal(p1AliasCanonicalMap["/plantes/alocasia/amazonica"], "/plantes/alocasia/mortfontanensis-polly");
+  // Un nom générique ne prouve pas le cultivar Polly : conserver le hub actuel.
+  assert.equal(p1AliasCanonicalMap["/plantes/alocasia/amazonica"], "/plantes/alocasia");
   assert.equal(p1AliasCanonicalMap["/plantes/philodendron/scandens"], "/plantes/philodendron/hederaceum");
-  assert.equal(p1AliasCanonicalMap["/plantes/monstera/variegata"], "/plantes/monstera/albo-variegata");
+  // La forme panachée générique a désormais sa propre fiche : ne pas imposer Albo.
+  assert.equal(p1AliasCanonicalMap["/plantes/monstera/variegata"], "/plantes/monstera/deliciosa-variegata");
   assert.equal(p1AliasCanonicalMap["/plantes/dracaena/trifasciata"], "/plantes/sansevieria/trifasciata");
-  for (const alias of Object.keys(p1AliasCanonicalMap)) {
-    assert.equal(encyclopediaP1Routes.includes(alias as (typeof encyclopediaP1Routes)[number]), false, alias);
+  for (const [alias, target] of Object.entries(p1AliasCanonicalMap)) {
+    assert.equal(plants.some((plant) => `/plantes/${plant.genre}/${plant.slug}` === alias), false, alias);
+    const speciesTargets = plants.filter((plant) => `/plantes/${plant.genre}/${plant.slug}` === target);
+    const genusTargets = plantFamilies.filter((family) => `/plantes/${family.slug}` === target);
+    assert.equal(speciesTargets.length + genusTargets.length, 1, `${alias}: destination canonique unique`);
   }
 });
 
@@ -93,13 +97,13 @@ test("chaque fiche P1 est substantielle, sourcée et conserve un média honnête
   assert.equal(encyclopediaP1Plants.filter((plant) => plant.gallery[0].license?.status === "media-gap").length, 2);
 });
 
-test("les hubs majeurs atteignent les nouveaux totaux sans créer de groupe", () => {
-  assert.equal(plants.filter((plant) => plant.genre === "alocasia").length, 13);
-  assert.equal(plants.filter((plant) => plant.genre === "anthurium").length, 14);
-  assert.equal(plants.filter((plant) => plant.genre === "philodendron").length, 9);
-  assert.equal(plants.filter((plant) => plant.genre === "monstera").length, 12);
-  for (const genre of ["ficus", "hoya", "syngonium", "sansevieria"] as const) {
-    assert.equal(plants.filter((plant) => plant.genre === genre).length, genre === "sansevieria" ? 3 : genre === "hoya" ? 2 : 1, genre);
-    assert.ok(plantFamilies.some((family) => family.slug === genre), genre);
+test("les hubs majeurs conservent les entrées P1 sans créer de groupe dupliqué", () => {
+  for (const genre of new Set(encyclopediaP1Plants.map((plant) => plant.genre))) {
+    const entries = getPlantsByGenre(genre);
+    assert.equal(plantFamilies.filter((family) => family.slug === genre).length, 1, genre);
+    assert.equal(new Set(entries.map((plant) => plant.slug)).size, entries.length, genre);
+    for (const historical of encyclopediaP1Plants.filter((plant) => plant.genre === genre)) {
+      assert.equal(entries.filter((plant) => plant.slug === historical.slug).length, 1, `${genre}/${historical.slug}`);
+    }
   }
 });

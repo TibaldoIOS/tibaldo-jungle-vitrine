@@ -3,6 +3,7 @@ import { existsSync } from "node:fs";
 import test from "node:test";
 import { encyclopediaSlugOf, toPlantApiV1, toPlantApiV2 } from "../lib/plants/api-contract.ts";
 import { plants } from "../lib/plants/catalog.ts";
+import { exactIdentityMatches } from "../lib/plants/canonical-identity.ts";
 import {
   encyclopediaV19ExpansionPlants,
   encyclopediaV19TaxonomyAudit,
@@ -67,8 +68,11 @@ test("tous les encyclopedia_slug restent uniques", () => {
 });
 
 test("Dicksonia antarctica ajoute une seule identité botanique centrale", () => {
-  const dicksonia = plants.find((entry) => entry.genre === "dicksonia" && entry.slug === "antarctica");
-  assert.equal(plants.length, 87);
+  const canonicalEntries = plants.filter((entry) => entry.genre === "dicksonia" && entry.slug === "antarctica");
+  assert.equal(canonicalEntries.length, 1, "Une seule entrée porte le slug canonique");
+  const [dicksonia] = canonicalEntries;
+  // Un ajout sans rapport ne doit pas invalider cette identité historique.
+  assert.deepEqual(exactIdentityMatches(plants, "Dicksonia antarctica"), [dicksonia], "Le nom et ses alias ne doivent pas créer une seconde identité");
   assert.equal(dicksonia?.botanicalName, "Dicksonia antarctica");
   assert.equal(dicksonia?.taxonomy.family, "Dicksoniaceae");
   assert.equal(dicksonia?.taxonomy.order, "Cyatheales");
@@ -114,13 +118,18 @@ test("l’étape 2 ajoute quatre identités Bananiers sans taille commerciale", 
 });
 
 test("V19 reste intact après l’expansion P1 des genres majeurs", () => {
-  const expected = { monstera: 12, anthurium: 14, alocasia: 13 } as const;
-  for (const [genre, count] of Object.entries(expected)) {
+  for (const genre of ["monstera", "anthurium", "alocasia"]) {
     const entries = plants.filter((plant) => plant.genre === genre);
-    assert.equal(entries.length, count, genre);
-    assert.equal(new Set(entries.map((plant) => plant.slug)).size, count, genre);
+    assert.equal(new Set(entries.map((plant) => plant.slug)).size, entries.length, `${genre}: slugs uniques, même après expansion`);
   }
+  // 18 est la taille du lot historique V19, pas celle du catalogue vivant.
   assert.equal(encyclopediaV19ExpansionPlants.length, 18);
+  for (const historical of encyclopediaV19ExpansionPlants) {
+    const matches = plants.filter((entry) => encyclopediaSlugOf(entry) === encyclopediaSlugOf(historical));
+    assert.equal(matches.length, 1, `${historical.genre}/${historical.slug}: identité V19 conservée une seule fois`);
+    assert.equal(matches[0].botanicalName, historical.botanicalName);
+    assert.deepEqual(matches[0].taxonomy, historical.taxonomy, `${historical.slug}: taxonomie V19 préservée`);
+  }
 });
 
 test("V19 conserve les identités botaniques demandées sans fusionner espèces et hybrides", () => {

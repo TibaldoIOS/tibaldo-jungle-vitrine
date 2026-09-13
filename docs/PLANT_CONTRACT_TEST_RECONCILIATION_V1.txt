@@ -1,0 +1,52 @@
+MISSION=PLANT_CONTRACT_TEST_RECONCILIATION_AFTER_ENCYCLOPEDIA_EXPANSION_V1
+DATE=2026-09-13
+
+PUBLIC_VERSION=128
+PUBLIC_SOURCE=f88e810662416cf0764b937f8600f9147b7852f2
+The live version supersedes the historical V127 base in the request.
+
+FAILING_TEST_1_ROOT_CAUSE=Global catalogue count frozen at 87 inside a Dicksonia identity test.
+ORIGINAL_INVARIANT_1=Exactly one canonical Dicksonia antarctica, stable slug, botanical name, family, order and alias identity; no Dictyonia duplicate.
+FAILING_TEST_2_ROOT_CAUSE=Global genus counts frozen at Monstera 12, Anthurium 14 and Alocasia 13 instead of protecting the historical V19 batch.
+ORIGINAL_INVARIANT_2=All 18 historical V19 identities remain uniquely present with unchanged botanical names and taxonomy; genus slugs remain unique.
+STALE_COUNT_ASSERTIONS_FOUND=Both original tests; additional P1 catalogue/family totals and eight genus totals in encyclopedia-p1-expansion.test.ts.
+SEMANTIC_INVARIANTS_PRESERVED=YES
+Historical batch sizes 18 (V19) and 12 (P1) are retained, not replaced with current catalogue counts.
+Current derived catalogue: 97 entities; Monstera 13; Anthurium 14; Alocasia 17.
+No parallel expected-count registry added.
+
+ADDITIONAL_P1_RECONCILIATION
+Every historical P1 route must exist exactly once with exactly one genus hub.
+Every P1 genus retains unique slugs and its original P1 entries.
+Alias tests now follow existing canonical source: amazonica leads to the Alocasia hub, not automatically Polly; generic Variegata leads to deliciosa-variegata, not automatically Albo.
+Every alias must have exactly one existing species or genus destination and cannot create a duplicate species route.
+No alias implementation was changed.
+
+PLANT_CONTRACT_TESTS=PASS 14/14
+BOTANICAL_AND_RENDERED_RELEVANT_TESTS=PASS 147/147 across nine test files
+EXTENDED_MEDIA_CHECKS=5/7 PASS; two pre-existing failures retained
+FULL_EXTENDED_RESULT=152/154 PASS
+TYPECHECK=PASS
+BUILD_PUBLIC=PASS using official Sites build-site.mjs
+LINT_CHANGED_FILES=PASS
+DIFF_CHECK=PASS
+No test removed or skipped. No runtime, identity, route or media file changed.
+
+EXISTING_MEDIA_TEST_DEBT_NOT_FIXED_IN_THIS_MISSION
+1. tests/media-rights-p0-closure-v1.test.ts: historical single-placeholder expectation for epipremnum/marble-queen sees three current gallery images, not one.
+2. tests/public-media-editorial-language.test.ts: scans complete catalogue source, including internal rights evidence, for public vocabulary. Owner TIBALDO occurs in internal metadata. This source scan alone does not demonstrate a rendered public leak. Formatter and credit tests pass.
+Both media test files and all provenance data remain unchanged.
+This report is not a media-batch or photo-publication certification.
+
+MOON_VALLEY_CANONICAL_ENTITY=EXISTS
+MOON_VALLEY_SLUG=pilea/moon-valley
+MOON_VALLEY_NAME=Pilea involucrata ‘Moon Valley’
+MOON_VALLEY_URL=https://jungle.tibaldo.fr/plantes/pilea/moon-valley
+No new Moon Valley entity created.
+
+PHOTO_HANDOFF=Botanical contract blocker resolved. Photo preparation may resume from the pushed test-only commit, but photo publication must still reconcile and pass its own media gates; no blanket media PASS granted.
+SAFE_FOR_CODEX_PHOTO_RESUME=NO for unconditional certified release; the two separate media checks remain unresolved.
+PUBLIC_DEPLOYMENT_NOT_REQUIRED=YES
+PUBLIC_MUTATED=NO
+MEDIA_MUTATED=NO
+FINAL_STATUS=PARTIAL_EXTENDED_MEDIA_TEST_DEBT
