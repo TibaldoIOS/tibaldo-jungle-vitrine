@@ -1,0 +1,79 @@
+{
+  "batch_id": "PHOTO-20260913-MARANTA-IMPERIAL-01",
+  "public_source_before": "8ccde50d34599c11970d85b74a715dc1076c3cb1",
+  "public_version_before": 120,
+  "photos": [
+    {
+      "original_filename": "Maranta Lemon .png",
+      "canonical_slug": "plantes/maranta/lemon-lime",
+      "filename": "maranta-lemon-lime-feuillage-vue-dessus.webp",
+      "alt": "Maranta leuconeura ‘Lemon Lime’ vue de dessus, aux feuilles ovales vert sombre parcourues de nervures citron.",
+      "original_sha256": "dfd9ba34e626dc1b4b79f2fc433ee424ddce6cbb5ca569b851cdd1e915d6a38f",
+      "source_metadata_keys": [],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "owner_identity": "Maranta Lemon",
+      "asset_path": "/owner-media/maranta-lemon-lime/maranta-lemon-lime-feuillage-vue-dessus.webp",
+      "public_path": "/media/owner-media/maranta-lemon-lime/maranta-lemon-lime-feuillage-vue-dessus.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/maranta-lemon-lime/maranta-lemon-lime-feuillage-vue-dessus.webp",
+      "sha256": "474aff14f0472f040a653b1c4a453f74c6b850e4f30d298f82e4a3eb30dd76c5",
+      "bytes": 455450,
+      "credit": "Photo : TIBALDO",
+      "creator": "TIBALDO",
+      "provenance": "OWNER",
+      "rights": "Autorisation Owner permanente",
+      "role": "HABIT",
+      "private_metadata_removed": true,
+      "status": "READY",
+      "existing_alt_set": [
+        "Maranta Lemon Lime au feuillage vert citron et vert sombre",
+        "Détail des nervures citron de Maranta leuconeura Lemon Lime"
+      ]
+    },
+    {
+      "original_filename": "codex-clipboard-056a6909-db62-40e7-88c1-9f29e7b8dda2.png",
+      "canonical_slug": "plantes/alocasia/imperial-red",
+      "filename": "alocasia-imperial-red-feuillage-petioles-pourpres.webp",
+      "alt": "Alocasia ‘Imperial Red’ en extérieur, aux grandes feuilles vertes portées par des pétioles pourpres.",
+      "original_sha256": "aa0cafc1b4b66f390da12c58006466d492c037c3c8ec4b88ac4379538b868a50",
+      "source_metadata_keys": [],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "owner_identity": "Alocasia ‘Imperial Red’",
+      "asset_path": "/owner-media/alocasia-imperial-red/alocasia-imperial-red-feuillage-petioles-pourpres.webp",
+      "public_path": "/media/owner-media/alocasia-imperial-red/alocasia-imperial-red-feuillage-petioles-pourpres.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/alocasia-imperial-red/alocasia-imperial-red-feuillage-petioles-pourpres.webp",
+      "sha256": "a689b84994e739272d3417ffe6d371dc551dc755b6f2537c21fcebf1805bc9a7",
+      "bytes": 358472,
+      "credit": "Photo : TIBALDO",
+      "creator": "TIBALDO",
+      "provenance": "OWNER",
+      "rights": "Autorisation Owner permanente",
+      "role": "HABIT",
+      "private_metadata_removed": true,
+      "status": "READY",
+      "existing_alt_set": [
+        "Alocasia Imperial Red mature aux larges feuilles vertes et pétioles bordeaux",
+        "Grande plante tropicale dans un intérieur lumineux",
+        "Conseil de rempotage pour une plante tropicale"
+      ],
+      "identity_evidence": "Owner explicit canonical URL"
+    }
+  ],
+  "processing": "WebP quality88 method6, orientation, no crop, no upscale, no generative alteration; metadata stripped",
+  "shop_status": "EXACT_MAPPING_NOT_PROVEN",
+  "caisse_status": "EXACT_MAPPING_NOT_PROVEN",
+  "allowed_paths": [
+    "docs/media-provenance/photo-20260913-maranta-imperial-01.json",
+    "lib/plants/catalog.ts",
+    "app/credits-images/page.tsx",
+    "tests/photo-maranta-imperial-owner-v1.test.ts",
+    "public/owner-media/maranta-lemon-lime/maranta-lemon-lime-feuillage-vue-dessus.webp",
+    "public/owner-media/alocasia-imperial-red/alocasia-imperial-red-feuillage-petioles-pourpres.webp"
+  ],
+  "previous_media_policy": "SUPERSEDED_BUT_RETAINED: existing files untouched; unverified and editorial imagery removed from active documentary gallery"
+}

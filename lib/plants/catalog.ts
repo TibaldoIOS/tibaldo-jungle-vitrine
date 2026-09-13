@@ -520,6 +520,18 @@ if (pileaPhotoIndex !== -1) {
  plants[pileaPhotoIndex] = {...plant, gallery: [{"src": "/media/owner-media/pilea-peperomioides/pilea-peperomioides-plante-lumiere-fenetre.webp", "alt": "Pilea peperomioides en pot de terre cuite près d’une fenêtre, aux feuilles rondes éclairées de côté.", "caption": "Photo : TIBALDO", "width": 1536, "height": 1024, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260913-pilea-01/peperomioides", "registryPath": "/credits-images", "note": "Identité Owner confirmée par fichier original et SHA256. Provenance : docs/media-provenance/photo-20260913-pilea-01.json"}}, ...plant.gallery, {"src": "/pilea-peperomioides-plante.jpg", "alt": "Pilea peperomioides aux feuilles rondes portées par de longs pétioles", "caption": "Feuillage rond de Pilea peperomioides.", "width": 1280, "height": 1707, "license": {"status": "verified", "creator": "Husky", "license": "CC0 1.0", "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/", "registryPath": "/credits-images", "note": "Photographie historique déjà contrôlée dans Jungle."}}], mediaNeeds: []};
 }
 
+const marantaImperialPhotoIndex0 = plants.findIndex(p => p.genre === "maranta" && p.slug === "lemon-lime");
+if (marantaImperialPhotoIndex0 !== -1) {
+ const plant = plants[marantaImperialPhotoIndex0];
+ plants[marantaImperialPhotoIndex0] = {...plant, gallery: [{"src": "/media/owner-media/maranta-lemon-lime/maranta-lemon-lime-feuillage-vue-dessus.webp", "alt": "Maranta leuconeura ‘Lemon Lime’ vue de dessus, aux feuilles ovales vert sombre parcourues de nervures citron.", "caption": "Photo : TIBALDO", "width": 1536, "height": 1024, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260913-maranta-imperial-01/lemon-lime", "registryPath": "/credits-images", "note": "Identité Owner confirmée par fichier original et SHA256. Provenance : docs/media-provenance/photo-20260913-maranta-imperial-01.json"}}, ...plant.gallery.filter(m => m.license?.status === "verified")], mediaNeeds: []};
+}
+
+const marantaImperialPhotoIndex1 = plants.findIndex(p => p.genre === "alocasia" && p.slug === "imperial-red");
+if (marantaImperialPhotoIndex1 !== -1) {
+ const plant = plants[marantaImperialPhotoIndex1];
+ plants[marantaImperialPhotoIndex1] = {...plant, gallery: [{"src": "/media/owner-media/alocasia-imperial-red/alocasia-imperial-red-feuillage-petioles-pourpres.webp", "alt": "Alocasia ‘Imperial Red’ en extérieur, aux grandes feuilles vertes portées par des pétioles pourpres.", "caption": "Photo : TIBALDO", "width": 1536, "height": 1024, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260913-maranta-imperial-01/imperial-red", "registryPath": "/credits-images", "note": "Identité Owner confirmée par fichier original et SHA256. Provenance : docs/media-provenance/photo-20260913-maranta-imperial-01.json"}}, ...plant.gallery.filter(m => m.license?.status === "verified")], mediaNeeds: []};
+}
+
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
 export const getPlantsByGenre = (genre: string) => plants.filter((plant) =>

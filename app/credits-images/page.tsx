@@ -9,6 +9,8 @@ export const metadata: Metadata = {
 };
 
 const credits: readonly [string, string, string, string, string?][] = [
+["Maranta Lemon", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260913-maranta-imperial-01/lemon-lime"],
+["Alocasia ‘Imperial Red’", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260913-maranta-imperial-01/imperial-red"],
 ["Pilea peperomioides · lumière de fenêtre", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260913-pilea-01/peperomioides"],
 ["Anthurium warocqueanum", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260913-four-01/warocqueanum"],
 ["Anthurium luxurians", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260913-four-01/luxurians"],
