@@ -13,7 +13,6 @@ import body from "./GoldenGroupBodyBaseline.module.css";
 import hero from "./GoldenGroupHeroBaseline.module.css";
 import mobile from "./GoldenGroupMobileBaseline.module.css";
 import canonical from "./GoldenGroupCanonical.module.css";
-import plate from "./AnthuriumHeroPlate.module.css";
 import { anthuriumGenusOwnerHero } from "@/lib/plants/anthurium-genus-owner-hero";
 import { philodendronGenusOwnerHero } from "@/lib/plants/philodendron-genus-owner-hero";
 import illustration from "./GenusIllustrationHero.module.css";
@@ -126,13 +125,13 @@ export default function GoldenGenusHub({ genre, guide, plants, editorials = [], 
   return (
     <main className={`${golden.page} ${body.groupPage} editorial-page`} data-golden-group-v25={genre} data-golden-group-v1={genre}>
       <ScrollReveal />
-      <section className={`${hero.landscapeHero} ${mobile.mobileHero} ${genre === "anthurium" ? plate.plateHero : genre === "philodendron" ? illustration.illustration : ""}`} aria-labelledby={`golden-group-title-${genre}`} data-group-media-state={media ? media.rights : "honest-gap"} data-pilea-public-media-gate={genre === "pilea" ? "blocked-pending-rights-proof-or-owner-original" : undefined}>
+      <section className={`${hero.landscapeHero} ${mobile.mobileHero} ${genre === "philodendron" ? illustration.illustration : ""}`} aria-labelledby={`golden-group-title-${genre}`} data-group-media-state={media ? media.rights : "honest-gap"} data-pilea-public-media-gate={genre === "pilea" ? "blocked-pending-rights-proof-or-owner-original" : undefined}>
         <SiteHeader />
-        <div className={`${hero.landscapeMedia} ${mobile.mobileMedia} ${genre === "anthurium" ? plate.plateMedia : genre === "philodendron" ? illustration.media : ""}`}>
+        <div className={`${hero.landscapeMedia} ${mobile.mobileMedia} ${genre === "philodendron" ? illustration.media : ""}`}>
           {media ? <Image unoptimized src={media.src} alt={media.alt} width={media.width} height={media.height} priority /> : <div className={canonical.groupMediaGap}><span>{title.slice(0, 1)}</span><small>Photographie collective<br />à documenter</small></div>}
         </div>
-        <div className={`${hero.forestFade} ${mobile.mobileFade} ${genre === "anthurium" ? plate.plateFade : ""}`} aria-hidden="true" />
-        <div className={`${hero.heroContent} ${mobile.mobileContent} shell ${genre === "anthurium" ? plate.plateContent : ""}`}>
+        <div className={`${hero.forestFade} ${mobile.mobileFade}`} aria-hidden="true" />
+        <div className={`${hero.heroContent} ${mobile.mobileContent} shell`}>
           <div className={`${hero.heroCopy} ${mobile.mobileCopy}`}>
             <h1 className={mobile.mobileTitle} id={`golden-group-title-${genre}`}>Les <em>{title}.</em></h1>
             <p className={`${hero.heroIntroduction} ${mobile.mobileIntroduction}`}>{heroCopy}</p>

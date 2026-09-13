@@ -1,0 +1,64 @@
+MISSION=ANTHURIUM_HERO_LANDSCAPE_BACKGROUND_PARITY_WITH_MONSTERA_V3
+DATE=2026-09-13
+SOURCE_PUBLIC_BEFORE=126
+BASE_COMMIT=1586d1822dbbd1a118f23380f260daf1fee192f0
+
+MONSTERA_REFERENCE_MECHANISM=GoldenGroupHeroBaseline + GoldenGroupMobileBaseline
+Absolute image layer, overflow hidden, cover image, left mask and forest gradient.
+Desktop media inset: 0 -4% 0 36%; layer width 68% of viewport, extending past right edge.
+Desktop object-position: center 34%; tablet center 32%; mobile center 31%.
+
+ANTHURIUM_PREVIOUS_MECHANISM=Same DOM with AnthuriumHeroPlate overrides
+ROOT_CAUSE=contain + width:auto + centered margins + inset 80px 0 0 45%
+At 1440x900, old image element occupied x754..1334 and 580x750 px: a portrait poster.
+
+FIX=Remove only Anthurium override classes/import from GoldenGenusHub.tsx
+The original override stylesheet is preserved as unused historical source.
+No replacement media, generated image, CSS redraw, crop export or media mutation.
+The same original 487x630 illustration and its rights record are reused unchanged.
+Its existing resolution is unchanged; this is not an HD enhancement.
+
+IMAGE_RENDER_MODE=ABSOLUTE_IMG_SHARED_MONSTERA_BACKGROUND
+BACKGROUND_SIZE=OBJECT_FIT_COVER
+BACKGROUND_POSITION=CENTER_34_PERCENT_DESKTOP_32_TABLET_31_MOBILE
+GRADIENT=EXACT_SHARED_MONSTERA_FOREST_FADE_AND_MASK
+
+QA_LOCAL=PASS
+390=PASS
+430=PASS
+820=PASS
+1280=PASS
+1440=PASS
+BACKGROUND_MECHANISM_PARITY=PASS
+LANDSCAPE_VISUAL_FEEL=PASS
+POSTER_EFFECT_REMOVED=PASS
+LEFT_TEXT_READABILITY=PASS
+RIGHT_IMAGE_IMMERSION=PASS
+NO_HORIZONTAL_OVERFLOW=PASS
+H1_CLIPPING=NONE
+
+DOM/computed-style checks compare both genera at all five widths.
+Media cover, focal position, mask and gradient are identical at each breakpoint.
+Desktop Anthurium Hero height stays 830px at a 900px viewport, unchanged from V126.
+The image now occupies x518..1498, 979x830px at1440, identical to Monstera.
+Mobile Hero height is720px, media layer220px, with the shared mobile fade.
+Tablet height may differ slightly with the length of unchanged paragraph text.
+Visual screenshots inspected at all five target widths.
+No physical iPhone performance certification is claimed by this visual scope.
+
+PRESERVATION=PASS
+Hero visible text and all below-Hero text compared against live V126 at1440: identical.
+Source below first Hero section is byte-identical.
+Shared CSS, SiteChrome/header, image/rights metadata, SEO route files and plant data unchanged.
+Current credit line preserved, including the pre-existing shared mobile hiding rule.
+Philodendron-specific illustration handling unchanged. Monstera unchanged.
+Original and WebP asset integrity verified by existing tests.
+
+TYPECHECK=PASS
+BUILD=PASS_PUBLIC
+TARGETED_TESTS=12_PASS_0_FAIL
+LINT_CHANGED_FILES=PASS
+PUBLICATION_STATE=LOCAL_CERTIFICATE_NOT_REMOTE_DEPLOYMENT_PROOF
+ROLLBACK_VERSION=126
+ROLLBACK_COMMIT=1586d1822dbbd1a118f23380f260daf1fee192f0
+ROLLBACK_VERSION_ID=appgprj_6a6dde04153c8191b9b8551a9f22db92~appgver_831a6c05d4008191aa7056568ba82bfa
