@@ -9,7 +9,7 @@ test("local entity adds only Owner supplied geo/maps/social fields", async () =>
   const old = await import(`data:text/javascript,${encodeURIComponent(original.replaceAll(" as const", ""))}`);
   const { geo, hasMap, sameAs, ...preserved } = jungleStoreStructuredData();
   assert.deepEqual(preserved, old.jungleStoreStructuredData());
-  assert.deepEqual(geo, { "@type": "GeoCoordinates", latitude: 50.5872384, longitude: 3.0572544 });
+  assert.deepEqual(geo, { "@type": "GeoCoordinates", latitude: 50.6251203, longitude: 3.0394823 });
   assert.equal(hasMap, "https://maps.app.goo.gl/KAuuHJf1BPGf4Wgw6?g_st=ic");
   assert.deepEqual(sameAs, ["https://www.instagram.com/tibaldojungle/", "https://www.facebook.com/tibaldojungle"]);
   assert.doesNotMatch(JSON.stringify(jungleStoreStructuredData()), /AggregateRating|ratingValue|reviewCount|Review/);
