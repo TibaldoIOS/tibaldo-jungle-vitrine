@@ -1,0 +1,236 @@
+{
+  "batch_id": "PHOTO-20260913-RESUME-FIVE-01",
+  "source_before": "260e53d1f86ddd7441f55fd3e513ae532650b55e",
+  "public_source_before": "f88e810662416cf0764b937f8600f9147b7852f2",
+  "public_version_before": 128,
+  "photos": [
+    {
+      "original_filename": "Pilea cadierei .png",
+      "canonical_slug": "plantes/pilea/cadierei",
+      "filename": "pilea-cadierei-plante-feuilles-argentees.webp",
+      "alt": "Pilea cadierei en pot, au port ramifié et aux feuilles vertes allongées marquées de plages argentées.",
+      "original_sha256": "3afd0f0f9a0e363942ad5248aa1e62f5fa9befa94deb338a14495d1436ae2de0",
+      "source_metadata_keys": [],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "owner_identity": "Pilea cadierei",
+      "asset_path": "/owner-media/pilea-cadierei/pilea-cadierei-plante-feuilles-argentees.webp",
+      "public_path": "/media/owner-media/pilea-cadierei/pilea-cadierei-plante-feuilles-argentees.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/pilea-cadierei/pilea-cadierei-plante-feuilles-argentees.webp",
+      "sha256": "a201518761f1d60666a1193a0fbc41814eb8d41cea02c30142a354a1c24b7803",
+      "bytes": 342496,
+      "credit": "Photo : TIBALDO",
+      "creator": "TIBALDO",
+      "provenance": "OWNER",
+      "rights": "Autorisation Owner permanente",
+      "role": "HABIT",
+      "private_metadata_removed": true,
+      "status": "READY",
+      "identity_evidence": "Owner resume mandate and original hash",
+      "existing_alt_set": [
+        "Photographie réelle de Pilea cadierei à ajouter"
+      ],
+      "existing_media": [
+        {
+          "src": "/photo-reelle-a-venir.svg",
+          "alt": "Photographie réelle de Pilea cadierei à ajouter",
+          "caption": "Photographie réelle du spécimen Pilea cadierei à réaliser au Studio avant publication.",
+          "width": 1200,
+          "height": 1500
+        }
+      ],
+      "duplicate_matches": []
+    },
+    {
+      "owner_identity": "Pilea involucrata ‘Moon Valley’",
+      "canonical_slug": "plantes/pilea/moon-valley",
+      "original_filename": "Pilea Involucrata Moon Valley.png",
+      "filename": "pilea-moon-valley-plante-feuilles-gaufrees.webp",
+      "alt": "Pilea involucrata ‘Moon Valley’ en pot, aux feuilles gaufrées vert vif à centre sombre et revers brun visible.",
+      "original_sha256": "7bbd078e8df86dcb7e8347df12015e76ff8263dff6b0ffe9195a69b175c8de4b",
+      "asset_path": "/owner-media/pilea-moon-valley/pilea-moon-valley-plante-feuilles-gaufrees.webp",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "public_path": "/media/owner-media/pilea-moon-valley/pilea-moon-valley-plante-feuilles-gaufrees.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/pilea-moon-valley/pilea-moon-valley-plante-feuilles-gaufrees.webp",
+      "sha256": "91d95b6b9bb5835353bc02550ba2d0ed8505688603afc5ddde41d22ca7597884",
+      "bytes": 501790,
+      "provenance": "OWNER",
+      "creator": "TIBALDO",
+      "credit": "Photo : TIBALDO",
+      "rights": "Autorisation Owner permanente",
+      "status": "READY",
+      "existing_media": [],
+      "existing_alt_set": [],
+      "identity_evidence": "Owner resume mandate and original hash",
+      "role": "HABIT",
+      "duplicate_matches": []
+    },
+    {
+      "owner_identity": "Alocasia zebrina",
+      "canonical_slug": "plantes/alocasia/zebrina",
+      "original_filename": "alocasia zebrina.png",
+      "original_sha256": "a805d9732710a80d03fc86be667fdfb66ecfac4cb6e0a580baad1c06b362a9c9",
+      "filename": "alocasia-zebrina-plante-petioles-zebres.webp",
+      "alt": "Alocasia zebrina en pot noir, aux longs pétioles zébrés devant une paroi de bois.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "derivative_sha256": "f76d13612401bf57c5805cc74ded0ef2af20576b8684503be81cc4da29dc3a60",
+      "derivative_bytes": 496914,
+      "provenance": "OWNER",
+      "credit": "Photo : TIBALDO",
+      "known_original_matches": [],
+      "status": "READY",
+      "existing_alts": [
+        "Illustration botanique décorative de Alocasia zebrina"
+      ],
+      "webp_decode": "PASS",
+      "private_metadata_removed": true,
+      "asset_path": "/owner-media/alocasia-zebrina/alocasia-zebrina-plante-petioles-zebres.webp",
+      "public_path": "/media/owner-media/alocasia-zebrina/alocasia-zebrina-plante-petioles-zebres.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/alocasia-zebrina/alocasia-zebrina-plante-petioles-zebres.webp",
+      "sha256": "f76d13612401bf57c5805cc74ded0ef2af20576b8684503be81cc4da29dc3a60",
+      "bytes": 496914,
+      "creator": "TIBALDO",
+      "rights": "Autorisation Owner permanente",
+      "existing_media": [
+        {
+          "src": "/photo-reelle-a-venir.svg",
+          "alt": "Illustration botanique décorative de Alocasia zebrina",
+          "caption": "Média non documentaire : aucune photographie de Alocasia zebrina n’est actuellement vérifiée dans le registre du dépôt.",
+          "width": 1200,
+          "height": 1500,
+          "license": {
+            "status": "media-gap",
+            "registryPath": "/credits-images",
+            "note": "Placeholder existant ; ne pas le traiter comme une preuve d’identification botanique."
+          }
+        }
+      ],
+      "existing_alt_set": [
+        "Illustration botanique décorative de Alocasia zebrina"
+      ],
+      "identity_evidence": "Owner resume mandate and original hash",
+      "role": "HABIT",
+      "duplicate_matches": []
+    },
+    {
+      "owner_identity": "Alocasia reginula",
+      "canonical_slug": "plantes/alocasia/reginula",
+      "original_filename": "Alocasia reginula.png",
+      "original_sha256": "5658007b166980fb81245fc88a76bd067ff1806700ac08aed6dce6a795b19df8",
+      "filename": "alocasia-reginula-plante-feuilles-sombres.webp",
+      "alt": "Alocasia reginula en pot arrondi, aux feuilles sombres nervurées de blanc et au revers pourpre visible.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "derivative_sha256": "b6f9c4926b0d73e166740f1cb887e202e2b05426ce66db41c939bf85b0096c5d",
+      "derivative_bytes": 327480,
+      "provenance": "OWNER",
+      "credit": "Photo : TIBALDO",
+      "known_original_matches": [],
+      "status": "READY",
+      "existing_alts": [
+        "Illustration botanique décorative de Alocasia reginula"
+      ],
+      "webp_decode": "PASS",
+      "private_metadata_removed": true,
+      "asset_path": "/owner-media/alocasia-reginula/alocasia-reginula-plante-feuilles-sombres.webp",
+      "public_path": "/media/owner-media/alocasia-reginula/alocasia-reginula-plante-feuilles-sombres.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/alocasia-reginula/alocasia-reginula-plante-feuilles-sombres.webp",
+      "sha256": "b6f9c4926b0d73e166740f1cb887e202e2b05426ce66db41c939bf85b0096c5d",
+      "bytes": 327480,
+      "creator": "TIBALDO",
+      "rights": "Autorisation Owner permanente",
+      "existing_media": [
+        {
+          "src": "/photo-reelle-a-venir.svg",
+          "alt": "Illustration botanique décorative de Alocasia reginula",
+          "caption": "Média non documentaire : aucune photographie de Alocasia reginula n’est actuellement vérifiée dans le registre du dépôt.",
+          "width": 1200,
+          "height": 1500,
+          "license": {
+            "status": "media-gap",
+            "registryPath": "/credits-images",
+            "note": "Placeholder existant ; ne pas le traiter comme une preuve d’identification botanique."
+          }
+        }
+      ],
+      "existing_alt_set": [
+        "Illustration botanique décorative de Alocasia reginula"
+      ],
+      "identity_evidence": "Owner resume mandate and original hash",
+      "role": "HABIT",
+      "duplicate_matches": []
+    },
+    {
+      "owner_identity": "Alocasia Micholitziana Frydek",
+      "canonical_slug": "plantes/alocasia/micholitziana",
+      "original_filename": "Alocasia Micholitziana Frydek.png",
+      "original_sha256": "cb060b76e23bc7424af35697595f355690837cf43e4bdded2be059277133b52e",
+      "filename": "alocasia-micholitziana-frydek-feuilles-nervures-claires.webp",
+      "alt": "Feuilles superposées d’Alocasia micholitziana « Frydek », vert sombre aux nervures claires contrastées.",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "derivative_sha256": "747f0fd04bff02f30d7a196e15712b91d01a5ff171111c1a4aba69b3d5ba8d4d",
+      "derivative_bytes": 393604,
+      "provenance": "OWNER",
+      "credit": "Photo : TIBALDO",
+      "known_original_matches": [],
+      "status": "READY",
+      "existing_alts": [
+        "Illustration botanique décorative de Alocasia micholitziana"
+      ],
+      "webp_decode": "PASS",
+      "private_metadata_removed": true,
+      "asset_path": "/owner-media/alocasia-micholitziana/alocasia-micholitziana-frydek-feuilles-nervures-claires.webp",
+      "public_path": "/media/owner-media/alocasia-micholitziana/alocasia-micholitziana-frydek-feuilles-nervures-claires.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/alocasia-micholitziana/alocasia-micholitziana-frydek-feuilles-nervures-claires.webp",
+      "sha256": "747f0fd04bff02f30d7a196e15712b91d01a5ff171111c1a4aba69b3d5ba8d4d",
+      "bytes": 393604,
+      "creator": "TIBALDO",
+      "rights": "Autorisation Owner permanente",
+      "existing_media": [
+        {
+          "src": "/photo-reelle-a-venir.svg",
+          "alt": "Illustration botanique décorative de Alocasia micholitziana",
+          "caption": "Média non documentaire : aucune photographie de Alocasia micholitziana n’est actuellement vérifiée dans le registre du dépôt.",
+          "width": 1200,
+          "height": 1500,
+          "license": {
+            "status": "media-gap",
+            "registryPath": "/credits-images",
+            "note": "Placeholder existant ; ne pas le traiter comme une preuve d’identification botanique."
+          }
+        }
+      ],
+      "existing_alt_set": [
+        "Illustration botanique décorative de Alocasia micholitziana"
+      ],
+      "identity_evidence": "Owner resume mandate and original hash",
+      "role": "LEAF_DETAIL",
+      "duplicate_matches": []
+    }
+  ],
+  "processing": "Four prepared WebP reused byte-for-byte. Moon Valley encoded from preserved original; no crop, no upscale, no generative alteration; private metadata absent from derivatives.",
+  "allowed_paths": [
+    "docs/media-provenance/photo-20260913-resume-five-01.json",
+    "lib/plants/catalog.ts",
+    "app/credits-images/page.tsx",
+    "tests/photo-resume-five-owner-v1.test.ts",
+    "public/owner-media/pilea-cadierei/pilea-cadierei-plante-feuilles-argentees.webp",
+    "public/owner-media/pilea-moon-valley/pilea-moon-valley-plante-feuilles-gaufrees.webp",
+    "public/owner-media/alocasia-zebrina/alocasia-zebrina-plante-petioles-zebres.webp",
+    "public/owner-media/alocasia-reginula/alocasia-reginula-plante-feuilles-sombres.webp",
+    "public/owner-media/alocasia-micholitziana/alocasia-micholitziana-frydek-feuilles-nervures-claires.webp"
+  ]
+}

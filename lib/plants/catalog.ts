@@ -547,6 +547,36 @@ plants.push(...canonicalCoverageAdditions(plants));
 const qualityEntries = applyCanonicalQualityFixes(plants);
 qualityEntries.forEach((entry, index) => { plants[index] = entry; });
 
+const resumePhotoIndex0 = plants.findIndex(p => p.genre === "pilea" && p.slug === "cadierei");
+if (resumePhotoIndex0 !== -1) {
+ const plant = plants[resumePhotoIndex0];
+ plants[resumePhotoIndex0] = {...plant, gallery: [{"src": "/media/owner-media/pilea-cadierei/pilea-cadierei-plante-feuilles-argentees.webp", "alt": "Pilea cadierei en pot, au port ramifié et aux feuilles vertes allongées marquées de plages argentées.", "caption": "Photo : TIBALDO", "width": 1536, "height": 1024, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260913-resume-five-01/cadierei", "registryPath": "/credits-images", "note": "Identité et droits Owner confirmés. Provenance : docs/media-provenance/photo-20260913-resume-five-01.json"}}, ...plant.gallery.filter(m => m.license?.status === "verified")], mediaNeeds: []};
+}
+
+const resumePhotoIndex1 = plants.findIndex(p => p.genre === "pilea" && p.slug === "moon-valley");
+if (resumePhotoIndex1 !== -1) {
+ const plant = plants[resumePhotoIndex1];
+ plants[resumePhotoIndex1] = {...plant, gallery: [{"src": "/media/owner-media/pilea-moon-valley/pilea-moon-valley-plante-feuilles-gaufrees.webp", "alt": "Pilea involucrata ‘Moon Valley’ en pot, aux feuilles gaufrées vert vif à centre sombre et revers brun visible.", "caption": "Photo : TIBALDO", "width": 1536, "height": 1024, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260913-resume-five-01/moon-valley", "registryPath": "/credits-images", "note": "Identité et droits Owner confirmés. Provenance : docs/media-provenance/photo-20260913-resume-five-01.json"}}, ...plant.gallery.filter(m => m.license?.status === "verified")], mediaNeeds: []};
+}
+
+const resumePhotoIndex2 = plants.findIndex(p => p.genre === "alocasia" && p.slug === "zebrina");
+if (resumePhotoIndex2 !== -1) {
+ const plant = plants[resumePhotoIndex2];
+ plants[resumePhotoIndex2] = {...plant, gallery: [{"src": "/media/owner-media/alocasia-zebrina/alocasia-zebrina-plante-petioles-zebres.webp", "alt": "Alocasia zebrina en pot noir, aux longs pétioles zébrés devant une paroi de bois.", "caption": "Photo : TIBALDO", "width": 1536, "height": 1024, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260913-resume-five-01/zebrina", "registryPath": "/credits-images", "note": "Identité et droits Owner confirmés. Provenance : docs/media-provenance/photo-20260913-resume-five-01.json"}}, ...plant.gallery.filter(m => m.license?.status === "verified")], mediaNeeds: []};
+}
+
+const resumePhotoIndex3 = plants.findIndex(p => p.genre === "alocasia" && p.slug === "reginula");
+if (resumePhotoIndex3 !== -1) {
+ const plant = plants[resumePhotoIndex3];
+ plants[resumePhotoIndex3] = {...plant, gallery: [{"src": "/media/owner-media/alocasia-reginula/alocasia-reginula-plante-feuilles-sombres.webp", "alt": "Alocasia reginula en pot arrondi, aux feuilles sombres nervurées de blanc et au revers pourpre visible.", "caption": "Photo : TIBALDO", "width": 1536, "height": 1024, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260913-resume-five-01/reginula", "registryPath": "/credits-images", "note": "Identité et droits Owner confirmés. Provenance : docs/media-provenance/photo-20260913-resume-five-01.json"}}, ...plant.gallery.filter(m => m.license?.status === "verified")], mediaNeeds: []};
+}
+
+const resumePhotoIndex4 = plants.findIndex(p => p.genre === "alocasia" && p.slug === "micholitziana");
+if (resumePhotoIndex4 !== -1) {
+ const plant = plants[resumePhotoIndex4];
+ plants[resumePhotoIndex4] = {...plant, gallery: [{"src": "/media/owner-media/alocasia-micholitziana/alocasia-micholitziana-frydek-feuilles-nervures-claires.webp", "alt": "Feuilles superposées d’Alocasia micholitziana « Frydek », vert sombre aux nervures claires contrastées.", "caption": "Photo : TIBALDO", "width": 1536, "height": 1024, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260913-resume-five-01/micholitziana", "registryPath": "/credits-images", "note": "Identité et droits Owner confirmés. Provenance : docs/media-provenance/photo-20260913-resume-five-01.json"}}, ...plant.gallery.filter(m => m.license?.status === "verified")], mediaNeeds: []};
+}
+
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
 export const getPlantsByGenre = (genre: string) => plants.filter((plant) =>

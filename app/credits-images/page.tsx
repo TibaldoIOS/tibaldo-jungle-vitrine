@@ -9,6 +9,11 @@ export const metadata: Metadata = {
 };
 
 const credits: readonly [string, string, string, string, string?][] = [
+["Pilea cadierei", "Photo : TIBALDO", "Photographie botanique", "owner-provided://tibaldo/photo-20260913-resume-five-01/cadierei"],
+["Pilea involucrata ‘Moon Valley’", "Photo : TIBALDO", "Photographie botanique", "owner-provided://tibaldo/photo-20260913-resume-five-01/moon-valley"],
+["Alocasia zebrina", "Photo : TIBALDO", "Photographie botanique", "owner-provided://tibaldo/photo-20260913-resume-five-01/zebrina"],
+["Alocasia reginula", "Photo : TIBALDO", "Photographie botanique", "owner-provided://tibaldo/photo-20260913-resume-five-01/reginula"],
+["Alocasia Micholitziana Frydek", "Photo : TIBALDO", "Photographie botanique", "owner-provided://tibaldo/photo-20260913-resume-five-01/micholitziana"],
   ["Hero Anthurium · planche de feuilles", "Création : TIBALDO", "Planche illustrée · conversion WebP sans recadrage", "owner-provided://tibaldo/anthurium-genus-20260913"],
   ["Hero Philodendron · planche de feuilles", "TIBALDO", "Planche illustrée · conversion WebP sans recadrage", "owner-provided://tibaldo/philodendron-genus-20260913"],
 ["Alocasia cuprea", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260913-cuprea-01/cuprea"],
