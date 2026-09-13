@@ -13,6 +13,8 @@ import body from "./GoldenGroupBodyBaseline.module.css";
 import hero from "./GoldenGroupHeroBaseline.module.css";
 import mobile from "./GoldenGroupMobileBaseline.module.css";
 import canonical from "./GoldenGroupCanonical.module.css";
+import plate from "./AnthuriumHeroPlate.module.css";
+import { anthuriumGenusOwnerHero } from "@/lib/plants/anthurium-genus-owner-hero";
 
 export type GoldenGroupGuide = {
   name: string;
@@ -77,6 +79,7 @@ const isDocumentaryImage = (image: PlantEntry["gallery"][number]) =>
 
 const firstGroupMedia = (genre: string, plants: readonly PlantEntry[]): GroupMedia | null => {
   if (genre === "monstera") return monsteraHeroMedia;
+  if (genre === "anthurium") return anthuriumGenusOwnerHero;
   if (genre === "pilea") return null;
   const image = plants.flatMap((plant) => plant.gallery).find(isDocumentaryImage);
   return image ? { ...image, rights: image.license?.status === "verified" ? "verified" : "controlled-beta" } : null;
@@ -120,17 +123,17 @@ export default function GoldenGenusHub({ genre, guide, plants, editorials = [], 
   return (
     <main className={`${golden.page} ${body.groupPage} editorial-page`} data-golden-group-v25={genre} data-golden-group-v1={genre}>
       <ScrollReveal />
-      <section className={`${hero.landscapeHero} ${mobile.mobileHero}`} aria-labelledby={`golden-group-title-${genre}`} data-group-media-state={media ? media.rights : "honest-gap"} data-pilea-public-media-gate={genre === "pilea" ? "blocked-pending-rights-proof-or-owner-original" : undefined}>
+      <section className={`${hero.landscapeHero} ${mobile.mobileHero} ${genre === "anthurium" ? plate.plateHero : ""}`} aria-labelledby={`golden-group-title-${genre}`} data-group-media-state={media ? media.rights : "honest-gap"} data-pilea-public-media-gate={genre === "pilea" ? "blocked-pending-rights-proof-or-owner-original" : undefined}>
         <SiteHeader />
-        <div className={`${hero.landscapeMedia} ${mobile.mobileMedia}`}>
+        <div className={`${hero.landscapeMedia} ${mobile.mobileMedia} ${genre === "anthurium" ? plate.plateMedia : ""}`}>
           {media ? <Image unoptimized src={media.src} alt={media.alt} width={media.width} height={media.height} priority /> : <div className={canonical.groupMediaGap}><span>{title.slice(0, 1)}</span><small>Photographie collective<br />à documenter</small></div>}
         </div>
-        <div className={`${hero.forestFade} ${mobile.mobileFade}`} aria-hidden="true" />
-        <div className={`${hero.heroContent} ${mobile.mobileContent} shell`}>
+        <div className={`${hero.forestFade} ${mobile.mobileFade} ${genre === "anthurium" ? plate.plateFade : ""}`} aria-hidden="true" />
+        <div className={`${hero.heroContent} ${mobile.mobileContent} shell ${genre === "anthurium" ? plate.plateContent : ""}`}>
           <div className={`${hero.heroCopy} ${mobile.mobileCopy}`}>
             <h1 className={mobile.mobileTitle} id={`golden-group-title-${genre}`}>Les <em>{title}.</em></h1>
             <p className={`${hero.heroIntroduction} ${mobile.mobileIntroduction}`}>{heroCopy}</p>
-            <p className={`${hero.heroNote} ${mobile.mobileNote}`}>{media ? "Une photographie documentaire contrôlée ouvre le groupe sans prétendre représenter toutes ses formes." : "Un manque de média reste explicite : aucun spécimen documentaire n’est fabriqué pour compléter la page."}</p>
+            <p className={`${hero.heroNote} ${mobile.mobileNote}`}>{genre === "anthurium" ? "Planche illustrée · Création TIBALDO." : media ? "Une photographie documentaire contrôlée ouvre le groupe sans prétendre représenter toutes ses formes." : "Un manque de média reste explicite : aucun spécimen documentaire n’est fabriqué pour compléter la page."}</p>
           </div>
         </div>
       </section>

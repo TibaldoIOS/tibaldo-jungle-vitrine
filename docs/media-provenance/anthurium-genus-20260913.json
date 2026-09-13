@@ -1,0 +1,18 @@
+{
+  "scope": "ANTHURIUM_GENUS_HERO_IMAGE_FADE_V1",
+  "route": "/plantes/anthurium",
+  "date": "2026-09-13",
+  "classification": "OWNER",
+  "creator": "TIBALDO",
+  "rights_evidence": "Owner confirmed authorship and public reproduction rights in this conversation: Oui c ma photo creation",
+  "original": "docs/media-provenance/originals/anthurium-genus-20260913/owner-original.jpg",
+  "original_sha256": "fe2ada2663ab8bf79024ae840fa720f7306f448844347d7d895005f63b3bd11c",
+  "asset": "/owner-media/anthurium-genus/anthurium-planche-feuilles-tibaldo.webp",
+  "asset_sha256": "18cd9e6f3f2597277741c301e8fd545dff3f7c7cfe34a01ef9b19972a852ccc3",
+  "width": 487,
+  "height": 630,
+  "weight_bytes": 78120,
+  "processing": "cwebp quality 88; no crop, no upscale, no generative modification; labels preserved",
+  "representation": "Illustrated genus plate; not authenticated photographs of individual specimens",
+  "ai_generated_by_agent": false
+}
