@@ -1,0 +1,79 @@
+{
+  "mission": "SHOP_PRODUCTS_ENCYCLOPEDIA_COVERAGE_AUDIT_AND_CREATE_V1",
+  "audit_date": "2026-09-13",
+  "base_public_version": 124,
+  "base_public_commit": "7860938de478b7653ad2c87f43915092fba9d386",
+  "production_shop_write": false,
+  "records": [
+    {
+      "SHOP_NAME": "Alocasia Frydek Variegata",
+      "CANONICAL_BOTANICAL_IDENTITY": "Alocasia micholitziana, forme horticole panachée appelée Frydek Variegata",
+      "ENCYCLOPEDIA_STATUS": "CREATED",
+      "ENCYCLOPEDIA_SLUG": "alocasia/frydek-variegata",
+      "ENCYCLOPEDIA_URL": "https://jungle.tibaldo.fr/plantes/alocasia/frydek-variegata",
+      "GENUS_URL": "https://jungle.tibaldo.fr/plantes/alocasia",
+      "LINKAGE_READY": "YES",
+      "LINKAGE_LEVEL": "HORTICULTURAL_FORM",
+      "MEDIA_STATUS": "MISSING",
+      "NOTE": "Pas de cultivar enregistré ni de rang botanique inventé ; Frydek vert non substituable."
+    },
+    {
+      "SHOP_NAME": "Alocasia Silver Dragon",
+      "CANONICAL_BOTANICAL_IDENTITY": "Alocasia ‘Silver Dragon’, nom horticole non résolu par la RHS",
+      "ENCYCLOPEDIA_STATUS": "CREATED",
+      "ENCYCLOPEDIA_SLUG": "alocasia/silver-dragon",
+      "ENCYCLOPEDIA_URL": "https://jungle.tibaldo.fr/plantes/alocasia/silver-dragon",
+      "GENUS_URL": "https://jungle.tibaldo.fr/plantes/alocasia",
+      "LINKAGE_READY": "YES",
+      "LINKAGE_LEVEL": "HORTICULTURAL_NAME",
+      "MEDIA_STATUS": "MISSING",
+      "NOTE": "Le rattachement à baginda n'est pas présenté comme définitivement accepté."
+    },
+    {
+      "SHOP_NAME": "Alocasia Red Secret",
+      "CANONICAL_BOTANICAL_IDENTITY": "Alocasia cuprea ‘Red Secret’, nom horticole non résolu par la RHS",
+      "ENCYCLOPEDIA_STATUS": "CREATED",
+      "ENCYCLOPEDIA_SLUG": "alocasia/red-secret",
+      "ENCYCLOPEDIA_URL": "https://jungle.tibaldo.fr/plantes/alocasia/red-secret",
+      "GENUS_URL": "https://jungle.tibaldo.fr/plantes/alocasia",
+      "LINKAGE_READY": "YES",
+      "LINKAGE_LEVEL": "HORTICULTURAL_NAME",
+      "MEDIA_STATUS": "MISSING",
+      "NOTE": "La photo Owner identifiée cuprea n'est pas réattribuée à Red Secret."
+    },
+    {
+      "SHOP_NAME": "Monstera Deliciosa Variegata",
+      "CANONICAL_BOTANICAL_IDENTITY": "Monstera deliciosa, forme panachée non précisée",
+      "ENCYCLOPEDIA_STATUS": "AMBIGUOUS",
+      "ENCYCLOPEDIA_SLUG": null,
+      "ENCYCLOPEDIA_URL": null,
+      "GENUS_URL": "https://jungle.tibaldo.fr/plantes/monstera",
+      "LINKAGE_READY": "NO",
+      "NOTE": "Étiquette/facture requise avant choix Albo Variegata, Thai Constellation, Mint ou autre ; ne pas appliquer de correspondance floue."
+    },
+    {
+      "SHOP_NAME": "Monstera Dubia (Juvenile)",
+      "CANONICAL_BOTANICAL_IDENTITY": "Monstera dubia",
+      "ENCYCLOPEDIA_STATUS": "EXISTING",
+      "ENCYCLOPEDIA_SLUG": "monstera/dubia",
+      "ENCYCLOPEDIA_URL": "https://jungle.tibaldo.fr/plantes/monstera/dubia",
+      "GENUS_URL": "https://jungle.tibaldo.fr/plantes/monstera",
+      "LINKAGE_READY": "YES",
+      "LINKAGE_LEVEL": "SPECIES",
+      "MEDIA_STATUS": "EXISTING_OWNER",
+      "NOTE": "Juvenile décrit un stade de croissance, pas une entité supplémentaire."
+    },
+    {
+      "SHOP_NAME": "Monstera Obliqua Peru",
+      "CANONICAL_BOTANICAL_IDENTITY": "Monstera obliqua, précision horticole Peru non assimilée à un cultivar formel",
+      "ENCYCLOPEDIA_STATUS": "EXISTING",
+      "ENCYCLOPEDIA_SLUG": "monstera/obliqua",
+      "ENCYCLOPEDIA_URL": "https://jungle.tibaldo.fr/plantes/monstera/obliqua",
+      "GENUS_URL": "https://jungle.tibaldo.fr/plantes/monstera",
+      "LINKAGE_READY": "YES",
+      "LINKAGE_LEVEL": "SPECIES_ONLY",
+      "MEDIA_STATUS": "EXISTING_OWNER_SPECIES_NOT_PERU_CLONE_PROOF",
+      "NOTE": "Lien documentaire espèce ; ne certifie pas l'origine péruvienne ni le clone du produit Shop."
+    }
+  ]
+}

@@ -12,6 +12,7 @@ import { encyclopediaV19ExpansionPlants } from "./encyclopedia-v19-expansion.ts"
 import { encyclopediaP1Plants } from "./encyclopedia-p1-expansion.ts";
 import { stockIdentityPlants } from "./stock-identities-v1.ts";
 import { horticulturalIdentityPlants } from "./horticultural-identities-v1.ts";
+import { shopReferencePlants, applyShopReferenceContext } from "./shop-reference-coverage-v1.ts";
 import { applyMediaRightsP0Closure } from "./media-rights-p0-closure-v1.ts";
 import { applyOwnerMonsteraThaiConstellationMediaV1 } from "./owner-monstera-thai-constellation-media-v1.ts";
 import { applyOwnerMonsteraMintMediaV1 } from "./owner-monstera-mint-media-v1.ts";
@@ -198,7 +199,7 @@ const rawPlants: PlantEntry[] = [{
 
 export const plants: PlantEntry[] = applyOwnerPileaMediaV1(applyOwnerMarbleQueenMediaV1(applyOwnerMonsteraMintMediaV1(
   applyOwnerMonsteraThaiConstellationMediaV1(
-    applyMediaRightsP0Closure(rawPlants),
+    applyMediaRightsP0Closure(applyShopReferenceContext([...rawPlants, ...shopReferencePlants])),
   ),
 )));
 

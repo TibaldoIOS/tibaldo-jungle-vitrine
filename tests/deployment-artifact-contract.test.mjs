@@ -28,8 +28,11 @@ const labs = [
   "/lab/v25-4/golden-hub/pilea",
 ];
 
-test("release includes the nine verified editorial identities", () => {
-  assert.equal(plants.length, 87);
+test("release preserves 87 identities and adds three documented Alocasia forms", () => {
+  assert.equal(plants.length, 90);
+  for (const slug of ["frydek-variegata", "silver-dragon", "red-secret"]) {
+    assert.equal(plants.filter(p => p.genre === "alocasia" && p.slug === slug).length, 1);
+  }
 });
 
 test(`${requestedMode} artifact has the exact indexing and customer-mode contract`, async () => {
@@ -66,7 +69,10 @@ test(`${requestedMode} artifact has the exact robots and sitemap contract`, asyn
     assert.equal(sitemap.status, 200);
     const xml = await sitemap.text();
     const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-    assert.equal(urls.length, 172);
+    assert.equal(urls.length, 175);
+    for (const slug of ["frydek-variegata", "silver-dragon", "red-secret"]) {
+      assert.ok(urls.includes(`https://jungle.tibaldo.fr/plantes/alocasia/${slug}`));
+    }
     assert.equal(new Set(urls).size, urls.length);
     assert.ok(urls.every((url) => url.startsWith("https://jungle.tibaldo.fr/")));
     assert.ok(urls.every((url) => !url.includes("/lab/")));
