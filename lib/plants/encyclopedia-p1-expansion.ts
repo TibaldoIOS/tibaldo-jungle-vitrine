@@ -613,7 +613,7 @@ const monsteraAlboVariegata = withHonestMediaGap({
   displayName: "Albo Variegata",
   subtitle: "La forme panachée de Monstera deliciosa, marbrée de blanc et conçue pour grimper.",
   family: "Araceae",
-  taxonomy: { order: "Alismatales", family: "Araceae", genus: "Monstera", species: "Monstera deliciosa", cultivar: "Albo Variegata", commonNames: ["Monstera Albo", "Monstera Variegata", "Monstera deliciosa panachée"] },
+  taxonomy: { order: "Alismatales", family: "Araceae", genus: "Monstera", species: "Monstera deliciosa", cultivar: "Albo Variegata", commonNames: ["Monstera Albo", "Monstera Albo-Variegata"] },
   filters: {
     temperatureMin: 15, temperatureIdeal: [18, 25], humidityIdeal: [45, 70], light: "vive", watering: "modéré",
     substrateTags: ["aroïdes", "aéré", "drainant", "organique"], growthRate: "moyenne", habits: ["grimpant", "hémiépiphyte"], adultSizeCm: 300,
@@ -621,8 +621,8 @@ const monsteraAlboVariegata = withHonestMediaGap({
   },
   origin: "Sélection horticole de Monstera deliciosa, espèce originaire du Mexique au Panama",
   habitat: "Le cultivar n’a pas d’aire naturelle distincte. L’espèce est une liane de forêt tropicale humide qui grimpe grâce à ses racines aériennes.",
-  hybridization: "Forme horticole panachée de Monstera deliciosa. Cette fiche rassemble les usages Albo, Albo-Variegata et Variegata sans créer de doublons.",
-  synonyms: ["Monstera deliciosa ‘Variegata’", "Monstera deliciosa ‘Albo-Variegata’", "Monstera Albo"],
+  hybridization: "Forme horticole panachée de Monstera deliciosa décrite sous les noms Albo et Albo-Variegata. Une étiquette générique Variegata ne suffit pas à lui attribuer cette identité.",
+  synonyms: ["Monstera deliciosa ‘Albo-Variegata’", "Monstera Albo"],
   description: [
     "Monstera deliciosa ‘Albo Variegata’ associe des secteurs verts à des marbrures crème ou blanches. La panachure apparaît aussi sur la tige : elle permet de lire le potentiel d’un futur nœud, sans garantir le dessin exact de la prochaine feuille.",
     "Comme la forme verte, elle change avec l’âge. Un support, une lumière vive filtrée et une croissance stable favorisent des feuilles plus grandes et fenêtrées. Les tissus blancs, sans chlorophylle, restent plus fragiles.",
@@ -653,7 +653,7 @@ const monsteraAlboVariegata = withHonestMediaGap({
     { name: "Monstera deliciosa verte", difference: "Même espèce de base, sans secteurs blancs dépourvus de chlorophylle." },
   ],
   faq: [
-    { question: "Albo, Variegata et Albo-Variegata désignent-ils la même plante ?", answer: "Ces noms horticoles sont couramment employés pour la même forme blanche panachée de Monstera deliciosa ; cette fiche les réunit sous un seul canonique." },
+    { question: "Le nom Variegata désigne-t-il forcément une Albo ?", answer: "Non. Cette fiche concerne Albo et Albo-Variegata. L’appellation commerciale générique Deliciosa Variegata est documentée séparément, sans lui attribuer automatiquement un cultivar." },
     { question: "Comment garder la panachure ?", answer: "Offrez une lumière vive indirecte et surveillez la panachure de la tige ; aucune méthode ne garantit le motif d’une feuille." },
     { question: "Pourquoi le blanc brunit-il ?", answer: "Ces tissus sans chlorophylle sont plus fragiles. Soleil direct, air sec, arrosage irrégulier et sels peuvent accélérer le brunissement." },
     { question: "Faut-il un tuteur ?", answer: "Oui. Un support stable aide la liane à produire des feuilles plus grandes et plus matures." },

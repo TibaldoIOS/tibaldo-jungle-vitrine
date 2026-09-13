@@ -28,8 +28,9 @@ const labs = [
   "/lab/v25-4/golden-hub/pilea",
 ];
 
-test("release preserves 87 identities and adds three documented Alocasia forms", () => {
-  assert.equal(plants.length, 90);
+test("release preserves 87 identities and adds four documented horticultural forms", () => {
+  assert.equal(plants.length, 91);
+  assert.equal(plants.filter(p => p.genre === "monstera" && p.slug === "deliciosa-variegata").length, 1);
   for (const slug of ["frydek-variegata", "silver-dragon", "red-secret"]) {
     assert.equal(plants.filter(p => p.genre === "alocasia" && p.slug === slug).length, 1);
   }
@@ -69,7 +70,8 @@ test(`${requestedMode} artifact has the exact robots and sitemap contract`, asyn
     assert.equal(sitemap.status, 200);
     const xml = await sitemap.text();
     const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-    assert.equal(urls.length, 175);
+    assert.equal(urls.length, 176);
+    assert.ok(urls.includes("https://jungle.tibaldo.fr/plantes/monstera/deliciosa-variegata"));
     for (const slug of ["frydek-variegata", "silver-dragon", "red-secret"]) {
       assert.ok(urls.includes(`https://jungle.tibaldo.fr/plantes/alocasia/${slug}`));
     }

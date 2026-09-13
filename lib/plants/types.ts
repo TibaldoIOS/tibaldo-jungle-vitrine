@@ -44,7 +44,7 @@ export type PlantEntry = {
   care: { light: Level; water: Level; humidity: Level; difficulty: Level; difficultyText?: string; lightText: string; watering: string; humidityText: string; temperature: string; substrate: string; repotting: string; fertilizing: string; propagation: string };
   toxicity: { level: string; summary: string; details: string };
   problems: { title: string; cause: string; advice: string }[];
-  comparisons: { name: string; difference: string }[];
+  comparisons: { name: string; difference: string; href?: string }[];
   faq: { question: string; answer: string }[];
   tibaldoAdvice: string[];
   localSpotlight?: { title: string; text: string };

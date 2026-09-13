@@ -1,5 +1,7 @@
 {
-  "mission": "SHOP_PRODUCTS_ENCYCLOPEDIA_COVERAGE_AUDIT_AND_CREATE_V1",
+  "mission": "SHOP_ENCYCLOPEDIA_COVERAGE_COMPLETE_AND_PUBLIC_DELIVERY_V2",
+  "linkage_scope": "Canonical identity resolution only; PUBLIC availability requires remote certification",
+  "public_certification": "PENDING_DEPLOYMENT",
   "audit_date": "2026-09-13",
   "base_public_version": 124,
   "base_public_commit": "7860938de478b7653ad2c87f43915092fba9d386",
@@ -43,13 +45,15 @@
     },
     {
       "SHOP_NAME": "Monstera Deliciosa Variegata",
-      "CANONICAL_BOTANICAL_IDENTITY": "Monstera deliciosa, forme panachée non précisée",
-      "ENCYCLOPEDIA_STATUS": "AMBIGUOUS",
-      "ENCYCLOPEDIA_SLUG": null,
-      "ENCYCLOPEDIA_URL": null,
+      "CANONICAL_BOTANICAL_IDENTITY": "Monstera deliciosa — forme horticole panachée commercialisée sous le nom Variegata ; cultivar non affirmé",
+      "ENCYCLOPEDIA_STATUS": "CREATED",
+      "ENCYCLOPEDIA_SLUG": "monstera/deliciosa-variegata",
+      "ENCYCLOPEDIA_URL": "https://jungle.tibaldo.fr/plantes/monstera/deliciosa-variegata",
       "GENUS_URL": "https://jungle.tibaldo.fr/plantes/monstera",
-      "LINKAGE_READY": "NO",
-      "NOTE": "Étiquette/facture requise avant choix Albo Variegata, Thai Constellation, Mint ou autre ; ne pas appliquer de correspondance floue."
+      "LINKAGE_READY": "YES",
+      "MEDIA_STATUS": "MISSING",
+      "LINKAGE_LEVEL": "HORTICULTURAL_COMMERCIAL_FORM",
+      "NOTE": "Identité commerciale confirmée par Owner le 2026-09-13. Ne pas substituer Albo, Thai, Mint ou Aurea."
     },
     {
       "SHOP_NAME": "Monstera Dubia (Juvenile)",

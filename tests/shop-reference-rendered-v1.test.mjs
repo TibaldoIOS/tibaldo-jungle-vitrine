@@ -5,7 +5,7 @@ import worker from "../dist/server/index.js";
 const env = { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } };
 const ctx = { waitUntil() {}, passThroughOnException() {} };
 const render = path => worker.fetch(new Request(`https://jungle.tibaldo.fr${path}`), env, ctx);
-const routes = ["alocasia/frydek-variegata", "alocasia/silver-dragon", "alocasia/red-secret", "monstera/dubia", "monstera/obliqua"];
+const routes = ["alocasia/frydek-variegata", "alocasia/silver-dragon", "alocasia/red-secret", "monstera/deliciosa-variegata", "monstera/dubia", "monstera/obliqua"];
 
 for (const route of routes) test(`rendered PUBLIC contract: ${route}`, async () => {
   const r = await render(`/plantes/${route}`);
@@ -26,6 +26,13 @@ for (const route of routes) test(`rendered PUBLIC contract: ${route}`, async () 
 });
 
 test("new forms have real HTML referrers from genus and species, no copied media", async () => {
+  for (const route of ["/plantes/monstera", "/plantes/monstera/deliciosa", "/plantes/monstera/albo-variegata"]) {
+    assert.ok((await (await render(route)).text()).includes('href="/plantes/monstera/deliciosa-variegata"'), route);
+  }
+  const variegata = await (await render("/plantes/monstera/deliciosa-variegata")).text();
+  for (const slug of ["deliciosa", "albo-variegata", "thai-constellation", "mint"]) {
+    assert.ok(variegata.includes(`href="/plantes/monstera/${slug}"`), slug);
+  }
   const genus = await (await render("/plantes/alocasia")).text();
   for (const [parent, child] of [["micholitziana", "frydek-variegata"], ["baginda", "silver-dragon"], ["cuprea", "red-secret"]]) {
     assert.ok(genus.includes(`href="/plantes/alocasia/${child}"`));

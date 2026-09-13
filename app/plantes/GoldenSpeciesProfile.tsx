@@ -194,7 +194,7 @@ export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
 
           <section className={golden.related} id="comparaison" aria-labelledby={`golden-related-${plant.genre}-${plant.slug}`}>
             <header data-reveal><p className="section-kicker">06 · Comparer</p><h2 id={`golden-related-${plant.genre}-${plant.slug}`}>Des silhouettes proches.<br /><em>Des lectures distinctes.</em></h2></header>
-            <div className={golden.relatedTrack}>{plant.comparisons.map((item, index) => <Link href={comparisonHref(plant, item.name)} key={item.name} data-reveal><span>0{index + 1}</span><strong>{item.name}</strong><p>{item.difference}</p><b>Comparer <Arrow /></b></Link>)}</div>
+            <div className={golden.relatedTrack}>{plant.comparisons.map((item, index) => <Link href={item.href ?? comparisonHref(plant, item.name)} key={item.name} data-reveal><span>0{index + 1}</span><strong>{item.name}</strong><p>{item.difference}</p><b>Comparer <Arrow /></b></Link>)}</div>
           </section>
 
           {isCycasRevoluta ? <CycasLocalGuide plant={plant} /> : null}

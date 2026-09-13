@@ -35,13 +35,12 @@ test("full template content, distinct metadata and honest media gaps", () => {
   assert.equal(new Set(shopReferencePlants.map(p => p.seo.title)).size, 3);
   assert.equal(new Set(shopReferencePlants.map(p => p.seo.description)).size, 3);
 });
-test("exact handoff links and ambiguity gate; no production commerce write", () => {
+test("six exact identity links, PUBLIC still requires remote proof; no commerce write", () => {
   assert.equal(mapping.production_shop_write, false);
   assert.equal(mapping.records.length, 6);
   const pending = mapping.records.filter((r: { LINKAGE_READY: string }) => r.LINKAGE_READY === "NO");
-  assert.equal(pending.length, 1);
-  assert.equal(pending[0].SHOP_NAME, "Monstera Deliciosa Variegata");
-  assert.equal(pending[0].ENCYCLOPEDIA_SLUG, null);
+  assert.equal(pending.length, 0);
+  assert.equal(mapping.public_certification, "PENDING_DEPLOYMENT");
   for (const r of mapping.records.filter((r: { LINKAGE_READY: string }) => r.LINKAGE_READY === "YES")) {
     const [genre, slug] = r.ENCYCLOPEDIA_SLUG.split("/");
     assert.ok(getPlant(genre, slug));
