@@ -8,7 +8,7 @@ export function GET() {
 
   return Response.json(entries, {
     headers: {
-      "Access-Control-Allow-Origin": "https://caisse.tibaldo.fr",
+      "Access-Control-Allow-Origin": "*",
       "Cache-Control": "public, max-age=300, s-maxage=3600",
     },
   });

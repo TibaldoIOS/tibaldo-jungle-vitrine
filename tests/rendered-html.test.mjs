@@ -818,6 +818,7 @@ test("renders the Golden rempotage service landing with factual local schema", a
 test("conserves the existing plant encyclopedia API contract", async () => {
   const response = await render("/api/encyclopedie/plantes");
   assert.equal(response.status, 200);
+  assert.equal(response.headers.get("access-control-allow-origin"), "*");
   const entries = await response.json();
   assert.ok(entries.length > 0);
   const expectedFields = ["id", "genre", "genreLabel", "slug", "displayName", "botanicalName", "cultivar", "family", "imageUrl", "imageAlt", "encyclopediaSlug", "encyclopediaUrl", "publishedAt", "updatedAt"];
