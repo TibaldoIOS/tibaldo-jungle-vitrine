@@ -1,0 +1,85 @@
+{
+  "batch_id": "PHOTO-20260914-BILLIETIAE-01",
+  "source_before": "9793ed36b4bb257e3e0ccbc5fd565525e426bf0c",
+  "public_version_before": 132,
+  "photos": [
+    {
+      "owner_identity": "Philodendron billietiae",
+      "canonical_slug": "plantes/philodendron/billietiae",
+      "original_filename": "codex-clipboard-b9f71951-f8c3-4044-b3fc-7b071d84bb6f.png",
+      "original_sha256": "29042e7de3883fce27d50949c114db673c7765a3973e09e41e237613e7d4af56",
+      "filename": "philodendron-billietiae-plante-petioles-orange.webp",
+      "asset_path": "/owner-media/philodendron-billietiae/philodendron-billietiae-plante-petioles-orange.webp",
+      "public_path": "/media/owner-media/philodendron-billietiae/philodendron-billietiae-plante-petioles-orange.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/philodendron-billietiae/philodendron-billietiae-plante-petioles-orange.webp",
+      "sha256": "093c024a04821feee002e62ac104c21dfb6448f32f395bf646f9669bd47f9474",
+      "bytes": 275532,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alt": "Philodendron billietiae en pot clair, aux longues feuilles vertes ondulées et aux pétioles orangés.",
+      "provenance": "OWNER",
+      "credit": "Photo : TIBALDO",
+      "processing": "WebP quality88 method6; no crop, no upscale, no generative alteration; metadata stripped",
+      "existing_media": [
+        {
+          "src": "/philodendron-billietiae-feuilles-ondulees.jpg",
+          "alt": "Philodendron billietiae botanique aux longues feuilles vertes ondulées",
+          "caption": "Silhouette foliaire authentique de Philodendron billietiae au Fairchild Tropical Botanic Garden. Photo David J. Stang, CC BY-SA 4.0.",
+          "width": 1280,
+          "height": 1920,
+          "license": {
+            "status": "verified",
+            "creator": "David J. Stang",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Philodendron_billietiae_0zz.jpg",
+            "registryPath": "/credits-images",
+            "note": "Preuve contrôlée le 30 août 2026. Le fichier local est strictement identique au dérivé Commons 1280 px (SHA-256 bd0cd113823ba55fda5a17fa7ebe277dece0feef5aa967ea4a105b1b00e28bd0). La description Commons identifie Philodendron billietiae au Fairchild Tropical Botanic Garden."
+          }
+        },
+        {
+          "src": "/philodendron-billietiae-petioles-orange.jpg",
+          "alt": "Pétioles jaune orangé caractéristiques du Philodendron billietiae",
+          "caption": "Détail des pétioles orangés et du port grimpant. Photo David J. Stang, CC BY-SA 4.0.",
+          "width": 1920,
+          "height": 1280,
+          "license": {
+            "status": "verified",
+            "creator": "David J. Stang",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Philodendron_billietiae_1zz.jpg",
+            "registryPath": "/credits-images",
+            "note": "Preuve contrôlée le 30 août 2026. Le fichier local est strictement identique au dérivé Commons 1920 px (SHA-256 282423a06b1df50f86bb39ed55295defaf2ff8b77a18d024774083e8aeb3d5ae). La description Commons identifie Philodendron billietiae au Fairchild Tropical Botanic Garden."
+          }
+        },
+        {
+          "src": "/philodendron-billietiae-revers-feuille.jpg",
+          "alt": "Revers nervuré d’une feuille de Philodendron billietiae avec pétiole orange",
+          "caption": "Revers du limbe et nervation du Philodendron billietiae. Photo David J. Stang, CC BY-SA 4.0.",
+          "width": 1920,
+          "height": 1280,
+          "license": {
+            "status": "verified",
+            "creator": "David J. Stang",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "sourceUrl": "https://commons.wikimedia.org/wiki/File:Philodendron_billietiae_2zz.jpg",
+            "registryPath": "/credits-images",
+            "note": "Preuve contrôlée le 30 août 2026. Le fichier local est strictement identique au dérivé Commons 1920 px (SHA-256 7c0af434b918d518831c1426fd9985acb8c1a61872860c13dbf5cfe2a66dbc1f). La description Commons identifie Philodendron billietiae au Fairchild Tropical Botanic Garden."
+          }
+        }
+      ]
+    }
+  ],
+  "allowed_paths": [
+    "docs/media-provenance/photo-20260914-billietiae-01.json",
+    "lib/plants/catalog.ts",
+    "app/credits-images/page.tsx",
+    "tests/photo-billietiae-owner-v1.test.ts",
+    "public/owner-media/philodendron-billietiae/philodendron-billietiae-plante-petioles-orange.webp",
+    "tests/media-rights-p0-closure-v1.test.ts"
+  ]
+}
