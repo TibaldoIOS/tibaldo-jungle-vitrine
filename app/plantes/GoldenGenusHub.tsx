@@ -17,6 +17,7 @@ import { anthuriumGenusOwnerHero } from "@/lib/plants/anthurium-genus-owner-hero
 import { philodendronGenusOwnerHero } from "@/lib/plants/philodendron-genus-owner-hero";
 import { alocasiaGenusOwnerHero } from "@/lib/plants/alocasia-genus-owner-hero";
 import illustration from "./GenusIllustrationHero.module.css";
+import { genusIntroductions } from "@/lib/plants/genus-introductions";
 
 export type GoldenGroupGuide = {
   name: string;
@@ -123,6 +124,7 @@ export default function GoldenGenusHub({ genre, guide, plants, editorials = [], 
   const navigationGenres = [...new Map(plants.map((plant) => [plant.genre, plant.genreLabel])).entries()];
   const gapCount = displayPlants.filter((plant) => !plant.gallery.length).length;
   const heroCopy = groupHeroCopy(genre, guide);
+  const introduction = genusIntroductions[genre as keyof typeof genusIntroductions];
 
   return (
     <main className={`${golden.page} ${body.groupPage} editorial-page`} data-golden-group-v25={genre} data-golden-group-v1={genre}>
@@ -144,7 +146,7 @@ export default function GoldenGenusHub({ genre, guide, plants, editorials = [], 
 
       <section className={`${golden.groupIntro} ${mobile.introTransition} shell`} data-reveal>
         <HubChapterMarker number="01" label="Comprendre le groupe" />
-        <div><h2>Un langage commun.<br /><em>Des formes singulières.</em></h2><div className={`${golden.groupIntroCopy} ${body.bodyCopy}`}><p>{guide.lead}</p><p>{guide.origin}</p></div>{facts.length ? <dl className={canonical.factBand}>{facts.map((fact) => <div key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}</dl> : null}</div>
+        <div><h2>{introduction.heading[0]}<br /><em>{introduction.heading[1]}</em></h2><div className={`${golden.groupIntroCopy} ${body.bodyCopy}`}><p>{introduction.paragraphs[0]}</p><p>{introduction.paragraphs[1]}</p></div>{facts.length ? <dl className={canonical.factBand}>{facts.map((fact) => <div key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}</dl> : null}</div>
       </section>
 
       {genre === "monstera" ? <MonsteraScrollNarrative /> : null}
