@@ -96,7 +96,7 @@ export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
         <div className={golden.speciesStory}>
           <section className={golden.speciesIntro} data-reveal>
             <p className="section-kicker">Portrait botanique</p>
-            <div><h2>{plant.displayName}.<br /><em>Une présence à comprendre.</em></h2>{description.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+            <div><h2>{plant.displayName}.<br /><em>Une présence à comprendre.</em></h2>{description.slice(0, 1).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
           </section>
 
           <section className={golden.identity} id="identite" aria-labelledby={`golden-identity-${plant.genre}-${plant.slug}`}>
@@ -136,7 +136,7 @@ export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
 
           <section className={golden.speciesEditorial} aria-labelledby={`golden-story-${plant.genre}-${plant.slug}`}>
             <div data-reveal><p className="section-kicker">02 · Lire sa forme</p><h2 id={`golden-story-${plant.genre}-${plant.slug}`}>Une forme liée<br /><em>à son milieu.</em></h2></div>
-            <div data-reveal><p>{description[0] ?? plant.subtitle}</p><p>{plant.habitat}</p>{advice[0] ? <aside><span>À observer</span><strong>{plant.growth.habit}</strong><p>{advice[0]}</p></aside> : null}</div>
+            <div data-reveal>{description.slice(1).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}{advice[0] ? <aside><span>À observer</span><strong>{plant.growth.habit}</strong><p>{advice[0]}</p></aside> : null}</div>
           </section>
 
           {revealImage ? (
