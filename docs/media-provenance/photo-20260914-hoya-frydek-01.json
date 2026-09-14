@@ -1,0 +1,57 @@
+{
+  "batch_id": "PHOTO-20260914-HOYA-FRYDEK-01",
+  "source_before": "c13798b55dacfef9d62e5f7c46e09f87384f30a8",
+  "public_version_before": 140,
+  "photos": [
+    {
+      "owner_identity": "Hoya callistophylla",
+      "canonical_slug": "plantes/hoya/callistophylla",
+      "original_filename": "codex-clipboard-d422aa23-7c6f-4bbe-9d8a-b9b1d2871395.png",
+      "original_sha256": "5831f15f64b7add211a44d338a7db2b886d1f12949fa3b2b260fd95cfce131d3",
+      "filename": "hoya-callistophylla-feuilles-nervures-sombres.webp",
+      "asset_path": "/owner-media/hoya-callistophylla/hoya-callistophylla-feuilles-nervures-sombres.webp",
+      "public_path": "/media/owner-media/hoya-callistophylla/hoya-callistophylla-feuilles-nervures-sombres.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/hoya-callistophylla/hoya-callistophylla-feuilles-nervures-sombres.webp",
+      "sha256": "6dc27cc8871c737b3c74f7881a44850e7a0e08c41e129d93a191914b93700fb6",
+      "bytes": 237734,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alt": "Hoya callistophylla en pot blanc, aux feuilles vertes allongées parcourues de nervures sombres.",
+      "provenance": "OWNER",
+      "credit": "Photo : TIBALDO",
+      "existing_media": []
+    },
+    {
+      "owner_identity": "Alocasia micholitziana — Frydek Variegata",
+      "canonical_slug": "plantes/alocasia/frydek-variegata",
+      "original_filename": "codex-clipboard-caf83afb-446e-4a8d-8a8b-5fc778d3a6e4.png",
+      "original_sha256": "2ef645c172ff151d932e9f3110eb165ebf434a0a4cad89f7b531b1b7e6d43d52",
+      "filename": "alocasia-frydek-variegata-feuilles-panachees.webp",
+      "asset_path": "/owner-media/alocasia-frydek-variegata/alocasia-frydek-variegata-feuilles-panachees.webp",
+      "public_path": "/media/owner-media/alocasia-frydek-variegata/alocasia-frydek-variegata-feuilles-panachees.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/alocasia-frydek-variegata/alocasia-frydek-variegata-feuilles-panachees.webp",
+      "sha256": "99269881f1eb1e412cd2ca62bd095b4c71b7df631070a241424c15c45acb7e5b",
+      "bytes": 247262,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alt": "Alocasia micholitziana « Frydek Variegata » en pot clair, aux feuilles allongées panachées de vert et de blanc crème.",
+      "provenance": "OWNER",
+      "credit": "Photo : TIBALDO",
+      "existing_media": []
+    }
+  ],
+  "processing": "WebP quality88 method6; no crop, no upscale, no generative alteration; metadata stripped",
+  "cuprea_duplicate": "EXACT_ORIGINAL_ALREADY_REGISTERED_NO_MUTATION",
+  "allowed_paths": [
+    "docs/media-provenance/photo-20260914-hoya-frydek-01.json",
+    "lib/plants/catalog.ts",
+    "app/credits-images/page.tsx",
+    "tests/photo-hoya-frydek-owner-v1.test.ts",
+    "public/owner-media/hoya-callistophylla/hoya-callistophylla-feuilles-nervures-sombres.webp",
+    "public/owner-media/alocasia-frydek-variegata/alocasia-frydek-variegata-feuilles-panachees.webp"
+  ]
+}
