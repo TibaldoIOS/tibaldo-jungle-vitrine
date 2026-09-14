@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 };
 
 const credits: readonly [string, string, string, string, string?][] = [
+  ["Hero Alocasia · planche de feuilles", "Photo : TIBALDO", "Planche illustrée", "owner-provided://tibaldo/alocasia-genus-20260914"],
 ["Monstera deliciosa — Variegata", "Photo : TIBALDO", "Photographie botanique", "owner-provided://tibaldo/photo-20260913-variegata-release-01/deliciosa-variegata"],
 ["Pilea cadierei", "Photo : TIBALDO", "Photographie botanique", "owner-provided://tibaldo/photo-20260913-resume-five-01/cadierei"],
 ["Pilea involucrata ‘Moon Valley’", "Photo : TIBALDO", "Photographie botanique", "owner-provided://tibaldo/photo-20260913-resume-five-01/moon-valley"],

@@ -15,6 +15,7 @@ import mobile from "./GoldenGroupMobileBaseline.module.css";
 import canonical from "./GoldenGroupCanonical.module.css";
 import { anthuriumGenusOwnerHero } from "@/lib/plants/anthurium-genus-owner-hero";
 import { philodendronGenusOwnerHero } from "@/lib/plants/philodendron-genus-owner-hero";
+import { alocasiaGenusOwnerHero } from "@/lib/plants/alocasia-genus-owner-hero";
 import illustration from "./GenusIllustrationHero.module.css";
 
 export type GoldenGroupGuide = {
@@ -80,6 +81,7 @@ const isDocumentaryImage = (image: PlantEntry["gallery"][number]) =>
 
 const firstGroupMedia = (genre: string, plants: readonly PlantEntry[]): GroupMedia | null => {
   if (genre === "monstera") return monsteraHeroMedia;
+  if (genre === "alocasia") return alocasiaGenusOwnerHero;
   if (genre === "anthurium") return anthuriumGenusOwnerHero;
   if (genre === "philodendron") return philodendronGenusOwnerHero;
   if (genre === "pilea") return null;
@@ -135,7 +137,7 @@ export default function GoldenGenusHub({ genre, guide, plants, editorials = [], 
           <div className={`${hero.heroCopy} ${mobile.mobileCopy}`}>
             <h1 className={mobile.mobileTitle} id={`golden-group-title-${genre}`}>Les <em>{title}.</em></h1>
             <p className={`${hero.heroIntroduction} ${mobile.mobileIntroduction}`}>{heroCopy}</p>
-            <p className={`${hero.heroNote} ${mobile.mobileNote}`}>{genre === "anthurium" ? "Planche illustrée · Création TIBALDO." : genre === "philodendron" ? "Planche illustrée · TIBALDO." : media ? "Une photographie documentaire contrôlée ouvre le groupe sans prétendre représenter toutes ses formes." : "Un manque de média reste explicite : aucun spécimen documentaire n’est fabriqué pour compléter la page."}</p>
+            <p className={`${hero.heroNote} ${mobile.mobileNote}`}>{genre === "alocasia" ? "Photo : TIBALDO" : genre === "anthurium" ? "Planche illustrée · Création TIBALDO." : genre === "philodendron" ? "Planche illustrée · TIBALDO." : media ? "Une photographie documentaire contrôlée ouvre le groupe sans prétendre représenter toutes ses formes." : "Un manque de média reste explicite : aucun spécimen documentaire n’est fabriqué pour compléter la page."}</p>
           </div>
         </div>
       </section>

@@ -6,12 +6,14 @@ import { familyEditorials } from "@/lib/plants/family-editorials";
 import { isEditorialPlaceholder, isInternalPhotoProductionCopy, isPhotoProductionPlaceholder } from "@/lib/plants/types";
 import GoldenGenusHub, { type GoldenGroupGuide } from "../GoldenGenusHub";
 import { betaOnlyRobots } from "@/lib/deployment-mode";
+import { alocasiaGenusOwnerHero } from "@/lib/plants/alocasia-genus-owner-hero";
 
 type Props = { params: Promise<{ genre: string }> };
 type GuideKey = keyof typeof familyGuides;
 export const generateStaticParams = () => Object.keys(familyGuides).map((genre) => ({ genre }));
 
 const firstDocumentaryImage = (genre: string) => {
+  if (genre === "alocasia") return alocasiaGenusOwnerHero;
   if (genre === "pilea") return undefined;
   return getPlantsByGenre(genre).flatMap((plant) => plant.gallery).find((image) =>
     !isPhotoProductionPlaceholder(image.src) &&
