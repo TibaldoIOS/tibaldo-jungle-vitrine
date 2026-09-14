@@ -1,0 +1,91 @@
+MISSION=ALOCASIA_EDITORIAL_DEDUPLICATION_FOLLOWUP_V1
+DATE=2026-09-14
+PUBLIC_BASE=V138 / 519df3e05e3f9f1756e7c5a836338096bb02c015
+PUBLIC_BASE_RECHECKED=V139 / 5be8be640b877091a10312ec8fe70484aba25c62
+CONCURRENT_WORK_PRESERVED=substrate commerce bridge, already deployed V139
+RECONCILIATION=bounded editorial commit rebased without conflict onto V139
+EXISTING_AUDIT_REUSED=YES
+FULL_CANONICAL_AUDIT_REPEATED=NO
+AUDIT=/Users/tibaldo/Jungle-delivery/ALOCASIA_CANONICAL_ENTITY_AND_ROUTE_AUDIT_V1.txt
+
+PERIMETRE
+Lecture editoriale des 17 fiches existantes, sans refaire leur audit canonique.
+Sept fiches modifiees ; aucune nouvelle page, route ou selection creee.
+
+PAIRS
+A: baginda / Silver Dragon / Dragon Scale
+DUPLICATION_FOUND=YES, chevauchement d'identite plutot que paragraphes identiques.
+IDENTITY_AMBIGUITY=YES, noms horticoles presents dans identite et noms courants.
+CONTENT_OWNER=baginda pour l'espece ; Silver Dragon pour la selection.
+ACTION=description et statut recentres ; mentions horticoles dans Comparer.
+Silver Dragon conserve son rattachement specifique non confirme.
+Dragon Scale reste un nom de comparaison, sans synonyme ni statut formel invente.
+
+B: reginula / Black Velvet
+DUPLICATION_FOUND=chevauchement dans sous-titre, statut, description, nom courant.
+IDENTITY_AMBIGUITY=YES
+CONTENT_OWNER=reginula pour l'espece ; pas de fiche Black Velvet autonome.
+ACTION=identite et meta-description recentrees ; Black Velvet dans Comparer.
+
+C: micholitziana / Frydek / Frydek Variegata
+DUPLICATION_FOUND=chevauchement dans description et statut.
+IDENTITY_AMBIGUITY=YES
+CONTENT_OWNER=micholitziana pour l'espece ; Frydek Variegata pour la forme panachee.
+ACTION=mentions Frydek deplacees dans Comparer ; contexte reciproque explicite.
+Frydek vert reste ambigu, sans nouvelle fiche.
+
+D: cuprea / Red Secret
+DUPLICATION_FOUND=chevauchement dans la seconde description de l'espece.
+IDENTITY_AMBIGUITY=YES
+CONTENT_OWNER=cuprea pour l'espece ; Red Secret pour la selection.
+ACTION=description recentree ; distinction horticole breve dans Comparer.
+
+AUTRES CHEVAUCHEMENTS
+Les trois fiches horticoles partageaient le H2 Garder la bonne identite,
+un paragraphe generique et une repetition de leur propre rubrique multiplication.
+Remplaces par trois notes de filiation distinctes ; conseils de multiplication
+originaux conserves integralement dans care.propagation.
+Polly/Bambino, tandurusa/Jacklyn et les autres especes ne justifient pas ici
+de nouvelle fiche ni de modification d'identite. Les comparaisons entre especes
+et les rubriques structurelles communes restent preservees.
+
+PARAGRAPHS_MOVED=4 mentions horticoles reformulees dans Comparer
+PARAGRAPHS_REWRITTEN=7 (4 secondes descriptions + 3 notes de multiplication)
+COMPARISON_LINKS_ADDED=0 nouvelles destinations ; 6 liens reciproques existants rendus explicites
+COMPARISON_NOTES_ADDED=3 (Dragon Scale, Black Velvet, Frydek)
+Les noms sans fiche renvoient au genre avec le libelle d'exploration existant,
+jamais a une fausse route canonique.
+
+SEO
+Titres SEO, routes et H1 conserves. Une meta-description, reginula, recentree
+sur l'espece car elle portait le nom horticole Black Velvet.
+Pas de paragraphes descriptifs identiques dans les identites et les blocs
+editoriaux des trois selections. H2 editoriaux de ces selections uniques.
+Les H2 structurels communs du template et les reperes de culture partages
+ne constituent pas des contenus propres a une selection et sont conserves.
+CANNIBALIZATION_CHECK=separation editoriale des intentions verifiee ; aucun
+resultat de classement Google n'est revendique.
+
+PREUVES
+Kew baginda: https://powo.science.kew.org/taxon/60456116-2
+RHS Silver Dragon: https://www.rhs.org.uk/plants/372019/alocasia-silver-dragon-v/details
+Sources botaniques deja presentes sur les autres fiches conservees.
+Identites botaniques, photos, sources, origines, habitats et dates de publication
+des 17 fiches compares au snapshot avant correction : inchanges.
+Le matching canonique exclut deja les noms courants : retirer les deux noms
+horticoles de taxonomy.commonNames ne modifie pas les identites de matching.
+
+QA_LOCALE=39/39 PASS (27 source/contrats + 7 rendu cible + 5 artefact)
+TYPECHECK=PASS
+LINT_CHANGED_FILES=PASS
+BUILD_PUBLIC=PASS
+DIFF_CHECK=PASS
+Deux avertissements preexistants de resolution d'images CSS au build subsistent,
+sans modification de ces fichiers dans cette mission.
+Publication et verification distante consignees dans le rapport de livraison final.
+
+SHOP_MUTATED=NO
+CAISSE_MUTATED=NO
+BACKEND_MUTATED=NO
+MEDIA_MUTATED=NO
+ROUTES_MUTATED=NO

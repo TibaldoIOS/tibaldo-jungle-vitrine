@@ -14,6 +14,12 @@ const cultureSources = [
   { label: "UF/IFAS — Alocasia, formes horticoles et morphologie", url: "https://ask.ifas.ufl.edu/publication/FP033/pdf" },
 ];
 
+const divisionNotes: Record<string, { title: string; paragraphs: string[] }> = {
+  "frydek-variegata": { title: "Suivre la panachure après division", paragraphs: ["Gardez la filiation de la plante mère avec le jeune sujet, puis observez ses nouvelles feuilles. L’étiquette conserve l’appellation horticole ; elle ne promet pas une répartition identique des secteurs blancs."] },
+  "silver-dragon": { title: "Transmettre le nom Silver Dragon", paragraphs: ["Accompagnez chaque division de son nom horticole. Ne remplacez pas Silver Dragon par Dragon Scale sur la seule ressemblance d’une jeune feuille : l’éclairage peut modifier la perception de l’argenté."] },
+  "red-secret": { title: "Conserver la filiation de Red Secret", paragraphs: ["Pour une division de Red Secret, gardez l’étiquette de la plante mère. Le reflet cuivré décrit un aspect du feuillage, mais ne suffit pas à attribuer ce nom à une autre cuprea."] },
+};
+
 function form(base: PlantEntry, overrides: Partial<PlantEntry>): PlantEntry {
   const p = { ...base, ...overrides };
   return {
@@ -24,10 +30,10 @@ function form(base: PlantEntry, overrides: Partial<PlantEntry>): PlantEntry {
     specimen: { observedHeight: "Aucune mesure de spécimen publiée", note: "Dimensions indicatives en culture, et non mesures d’un sujet du Studio. Les repères d’ambiance ne sont pas des seuils de survie." },
     editorialSections: [
       ...(p.editorialSections ?? []),
-      { id: "multiplication", eyebrow: "Multiplier", title: "Garder la bonne identité", paragraphs: [p.care.propagation, "Conservez le nom et la provenance avec chaque division. Une feuille détachée sans point de croissance ne constitue pas une nouvelle plante."] },
+      { id: "multiplication", eyebrow: "Multiplier", ...divisionNotes[p.slug] },
     ],
     publishedAt: date,
-    updatedAt: date,
+    updatedAt: "2026-09-14",
   };
 }
 
@@ -45,7 +51,7 @@ const frydek = form(micholitziana, {
   growth: { adultSize: "Environ 60 à 90 cm de hauteur et de largeur dans les repères horticoles UF/IFAS ; le sujet en pot peut rester plus petit.", speed: "Variable, souvent progressive en intérieur", habit: "Touffe terrestre dressée ; pas de tuteur grimpant nécessaire" },
   care: { ...micholitziana.care, difficulty: 4, lightText: "Placez-la près d’une fenêtre lumineuse avec une lumière filtrée. N’exposez pas brutalement les secteurs clairs au soleil brûlant pour tenter d’augmenter la panachure.", propagation: "Séparez un rejet ou un corme viable en croissance, avec racines si possible. La multiplication végétative conserve la filiation, mais ne garantit pas la quantité de blanc sur chaque nouvelle feuille. Le semis ne garantit pas la même panachure." },
   editorialSections: [{ id: "feuillage", eyebrow: "Observer", title: "Nervures claires ou vraie panachure ?", paragraphs: ["Les secteurs clairs occupent des portions du limbe, tandis que les nervures suivent un réseau régulier. Regardez plusieurs feuilles et conservez l’étiquette : le nom Frydek est utilisé de façons différentes dans le commerce.", "Sur un jeune sujet, les feuilles sont plus petites. Leur développement ne justifie pas une fiche juvénile séparée. Il n’existe pas de proportion de blanc promise à maturité."] }],
-  comparisons: [{ name: "Alocasia micholitziana", difference: "Le cadre botanique de la forme panachée ; des nervures claires seules ne caractérisent pas Variegata." }, { name: "Alocasia ‘Silver Dragon’", difference: "Son effet argenté et son relief ne correspondent pas aux grands secteurs blancs de Frydek Variegata." }],
+  comparisons: [{ name: "Alocasia micholitziana", href: "/plantes/alocasia/micholitziana", difference: "Le cadre botanique de la forme panachée ; des nervures claires seules ne caractérisent pas Variegata." }, { name: "Alocasia ‘Silver Dragon’", difference: "Son effet argenté et son relief ne correspondent pas aux grands secteurs blancs de Frydek Variegata." }],
   faq: [
     { question: "Frydek Variegata est-il une espèce ?", answer: "Non. Cette fiche traite une forme horticole panachée de micholitziana. Elle ne crée ni espèce ni variété botanique supplémentaire." },
     { question: "Frydek vert et Frydek Variegata sont-ils interchangeables ?", answer: "Non pour un lien produit précis. Le nom Frydek a plusieurs usages horticoles ; la panachure et la traçabilité doivent correspondre au sujet vendu." },
@@ -70,7 +76,7 @@ const silver = form(baginda, {
   growth: { adultSize: "Souvent autour de 50 cm ; la RHS indique une plage adulte de 0,5 à 1 m. Le contenant et les conditions modifient l’encombrement.", speed: "Progressive selon les conditions de culture", habit: "Touffe terrestre dressée ; pas une liane à palisser" },
   care: { ...baginda.care, temperature: "Cultivez au chaud, au-dessus de 15 °C ; évitez les courants d’air froid. Une ambiance de 18 à 28 °C est un repère pratique, non une garantie de croissance.", propagation: "Divisez une touffe ou séparez un rejet avec un point de croissance viable pendant la reprise végétative. Conservez le nom Silver Dragon avec les divisions ; le semis ne garantit pas les caractères de la sélection." },
   editorialSections: [{ id: "feuillage", eyebrow: "Observer", title: "Un relief qui se lit avec la lumière", paragraphs: ["Comparez des feuilles déployées plutôt qu’une pousse encore pliée. L’éclairage et l’âge de la feuille modifient l’impression argentée ; une photographie très contrastée ne suffit pas à identifier un cultivar.", "Les petites plantes grandissent en touffe. Le passage à un feuillage plus ample ne correspond ni à un changement d’espèce ni à une étape grimpante."] }],
-  comparisons: [{ name: "Alocasia baginda", difference: "Espèce souvent associée aux noms Dragon Scale et Silver Dragon ; cette proximité commerciale n’efface pas les identités horticoles." }, { name: "Frydek Variegata", difference: "Feuillage velouté à secteurs blancs irréguliers, plutôt qu’un relief argenté parcouru de nervures sombres." }],
+  comparisons: [{ name: "Alocasia baginda", href: "/plantes/alocasia/baginda", difference: "Contexte botanique fréquemment associé à Silver Dragon dans le commerce ; ce rapprochement ne confirme pas son rattachement à l’espèce." }, { name: "Frydek Variegata", difference: "Feuillage velouté à secteurs blancs irréguliers, plutôt qu’un relief argenté parcouru de nervures sombres." }],
   faq: [
     { question: "Silver Dragon est-il le nom d’une espèce ?", answer: "Non. La RHS emploie Alocasia ‘Silver Dragon’ et indique un nom non résolu. La fiche conserve ce niveau horticole sans inventer de parentage." },
     { question: "Silver Dragon et Dragon Scale sont-ils la même référence ?", answer: "Ne les substituez pas automatiquement. Les noms servent à distinguer des présentations horticoles ; conservez celui porté par la plante." },
@@ -95,7 +101,7 @@ const red = form(cuprea, {
   growth: { adultSize: "Autour de 80 cm dans la description RHS, avec une plage indicative de 0,5 à 1 m ; dimensions variables en pot.", speed: "Progressive dans une ambiance chaude et stable", habit: "Touffe terrestre dressée, sans besoin de support grimpant" },
   care: { ...cuprea.care, temperature: "Conservez une ambiance chaude, au-dessus de 18 °C selon le conseil RHS pour Red Secret. Évitez le contact avec une vitre froide et les courants d’air.", propagation: "Séparez un rejet ou divisez une touffe en croissance, en gardant un point de croissance viable. Étiquetez chaque division ; un semis de cuprea ne garantit pas la sélection Red Secret." },
   editorialSections: [{ id: "feuillage", eyebrow: "Observer", title: "Le cuivre n’est pas une étiquette", paragraphs: ["Observez l’évolution d’une feuille après son déploiement. La couleur dépend de son âge et de l’éclairage : une teinte rouge isolée ne démontre pas à elle seule le nom Red Secret.", "Les jeunes sujets ont des feuilles plus petites, mais restent dans la même identité horticole. Aucun changement de nom ou de fiche n’est nécessaire lorsqu’ils prennent du volume."] }],
-  comparisons: [{ name: "Alocasia cuprea", difference: "L’espèce botanique constitue le cadre de Red Secret ; une photo générique de cuprea ne prouve pas cette sélection." }, { name: "Alocasia ‘Silver Dragon’", difference: "Silhouette argentée et nervures sombres, différente du registre cuivré et rouge de Red Secret." }],
+  comparisons: [{ name: "Alocasia cuprea", href: "/plantes/alocasia/cuprea", difference: "L’espèce botanique constitue le cadre de Red Secret ; une photo générique de cuprea ne prouve pas cette sélection." }, { name: "Alocasia ‘Silver Dragon’", difference: "Silhouette argentée et nervures sombres, différente du registre cuivré et rouge de Red Secret." }],
   faq: [
     { question: "Red Secret est-il une espèce distincte de cuprea ?", answer: "Non. C’est un nom horticole rattaché à cuprea par la RHS, qui le conserve avec un statut nomenclatural non résolu." },
     { question: "Toutes les cuprea sont-elles des Red Secret ?", answer: "La fiche ne fait pas cette assimilation. Conservez l’identité exacte fournie avec la plante plutôt que de déduire un nom de la brillance d’une feuille." },
@@ -111,9 +117,19 @@ export const shopReferencePlants: PlantEntry[] = [frydek, silver, red];
 // Add legitimate contextual links without changing indexed titles, URLs or media.
 export function applyShopReferenceContext(entries: PlantEntry[]): PlantEntry[] {
   return entries.map(p => {
-    const children: Record<string, PlantEntry> = { micholitziana: frydek, baginda: silver, cuprea: red };
-    const child = children[p.slug];
-    if (p.genre === "alocasia" && child) return { ...p, updatedAt: date, comparisons: [...p.comparisons, { name: child.displayName, difference: `Consulter ${child.displayName} pour distinguer cette appellation horticole du cadre de l’espèce.` }] };
+    const contexts: Record<string, PlantEntry["comparisons"]> = {
+      baginda: [
+        { name: "Silver Dragon", href: "/plantes/alocasia/silver-dragon", difference: "Voir la fiche horticole consacrée à son feuillage argenté ; son rattachement spécifique reste non confirmé, sans synonymie avec baginda." },
+        { name: "Dragon Scale", difference: "Nom horticole rencontré autour de baginda, sans fiche autonome ni statut formel déduit ici. Il ne remplace pas le nom de l’espèce et ne se confond pas avec Silver Dragon." },
+      ],
+      reginula: [{ name: "Black Velvet", difference: "Appellation horticole associée à des plantes cultivées de reginula, sans assimilation automatique de toute l’espèce ni fiche autonome dans Jungle." }],
+      micholitziana: [
+        { name: "Frydek Variegata", href: "/plantes/alocasia/frydek-variegata", difference: "La fiche de la forme panachée décrit ses secteurs blancs, distincts des nervures pâles de l’espèce verte." },
+        { name: "Frydek", difference: "Le nom employé pour certaines plantes vertes reste ambigu ; il ne désigne ici ni une nouvelle espèce ni une fiche autonome et ne remplace pas Frydek Variegata." },
+      ],
+      cuprea: [{ name: "Red Secret", href: "/plantes/alocasia/red-secret", difference: "Consulter la fiche horticole pour ses caractères propres ; le reflet métallique d’une cuprea ne suffit pas à lui attribuer ce nom." }],
+    };
+    if (p.genre === "alocasia" && contexts[p.slug]) return { ...p, updatedAt: "2026-09-14", comparisons: [...p.comparisons, ...contexts[p.slug]] };
     if (p.genre === "monstera" && p.slug === "dubia") return { ...p, updatedAt: date, faq: [...p.faq, { question: "Dubia Juvenile est-il une autre espèce ?", answer: "Non. Juvenile décrit le stade de croissance de Monstera dubia. Les petites feuilles plaquées au support et le feuillage plus développé relèvent de la même espèce : une seule fiche canonique suffit." }] };
     if (p.genre === "monstera" && p.slug === "obliqua") return { ...p, updatedAt: date, faq: [...p.faq, { question: "Que signifie Obliqua Peru ?", answer: "Peru est employé comme précision horticole ou géographique. La présente fiche documente Monstera obliqua au niveau de l’espèce, pas un cultivar formel Peru. Ce complément ne prouve ni une collecte péruvienne ni l’identité d’un clone ; conservez la provenance du lot séparément. Ne pas confondre avec Monstera karstenianum, également vendu sous le nom Peru." }] };
     return p;
