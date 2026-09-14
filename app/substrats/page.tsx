@@ -3,12 +3,13 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
-import { substrates, substrateProfiles } from "./data";
+import { substrates } from "./data";
 import OpeningEventLink from "../OpeningEventLink";
 import SubstrateSelection from "./SubstrateSelection";
 import styles from "./selection.module.css";
 import { supplierMedia } from "./supplier-media";
 import LocalSubstrateVisit from "./LocalSubstrateVisit";
+import SubstrateCommerce from "./SubstrateCommerce";
 
 export const metadata: Metadata = {
   title: "Substrats Sybotanica : guide & conseils à Lille | TIBALDO Jungle",
@@ -119,7 +120,8 @@ export default function SubstratesPage() {
                   <div><dt>Usages</dt><dd>{item.uses}</dd></div>
                   <div><dt>Pour quelles plantes ?</dt><dd>{item.plants}</dd></div>
                 </dl>
-                <div className="material-price"><span>Disponibilité</span><strong>{substrateProfiles[item.slug].statusLabel}</strong><small>Conditionnement et tarif affichés prochainement</small></div><Link className="material-discover" href={`/substrats/${item.slug}`}>Découvrir le guide complet <Arrow /></Link>
+                <SubstrateCommerce slug={item.slug} />
+                <Link className="material-discover" href={`/substrats/${item.slug}`}>Comprendre ce composant <Arrow /></Link>
               </div>
             </article>
           ))}
