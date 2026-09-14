@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import { readFileSync } from "node:fs";
 
 import { plants } from "../lib/plants/catalog.ts";
 import { publicPermanentRedirects } from "../lib/seo/public-redirects.ts";
@@ -28,8 +29,12 @@ const labs = [
   "/lab/v25-4/golden-hub/pilea",
 ];
 
-test("release preserves 91 identities and adds six documented canonical references", () => {
-  assert.equal(plants.length, 97);
+test("release preserves established identities and adds only documented pinnatum", () => {
+  const historical = JSON.parse(readFileSync(new URL("../docs/ENCYCLOPEDIA_CANONICAL_REGISTRY_V1.json", import.meta.url), "utf8"));
+  const expected = new Set([...historical.entities.map(p => p.ENCYCLOPEDIA_ENTITY_ID), "epipremnum/pinnatum"]);
+  const current = plants.map(p => `${p.genre}/${p.slug}`);
+  assert.equal(new Set(current).size, current.length);
+  assert.deepEqual(new Set(current), expected);
   assert.equal(plants.filter(p => p.genre === "monstera" && p.slug === "deliciosa-variegata").length, 1);
   for (const slug of ["frydek-variegata", "silver-dragon", "red-secret"]) {
     assert.equal(plants.filter(p => p.genre === "alocasia" && p.slug === slug).length, 1);
@@ -70,7 +75,11 @@ test(`${requestedMode} artifact has the exact robots and sitemap contract`, asyn
     assert.equal(sitemap.status, 200);
     const xml = await sitemap.text();
     const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-    assert.equal(urls.length, 182);
+    // Sitemap membership follows canonical entities, not a frozen release count.
+    const plantUrls = plants.map(p => `https://jungle.tibaldo.fr/plantes/${p.genre}/${p.slug}`);
+    for (const url of plantUrls) assert.ok(urls.includes(url), url);
+    const speciesUrls = urls.filter(url => /^https:\/\/jungle\.tibaldo\.fr\/plantes\/(?!famille\/)[^/]+\/[^/]+$/.test(url));
+    assert.deepEqual(new Set(speciesUrls), new Set(plantUrls));
     assert.ok(urls.includes("https://jungle.tibaldo.fr/plantes/monstera/deliciosa-variegata"));
     for (const slug of ["frydek-variegata", "silver-dragon", "red-secret"]) {
       assert.ok(urls.includes(`https://jungle.tibaldo.fr/plantes/alocasia/${slug}`));

@@ -20,6 +20,7 @@ import { applyOwnerMonsteraMintMediaV1 } from "./owner-monstera-mint-media-v1.ts
 import { applyOwnerMarbleQueenMediaV1 } from "./owner-marble-queen-media-v1.ts";
 import { applyOwnerPileaMediaV1 } from "./owner-pilea-media-v1.ts";
 import { canonicalCoverageAdditions } from "./canonical-coverage-additions-v1.ts";
+import { epipremnumPinnatum } from "./epipremnum-pinnatum.ts";
 import { applyCanonicalQualityFixes } from "./canonical-quality-fixes-v1.ts";
 
 export const plantFamilies = [
@@ -544,6 +545,7 @@ if (cupreaPhotoIndex0 !== -1) {
 
 // Applied after media overlays: no historical photo/provenance record is replaced.
 plants.push(...canonicalCoverageAdditions(plants));
+plants.push(epipremnumPinnatum);
 const qualityEntries = applyCanonicalQualityFixes(plants);
 qualityEntries.forEach((entry, index) => { plants[index] = entry; });
 
