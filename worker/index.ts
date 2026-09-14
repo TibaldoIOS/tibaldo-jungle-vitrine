@@ -30,7 +30,7 @@ const CONTENT_SECURITY_POLICY = [
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https:",
   "font-src 'self' data:",
-  "connect-src 'self' https://api.open-meteo.com",
+  "connect-src 'self' https://api.open-meteo.com https://shop.tibaldo.fr",
   "frame-src https://www.google.com https://www.youtube.com https://www.youtube-nocookie.com",
   "media-src 'self' https:",
   "worker-src 'self' blob:",

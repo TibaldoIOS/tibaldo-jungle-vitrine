@@ -415,7 +415,7 @@ test("applies the BETA security header baseline to rendered routes", async () =>
   const csp = response.headers.get("content-security-policy") ?? "";
   assert.match(csp, /default-src 'self'/);
   assert.match(csp, /frame-ancestors 'none'/);
-  assert.match(csp, /connect-src 'self' https:\/\/api\.open-meteo\.com/);
+  assert.match(csp, /connect-src 'self' https:\/\/api\.open-meteo\.com https:\/\/shop\.tibaldo\.fr/);
   assert.equal(response.headers.get("x-robots-tag"), "noindex, nofollow");
 });
 
