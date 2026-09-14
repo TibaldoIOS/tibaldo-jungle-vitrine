@@ -44,6 +44,8 @@ nav a { position: relative; opacity: .9; }
 nav a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: -8px; height: 1px; background: #fff; transition: right .25s ease; }
 nav a:hover::after { right: 0; }
 .header-actions { display: flex; align-items: center; gap: 14px; }
+.header-commerce{display:flex;align-items:center;gap:10px;font-size:8px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.header-commerce a{padding:8px 0;color:#fff;white-space:nowrap}
+@media(max-width:1180px){.header-commerce{display:none}}
 .header-socials { display: flex; align-items: center; gap: 7px; }
 .header-socials a { width: 30px; height: 30px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.45); border-radius: 50%; transition: background .2s ease, border-color .2s ease; }
 .header-socials a:hover { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.8); }

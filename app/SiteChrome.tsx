@@ -34,6 +34,7 @@ export function SiteHeader({ light = false }: { light?: boolean }) {
       <MobileJungleMenu />
 
       <div className="header-actions">
+        <nav className="header-commerce" aria-label="Raccourcis boutique"><a href={shopUrl("/selection?panier=ouvert")}>Panier</a><a href={shopUrl("/espace-client")}>Mon compte</a></nav>
         <div className="header-socials" aria-label="Réseaux sociaux Tibaldo Jungle">
           <a href="https://www.instagram.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Instagram Tibaldo Jungle"><InstagramIcon /></a>
           <a href="https://www.facebook.com/tibaldojungle" target="_blank" rel="noreferrer" aria-label="Facebook Tibaldo Jungle"><FacebookIcon /></a>

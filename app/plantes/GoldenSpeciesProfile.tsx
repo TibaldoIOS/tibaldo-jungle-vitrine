@@ -190,7 +190,7 @@ export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
       {plant.genre === "monstera" && plant.slug === "thai-constellation" ? <SpeciesLocalStudio speciesName="Monstera deliciosa ‘Thai Constellation’" genusName="Monstera" genusSlug="monstera" /> : null}
       {isCycasRevoluta ? <SpeciesLocalStudio speciesName="Cycas revoluta" genusName="Cycas" genusSlug="cycas" /> : null}
       <SiteFooter compactTransit />
-      {plant.shopUrl ? <PlantShopBar shopUrl={plant.shopUrl} plantName={plant.botanicalName} /> : null}
+      <PlantShopBar encyclopediaId={`${plant.genre}/${plant.slug}`} plantName={plant.botanicalName} />
     </main>
   );
 }

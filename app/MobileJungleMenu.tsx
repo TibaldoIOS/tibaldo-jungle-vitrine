@@ -8,6 +8,8 @@ import { shopUrl } from "@/lib/environment";
 const primaryLinks = [
   ["Plantes", "/plantes"],
   ["Boutique", shopUrl()],
+  ["Panier", shopUrl("/selection?panier=ouvert")],
+  ["Mon compte", shopUrl("/espace-client")],
   ["SOS Plantes", "/sos-plantes"],
   ["Conseils", "/conseils"],
 ] as const;
