@@ -1,0 +1,36 @@
+{
+  "batch_id": "PHOTO-20260916-NEPHROLEPIS-GREEN-MOMENT-01",
+  "source_before": "92d8f900441b4ca98da7cd6cb7673f07399765d5",
+  "public_version_before": 152,
+  "photos": [
+    {
+      "owner_identity": "Fougère Nephrolepis Green Moment",
+      "canonical_slug": "plantes/nephrolepis/green-moment",
+      "identity_evidence": "Nom fourni par Owner : Fougère Nephrolepis Green Moment",
+      "original_filename": "codex-clipboard-6fb30cae-0263-4308-ac11-727d7e3bd10a.png",
+      "original_sha256": "ddf144cc169625bf9ffa720cb32fb6456f45bcb124b99a237a6a443d1abe3ab5",
+      "filename": "nephrolepis-green-moment-fougere-suspendue.webp",
+      "asset_path": "/owner-media/nephrolepis-green-moment/nephrolepis-green-moment-fougere-suspendue.webp",
+      "public_path": "/media/owner-media/nephrolepis-green-moment/nephrolepis-green-moment-fougere-suspendue.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/nephrolepis-green-moment/nephrolepis-green-moment-fougere-suspendue.webp",
+      "sha256": "dd3ff1c2b61dbadc1b48abb9ac221204672df149c0735e04e0cfe00b7a8865b7",
+      "bytes": 167970,
+      "dimensions": [1536, 1024],
+      "alt": "Fougère Nephrolepis exaltata « Green Moment » en suspension, formant une touffe dense de frondes vertes retombantes.",
+      "provenance": "OWNER",
+      "rights": "Autorisation Owner permanente",
+      "credit": "Photo : TIBALDO",
+      "existing_media": [
+        {"src": "/photo-reelle-a-venir.svg", "status": "placeholder"}
+      ]
+    }
+  ],
+  "processing": "WebP quality88 method6; no crop, no upscale, no generative alteration; metadata stripped",
+  "allowed_paths": [
+    "docs/media-provenance/photo-20260916-nephrolepis-green-moment-01.json",
+    "lib/plants/catalog.ts",
+    "app/credits-images/page.tsx",
+    "tests/photo-nephrolepis-green-moment-owner-v1.test.ts",
+    "public/owner-media/nephrolepis-green-moment/nephrolepis-green-moment-fougere-suspendue.webp"
+  ]
+}
