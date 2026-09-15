@@ -6,6 +6,7 @@ import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 import BotanicalFaq from "./BotanicalFaq";
 import GenusSpeciesCarousel from "./GenusSpeciesCarousel";
+import GenusShopBar from "./GenusShopBar";
 import PlantCarePassport from "./PlantCarePassport";
 import MonsteraScrollNarrative from "./MonsteraScrollNarrative";
 import golden from "./GoldenBaseline.module.css";
@@ -190,6 +191,14 @@ export default function GoldenGenusHub({ genre, guide, plants, editorials = [], 
       <section className={`${golden.groupClosing} ${body.groupClosing}`} data-reveal>
         <div className="shell"><HubChapterMarker number="07" label="Continuer au Studio" /><h2>Observer les formes.<br /><em>Choisir ensuite.</em></h2><p>Une fiche Jungle documente une plante ; elle ne prétend jamais qu’elle est disponible en boutique. Le stock reste autoritaire côté Shop.</p><nav><Link href="/plantes">Explorer l’encyclopédie <Arrow /></Link><Link href="/contact">Venir au Studio <Arrow /></Link></nav>{guide.sources.length ? <small className={canonical.sources}>Sources : {guide.sources.map((source, index) => <span key={source.url}>{index ? " · " : ""}<a href={source.url} target="_blank" rel="noreferrer">{source.label}</a></span>)}</small> : null}</div>
       </section>
+      <GenusShopBar
+        genre={genre}
+        groupName={title}
+        plants={plants.map((plant) => ({
+          encyclopediaId: `${plant.genre}/${plant.slug}`,
+          plantName: plant.botanicalName,
+        }))}
+      />
       <SiteFooter compactTransit />
     </main>
   );

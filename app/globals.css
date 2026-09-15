@@ -3842,7 +3842,7 @@ body:has(.conversion-dock){padding-bottom:calc(76px + env(safe-area-inset-bottom
 .conversion-dock-shop-panel header span { color: #8b665f; font-size: 8px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
 .conversion-dock-shop-panel header strong { display: block; min-width: 0; font: 400 18px/1.15 Georgia,serif; overflow-wrap: anywhere; white-space: normal; }
 .conversion-dock-shop-panel header button { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; border: 1px solid rgba(21,59,44,.2); border-radius: 50%; background: transparent; color: var(--forest); font-size: 20px; line-height: 1; cursor: pointer; }
-.conversion-dock-shop-panel > div { display: grid; padding: 6px; }
+.conversion-dock-shop-panel > div { display: grid; max-height: min(60svh,520px); padding: 6px; overflow-y: auto; overscroll-behavior: contain; }
 .conversion-dock .conversion-dock-shop-panel a { display: grid; min-height: 0; grid-template-columns: 1fr auto; gap: 4px 16px; padding: 12px; border-radius: 14px; color: var(--forest); text-align: left; text-transform: none; }
 .conversion-dock .conversion-dock-shop-panel a + a { border-top: 1px solid rgba(21,59,44,.11); border-left: 0; }
 .conversion-dock .conversion-dock-shop-panel a:hover,.conversion-dock .conversion-dock-shop-panel a:focus-visible { background: #e4e8d9; }
@@ -3851,6 +3851,8 @@ body:has(.conversion-dock){padding-bottom:calc(76px + env(safe-area-inset-bottom
 .conversion-dock-shop-empty { gap: 0; padding: 8px !important; }
 .conversion-dock-shop-empty p { margin: 0; padding: 12px 10px 8px; color: #52645a; font-size: 14px; line-height: 1.45; }
 .conversion-dock .conversion-dock-shop-empty a { display: flex; min-height: 44px; align-items: center; justify-content: center; margin-top: 4px; background: #dfe7cd; font-size: 10px; font-weight: 800; letter-spacing: .07em; text-align: center; text-transform: uppercase; }
+.conversion-dock-shop-state p { margin: 0; padding: 18px 12px; color: #52645a; font-size: 14px; line-height: 1.45; }
+.conversion-dock-genus-offers a strong { padding-right: 8px; line-height: 1.25; }
 
 @media (max-width: 800px) {
   .conversion-dock > a { flex: .78; min-width: 0; }

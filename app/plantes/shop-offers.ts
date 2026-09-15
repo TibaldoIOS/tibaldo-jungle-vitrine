@@ -13,11 +13,30 @@ export type PlantShopProduct = {
   availableQuantity: number;
 };
 
-export type PlantShopContext = {
+export type PlantShopLoadStatus = "loading" | "ready" | "error";
+
+export type PlantShopPlantContext = {
+  scope: "plant";
   encyclopediaId: string;
   plantName: string;
   products: PlantShopProduct[];
 };
+
+export type GenusShopPlantOffers = {
+  encyclopediaId: string;
+  plantName: string;
+  products: PlantShopProduct[];
+};
+
+export type PlantShopGenusContext = {
+  scope: "genus";
+  genre: string;
+  groupName: string;
+  status: PlantShopLoadStatus;
+  offers: GenusShopPlantOffers[];
+};
+
+export type PlantShopContext = PlantShopPlantContext | PlantShopGenusContext;
 
 export const PLANT_SHOP_CONTEXT_EVENT = "jungle:plant-shop-context";
 
@@ -46,7 +65,7 @@ const sortProducts = (products: PlantShopProduct[]) => [...products].sort((left,
   return left.name.localeCompare(right.name, "fr");
 });
 
-const loadProducts = (encyclopediaId: string) => {
+export const loadPlantShopProducts = (encyclopediaId: string) => {
   const existing = cache.get(encyclopediaId);
   if (existing) return existing;
   const request = (async () => {
@@ -62,7 +81,7 @@ const loadProducts = (encyclopediaId: string) => {
       typeof product.priceTtc === "number" && Number.isFinite(product.priceTtc) &&
       typeof product.availableQuantity === "number" && Number.isFinite(product.availableQuantity),
     ));
-  })().catch(() => []);
+  })();
   cache.set(encyclopediaId, request);
   return request;
 };
@@ -71,12 +90,40 @@ export function usePlantShopOffers(encyclopediaId: string) {
   const [result, setResult] = useState<{ encyclopediaId: string; products: PlantShopProduct[] } | null>(null);
   useEffect(() => {
     let live = true;
-    void loadProducts(encyclopediaId).then((products) => {
-      if (live) setResult({ encyclopediaId, products });
-    });
+    void loadPlantShopProducts(encyclopediaId)
+      .then((products) => {
+        if (live) setResult({ encyclopediaId, products });
+      })
+      .catch(() => {
+        if (live) setResult({ encyclopediaId, products: [] });
+      });
     return () => { live = false; };
   }, [encyclopediaId]);
   return result?.encyclopediaId === encyclopediaId ? result.products : null;
+}
+
+export function useGenusShopOffers(plants: readonly { encyclopediaId: string; plantName: string }[]) {
+  const key = plants.map((plant) => plant.encyclopediaId).join("|");
+  const [result, setResult] = useState<{ key: string; status: PlantShopLoadStatus; offers: GenusShopPlantOffers[] }>({
+    key,
+    status: "loading",
+    offers: [],
+  });
+  useEffect(() => {
+    let live = true;
+    void Promise.all(plants.map(async (plant) => ({
+      ...plant,
+      products: await loadPlantShopProducts(plant.encyclopediaId),
+    })))
+      .then((offers) => {
+        if (live) setResult({ key, status: "ready", offers });
+      })
+      .catch(() => {
+        if (live) setResult({ key, status: "error", offers: [] });
+      });
+    return () => { live = false; };
+  }, [key, plants]);
+  return result.key === key ? result : { key, status: "loading" as const, offers: [] };
 }
 
 export const plantShopHref = (product: PlantShopProduct) => shopUrl(`/produits/${encodeURIComponent(product.slug)}`);

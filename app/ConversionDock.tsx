@@ -47,10 +47,16 @@ export default function ConversionDock({
   useEffect(() => {
     const update = (event: Event) => {
       const detail = (event as CustomEvent<PlantShopContext | null>).detail;
-      const plantChanged = shopContextRef.current?.encyclopediaId !== detail?.encyclopediaId;
+      const currentKey = shopContextRef.current?.scope === "genus"
+        ? `genus:${shopContextRef.current.genre}`
+        : shopContextRef.current ? `plant:${shopContextRef.current.encyclopediaId}` : null;
+      const nextKey = detail?.scope === "genus"
+        ? `genus:${detail.genre}`
+        : detail ? `plant:${detail.encyclopediaId}` : null;
+      const contextChanged = currentKey !== nextKey;
       shopContextRef.current = detail ?? null;
       setShopContext(detail ?? null);
-      if (plantChanged) setChooserOpen(false);
+      if (contextChanged) setChooserOpen(false);
     };
     let live = true;
     queueMicrotask(() => {
@@ -81,8 +87,17 @@ export default function ConversionDock({
       document.removeEventListener("pointerdown", close);
     };
   }, [chooserOpen]);
-  const exactProducts = shopContext?.products ?? [];
-  const plantActionLabel = exactProducts.length ? "Adopte-moi" : "Voir le Shop";
+  const isGenus = shopContext?.scope === "genus";
+  const genusOffers = isGenus
+    ? shopContext.offers.flatMap((plant) => plant.products.map((product) => ({ ...plant, product })))
+    : [];
+  const exactProducts = shopContext?.scope === "plant" ? shopContext.products : [];
+  const hasOffers = isGenus ? genusOffers.length > 0 : exactProducts.length > 0;
+  const isLoading = isGenus && shopContext.status === "loading";
+  const hasError = isGenus && shopContext.status === "error";
+  const shopActionLabel = isGenus
+    ? hasOffers || isLoading ? "Choisir ma plante" : "Voir le Shop"
+    : hasOffers ? "Adopte-moi" : "Voir le Shop";
   return (
     <nav
       ref={dockRef}
@@ -108,20 +123,20 @@ export default function ConversionDock({
             ref={chooserButtonRef}
             type="button"
             className="conversion-dock-shop-trigger"
-            data-action={exactProducts.length ? "plant-shop-offers" : "plant-shop-catalogue"}
+            data-action={isGenus ? hasOffers ? "genus-shop-offers" : isLoading ? "genus-shop-loading" : "genus-shop-catalogue" : hasOffers ? "plant-shop-offers" : "plant-shop-catalogue"}
             aria-expanded={chooserOpen}
             aria-controls={chooserId}
-            aria-label={plantActionLabel}
+            aria-label={shopActionLabel}
             onClick={() => setChooserOpen((value) => !value)}
           >
             <span className="conversion-dock-shop-sprout" aria-hidden="true">🌱</span>
-            <span>{plantActionLabel}</span>
+            <span>{shopActionLabel}</span>
           </button>
           {chooserOpen ? (
-            <section className="conversion-dock-shop-panel" id={chooserId} aria-label={exactProducts.length ? `Offres Shop pour ${shopContext.plantName}` : `Catalogue Shop pour ${shopContext.plantName}`}>
+            <section className={`conversion-dock-shop-panel${isGenus ? " is-genus" : ""}`} id={chooserId} aria-label={isGenus ? `Choisir une plante parmi les ${shopContext.groupName}` : hasOffers ? `Offres Shop pour ${shopContext.plantName}` : `Catalogue Shop pour ${shopContext.plantName}`}>
               <header>
-                <span>{exactProducts.length ? "Disponible au Shop" : "Catalogue Jungle"}</span>
-                <strong>{shopContext.plantName}</strong>
+                <span>{isGenus ? "Offres publiées du groupe" : hasOffers ? "Disponible au Shop" : "Catalogue Jungle"}</span>
+                <strong>{isGenus ? shopContext.groupName : shopContext.plantName}</strong>
                 <button
                   type="button"
                   aria-label="Fermer le panneau Shop"
@@ -131,7 +146,17 @@ export default function ConversionDock({
                   }}
                 >×</button>
               </header>
-              {exactProducts.length ? (
+              {isGenus && genusOffers.length ? (
+                <div className="conversion-dock-genus-offers">
+                  {genusOffers.map(({ plantName, product }) => (
+                    <a href={plantShopHref(product)} key={product.id}>
+                      <strong>{plantName}</strong>
+                      <span>{formatShopPrice(product.priceTtc)}</span>
+                      <small>{product.sizeName ? `Format ${product.sizeName} · ` : ""}{formatShopAvailability(product.availableQuantity)}</small>
+                    </a>
+                  ))}
+                </div>
+              ) : !isGenus && exactProducts.length ? (
                 <div>
                   {exactProducts.map((product) => (
                     <a href={plantShopHref(product)} key={product.id}>
@@ -144,9 +169,13 @@ export default function ConversionDock({
                     </a>
                   ))}
                 </div>
+              ) : isLoading ? (
+                <div className="conversion-dock-shop-state" aria-live="polite">
+                  <p>Recherche des offres publiées pour ce groupe…</p>
+                </div>
               ) : (
                 <div className="conversion-dock-shop-empty">
-                  <p>Aucune offre n’est actuellement publiée pour cette fiche.</p>
+                  <p>{hasError ? "Les offres du Shop ne peuvent pas être vérifiées pour le moment." : isGenus ? "Aucune offre n’est actuellement publiée pour ce groupe." : "Aucune offre n’est actuellement publiée pour cette fiche."}</p>
                   <a href={shopUrl()}>Voir le catalogue général</a>
                 </div>
               )}

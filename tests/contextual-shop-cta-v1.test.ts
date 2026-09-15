@@ -5,6 +5,8 @@ import test from "node:test";
 const read = (path: string) => readFileSync(new URL(path, import.meta.url), "utf8");
 const offers = read("../app/plantes/shop-offers.ts");
 const bridge = read("../app/plantes/PlantShopBar.tsx");
+const genusBridge = read("../app/plantes/GenusShopBar.tsx");
+const genusHub = read("../app/plantes/GoldenGenusHub.tsx");
 const dock = read("../app/ConversionDock.tsx");
 const cards = read("../app/plantes/GenusSpeciesCarousel.tsx");
 const cardAction = read("../app/plantes/PlantCardShopAction.tsx");
@@ -30,8 +32,8 @@ test("every plant profile exposes an honest persistent Shop action", () => {
   assert.match(dock, /Voir le catalogue général/);
   assert.match(dock, /aria-expanded=\{chooserOpen\}/);
   assert.match(dock, /aria-hidden="true">🌱/);
-  assert.match(dock, /plantChanged/);
-  assert.match(dock, /if \(plantChanged\) setChooserOpen\(false\)/);
+  assert.match(dock, /contextChanged/);
+  assert.match(dock, /if \(contextChanged\) setChooserOpen\(false\)/);
 });
 
 test("variant chooser exposes exact Shop links, price and availability", () => {
@@ -64,4 +66,23 @@ test("the offer panel keeps long plant names complete and clear of its close con
     styles,
     /\.conversion-dock-shop-panel header \{[^}]*padding:\s*18px 50px 16px 18px/,
   );
+});
+
+test("every shared genus hub publishes exact group Shop guidance", () => {
+  assert.match(genusHub, /<GenusShopBar/);
+  assert.match(genusHub, /encyclopediaId: `\$\{plant\.genre\}\/\$\{plant\.slug\}`/);
+  assert.match(genusBridge, /useGenusShopOffers\(plants\)/);
+  assert.match(genusBridge, /scope: "genus"/);
+  assert.match(dock, /Choisir ma plante/);
+  assert.match(dock, /genus-shop-offers/);
+  assert.match(dock, /plantShopHref\(product\)/);
+  assert.match(dock, /Format \$\{product\.sizeName\}/);
+});
+
+test("genus Shop guidance distinguishes loading, errors and honest empty groups", () => {
+  assert.match(dock, /Recherche des offres publiées pour ce groupe/);
+  assert.match(dock, /Les offres du Shop ne peuvent pas être vérifiées/);
+  assert.match(dock, /Aucune offre n’est actuellement publiée pour ce groupe/);
+  assert.match(dock, /Voir le catalogue général/);
+  assert.match(styles, /max-height:\s*min\(60svh,520px\)/);
 });
