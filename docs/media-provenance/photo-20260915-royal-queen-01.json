@@ -1,0 +1,40 @@
+{
+  "batch_id": "PHOTO-20260915-ROYAL-QUEEN-01",
+  "source_before": "83214fd582187eba257b68f6022e7cd1785d2317",
+  "public_version_before": 142,
+  "photos": [
+    {
+      "owner_identity": "Philodendron Royal Queen",
+      "canonical_slug": "plantes/philodendron/royal-queen",
+      "original_filename": "codex-clipboard-cbdef952-4a48-437a-b4a1-7e8e18377647.png",
+      "original_sha256": "90c7c1bf5576b3b3f80d7e007ec793df80be8076703588d859cba735c79a759d",
+      "filename": "philodendron-royal-queen-plante-feuilles-sombres.webp",
+      "asset_path": "/owner-media/philodendron-royal-queen/philodendron-royal-queen-plante-feuilles-sombres.webp",
+      "public_path": "/media/owner-media/philodendron-royal-queen/philodendron-royal-queen-plante-feuilles-sombres.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/philodendron-royal-queen/philodendron-royal-queen-plante-feuilles-sombres.webp",
+      "sha256": "6e48ed3af22dfa88be835207bab4a0f63d16a927daf18c579f719c26a0587e2c",
+      "bytes": 195860,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alt": "Philodendron Royal Queen en pot clair, aux feuilles vert sombre et bronze et aux pétioles bordeaux.",
+      "provenance": "OWNER",
+      "credit": "Photo : TIBALDO",
+      "existing_media": [
+        {
+          "src": "/photo-reelle-a-venir.svg",
+          "status": "placeholder"
+        }
+      ]
+    }
+  ],
+  "processing": "WebP quality88 method6; no crop, no upscale, no generative alteration; metadata stripped",
+  "allowed_paths": [
+    "docs/media-provenance/photo-20260915-royal-queen-01.json",
+    "lib/plants/catalog.ts",
+    "app/credits-images/page.tsx",
+    "tests/photo-royal-queen-owner-v1.test.ts",
+    "public/owner-media/philodendron-royal-queen/philodendron-royal-queen-plante-feuilles-sombres.webp"
+  ]
+}

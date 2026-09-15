@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 };
 
 const credits: readonly [string, string, string, string, string?][] = [
+["Philodendron Royal Queen", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260915-royal-queen-01/royal-queen"],
 ["Alocasia Bambino", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260915-bambino-01/bambino"],
 ["Alocasia micholitziana — Frydek Variegata", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260914-hoya-frydek-01/frydek-variegata"],
 ["Hoya callistophylla", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260914-hoya-frydek-01/callistophylla"],
