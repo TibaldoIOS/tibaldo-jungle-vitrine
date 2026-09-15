@@ -612,7 +612,7 @@ footer { background: #092319; color: #fff; padding: 75px 0 25px; }
 .legal-credits p { padding: 18px 0; margin: 0; border-top: 1px solid rgba(21,59,44,.14); color: #637067; line-height: 1.6; }
 .legal-credits a { color: var(--forest); border-bottom: 1px solid var(--sage); }
 
-@media (max-width: 900px) {
+@media (max-width: 1180px) {
   .shell { width: min(100% - 40px, 1180px); }
   .desktop-nav { display: none; }
   .mobile-menu { position: relative; z-index: 20; display: block; margin-left: auto; }
@@ -3589,7 +3589,7 @@ body:has(.conversion-dock){padding-bottom:calc(76px + env(safe-area-inset-bottom
 .studio-observation-index a small { color: #748078; font: 700 6px Arial,sans-serif; letter-spacing: .1em; text-transform: uppercase; }
 .sos-studio-link { margin-top: 18px; color: var(--forest); font-size: 9px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
 
-@media (max-width: 900px) {
+@media (max-width: 1180px) {
   .mobile-jungle-menu { display: block; order: 2; margin-left: 8px; }
   .mobile-menu-trigger { display: grid; width: 48px; height: 48px; place-content: center; gap: 5px; padding: 0; border: 1px solid rgba(255,255,255,.58); border-radius: 50%; background: transparent; color: #fff; cursor: pointer; }
   .mobile-menu-trigger b { font-size: 6px; letter-spacing: .14em; text-transform: uppercase; }
@@ -3782,9 +3782,14 @@ body:has(.conversion-dock){padding-bottom:calc(76px + env(safe-area-inset-bottom
 }
 
 @media (min-width: 901px) and (max-width: 1399px) {
-  .site-header .header-commerce,
-  .site-header .header-socials,
-  .site-header .header-cta { display: none; }
+  .site-header .header-commerce { display: none; }
+}
+
+@media (min-width: 901px) and (max-width: 1180px) {
+  .site-header { grid-template-columns: minmax(270px, 1fr) auto auto; }
+  .site-header > .desktop-nav { display: none; }
+  .site-header .header-actions { grid-column: 2; grid-row: 1; }
+  .site-header .mobile-jungle-menu { grid-column: 3; grid-row: 1; margin-left: 0; }
 }
 
 @media (min-width: 1400px) and (max-width: 1599px) {

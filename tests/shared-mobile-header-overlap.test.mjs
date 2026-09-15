@@ -12,6 +12,9 @@ test("the shared small-screen header keeps identity and menu in separate columns
 });
 
 test("secondary mobile controls remain available inside the shared menu", () => {
+  assert.match(css, /@media \(max-width: 1180px\) \{[\s\S]*?\.mobile-jungle-menu \{ display: block;/);
+  assert.match(css, /@media \(min-width: 901px\) and \(max-width: 1180px\) \{[\s\S]*?\.site-header > \.desktop-nav \{ display: none;/);
+  assert.match(css, /\.site-header \.mobile-jungle-menu \{ grid-column: 3; grid-row: 1;/);
   for (const label of ["Boutique", "Panier", "Mon compte", "Instagram", "Facebook"]) {
     assert.ok(menu.includes(`\"${label}\"`) || menu.includes(`>${label}<`), `${label} must remain accessible in the menu`);
   }
