@@ -1,0 +1,35 @@
+{
+  "batch_id": "PHOTO-20260915-BAMBINO-01",
+  "source_before": "2fec97e4455b3385e2504b87ed60243958a8ec60",
+  "public_version_before": 141,
+  "photos": [
+    {
+      "owner_identity": "Alocasia Bambino",
+      "canonical_slug": "plantes/alocasia/bambino",
+      "original_filename": "codex-clipboard-f7a00d54-4d19-46cd-8990-b74c00f29d87.png",
+      "original_sha256": "93494de2c7e90470beb111461bbc9dab7c442a7fbc5a2e0d557049486d3aa578",
+      "filename": "alocasia-bambino-plante-fond-blanc.webp",
+      "asset_path": "/owner-media/alocasia-bambino/alocasia-bambino-plante-fond-blanc.webp",
+      "public_path": "/media/owner-media/alocasia-bambino/alocasia-bambino-plante-fond-blanc.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/alocasia-bambino/alocasia-bambino-plante-fond-blanc.webp",
+      "sha256": "b3ba06e63fcc5b41e03930a40e04461ef036c80d848ea47e0bb03ad62504127a",
+      "bytes": 38672,
+      "dimensions": [
+        600,
+        600
+      ],
+      "alt": "Alocasia Bambino en pot de culture sur fond blanc, aux feuilles vert sombre allongées et nervurées de clair.",
+      "provenance": "OWNER",
+      "credit": "Photo : TIBALDO",
+      "existing_media": []
+    }
+  ],
+  "processing": "WebP quality88 method6; no crop, no upscale, no generative alteration; metadata stripped",
+  "allowed_paths": [
+    "docs/media-provenance/photo-20260915-bambino-01.json",
+    "lib/plants/catalog.ts",
+    "app/credits-images/page.tsx",
+    "tests/photo-bambino-owner-v1.test.ts",
+    "public/owner-media/alocasia-bambino/alocasia-bambino-plante-fond-blanc.webp"
+  ]
+}
