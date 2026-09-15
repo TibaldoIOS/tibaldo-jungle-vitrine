@@ -1,7 +1,7 @@
 import type { PlantEntry } from "./types";
 
 export const bananiersGroupOwnerHero: PlantEntry["gallery"][number] & { rights: "verified" } = {
-  src: "/owner-media/bananiers-genus/bananiers-feuilles-hero-tibaldo-jungle-lille.webp",
+  src: "/media/owner-media/bananiers-genus/bananiers-feuilles-hero-tibaldo-jungle-lille.webp",
   alt: "Composition de longues feuilles de bananiers, aux nervures parallèles et aux bords ondulés ou déchirés, disposées sur du bois.",
   caption: "Photo : TIBALDO",
   width: 1536,

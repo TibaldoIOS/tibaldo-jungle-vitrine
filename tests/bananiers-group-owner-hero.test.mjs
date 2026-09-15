@@ -6,7 +6,8 @@ import { bananiersGroupOwnerHero as hero } from "../lib/plants/bananiers-group-o
 import { plants } from "../lib/plants/catalog.ts";
 
 test("Bananiers exact authorized derivative has conservative composition ALT and Owner credit", () => {
-  assert.equal(createHash("sha256").update(readFileSync(`public${hero.src}`)).digest("hex"), "19ad0f4b97daf5e83d1f931865d331e69de0f458b4ad6dd26a710ac0dcf2ea9b");
+  assert.match(hero.src, /^\/media\/owner-media\//, "Use the existing protected image MIME delivery path");
+  assert.equal(createHash("sha256").update(readFileSync(`public${hero.src.slice('/media'.length)}`)).digest("hex"), "19ad0f4b97daf5e83d1f931865d331e69de0f458b4ad6dd26a710ac0dcf2ea9b");
   assert.equal(hero.width, 1536); assert.equal(hero.height, 1024);
   assert.equal(hero.caption, "Photo : TIBALDO");
   assert.equal(hero.license.status, "verified");
