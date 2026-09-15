@@ -1,0 +1,26 @@
+{
+  "batch_id": "PHOTO-20260916-ENSETE-MAURELII-01",
+  "source_before": "ab2367147670e99a437c3b617ee1ea8a97dd9dce",
+  "public_version_before": 154,
+  "photos": [{
+    "owner_identity": "Ensete ventricosum 'Maurelii'",
+    "canonical_slug": "plantes/ensete/ventricosum-maurelii",
+    "identity_evidence": "Nom fourni par Owner : Ensete ventricosum 'Maurelii'",
+    "original_filename": "codex-clipboard-348d1ebc-a666-4647-9926-b4fc0df7d800.png",
+    "original_sha256": "3aa26aaf518e3293959a51b4e89a718b29b5a63ff8ece9955e3f33e5e0462fa6",
+    "filename": "ensete-ventricosum-maurelii-feuillage-pourpre.webp",
+    "asset_path": "/owner-media/ensete-ventricosum-maurelii/ensete-ventricosum-maurelii-feuillage-pourpre.webp",
+    "public_path": "/media/owner-media/ensete-ventricosum-maurelii/ensete-ventricosum-maurelii-feuillage-pourpre.webp",
+    "api_url": "https://jungle.tibaldo.fr/owner-media/ensete-ventricosum-maurelii/ensete-ventricosum-maurelii-feuillage-pourpre.webp",
+    "sha256": "cbe7348e98c0ca1332aa9313d313bdc5cc0df10db9e08df7d36bdf8be52779ba",
+    "bytes": 459802,
+    "dimensions": [1536, 1024],
+    "alt": "Ensete ventricosum « Maurelii » en grand pot, au feuillage vert largement teinté de rouge pourpre, dans un jardin lumineux.",
+    "provenance": "OWNER",
+    "rights": "Autorisation Owner permanente",
+    "credit": "Photo : TIBALDO",
+    "existing_media": [{"src": "/photo-reelle-a-venir.svg", "status": "placeholder"}]
+  }],
+  "processing": "WebP quality88 method6; no crop, no upscale, no generative alteration; metadata stripped",
+  "allowed_paths": ["docs/media-provenance/photo-20260916-ensete-maurelii-01.json", "lib/plants/catalog.ts", "app/credits-images/page.tsx", "tests/photo-ensete-maurelii-owner-v1.test.ts", "public/owner-media/ensete-ventricosum-maurelii/ensete-ventricosum-maurelii-feuillage-pourpre.webp"]
+}
