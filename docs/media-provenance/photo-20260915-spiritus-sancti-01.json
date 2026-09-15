@@ -1,0 +1,37 @@
+{
+  "batch_id": "PHOTO-20260915-SPIRITUS-SANCTI-01",
+  "source_before": "39785c855f5b5d68472392337218bd5ae425cc64",
+  "public_version_before": 143,
+  "photos": [
+    {
+      "owner_identity": "Philodendron spiritus-sancti",
+      "canonical_slug": "plantes/philodendron/spiritus-sancti",
+      "identity_evidence": "Nom confirmé par Owner via lien Monjungle",
+      "identity_reference_url": "https://monjungle.com/products/philodendron-spiritus-sancti",
+      "original_filename": "codex-clipboard-60112217-5e53-48cb-a9f4-71ae2b7df490.png",
+      "original_sha256": "9306b9e315db693bfac35abdf645f434a3f2aa98f878fbbd93db63fb6e113388",
+      "filename": "philodendron-spiritus-sancti-feuilles-allongees.webp",
+      "asset_path": "/owner-media/philodendron-spiritus-sancti/philodendron-spiritus-sancti-feuilles-allongees.webp",
+      "public_path": "/media/owner-media/philodendron-spiritus-sancti/philodendron-spiritus-sancti-feuilles-allongees.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/philodendron-spiritus-sancti/philodendron-spiritus-sancti-feuilles-allongees.webp",
+      "sha256": "bdf3de170455e43111df788fea9070f6317116f2ba16fe3152be34b4c15f9637",
+      "bytes": 144758,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alt": "Philodendron spiritus-sancti aux longues feuilles vertes retombantes, en pot sur un support métallique devant des fenêtres.",
+      "provenance": "OWNER",
+      "credit": "Photo : TIBALDO",
+      "existing_media": []
+    }
+  ],
+  "processing": "WebP quality88 method6; no crop, no upscale, no generative alteration; metadata stripped",
+  "allowed_paths": [
+    "docs/media-provenance/photo-20260915-spiritus-sancti-01.json",
+    "lib/plants/catalog.ts",
+    "app/credits-images/page.tsx",
+    "tests/photo-spiritus-sancti-owner-v1.test.ts",
+    "public/owner-media/philodendron-spiritus-sancti/philodendron-spiritus-sancti-feuilles-allongees.webp"
+  ]
+}
