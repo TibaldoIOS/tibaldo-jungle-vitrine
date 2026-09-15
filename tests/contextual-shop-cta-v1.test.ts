@@ -16,10 +16,21 @@ test("exact published offers feed one shared contextual dock", () => {
   assert.match(bridge, /publishPlantShopContext/);
   assert.match(layout, /<ConversionDock/);
   assert.doesNotMatch(bridge, /<nav|position:\s*fixed/);
-  assert.match(dock, /data-action="shop-exact"/);
-  assert.match(dock, /data-action="shop-variants"/);
-  assert.match(dock, /Voir au Shop/);
-  assert.match(dock, /Choisir ma taille/);
+  assert.match(dock, /plant-shop-offers/);
+  assert.match(dock, /Adopte-moi/);
+  assert.match(dock, /Voir cette plante au Shop/);
+});
+
+test("every plant profile exposes an honest persistent Shop action", () => {
+  assert.match(bridge, /products: \[\]/);
+  assert.match(dock, /plant-shop-catalogue/);
+  assert.match(dock, /Voir le Shop/);
+  assert.match(dock, /Aucune offre n’est actuellement publiée pour cette fiche/);
+  assert.match(dock, /Voir le catalogue général/);
+  assert.match(dock, /aria-expanded=\{chooserOpen\}/);
+  assert.match(dock, /aria-hidden="true">🌱/);
+  assert.match(dock, /plantChanged/);
+  assert.match(dock, /if \(plantChanged\) setChooserOpen\(false\)/);
 });
 
 test("variant chooser exposes exact Shop links, price and availability", () => {

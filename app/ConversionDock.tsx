@@ -21,6 +21,7 @@ export default function ConversionDock({
   const dockRef = useRef<HTMLElement>(null);
   const chooserRef = useRef<HTMLDivElement>(null);
   const chooserButtonRef = useRef<HTMLButtonElement>(null);
+  const shopContextRef = useRef<PlantShopContext | null>(null);
   const [shopContext, setShopContext] = useState<PlantShopContext | null>(null);
   const [chooserOpen, setChooserOpen] = useState(false);
   const chooserId = useId();
@@ -46,14 +47,17 @@ export default function ConversionDock({
   useEffect(() => {
     const update = (event: Event) => {
       const detail = (event as CustomEvent<PlantShopContext | null>).detail;
-      setShopContext(detail?.products.length ? detail : null);
-      setChooserOpen(false);
+      const plantChanged = shopContextRef.current?.encyclopediaId !== detail?.encyclopediaId;
+      shopContextRef.current = detail ?? null;
+      setShopContext(detail ?? null);
+      if (plantChanged) setChooserOpen(false);
     };
     let live = true;
     queueMicrotask(() => {
       if (!live) return;
       const current = currentPlantShopContext();
-      setShopContext(current?.products.length ? current : null);
+      shopContextRef.current = current;
+      setShopContext(current);
     });
     window.addEventListener(PLANT_SHOP_CONTEXT_EVENT, update);
     return () => {
@@ -78,6 +82,7 @@ export default function ConversionDock({
     };
   }, [chooserOpen]);
   const exactProducts = shopContext?.products ?? [];
+  const plantActionLabel = exactProducts.length ? "Adopte-moi" : "Voir le Shop";
   return (
     <nav
       ref={dockRef}
@@ -97,36 +102,54 @@ export default function ConversionDock({
       >
         Itinéraire
       </a>
-      {exactProducts.length === 1 ? (
-        <a href={plantShopHref(exactProducts[0])} data-action="shop-exact">Voir au Shop</a>
-      ) : exactProducts.length > 1 ? (
+      {shopContext ? (
         <div className="conversion-dock-shop" ref={chooserRef}>
           <button
             ref={chooserButtonRef}
             type="button"
-            data-action="shop-variants"
+            className="conversion-dock-shop-trigger"
+            data-action={exactProducts.length ? "plant-shop-offers" : "plant-shop-catalogue"}
             aria-expanded={chooserOpen}
             aria-controls={chooserId}
+            aria-label={plantActionLabel}
             onClick={() => setChooserOpen((value) => !value)}
           >
-            Choisir ma taille
+            <span className="conversion-dock-shop-sprout" aria-hidden="true">🌱</span>
+            <span>{plantActionLabel}</span>
           </button>
           {chooserOpen ? (
-            <section className="conversion-dock-shop-panel" id={chooserId} aria-label={`Tailles disponibles pour ${shopContext?.plantName}`}>
+            <section className="conversion-dock-shop-panel" id={chooserId} aria-label={exactProducts.length ? `Offres Shop pour ${shopContext.plantName}` : `Catalogue Shop pour ${shopContext.plantName}`}>
               <header>
-                <span>Disponible au Shop</span>
-                <strong>{shopContext?.plantName}</strong>
-                <button type="button" aria-label="Fermer le choix des tailles" onClick={() => setChooserOpen(false)}>×</button>
+                <span>{exactProducts.length ? "Disponible au Shop" : "Catalogue Jungle"}</span>
+                <strong>{shopContext.plantName}</strong>
+                <button
+                  type="button"
+                  aria-label="Fermer le panneau Shop"
+                  onClick={() => {
+                    setChooserOpen(false);
+                    requestAnimationFrame(() => chooserButtonRef.current?.focus());
+                  }}
+                >×</button>
               </header>
-              <div>
-                {exactProducts.map((product) => (
-                  <a href={plantShopHref(product)} key={product.id}>
-                    <strong>{product.sizeName || product.name}</strong>
-                    <span>{formatShopPrice(product.priceTtc)}</span>
-                    <small>{formatShopAvailability(product.availableQuantity)}</small>
-                  </a>
-                ))}
-              </div>
+              {exactProducts.length ? (
+                <div>
+                  {exactProducts.map((product) => (
+                    <a href={plantShopHref(product)} key={product.id}>
+                      <strong>{exactProducts.length === 1 ? "Voir cette plante au Shop" : product.sizeName || product.name}</strong>
+                      <span>{formatShopPrice(product.priceTtc)}</span>
+                      <small>
+                        {exactProducts.length === 1 && product.sizeName ? `Format ${product.sizeName} · ` : ""}
+                        {formatShopAvailability(product.availableQuantity)}
+                      </small>
+                    </a>
+                  ))}
+                </div>
+              ) : (
+                <div className="conversion-dock-shop-empty">
+                  <p>Aucune offre n’est actuellement publiée pour cette fiche.</p>
+                  <a href={shopUrl()}>Voir le catalogue général</a>
+                </div>
+              )}
             </section>
           ) : null}
         </div>
