@@ -16,6 +16,8 @@ import canonical from "./GoldenGroupCanonical.module.css";
 import { anthuriumGenusOwnerHero } from "@/lib/plants/anthurium-genus-owner-hero";
 import { philodendronGenusOwnerHero } from "@/lib/plants/philodendron-genus-owner-hero";
 import { alocasiaGenusOwnerHero } from "@/lib/plants/alocasia-genus-owner-hero";
+import { bananiersGroupOwnerHero } from "@/lib/plants/bananiers-group-owner-hero";
+import bananaHero from "./BananiersGroupHero.module.css";
 import illustration from "./GenusIllustrationHero.module.css";
 import { genusIntroductions } from "@/lib/plants/genus-introductions";
 
@@ -82,6 +84,7 @@ const isDocumentaryImage = (image: PlantEntry["gallery"][number]) =>
 
 const firstGroupMedia = (genre: string, plants: readonly PlantEntry[]): GroupMedia | null => {
   if (genre === "monstera") return monsteraHeroMedia;
+  if (genre === "bananiers") return bananiersGroupOwnerHero;
   if (genre === "alocasia") return alocasiaGenusOwnerHero;
   if (genre === "anthurium") return anthuriumGenusOwnerHero;
   if (genre === "philodendron") return philodendronGenusOwnerHero;
@@ -129,9 +132,9 @@ export default function GoldenGenusHub({ genre, guide, plants, editorials = [], 
   return (
     <main className={`${golden.page} ${body.groupPage} editorial-page`} data-golden-group-v25={genre} data-golden-group-v1={genre}>
       <ScrollReveal />
-      <section className={`${hero.landscapeHero} ${mobile.mobileHero} ${genre === "philodendron" ? illustration.illustration : ""}`} aria-labelledby={`golden-group-title-${genre}`} data-group-media-state={media ? media.rights : "honest-gap"} data-pilea-public-media-gate={genre === "pilea" ? "blocked-pending-rights-proof-or-owner-original" : undefined}>
+      <section className={`${hero.landscapeHero} ${mobile.mobileHero} ${genre === "philodendron" ? illustration.illustration : ""} ${genre === "bananiers" ? bananaHero.hero : ""}`} aria-labelledby={`golden-group-title-${genre}`} data-group-media-state={media ? media.rights : "honest-gap"} data-pilea-public-media-gate={genre === "pilea" ? "blocked-pending-rights-proof-or-owner-original" : undefined}>
         <SiteHeader />
-        <div className={`${hero.landscapeMedia} ${mobile.mobileMedia} ${genre === "philodendron" ? illustration.media : ""}`}>
+        <div className={`${hero.landscapeMedia} ${mobile.mobileMedia} ${genre === "philodendron" ? illustration.media : ""} ${genre === "bananiers" ? bananaHero.media : ""}`}>
           {media ? <Image unoptimized src={media.src} alt={media.alt} width={media.width} height={media.height} priority /> : <div className={canonical.groupMediaGap}><span>{title.slice(0, 1)}</span><small>Photographie collective<br />à documenter</small></div>}
         </div>
         <div className={`${hero.forestFade} ${mobile.mobileFade}`} aria-hidden="true" />
@@ -139,7 +142,7 @@ export default function GoldenGenusHub({ genre, guide, plants, editorials = [], 
           <div className={`${hero.heroCopy} ${mobile.mobileCopy}`}>
             <h1 className={mobile.mobileTitle} id={`golden-group-title-${genre}`}>Les <em>{title}.</em></h1>
             <p className={`${hero.heroIntroduction} ${mobile.mobileIntroduction}`}>{heroCopy}</p>
-            <p className={`${hero.heroNote} ${mobile.mobileNote}`}>{genre === "alocasia" ? "Photo : TIBALDO" : genre === "anthurium" ? "Planche illustrée · Création TIBALDO." : genre === "philodendron" ? "Planche illustrée · TIBALDO." : media ? "Une photographie documentaire contrôlée ouvre le groupe sans prétendre représenter toutes ses formes." : "Un manque de média reste explicite : aucun spécimen documentaire n’est fabriqué pour compléter la page."}</p>
+            <p className={`${hero.heroNote} ${mobile.mobileNote} ${genre === "bananiers" ? bananaHero.credit : ""}`}>{genre === "alocasia" || genre === "bananiers" ? "Photo : TIBALDO" : genre === "anthurium" ? "Planche illustrée · Création TIBALDO." : genre === "philodendron" ? "Planche illustrée · TIBALDO." : media ? "Une photographie documentaire contrôlée ouvre le groupe sans prétendre représenter toutes ses formes." : "Un manque de média reste explicite : aucun spécimen documentaire n’est fabriqué pour compléter la page."}</p>
           </div>
         </div>
       </section>

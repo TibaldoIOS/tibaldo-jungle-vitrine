@@ -1,0 +1,13 @@
+.hero .media img {
+  object-position: 60% 45%;
+}
+
+@media (max-width: 520px) {
+  .hero .media img {
+    object-position: 50% 40%;
+  }
+
+  .hero .credit {
+    display: block;
+  }
+}
