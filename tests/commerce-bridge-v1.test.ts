@@ -13,7 +13,9 @@ test("commerce bridge requests only the exact encyclopedia id and keeps Shop as 
  assert.match(bar,/searchParams\.set\("encyclopedie", encyclopediaId\)/);
  assert.match(profile,/encyclopediaId={`\$\{plant\.genre\}\/\$\{plant\.slug\}`}/);
  assert.doesNotMatch(bar,/botanicalName|includes\(|normalize/);
- assert.match(bar,/\/produits\/\$\{encodeURIComponent\(product\.id\)\}/);
+ assert.match(bar,/\/produits\/\$\{encodeURIComponent\(product\.slug\)\}/);
+ assert.match(bar,/Voir au Shop/);
+ assert.doesNotMatch(bar,/Ajouter au panier|Voir et ajouter/);
  assert.doesNotMatch(bar,/localStorage|supabase|auth|panier.*setItem/i);
 });
 
