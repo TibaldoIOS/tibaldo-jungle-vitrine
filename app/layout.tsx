@@ -63,8 +63,11 @@ export const metadata: Metadata = {
   },
   category: "boutique de plantes",
   icons: {
-    icon: [{ url: "/favicon.svg", type: "image/svg+xml", sizes: "any" }],
-    shortcut: "/favicon.svg",
+    icon: [
+      { url: "/favicon.png", type: "image/png", sizes: "192x192" },
+      { url: "/favicon.svg", type: "image/svg+xml", sizes: "any" },
+    ],
+    shortcut: "/favicon.png",
     apple: [{ url: "/favicon.png", sizes: "192x192", type: "image/png" }],
   },
 };

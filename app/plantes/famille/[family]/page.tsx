@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { plants } from "@/lib/plants/catalog";
 import PlantFamilyDirectory from "../../PlantFamilyDirectory";
 import { betaOnlyRobots } from "@/lib/deployment-mode";
+import { isFamilyIndexable } from "@/lib/seo/indexability";
 
 type Props = { params: Promise<{ family: string }> };
 const families = [...new Set(plants.map((plant) => plant.taxonomy.family))];
@@ -15,7 +16,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = `${family} : plantes, genres et conseils de culture`;
   const description = `Découvrez les plantes de la famille ${family} documentées par Tibaldo Jungle : genres, espèces, besoins de culture et fiches botaniques.`;
   const image = plants.find((plant) => plant.taxonomy.family === family)?.gallery[0];
-  return { title, description, alternates: { canonical: `/plantes/famille/${slug}` }, ...(betaOnlyRobots ? { robots: betaOnlyRobots } : {}), openGraph: { type: "website", locale: "fr_FR", url: `/plantes/famille/${slug}`, siteName: "Studio Végétal — Tibaldo Jungle", title, description, images: image ? [{ url: image.src, width: image.width, height: image.height, alt: image.alt }] : undefined } };
+  const robots: Metadata["robots"] =
+    betaOnlyRobots ??
+    (isFamilyIndexable(slug) ? undefined : { index: false, follow: true });
+  return { title, description, alternates: { canonical: `/plantes/famille/${slug}` }, ...(robots ? { robots } : {}), openGraph: { type: "website", locale: "fr_FR", url: `/plantes/famille/${slug}`, siteName: "Studio Végétal — Tibaldo Jungle", title, description, images: image ? [{ url: image.src, width: image.width, height: image.height, alt: image.alt }] : undefined } };
 }
 
 export default async function PlantFamilyPage({ params }: Props) {

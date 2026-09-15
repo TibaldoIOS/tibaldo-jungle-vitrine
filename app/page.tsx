@@ -46,7 +46,7 @@ export default function Home() {
           <h1 aria-label="Plantes rares et tropicales à Lille"><span className="hero-line" aria-hidden="true"><span>Plantes rares</span></span><span className="hero-line" aria-hidden="true"><span>&amp; tropicales <em>à Lille.</em></span></span></h1>
           <p className="hero-copy">Votre jardinerie urbaine à Lille : plantes d’intérieur et d’extérieur, espèces rares et tropicales, conseils passionnés.</p>
           <p className="hero-preopening-copy"><strong>Le Studio se prépare.</strong>{"\u00a0"}La Jungle est déjà ouverte.</p>
-          <div className="hero-actions"><Link className="button button-light" href="/plantes">Explorer la Jungle <Arrow /></Link><Link className="hero-shop-link" href="/contact">Préparer ma visite <Arrow /></Link><a className="hero-shop-link" href="/visite-jungle/index.html">Visiter la Jungle en 3D <Arrow /></a></div>
+          <div className="hero-actions"><Link className="button button-light" href="/plantes">Explorer la Jungle <Arrow /></Link><Link className="hero-shop-link" href="/contact">Préparer ma visite <Arrow /></Link><a className="hero-shop-link" href="/visite-jungle/">Visiter la Jungle en 3D <Arrow /></a></div>
         </div>
       </section>
 

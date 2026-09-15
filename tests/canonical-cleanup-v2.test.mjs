@@ -10,7 +10,7 @@ const env={ASSETS:{fetch:async request=>{
 }}};
 const render=path=>worker.fetch(new Request('https://jungle.tibaldo.fr'+path),env,ctx);
 test('PUBLIC93 tour remains served with its dedicated CSP and exact assets',async()=>{
- const homepage=await (await render('/')).text();assert.match(homepage,/href="\/visite-jungle\/index.html"/);
+ const homepage=await (await render('/')).text();assert.match(homepage,/href="\/visite-jungle\/"/);assert.doesNotMatch(homepage,/href="\/visite-jungle\/index.html"/);
  for(const path of ['/visite-jungle/index.html','/visite-jungle/jungle.glb','/visite-jungle/vendor/draco/draco_decoder.wasm']){
   const response=await render(path);assert.equal(response.status,200,path);
   assert.match(response.headers.get('content-security-policy'),/wasm-unsafe-eval/);
