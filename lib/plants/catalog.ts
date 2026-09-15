@@ -606,6 +606,28 @@ if (strelitziaAlbaOwnerIndex !== -1) { const plant = plants[strelitziaAlbaOwnerI
 const nephrolepisGreenMomentOwnerIndex = plants.findIndex(p => p.genre === "nephrolepis" && p.slug === "green-moment");
 if (nephrolepisGreenMomentOwnerIndex !== -1) { const plant = plants[nephrolepisGreenMomentOwnerIndex]; plants[nephrolepisGreenMomentOwnerIndex] = {...plant, gallery: [{"src": "/media/owner-media/nephrolepis-green-moment/nephrolepis-green-moment-fougere-suspendue.webp", "alt": "Fougère Nephrolepis exaltata « Green Moment » en suspension, formant une touffe dense de frondes vertes retombantes.", "caption": "Photo : TIBALDO", "width": 1536, "height": 1024, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260916-nephrolepis-green-moment-01/green-moment", "registryPath": "/credits-images", "note": "Identité fournie par Owner. Provenance : docs/media-provenance/photo-20260916-nephrolepis-green-moment-01.json"}}, ...plant.gallery.filter(m => m.license?.status === "verified")], mediaNeeds: []}; }
 
+const ficusElasticaBase = plants.find(p => p.genre === "ficus" && p.slug === "elastica");
+if (ficusElasticaBase && !plants.some(p => p.genre === "ficus" && p.slug === "abidjan")) {
+  plants.push({
+    ...ficusElasticaBase,
+    slug: "abidjan",
+    botanicalName: "Ficus elastica ‘Abidjan’",
+    displayName: "Abidjan",
+    listingName: "Ficus elastica ‘Abidjan’",
+    subtitle: "Un cultivar de Ficus elastica au feuillage épais, brillant et très sombre, avec des jeunes pousses rouge bronze.",
+    taxonomy: {...ficusElasticaBase.taxonomy, cultivar: "Abidjan", commonNames: ["Caoutchouc Abidjan", "Ficus Abidjan"]},
+    hybridization: "Cultivar horticole rattaché à Ficus elastica ; l’identité ‘Abidjan’ est fournie par l’Owner, sans attribution d’obtenteur non documentée.",
+    synonyms: [],
+    description: ["Ficus elastica ‘Abidjan’ se distingue par de grandes feuilles coriaces et vernissées, vert très sombre à brun bordeaux selon la lumière, ainsi que par des jeunes pousses rouge bronze.", ficusElasticaBase.description[1]],
+    comparisons: [{name: "Ficus elastica", difference: "Abidjan est un cultivar horticole de cette espèce, identifié ici par son feuillage particulièrement sombre."}, ...ficusElasticaBase.comparisons],
+    gallery: [{"src": "/media/owner-media/ficus-elastica-abidjan/ficus-elastica-abidjan-feuillage-sombre.webp", "alt": "Ficus elastica « Abidjan » en pot clair, aux feuilles épaisses vert très sombre et aux jeunes pousses rouge bronze, sur fond blanc.", "caption": "Photo : TIBALDO", "width": 1536, "height": 1024, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260916-ficus-abidjan-01/abidjan", "registryPath": "/credits-images", "note": "Identité fournie par Owner. Provenance : docs/media-provenance/photo-20260916-ficus-abidjan-01.json"}}],
+    mediaNeeds: [],
+    seo: {title: "Ficus elastica Abidjan : entretien et feuillage sombre", description: "Guide du Ficus elastica ‘Abidjan’ : lumière, arrosage, taille et entretien de ce caoutchouc au feuillage très sombre.", keywords: ["Ficus elastica Abidjan", "Ficus Abidjan entretien", "caoutchouc feuilles sombres"]},
+    publishedAt: "2026-09-16",
+    updatedAt: "2026-09-16",
+  });
+}
+
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
 export const getPlantsByGenre = (genre: string) => plants.filter((plant) =>

@@ -29,9 +29,9 @@ const labs = [
   "/lab/v25-4/golden-hub/pilea",
 ];
 
-test("release preserves established identities and adds only documented pinnatum", () => {
+test("release preserves established identities and adds only documented runtime entities", () => {
   const historical = JSON.parse(readFileSync(new URL("../docs/ENCYCLOPEDIA_CANONICAL_REGISTRY_V1.json", import.meta.url), "utf8"));
-  const expected = new Set([...historical.entities.map(p => p.ENCYCLOPEDIA_ENTITY_ID), "epipremnum/pinnatum"]);
+  const expected = new Set([...historical.entities.map(p => p.ENCYCLOPEDIA_ENTITY_ID), "epipremnum/pinnatum", "ficus/abidjan"]);
   const current = plants.map(p => `${p.genre}/${p.slug}`);
   assert.equal(new Set(current).size, current.length);
   assert.deepEqual(new Set(current), expected);

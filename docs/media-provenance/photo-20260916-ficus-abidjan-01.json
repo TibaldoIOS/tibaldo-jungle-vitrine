@@ -1,0 +1,35 @@
+{
+  "batch_id": "PHOTO-20260916-FICUS-ABIDJAN-01",
+  "source_before": "00180f8385a3deef2c9284805c58f51a968ef526",
+  "public_version_before": 153,
+  "photos": [
+    {
+      "owner_identity": "Ficus elastica 'Abidjan'",
+      "canonical_slug": "plantes/ficus/abidjan",
+      "identity_evidence": "Nom fourni par Owner : Ficus elastica 'Abidjan'",
+      "original_filename": "codex-clipboard-a34030d3-a90b-416f-8e5e-9534ebd65725.png",
+      "original_sha256": "4589260a44a9c0154a92c68c582ae6d6c0d0e69a27b3c0edefd81241622379c5",
+      "filename": "ficus-elastica-abidjan-feuillage-sombre.webp",
+      "asset_path": "/owner-media/ficus-elastica-abidjan/ficus-elastica-abidjan-feuillage-sombre.webp",
+      "public_path": "/media/owner-media/ficus-elastica-abidjan/ficus-elastica-abidjan-feuillage-sombre.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/ficus-elastica-abidjan/ficus-elastica-abidjan-feuillage-sombre.webp",
+      "sha256": "3f13d695cdc575c2f51a816e545b1bfdf0186df2301a3b6e96d52c5605809d56",
+      "bytes": 65398,
+      "dimensions": [1536, 1024],
+      "alt": "Ficus elastica « Abidjan » en pot clair, aux feuilles épaisses vert très sombre et aux jeunes pousses rouge bronze, sur fond blanc.",
+      "provenance": "OWNER",
+      "rights": "Autorisation Owner permanente",
+      "credit": "Photo : TIBALDO",
+      "existing_media": []
+    }
+  ],
+  "processing": "WebP quality88 method6; no crop, no upscale, no generative alteration; metadata stripped",
+  "allowed_paths": [
+    "docs/media-provenance/photo-20260916-ficus-abidjan-01.json",
+    "lib/plants/catalog.ts",
+    "app/credits-images/page.tsx",
+    "tests/photo-ficus-abidjan-owner-v1.test.ts",
+    "tests/deployment-artifact-contract.test.mjs",
+    "public/owner-media/ficus-elastica-abidjan/ficus-elastica-abidjan-feuillage-sombre.webp"
+  ]
+}
