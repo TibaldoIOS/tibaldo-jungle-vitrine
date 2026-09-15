@@ -1,0 +1,36 @@
+{
+  "batch_id": "PHOTO-20260916-STRELITZIA-ALBA-01",
+  "source_before": "80908e8935f60979835c55f998c2c6074df64e6c",
+  "public_version_before": 151,
+  "photos": [
+    {
+      "owner_identity": "Strelitzia alba",
+      "canonical_slug": "plantes/strelitzia/alba",
+      "identity_evidence": "Nom de fichier fourni par Owner : Strelitzia alba.png",
+      "original_filename": "codex-clipboard-4a59ce61-108b-40d4-8d52-d7ed6cd46f00.png",
+      "original_sha256": "ca76df65761544a4c3a5456ac6424a85cf129a741e085d208e50fc849d46a316",
+      "filename": "strelitzia-alba-port-et-floraison-blanche.webp",
+      "asset_path": "/owner-media/strelitzia-alba/strelitzia-alba-port-et-floraison-blanche.webp",
+      "public_path": "/media/owner-media/strelitzia-alba/strelitzia-alba-port-et-floraison-blanche.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/strelitzia-alba/strelitzia-alba-port-et-floraison-blanche.webp",
+      "sha256": "e7411081d5d04f1bc53c4f8532503eb048eeff6203f0e1f137bdca2d76b18c68",
+      "bytes": 366846,
+      "dimensions": [1536, 1024],
+      "alt": "Strelitzia alba en grands pots, au feuillage dressé et aux inflorescences blanches, dans un patio lumineux.",
+      "provenance": "OWNER",
+      "rights": "Autorisation Owner permanente",
+      "credit": "Photo : TIBALDO",
+      "existing_media": [
+        {"src": "/photo-reelle-a-venir.svg", "status": "placeholder"}
+      ]
+    }
+  ],
+  "processing": "WebP quality88 method6; no crop, no upscale, no generative alteration; metadata stripped",
+  "allowed_paths": [
+    "docs/media-provenance/photo-20260916-strelitzia-alba-01.json",
+    "lib/plants/catalog.ts",
+    "app/credits-images/page.tsx",
+    "tests/photo-strelitzia-alba-owner-v1.test.ts",
+    "public/owner-media/strelitzia-alba/strelitzia-alba-port-et-floraison-blanche.webp"
+  ]
+}
