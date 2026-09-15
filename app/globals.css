@@ -3518,7 +3518,8 @@ body:has(.conversion-dock){padding-bottom:calc(76px + env(safe-area-inset-bottom
 .genus-species-carousel h2 em { color: #9f756d; font-weight: 400; }
 .genus-species-carousel > header > p:last-child { max-width: 650px; margin: 0; color: #657169; line-height: 1.75; }
 .genus-carousel-track { display: flex; max-width: 100%; gap: 12px; overflow-x: auto; padding: 0 0 18px; overscroll-behavior-inline: contain; scroll-snap-type: x proximity; scrollbar-color: #78906f transparent; }
-.genus-carousel-card { flex: 0 0 min(27vw,330px); min-width: 255px; scroll-snap-align: start; background: #e7e4da; color: var(--forest); }
+.genus-carousel-card { position: relative; flex: 0 0 min(27vw,330px); min-width: 255px; scroll-snap-align: start; background: #e7e4da; color: var(--forest); }
+.genus-carousel-main { display: block; color: inherit; text-decoration: none; }
 .genus-carousel-media { position: relative; height: 360px; overflow: hidden; background: linear-gradient(145deg,#174c38,#769274); }
 .genus-carousel-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .65s cubic-bezier(.2,.75,.2,1); }
 .genus-carousel-card:hover .genus-carousel-media img { transform: scale(1.035); }
@@ -3530,6 +3531,13 @@ body:has(.conversion-dock){padding-bottom:calc(76px + env(safe-area-inset-bottom
 .genus-carousel-copy h3 { margin: 35px 0 13px; font: 400 25px/1.02 Georgia,serif; }
 .genus-carousel-copy p { margin: 0; color: #66736a; font-size: 11px; line-height: 1.65; }
 .genus-carousel-copy strong { display: inline-flex; align-items: center; gap: 8px; margin-top: auto; padding-top: 22px; font-size: 8px; letter-spacing: .11em; text-transform: uppercase; }
+.genus-carousel-commerce { position: relative; margin: 0 23px 22px; padding-top: 14px; border-top: 1px solid rgba(21,59,44,.18); }
+.genus-carousel-commerce > a,.genus-carousel-commerce > button { display: flex; width: 100%; min-height: 36px; align-items: center; justify-content: space-between; gap: 12px; padding: 0; border: 0; background: transparent; color: var(--forest); font: 700 8px/1.2 inherit; letter-spacing: .11em; text-align: left; text-decoration: none; text-transform: uppercase; cursor: pointer; }
+.genus-carousel-commerce svg { flex: 0 0 auto; }
+.genus-carousel-offers { display: grid; gap: 1px; margin-top: 10px; background: rgba(21,59,44,.12); }
+.genus-carousel-offers a { display: grid; grid-template-columns: 1fr auto; gap: 4px 14px; padding: 12px; background: #f5f1e8; color: var(--forest); text-decoration: none; }
+.genus-carousel-offers a strong,.genus-carousel-offers a span { font-size: 11px; }
+.genus-carousel-offers a small { grid-column: 1 / -1; color: #68756d; font-size: 8px; letter-spacing: .08em; text-transform: uppercase; }
 .genus-carousel-empty { padding: 40px 0; border-top: 1px solid rgba(21,59,44,.18); border-bottom: 1px solid rgba(21,59,44,.18); color: #68756d; }
 
 .plant-needs-visual-system { display: grid; grid-template-columns: repeat(12,minmax(0,1fr)); border-top: 1px solid rgba(21,59,44,.18); }
@@ -3819,4 +3827,27 @@ body:has(.conversion-dock){padding-bottom:calc(76px + env(safe-area-inset-bottom
   .site-header .brand-wordmark strong > span { overflow: hidden; text-overflow: ellipsis; }
   .site-header .mobile-jungle-menu { grid-column: 2; grid-row: 1; margin-left: 0; }
   .site-header .header-actions { display: none; }
+}
+
+/* Contextual Shop action: one measured dock, exact offers only. */
+.conversion-dock-shop { position: relative; display: flex; }
+.conversion-dock-shop > button { min-height: 42px; padding: 11px 16px; border: 0; border-radius: 30px; background: transparent; color: #fff; font: 700 9px/1.2 inherit; letter-spacing: .08em; white-space: nowrap; text-transform: uppercase; cursor: pointer; }
+.conversion-dock-shop > button:hover,.conversion-dock-shop > button[aria-expanded="true"] { background: rgba(255,255,255,.16); }
+.conversion-dock-shop-panel { position: absolute; right: 0; bottom: calc(100% + 12px); width: min(360px,calc(100vw - 24px)); overflow: hidden; border: 1px solid rgba(255,255,255,.22); border-radius: 22px; background: #f4f0e7; color: var(--forest); box-shadow: 0 22px 60px rgba(5,31,22,.28); }
+.conversion-dock-shop-panel header { position: relative; display: grid; gap: 4px; padding: 18px 50px 16px 18px; border-bottom: 1px solid rgba(21,59,44,.14); text-align: left; }
+.conversion-dock-shop-panel header span { color: #8b665f; font-size: 8px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.conversion-dock-shop-panel header strong { overflow: hidden; font: 400 18px/1.15 Georgia,serif; text-overflow: ellipsis; white-space: nowrap; }
+.conversion-dock-shop-panel header button { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; border: 1px solid rgba(21,59,44,.2); border-radius: 50%; background: transparent; color: var(--forest); font-size: 20px; line-height: 1; cursor: pointer; }
+.conversion-dock-shop-panel > div { display: grid; padding: 6px; }
+.conversion-dock .conversion-dock-shop-panel a { display: grid; min-height: 0; grid-template-columns: 1fr auto; gap: 4px 16px; padding: 12px; border-radius: 14px; color: var(--forest); text-align: left; text-transform: none; }
+.conversion-dock .conversion-dock-shop-panel a + a { border-top: 1px solid rgba(21,59,44,.11); border-left: 0; }
+.conversion-dock .conversion-dock-shop-panel a:hover,.conversion-dock .conversion-dock-shop-panel a:focus-visible { background: #e4e8d9; }
+.conversion-dock-shop-panel a strong,.conversion-dock-shop-panel a span { font-size: 12px; letter-spacing: 0; }
+.conversion-dock-shop-panel a small { grid-column: 1 / -1; color: #68756d; font-size: 8px; letter-spacing: .08em; text-transform: uppercase; }
+
+@media (max-width: 800px) {
+  .conversion-dock > a,.conversion-dock-shop { flex: 1; min-width: 0; }
+  .conversion-dock-shop > button { width: 100%; min-width: 0; min-height: 39px; padding: 8px 5px; font-size: 7px; letter-spacing: .045em; }
+  .conversion-dock-shop { border-left: 1px solid rgba(255,255,255,.16); }
+  .conversion-dock-shop-panel { position: fixed; right: 8px; bottom: calc(66px + env(safe-area-inset-bottom)); left: 8px; width: auto; max-height: min(68svh,520px); overflow-y: auto; }
 }

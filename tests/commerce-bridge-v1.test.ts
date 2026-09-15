@@ -3,6 +3,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 
 const bar=readFileSync(new URL("../app/plantes/PlantShopBar.tsx",import.meta.url),"utf8");
+const offers=readFileSync(new URL("../app/plantes/shop-offers.ts",import.meta.url),"utf8");
 const profile=readFileSync(new URL("../app/plantes/GoldenSpeciesProfile.tsx",import.meta.url),"utf8");
 const header=readFileSync(new URL("../app/SiteChrome.tsx",import.meta.url),"utf8");
 const mobile=readFileSync(new URL("../app/MobileJungleMenu.tsx",import.meta.url),"utf8");
@@ -10,13 +11,12 @@ const substrate=readFileSync(new URL("../app/substrats/SubstrateCommerce.tsx",im
 const substratePage=readFileSync(new URL("../app/substrats/page.tsx",import.meta.url),"utf8");
 
 test("commerce bridge requests only the exact encyclopedia id and keeps Shop as cart authority",()=>{
- assert.match(bar,/searchParams\.set\("encyclopedie", encyclopediaId\)/);
+ assert.match(offers,/searchParams\.set\("encyclopedie", encyclopediaId\)/);
  assert.match(profile,/encyclopediaId={`\$\{plant\.genre\}\/\$\{plant\.slug\}`}/);
- assert.doesNotMatch(bar,/botanicalName|includes\(|normalize/);
- assert.match(bar,/\/produits\/\$\{encodeURIComponent\(product\.slug\)\}/);
- assert.match(bar,/Voir au Shop/);
- assert.doesNotMatch(bar,/Ajouter au panier|Voir et ajouter/);
- assert.doesNotMatch(bar,/localStorage|supabase|auth|panier.*setItem/i);
+ assert.doesNotMatch(offers,/includes\(|normalize/);
+ assert.match(offers,/\/produits\/\$\{encodeURIComponent\(product\.slug\)\}/);
+ assert.doesNotMatch(`${bar}\n${offers}`,/Ajouter au panier|Voir et ajouter/);
+ assert.doesNotMatch(`${bar}\n${offers}`,/localStorage|supabase|auth|panier.*setItem/i);
 });
 
 test("desktop and mobile navigation expose Shop cart and account shortcuts",()=>{

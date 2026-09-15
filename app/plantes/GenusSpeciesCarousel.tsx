@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { PlantEntry } from "@/lib/plants/types";
 import { isPhotoProductionPlaceholder, publicPlantImageAlt } from "@/lib/plants/types";
 import { Arrow } from "../SiteChrome";
+import PlantCardShopAction from "./PlantCardShopAction";
 
 export default function GenusSpeciesCarousel({ genre, genusName, plants }: {
   genre: string;
@@ -22,21 +23,28 @@ export default function GenusSpeciesCarousel({ genre, genusName, plants }: {
             const image = plant.gallery[0];
             const hasPhoto = image && !isPhotoProductionPlaceholder(image.src);
             return (
-              <Link className={`genus-carousel-card${hasPhoto ? " has-photo" : " has-media-gap"}`} href={`/plantes/${plant.genre}/${plant.slug}`} key={`${plant.genre}/${plant.slug}`}>
-                <div className="genus-carousel-media">
-                  {hasPhoto ? (
-                    <Image unoptimized src={image.src} alt={publicPlantImageAlt(image.src, plant.botanicalName, image.alt)} width={image.width} height={image.height} loading="lazy" />
-                  ) : (
-                    <div className="genus-carousel-media-gap" aria-label={`Photographie réelle de ${plant.botanicalName} à documenter`}><span aria-hidden="true">{plant.taxonomy.genus.slice(0, 1)}</span><small>Photographie réelle<br />à documenter</small></div>
-                  )}
-                </div>
-                <div className="genus-carousel-copy">
-                  <span>{plant.taxonomy.cultivar ? "Cultivar / sélection" : "Espèce / taxon"}</span>
-                  <h3>{plant.listingName ?? plant.botanicalName}</h3>
-                  <p>{plant.subtitle}</p>
-                  <strong>Lire la fiche <Arrow /></strong>
-                </div>
-              </Link>
+              <article
+                className={`genus-carousel-card${hasPhoto ? " has-photo" : " has-media-gap"}`}
+                data-encyclopedia-id={`${plant.genre}/${plant.slug}`}
+                key={`${plant.genre}/${plant.slug}`}
+              >
+                <Link className="genus-carousel-main" href={`/plantes/${plant.genre}/${plant.slug}`}>
+                  <div className="genus-carousel-media">
+                    {hasPhoto ? (
+                      <Image unoptimized src={image.src} alt={publicPlantImageAlt(image.src, plant.botanicalName, image.alt)} width={image.width} height={image.height} loading="lazy" />
+                    ) : (
+                      <div className="genus-carousel-media-gap" aria-label={`Photographie réelle de ${plant.botanicalName} à documenter`}><span aria-hidden="true">{plant.taxonomy.genus.slice(0, 1)}</span><small>Photographie réelle<br />à documenter</small></div>
+                    )}
+                  </div>
+                  <div className="genus-carousel-copy">
+                    <span>{plant.taxonomy.cultivar ? "Cultivar / sélection" : "Espèce / taxon"}</span>
+                    <h3>{plant.listingName ?? plant.botanicalName}</h3>
+                    <p>{plant.subtitle}</p>
+                    <strong>Lire la fiche <Arrow /></strong>
+                  </div>
+                </Link>
+                <PlantCardShopAction encyclopediaId={`${plant.genre}/${plant.slug}`} plantName={plant.botanicalName} />
+              </article>
             );
           })}
         </div>
