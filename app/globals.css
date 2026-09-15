@@ -3840,7 +3840,7 @@ body:has(.conversion-dock){padding-bottom:calc(76px + env(safe-area-inset-bottom
 @keyframes jungle-shop-panel-enter { from { opacity: 0; transform: translateY(9px) scale(.985); } to { opacity: 1; transform: none; } }
 .conversion-dock-shop-panel header { position: relative; display: grid; gap: 4px; padding: 18px 50px 16px 18px; border-bottom: 1px solid rgba(21,59,44,.14); text-align: left; }
 .conversion-dock-shop-panel header span { color: #8b665f; font-size: 8px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
-.conversion-dock-shop-panel header strong { overflow: hidden; font: 400 18px/1.15 Georgia,serif; text-overflow: ellipsis; white-space: nowrap; }
+.conversion-dock-shop-panel header strong { display: block; min-width: 0; font: 400 18px/1.15 Georgia,serif; overflow-wrap: anywhere; white-space: normal; }
 .conversion-dock-shop-panel header button { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; border: 1px solid rgba(21,59,44,.2); border-radius: 50%; background: transparent; color: var(--forest); font-size: 20px; line-height: 1; cursor: pointer; }
 .conversion-dock-shop-panel > div { display: grid; padding: 6px; }
 .conversion-dock .conversion-dock-shop-panel a { display: grid; min-height: 0; grid-template-columns: 1fr auto; gap: 4px 16px; padding: 12px; border-radius: 14px; color: var(--forest); text-align: left; text-transform: none; }

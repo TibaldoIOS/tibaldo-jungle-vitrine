@@ -9,6 +9,7 @@ const dock = read("../app/ConversionDock.tsx");
 const cards = read("../app/plantes/GenusSpeciesCarousel.tsx");
 const cardAction = read("../app/plantes/PlantCardShopAction.tsx");
 const layout = read("../app/layout.tsx");
+const styles = read("../app/globals.css");
 
 test("exact published offers feed one shared contextual dock", () => {
   assert.match(offers, /product\.encyclopediaId === encyclopediaId/);
@@ -49,4 +50,18 @@ test("preview cards keep the encyclopedia link separate from commerce", () => {
   assert.match(cards, /Lire la fiche/);
   assert.doesNotMatch(cardAction, /<Link/);
   assert.match(cardAction, /if \(!products\?\.length\) return null/);
+});
+
+test("the offer panel keeps long plant names complete and clear of its close control", () => {
+  const titleRule = styles.match(
+    /\.conversion-dock-shop-panel header strong \{([^}]+)\}/,
+  )?.[1];
+  assert.ok(titleRule);
+  assert.match(titleRule, /white-space:\s*normal/);
+  assert.match(titleRule, /overflow-wrap:\s*anywhere/);
+  assert.doesNotMatch(titleRule, /text-overflow:\s*ellipsis/);
+  assert.match(
+    styles,
+    /\.conversion-dock-shop-panel header \{[^}]*padding:\s*18px 50px 16px 18px/,
+  );
 });
