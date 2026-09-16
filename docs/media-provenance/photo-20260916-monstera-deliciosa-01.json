@@ -1,0 +1,26 @@
+{
+  "batch_id": "PHOTO-20260916-MONSTERA-DELICIOSA-01",
+  "source_before": "84379d7ecd8aa5311d65092b65989279c929829c",
+  "public_version_before": 155,
+  "photos": [{
+    "owner_identity": "Monstera deliciosa",
+    "canonical_slug": "plantes/monstera/deliciosa",
+    "identity_evidence": "Identité fournie par Owner : Monstera deliciosa",
+    "original_filename": "codex-clipboard-3fb1d5ca-85e3-4be0-91a0-d56f1e36bebc.jpg",
+    "original_sha256": "42dadc5c0f7fdc1411b2340eafd636eb803804c95b8ee02678e7812f6649e163",
+    "filename": "monstera-deliciosa-jeune-feuille-fenestree.webp",
+    "asset_path": "/owner-media/monstera-deliciosa/monstera-deliciosa-jeune-feuille-fenestree.webp",
+    "public_path": "/media/owner-media/monstera-deliciosa/monstera-deliciosa-jeune-feuille-fenestree.webp",
+    "api_url": "https://jungle.tibaldo.fr/owner-media/monstera-deliciosa/monstera-deliciosa-jeune-feuille-fenestree.webp",
+    "sha256": "203ce7137d868aeb2d4f5c9089c9239527dc8ac632ec21ee72244cfbc8c18d29",
+    "bytes": 233918,
+    "dimensions": [1330, 2364],
+    "alt": "Jeune feuille vert clair de Monstera deliciosa, rétroéclairée et déjà découpée de nombreuses fenestrations.",
+    "provenance": "OWNER",
+    "rights": "Autorisation Owner permanente",
+    "credit": "Photo : TIBALDO",
+    "existing_media": [{"src": "/media/final-media-v35/monstera-deliciosa-jonathan-borba-pexels.webp", "status": "verified-documentary-preserved"}]
+  }],
+  "processing": "WebP quality88 method6; no crop, no upscale, no generative alteration; metadata stripped",
+  "allowed_paths": ["docs/media-provenance/photo-20260916-monstera-deliciosa-01.json", "lib/plants/catalog.ts", "app/credits-images/page.tsx", "tests/photo-monstera-deliciosa-owner-v1.test.ts", "public/owner-media/monstera-deliciosa/monstera-deliciosa-jeune-feuille-fenestree.webp"]
+}

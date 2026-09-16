@@ -194,17 +194,19 @@ test("les dix nouvelles fiches qualifiées ont uniquement des médias locaux, so
   }
 });
 
-test("Monstera deliciosa utilise une seule source Pexels traçable sans dupliquer le documentaire", () => {
+test("Monstera deliciosa conserve une seule source Pexels documentaire derrière la photo Owner", () => {
   const deliciosa = plants.find((plant) => plant.genre === "monstera" && plant.slug === "deliciosa");
   assert.ok(deliciosa);
   const pexels = deliciosa.gallery.filter((image) => image.license?.license === "Pexels License");
   assert.equal(pexels.length, 1);
   assert.match(pexels[0].license?.sourceUrl ?? "", /pexels\.com\/fr-fr\/photo\//);
   assert.equal(existsSync(publicAssetPath(pexels[0].src)), true);
-  assert.equal(deliciosa.gallery.length, 1);
-  assert.equal(pexels[0].src, deliciosa.gallery[0].src);
+  assert.equal(deliciosa.gallery.length, 2);
+  assert.equal(deliciosa.gallery[0].license?.creator, "TIBALDO");
+  assert.equal(pexels[0].src, deliciosa.gallery[1].src);
   const hero = readFileSync("app/plantes/DeliciosaOwnerHero.tsx", "utf8");
-  assert.match(hero, /monstera-deliciosa-jonathan-borba-pexels\.webp/);
+  assert.match(hero, /monstera-deliciosa-jeune-feuille-fenestree\.webp/);
+  assert.doesNotMatch(hero, /monstera-deliciosa-jonathan-borba-pexels\.webp/);
   assert.doesNotMatch(hero, /monstera-deliciosa-feuilles\.jpg/);
 });
 
