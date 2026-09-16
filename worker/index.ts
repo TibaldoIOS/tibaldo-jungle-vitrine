@@ -2,6 +2,11 @@
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
 import { isBetaJungleDeployment } from "../lib/deployment-mode";
+import {
+  classifyLinksOpen,
+  linksOpenEventId,
+  LINKS_OPEN_PATH,
+} from "../lib/links-open-tracking";
 
 interface Env {
   ASSETS: Fetcher;
@@ -40,6 +45,22 @@ const CONTENT_SECURITY_POLICY = [
 
 const STATIC_ASSET_PATTERN = /\.(?:avif|gif|ico|jpe?g|mp4|png|svg|webm|webp|woff2?)$/i;
 const CONTROLLED_MEDIA_PREFIX = "/media/";
+
+async function recordLinksOpen(request: Request, env: Env): Promise<void> {
+  const cf = (request as Request & { cf?: { botManagement?: { verifiedBot?: boolean } } }).cf;
+  const classification = classifyLinksOpen(request, cf?.botManagement?.verifiedBot === true);
+  if (classification.kind === "excluded") return;
+
+  const now = new Date();
+  await env.DB.prepare(
+    "INSERT OR IGNORE INTO conversion_events (id, action, path, target, created_at) VALUES (?, ?, ?, NULL, ?)",
+  ).bind(
+    linksOpenEventId(classification.action, now),
+    classification.action,
+    LINKS_OPEN_PATH,
+    now.toISOString(),
+  ).run();
+}
 
 function getControlledMediaAssetPath(pathname: string): string | null {
   if (!pathname.startsWith(CONTROLLED_MEDIA_PREFIX)) return null;
@@ -144,6 +165,9 @@ const worker = {
     }
 
     const response = await handler.fetch(request, env, ctx);
+    if (url.pathname === LINKS_OPEN_PATH && response.status >= 200 && response.status < 400) {
+      ctx.waitUntil(recordLinksOpen(request, env));
+    }
     return withDeploymentHeaders(request, response);
   },
 };
