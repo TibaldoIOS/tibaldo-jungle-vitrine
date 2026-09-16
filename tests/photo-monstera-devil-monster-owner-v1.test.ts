@@ -13,7 +13,7 @@ test("Devil Monster has one canonical Owner identity and exact served media", ()
   assert.equal(matches.length, 1);
   const plant = getPlant("monstera", "devil-monster")!;
   assert.equal(plant.botanicalName, "Monstera deliciosa ‘Devil Monster’");
-  assert.equal(plant.taxonomy.cultivar, "Devil Monster");
+  assert.equal(plant.taxonomy.cultivar, null);
   assert.equal(plant.gallery.length, 1);
   assert.equal(plant.gallery[0].src, photo.public_path);
   assert.equal(plant.gallery[0].alt, photo.alt);
@@ -27,4 +27,8 @@ test("Devil Monster has one canonical Owner identity and exact served media", ()
   assert.equal(api.primary_media_url, photo.api_url);
   assert.equal(api.primary_media_alt, photo.alt);
   assert.equal(api.primary_media_creator, "TIBALDO");
+  const page = readFileSync(new URL("../app/plantes/monstera/devil-monster/page.tsx", import.meta.url), "utf8");
+  assert.match(page, /monstera-deliciosa-devil-monster-feuille-panachee\.webp/);
+  assert.match(page, /Photo : TIBALDO/);
+  assert.match(page, /data-arch-contract="owner-devil-monster-v1"/);
 });

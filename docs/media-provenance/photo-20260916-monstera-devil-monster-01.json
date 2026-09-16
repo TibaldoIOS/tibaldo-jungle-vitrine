@@ -30,6 +30,8 @@
   ],
   "allowlist": [
     "app/credits-images/page.tsx",
+    "app/dream-plants.module.css",
+    "app/plantes/monstera/devil-monster/page.tsx",
     "docs/media-provenance/photo-20260916-monstera-devil-monster-01.json",
     "lib/plants/catalog.ts",
     "lib/plants/devil-monster-v1.ts",

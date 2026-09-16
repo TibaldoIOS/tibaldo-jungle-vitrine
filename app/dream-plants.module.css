@@ -129,6 +129,12 @@
 .dossierHero h1 { font-size: clamp(64px, 8vw, 124px); }
 .dossierHero h1 span { display: block; font-size: .46em; line-height: 1; letter-spacing: -.02em; }
 
+.ownerPhoto { position: relative; min-height: min(900px, 92vh); overflow: hidden; background: var(--dream-deep); }
+.ownerPhoto > img { display: block; width: 100%; min-height: min(900px, 92vh); object-fit: cover; object-position: center 42%; }
+.ownerPhoto > div { position: absolute; z-index: 1; left: 0; right: 0; bottom: 0; display: flex; justify-content: space-between; gap: 30px; align-items: end; padding-top: 120px; padding-bottom: 36px; background: linear-gradient(transparent, rgba(3,29,22,.86)); color: #fff; }
+.ownerPhoto p { max-width: 650px; margin: 0; color: rgba(255,255,255,.78); font-size: 14px; line-height: 1.65; }
+.ownerPhoto small { font-size: 10px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+
 .identity { padding-top: 95px; padding-bottom: 110px; }
 .identityLead { display: grid; grid-template-columns: .7fr 1.3fr; gap: 7vw; margin-bottom: 75px; }
 .identityLead h2 { margin: 0; font: 400 clamp(44px, 5vw, 72px)/.95 Georgia, serif; letter-spacing: -.045em; }
@@ -172,6 +178,7 @@
   .portrait { gap: 55px; }
   .typePlate { min-height: 520px; }
   .notes { grid-template-columns: 1fr; }
+  .ownerPhoto > div { align-items: start; flex-direction: column; }
   .culture > .secondaryLink { grid-column: 1; }
 }
 

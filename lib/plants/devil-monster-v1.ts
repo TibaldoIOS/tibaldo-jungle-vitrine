@@ -26,12 +26,12 @@ export const devilMonster: PlantEntry = {
   subtitle: "Une sélection horticole de Monstera deliciosa aux feuilles profondément découpées et fortement marbrées.",
   taxonomy: {
     ...deliciosaVariegata.taxonomy,
-    cultivar: "Devil Monster",
+    cultivar: null,
     commonNames: ["Monstera Devil Monster", "Monstera deliciosa Devil Monster"],
   },
   origin: "Sélection horticole de Monstera deliciosa ; identité ‘Devil Monster’ confirmée par l’Owner, filiation de sélection non documentée ici.",
   habitat: "Sélection cultivée issue de Monstera deliciosa. Le cadre écologique reste celui d’une liane tropicale qui grimpe vers la lumière ; le nom horticole ne désigne pas une population sauvage.",
-  hybridization: "Nom horticole conservé selon la provenance Owner. Cette fiche n’affirme ni enregistrement formel du cultivar, ni origine clonale précise, ni mécanisme génétique au-delà de la panachure observée.",
+  hybridization: "Nom horticole conservé selon la provenance Owner. Cette fiche n’affirme ni statut formel de cultivar, ni origine clonale précise, ni mécanisme génétique au-delà de la panachure observée.",
   synonyms: ["Monstera ‘Devil Monster’", "Devil Monster Monstera"],
   description: [
     "Monstera deliciosa ‘Devil Monster’ est recherchée pour sa panachure claire très morcelée, mêlant éclaboussures, marbrures et plages crème sur un limbe vert.",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "../../../SiteChrome";
 import styles from "../../../dream-plants.module.css";
@@ -23,6 +24,7 @@ export default function DevilMonsterPage() {
         about: { "@type": "Thing", name: "Monstera deliciosa Liebm." },
         author: { "@type": "Organization", name: "TIBALDO Jungle" },
         publisher: { "@type": "Organization", name: "TIBALDO Jungle", url: "https://jungle.tibaldo.fr" },
+        image: "https://jungle.tibaldo.fr/owner-media/monstera-devil-monster/monstera-deliciosa-devil-monster-feuille-panachee.webp",
         inLanguage: "fr-FR",
       },
       {
@@ -53,6 +55,18 @@ export default function DevilMonsterPage() {
         </div>
       </section>
 
+      <section className={`${styles.ownerPhoto} plant-profile-hero`} data-arch-contract="owner-devil-monster-v1" aria-label="Photographie Owner de Monstera Devil Monster">
+        <Image
+          unoptimized
+          src="/media/owner-media/monstera-devil-monster/monstera-deliciosa-devil-monster-feuille-panachee.webp"
+          alt="Grande feuille fenêtrée de Monstera deliciosa ‘Devil Monster’, fortement marbrée de blanc crème et de vert."
+          width={1024}
+          height={1280}
+          priority
+        />
+        <div className="shell"><p>Feuille adulte documentée par l’Owner. Le motif visible ne constitue pas une promesse de panachure identique sur les prochaines feuilles.</p><small>Photo : TIBALDO</small></div>
+      </section>
+
       <section className={`shell ${styles.identity}`}>
         <div className={styles.identityLead}>
           <h2>Ce que le nom<br /><em>permet d’affirmer.</em></h2>
@@ -69,7 +83,7 @@ export default function DevilMonsterPage() {
       <section className={styles.notes} aria-label="Lecture critique des informations disponibles">
         <article><p className={styles.label}>01 · Établi</p><h2>L’espèce de rattachement</h2><p>Le nom est commercialisé sous Monstera deliciosa. La fiche canonique de l’espèce reste la référence pour son identité botanique générale.</p></article>
         <article><p className={styles.label}>02 · Incertain</p><h2>L’histoire du nom</h2><p>Des sources commerciales évoquent des histoires différentes entre Chine et Thaïlande. Elles témoignent de l’usage du nom, pas d’une provenance botanique certifiée.</p></article>
-        <article><p className={styles.label}>03 · Non affirmé</p><h2>Les caractères futurs</h2><p>Aucune parenté, stabilité de panachure ou morphologie adulte particulière n’est promise. Une photographie vendeur ne serait pas une preuve suffisante — et n’est pas reproduite ici.</p></article>
+        <article><p className={styles.label}>03 · Non affirmé</p><h2>Les caractères futurs</h2><p>Aucune parenté, stabilité de panachure ou morphologie adulte particulière n’est promise. La photographie Owner documente cette feuille précise, sans prédire les pousses suivantes.</p></article>
       </section>
 
       <section className={`shell ${styles.culture}`} aria-labelledby="devil-monster-culture">
