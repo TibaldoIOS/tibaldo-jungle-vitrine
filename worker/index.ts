@@ -11,7 +11,6 @@ import {
 interface Env {
   ASSETS: Fetcher;
   DB: D1Database;
-  LINKS_ALERT_URL?: string;
   LINKS_ALERT_SECRET?: string;
   IMAGES: {
     input(stream: ReadableStream): {
@@ -67,49 +66,45 @@ async function recordLinksOpen(request: Request, env: Env): Promise<void> {
   // A duplicate opening is neither counted nor alerted. Email delivery stays
   // outside the response path: a provider failure must never block /liens.
   if (inserted.meta.changes !== 1) return;
-  if (!env.LINKS_ALERT_URL || !env.LINKS_ALERT_SECRET) {
-    await env.DB.prepare("UPDATE conversion_events SET target = ? WHERE id = ?")
-      .bind("alert_not_configured", eventId).run();
-    return;
-  }
-
-  const sendAlert = async () => {
-    const alert = await fetch(env.LINKS_ALERT_URL!, {
-      method: "POST",
-      headers: {
-        authorization: `Bearer ${env.LINKS_ALERT_SECRET}`,
-        "content-type": "application/json",
-      },
-      body: JSON.stringify({
-        event_id: eventId,
-        kind: classification.kind,
-        occurred_at: now.toISOString(),
-        path: LINKS_OPEN_PATH,
-      }),
-      redirect: "error",
-      signal: AbortSignal.timeout(10_000),
-    });
-    if (!alert.ok) return `alert_failed_${alert.status}`;
-    let result: { state?: string };
-    try {
-      result = await alert.json() as { state?: string };
-    } catch {
-      return "alert_invalid_response";
-    }
-    return result.state === "PROVIDER_ACCEPTED" ? "alert_provider_accepted" : "alert_outcome_uncertain";
-  };
-
-  let state = "alert_transport_failed";
-  for (let attempt = 0; attempt < 2; attempt += 1) {
-    try {
-      state = await sendAlert();
-      if (state === "alert_provider_accepted" || state.startsWith("alert_failed_")) break;
-    } catch {
-      state = "alert_transport_failed";
-    }
-  }
+  const state = env.LINKS_ALERT_SECRET ? "alert_pending" : "alert_not_configured";
   await env.DB.prepare("UPDATE conversion_events SET target = ? WHERE id = ?")
     .bind(state, eventId).run();
+}
+
+const LINKS_ALERT_QUEUE_PATH = "/api/internal/links-alerts";
+
+function authorizedAlertQueue(request: Request, env: Env): boolean {
+  const configured = env.LINKS_ALERT_SECRET ?? "";
+  const supplied = (request.headers.get("authorization") ?? "").replace(/^Bearer /, "");
+  if (!configured || configured.length !== supplied.length) return false;
+  let mismatch = 0;
+  for (let index = 0; index < configured.length; index += 1) mismatch |= configured.charCodeAt(index) ^ supplied.charCodeAt(index);
+  return mismatch === 0;
+}
+
+async function handleLinksAlertQueue(request: Request, env: Env): Promise<Response> {
+  const headers = { "content-type": "application/json", "cache-control": "no-store", "x-content-type-options": "nosniff" };
+  if (!authorizedAlertQueue(request, env)) return Response.json({ error: "AUTH_REQUIRED" }, { status: 401, headers });
+  if (request.method === "GET") {
+    const rows = await env.DB.prepare(
+      "SELECT id, action, path, created_at FROM conversion_events WHERE path = ? AND action IN (?, ?) AND target IN (?, ?, ?) ORDER BY created_at ASC LIMIT 20",
+    ).bind(LINKS_OPEN_PATH, "links_open", "links_open_test", "alert_pending", "alert_transport_failed", "alert_outcome_uncertain").all();
+    return Response.json({ events: rows.results }, { headers });
+  }
+  if (request.method === "POST") {
+    let input: { event_id?: unknown; state?: unknown };
+    try { input = await request.json() as { event_id?: unknown; state?: unknown }; }
+    catch { return Response.json({ error: "INPUT_INVALID" }, { status: 400, headers }); }
+    if (typeof input.event_id !== "string" || !/^(?:links-open-|links-test-)[A-Za-z0-9-]{1,100}$/.test(input.event_id)
+        || !["alert_provider_accepted", "alert_provider_rejected", "alert_outcome_uncertain"].includes(String(input.state))) {
+      return Response.json({ error: "INPUT_INVALID" }, { status: 400, headers });
+    }
+    const changed = await env.DB.prepare(
+      "UPDATE conversion_events SET target = ? WHERE id = ? AND path = ? AND action IN (?, ?)",
+    ).bind(input.state, input.event_id, LINKS_OPEN_PATH, "links_open", "links_open_test").run();
+    return Response.json({ updated: changed.meta.changes === 1 }, { headers });
+  }
+  return Response.json({ error: "METHOD_NOT_ALLOWED" }, { status: 405, headers });
 }
 
 function getControlledMediaAssetPath(pathname: string): string | null {
@@ -171,6 +166,10 @@ function withDeploymentHeaders(request: Request, response: Response): Response {
 const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
+
+    if (url.pathname === LINKS_ALERT_QUEUE_PATH) {
+      return withDeploymentHeaders(request, await handleLinksAlertQueue(request, env));
+    }
 
     // The virtual tour is a self-contained, same-origin static experience.
     if (url.pathname.startsWith("/visite-jungle/")) {
