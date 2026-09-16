@@ -16,10 +16,13 @@ test("index preserves all canonical server-rendered links and replaces status/co
   const page = await html("/plantes");
   const nav = page.match(/<nav class="plants-compact-index"[\s\S]*?<\/nav>/)?.[0];
   assert.ok(nav);
-  for (const family of plantFamilies) assert.ok(nav.includes(`href="/plantes/${family.slug}"`), family.slug);
-  assert.equal((nav.match(/<a /g) ?? []).length, plantFamilies.length);
+  const primaryFamilies = plantFamilies.filter((family) => !["musa", "ensete"].includes(family.slug));
+  for (const family of primaryFamilies) assert.ok(nav.includes(`href="/plantes/${family.slug}"`), family.slug);
+  assert.equal((nav.match(/<a /g) ?? []).length, primaryFamilies.length);
+  assert.doesNotMatch(nav, /href="\/plantes\/(?:musa|ensete)"/);
+  assert.match(nav, /Bananiers[\s\S]*?4 fiches/);
   assert.match(nav, /tabindex="0"/i);
-  assert.doesNotMatch(nav, /fiche|guide disponible|0 variété/i);
+  assert.doesNotMatch(nav, /guide disponible|0 variété/i);
   assert.match(page, /plants-index-scroll-hint/);
   assert.doesNotMatch(page, /01 · Guide disponible/i);
 });

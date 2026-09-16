@@ -40,14 +40,16 @@ export const metadata: Metadata = {
 
 export default function PlantsPage() {
   const pageUrl = "https://jungle.tibaldo.fr/plantes";
-  const primaryPlantFamilies = plantFamilies;
+  const primaryPlantFamilies = plantFamilies.filter((family) => !["musa", "ensete"].includes(family.slug));
   const featuredSlugs = ["monstera", "anthurium", "alocasia", "philodendron"];
   const featuredFamilies = featuredSlugs
     .map((slug) => primaryPlantFamilies.find((family) => family.slug === slug))
     .filter((family): family is (typeof primaryPlantFamilies)[number] => Boolean(family));
   const speciesCount = (slug: string) => {
-    if (slug === "bananiers") return plants.filter((plant) => ["musa", "ensete"].includes(plant.genre)).length;
-    return plants.filter((plant) => plant.genre === slug).length;
+    const matchingPlants = slug === "bananiers"
+      ? plants.filter((plant) => ["musa", "ensete"].includes(plant.genre))
+      : plants.filter((plant) => plant.genre === slug);
+    return new Set(matchingPlants.map((plant) => `${plant.genre}/${plant.slug}`)).size;
   };
   const featuredImages: Record<string, { src: string; alt: string; note: string }> = {
     monstera: { src: "/media/monstera-deliciosa-feuilles.jpg", alt: "Feuillage découpé d’un Monstera deliciosa", note: "Silhouettes graphiques et croissance grimpante" },
@@ -55,7 +57,13 @@ export default function PlantsPage() {
     alocasia: { src: "/media/alocasia-cuprea-feuillage.jpg", alt: "Feuillage métallique d’un Alocasia cuprea", note: "Contrastes métalliques et besoins précis" },
     philodendron: { src: "/media/philodendron-hastatum-feuillage.jpg", alt: "Feuillage argenté d’un Philodendron hastatum", note: "Lianes tropicales et ports très variés" },
   };
-  const directoryItems = primaryPlantFamilies.map((family) => ({ slug: family.slug, name: family.name, descriptor: family.eyebrow, count: speciesCount(family.slug) }));
+  const directoryItems = primaryPlantFamilies.map((family) => ({
+    slug: family.slug,
+    name: family.name,
+    descriptor: family.eyebrow,
+    count: speciesCount(family.slug),
+    countLabel: family.slug === "bananiers" ? ("fiches" as const) : undefined,
+  }));
   const publicStudioCollection = studioCollection.map((group) => ({
     ...group,
     plants: group.plants.filter(
@@ -117,7 +125,7 @@ export default function PlantsPage() {
           </div>
           <div className="plants-hub-hero-actions">
             <a className="plants-hub-search-jump" href="#recherche-plantes" aria-label="Aller à la recherche de plantes"><SearchIcon />Rechercher par nom</a>
-            <a className="plants-hub-index-jump" href="#index-botanique">31 genres · index botanique <Arrow /></a>
+            <a className="plants-hub-index-jump" href="#index-botanique">{primaryPlantFamilies.length} univers · index botanique <Arrow /></a>
           </div>
         </div>
       </section>
@@ -155,7 +163,7 @@ export default function PlantsPage() {
       </section>
 
       <section className="plants-all-genera-v3" id="index-botanique" aria-labelledby="all-genera-title">
-        <div className="shell"><header data-reveal><p className="section-kicker">Index botanique complet</p><h2 id="all-genera-title">Trente et un genres.<br/><em>Un seul index.</em></h2><p>Une lecture compacte pour rejoindre chaque genre sans répéter une seconde galerie de grandes cartes.</p></header><CompactBotanicalIndex items={directoryItems} /></div>
+        <div className="shell"><header data-reveal><p className="section-kicker">Index botanique complet</p><h2 id="all-genera-title">{primaryPlantFamilies.length} univers.<br/><em>Un seul index.</em></h2><p>Une lecture compacte pour rejoindre chaque genre ou groupe sans répéter une seconde galerie de grandes cartes.</p></header><CompactBotanicalIndex items={directoryItems} /></div>
       </section>
 
       <PlantExplorer plants={explorerItems} />
