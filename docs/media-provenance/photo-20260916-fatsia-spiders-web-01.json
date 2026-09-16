@@ -1,0 +1,27 @@
+{
+  "batch_id": "PHOTO-20260916-FATSIA-SPIDERS-WEB-01",
+  "source_before": "608e21287d504b04e3e59393ae965ba582efb2e2",
+  "public_version_before": 163,
+  "photos": [{
+    "owner_identity": "Fatsia japonica ‘Spider’s Web’",
+    "canonical_slug": "plantes/fatsia/japonica-spiders-web",
+    "identity_evidence": "Nom fourni par Owner : Fatsia japonica 'Spider’s Web'",
+    "original_filename": "codex-clipboard-23e50fbd-6d3f-41a0-a3bc-a771679944b4.png",
+    "original_preserved_path": "/Users/tibaldo/Developer/TIBALDO/photo-fatsia-spiders-web-20260916-evidence/Fatsia japonica Spider's Web.png",
+    "original_sha256": "62622ccbdcac13e0bf691ab975af627baee6f621a3315139c93d7cf60c3ba960",
+    "filename": "fatsia-japonica-spiders-web-feuillage-panache.webp",
+    "asset_path": "/owner-media/fatsia-japonica-spiders-web/fatsia-japonica-spiders-web-feuillage-panache.webp",
+    "public_path": "/media/owner-media/fatsia-japonica-spiders-web/fatsia-japonica-spiders-web-feuillage-panache.webp",
+    "api_url": "https://jungle.tibaldo.fr/owner-media/fatsia-japonica-spiders-web/fatsia-japonica-spiders-web-feuillage-panache.webp",
+    "sha256": "474eda8f8cb254027edea82225a54a30fd94478fe6ae19a8b3836e2beabf6419",
+    "bytes": 383140,
+    "dimensions": [1312, 1199],
+    "alt": "Fatsia japonica ‘Spider’s Web’ en pot, formant une touffe dense de grandes feuilles palmées panachées de vert et de blanc crème.",
+    "provenance": "OWNER",
+    "rights": "Autorisation Owner permanente",
+    "credit": "Photo : TIBALDO",
+    "existing_media": [{"src": "/photo-reelle-a-venir.svg", "status": "placeholder"}]
+  }],
+  "processing": "WebP quality88 method6; no crop, no upscale, no generative alteration; metadata stripped",
+  "allowed_paths": ["docs/media-provenance/photo-20260916-fatsia-spiders-web-01.json", "lib/plants/catalog.ts", "app/credits-images/page.tsx", "tests/photo-fatsia-spiders-web-owner-v1.test.ts", "public/owner-media/fatsia-japonica-spiders-web/fatsia-japonica-spiders-web-feuillage-panache.webp"]
+}
