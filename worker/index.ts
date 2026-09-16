@@ -11,6 +11,8 @@ import {
 interface Env {
   ASSETS: Fetcher;
   DB: D1Database;
+  LINKS_ALERT_URL?: string;
+  LINKS_ALERT_SECRET?: string;
   IMAGES: {
     input(stream: ReadableStream): {
       transform(options: Record<string, unknown>): {
@@ -52,14 +54,51 @@ async function recordLinksOpen(request: Request, env: Env): Promise<void> {
   if (classification.kind === "excluded") return;
 
   const now = new Date();
-  await env.DB.prepare(
+  const eventId = linksOpenEventId(classification.action, now);
+  const inserted = await env.DB.prepare(
     "INSERT OR IGNORE INTO conversion_events (id, action, path, target, created_at) VALUES (?, ?, ?, NULL, ?)",
   ).bind(
-    linksOpenEventId(classification.action, now),
+    eventId,
     classification.action,
     LINKS_OPEN_PATH,
     now.toISOString(),
   ).run();
+
+  // A duplicate opening is neither counted nor alerted. Email delivery stays
+  // outside the response path: a provider failure must never block /liens.
+  if (inserted.meta.changes !== 1) return;
+  if (!env.LINKS_ALERT_URL || !env.LINKS_ALERT_SECRET) {
+    await env.DB.prepare("UPDATE conversion_events SET target = ? WHERE id = ?")
+      .bind("alert_not_configured", eventId).run();
+    return;
+  }
+
+  try {
+    const alert = await fetch(env.LINKS_ALERT_URL, {
+      method: "POST",
+      headers: {
+        authorization: `Bearer ${env.LINKS_ALERT_SECRET}`,
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        event_id: eventId,
+        kind: classification.kind,
+        occurred_at: now.toISOString(),
+        path: LINKS_OPEN_PATH,
+      }),
+      redirect: "error",
+      signal: AbortSignal.timeout(10_000),
+    });
+    const result = alert.ok ? await alert.json() as { state?: string } : null;
+    const state = result?.state === "PROVIDER_ACCEPTED"
+      ? "alert_provider_accepted"
+      : `alert_failed_${alert.status}`;
+    await env.DB.prepare("UPDATE conversion_events SET target = ? WHERE id = ?")
+      .bind(state, eventId).run();
+  } catch {
+    await env.DB.prepare("UPDATE conversion_events SET target = ? WHERE id = ?")
+      .bind("alert_outcome_uncertain", eventId).run();
+  }
 }
 
 function getControlledMediaAssetPath(pathname: string): string | null {
