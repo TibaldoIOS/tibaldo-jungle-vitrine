@@ -87,8 +87,8 @@ async function handleLinksAlertQueue(request: Request, env: Env): Promise<Respon
   if (!authorizedAlertQueue(request, env)) return Response.json({ error: "AUTH_REQUIRED" }, { status: 401, headers });
   if (request.method === "GET") {
     const rows = await env.DB.prepare(
-      "SELECT id, action, path, created_at FROM conversion_events WHERE path = ? AND action IN (?, ?) AND target IN (?, ?, ?) ORDER BY created_at ASC LIMIT 20",
-    ).bind(LINKS_OPEN_PATH, "links_open", "links_open_test", "alert_pending", "alert_transport_failed", "alert_outcome_uncertain").all();
+      "SELECT id, action, path, created_at FROM conversion_events WHERE path = ? AND action IN (?, ?) AND target = ? ORDER BY created_at ASC LIMIT 20",
+    ).bind(LINKS_OPEN_PATH, "links_open", "links_open_test", "alert_pending").all();
     return Response.json({ events: rows.results }, { headers });
   }
   if (request.method === "POST") {
