@@ -1,14 +1,16 @@
 // Dates éditoriales stables. Elles ne doivent être modifiées que lorsqu'un contenu
 // public change réellement, jamais automatiquement pendant le build.
 export const editorialLastModified = {
-  "/": "2026-08-15",
+  "/": "2026-09-16",
   "/plantes": "2026-08-17",
   "/fleurs": "2026-08-15",
   "/substrats": "2026-08-15",
   "/rempotage": "2026-08-30",
   "/evenements": "2026-08-17",
   "/services": "2026-08-15",
-  "/coulisses": "2026-08-15",
+  "/coulisses": "2026-09-16",
+  "/coulisses/mes-plantes-de-reve": "2026-09-16",
+  "/plantes/monstera/devil-monster": "2026-09-16",
   "/contact": "2026-08-15",
   "/boutique-plantes-lille": "2026-08-17",
   "/rempotage-plantes-lille": "2026-08-17",

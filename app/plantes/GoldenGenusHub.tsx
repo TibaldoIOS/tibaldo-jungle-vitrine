@@ -169,6 +169,7 @@ export default function GoldenGenusHub({ genre, guide, plants, editorials = [], 
       <section className={`${golden.groupSpecies} ${body.groupSpecies}`} aria-labelledby={`golden-group-species-${genre}`}>
         <div className="shell"><HubChapterMarker number="03" label={genre === "bananiers" ? "Explorer les genres" : "Explorer le genre"} /></div>
         <div id={`golden-group-species-${genre}`}><GenusSpeciesCarousel genre={genre} genusName={title} plants={displayPlants} /></div>
+        {genre === "monstera" ? <div className="shell"><Link className={canonical.dreamPlantLink} href="/plantes/monstera/devil-monster"><span>Dossier éditorial · Nom commercial documenté</span><strong>Monstera « Devil Monster »</strong><small>Ce lien ne crée pas un taxon distinct ni une disponibilité commerciale.</small><Arrow /></Link></div> : null}
         <p className={`${golden.indexNote} ${body.indexNote} shell`} data-reveal>{displayPlants.length ? `${displayPlants.length} ${displayPlants.length > 1 ? "variétés sont documentées" : "variété est documentée"}. ${gapCount ? `${gapCount} ${gapCount > 1 ? "fiches conservent" : "fiche conserve"} un manque de photographie réelle plutôt qu’un visuel non vérifié.` : "Les médias présentés restent distincts du stock du Shop."}` : "Aucune fiche spécifique n’est encore publiée ; le guide de groupe reste accessible sans inventer de plante ni de photographie."}</p>
       </section>
 

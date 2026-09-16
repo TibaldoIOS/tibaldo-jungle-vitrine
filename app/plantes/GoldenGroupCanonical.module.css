@@ -114,6 +114,26 @@
   text-transform: none;
 }
 
+.dreamPlantLink {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 9px 24px;
+  align-items: center;
+  margin: 32px 0 0;
+  padding: 24px 26px;
+  border: 1px solid rgb(18 60 45 / 20%);
+  background: #f4f0e7;
+  color: #123c2d;
+  text-decoration: none;
+}
+
+.dreamPlantLink span,
+.dreamPlantLink small { grid-column: 1; }
+.dreamPlantLink span { color: #a36f62; font-size: 9px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+.dreamPlantLink strong { grid-column: 1; font: 400 28px/1.05 Georgia, serif; }
+.dreamPlantLink small { color: #66736b; font-size: 12px; line-height: 1.5; }
+.dreamPlantLink svg { grid-column: 2; grid-row: 1 / 4; width: 19px; }
+
 @media (max-width: 720px) {
   .factBand {
     grid-template-columns: 1fr;
@@ -138,4 +158,7 @@
   .sources {
     grid-column: 1;
   }
+
+  .dreamPlantLink { padding: 21px 19px; }
+  .dreamPlantLink strong { font-size: 24px; }
 }
