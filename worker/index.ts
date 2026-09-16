@@ -73,8 +73,8 @@ async function recordLinksOpen(request: Request, env: Env): Promise<void> {
     return;
   }
 
-  try {
-    const alert = await fetch(env.LINKS_ALERT_URL, {
+  const sendAlert = async () => {
+    const alert = await fetch(env.LINKS_ALERT_URL!, {
       method: "POST",
       headers: {
         authorization: `Bearer ${env.LINKS_ALERT_SECRET}`,
@@ -89,16 +89,27 @@ async function recordLinksOpen(request: Request, env: Env): Promise<void> {
       redirect: "error",
       signal: AbortSignal.timeout(10_000),
     });
-    const result = alert.ok ? await alert.json() as { state?: string } : null;
-    const state = result?.state === "PROVIDER_ACCEPTED"
-      ? "alert_provider_accepted"
-      : `alert_failed_${alert.status}`;
-    await env.DB.prepare("UPDATE conversion_events SET target = ? WHERE id = ?")
-      .bind(state, eventId).run();
-  } catch {
-    await env.DB.prepare("UPDATE conversion_events SET target = ? WHERE id = ?")
-      .bind("alert_outcome_uncertain", eventId).run();
+    if (!alert.ok) return `alert_failed_${alert.status}`;
+    let result: { state?: string };
+    try {
+      result = await alert.json() as { state?: string };
+    } catch {
+      return "alert_invalid_response";
+    }
+    return result.state === "PROVIDER_ACCEPTED" ? "alert_provider_accepted" : "alert_outcome_uncertain";
+  };
+
+  let state = "alert_transport_failed";
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    try {
+      state = await sendAlert();
+      if (state === "alert_provider_accepted" || state.startsWith("alert_failed_")) break;
+    } catch {
+      state = "alert_transport_failed";
+    }
   }
+  await env.DB.prepare("UPDATE conversion_events SET target = ? WHERE id = ?")
+    .bind(state, eventId).run();
 }
 
 function getControlledMediaAssetPath(pathname: string): string | null {
