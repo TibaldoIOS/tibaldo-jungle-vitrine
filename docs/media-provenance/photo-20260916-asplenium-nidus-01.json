@@ -1,0 +1,35 @@
+{
+  "batch_id": "PHOTO-20260916-ASPLENIUM-NIDUS-01",
+  "source_before": "88fdc3494ddb5377f365bd86daf0f0318415e7b7",
+  "public_version_before": 162,
+  "photos": [
+    {
+      "owner_identity": "Asplenium nidus",
+      "canonical_slug": "plantes/asplenium/nidus",
+      "identity_evidence": "Nom fourni par Owner : Asplenium nidus",
+      "original_filename": "codex-clipboard-dd8b025a-2bda-4f15-8e91-05cfb54a5f2b.png",
+      "original_preserved_path": "/Users/tibaldo/Developer/TIBALDO/photo-asplenium-nidus-20260916-evidence/Asplenium nidus.png",
+      "original_sha256": "aa441573a1e6d5c62e7ac081ae849c53b6acecda919ce62b076d4112885328da",
+      "filename": "asplenium-nidus-fougere-nid-oiseau-en-pot.webp",
+      "asset_path": "/owner-media/asplenium-nidus/asplenium-nidus-fougere-nid-oiseau-en-pot.webp",
+      "public_path": "/media/owner-media/asplenium-nidus/asplenium-nidus-fougere-nid-oiseau-en-pot.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/asplenium-nidus/asplenium-nidus-fougere-nid-oiseau-en-pot.webp",
+      "sha256": "709c07829fcaee7ace1b4581d8fd7e55e2e9749d5b5c362b425c909433a5c6ee",
+      "bytes": 277032,
+      "dimensions": [1536, 1024],
+      "alt": "Asplenium nidus en pot, formant une large rosette de frondes vert vif aux marges ondulées.",
+      "provenance": "OWNER",
+      "rights": "Autorisation Owner permanente",
+      "credit": "Photo : TIBALDO",
+      "existing_media": [{"src": "/photo-reelle-a-venir.svg", "status": "placeholder"}]
+    }
+  ],
+  "processing": "WebP quality88 method6; no crop, no upscale, no generative alteration; metadata stripped",
+  "allowed_paths": [
+    "docs/media-provenance/photo-20260916-asplenium-nidus-01.json",
+    "lib/plants/catalog.ts",
+    "app/credits-images/page.tsx",
+    "tests/photo-asplenium-nidus-owner-v1.test.ts",
+    "public/owner-media/asplenium-nidus/asplenium-nidus-fougere-nid-oiseau-en-pot.webp"
+  ]
+}
