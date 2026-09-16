@@ -22,6 +22,7 @@ import { applyOwnerPileaMediaV1 } from "./owner-pilea-media-v1.ts";
 import { canonicalCoverageAdditions } from "./canonical-coverage-additions-v1.ts";
 import { epipremnumPinnatum } from "./epipremnum-pinnatum.ts";
 import { applyCanonicalQualityFixes } from "./canonical-quality-fixes-v1.ts";
+import { applyDevilMonsterContext } from "./devil-monster-v1.ts";
 
 export const plantFamilies = [
   { slug: "beaucarnea", name: "Beaucarnea", eyebrow: "Silhouettes succulentes", description: "Un tronc renflé et une croissance lente : comprendre Beaucarnea recurvata sans le confondre avec un palmier.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie de Beaucarnea à documenter", available: true },
@@ -201,11 +202,11 @@ const rawPlants: PlantEntry[] = [{
   publishedAt: "2026-08-06", updatedAt: "2026-08-06",
 }, ...newArrivalPlants, ...requestedPlants, ...afternoonPlants, ...encyclopediaV19ExpansionPlants, ...prayerPlants, ...encyclopediaV2Step1Plants, ...encyclopediaV2Step2Plants, cycasRevoluta, dicksoniaAntarctica, ...agaveFatsiaStrelitziaPlants, ...encyclopediaP1Plants, ...stockIdentityPlants, ...horticulturalIdentityPlants];
 
-export const plants: PlantEntry[] = applyOwnerPileaMediaV1(applyOwnerMarbleQueenMediaV1(applyOwnerMonsteraMintMediaV1(
+export const plants: PlantEntry[] = applyDevilMonsterContext(applyOwnerPileaMediaV1(applyOwnerMarbleQueenMediaV1(applyOwnerMonsteraMintMediaV1(
   applyOwnerMonsteraThaiConstellationMediaV1(
     applyMediaRightsP0Closure(applyVariegataContext(applyShopReferenceContext([...rawPlants, ...shopReferencePlants]))),
   ),
-)));
+))));
 
 // Owner photo wave PHOTO-20260910-MONSTERA-01: exact existing canonical media entries.
 const esqueletoOwnerMediaPlantIndex = plants.findIndex((plant) => plant.genre === "monstera" && plant.slug === "esqueleto");

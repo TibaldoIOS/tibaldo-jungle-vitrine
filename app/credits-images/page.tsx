@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 };
 
 const credits: readonly [string, string, string, string, string?][] = [
+["Monstera deliciosa ‘Devil Monster’", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260916-monstera-devil-monster-01/devil-monster"],
 ["Monstera deliciosa · photo Owner", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260916-monstera-deliciosa-01/deliciosa"],
 ["Ensete ventricosum ‘Maurelii’", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260916-ensete-maurelii-01/maurelii"],
 ["Ficus elastica ‘Abidjan’", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260916-ficus-abidjan-01/abidjan"],

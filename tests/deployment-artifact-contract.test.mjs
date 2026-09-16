@@ -31,11 +31,12 @@ const labs = [
 
 test("release preserves established identities and adds only documented runtime entities", () => {
   const historical = JSON.parse(readFileSync(new URL("../docs/ENCYCLOPEDIA_CANONICAL_REGISTRY_V1.json", import.meta.url), "utf8"));
-  const expected = new Set([...historical.entities.map(p => p.ENCYCLOPEDIA_ENTITY_ID), "epipremnum/pinnatum", "ficus/abidjan"]);
+  const expected = new Set([...historical.entities.map(p => p.ENCYCLOPEDIA_ENTITY_ID), "epipremnum/pinnatum", "ficus/abidjan", "monstera/devil-monster"]);
   const current = plants.map(p => `${p.genre}/${p.slug}`);
   assert.equal(new Set(current).size, current.length);
   assert.deepEqual(new Set(current), expected);
   assert.equal(plants.filter(p => p.genre === "monstera" && p.slug === "deliciosa-variegata").length, 1);
+  assert.equal(plants.filter(p => p.genre === "monstera" && p.slug === "devil-monster").length, 1);
   for (const slug of ["frydek-variegata", "silver-dragon", "red-secret"]) {
     assert.equal(plants.filter(p => p.genre === "alocasia" && p.slug === slug).length, 1);
   }

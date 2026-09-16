@@ -1,0 +1,40 @@
+{
+  "batch": "PHOTO-20260916-MONSTERA-DEVIL-MONSTER-01",
+  "source_before": "0dce66f013a2e31680a344e9073f289e510682a0",
+  "photos": [
+    {
+      "owner_identity": "Monstera deliciosa ‘Devil Monster’",
+      "canonical_slug": "plantes/monstera/devil-monster",
+      "original_filename": "Photo 1.jpg",
+      "original_preserved_path": "/Users/tibaldo/Developer/TIBALDO/photo-monstera-devil-monster-20260916-evidence/Monstera Devil Monster.jpg",
+      "original_width": 1024,
+      "original_height": 1280,
+      "original_sha256": "69ba67f84472c326f63432b3d75c54e9b1d7fe8fdf7911c5fa192bfc61b9eebc",
+      "filename": "monstera-deliciosa-devil-monster-feuille-panachee.webp",
+      "asset_path": "/owner-media/monstera-devil-monster/monstera-deliciosa-devil-monster-feuille-panachee.webp",
+      "public_path": "/media/owner-media/monstera-devil-monster/monstera-deliciosa-devil-monster-feuille-panachee.webp",
+      "api_url": "https://jungle.tibaldo.fr/owner-media/monstera-devil-monster/monstera-deliciosa-devil-monster-feuille-panachee.webp",
+      "width": 1024,
+      "height": 1280,
+      "bytes": 226050,
+      "sha256": "7bb87b77f0441703aee2838ca64028c6a16f5acf5867ed39c839ce23215e4f57",
+      "alt": "Grande feuille fenêtrée de Monstera deliciosa ‘Devil Monster’, fortement marbrée de blanc crème et de vert.",
+      "provenance": "OWNER",
+      "rights": "Autorisation permanente Owner TIBALDO",
+      "credit": "Photo : TIBALDO",
+      "processing": ["conversion WebP qualité 88"],
+      "crop": false,
+      "upscale": false,
+      "generative_alteration": false
+    }
+  ],
+  "allowlist": [
+    "app/credits-images/page.tsx",
+    "docs/media-provenance/photo-20260916-monstera-devil-monster-01.json",
+    "lib/plants/catalog.ts",
+    "lib/plants/devil-monster-v1.ts",
+    "public/owner-media/monstera-devil-monster/monstera-deliciosa-devil-monster-feuille-panachee.webp",
+    "tests/deployment-artifact-contract.test.mjs",
+    "tests/photo-monstera-devil-monster-owner-v1.test.ts"
+  ]
+}
