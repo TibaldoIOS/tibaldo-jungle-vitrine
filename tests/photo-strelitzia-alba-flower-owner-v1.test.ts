@@ -1,0 +1,31 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { getPlant, getPlantsByGenre, plants } from '../lib/plants/catalog.ts';
+import { toVerifiedMediaApiFields } from '../lib/plants/verified-media-api-contract.ts';
+
+const manifest = JSON.parse(readFileSync(new URL('../docs/media-provenance/photo-20260917-strelitzia-alba-flower-01.json', import.meta.url), 'utf8'));
+const photo = manifest.photos[0];
+test('Strelitzia augusta maps to the single alba canon and preserves both Owner photos', () => {
+  const plant = getPlant('strelitzia', 'alba')!;
+  assert.ok(plant);
+  assert.equal(plants.filter(p => p.genre === 'strelitzia' && p.slug === 'alba').length, 1);
+  assert.ok(plant.description.some(text => text.includes('Strelitzia augusta Thunb.')));
+  const media = plant.gallery[0];
+  assert.equal(media.src, photo.public_path);
+  assert.equal(media.alt, photo.alt);
+  assert.equal(media.caption, 'Photo : TIBALDO');
+  assert.equal(media.license?.creator, 'TIBALDO');
+  assert.equal(media.license?.status, 'verified');
+  assert.equal(plant.gallery[1]?.src, '/media/owner-media/strelitzia-alba/strelitzia-alba-port-et-floraison-blanche.webp');
+  const bytes = readFileSync(new URL(`../public${photo.asset_path}`, import.meta.url));
+  assert.equal(bytes.toString('ascii', 0, 4), 'RIFF');
+  assert.equal(bytes.toString('ascii', 8, 12), 'WEBP');
+  assert.equal(createHash('sha256').update(bytes).digest('hex'), photo.sha256);
+  assert.equal(getPlantsByGenre('strelitzia').find(p => p.slug === 'alba')?.gallery[0].src, media.src);
+  const api = toVerifiedMediaApiFields(plant, 'photo-wave-test');
+  assert.equal(api.primary_media_url, photo.api_url);
+  assert.equal(api.primary_media_alt, media.alt);
+  assert.equal(api.primary_media_creator, 'TIBALDO');
+});

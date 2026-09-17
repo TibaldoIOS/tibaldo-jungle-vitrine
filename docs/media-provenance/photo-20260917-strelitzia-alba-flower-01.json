@@ -1,0 +1,27 @@
+{
+  "batch_id": "PHOTO-20260917-STRELITZIA-ALBA-FLOWER-01",
+  "source_before": "c662a4d38a8d2fa410a118c075146b21fcd16d20",
+  "public_version_before": 164,
+  "photos": [{
+    "owner_identity": "Strelitzia augusta (alba)",
+    "canonical_slug": "plantes/strelitzia/alba",
+    "identity_evidence": "Nom fourni par Owner : Strelitzia augusta (alba); le catalogue conserve augusta comme synonyme de Strelitzia alba",
+    "original_filename": "codex-clipboard-fdba1ab7-16cd-4460-835f-95caf894b854.png",
+    "original_preserved_path": "/Users/tibaldo/Developer/TIBALDO/photo-strelitzia-alba-flower-20260917-evidence/Strelitzia augusta alba.png",
+    "original_sha256": "370dec1748abf8a9bdf641792c02c12607a9800b5cfe1d4c14ffea00ea807426",
+    "filename": "strelitzia-alba-inflorescence-blanche-spathe-sombre.webp",
+    "asset_path": "/owner-media/strelitzia-alba/strelitzia-alba-inflorescence-blanche-spathe-sombre.webp",
+    "public_path": "/media/owner-media/strelitzia-alba/strelitzia-alba-inflorescence-blanche-spathe-sombre.webp",
+    "api_url": "https://jungle.tibaldo.fr/owner-media/strelitzia-alba/strelitzia-alba-inflorescence-blanche-spathe-sombre.webp",
+    "sha256": "a8fa208f984cdc8417cc6e29698ad2786f8c9be21f978b383f1428d6a32b7abc",
+    "bytes": 252636,
+    "dimensions": [1312, 1199],
+    "alt": "Inflorescence blanche de Strelitzia alba émergeant de grandes spathes sombres, sous un feuillage vert devant un ciel bleu.",
+    "provenance": "OWNER",
+    "rights": "Autorisation Owner permanente",
+    "credit": "Photo : TIBALDO",
+    "existing_media_preserved": ["/media/owner-media/strelitzia-alba/strelitzia-alba-port-et-floraison-blanche.webp"]
+  }],
+  "processing": "WebP quality88 method6; no crop, no upscale, no generative alteration; metadata stripped",
+  "allowed_paths": ["docs/media-provenance/photo-20260917-strelitzia-alba-flower-01.json", "lib/plants/catalog.ts", "app/credits-images/page.tsx", "tests/photo-strelitzia-alba-flower-owner-v1.test.ts", "tests/photo-strelitzia-alba-owner-v1.test.ts", "public/owner-media/strelitzia-alba/strelitzia-alba-inflorescence-blanche-spathe-sombre.webp"]
+}

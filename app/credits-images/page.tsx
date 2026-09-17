@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 };
 
 const credits: readonly [string, string, string, string, string?][] = [
+["Strelitzia alba · inflorescence", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260917-strelitzia-alba-flower-01/alba"],
 ["Fatsia japonica ‘Spider’s Web’", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260916-fatsia-spiders-web-01/japonica-spiders-web"],
 ["Asplenium nidus", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260916-asplenium-nidus-01/nidus"],
 ["Monstera deliciosa ‘Devil Monster’", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260916-monstera-devil-monster-01/devil-monster"],
