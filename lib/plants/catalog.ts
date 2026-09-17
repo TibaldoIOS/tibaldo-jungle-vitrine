@@ -663,6 +663,29 @@ if (alocasiaPlatinumBase && !plants.some(p => p.genre === "alocasia" && p.slug =
   });
 }
 
+const dracaenaHahniiBase = plants.find(p => p.genre === "sansevieria" && p.slug === "black-diamond")
+  ?? plants.find(p => p.genre === "sansevieria" && p.slug === "trifasciata");
+if (dracaenaHahniiBase && !plants.some(p => p.genre === "sansevieria" && p.slug === "hahnii")) {
+  plants.push({
+    ...dracaenaHahniiBase,
+    slug: "hahnii",
+    botanicalName: "Dracaena trifasciata ‘Hahnii’",
+    displayName: "Hahnii",
+    listingName: "Sansevieria ‘Hahnii’ · Dracaena trifasciata",
+    subtitle: "Une forme compacte en rosette, encore très souvent vendue sous le nom de Sansevieria Hahnii.",
+    taxonomy: {...dracaenaHahniiBase.taxonomy, genus: "Dracaena", species: "Dracaena trifasciata", cultivar: "Hahnii", commonNames: ["Sansevieria Hahnii", "Sansevieria nid d’oiseau", "Langue de belle-mère naine"]},
+    hybridization: "Cultivar horticole compact rattaché à Dracaena trifasciata. Sansevieria trifasciata ‘Hahnii’ reste son nom horticole historique et courant.",
+    synonyms: ["Sansevieria trifasciata ‘Hahnii’", "Sansevieria ‘Hahnii’"],
+    description: ["Dracaena trifasciata ‘Hahnii’ forme des rosettes basses et serrées de feuilles épaisses, pointues et marbrées de plusieurs tons de vert.", "Sa silhouette compacte la distingue des formes dressées de Dracaena trifasciata. Elle conserve les mêmes besoins essentiels : lumière généreuse, substrat drainant et arrosages espacés."],
+    comparisons: [{name: "Dracaena trifasciata", difference: "Hahnii reste plus basse et développe des rosettes imbriquées, tandis que la forme type produit de longues feuilles verticales."}, {name: "Dracaena trifasciata ‘Black Diamond’", difference: "Black Diamond présente des feuilles plus dressées et sombres ; Hahnii se reconnaît ici à son port compact en nid."}],
+    gallery: [{"src": "/media/owner-media/dracaena-trifasciata-hahnii/dracaena-trifasciata-hahnii-rosette-compacte.webp", "alt": "Dracaena trifasciata ‘Hahnii’ en pot clair, formant des rosettes compactes de feuilles vertes pointues et marbrées.", "caption": "Photo : TIBALDO", "width": 1312, "height": 1199, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260917-dracaena-hahnii-01/hahnii", "registryPath": "/credits-images", "note": "Identité horticole fournie par Owner et création canonique autorisée. Provenance : docs/media-provenance/photo-20260917-dracaena-hahnii-01.json"}}],
+    mediaNeeds: [],
+    seo: {title: "Dracaena trifasciata Hahnii : entretien de la Sansevieria naine", description: "Guide de Dracaena trifasciata ‘Hahnii’ : lumière, arrosage et entretien de cette Sansevieria compacte en rosette.", keywords: ["Dracaena trifasciata Hahnii", "Sansevieria Hahnii", "Sansevieria naine"]},
+    publishedAt: "2026-09-17",
+    updatedAt: "2026-09-17",
+  });
+}
+
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
 export const getPlantsByGenre = (genre: string) => plants.filter((plant) =>
