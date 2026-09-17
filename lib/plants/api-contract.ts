@@ -1,3 +1,5 @@
+import { publicMediaContractPath } from "./public-media-path";
+
 type ApiPlant = {
   slug: string;
   genre: string;
@@ -31,7 +33,7 @@ const fallbackImage = {
 };
 
 const absoluteUrl = (path: string) => new URL(path, origin).toString();
-const canonicalMediaPath = (path: string) => path.replace(/^\/media\//, "/");
+const canonicalMediaPath = publicMediaContractPath;
 export const encyclopediaSlugOf = (plant: Pick<ApiPlant, "genre" | "slug">) => `plantes/${plant.genre}/${plant.slug}`;
 
 export function toPlantApiV1(plant: ApiPlant) {

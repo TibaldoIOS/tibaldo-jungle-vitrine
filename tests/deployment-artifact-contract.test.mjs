@@ -110,3 +110,28 @@ test("PUBLIC artifact preserves direct permanent redirects", { skip: requestedMo
     assert.equal(new URL(response.headers.get("location"), "https://jungle.tibaldo.fr").pathname.replace(/\/$/, ""), destination, source);
   }
 });
+
+test("controlled Owner WebP routes override the storage MIME safely", async () => {
+  const controlledPaths = [
+    "/media/owner-media/strelitzia-alba/strelitzia-alba-inflorescence-blanche-spathe-sombre.webp",
+    "/media/owner-media/anthurium-silver-blush/anthurium-silver-blush-feuillage-argente.webp",
+  ];
+  const assetRequests = [];
+  const mediaEnv = {
+    ...env,
+    ASSETS: {
+      fetch: async (request) => {
+        assetRequests.push(new URL(request.url).pathname);
+        return new Response("RIFF....WEBP", { headers: { "Content-Type": "application/octet-stream" } });
+      },
+    },
+  };
+  for (const path of controlledPaths) {
+    const request = new Request(`https://jungle.tibaldo.fr${path}`);
+    const response = await worker.fetch(request, mediaEnv, ctx);
+    assert.equal(response.status, 200, path);
+    assert.equal(response.headers.get("content-type"), "image/webp", path);
+    assert.equal(response.headers.get("x-content-type-options"), "nosniff", path);
+  }
+  assert.deepEqual(assetRequests, controlledPaths.map((path) => path.replace(/^\/media/, "")));
+});

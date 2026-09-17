@@ -1,5 +1,6 @@
 import { jungleOrigin } from "../deployment-mode.ts";
 import { publicMediaCreator, publicMediaLicense } from "./public-media-credit.ts";
+import { publicMediaContractPath } from "./public-media-path.ts";
 import type { PlantEntry } from "./types.ts";
 import { isEditorialPlaceholder, isInternalPhotoProductionCopy, isPhotoProductionPlaceholder } from "./types.ts";
 
@@ -8,7 +9,7 @@ export const verifiedMediaApiContractVersion = "1.0";
 const canonicalMediaPath = (path: string) =>
   path === "/media/anthurium-pallidiflorum-feuillage-tibaldo-jungle.webp"
     ? path
-    : path.replace(/^\/media\//, "/");
+    : publicMediaContractPath(path);
 
 export function exactVerifiedPrimaryMedia(plant: PlantEntry) {
   return plant.gallery.find((image) =>
