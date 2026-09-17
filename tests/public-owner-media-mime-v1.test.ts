@@ -7,9 +7,15 @@ import { toVerifiedMediaApiFields } from "../lib/plants/verified-media-api-contr
 const expected = [
   ["strelitzia", "alba", "/media/owner-media/strelitzia-alba/"],
   ["anthurium", "silver-blush", "/media/owner-media/anthurium-silver-blush/"],
+  ["ficus", "abidjan", "/media/owner-media/ficus-elastica-abidjan/"],
+  ["alocasia", "platinum", "/media/owner-media/alocasia-platinum/"],
+  ["musa", "basjoo", "/media/documentary-media/musa-basjoo/"],
+  ["olea", "europaea", "/media/documentary-media/olea-europaea/"],
+  ["asplenium", "scolopendrium", "/media/documentary-media/asplenium-scolopendrium/"],
+  ["tetrapanax", "papyrifer", "/media/documentary-media/tetrapanax-papyrifer/"],
 ] as const;
 
-test("les nouveaux médias Owner utilisent la route publique à MIME contrôlé", () => {
+test("les nouveaux médias vérifiés utilisent la route publique à MIME contrôlé", () => {
   for (const [genre, slug, prefix] of expected) {
     const plant = getPlant(genre, slug)!;
     assert.ok(plant, `${genre}/${slug}`);

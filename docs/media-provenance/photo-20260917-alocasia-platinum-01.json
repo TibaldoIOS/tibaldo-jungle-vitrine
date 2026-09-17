@@ -1,1 +1,38 @@
-{"batch_id":"PHOTO-20260917-ALOCASIA-PLATINUM-01","source_before":"d45ddcf92ada7644e3f375f5e4ac2d5eea188f51","public_version_before":170,"photos":[{"owner_identity":"Alocasia sp. ‘Platinum’","canonical_slug":"plantes/alocasia/platinum","identity_evidence":"Nom fourni et création canonique autorisée par Owner; aucune espèce botanique inférée","original_filename":"codex-clipboard-836184da-278d-47e5-9636-81fc3865c965.png","original_preserved_path":"/Users/tibaldo/Developer/TIBALDO/photo-alocasia-platinum-20260917-evidence/Alocasia sp Platinum.png","original_sha256":"b1785b6a8271753aa8516f405aebfc7aee627cedd400fbc4639d15767ce3f304","filename":"alocasia-platinum-feuillage-argente-texture.webp","asset_path":"/owner-media/alocasia-platinum/alocasia-platinum-feuillage-argente-texture.webp","public_path":"/media/owner-media/alocasia-platinum/alocasia-platinum-feuillage-argente-texture.webp","api_url":"https://jungle.tibaldo.fr/owner-media/alocasia-platinum/alocasia-platinum-feuillage-argente-texture.webp","sha256":"3daec6eda2bdfc548d6dc9187c46b1cdd488a1be831602b100239a2e91155986","bytes":318876,"dimensions":[1254,1254],"alt":"Alocasia sp. ‘Platinum’ en pot clair, aux grandes feuilles sagittées vert argenté et fortement texturées.","provenance":"OWNER","rights":"Autorisation Owner permanente","credit":"Photo : TIBALDO"}],"processing":"WebP quality88 method6; no crop, no upscale, no generative alteration; metadata stripped","allowed_paths":["docs/media-provenance/photo-20260917-alocasia-platinum-01.json","lib/plants/catalog.ts","app/credits-images/page.tsx","tests/deployment-artifact-contract.test.mjs","tests/photo-alocasia-platinum-owner-v1.test.ts","public/owner-media/alocasia-platinum/alocasia-platinum-feuillage-argente-texture.webp"]}
+{
+  "batch_id": "PHOTO-20260917-ALOCASIA-PLATINUM-01",
+  "source_before": "d45ddcf92ada7644e3f375f5e4ac2d5eea188f51",
+  "public_version_before": 170,
+  "photos": [
+    {
+      "owner_identity": "Alocasia sp. ‘Platinum’",
+      "canonical_slug": "plantes/alocasia/platinum",
+      "identity_evidence": "Nom fourni et création canonique autorisée par Owner; aucune espèce botanique inférée",
+      "original_filename": "codex-clipboard-836184da-278d-47e5-9636-81fc3865c965.png",
+      "original_preserved_path": "/Users/tibaldo/Developer/TIBALDO/photo-alocasia-platinum-20260917-evidence/Alocasia sp Platinum.png",
+      "original_sha256": "b1785b6a8271753aa8516f405aebfc7aee627cedd400fbc4639d15767ce3f304",
+      "filename": "alocasia-platinum-feuillage-argente-texture.webp",
+      "asset_path": "/owner-media/alocasia-platinum/alocasia-platinum-feuillage-argente-texture.webp",
+      "public_path": "/media/owner-media/alocasia-platinum/alocasia-platinum-feuillage-argente-texture.webp",
+      "api_url": "https://jungle.tibaldo.fr/media/owner-media/alocasia-platinum/alocasia-platinum-feuillage-argente-texture.webp",
+      "sha256": "3daec6eda2bdfc548d6dc9187c46b1cdd488a1be831602b100239a2e91155986",
+      "bytes": 318876,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alt": "Alocasia sp. ‘Platinum’ en pot clair, aux grandes feuilles sagittées vert argenté et fortement texturées.",
+      "provenance": "OWNER",
+      "rights": "Autorisation Owner permanente",
+      "credit": "Photo : TIBALDO"
+    }
+  ],
+  "processing": "WebP quality88 method6; no crop, no upscale, no generative alteration; metadata stripped",
+  "allowed_paths": [
+    "docs/media-provenance/photo-20260917-alocasia-platinum-01.json",
+    "lib/plants/catalog.ts",
+    "app/credits-images/page.tsx",
+    "tests/deployment-artifact-contract.test.mjs",
+    "tests/photo-alocasia-platinum-owner-v1.test.ts",
+    "public/owner-media/alocasia-platinum/alocasia-platinum-feuillage-argente-texture.webp"
+  ]
+}

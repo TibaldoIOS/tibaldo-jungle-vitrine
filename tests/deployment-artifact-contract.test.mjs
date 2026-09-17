@@ -115,6 +115,12 @@ test("controlled Owner WebP routes override the storage MIME safely", async () =
   const controlledPaths = [
     "/media/owner-media/strelitzia-alba/strelitzia-alba-inflorescence-blanche-spathe-sombre.webp",
     "/media/owner-media/anthurium-silver-blush/anthurium-silver-blush-feuillage-argente.webp",
+    "/media/owner-media/ficus-elastica-abidjan/ficus-elastica-abidjan-feuillage-sombre.webp",
+    "/media/owner-media/alocasia-platinum/alocasia-platinum-feuillage-argente-texture.webp",
+    "/media/documentary-media/musa-basjoo/musa-basjoo-jardin-botanique-wroclaw.webp",
+    "/media/documentary-media/olea-europaea/olea-europaea-oliveraie-crete.webp",
+    "/media/documentary-media/asplenium-scolopendrium/asplenium-scolopendrium-kew.webp",
+    "/media/documentary-media/tetrapanax-papyrifer/tetrapanax-papyrifer-missouri-botanical-garden.webp",
   ];
   const assetRequests = [];
   const mediaEnv = {

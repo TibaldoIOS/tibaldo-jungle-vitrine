@@ -9,6 +9,10 @@ export const metadata: Metadata = {
 };
 
 const credits: readonly [string, string, string, string, string?][] = [
+["Musa basjoo", "Crusier", "CC BY 4.0 · conversion WebP sans recadrage", "https://commons.wikimedia.org/wiki/File:Musa_basjoo_OB_Wroc%C5%82aw.jpg", "https://creativecommons.org/licenses/by/4.0/"],
+["Olea europaea", "H. Zell", "CC BY-SA 3.0 · dérivé WebP sans recadrage", "https://commons.wikimedia.org/wiki/File:Olea_europaea_002.JPG", "https://creativecommons.org/licenses/by-sa/3.0/"],
+["Asplenium scolopendrium", "NasserHalaweh", "CC BY-SA 4.0 · dérivé WebP sans recadrage", "https://commons.wikimedia.org/wiki/File:Aspleniaceae_Asplenium_scolopendrium_1.jpg", "https://creativecommons.org/licenses/by-sa/4.0/"],
+["Tetrapanax papyrifer", "KATHERINE WAGNER-REISS", "CC BY-SA 4.0 · dérivé WebP sans recadrage", "https://commons.wikimedia.org/wiki/File:Tetrapanax_papyrifer_at_the_Missouri_Botanical_Garden.jpg", "https://creativecommons.org/licenses/by-sa/4.0/"],
 ["Anthurium ‘Silver Blush’", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260917-anthurium-silver-blush-01/silver-blush"],
 ["Dracaena trifasciata ‘Hahnii’", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260917-dracaena-hahnii-01/hahnii"],
 ["Alocasia sp. ‘Platinum’", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260917-alocasia-platinum-01/platinum"],

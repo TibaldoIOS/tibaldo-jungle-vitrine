@@ -695,6 +695,34 @@ if (anthuriumSilverBlushOwnerIndex !== -1) {
   plants[anthuriumSilverBlushOwnerIndex] = {...plant, gallery: [{"src": "/media/owner-media/anthurium-silver-blush/anthurium-silver-blush-feuillage-argente.webp", "alt": "Anthurium ‘Silver Blush’ en pot clair, aux feuilles cordiformes vertes largement marquées de nervures et de zones argentées.", "caption": "Photo : TIBALDO", "width": 1254, "height": 1254, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260917-anthurium-silver-blush-01/silver-blush", "registryPath": "/credits-images", "note": "Identité horticole fournie par Owner et reliée à l’entité canonique existante. Provenance : docs/media-provenance/photo-20260917-anthurium-silver-blush-01.json"}}, ...plant.gallery.filter(m => m.license?.status === "verified")], mediaNeeds: []};
 }
 
+const documentaryBatch = [
+  {
+    genre: "musa", slug: "basjoo",
+    media: {src: "/media/documentary-media/musa-basjoo/musa-basjoo-jardin-botanique-wroclaw.webp", alt: "Musa basjoo formant une large touffe de feuilles vertes dans le jardin botanique de Wrocław.", caption: "Photo : Crusier — CC BY 4.0 · conversion WebP sans recadrage.", width: 1920, height: 1080, license: {status: "verified" as const, creator: "Crusier", license: "CC BY 4.0", licenseUrl: "https://creativecommons.org/licenses/by/4.0/", sourceUrl: "https://commons.wikimedia.org/wiki/File:Musa_basjoo_OB_Wroc%C5%82aw.jpg", registryPath: "/credits-images", note: "Dérivé documentaire avec attribution. Provenance : docs/media-provenance/photo-20260917-documentary-batch-01.json"}},
+  },
+  {
+    genre: "olea", slug: "europaea",
+    media: {src: "/media/documentary-media/olea-europaea/olea-europaea-oliveraie-crete.webp", alt: "Olea europaea adulte au tronc noueux et au feuillage gris-vert dans une oliveraie en Crète.", caption: "Photo : H. Zell — CC BY-SA 3.0 · dérivé WebP sans recadrage.", width: 1920, height: 1440, license: {status: "verified" as const, creator: "H. Zell", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/", sourceUrl: "https://commons.wikimedia.org/wiki/File:Olea_europaea_002.JPG", registryPath: "/credits-images", note: "Dérivé ShareAlike sous CC BY-SA 3.0. Provenance : docs/media-provenance/photo-20260917-documentary-batch-01.json"}},
+  },
+  {
+    genre: "asplenium", slug: "scolopendrium",
+    media: {src: "/media/documentary-media/asplenium-scolopendrium/asplenium-scolopendrium-kew.webp", alt: "Touffe d’Asplenium scolopendrium aux frondes vertes entières et ondulées au jardin botanique de Kew.", caption: "Photo : NasserHalaweh — CC BY-SA 4.0 · dérivé WebP sans recadrage.", width: 1920, height: 1398, license: {status: "verified" as const, creator: "NasserHalaweh", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/", sourceUrl: "https://commons.wikimedia.org/wiki/File:Aspleniaceae_Asplenium_scolopendrium_1.jpg", registryPath: "/credits-images", note: "Dérivé ShareAlike sous CC BY-SA 4.0. Provenance : docs/media-provenance/photo-20260917-documentary-batch-01.json"}},
+  },
+  {
+    genre: "tetrapanax", slug: "papyrifer",
+    media: {src: "/media/documentary-media/tetrapanax-papyrifer/tetrapanax-papyrifer-missouri-botanical-garden.webp", alt: "Tetrapanax papyrifer cultivé en pot, portant de grandes feuilles palmées au Missouri Botanical Garden.", caption: "Photo : KATHERINE WAGNER-REISS — CC BY-SA 4.0 · dérivé WebP sans recadrage.", width: 1920, height: 1440, license: {status: "verified" as const, creator: "KATHERINE WAGNER-REISS", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/", sourceUrl: "https://commons.wikimedia.org/wiki/File:Tetrapanax_papyrifer_at_the_Missouri_Botanical_Garden.jpg", registryPath: "/credits-images", note: "Dérivé ShareAlike sous CC BY-SA 4.0. Provenance : docs/media-provenance/photo-20260917-documentary-batch-01.json"}},
+  },
+] as const;
+
+for (const entry of documentaryBatch) {
+  const index = plants.findIndex((plant) => plant.genre === entry.genre && plant.slug === entry.slug);
+  if (index === -1) continue;
+  const plant = plants[index];
+  const existingVerified = plant.gallery.filter((media) => media.license?.status === "verified");
+  if (existingVerified.some((media) => media.src === entry.media.src)) continue;
+  plants[index] = {...plant, gallery: [entry.media, ...existingVerified], mediaNeeds: []};
+}
+
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
 export const getPlantsByGenre = (genre: string) => plants.filter((plant) =>

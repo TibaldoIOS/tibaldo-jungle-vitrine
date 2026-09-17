@@ -38,7 +38,8 @@ test("Puck, Silver Blush et Xanadu conservent leur portée taxonomique exacte", 
   const silver = getPlant("anthurium", "silver-blush")!;
   assert.equal(silver.taxonomy.species, "Rattachement spécifique non confirmé");
   assert.equal(silver.taxonomy.cultivar, null);
-  assert.equal(silver.gallery.length, 0);
+  assert.equal(silver.gallery.length, 1);
+  assert.match(silver.gallery[0].license?.sourceUrl ?? "", /photo-20260917-anthurium-silver-blush-01/);
   assert.doesNotMatch(JSON.stringify(silver), /anthurium-forgetii-dark-form-silver-blush-plante-en-pot/);
 
   const xanadu = getPlant("philodendron", "xanadu")!;
@@ -56,12 +57,17 @@ test("Cactus Mix reste un assortiment multi-identités partagé par S M et L", (
   assert.match(mix.gallery[0].license?.sourceUrl ?? "", /^https:\/\/unsplash\.com\//);
 });
 
-test("aucune photo d’une espèce voisine ne comble les lacunes documentaires", () => {
-  for (const id of ["musa/basjoo", "yucca/gigantea-puck", "olea/europaea", "tetrapanax/papyrifer", "asplenium/scolopendrium", "anthurium/silver-blush", "philodendron/xanadu"]) {
+test("les lacunes restantes restent honnêtes et les médias documentaires sont spécifiques", () => {
+  for (const id of ["yucca/gigantea-puck", "philodendron/xanadu"]) {
     const [genre, slug] = id.split("/");
     const plant = getPlant(genre, slug)!;
     const documentary = plant.gallery.filter((image) => image.license?.status === "verified");
     assert.equal(documentary.length, 0, id);
+  }
+  for (const id of ["musa/basjoo", "olea/europaea", "tetrapanax/papyrifer", "asplenium/scolopendrium", "anthurium/silver-blush"]) {
+    const [genre, slug] = id.split("/");
+    const plant = getPlant(genre, slug)!;
+    assert.equal(plant.gallery.filter((image) => image.license?.status === "verified").length, 1, id);
   }
   assert.doesNotMatch(JSON.stringify(getPlant("asplenium", "scolopendrium")), /asplenium-nidus-fougere-nid-oiseau/);
 });
