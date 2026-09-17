@@ -641,6 +641,28 @@ if (aspleniumNidusOwnerIndex !== -1) { const plant = plants[aspleniumNidusOwnerI
 const fatsiaSpidersWebOwnerIndex = plants.findIndex(p => p.genre === "fatsia" && p.slug === "japonica-spiders-web");
 if (fatsiaSpidersWebOwnerIndex !== -1) { const plant = plants[fatsiaSpidersWebOwnerIndex]; plants[fatsiaSpidersWebOwnerIndex] = {...plant, gallery: [{"src": "/media/owner-media/fatsia-japonica-spiders-web/fatsia-japonica-spiders-web-feuillage-panache.webp", "alt": "Fatsia japonica ‘Spider’s Web’ en pot, formant une touffe dense de grandes feuilles palmées panachées de vert et de blanc crème.", "caption": "Photo : TIBALDO", "width": 1312, "height": 1199, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260916-fatsia-spiders-web-01/japonica-spiders-web", "registryPath": "/credits-images", "note": "Identité fournie par Owner. Provenance : docs/media-provenance/photo-20260916-fatsia-spiders-web-01.json"}}, ...plant.gallery.filter(m => m.license?.status === "verified")], mediaNeeds: []}; }
 
+const alocasiaPlatinumBase = plants.find(p => p.genre === "alocasia" && p.slug === "imperial-red");
+if (alocasiaPlatinumBase && !plants.some(p => p.genre === "alocasia" && p.slug === "platinum")) {
+  plants.push({
+    ...alocasiaPlatinumBase,
+    slug: "platinum",
+    botanicalName: "Alocasia sp. ‘Platinum’",
+    displayName: "Platinum",
+    listingName: "Alocasia sp. ‘Platinum’",
+    subtitle: "Une sélection horticole au feuillage épais, gaufré et argenté, conservée sous une identité d’espèce prudente.",
+    taxonomy: {...alocasiaPlatinumBase.taxonomy, species: "Alocasia sp.", cultivar: "Platinum", commonNames: ["Alocasia Platinum"]},
+    hybridization: "Sélection horticole commercialisée sous le nom ‘Platinum’. L’espèce botanique n’est pas attribuée sans traçabilité supplémentaire.",
+    synonyms: [],
+    description: ["Alocasia sp. ‘Platinum’ présente des feuilles sagittées épaisses, fortement texturées, dont les tons vert gris peuvent paraître argentés selon la lumière.", "Le nom horticole ‘Platinum’ ne suffit pas à établir une espèce botanique : cette fiche conserve donc la notation prudente Alocasia sp. demandée par l’Owner."],
+    comparisons: [{name: "Alocasia ‘Imperial Red’", difference: "Imperial Red se distingue par ses pétioles pourpres et un feuillage plus uniformément vert ; Platinum est documenté ici pour son aspect argenté et gaufré."}],
+    gallery: [{"src": "/media/owner-media/alocasia-platinum/alocasia-platinum-feuillage-argente-texture.webp", "alt": "Alocasia sp. ‘Platinum’ en pot clair, aux grandes feuilles sagittées vert argenté et fortement texturées.", "caption": "Photo : TIBALDO", "width": 1254, "height": 1254, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260917-alocasia-platinum-01/platinum", "registryPath": "/credits-images", "note": "Identité horticole fournie par Owner sans attribution d’espèce. Provenance : docs/media-provenance/photo-20260917-alocasia-platinum-01.json"}}],
+    mediaNeeds: [],
+    seo: {title: "Alocasia Platinum : entretien et feuillage argenté", description: "Guide d’Alocasia sp. ‘Platinum’ : lumière, arrosage, humidité et entretien de son feuillage argenté texturé.", keywords: ["Alocasia Platinum", "Alocasia sp. Platinum", "Alocasia argenté"]},
+    publishedAt: "2026-09-17",
+    updatedAt: "2026-09-17",
+  });
+}
+
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
 export const getPlantsByGenre = (genre: string) => plants.filter((plant) =>
