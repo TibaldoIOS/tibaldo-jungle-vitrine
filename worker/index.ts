@@ -5,8 +5,10 @@ import { isBetaJungleDeployment } from "../lib/deployment-mode";
 import {
   classifyLinksOpen,
   linksOpenEventId,
+  LINKS_OPEN_ACTION,
   LINKS_OPEN_PATH,
 } from "../lib/links-open-tracking";
+import { buildLinksStatsRange, buildLinksStatsWindow, LINKS_STATS_TIME_ZONE } from "../lib/links-open-stats";
 
 interface Env {
   ASSETS: Fetcher;
@@ -72,8 +74,9 @@ async function recordLinksOpen(request: Request, env: Env): Promise<void> {
 }
 
 const LINKS_ALERT_QUEUE_PATH = "/api/internal/links-alerts";
+const LINKS_STATS_PATH = "/api/internal/links-stats";
 
-function authorizedAlertQueue(request: Request, env: Env): boolean {
+function authorizedInternalLinksRequest(request: Request, env: Env): boolean {
   const configured = env.LINKS_ALERT_SECRET ?? "";
   const supplied = (request.headers.get("authorization") ?? "").replace(/^Bearer /, "");
   if (!configured || configured.length !== supplied.length) return false;
@@ -84,7 +87,7 @@ function authorizedAlertQueue(request: Request, env: Env): boolean {
 
 async function handleLinksAlertQueue(request: Request, env: Env): Promise<Response> {
   const headers = { "content-type": "application/json", "cache-control": "no-store", "x-content-type-options": "nosniff" };
-  if (!authorizedAlertQueue(request, env)) return Response.json({ error: "AUTH_REQUIRED" }, { status: 401, headers });
+  if (!authorizedInternalLinksRequest(request, env)) return Response.json({ error: "AUTH_REQUIRED" }, { status: 401, headers });
   if (request.method === "GET") {
     const rows = await env.DB.prepare(
       "SELECT id, action, path, created_at FROM conversion_events WHERE path = ? AND action IN (?, ?) AND target = ? ORDER BY created_at ASC LIMIT 20",
@@ -105,6 +108,86 @@ async function handleLinksAlertQueue(request: Request, env: Env): Promise<Respon
     return Response.json({ updated: changed.meta.changes === 1 }, { headers });
   }
   return Response.json({ error: "METHOD_NOT_ALLOWED" }, { status: 405, headers });
+}
+
+type CountRow = { count: number | string | null };
+type LastOpenRow = { created_at: string };
+
+function rowCount(row: CountRow | null): number {
+  const count = Number(row?.count ?? 0);
+  return Number.isSafeInteger(count) && count >= 0 ? count : 0;
+}
+
+function linksOpenCountStatement(env: Env, start?: string, end?: string) {
+  let sql = "SELECT COUNT(*) AS count FROM conversion_events WHERE path = ? AND action = ?";
+  const bindings: string[] = [LINKS_OPEN_PATH, LINKS_OPEN_ACTION];
+  if (start) {
+    sql += " AND created_at >= ?";
+    bindings.push(start);
+  }
+  if (end) {
+    sql += " AND created_at < ?";
+    bindings.push(end);
+  }
+  return env.DB.prepare(sql).bind(...bindings);
+}
+
+async function handleLinksStats(request: Request, env: Env): Promise<Response> {
+  const headers = { "content-type": "application/json", "cache-control": "no-store", "x-content-type-options": "nosniff" };
+  if (!authorizedInternalLinksRequest(request, env)) return Response.json({ error: "AUTH_REQUIRED" }, { status: 401, headers });
+  if (request.method !== "GET") return Response.json({ error: "METHOD_NOT_ALLOWED" }, { status: 405, headers });
+
+  const generatedAt = new Date();
+  const canonicalWindow = buildLinksStatsWindow(generatedAt);
+  const url = new URL(request.url);
+  let requestedWindow;
+  try {
+    requestedWindow = buildLinksStatsRange({
+      start: url.searchParams.get("start"),
+      end: url.searchParams.get("end"),
+    }, generatedAt);
+  } catch (error) {
+    const reason = error instanceof RangeError ? error.message : "RANGE_INVALID";
+    return Response.json({ error: "RANGE_INVALID", reason }, { status: 400, headers });
+  }
+
+  const [lifetime, firstOpen, lastOpen, today, sevenDays, rangeCount] = await Promise.all([
+    linksOpenCountStatement(env).first<CountRow>(),
+    env.DB.prepare(
+      "SELECT created_at FROM conversion_events WHERE path = ? AND action = ? ORDER BY created_at ASC LIMIT 1",
+    ).bind(LINKS_OPEN_PATH, LINKS_OPEN_ACTION).first<LastOpenRow>(),
+    env.DB.prepare(
+      "SELECT created_at FROM conversion_events WHERE path = ? AND action = ? ORDER BY created_at DESC LIMIT 1",
+    ).bind(LINKS_OPEN_PATH, LINKS_OPEN_ACTION).first<LastOpenRow>(),
+    linksOpenCountStatement(env, canonicalWindow.todayStart, canonicalWindow.end).first<CountRow>(),
+    linksOpenCountStatement(env, canonicalWindow.start, canonicalWindow.end).first<CountRow>(),
+    linksOpenCountStatement(env, requestedWindow.start, requestedWindow.end).first<CountRow>(),
+  ]);
+
+  const daily: CountRow[] = [];
+  for (let offset = 0; offset < requestedWindow.daily.length; offset += 50) {
+    const days = requestedWindow.daily.slice(offset, offset + 50);
+    const results = await env.DB.batch<CountRow>(
+      days.map((day) => linksOpenCountStatement(env, day.start, day.end)),
+    );
+    daily.push(...results.map((result) => result.results[0] ?? { count: 0 }));
+  }
+
+  return Response.json({
+    timezone: LINKS_STATS_TIME_ZONE,
+    generated_at: generatedAt.toISOString(),
+    start: requestedWindow.startDate,
+    end: requestedWindow.endDate,
+    start_at: requestedWindow.start,
+    end_exclusive_at: requestedWindow.end,
+    range_count: rowCount(rangeCount),
+    today: rowCount(today),
+    seven_days: rowCount(sevenDays),
+    lifetime: rowCount(lifetime),
+    first_open: firstOpen?.created_at ?? null,
+    last_open: lastOpen?.created_at ?? null,
+    daily: requestedWindow.daily.map((day, index) => ({ date: day.date, count: rowCount(daily[index] ?? null) })),
+  }, { headers });
 }
 
 function getControlledMediaAssetPath(pathname: string): string | null {
@@ -169,6 +252,10 @@ const worker = {
 
     if (url.pathname === LINKS_ALERT_QUEUE_PATH) {
       return withDeploymentHeaders(request, await handleLinksAlertQueue(request, env));
+    }
+
+    if (url.pathname === LINKS_STATS_PATH) {
+      return withDeploymentHeaders(request, await handleLinksStats(request, env));
     }
 
     // The virtual tour is a self-contained, same-origin static experience.
