@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 };
 
 const credits: readonly [string, string, string, string, string?][] = [
+["Anthurium ‘Silver Blush’", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260917-anthurium-silver-blush-01/silver-blush"],
 ["Dracaena trifasciata ‘Hahnii’", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260917-dracaena-hahnii-01/hahnii"],
 ["Alocasia sp. ‘Platinum’", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260917-alocasia-platinum-01/platinum"],
 ["Strelitzia alba · inflorescence", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260917-strelitzia-alba-flower-01/alba"],

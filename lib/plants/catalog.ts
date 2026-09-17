@@ -689,6 +689,12 @@ if (dracaenaHahniiBase && !plants.some(p => p.genre === "sansevieria" && p.slug 
   });
 }
 
+const anthuriumSilverBlushOwnerIndex = plants.findIndex(p => p.genre === "anthurium" && p.slug === "silver-blush");
+if (anthuriumSilverBlushOwnerIndex !== -1) {
+  const plant = plants[anthuriumSilverBlushOwnerIndex];
+  plants[anthuriumSilverBlushOwnerIndex] = {...plant, gallery: [{"src": "/media/owner-media/anthurium-silver-blush/anthurium-silver-blush-feuillage-argente.webp", "alt": "Anthurium ‘Silver Blush’ en pot clair, aux feuilles cordiformes vertes largement marquées de nervures et de zones argentées.", "caption": "Photo : TIBALDO", "width": 1254, "height": 1254, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260917-anthurium-silver-blush-01/silver-blush", "registryPath": "/credits-images", "note": "Identité horticole fournie par Owner et reliée à l’entité canonique existante. Provenance : docs/media-provenance/photo-20260917-anthurium-silver-blush-01.json"}}, ...plant.gallery.filter(m => m.license?.status === "verified")], mediaNeeds: []};
+}
+
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
 export const getPlantsByGenre = (genre: string) => plants.filter((plant) =>

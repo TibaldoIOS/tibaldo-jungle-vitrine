@@ -2,7 +2,8 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { readFileSync } from "node:fs";
 
-import { plants } from "../lib/plants/catalog.ts";
+import { plantFamilies, plants } from "../lib/plants/catalog.ts";
+import { willaertIdentityPlants } from "../lib/plants/willaert-identities-v1.ts";
 import { publicPermanentRedirects } from "../lib/seo/public-redirects.ts";
 
 const requestedMode = process.env.JUNGLE_ENV === "public" ? "public" : "beta";
@@ -31,7 +32,7 @@ const labs = [
 
 test("release preserves established identities and adds only documented runtime entities", () => {
   const historical = JSON.parse(readFileSync(new URL("../docs/ENCYCLOPEDIA_CANONICAL_REGISTRY_V1.json", import.meta.url), "utf8"));
-  const expected = new Set([...historical.entities.map(p => p.ENCYCLOPEDIA_ENTITY_ID), "epipremnum/pinnatum", "ficus/abidjan", "monstera/devil-monster", "alocasia/platinum", "sansevieria/hahnii"]);
+  const expected = new Set([...historical.entities.map(p => p.ENCYCLOPEDIA_ENTITY_ID), ...willaertIdentityPlants.map(p => `${p.genre}/${p.slug}`), "epipremnum/pinnatum", "ficus/abidjan", "monstera/devil-monster", "alocasia/platinum", "sansevieria/hahnii"]);
   const current = plants.map(p => `${p.genre}/${p.slug}`);
   assert.equal(new Set(current).size, current.length);
   assert.deepEqual(new Set(current), expected);
@@ -88,7 +89,7 @@ test(`${requestedMode} artifact has the exact robots and sitemap contract`, asyn
     assert.equal(new Set(urls).size, urls.length);
     assert.ok(urls.every((url) => url.startsWith("https://jungle.tibaldo.fr/")));
     assert.ok(urls.every((url) => !url.includes("/lab/")));
-    assert.equal(urls.filter((url) => /^https:\/\/jungle\.tibaldo\.fr\/plantes\/[^/]+$/.test(url)).length, 34);
+    assert.equal(urls.filter((url) => /^https:\/\/jungle\.tibaldo\.fr\/plantes\/[^/]+$/.test(url)).length, plantFamilies.length);
   } else {
     assert.match(robotsText, /^Disallow: \/$/im);
     assert.doesNotMatch(robotsText, /^Sitemap:/im);
