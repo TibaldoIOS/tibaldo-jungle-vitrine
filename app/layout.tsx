@@ -7,6 +7,7 @@ import ConversionTracker from "./ConversionTracker";
 import { BetaEnvironmentBanner } from "./BetaEnvironmentBanner";
 import JunglePrelaunchCurtain from "./JunglePrelaunchCurtain";
 import PublicPreopeningSignal from "./PublicPreopeningSignal";
+import AnalyticsConsent from "./AnalyticsConsent";
 import {
   betaOnlyRobots,
   isPublicJungleDeployment,
@@ -106,6 +107,7 @@ export default function RootLayout({
         </div>
         <ConversionDock inert={prelaunchCurtainActive} />
         <ConversionTracker />
+        {isPublicJungleDeployment ? <AnalyticsConsent /> : null}
         {prelaunchCurtainActive ? <JunglePrelaunchCurtain /> : null}
       </body>
     </html>
