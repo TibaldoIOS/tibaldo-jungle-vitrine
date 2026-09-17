@@ -1,0 +1,124 @@
+{
+  "mission": "WILLAERT_JUNGLE_IDENTITIES_V1",
+  "source_public_base": "1fe3b75527520d5144b9302a8c7966e48e817b43",
+  "generated_at": "2026-09-17",
+  "rules": {
+    "commerce_mutated": false,
+    "sizes_are_botanical_entities": false,
+    "approximate_name_matching": false,
+    "neighbor_species_media_reuse": false,
+    "cactus_mix_policy": "Une fiche commerciale multi-formats, aucune espèce inventée"
+  },
+  "records": [
+    {
+      "product_id": "TJ-P-00000118",
+      "product_name": "Musa basjoo XL",
+      "canonical_identity": "Musa basjoo",
+      "jungle_identity_id": "musa/basjoo",
+      "encyclopedia_slug": "musa/basjoo",
+      "public_url": "https://jungle.tibaldo.fr/plantes/musa/basjoo",
+      "identity_confidence": "HIGH",
+      "media_status": "MISSING_EXACT_AUTHORIZED_MEDIA",
+      "note": "Fiche existante réutilisée ; XL reste un format commercial."
+    },
+    {
+      "product_id": "TJ-P-00000119",
+      "product_name": "Yucca elephantipes 'Puck'",
+      "canonical_identity": "Yucca gigantea — vendu comme ‘Puck’",
+      "jungle_identity_id": "yucca/gigantea-puck",
+      "encyclopedia_slug": "yucca/gigantea-puck",
+      "public_url": "https://jungle.tibaldo.fr/plantes/yucca/gigantea-puck",
+      "identity_confidence": "HIGH_SPECIES_UNRESOLVED_HORTICULTURAL_NAME",
+      "media_status": "MISSING_EXACT_AUTHORIZED_MEDIA",
+      "note": "Kew accepte Yucca gigantea et place Y. elephantipes en synonymie ; RHS conserve Puck comme nom non résolu."
+    },
+    {
+      "product_id": "TJ-P-00000120",
+      "product_name": "Olea europaea M",
+      "canonical_identity": "Olea europaea",
+      "jungle_identity_id": "olea/europaea",
+      "encyclopedia_slug": "olea/europaea",
+      "public_url": "https://jungle.tibaldo.fr/plantes/olea/europaea",
+      "identity_confidence": "HIGH",
+      "media_status": "MISSING_EXACT_AUTHORIZED_MEDIA",
+      "note": "Aucun cultivar inventé ; M reste un format commercial."
+    },
+    {
+      "product_id": "TJ-P-00000121",
+      "product_name": "Tetrapanax papyrifer L",
+      "canonical_identity": "Tetrapanax papyrifer",
+      "jungle_identity_id": "tetrapanax/papyrifer",
+      "encyclopedia_slug": "tetrapanax/papyrifer",
+      "public_url": "https://jungle.tibaldo.fr/plantes/tetrapanax/papyrifer",
+      "identity_confidence": "HIGH",
+      "media_status": "MISSING_EXACT_AUTHORIZED_MEDIA",
+      "note": "Aucun cultivar inventé ; L reste un format commercial."
+    },
+    {
+      "product_id": "TJ-P-00000122",
+      "product_name": "Asplenium scolopendrium M",
+      "canonical_identity": "Asplenium scolopendrium",
+      "jungle_identity_id": "asplenium/scolopendrium",
+      "encyclopedia_slug": "asplenium/scolopendrium",
+      "public_url": "https://jungle.tibaldo.fr/plantes/asplenium/scolopendrium",
+      "identity_confidence": "HIGH",
+      "media_status": "MISSING_EXACT_AUTHORIZED_MEDIA",
+      "note": "La photo Owner d’Asplenium nidus est explicitement exclue."
+    },
+    {
+      "product_id": "TJ-P-00000123",
+      "product_name": "Anthurium 'Silver Blush' M",
+      "canonical_identity": "Anthurium ‘Silver Blush’",
+      "jungle_identity_id": "anthurium/silver-blush",
+      "encyclopedia_slug": "anthurium/silver-blush",
+      "public_url": "https://jungle.tibaldo.fr/plantes/anthurium/silver-blush",
+      "identity_confidence": "HIGH_HORTICULTURAL_NAME_SPECIES_UNCONFIRMED",
+      "media_status": "MISSING_EXACT_AUTHORIZED_MEDIA",
+      "note": "Distinct de l’hybride Anthurium forgetii dark form × ‘Silver Blush’ et de son média Owner."
+    },
+    {
+      "product_id": "TJ-P-00000124",
+      "product_name": "Cactus Mix S",
+      "canonical_identity": "Cactus — assortiment commercial",
+      "jungle_identity_id": "cactus/assortiment",
+      "encyclopedia_slug": "cactus/assortiment",
+      "public_url": "https://jungle.tibaldo.fr/plantes/cactus/assortiment",
+      "identity_confidence": "HIGH_COMMERCIAL_ASSORTMENT",
+      "media_status": "LICENSED_GENERIC_ILLUSTRATION",
+      "note": "Même fiche que M et L ; aspect et espèces variables, choix au Studio."
+    },
+    {
+      "product_id": "TJ-P-00000125",
+      "product_name": "Cactus Mix M",
+      "canonical_identity": "Cactus — assortiment commercial",
+      "jungle_identity_id": "cactus/assortiment",
+      "encyclopedia_slug": "cactus/assortiment",
+      "public_url": "https://jungle.tibaldo.fr/plantes/cactus/assortiment",
+      "identity_confidence": "HIGH_COMMERCIAL_ASSORTMENT",
+      "media_status": "LICENSED_GENERIC_ILLUSTRATION",
+      "note": "Même fiche que S et L ; aucun taxon individuel inventé."
+    },
+    {
+      "product_id": "TJ-P-00000126",
+      "product_name": "Xanadu Willaert L",
+      "canonical_identity": "Philodendron xanadu",
+      "jungle_identity_id": "philodendron/xanadu",
+      "encyclopedia_slug": "philodendron/xanadu",
+      "public_url": "https://jungle.tibaldo.fr/plantes/philodendron/xanadu",
+      "identity_confidence": "HIGH_OWNER_IDENTIFICATION",
+      "media_status": "MISSING_EXACT_AUTHORIZED_MEDIA",
+      "note": "Kew accepte Philodendron xanadu ; Thaumatophyllum xanadu est conservé comme synonyme."
+    },
+    {
+      "product_id": "TJ-P-00000127",
+      "product_name": "Cactus Mix L",
+      "canonical_identity": "Cactus — assortiment commercial",
+      "jungle_identity_id": "cactus/assortiment",
+      "encyclopedia_slug": "cactus/assortiment",
+      "public_url": "https://jungle.tibaldo.fr/plantes/cactus/assortiment",
+      "identity_confidence": "HIGH_COMMERCIAL_ASSORTMENT",
+      "media_status": "LICENSED_GENERIC_ILLUSTRATION",
+      "note": "Même fiche que S et M ; aucune rusticité commune affirmée."
+    }
+  ]
+}

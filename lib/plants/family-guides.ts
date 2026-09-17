@@ -24,6 +24,14 @@ const simpleGuide = (name: string, botanicalName: string, lead: string, origin: 
 });
 
 const simpleGuides = {
+  olea: {
+    ...simpleGuide("Olea", "Olea europaea", "L’olivier associe feuillage persistant, plein soleil et culture très drainée, en pot comme au jardin.", "Olea europaea est une espèce acceptée des Oleaceae, largement cultivée dans la région méditerranéenne.", "Photographie documentaire d’Olea europaea à réaliser"),
+    care: { difficulty: 2, light: 5, water: 2, humidity: 1, substrate: "Minéral et très drainant", nutrition: "Modérée au printemps" },
+  },
+  tetrapanax: {
+    ...simpleGuide("Tetrapanax", "Tetrapanax papyrifer", "Une silhouette architecturale portée par de très grandes feuilles palmées et une souche qui peut drageonner.", "Tetrapanax papyrifer est une espèce acceptée des Araliaceae, originaire du centre et du sud de la Chine ainsi que de Taiwan.", "Photographie documentaire de Tetrapanax papyrifer à réaliser"),
+    care: { difficulty: 3, light: 4, water: 3, humidity: 3, substrate: "Humifère, frais et drainant", nutrition: "Régulière pendant la croissance" },
+  },
   beaucarnea: {
     ...simpleGuide("Beaucarnea", "Beaucarnea", "Des plantes à base renflée et feuilles étroites, dont le pied-d’éléphant Beaucarnea recurvata.", "Beaucarnea appartient aux Asparagaceae. La fiche recurvata concerne une espèce mexicaine ; elle ne permet pas d’identifier un lot vendu sous le seul nom du genre.", "Photographie de Beaucarnea à documenter"),
     care: { difficulty: 2, light: 5, water: 1, humidity: 1, substrate: "Succulentes, très drainant", nutrition: "Modérée en croissance" },

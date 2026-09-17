@@ -23,8 +23,11 @@ import { canonicalCoverageAdditions } from "./canonical-coverage-additions-v1.ts
 import { epipremnumPinnatum } from "./epipremnum-pinnatum.ts";
 import { applyCanonicalQualityFixes } from "./canonical-quality-fixes-v1.ts";
 import { applyDevilMonsterContext } from "./devil-monster-v1.ts";
+import { willaertIdentityPlants } from "./willaert-identities-v1.ts";
 
 export const plantFamilies = [
+  { slug: "olea", name: "Olea", eyebrow: "Arbres méditerranéens", description: "L’olivier Olea europaea, sa lumière, son drainage et sa culture en pot ou au jardin.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie documentaire d’Olea europaea à réaliser", available: true },
+  { slug: "tetrapanax", name: "Tetrapanax", eyebrow: "Feuillage architectural", description: "Tetrapanax papyrifer et ses grandes feuilles palmées, avec une culture adaptée au climat lillois.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie documentaire de Tetrapanax papyrifer à réaliser", available: true },
   { slug: "beaucarnea", name: "Beaucarnea", eyebrow: "Silhouettes succulentes", description: "Un tronc renflé et une croissance lente : comprendre Beaucarnea recurvata sans le confondre avec un palmier.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie de Beaucarnea à documenter", available: true },
   { slug: "asplenium", name: "Asplenium", eyebrow: "Fougères", description: "Frondes entières en rosette : découvrir Asplenium nidus et distinguer les fougères nid-d’oiseau.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie d’Asplenium à documenter", available: true },
   { slug: "nephrolepis", name: "Nephrolepis", eyebrow: "Fougères", description: "Frondes divisées et touffes arquées : découvrir les sélections horticoles de Nephrolepis exaltata.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie de Nephrolepis à documenter", available: true },
@@ -200,7 +203,7 @@ const rawPlants: PlantEntry[] = [{
   seo: { title: "Pilea peperomioides : entretien et plante à monnaie Lille", description: "Guide du Pilea peperomioides : lumière, arrosage, rejets, substrat et problèmes. Retrouvez la plante à monnaie chinoise à Lille.", keywords: ["Pilea peperomioides entretien", "plante monnaie chinoise Lille", "Pilea Lille", "Pilea animaux", "bouture Pilea"] },
   sources: [{ label: "Kew Science", url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:855664-1/general-information" }, { label: "NC State Extension", url: "https://plants.ces.ncsu.edu/plants/pilea-peperomioides/" }, { label: "Plantes Pour Tous — fiche consultée", url: "https://plantespourtous.co/products/pilea-peperomioides" }],
   publishedAt: "2026-08-06", updatedAt: "2026-08-06",
-}, ...newArrivalPlants, ...requestedPlants, ...afternoonPlants, ...encyclopediaV19ExpansionPlants, ...prayerPlants, ...encyclopediaV2Step1Plants, ...encyclopediaV2Step2Plants, cycasRevoluta, dicksoniaAntarctica, ...agaveFatsiaStrelitziaPlants, ...encyclopediaP1Plants, ...stockIdentityPlants, ...horticulturalIdentityPlants];
+}, ...newArrivalPlants, ...requestedPlants, ...afternoonPlants, ...encyclopediaV19ExpansionPlants, ...prayerPlants, ...encyclopediaV2Step1Plants, ...encyclopediaV2Step2Plants, cycasRevoluta, dicksoniaAntarctica, ...agaveFatsiaStrelitziaPlants, ...encyclopediaP1Plants, ...stockIdentityPlants, ...horticulturalIdentityPlants, ...willaertIdentityPlants];
 
 export const plants: PlantEntry[] = applyDevilMonsterContext(applyOwnerPileaMediaV1(applyOwnerMarbleQueenMediaV1(applyOwnerMonsteraMintMediaV1(
   applyOwnerMonsteraThaiConstellationMediaV1(
