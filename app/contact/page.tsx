@@ -23,14 +23,14 @@ export default function ContactPage() {
     <section className="inner-hero compact-inner-hero">
       <div className="inner-hero-texture" aria-hidden="true" /><div className="inner-hero-shade" aria-hidden="true" />
       <SiteHeader />
-      <div className="shell inner-hero-content"><p className="eyebrow"><span /> Nous trouver · Lille</p><h1><span className="hero-line"><span>La jungle lilloise</span></span><span className="hero-line"><span><em>prend racine.</em></span></span></h1><p>Ouverture le 26 septembre 2026 au 3, place de l’Arbonnoise à Lille.</p><a className="button button-light" href="#itineraire">Choisir mon GPS <Arrow /></a></div>
+      <div className="shell inner-hero-content"><p className="eyebrow"><span /> Nous trouver · Lille</p><h1><span className="hero-line"><span>La jungle lilloise</span></span><span className="hero-line"><span><em>prend racine.</em></span></span></h1><p>Premières ventes vendredi 25 septembre 2026 à 10 h. Inauguration samedi 26 septembre à 18 h.</p><a className="button button-light" href="#itineraire">Choisir mon GPS <Arrow /></a></div>
     </section>
 
     <section className="contact-map-section shell">
       <div className="contact-map-copy" data-reveal>
         <p className="section-kicker">Votre itinéraire</p>
         <h2>Venez découvrir<br />le Studio Végétal.</h2>
-        <p>Notre jardinerie urbaine ouvre à Lille le 26 septembre 2026 : un lieu pour choisir vos plantes, trouver un substrat adapté et demander conseil.</p>
+        <p>Notre jardinerie urbaine commence ses ventes à Lille le vendredi 25 septembre 2026 à 10 h. Son inauguration a lieu le samedi 26 septembre à 18 h.</p>
         <p>Besoin d’une <Link href="/livraison-plantes-lille">livraison de plantes</Link> ou de <Link href="/fleurs-sur-commande-lille">fleurs sur commande</Link> ? Contactez le Studio pour préparer votre demande.</p>
         <p>Pour la location de matériel de soirée, retrouvez notre activité dédiée sur <a href="https://evenement.tibaldo.fr/">TIBALDO Événement</a>.</p>
         <div className="contact-details">

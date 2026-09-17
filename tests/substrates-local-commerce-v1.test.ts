@@ -5,7 +5,8 @@ import { substrateLocalCommerce as local, substrateLocalFaq as faq } from "../ap
 
 const read = (path: string) => readFileSync(path, "utf8");
 test("local retail paths are owner-confirmed but do not invent stock or live checkout", () => {
-  assert.equal(local.openingDate, "26 septembre 2026");
+  assert.equal(local.firstSalesDate, "25 septembre 2026 à 10 h");
+  assert.equal(local.inaugurationDate, "26 septembre 2026 à 18 h");
   assert.match(local.shopNotice, /références publiées avec le retrait activé/);
   assert.equal(faq.length, 7);
   assert.match(faq.map(f => f.answer).join(" "), /pas un stock en temps réel/);

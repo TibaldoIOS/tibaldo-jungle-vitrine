@@ -14,7 +14,7 @@ const steps = [
   { date: "Printemps 2026", title: "Le lieu prend forme", copy: "Les premières intentions deviennent un espace concret : circulation, lumière, zones de culture et accueil du public.", image: "/media/projet-boutique-tibaldo-jungle-lille.webp" },
   { date: "Été 2026", title: "La sélection végétale", copy: "Les plantes sont préparées et cultivées à Wattignies avant de rejoindre le Studio Végétal, situé au 3 place de l’Arbonnoise à Lille.", image: "/collection-plantes-rares-tibaldo-jungle-lille.jpg" },
   { date: "Août 2026", title: "Le Studio s’installe", copy: "Mobilier, matériauthèque de substrats et espaces de conseil trouvent leur place au 3 place de l’Arbonnoise.", image: "/media/projet-boutique-tibaldo-jungle-lille.webp" },
-  { date: "26 septembre 2026", title: "Le jour J", copy: "Tibaldo Jungle ouvre ses portes : plantes rares, conseils, rempotage raisonné et rencontres autour du vivant.", image: "/opening-jungle.jpg" },
+  { date: "25–26 septembre 2026", title: "Les premiers rendez-vous", copy: "Premières ventes le vendredi 25 septembre à 10 h, puis inauguration le samedi 26 septembre à 18 h : plantes rares, conseils et rencontres autour du vivant.", image: "/opening-jungle.jpg" },
 ];
 
 export default function CoulissesPage() {

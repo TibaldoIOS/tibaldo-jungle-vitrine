@@ -1,7 +1,8 @@
 /** Owner-confirmed commercial paths, 2026-09-03. No stock, exclusive
  * dealership, delivery area or live checkout is implied by this content. */
 export const substrateLocalCommerce = {
-  openingDate: "26 septembre 2026",
+  firstSalesDate: "25 septembre 2026 à 10 h",
+  inaugurationDate: "26 septembre 2026 à 18 h",
   retailer: "TIBALDO Jungle, revendeur Sybotanica à Lille",
   shopNotice: "Le click & collect passe par le Shop, pour les références publiées avec le retrait activé. Si votre mélange n’y figure pas encore, appelez le Studio avant de vous déplacer.",
   nearby: "Depuis Lambersart, Lomme, La Madeleine, Marcq-en-Barœul, Saint-André-lez-Lille ou Loos, retrouvez le conseil et les substrats au même endroit : le Studio de Lille, près du métro Cormontaigne.",
@@ -10,7 +11,7 @@ export const substrateLocalCommerce = {
 } as const;
 
 export const substrateLocalFaq = [
-  { question: "Où trouver les substrats Sybotanica à Lille ?", answer: "TIBALDO Jungle est revendeur Sybotanica au Studio Végétal, 3 place de l’Arbonnoise, 59000 Lille, près du métro Cormontaigne. Ouverture du Studio le 26 septembre 2026. Les mélanges, volumes et conditionnements sont à confirmer avant votre visite." },
+  { question: "Où trouver les substrats Sybotanica à Lille ?", answer: "TIBALDO Jungle est revendeur Sybotanica au Studio Végétal, 3 place de l’Arbonnoise, 59000 Lille, près du métro Cormontaigne. Premières ventes le 25 septembre 2026 à 10 h ; inauguration le 26 septembre à 18 h. Les mélanges, volumes et conditionnements sont à confirmer avant votre visite." },
   { question: "Comment acheter ou préparer un retrait en boutique ?", answer: "Trois parcours : achat sur place au Studio à partir de son ouverture, contact par téléphone au 07 43 72 70 79 pour préparer votre besoin, ou click & collect via le Shop. Une demande téléphonique ne vaut pas confirmation de stock : convenez du mélange, du volume et des modalités avec le Studio." },
   { question: "Puis-je commander mon substrat en click & collect ?", answer: substrateLocalCommerce.shopNotice + " Le point de retrait est le Studio Végétal à Lille. Attendez la confirmation de préparation et les consignes de retrait avant de venir." },
   { question: "Tous les mélanges Sybotanica du guide sont-ils disponibles ?", answer: "Non, le guide présente des mélanges et leurs usages, pas un stock en temps réel. Une fiche fabricant ne garantit pas sa disponibilité chez TIBALDO. Vérifiez les références publiées dans le Shop ou contactez le Studio pour connaître les arrivages, conditionnements et tarifs." },

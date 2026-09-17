@@ -90,7 +90,7 @@ export default function SubstratesPage() {
         <div><p className="section-kicker">Le substrat n’est pas un détail</p><h2>Tout commence<br />sous la surface.</h2></div>
         <div className="manifesto-copy">
           <p>Une plante peut avoir la bonne lumière et le bon arrosage, mais peiner si ses racines manquent d’air. Chez Tibaldo Jungle, le substrat se pense comme un milieu vivant : il doit soutenir, respirer, drainer et garder juste ce qu’il faut d’humidité.</p>
-          <p>TIBALDO Jungle, revendeur Sybotanica à Lille, vous aide à choisir le volume utile et à lire les propriétés d’un mélange. Le Studio ouvre le 26 septembre 2026. La sélection présentée ici est un guide : disponibilité et conditionnement restent à confirmer au Studio.</p>
+          <p>TIBALDO Jungle, revendeur Sybotanica à Lille, vous aide à choisir le volume utile et à lire les propriétés d’un mélange. Premières ventes le 25 septembre 2026 à 10 h ; inauguration le 26 septembre à 18 h. La sélection présentée ici est un guide : disponibilité et conditionnement restent à confirmer au Studio.</p>
         </div>
       </section>
 

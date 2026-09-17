@@ -11,7 +11,7 @@ export default function StudioAccessCompact({ showOpeningEvent = false }: { show
       <p>3 place de l’Arbonnoise · 59000 Lille</p>
       <dl><div><dt>Métro</dt><dd>M2 · Cormontaigne</dd></div><div><dt>Bus</dt><dd>L5 · Cormontaigne</dd></div><div><dt>À pied</dt><dd>Quelques minutes depuis la place</dd></div></dl>
       <Link className="button button-green" href="/contact">Préparer mon itinéraire <Arrow /></Link>
-      {showOpeningEvent && <Link className="studio-access-event" href="/evenements/ouverture-tibaldo-jungle-lille">Nouvelle boutique de plantes à Lille · 26 septembre 2026 <Arrow /></Link>}
+      {showOpeningEvent && <Link className="studio-access-event" href="/evenements/ouverture-tibaldo-jungle-lille">Inauguration à Lille · 26 septembre 2026 · 18 h <Arrow /></Link>}
     </div>
   </section>;
 }

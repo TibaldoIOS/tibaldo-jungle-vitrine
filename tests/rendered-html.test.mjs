@@ -87,7 +87,7 @@ test("renders the homepage SEO signals and editorial content", async () => {
   assert.match(html, /<title>Tibaldo Jungle — Studio Végétal à Lille<\/title>/i);
   assert.match(
     html,
-    /<meta(?=[^>]*name=["']description["'])(?=[^>]*content=["'][^"']*Nouveauté à Lille[^"']*26 septembre 2026[^"']*["'])[^>]*>/i,
+    /<meta(?=[^>]*name=["']description["'])(?=[^>]*content=["'][^"']*25 septembre 2026[^"']*10 h[^"']*26[^"']*18 h[^"']*["'])[^>]*>/i,
   );
   assert.match(html, /<link(?=[^>]*rel=["']canonical["'])(?=[^>]*href=["']https:\/\/jungle\.tibaldo\.fr\/?["'])[^>]*>/i);
   assert.match(html, /application\/ld\+json/i);
@@ -98,7 +98,7 @@ test("renders the homepage SEO signals and editorial content", async () => {
   assert.match(html, /Trois univers/i);
   assert.match(html, /href=["']\/substrats["']/i);
   assert.match(html, /Conseiller sans sur-vendre/i);
-  assert.match(html, /Grande ouverture · 26 septembre 2026 · Lille/i);
+  assert.match(html, /INAUGURATION DU STUDIO VÉGÉTAL/i);
   assert.match(html, /Rempotage gratuit toute l’année/i);
   assert.match(html, /href=["']\/evenements\/ouverture-tibaldo-jungle-lille["']/i);
   assert.doesNotMatch(html, /Lille · Nord · France/i);
@@ -747,7 +747,7 @@ test("links the opening event contextually from major editorial pages", async ()
     assert.equal(response.status, 200);
     const html = await response.text();
     assert.match(html, /href=["']\/evenements\/ouverture-tibaldo-jungle-lille["']/i);
-    assert.match(html, /Nouvelle boutique de plantes à Lille/i);
+    assert.match(html, /Inauguration(?: à Lille · 26 septembre 2026 · 18 h| · Boutique de plantes à Lille)/i);
   }
 });
 
@@ -756,21 +756,21 @@ test("renders the opening event with complete crawlable SEO data", async () => {
   assert.equal(response.status, 200);
   const html = await response.text();
 
-  assert.match(html, /<title>Ouverture du Studio Végétal à Lille — 26 septembre 2026<\/title>/i);
-  assert.match(html, /<meta(?=[^>]*property=["']og:title["'])(?=[^>]*content=["']Que faire à Lille le 26 septembre 2026 \? Ouverture du Studio Végétal["'])[^>]*>/i);
-  assert.match(html, /<meta(?=[^>]*name=["']twitter:title["'])(?=[^>]*content=["']Que faire à Lille le 26 septembre 2026 \? Ouverture du Studio Végétal["'])[^>]*>/i);
+  assert.match(html, /<title>Inauguration du Studio Végétal à Lille — 26 septembre 2026<\/title>/i);
+  assert.match(html, /<meta(?=[^>]*property=["']og:title["'])(?=[^>]*content=["']Que faire à Lille le 26 septembre 2026 \? Inauguration du Studio Végétal["'])[^>]*>/i);
+  assert.match(html, /<meta(?=[^>]*name=["']twitter:title["'])(?=[^>]*content=["']Que faire à Lille le 26 septembre 2026 \? Inauguration du Studio Végétal["'])[^>]*>/i);
   assert.match(html, /<link(?=[^>]*rel=["']canonical["'])(?=[^>]*href=["']https:\/\/jungle\.tibaldo\.fr\/evenements\/ouverture-tibaldo-jungle-lille["'])[^>]*>/i);
-  assert.match(html, /<h1>Ouverture du Studio Végétal – Tibaldo Jungle à Lille<\/h1>/i);
+  assert.match(html, /<h1>Inauguration du Studio Végétal – Tibaldo Jungle à Lille<\/h1>/i);
   assert.match(html, /"@type":"Event"/i);
   assert.match(html, /"isAccessibleForFree":true/i);
   assert.match(html, /"@type":"FAQPage"/i);
   assert.match(html, /"@type":"BreadcrumbList"/i);
-  assert.match(html, /"startDate":"2026-09-26T10:00:00\+02:00"/i);
-  assert.match(html, /"endDate":"2026-09-26T19:00:00\+02:00"/i);
-  assert.match(html, /Horaires[\s\S]{0,500}10:00[\s\S]{0,100}—[\s\S]{0,100}19:00/i);
+  assert.match(html, /"startDate":"2026-09-26T18:00:00\+02:00"/i);
+  assert.doesNotMatch(html, /"endDate"/i);
+  assert.match(html, /Horaires[\s\S]{0,500}18:00/i);
   assert.doesNotMatch(html, /Horaires[\s\S]{0,500}08:00[\s\S]{0,100}—[\s\S]{0,100}17:00/i);
   assert.match(html, /Libre et gratuite · sans réservation/i);
-  assert.match(html, /Samedi 26 septembre 2026 · 10h–19h · entrée gratuite/i);
+  assert.match(html, /Samedi 26 septembre 2026 · 18 h · entrée gratuite/i);
   assert.match(html, /3 place de l’Arbonnoise, Lille · sans réservation/i);
   assert.match(html, /26 septembre 2026/i);
   assert.doesNotMatch(html, /Que faire à Lille ce week-end/i);

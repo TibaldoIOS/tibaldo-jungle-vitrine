@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!event) return {};
   const url = `/evenements/${event.slug}`;
   const socialTitle = event.slug === "ouverture-tibaldo-jungle-lille"
-    ? "Que faire à Lille le 26 septembre 2026 ? Ouverture du Studio Végétal"
+    ? "Que faire à Lille le 26 septembre 2026 ? Inauguration du Studio Végétal"
     : event.seoTitle;
   return {
     title: event.seoTitle,
@@ -69,7 +69,7 @@ export default async function EventPage({ params }: Props) {
         name: event.title,
         description: event.description,
         startDate: event.startAt,
-        endDate: event.endAt,
+        ...(event.endAt ? { endDate: event.endAt } : {}),
         eventStatus: isPast ? "https://schema.org/EventCompleted" : "https://schema.org/EventScheduled",
         eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
         isAccessibleForFree: true,
@@ -176,11 +176,11 @@ export default async function EventPage({ params }: Props) {
             Événements <span>·</span> Agenda
           </Link>
           <p className="eyebrow">
-            <span /> {event.category} · {event.city}
+            <span /> {isOpening ? "inauguration" : event.category} · {event.city}
           </p>
           {isOpening && (
             <p className="event-opening-quickfacts">
-              Samedi 26 septembre 2026 · 10h–19h · entrée gratuite<br />
+              Samedi 26 septembre 2026 · 18 h · entrée gratuite<br />
               3 place de l’Arbonnoise, Lille · sans réservation
             </p>
           )}
@@ -274,17 +274,16 @@ export default async function EventPage({ params }: Props) {
             </header>
             <div data-reveal>
               <p>
-                Le samedi 26 septembre, de 10 h à 19 h, Tibaldo Jungle ouvre
-                son Studio Végétal au 3 place de l’Arbonnoise. Cette sortie
-                gratuite et sans réservation accueille aussi bien les curieux et
+                Le samedi 26 septembre à 18 h, Tibaldo Jungle inaugure son
+                Studio Végétal au 3 place de l’Arbonnoise. Ce rendez-vous
+                gratuit et sans réservation accueille aussi bien les curieux et
                 les familles que les collectionneurs de plantes.
               </p>
               <p>
-                Cette journée portes ouvertes permet de visiter le Studio
-                Végétal, d’échanger autour de l’entretien des plantes
-                d’intérieur, de découvrir des substrats en vrac et de profiter
-                de conseils de rempotage. Vous pouvez passer librement pendant
-                la journée, avant une sortie en soirée si vous le souhaitez.
+                Cette inauguration permet de visiter le Studio Végétal,
+                d’échanger autour de l’entretien des plantes d’intérieur et de
+                découvrir une nouvelle adresse végétale à Lille. Les premières
+                ventes commencent séparément le vendredi 25 septembre à 10 h.
               </p>
               <p>
                 Le Studio se trouve dans le quartier Vauban-Esquermes, à
@@ -300,7 +299,7 @@ export default async function EventPage({ params }: Props) {
           <header data-reveal>
             <p className="section-kicker">Le programme</p>
             <h2>
-              Une journée pour
+              Un rendez-vous pour
               <br />
               <em>découvrir et échanger.</em>
             </h2>
