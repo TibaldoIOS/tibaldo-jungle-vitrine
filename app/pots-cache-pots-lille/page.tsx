@@ -1,10 +1,10 @@
 import Link from "next/link";
-import Image from "next/image";
 import type { Metadata } from "next";
 import ScrollReveal from "../ScrollReveal";
 import { Arrow, SiteFooter, SiteHeader } from "../SiteChrome";
 import { potEditorialCatalog } from "../../lib/pots/catalog";
 import { shopUrl } from "../../lib/environment";
+import PotCollection from "./PotCollection";
 
 export const metadata: Metadata = {
   title: "Pots et cache-pots à Lille | Tibaldo Jungle",
@@ -36,7 +36,7 @@ export default function PotsPage() {
 
     <section className="shell pots-intro" data-reveal><div><p className="section-kicker">Plus qu’un objet décoratif</p><h2>Choisir avec les yeux.<br /><em>Décider avec les racines.</em></h2></div><div><p>La sélection rassemble des silhouettes arrondies, des cylindres, des reliefs et des finitions colorées. Les dimensions affichées sont les dimensions extérieures communiquées pour chaque modèle.</p><p>Un beau contenant n’indique pas à lui seul son matériau, son perçage ou son usage extérieur. Ces caractéristiques doivent être vérifiées modèle par modèle avant de choisir comment installer la plante.</p></div></section>
 
-    <section className="pots-collection" id="collection"><div className="shell"><header data-reveal><p className="section-kicker">Collection photographiée · Lille</p><h2>Quinze formes.<br /><em>Une plante à habiller.</em></h2><div><p>Ces visuels TIBALDO présentent les modèles sans constituer une preuve de disponibilité. Les offres actives, prix et stocks restent vérifiables auprès du Shop.</p><a className="button pots-shop-link" href={shopUrl("/produits?type=pot")}>Voir les pots publiés au Shop <Arrow /></a></div></header><div className="pots-collection-grid">{potEditorialCatalog.map((pot) => <article key={pot.supplierReference} data-reveal><div className="pots-collection-image"><Image src={pot.image} alt={pot.alt} width={1254} height={1254} sizes="(max-width: 600px) 92vw, (max-width: 1000px) 45vw, 30vw" unoptimized /></div><div className="pots-collection-copy"><span>Modèle {String(pot.repere).padStart(2, "0")}</span><h3>{pot.name}</h3><strong>{pot.dimensions}</strong><p>{pot.description}</p><small>Visuel TIBALDO · mise en scène assistée par IA</small></div></article>)}</div></div></section>
+    <section className="pots-collection" id="collection"><div className="shell"><header data-reveal><p className="section-kicker">Collection photographiée · Lille</p><h2>Quinze formes.<br /><em>Une plante à habiller.</em></h2><div><p>Les pots sont présentés à une échelle comparative fondée sur leur diamètre documenté. Deux modèles proposés dans plusieurs formats sont regroupés avec un choix explicite. Les visuels ne constituent pas une preuve de disponibilité : offres actives, prix et stocks restent vérifiables auprès du Shop.</p><a className="button pots-shop-link" href={shopUrl("/produits?type=pot")}>Voir les pots publiés au Shop <Arrow /></a></div></header><PotCollection /></div></section>
 
     <section className="pots-materials" id="matieres"><div className="shell"><header data-reveal><p className="section-kicker">Comprendre avant de rempoter</p><h2>Quatre familles<br /><em>de matières.</em></h2></header><div className="pots-material-grid">{materials.map((item) => <article id={item.id} key={item.id} data-reveal><span>{item.number}</span><small>{item.note}</small><div className="pot-shape" aria-hidden="true" /><h3>{item.name}</h3><p>{item.copy}</p></article>)}</div></div></section>
 
