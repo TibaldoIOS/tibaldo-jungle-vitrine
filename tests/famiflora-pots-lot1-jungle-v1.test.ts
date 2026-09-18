@@ -25,4 +25,5 @@ test("the public page remains editorial and does not invent commerce or technica
   assert.doesNotMatch(page, /InStock|OutOfStock|priceCurrency|quantité disponible/i);
   assert.doesNotMatch(page, /résistant au gel|diamètre intérieur|trou de drainage/i);
   assert.match(page, /mise en scène assistée par IA/);
+  assert.match(page, /unoptimized/, "nested public media must bypass the hosted image optimizer");
 });
