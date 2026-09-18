@@ -5,8 +5,8 @@
   "sourceArchive": "/Users/tibaldo/Documents/Codex/2026-09-14/he/output/pots-mise-en-scene.zip",
   "sourceManifest": "prompts-et-provenance.json dans l’archive source",
   "derivative": {
-    "format": "WebP",
-    "quality": 84,
+    "format": "JPEG",
+    "quality": 88,
     "dimensions": "1254x1254",
     "metadata": "retirées lors de l’optimisation publique"
   },
@@ -16,6 +16,6 @@
     "Le repère 2 utilise exclusivement 02-effet-bois-droit.png.",
     "Le repère 3 utilise la version corrigée 03-bleu-grand.png.",
     "Les visuels ne prouvent ni stock, ni prix, ni matériau, ni drainage, ni résistance au gel, ni diamètre intérieur.",
-    "Les originaux et leur provenance restent conservés dans le dossier autoritaire Owner ; seules les dérivées WebP sont servies publiquement."
+    "Les originaux et leur provenance restent conservés dans le dossier autoritaire Owner ; seules les dérivées JPEG compatibles avec le diffuseur Sites sont servies publiquement."
   ]
 }

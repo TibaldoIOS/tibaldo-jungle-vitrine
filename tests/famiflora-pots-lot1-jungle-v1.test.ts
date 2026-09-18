@@ -12,7 +12,7 @@ test("the Jungle editorial collection contains exactly the 15 authorized merchan
 
 test("every editorial model has one optimized image and factual dimensions", () => {
   for (const pot of potEditorialCatalog) {
-    assert.match(pot.image, /^\/media\/pots\/famiflora-lot1\/.+\.webp$/);
+    assert.match(pot.image, /^\/media\/pots\/famiflora-lot1\/.+\.jpg$/);
     assert.ok(existsSync(resolve(process.cwd(), "public", pot.image.slice(1))), pot.image);
     assert.match(pot.dimensions, /^Ø/);
     assert.ok(pot.alt.length > 30);
