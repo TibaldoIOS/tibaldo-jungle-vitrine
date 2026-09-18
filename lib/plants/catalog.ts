@@ -697,6 +697,14 @@ if (anthuriumSilverBlushOwnerIndex !== -1) {
 
 const documentaryBatch = [
   {
+    genre: "alocasia", slug: "silver-dragon",
+    media: {src: "/media/documentary-media/alocasia-silver-dragon/alocasia-silver-dragon-feuillage-argente.webp", alt: "Alocasia « Silver Dragon » en pot, aux feuilles épaisses argentées parcourues de nervures vert sombre.", caption: "Photo : Mudarrisah Tuti Alawiyah — CC BY-SA 4.0 · conversion WebP sans recadrage.", width: 900, height: 1600, license: {status: "verified" as const, creator: "Mudarrisah Tuti Alawiyah", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/", sourceUrl: "https://commons.wikimedia.org/wiki/File:Alocasia_Silver_Dragon.jpg", registryPath: "/credits-images", note: "Le fichier source nomme explicitement la sélection horticole Silver Dragon. Dérivé ShareAlike sous CC BY-SA 4.0. Provenance : docs/media-provenance/photo-20260918-documentary-batch-02.json"}},
+  },
+  {
+    genre: "chlorophytum", slug: "bonnie",
+    media: {src: "/media/documentary-media/chlorophytum-bonnie/chlorophytum-bonnie-feuillage-boucle.webp", alt: "Chlorophytum « Bonnie » en pot, aux feuilles arquées vertes à centre clair et naturellement bouclées.", caption: "Photo : Mokkie — CC BY-SA 3.0 · conversion WebP sans recadrage.", width: 1920, height: 1080, license: {status: "verified" as const, creator: "Mokkie", license: "CC BY-SA 3.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/", sourceUrl: "https://commons.wikimedia.org/wiki/File:Chlorophytum_%27Bonnie%27.jpg", registryPath: "/credits-images", note: "Le fichier source nomme explicitement le cultivar Bonnie. Dérivé ShareAlike sous CC BY-SA 3.0. Provenance : docs/media-provenance/photo-20260918-documentary-batch-02.json"}},
+  },
+  {
     genre: "musa", slug: "basjoo",
     media: {src: "/media/documentary-media/musa-basjoo/musa-basjoo-jardin-botanique-wroclaw.webp", alt: "Musa basjoo formant une large touffe de feuilles vertes dans le jardin botanique de Wrocław.", caption: "Photo : Crusier — CC BY 4.0 · conversion WebP sans recadrage.", width: 1920, height: 1080, license: {status: "verified" as const, creator: "Crusier", license: "CC BY 4.0", licenseUrl: "https://creativecommons.org/licenses/by/4.0/", sourceUrl: "https://commons.wikimedia.org/wiki/File:Musa_basjoo_OB_Wroc%C5%82aw.jpg", registryPath: "/credits-images", note: "Dérivé documentaire avec attribution. Provenance : docs/media-provenance/photo-20260917-documentary-batch-01.json"}},
   },

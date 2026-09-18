@@ -1,0 +1,46 @@
+{
+  "batch_id": "PHOTO-20260918-DOCUMENTARY-BATCH-02",
+  "source_before": "e85f989b6de8769756a04e4d0865f66c6c75066e",
+  "public_version_before": 179,
+  "photos": [
+    {
+      "botanical_identity": "Alocasia ‘Silver Dragon’",
+      "canonical_slug": "plantes/alocasia/silver-dragon",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Alocasia_Silver_Dragon.jpg",
+      "original_filename": "alocasia-silver-dragon-source.jpg",
+      "original_sha256": "2ce7d89aa807e75d56059c90de3c938788f546f9fd52d94fae0786f0744fabdd",
+      "asset_path": "/documentary-media/alocasia-silver-dragon/alocasia-silver-dragon-feuillage-argente.webp",
+      "public_path": "/media/documentary-media/alocasia-silver-dragon/alocasia-silver-dragon-feuillage-argente.webp",
+      "api_url": "https://jungle.tibaldo.fr/media/documentary-media/alocasia-silver-dragon/alocasia-silver-dragon-feuillage-argente.webp",
+      "sha256": "a15b81384c90fff1d1a8216458b5b2d2ca5b8623819ccf1307c9abe8ea980d81",
+      "bytes": 155346,
+      "dimensions": [900, 1600],
+      "alt": "Alocasia « Silver Dragon » en pot, aux feuilles épaisses argentées parcourues de nervures vert sombre.",
+      "creator": "Mudarrisah Tuti Alawiyah",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "derivative_terms": "Conversion WebP sans recadrage ; dérivé distribué sous CC BY-SA 4.0."
+    },
+    {
+      "botanical_identity": "Chlorophytum comosum ‘Bonnie’",
+      "canonical_slug": "plantes/chlorophytum/bonnie",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Chlorophytum_%27Bonnie%27.jpg",
+      "original_filename": "chlorophytum-bonnie-source.jpg",
+      "original_sha256": "cf13741209adcb4119a703f4ffd9fc83fdc97bc4f1d80411a602beb2fe5b98af",
+      "asset_path": "/documentary-media/chlorophytum-bonnie/chlorophytum-bonnie-feuillage-boucle.webp",
+      "public_path": "/media/documentary-media/chlorophytum-bonnie/chlorophytum-bonnie-feuillage-boucle.webp",
+      "api_url": "https://jungle.tibaldo.fr/media/documentary-media/chlorophytum-bonnie/chlorophytum-bonnie-feuillage-boucle.webp",
+      "sha256": "ff96f61107a7e8244f2d3163049e12bb8d0b012b0582b9befca2e688867abf3f",
+      "bytes": 415880,
+      "dimensions": [1920, 1080],
+      "alt": "Chlorophytum « Bonnie » en pot, aux feuilles arquées vertes à centre clair et naturellement bouclées.",
+      "creator": "Mokkie",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "derivative_terms": "Redimensionnement et conversion WebP sans recadrage ; dérivé distribué sous CC BY-SA 3.0."
+    }
+  ],
+  "processing": "WebP qualité 88, méthode 6 ; redimensionnement proportionnel, sans recadrage ni altération générative ; métadonnées non reprises.",
+  "originals_preserved_at": "/Users/tibaldo/Documents/Codex/2026-09-10/cod/media-research-batch3-20260918/sources",
+  "rights_review": "Les auteurs, pages sources et licences ont été vérifiés sur Wikimedia Commons avant intégration. Les dérivés ShareAlike conservent la licence de leur original."
+}
