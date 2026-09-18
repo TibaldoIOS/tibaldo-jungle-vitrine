@@ -26,4 +26,5 @@ test("the public page remains editorial and does not invent commerce or technica
   assert.doesNotMatch(page, /résistant au gel|diamètre intérieur|trou de drainage/i);
   assert.match(page, /mise en scène assistée par IA/);
   assert.match(page, /unoptimized/, "nested public media must bypass the hosted image optimizer");
+  assert.match(page, /shopUrl\("\/produits\?type=pot"\)/, "the real published Shop collection is linked once");
 });
