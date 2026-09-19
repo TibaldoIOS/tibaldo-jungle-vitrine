@@ -92,6 +92,7 @@ const credits: readonly [string, string, string, string, string?][] = [
   ["Syngonium podophyllum · port", "Krzysztof Ziarnek, Kenraiz", "CC BY-SA 4.0 · conversion WebP sans recadrage", "https://commons.wikimedia.org/wiki/File:Syngonium_podophyllum_kz02.jpg", "https://creativecommons.org/licenses/by-sa/4.0/"],
   ["Dracaena trifasciata · port", "Fanti Salms", "CC BY-SA 4.0 · conversion WebP sans recadrage", "https://commons.wikimedia.org/wiki/File:Dracaena_Trifasciata_Plant.jpg", "https://creativecommons.org/licenses/by-sa/4.0/"],
   ["Dracaena trifasciata · jardin botanique", "Rudolphous", "CC BY-SA 4.0 · conversion WebP sans recadrage", "https://commons.wikimedia.org/wiki/File:20210623_Hortus_botanicus_Leiden_-_Sansevieria_trifasciata_v2.jpg", "https://creativecommons.org/licenses/by-sa/4.0/"],
+  ["Dracaena angolensis ‘Straight’", "TIBALDO", "Photo Owner · autorisation permanente · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260919-dracaena-angolensis-straight-01/straight"],
   ["Philodendron hastatum", "Krzysztof Ziarnek, Kenraiz", "CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:Philodendron_hastatum_kz2.jpg"],
   ["Epipremnum aureum", "Filo gèn’", "CC BY-SA 4.0", "https://commons.wikimedia.org/wiki/File:Epipremnum_aureum_(Golden_pothos).jpg"],
   ["Colocasia esculenta", "Forest & Kim Starr", "CC BY 3.0 US", "https://commons.wikimedia.org/wiki/File:Starr-090519-8057-Colocasia_esculenta-leaves-Native_Nursery_Kula-Maui_(24325097844).jpg", "https://creativecommons.org/licenses/by/3.0/us/"],

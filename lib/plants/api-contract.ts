@@ -1,4 +1,4 @@
-import { publicMediaContractPath } from "./public-media-path";
+import { publicMediaContractPath } from "./public-media-path.ts";
 
 type ApiPlant = {
   slug: string;

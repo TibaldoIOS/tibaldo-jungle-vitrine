@@ -1,0 +1,42 @@
+{
+  "batch_id": "PHOTO-20260919-DRACAENA-ANGOLENSIS-STRAIGHT-01",
+  "source_before": "e8f54381ca567bcd62a9fa3e8ef778dd6f1c4595",
+  "public_version_before": 185,
+  "photos": [
+    {
+      "owner_identity": "Dracaena angolensis ‘Straight’",
+      "canonical_slug": "plantes/sansevieria/angolensis-straight",
+      "identity_evidence": "Nom fourni et création canonique autorisée par Owner; aucune identité déduite de la photographie",
+      "original_filename": "codex-clipboard-230b2fd2-bf77-443e-a34c-600d1280e883.png",
+      "original_preserved_path": "/Users/tibaldo/Documents/Codex/2026-09-10/cod/deliverables/pending-dracaena-angolensis-straight-owner-media-v1/original/dracaena-angolensis-straight-owner-original.png",
+      "original_sha256": "46177fe2a178e2ea07016dbae6504b4f22727f032caa63f439d0980aa2b86a93",
+      "filename": "dracaena-angolensis-straight-port-cylindrique.webp",
+      "asset_path": "/owner-media/dracaena-angolensis-straight/dracaena-angolensis-straight-port-cylindrique.webp",
+      "public_path": "/media/owner-media/dracaena-angolensis-straight/dracaena-angolensis-straight-port-cylindrique.webp",
+      "api_url": "https://jungle.tibaldo.fr/media/owner-media/dracaena-angolensis-straight/dracaena-angolensis-straight-port-cylindrique.webp",
+      "sha256": "5ff2ac96955f2e541addbeefe2742c0d6e12ccc9e384fe64a458c79def51518b",
+      "bytes": 123234,
+      "dimensions": [1254, 1254],
+      "alt": "Dracaena angolensis ‘Straight’ en pot, aux longues feuilles cylindriques dressées et marquées de bandes vertes.",
+      "provenance": "OWNER",
+      "rights": "Autorisation Owner permanente",
+      "credit": "Photo : TIBALDO"
+    }
+  ],
+  "processing": "WebP quality88 method6; no crop, no upscale, no generative alteration; metadata stripped",
+  "botanical_sources": [
+    "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77182375-1",
+    "https://plants.ces.ncsu.edu/plants/dracaena-angolensis/"
+  ],
+  "allowed_paths": [
+    "docs/media-provenance/photo-20260919-dracaena-angolensis-straight-01.json",
+    "lib/plants/catalog.ts",
+    "lib/plants/api-contract.ts",
+    "lib/plants/public-media-path.ts",
+    "app/credits-images/page.tsx",
+    "tests/deployment-artifact-contract.test.mjs",
+    "tests/final-media-completion-v1.test.ts",
+    "tests/photo-dracaena-angolensis-straight-owner-v1.test.ts",
+    "public/owner-media/dracaena-angolensis-straight/dracaena-angolensis-straight-port-cylindrique.webp"
+  ]
+}

@@ -6,6 +6,7 @@ import { encyclopediaP1Plants } from "../lib/plants/encyclopedia-p1-expansion.ts
 import type { PlantEntry } from "../lib/plants/types.ts";
 import { isEditorialPlaceholder, isInternalPhotoProductionCopy } from "../lib/plants/types.ts";
 import { toVerifiedMediaApiFields } from "../lib/plants/verified-media-api-contract.ts";
+import { publicMediaContractPath } from "../lib/plants/public-media-path.ts";
 
 // Approved attachment identities audited at 9ec136f, not a frozen population
 // or complete/partial/gap census. New plants/photos are allowed; removing a
@@ -129,7 +130,7 @@ function assertMediaContract(plant: PlantEntry) {
   }
 }
 const imageApiPath = (src: string) =>
-  src === "/media/anthurium-pallidiflorum-feuillage-tibaldo-jungle.webp" ? src : canonicalPath(src);
+  src === "/media/anthurium-pallidiflorum-feuillage-tibaldo-jungle.webp" ? src : publicMediaContractPath(src);
 
 function assertApprovedAttachments(entries: readonly PlantEntry[]) {
   const byKey = new Map(entries.map(plant => [`${plant.genre}/${plant.slug}`, plant]));

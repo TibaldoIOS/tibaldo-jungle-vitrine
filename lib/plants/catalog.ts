@@ -689,6 +689,37 @@ if (dracaenaHahniiBase && !plants.some(p => p.genre === "sansevieria" && p.slug 
   });
 }
 
+const dracaenaAngolensisBase = plants.find(p => p.genre === "sansevieria" && p.slug === "trifasciata")
+  ?? plants.find(p => p.genre === "sansevieria" && p.slug === "hahnii");
+if (dracaenaAngolensisBase && !plants.some(p => p.genre === "sansevieria" && p.slug === "angolensis-straight")) {
+  plants.push({
+    ...dracaenaAngolensisBase,
+    slug: "angolensis-straight",
+    botanicalName: "Dracaena angolensis ‘Straight’",
+    displayName: "Angolensis ‘Straight’",
+    listingName: "Sansevieria cylindrica ‘Straight’ · Dracaena angolensis",
+    subtitle: "Une Dracaena sculpturale aux feuilles cylindriques verticales, longtemps connue sous le nom de Sansevieria cylindrica.",
+    origin: "Afrique tropicale australe · Angola, Zambie et Zimbabwe",
+    taxonomy: {order: "Asparagales", family: "Asparagaceae", genus: "Dracaena", species: "Dracaena angolensis", cultivar: "Straight", commonNames: ["Sansevieria cylindrica Straight", "Sansevieria cylindrique", "African spear"]},
+    filters: {...dracaenaAngolensisBase.filters, light: "vive", watering: "faible", growthRate: "lente", habits: ["terrestre", "dressé"], adultSizeCm: 180, variegated: false, collection: false, regions: ["Angola", "Zambie", "Zimbabwe"]},
+    habitat: "Géophyte rhizomateuse originaire des régions tropicales saisonnièrement sèches d’Afrique australe.",
+    hybridization: "L’espèce botanique acceptée est Dracaena angolensis. ‘Straight’ est conservé comme nom horticole fourni par l’Owner pour cette forme au port vertical.",
+    synonyms: ["Sansevieria cylindrica", "Sansevieria angolensis", "Sansevieria cylindrica ‘Straight’"],
+    description: ["Dracaena angolensis développe des feuilles épaisses, presque cylindriques, dressées depuis une rosette basale et parcourues de bandes vertes transversales.", "La sélection horticole ‘Straight’ souligne ce port vertical. Sa réserve d’eau et son rhizome demandent un mélange très drainant et des arrosages espacés."],
+    specimen: {observedHeight: "Port vertical · souvent 60 à 180 cm en pot", note: "La fiche documente l’identité Owner ‘Straight’ sans attribuer d’obtenteur non vérifié."},
+    growth: {adultSize: "Touffe verticale pouvant dépasser un mètre", speed: "Lente", habit: "Rhizomateux, terrestre et dressé"},
+    care: {...dracaenaAngolensisBase.care, light: 4, water: 1, humidity: 1, difficulty: 1, difficultyText: "Très sobre en eau ; son principal risque est l’excès d’humidité.", lightText: "Lumière vive indirecte à soleil doux après acclimatation ; une lumière insuffisante ralentit fortement la croissance.", watering: "Laisser sécher entièrement le mélange avant d’arroser à nouveau, puis vider toute eau résiduelle.", humidityText: "L’humidité ordinaire d’un intérieur suffit ; garder le cœur et le substrat secs entre deux arrosages.", temperature: "Idéalement 18 à 27 °C ; conserver au-dessus d’environ 13 °C et presque au sec lorsque l’ambiance fraîchit.", substrate: "Mélange très drainant pour succulentes, riche en fraction minérale, dans un pot percé.", propagation: "Division du rhizome ou séparation des rejets pour conserver fidèlement le port de la plante."},
+    toxicity: {level: "toxicité faible", summary: "À tenir hors de portée des enfants, chats et chiens.", details: "L’ingestion peut provoquer irritation digestive, salivation ou vomissements ; la sève peut irriter les personnes sensibles."},
+    comparisons: [{name: "Dracaena trifasciata", difference: "Ses feuilles sont plates et rubanées, tandis que Dracaena angolensis porte des feuilles cylindriques."}, {name: "Dracaena bacularis", difference: "Autre Dracaena cylindrique souvent confondue dans le commerce ; l’identité ne doit pas être déduite du seul port."}],
+    gallery: [{"src": "/media/owner-media/dracaena-angolensis-straight/dracaena-angolensis-straight-port-cylindrique.webp", "alt": "Dracaena angolensis ‘Straight’ en pot, aux longues feuilles cylindriques dressées et marquées de bandes vertes.", "caption": "Photo : TIBALDO", "width": 1254, "height": 1254, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260919-dracaena-angolensis-straight-01/straight", "registryPath": "/credits-images", "note": "Identité horticole fournie par Owner et création canonique autorisée. Provenance : docs/media-provenance/photo-20260919-dracaena-angolensis-straight-01.json"}}],
+    mediaNeeds: [],
+    seo: {title: "Dracaena angolensis Straight : entretien de la Sansevieria cylindrique", description: "Guide de Dracaena angolensis ‘Straight’ : lumière, arrosage, substrat et entretien de cette ancienne Sansevieria cylindrica.", keywords: ["Dracaena angolensis Straight", "Sansevieria cylindrica Straight", "Sansevieria cylindrique entretien"]},
+    sources: [{label: "Kew Science — Plants of the World Online", url: "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77182375-1"}, {label: "NC State Extension — Dracaena angolensis", url: "https://plants.ces.ncsu.edu/plants/dracaena-angolensis/"}],
+    publishedAt: "2026-09-19",
+    updatedAt: "2026-09-19",
+  });
+}
+
 const anthuriumSilverBlushOwnerIndex = plants.findIndex(p => p.genre === "anthurium" && p.slug === "silver-blush");
 if (anthuriumSilverBlushOwnerIndex !== -1) {
   const plant = plants[anthuriumSilverBlushOwnerIndex];
