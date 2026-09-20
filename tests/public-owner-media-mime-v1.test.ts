@@ -10,6 +10,7 @@ const expected = [
   ["ficus", "abidjan", "/media/owner-media/ficus-elastica-abidjan/"],
   ["monstera", "obliqua", "/media/owner-media/monstera-obliqua-peru/"],
   ["monstera", "dubia", "/media/owner-media/monstera-dubia/"],
+  ["calathea", "orbifolia", "/media/owner-media/goeppertia-orbifolia/"],
   ["cactus", "echinocactus-grusonii", "/media/owner-media/echinocactus-grusonii/"],
   ["alocasia", "platinum", "/media/owner-media/alocasia-platinum/"],
   ["musa", "basjoo", "/media/documentary-media/musa-basjoo/"],

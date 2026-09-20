@@ -120,6 +120,7 @@ test("controlled Owner WebP routes override the storage MIME safely", async () =
     "/media/owner-media/monstera-obliqua-peru/monstera-obliqua-peru-plante-en-pot.webp",
     "/media/owner-media/echinocactus-grusonii/echinocactus-grusonii-cactus-globulaire.webp",
     "/media/owner-media/monstera-dubia/monstera-dubia-trois-plantes-sur-planches.webp",
+    "/media/owner-media/goeppertia-orbifolia/goeppertia-orbifolia-plante-en-pot.webp",
     "/media/owner-media/alocasia-platinum/alocasia-platinum-feuillage-argente-texture.webp",
     "/media/documentary-media/musa-basjoo/musa-basjoo-jardin-botanique-wroclaw.webp",
     "/media/documentary-media/olea-europaea/olea-europaea-oliveraie-crete.webp",

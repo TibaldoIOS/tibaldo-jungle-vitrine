@@ -1,0 +1,23 @@
+{
+  "batch_id": "PHOTO-20260920-GOEPPERTIA-ORBIFOLIA-01",
+  "provided_by": "Owner TIBALDO",
+  "rights_basis": "Photographie fournie directement par l’Owner TIBALDO avec demande de publication sur Jungle.",
+  "transformation": "Conversion WebP sans recadrage ni modification morphologique.",
+  "photos": [{
+    "owner_identity": "Goeppertia orbifolia — Calathea",
+    "canonical_slug": "plantes/calathea/orbifolia",
+    "identity_evidence": "Nom accepté et nom horticole courant fournis par Owner ; fiche canonique existante.",
+    "source_filename": "goeppertia-orbifolia-source.png",
+    "source_bytes": 2853768,
+    "source_sha256": "74fc030b5e1979a10b4caef51de72bfc2c917d89d4fc31a66db4fedd986cec38",
+    "filename": "goeppertia-orbifolia-plante-en-pot.webp",
+    "asset_path": "/owner-media/goeppertia-orbifolia/goeppertia-orbifolia-plante-en-pot.webp",
+    "public_path": "/media/owner-media/goeppertia-orbifolia/goeppertia-orbifolia-plante-en-pot.webp",
+    "api_url": "https://jungle.tibaldo.fr/media/owner-media/goeppertia-orbifolia/goeppertia-orbifolia-plante-en-pot.webp",
+    "width": 1402,
+    "height": 1122,
+    "bytes": 324720,
+    "sha256": "aab1c034d1124cd25e9df6a13e83d48c23256b2d40e1382af7ff242d097d3836",
+    "alt": "Goeppertia orbifolia en pot clair, aux grandes feuilles arrondies parcourues de larges bandes vertes et argentées, devant un mur de pierre."
+  }]
+}

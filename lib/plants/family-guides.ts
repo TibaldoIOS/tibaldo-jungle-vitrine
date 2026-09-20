@@ -231,7 +231,7 @@ export const familyGuides = {
     sources: [{ label: "Kew Science — Marantaceae", url: "https://powo.science.kew.org/" }, { label: "NC State Extension — Maranta", url: "https://plants.ces.ncsu.edu/plants/maranta-leuconeura/" }],
   },
   calathea: {
-    name: "Calathea", image: "/media/calathea-orbifolia-tibaldo.webp", imageAlt: "Goeppertia orbifolia aux grandes feuilles rayées vert argenté", heroSubtitle: "Calathea, Goeppertia et plantes-paons : des feuillages vivants dont la beauté repose sur la stabilité et l’observation.",
+    name: "Calathea", image: "/media/owner-media/goeppertia-orbifolia/goeppertia-orbifolia-plante-en-pot.webp", imageAlt: "Goeppertia orbifolia en pot, aux grandes feuilles rondes rayées de vert et d’argent", heroSubtitle: "Calathea, Goeppertia et plantes-paons : des feuillages vivants dont la beauté repose sur la stabilité et l’observation.",
     care: { difficulty: 4, light: 3, water: 4, humidity: 5, substrate: "Humifère, stable et respirant", nutrition: "Faible à modérée, sans accumulation de sels" },
     lead: "Le nom Calathea reste très utilisé en horticulture, même si de nombreuses espèces d’intérieur sont désormais classées dans le genre Goeppertia. Elles séduisent par des feuilles rondes, rayées, veloutées ou colorées au revers.",
     origin: "Les Calathea et Goeppertia appartiennent aux Marantaceae, originaires des forêts tropicales américaines. Elles vivent sous une canopée lumineuse mais filtrée, dans une ambiance chaude et humide.",

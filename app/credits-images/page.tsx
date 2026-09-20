@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 };
 
 const credits: readonly [string, string, string, string, string?][] = [
+["Goeppertia orbifolia · Calathea orbifolia", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260920-goeppertia-orbifolia-01/orbifolia"],
 ["Monstera dubia · trois plantes sur planches", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260920-monstera-dubia-02/dubia"],
 ["Monstera obliqua « Peru »", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260920-three-02/monstera-peru"],
 ["Echinocactus grusonii", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260920-three-02/echinocactus-grusonii"],
