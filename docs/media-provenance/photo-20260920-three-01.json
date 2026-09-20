@@ -1,0 +1,56 @@
+{
+  "batch_id": "PHOTO-20260920-THREE-01",
+  "source_before": "16eb338b417554e80cc86d9106604c270883bbc7",
+  "public_version_before": 187,
+  "photos": [
+    {
+      "owner_identity": "Disocactus anguliger",
+      "canonical_slug": "plantes/epiphyllum/anguliger",
+      "original_filename": "Disocactus anguliger.jpg",
+      "original_preserved_path": "/Users/tibaldo/Documents/Codex/2026-09-10/cod/deliverables/pending-three-owner-media-20260920-v1/original/disocactus-anguliger-owner-original.jpg",
+      "original_sha256": "160701bf8b5f0729716ed8b7e79915ebbef69f0ff408c1afbac2ce50dc7fb085",
+      "filename": "disocactus-anguliger-cactus-zigzag-en-pot.webp",
+      "asset_path": "/owner-media/disocactus-anguliger/disocactus-anguliger-cactus-zigzag-en-pot.webp",
+      "public_path": "/media/owner-media/disocactus-anguliger/disocactus-anguliger-cactus-zigzag-en-pot.webp",
+      "api_url": "https://jungle.tibaldo.fr/media/owner-media/disocactus-anguliger/disocactus-anguliger-cactus-zigzag-en-pot.webp",
+      "sha256": "2a9197727d34efcd4467cf05034d2635883ff7cfd1a170ecdeedb330b61d9db9",
+      "bytes": 155304,
+      "dimensions": [1122, 1402],
+      "alt": "Disocactus anguliger en pot vert sombre, aux longues tiges plates profondément découpées en zigzag."
+    },
+    {
+      "owner_identity": "Dicksonia antarctica",
+      "canonical_slug": "plantes/dicksonia/antarctica",
+      "original_filename": "Dicksonia antarctica.png",
+      "original_preserved_path": "/Users/tibaldo/Documents/Codex/2026-09-10/cod/deliverables/pending-three-owner-media-20260920-v1/original/dicksonia-antarctica-owner-original.png",
+      "original_sha256": "dcbc184c470a95fb7f407e5539a652fbdeff58e96f8cf6c9d8717a9bc74d6939",
+      "filename": "dicksonia-antarctica-jeune-fougere-en-pot.webp",
+      "asset_path": "/owner-media/dicksonia-antarctica/dicksonia-antarctica-jeune-fougere-en-pot.webp",
+      "public_path": "/media/owner-media/dicksonia-antarctica/dicksonia-antarctica-jeune-fougere-en-pot.webp",
+      "api_url": "https://jungle.tibaldo.fr/media/owner-media/dicksonia-antarctica/dicksonia-antarctica-jeune-fougere-en-pot.webp",
+      "sha256": "7fdbf3d1bce8b49a5a4d8b8ee48e2a4c52bceb65661449f5492516df9eaff186",
+      "bytes": 464892,
+      "dimensions": [1177, 1336],
+      "alt": "Jeune Dicksonia antarctica en pot vert, formant une couronne de frondes finement divisées et arquées."
+    },
+    {
+      "owner_identity": "Sansevieria trifasciata 'Hahnii' (syn. Dracaena trifasciata)",
+      "canonical_identity": "Dracaena trifasciata ‘Hahnii’",
+      "canonical_slug": "plantes/sansevieria/hahnii",
+      "original_filename": "Sansevieria trifasciata 'Hahnii' (syn. Dracaena trifasciata).png",
+      "original_preserved_path": "/Users/tibaldo/Documents/Codex/2026-09-10/cod/deliverables/pending-three-owner-media-20260920-v1/original/dracaena-trifasciata-hahnii-owner-original.png",
+      "original_sha256": "f01b7ca630413687766e4e81f746194396048915977beb5ad7d6cc0f16e15200",
+      "filename": "dracaena-trifasciata-hahnii-plante-entiere.webp",
+      "asset_path": "/owner-media/dracaena-trifasciata-hahnii/dracaena-trifasciata-hahnii-plante-entiere.webp",
+      "public_path": "/media/owner-media/dracaena-trifasciata-hahnii/dracaena-trifasciata-hahnii-plante-entiere.webp",
+      "api_url": "https://jungle.tibaldo.fr/media/owner-media/dracaena-trifasciata-hahnii/dracaena-trifasciata-hahnii-plante-entiere.webp",
+      "sha256": "ada2b7e1d534073c9ba5cf26e4aa485c00a81e7bb1d2e02bf56cdda9cf31ff3d",
+      "bytes": 176732,
+      "dimensions": [1026, 1533],
+      "alt": "Dracaena trifasciata ‘Hahnii’ en pot de culture, formant une rosette compacte de feuilles courtes, marbrées de vert et bordées de jaune."
+    }
+  ],
+  "rights": "Autorisation Owner permanente",
+  "credit": "Photo : TIBALDO",
+  "processing": "Conversions WebP quality88 method6; sans recadrage, sans agrandissement, sans altération générative; métadonnées supprimées"
+}

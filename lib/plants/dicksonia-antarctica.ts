@@ -261,11 +261,12 @@ export const dicksoniaAntarctica: PlantEntry = {
   ],
   gallery: [
     {
-      src: "/images/botanical-heroes/prototypes/dicksonia-prototype.svg",
-      alt: "Illustration botanique de Dicksonia antarctica avec stipe et couronne de frondes",
-      caption: "Silhouette botanique de la fougère arborescente, utilisée comme repère éditorial.",
-      width: 760,
-      height: 620,
+      src: "/media/owner-media/dicksonia-antarctica/dicksonia-antarctica-jeune-fougere-en-pot.webp",
+      alt: "Jeune Dicksonia antarctica en pot vert, formant une couronne de frondes finement divisées et arquées.",
+      caption: "Photo : TIBALDO",
+      width: 1177,
+      height: 1336,
+      license: { status: "verified", creator: "TIBALDO", license: "Autorisation d’utilisation confirmée par l’Owner TIBALDO", sourceUrl: "owner-provided://tibaldo/photo-20260920-three-01/dicksonia-antarctica", registryPath: "/credits-images", note: "Identité fournie par Owner. Provenance : docs/media-provenance/photo-20260920-three-01.json" },
     },
   ],
   seo: {

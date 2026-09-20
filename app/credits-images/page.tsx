@@ -9,13 +9,15 @@ export const metadata: Metadata = {
 };
 
 const credits: readonly [string, string, string, string, string?][] = [
+["Disocactus anguliger", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260920-three-01/disocactus-anguliger"],
+["Dicksonia antarctica", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260920-three-01/dicksonia-antarctica"],
 ["Asparagus setaceus · vendu comme Asparagus plumosus", "Visuel : TIBALDO", "Visuel Owner recréé et amélioré avec génération assistée · conversion WebP", "owner-provided://tibaldo/photo-20260920-asparagus-plumosus-01/plumosus"],
 ["Musa basjoo", "Crusier", "CC BY 4.0 · conversion WebP sans recadrage", "https://commons.wikimedia.org/wiki/File:Musa_basjoo_OB_Wroc%C5%82aw.jpg", "https://creativecommons.org/licenses/by/4.0/"],
 ["Olea europaea", "H. Zell", "CC BY-SA 3.0 · dérivé WebP sans recadrage", "https://commons.wikimedia.org/wiki/File:Olea_europaea_002.JPG", "https://creativecommons.org/licenses/by-sa/3.0/"],
 ["Asplenium scolopendrium", "NasserHalaweh", "CC BY-SA 4.0 · dérivé WebP sans recadrage", "https://commons.wikimedia.org/wiki/File:Aspleniaceae_Asplenium_scolopendrium_1.jpg", "https://creativecommons.org/licenses/by-sa/4.0/"],
 ["Tetrapanax papyrifer", "KATHERINE WAGNER-REISS", "CC BY-SA 4.0 · dérivé WebP sans recadrage", "https://commons.wikimedia.org/wiki/File:Tetrapanax_papyrifer_at_the_Missouri_Botanical_Garden.jpg", "https://creativecommons.org/licenses/by-sa/4.0/"],
 ["Anthurium ‘Silver Blush’", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260917-anthurium-silver-blush-01/silver-blush"],
-["Dracaena trifasciata ‘Hahnii’", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260917-dracaena-hahnii-01/hahnii"],
+["Dracaena trifasciata ‘Hahnii’ · deux vues", "Photo : TIBALDO", "Photographies fournies par TIBALDO · conversions WebP sans recadrage", "owner-provided://tibaldo/photo-20260920-three-01/dracaena-trifasciata-hahnii"],
 ["Alocasia sp. ‘Platinum’", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260917-alocasia-platinum-01/platinum"],
 ["Strelitzia alba · inflorescence", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260917-strelitzia-alba-flower-01/alba"],
 ["Fatsia japonica ‘Spider’s Web’", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260916-fatsia-spiders-web-01/japonica-spiders-web"],

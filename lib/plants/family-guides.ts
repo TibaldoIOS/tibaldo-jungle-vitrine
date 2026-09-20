@@ -71,7 +71,8 @@ const simpleGuides = {
     care: { difficulty: 3, light: 5, water: 2, humidity: 2, substrate: "Très minéral, aéré et drainant", nutrition: "Légère pendant une poussée active" },
   },
   dicksonia: {
-    ...simpleGuide("Dicksonia", "Dicksonia", "Des fougères arborescentes à croissance lente dont le stipe fibreux porte une couronne de grandes frondes.", "Le genre Dicksonia appartient aux Dicksoniaceae dans l’architecture taxonomique Jungle ; Dicksonia antarctica est originaire du sud-est de l’Australie et de Tasmanie.", "Photographie propriétaire de Dicksonia antarctica à ajouter"),
+    ...simpleGuide("Dicksonia", "Dicksonia", "Des fougères arborescentes à croissance lente dont le stipe fibreux porte une couronne de grandes frondes.", "Le genre Dicksonia appartient aux Dicksoniaceae dans l’architecture taxonomique Jungle ; Dicksonia antarctica est originaire du sud-est de l’Australie et de Tasmanie.", "Jeune Dicksonia antarctica en pot vert, aux frondes finement divisées et arquées"),
+    image: "/media/owner-media/dicksonia-antarctica/dicksonia-antarctica-jeune-fougere-en-pot.webp",
     care: { difficulty: 4, light: 3, water: 5, humidity: 5, substrate: "Humifère, frais et drainant", nutrition: "Modérée pendant la croissance" },
   },
   plumeria: simpleGuide("Plumeria", "Plumeria", "Les frangipaniers associent branches sculpturales, repos hivernal et floraisons parfumées sous une lumière généreuse.", "Les Plumeria appartiennent aux Apocynaceae et sont originaires des régions tropicales américaines.", "Photographie réelle d’un frangipanier à ajouter"),
@@ -79,7 +80,10 @@ const simpleGuides = {
   ficus: simpleGuide("Ficus", "Ficus", "Des arbres et lianes aux feuillages sculpturaux, désormais introduits par Ficus elastica et sa silhouette de petit arbre d’intérieur.", "Le vaste genre Ficus appartient aux Moraceae et rassemble des espèces tropicales et subtropicales très diverses.", "Photographie documentaire de Ficus encore manquante"),
   syngonium: simpleGuide("Syngonium", "Syngonium", "Des lianes tropicales dont les feuilles changent de forme avec l’âge, des jeunes pointes de flèche aux feuillages adultes profondément divisés.", "Le genre Syngonium appartient aux Araceae et provient des forêts tropicales du Mexique à l’Amérique du Sud.", "Photographie réelle d’une collection de Syngonium à ajouter"),
   hoya: simpleGuide("Hoya", "Hoya", "Des lianes épiphytes aux feuilles charnues et aux ombelles parfumées, à cultiver dans la lumière et sans excès d’eau.", "Le genre Hoya appartient aux Apocynaceae et rassemble des espèces originaires d’Asie tropicale, du Pacifique et d’Australie.", "Photographie réelle d’une collection de Hoya à ajouter"),
-  sansevieria: simpleGuide("Sansevieria", "Dracaena", "Des plantes graphiques et sobres en eau, encore connues sous le nom Sansevieria mais aujourd’hui rattachées au genre Dracaena.", "Les anciennes Sansevieria appartiennent aux Asparagaceae et sont désormais classées dans le genre Dracaena ; elles proviennent principalement d’Afrique et d’Asie tropicale.", "Photographie réelle de plusieurs Sansevieria à ajouter"),
+  sansevieria: {
+    ...simpleGuide("Sansevieria", "Dracaena", "Des plantes graphiques et sobres en eau, encore connues sous le nom Sansevieria mais aujourd’hui rattachées au genre Dracaena.", "Les anciennes Sansevieria appartiennent aux Asparagaceae et sont désormais classées dans le genre Dracaena ; elles proviennent principalement d’Afrique et d’Asie tropicale.", "Dracaena trifasciata Hahnii en pot de culture, aux feuilles compactes marbrées de vert"),
+    image: "/media/owner-media/dracaena-trifasciata-hahnii/dracaena-trifasciata-hahnii-plante-entiere.webp",
+  },
   fougeres: simpleGuide("Fougères", "Polypodiopsida", "Un univers de frondes, crosses et textures, réunissant des lignées très diverses qui demandent chacune une lumière, une humidité et un substrat adaptés.", "Le mot fougère regroupe de nombreuses familles de plantes vasculaires sans fleurs, présentes dans des habitats allant des forêts humides aux milieux rocheux.", "Photographie réelle d’une collection de fougères à ajouter"),
 };
 
@@ -256,7 +260,7 @@ export const familyGuides = {
     sources: [{ label: "Kew Science — Cactaceae", url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30000055-2" }, { label: "Royal Horticultural Society — cactus et succulentes", url: "https://www.rhs.org.uk/plants/types/cacti-succulents/growing-guide" }],
   },
   epiphyllum: {
-    name: "Epiphyllum", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie documentaire vérifiée de Disocactus à documenter", heroSubtitle: "Des cactus de forêt retombants, encore connus sous leur ancien nom Epiphyllum, qui préfèrent la lumière filtrée aux conditions désertiques.",
+    name: "Epiphyllum", image: "/media/owner-media/disocactus-anguliger/disocactus-anguliger-cactus-zigzag-en-pot.webp", imageAlt: "Disocactus anguliger en pot vert sombre, aux tiges plates profondément découpées en zigzag", heroSubtitle: "Des cactus de forêt retombants, encore connus sous leur ancien nom Epiphyllum, qui préfèrent la lumière filtrée aux conditions désertiques.",
     care: { difficulty: 2, light: 4, water: 3, humidity: 3, substrate: "Organique, très aéré et drainant", nutrition: "Légère pendant la croissance" },
     lead: "Le nom Epiphyllum reste très utilisé pour le cactus zigzag. La classification actuelle retient Disocactus anguliger : un cactus épiphyte mexicain aux tiges profondément découpées et aux fleurs nocturnes.",
     origin: "Les cactus épiphytes vivent dans les forêts tropicales américaines, installés sur des branches où leurs racines profitent d’humus, d’air et d’une humidité passagère sans rester noyées.",
