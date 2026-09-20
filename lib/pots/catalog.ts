@@ -33,6 +33,8 @@ export const potEditorialCatalog: PotEditorialEntry[] = [
   { repere: 18, supplierReference: "OWNER-EGG-D30-H26-5", name: "Pot EGG", dimensions: "Ø30 × H26,5 cm", diameterCm: 30, cropImage: "/media/pots/egg/pot-egg-d30-h26-5.png", cardWidthPercent: 63.2, image: "/media/pots/egg/pot-egg-d30-h26-5.png", alt: "Grand pot EGG bicolore brun et blanc à finition émaillée, diamètre 30 cm et hauteur 26,5 cm", description: "Le grand format de la collection EGG, avec une finition bicolore brune et blanche au relief organique." },
   { repere: 19, supplierReference: "OWNER-EGG-D18-H14", name: "Pot EGG", dimensions: "Ø18 × H14 cm", diameterCm: 18, cropImage: "/media/pots/egg/pot-egg-d18-h14.png", cardWidthPercent: 37.9, image: "/media/pots/egg/pot-egg-d18-h14.png", alt: "Petit pot EGG bicolore brun et blanc à finition émaillée, diamètre 18 cm et hauteur 14 cm", description: "Le petit format de la collection EGG, avec une finition bicolore brune et blanche au relief organique." },
   { repere: 20, supplierReference: "OWNER-EGG-D24-H22", name: "Pot EGG", dimensions: "Ø24 × H22 cm", diameterCm: 24, cropImage: "/media/pots/egg/pot-egg-d24-h22.png", cardWidthPercent: 50.5, image: "/media/pots/egg/pot-egg-d24-h22.png", alt: "Pot EGG bicolore brun et blanc à finition émaillée, diamètre 24 cm et hauteur 22 cm", description: "Le format intermédiaire de la collection EGG, avec une finition bicolore brune et blanche au relief organique." },
+  { repere: 21, supplierReference: "CEPT00002707", name: "Pot MTerra rond à rebord", dimensions: "Ø25 × H24 cm", diameterCm: 25, cropImage: "/media/pots/kalyste/pot-mterra-rond-rebord-d25-h24.png", cardWidthPercent: 52.6, image: "/media/pots/kalyste/pot-mterra-rond-rebord-d25-h24.png", alt: "Pot MTerra rond en terre cuite patinée à rebord épais, diamètre 25 cm et hauteur 24 cm", description: "Le format intermédiaire de la collection MTerra, avec sa terre cuite patinée et son rebord épais." },
+  { repere: 22, supplierReference: "CEPT00002708", name: "Pot MTerra rond à rebord", dimensions: "Ø18 × H18 cm", diameterCm: 18, cropImage: "/media/pots/kalyste/pot-mterra-rond-rebord-d18-h18.png", cardWidthPercent: 37.9, image: "/media/pots/kalyste/pot-mterra-rond-rebord-d18-h18.png", alt: "Petit pot MTerra rond en terre cuite patinée à rebord épais, diamètre 18 cm et hauteur 18 cm", description: "Le petit format de la collection MTerra, avec sa terre cuite patinée et son rebord épais." },
 ];
 
 export function potComparativeScale(pot: PotEditorialEntry) {
@@ -42,5 +44,6 @@ export function potComparativeScale(pot: PotEditorialEntry) {
 export const potEditorialGroups = [
   { id: "oeuf-emaille-bleu", reperes: [3, 5] },
   { id: "bell-rouge", reperes: [6, 7] },
+  { id: "mterra", reperes: [17, 21, 22] },
   { id: "egg", reperes: [18, 20, 19] },
 ] as const;

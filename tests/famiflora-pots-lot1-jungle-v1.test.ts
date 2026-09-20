@@ -4,10 +4,10 @@ import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { potComparativeScale, potEditorialCatalog, potEditorialGroups } from "../lib/pots/catalog.ts";
 
-test("the Jungle editorial collection contains the 15 Famiflora models, KALYSTE 2706 and the three EGG formats", () => {
-  assert.equal(potEditorialCatalog.length, 19);
-  assert.deepEqual(potEditorialCatalog.map((pot) => pot.repere), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20]);
-  assert.equal(new Set(potEditorialCatalog.map((pot) => pot.supplierReference)).size, 19);
+test("the Jungle editorial collection contains the 15 Famiflora models and the complete MTerra and EGG collections", () => {
+  assert.equal(potEditorialCatalog.length, 21);
+  assert.deepEqual(potEditorialCatalog.map((pot) => pot.repere), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]);
+  assert.equal(new Set(potEditorialCatalog.map((pot) => pot.supplierReference)).size, 21);
   assert.deepEqual(potEditorialCatalog.find((pot) => pot.repere === 17), expectKalyste2706());
 });
 
@@ -37,8 +37,8 @@ test("the comparative gallery preserves one diameter scale after subject occupan
 });
 
 test("only exact same-model colour and finish variants are grouped", () => {
-  assert.deepEqual(potEditorialGroups.map((group) => [...group.reperes]), [[3, 5], [6, 7], [18, 20, 19]]);
-  assert.equal(new Set(potEditorialGroups.flatMap((group) => group.reperes)).size, 7);
+  assert.deepEqual(potEditorialGroups.map((group) => [...group.reperes]), [[3, 5], [6, 7], [17, 21, 22], [18, 20, 19]]);
+  assert.equal(new Set(potEditorialGroups.flatMap((group) => group.reperes)).size, 10);
 });
 
 test("every editorial model has one optimized image and factual dimensions", () => {
