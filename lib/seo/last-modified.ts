@@ -15,7 +15,7 @@ export const editorialLastModified = {
   "/boutique-plantes-lille": "2026-08-17",
   "/rempotage-plantes-lille": "2026-08-17",
   "/substrats-en-vrac-lille": "2026-08-15",
-  "/pots-cache-pots-lille": "2026-09-19",
+  "/pots-cache-pots-lille": "2026-09-20",
   "/fleurs-sur-commande-lille": "2026-08-15",
   "/fleurs-mariage-lille": "2026-08-15",
   "/fleurs-evenement-lille": "2026-08-15",

@@ -4,11 +4,27 @@ import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { potComparativeScale, potEditorialCatalog, potEditorialGroups } from "../lib/pots/catalog.ts";
 
-test("the Jungle editorial collection contains exactly the 15 authorized merchant models", () => {
-  assert.equal(potEditorialCatalog.length, 15);
-  assert.deepEqual(potEditorialCatalog.map((pot) => pot.repere), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16]);
-  assert.equal(new Set(potEditorialCatalog.map((pot) => pot.supplierReference)).size, 15);
+test("the Jungle editorial collection contains the 15 Famiflora models and authorized KALYSTE 2706 pot", () => {
+  assert.equal(potEditorialCatalog.length, 16);
+  assert.deepEqual(potEditorialCatalog.map((pot) => pot.repere), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17]);
+  assert.equal(new Set(potEditorialCatalog.map((pot) => pot.supplierReference)).size, 16);
+  assert.deepEqual(potEditorialCatalog.at(-1), expectKalyste2706());
 });
+
+function expectKalyste2706() {
+  return {
+    repere: 17,
+    supplierReference: "CEPT00002706",
+    name: "Pot rond à rebord terre cuite",
+    dimensions: "Ø33 × H31 cm",
+    diameterCm: 33,
+    cropImage: "/media/pots/kalyste/pot-rond-rebord-terre-cuite-d33-h31.png",
+    cardWidthPercent: 69.5,
+    image: "/media/pots/kalyste/pot-rond-rebord-terre-cuite-d33-h31.png",
+    alt: "Grand pot rond en terre cuite patinée à rebord épais, diamètre 33 cm et hauteur 31 cm",
+    description: "Un grand pot rond en terre cuite patinée, avec un rebord épais et une silhouette stable.",
+  };
+}
 
 test("the comparative gallery preserves one diameter scale after subject occupancy correction", () => {
   const visualDiameter = (repere: number) => potComparativeScale(potEditorialCatalog.find((entry) => entry.repere === repere)!);
@@ -27,7 +43,7 @@ test("only exact same-model colour and finish variants are grouped", () => {
 
 test("every editorial model has one optimized image and factual dimensions", () => {
   for (const pot of potEditorialCatalog) {
-    assert.match(pot.image, /^\/media\/pots\/famiflora-lot1\/.+\.jpg$/);
+    assert.match(pot.image, /^\/media\/pots\/(?:famiflora-lot1\/.+\.jpg|kalyste\/.+\.png)$/);
     assert.ok(existsSync(resolve(process.cwd(), "public", pot.image.slice(1))), pot.image);
     assert.ok(existsSync(resolve(process.cwd(), "public", pot.cropImage.slice(1))), pot.cropImage);
     assert.match(pot.dimensions, /^Ø/);
