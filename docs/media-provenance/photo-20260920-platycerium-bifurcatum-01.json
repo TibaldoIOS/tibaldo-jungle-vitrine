@@ -1,0 +1,26 @@
+{
+  "batch_id": "PHOTO-20260920-PLATYCERIUM-BIFURCATUM-01",
+  "owner_identity": "Fougère corne d'élan — Platycerium bifurcatum",
+  "canonical_slug": "plantes/platycerium/bifurcatum",
+  "identity_evidence": "Nom botanique, dimensions et statut commercial fournis explicitement par Owner; aucune identité déduite de l’image",
+  "original_filename": "codex-clipboard-110f361f-3a90-4cb7-8a61-eeed72a9c7b2.png",
+  "original_sha256": "648270db1c61a75686c5084476f82de9c7d7e83159658f6e6a0274480021a5c1",
+  "filename": "platycerium-bifurcatum-suspension.webp",
+  "public_path": "/media/owner-media/platycerium-bifurcatum/platycerium-bifurcatum-suspension.webp",
+  "api_url": "https://jungle.tibaldo.fr/media/owner-media/platycerium-bifurcatum/platycerium-bifurcatum-suspension.webp",
+  "sha256": "5754243a90cb0c8d21c470c9011e88f828d8eb313a55cd09f2dc2f6686e5c764",
+  "bytes": 199432,
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "alt": "Fougère corne d’élan Platycerium bifurcatum en suspension noire, aux frondes vertes ramifiées formant une large touffe.",
+  "provenance": "OWNER_SOURCE_AI_STAGED",
+  "rights": "Publication autorisée par Owner TIBALDO",
+  "credit": "Visuel TIBALDO · mise en scène assistée par IA",
+  "constraints": [
+    "Le visuel ne prouve ni le stock, ni les dimensions, ni le prix, ni le coût d’acquisition.",
+    "Les dimensions affichées proviennent de la déclaration Owner et concernent le sujet du Studio.",
+    "La référence commerciale reste non vendable et non publiée sur le Shop jusqu’à une nouvelle décision Owner."
+  ]
+}

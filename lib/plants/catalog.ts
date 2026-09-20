@@ -24,6 +24,7 @@ import { epipremnumPinnatum } from "./epipremnum-pinnatum.ts";
 import { applyCanonicalQualityFixes } from "./canonical-quality-fixes-v1.ts";
 import { applyDevilMonsterContext } from "./devil-monster-v1.ts";
 import { willaertIdentityPlants } from "./willaert-identities-v1.ts";
+import { platyceriumBifurcatum } from "./platycerium-bifurcatum.ts";
 
 export const plantFamilies = [
   { slug: "olea", name: "Olea", eyebrow: "Arbres méditerranéens", description: "L’olivier Olea europaea, sa lumière, son drainage et sa culture en pot ou au jardin.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie documentaire d’Olea europaea à réaliser", available: true },
@@ -207,7 +208,7 @@ const rawPlants: PlantEntry[] = [{
 
 export const plants: PlantEntry[] = applyDevilMonsterContext(applyOwnerPileaMediaV1(applyOwnerMarbleQueenMediaV1(applyOwnerMonsteraMintMediaV1(
   applyOwnerMonsteraThaiConstellationMediaV1(
-    applyMediaRightsP0Closure(applyVariegataContext(applyShopReferenceContext([...rawPlants, ...shopReferencePlants]))),
+    applyMediaRightsP0Closure(applyVariegataContext(applyShopReferenceContext([...rawPlants, ...shopReferencePlants, platyceriumBifurcatum]))),
   ),
 ))));
 
@@ -977,7 +978,7 @@ for (const entry of documentaryBatch) {
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));
 export const getPlant = (genre: string, slug: string) => plants.find((plant) => plant.genre === genre && plant.slug === slug);
 export const getPlantsByGenre = (genre: string) => plants.filter((plant) =>
-  genre === "fougeres" ? ["asplenium", "nephrolepis", "dicksonia"].includes(plant.genre) : plant.genre === genre,
+  genre === "fougeres" ? ["asplenium", "nephrolepis", "dicksonia", "platycerium"].includes(plant.genre) : plant.genre === genre,
 );
 
 export const studioCollection = [

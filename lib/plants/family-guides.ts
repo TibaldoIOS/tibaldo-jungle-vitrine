@@ -85,6 +85,22 @@ const simpleGuides = {
     image: "/media/owner-media/dracaena-trifasciata-hahnii/dracaena-trifasciata-hahnii-plante-entiere.webp",
   },
   fougeres: simpleGuide("Fougères", "Polypodiopsida", "Un univers de frondes, crosses et textures, réunissant des lignées très diverses qui demandent chacune une lumière, une humidité et un substrat adaptés.", "Le mot fougère regroupe de nombreuses familles de plantes vasculaires sans fleurs, présentes dans des habitats allant des forêts humides aux milieux rocheux.", "Photographie réelle d’une collection de fougères à ajouter"),
+  platycerium: {
+    ...simpleGuide("Platycerium", "Platycerium", "Des fougères épiphytes aux frondes boucliers et aux frondes fertiles ramifiées, adaptées à une culture très aérée.", "Le genre Platycerium appartient aux Polypodiaceae et vit naturellement en épiphyte dans les régions tropicales et subtropicales.", "Platycerium bifurcatum en suspension, aux frondes vertes ramifiées"),
+    image: "/media/owner-media/platycerium-bifurcatum/platycerium-bifurcatum-suspension.webp",
+    care: { difficulty: 3, light: 4, water: 3, humidity: 4, substrate: "Support épiphyte très aéré", nutrition: "Très diluée pendant la croissance" },
+    facts: [{ label: "Famille", value: "Polypodiaceae" }, { label: "Port", value: "Épiphyte" }, { label: "Lumière", value: "Vive filtrée" }, { label: "Racines", value: "Humides puis aérées" }],
+    sections: [
+      { title: "Deux types de frondes", text: "Les frondes boucliers protègent le rhizome et captent la matière organique. Les frondes fertiles, ramifiées, portent les spores et donnent au genre sa silhouette en cornes." },
+      { title: "Un support qui respire", text: "Un panier ajouré, une plaque garnie de sphaigne ou un mélange très grossier conviennent mieux qu’un terreau compact. Les racines doivent pouvoir s’humidifier puis retrouver rapidement de l’air." },
+      { title: "Lumière vive, soleil mesuré", text: "Une lumière vive filtrée soutient un port dense. Le soleil doux peut être introduit progressivement, tandis qu’un soleil estival direct peut marquer les frondes." },
+      { title: "Arroser puis laisser égoutter", text: "Réhydratez complètement le support lorsqu’il a presque séché, puis laissez toute l’eau s’écouler. Un fond de cache-pot humide en permanence favorise l’asphyxie." },
+      { title: "Respecter les frondes boucliers", text: "Leur brunissement est souvent naturel. Elles ne doivent pas être arrachées comme des feuilles mortes, car elles protègent la base de la plante." },
+    ],
+    problems: [{ title: "Base molle", text: "Contrôlez l’excès d’eau, le froid et l’aération du support." }, { title: "Pointes sèches", text: "Stabilisez l’arrosage et éloignez la plante du chauffage direct." }, { title: "Frondes pâles", text: "Augmentez progressivement la lumière filtrée." }, { title: "Cochenilles", text: "Inspectez les jonctions sans arracher les frondes boucliers." }],
+    faq: [{ question: "Pourquoi les frondes boucliers brunissent-elles ?", answer: "Elles brunissent naturellement en vieillissant et continuent à protéger la base de la plante." }, { question: "Peut-on monter un Platycerium sur une planche ?", answer: "Oui, avec un support stable, un peu de sphaigne et des liens qui ne blessent pas le rhizome." }, { question: "Quel rythme d’arrosage suivre ?", answer: "Arrosez selon le séchage du support, pas selon un calendrier fixe, puis laissez égoutter complètement." }],
+    sources: [{ label: "Kew Science — Platycerium", url: "https://powo.science.kew.org/results?q=Platycerium" }, { label: "RHS — Platycerium bifurcatum", url: "https://www.rhs.org.uk/plants/13234/platycerium-bifurcatum/details" }],
+  },
 };
 
 export const familyGuides = {
