@@ -15,14 +15,14 @@ function expectKalyste2706() {
   return {
     repere: 17,
     supplierReference: "CEPT00002706",
-    name: "Pot rond à rebord terre cuite",
+    name: "Pot MTerra rond à rebord",
     dimensions: "Ø33 × H31 cm",
     diameterCm: 33,
     cropImage: "/media/pots/kalyste/pot-rond-rebord-terre-cuite-d33-h31.png",
     cardWidthPercent: 69.5,
     image: "/media/pots/kalyste/pot-rond-rebord-terre-cuite-d33-h31.png",
-    alt: "Grand pot rond en terre cuite patinée à rebord épais, diamètre 33 cm et hauteur 31 cm",
-    description: "Un grand pot rond en terre cuite patinée, avec un rebord épais et une silhouette stable.",
+    alt: "Grand pot MTerra rond en terre cuite patinée à rebord épais, diamètre 33 cm et hauteur 31 cm",
+    description: "Un grand pot rond en terre cuite patinée de la collection MTerra, avec un rebord épais et une silhouette stable.",
   };
 }
 
