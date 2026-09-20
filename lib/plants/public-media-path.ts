@@ -1,4 +1,4 @@
-const MIME_CONTROLLED_MEDIA_PREFIX = /^\/media\/(?:documentary-media\/|owner-media\/(?:strelitzia-alba|anthurium-silver-blush|ficus-elastica-abidjan|alocasia-platinum|dracaena-angolensis-straight)\/)/;
+const MIME_CONTROLLED_MEDIA_PREFIX = /^\/media\/(?:documentary-media\/|owner-media\/(?:strelitzia-alba|anthurium-silver-blush|ficus-elastica-abidjan|alocasia-platinum|dracaena-angolensis-straight|asparagus-plumosus)\/)/;
 
 /**
  * Most historical API media URLs intentionally expose the bundled asset path

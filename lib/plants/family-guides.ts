@@ -176,7 +176,7 @@ export const familyGuides = {
     sources: [{ label: "NC State Extension — distinction avec Philodendron", url: "https://plants.ces.ncsu.edu/plants/philodendron-hederaceum/" }, { label: "Kew Science — Araceae", url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30000216-2/general-information" }],
   },
   asparagus: {
-    name: "Asparagus", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie documentaire vérifiée d’Asparagus à documenter", heroSubtitle: "Des plantes plumeuses qui ne sont pas des fougères, capables de retomber ou de grimper avec une légèreté remarquable.",
+    name: "Asparagus", image: "/media/owner-media/asparagus-plumosus/asparagus-plumosus-port-aerien.webp", imageAlt: "Asparagus plumosus en pot de culture, au port aérien et au feuillage vert plumeux", heroSubtitle: "Des plantes plumeuses qui ne sont pas des fougères, capables de retomber ou de grimper avec une légèreté remarquable.",
     care: { difficulty: 2, light: 4, water: 3, humidity: 3, substrate: "Organique, léger et drainant", nutrition: "Douce et régulière en croissance" },
     lead: "Le genre Asparagus rassemble bien plus que l’asperge potagère. Plusieurs espèces sont cultivées en intérieur pour leurs tiges fines et leurs cladodes plumeux. Asparagus setaceus, encore vendu sous le nom plumosus, devient une élégante plante sarmenteuse.", origin: "Asparagus setaceus est originaire d’une vaste zone allant de l’Afrique orientale à l’Afrique australe et aux Comores. Il appartient aux Asparagaceae et non aux fougères.",
     facts: [{ label: "Exposition", value: "Vive sans soleil chaud" }, { label: "Température", value: "16–24 °C" }, { label: "Arrosage", value: "Régulier sans saturation" }, { label: "Port", value: "Arqué puis sarmenteux" }],

@@ -18,6 +18,7 @@ const removedAssets = [
 ];
 
 const ownerReplacements = new Map([
+  ["/plantes/asparagus/plumosus", "owner-provided://tibaldo/photo-20260920-asparagus-plumosus-01/plumosus"],
   ["/plantes/philodendron/billietiae", "owner-provided://tibaldo/photo-20260914-billietiae-01/billietiae"],
   ["/plantes/monstera/thai-constellation", "owner-provided://tibaldo/monstera-thai-constellation-2026-09-05"],
   ["/plantes/monstera/mint", "owner-provided://tibaldo/monstera-mint-2026-09-05"],

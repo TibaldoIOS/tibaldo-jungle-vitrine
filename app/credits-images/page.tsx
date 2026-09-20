@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 };
 
 const credits: readonly [string, string, string, string, string?][] = [
+["Asparagus setaceus · vendu comme Asparagus plumosus", "Visuel : TIBALDO", "Visuel Owner recréé et amélioré avec génération assistée · conversion WebP", "owner-provided://tibaldo/photo-20260920-asparagus-plumosus-01/plumosus"],
 ["Musa basjoo", "Crusier", "CC BY 4.0 · conversion WebP sans recadrage", "https://commons.wikimedia.org/wiki/File:Musa_basjoo_OB_Wroc%C5%82aw.jpg", "https://creativecommons.org/licenses/by/4.0/"],
 ["Olea europaea", "H. Zell", "CC BY-SA 3.0 · dérivé WebP sans recadrage", "https://commons.wikimedia.org/wiki/File:Olea_europaea_002.JPG", "https://creativecommons.org/licenses/by-sa/3.0/"],
 ["Asplenium scolopendrium", "NasserHalaweh", "CC BY-SA 4.0 · dérivé WebP sans recadrage", "https://commons.wikimedia.org/wiki/File:Aspleniaceae_Asplenium_scolopendrium_1.jpg", "https://creativecommons.org/licenses/by-sa/4.0/"],

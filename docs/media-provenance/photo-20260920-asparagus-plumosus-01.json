@@ -1,0 +1,41 @@
+{
+  "batch_id": "PHOTO-20260920-ASPARAGUS-PLUMOSUS-01",
+  "source_before": "e5715f2fd3ee793790cff785a59f24a94e10e261",
+  "public_version_before": 186,
+  "photos": [
+    {
+      "owner_identity": "Asparagus Plumosus",
+      "canonical_identity": "Asparagus setaceus",
+      "canonical_slug": "plantes/asparagus/plumosus",
+      "identity_evidence": "Nom horticole fourni par Owner et relié à l’entité canonique existante; aucune identité déduite de l’image",
+      "original_filename": "codex-clipboard-cc568241-58a8-4230-ada1-3e1f4774fdfb.jpg",
+      "original_preserved_path": "/Users/tibaldo/Documents/Codex/2026-09-10/cod/deliverables/pending-asparagus-plumosus-owner-media-v1/original/asparagus-plumosus-owner-reference-original.jpg",
+      "original_sha256": "812d5a58edf298602476e00d04090636cd2b438497633f7d72072c5969e2f729",
+      "improved_master_path": "/Users/tibaldo/Documents/Codex/2026-09-10/cod/deliverables/pending-asparagus-plumosus-owner-media-v1/improved/asparagus-plumosus-improved-master.png",
+      "improved_master_sha256": "c3933a85c0b3ca5c8861a756802de25a976cdfcbe3561ad1277dd146dd4e76c6",
+      "filename": "asparagus-plumosus-port-aerien.webp",
+      "asset_path": "/owner-media/asparagus-plumosus/asparagus-plumosus-port-aerien.webp",
+      "public_path": "/media/owner-media/asparagus-plumosus/asparagus-plumosus-port-aerien.webp",
+      "api_url": "https://jungle.tibaldo.fr/media/owner-media/asparagus-plumosus/asparagus-plumosus-port-aerien.webp",
+      "sha256": "c0a3c98131619413f55201e2c8d64bc3dce0192a9685e42c7a1e918af5768c9c",
+      "bytes": 263428,
+      "dimensions": [1254, 1254],
+      "alt": "Asparagus plumosus en pot de culture, au port aérien et aux fines tiges couvertes d’un feuillage vert plumeux.",
+      "provenance": "OWNER_GENERATIVE_ENHANCEMENT",
+      "rights": "Publication autorisée par Owner TIBALDO",
+      "credit": "Visuel : TIBALDO"
+    }
+  ],
+  "processing": "Recréation et amélioration générative explicitement demandées par Owner; master PNG conservé; conversion WebP quality88 method6; métadonnées supprimées",
+  "allowed_paths": [
+    "app/credits-images/page.tsx",
+    "docs/media-provenance/photo-20260920-asparagus-plumosus-01.json",
+    "lib/plants/catalog.ts",
+    "lib/plants/family-guides.ts",
+    "lib/plants/new-arrivals.ts",
+    "lib/plants/public-media-path.ts",
+    "tests/photo-asparagus-plumosus-owner-v1.test.ts",
+    "tests/media-rights-p0-closure-v1.test.ts",
+    "public/owner-media/asparagus-plumosus/asparagus-plumosus-port-aerien.webp"
+  ]
+}
