@@ -1,0 +1,23 @@
+{
+  "batch_id": "PHOTO-20260920-MONSTERA-DUBIA-02",
+  "provided_by": "Owner TIBALDO",
+  "rights_basis": "Photographie fournie directement par l’Owner TIBALDO avec demande de publication sur Jungle.",
+  "transformation": "Conversion WebP sans recadrage ni modification morphologique.",
+  "photos": [{
+    "owner_identity": "Monstera dubia",
+    "canonical_slug": "plantes/monstera/dubia",
+    "identity_evidence": "Nom exact fourni par Owner ; fiche canonique existante.",
+    "source_filename": "monstera-dubia-source.png",
+    "source_bytes": 3214984,
+    "source_sha256": "f8692f9a153af3bb1147aa46b1991c5e05e38bbd9da6be25d3312cf6e4744238",
+    "filename": "monstera-dubia-trois-plantes-sur-planches.webp",
+    "asset_path": "/owner-media/monstera-dubia/monstera-dubia-trois-plantes-sur-planches.webp",
+    "public_path": "/media/owner-media/monstera-dubia/monstera-dubia-trois-plantes-sur-planches.webp",
+    "api_url": "https://jungle.tibaldo.fr/media/owner-media/monstera-dubia/monstera-dubia-trois-plantes-sur-planches.webp",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 484804,
+    "sha256": "0fbee751aad51e0569aa1353c7b2b0cc47e4e60b579ace18359152cf4665a0e8",
+    "alt": "Trois Monstera dubia de tailles différentes grimpant sur des planches en bois, aux feuilles vertes marquées d’argent, devant un mur de pierre."
+  }]
+}

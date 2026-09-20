@@ -39,7 +39,7 @@ const approvedAttachments: readonly (readonly [string, string])[] = [
   ["monstera/esqueleto","/media/owner-media/monstera-esqueleto/monstera-esqueleto-feuille-detail.webp"],
   ["monstera/esqueleto","/media/monstera-esqueleto-feuille-mature-fenestrations.webp"],
   ["colocasia/esculenta-eddo","/colocasia-esculenta-feuille.jpg"],
-  ["monstera/dubia","/media/owner-media/monstera-dubia/monstera-dubia-plante-sur-planche.webp"],
+  ["monstera/dubia","/media/owner-media/monstera-dubia/monstera-dubia-trois-plantes-sur-planches.webp"],
   ["monstera/siltepecana","/media/owner-media/monstera-siltepecana/monstera-siltepecana-plante-en-suspension.webp"],
   ["monstera/obliqua","/media/owner-media/monstera-obliqua/monstera-obliqua-feuilles-fenestrees.webp"],
   ["monstera/pinnatipartita","/media/owner-media/monstera-pinnatipartita/monstera-pinnatipartita-plante-en-pot.webp"],

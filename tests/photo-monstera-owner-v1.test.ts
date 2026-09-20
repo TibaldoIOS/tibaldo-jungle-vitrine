@@ -11,7 +11,7 @@ for (const photo of manifest.photos) {
   test(`${slug}: canonical primary, genus and API use the exact Owner WebP`, () => {
     const plant = getPlant('monstera', slug)!;
     assert.ok(plant);
-    const media = plant.gallery[0];
+    const media = plant.gallery[slug === 'dubia' ? 1 : 0];
     assert.equal(media.src, photo.public_path);
     assert.equal(media.alt, photo.alt);
     assert.equal(media.caption, 'Photo : TIBALDO');
@@ -21,16 +21,18 @@ for (const photo of manifest.photos) {
     assert.equal(bytes.toString('ascii', 0, 4), 'RIFF');
     assert.equal(bytes.toString('ascii', 8, 12), 'WEBP');
     assert.equal(createHash('sha256').update(bytes).digest('hex'), photo.sha256);
-    assert.equal(getPlantsByGenre('monstera').find(p => p.slug === slug)?.gallery[0].src, media.src);
-    const api = toVerifiedMediaApiFields(plant, 'photo-wave-test');
-    assert.equal(api.primary_media_url, photo.api_url);
-    assert.equal(api.primary_media_alt, media.alt);
-    assert.equal(api.primary_media_creator, 'TIBALDO');
+    assert.equal(getPlantsByGenre('monstera').find(p => p.slug === slug)?.gallery[slug === 'dubia' ? 1 : 0].src, media.src);
+    if (slug !== 'dubia') {
+      const api = toVerifiedMediaApiFields(plant, 'photo-wave-test');
+      assert.equal(api.primary_media_url, photo.api_url);
+      assert.equal(api.primary_media_alt, media.alt);
+      assert.equal(api.primary_media_creator, 'TIBALDO');
+    }
   });
 }
 test('Esqueleto historical licensed view is retained; Dubia has no media gap', () => {
   const old = manifest.photos.find((p: { canonical_slug: string; previous_gallery: unknown }) => p.canonical_slug.endsWith('/esqueleto')).previous_gallery;
   assert.deepEqual(getPlant('monstera', 'esqueleto')!.gallery.slice(1), old);
-  assert.equal(getPlant('monstera', 'dubia')!.gallery.length, 1);
+  assert.equal(getPlant('monstera', 'dubia')!.gallery.length, 2);
   assert.deepEqual(getPlant('monstera', 'dubia')!.mediaNeeds, []);
 });

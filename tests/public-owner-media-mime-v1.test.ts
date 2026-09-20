@@ -9,6 +9,7 @@ const expected = [
   ["anthurium", "silver-blush", "/media/owner-media/anthurium-silver-blush/"],
   ["ficus", "abidjan", "/media/owner-media/ficus-elastica-abidjan/"],
   ["monstera", "obliqua", "/media/owner-media/monstera-obliqua-peru/"],
+  ["monstera", "dubia", "/media/owner-media/monstera-dubia/"],
   ["cactus", "echinocactus-grusonii", "/media/owner-media/echinocactus-grusonii/"],
   ["alocasia", "platinum", "/media/owner-media/alocasia-platinum/"],
   ["musa", "basjoo", "/media/documentary-media/musa-basjoo/"],
