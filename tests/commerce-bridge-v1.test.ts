@@ -27,6 +27,7 @@ test("desktop and mobile navigation expose Shop cart and account shortcuts",()=>
 });
 
 test("substrate bridge uses reviewed product ids and never fuzzy-maps coco chips",()=>{
+ assert.match(substrate,/perlite: "ac73a24f-8ccd-4dc9-abb9-3696a6814246"/);
  assert.match(substrate,/"sphaigne-sechee": "213a2aa4-23a3-4e30-bc08-b5c576768759"/);
  assert.match(substrate,/"charbon-actif": "90d23443-4224-4172-8b5f-6e70867df5b6"/);
  assert.match(substrate,/zeolite: "72e14d1a-7df3-44eb-b96a-2e2aaba6ce52"/);

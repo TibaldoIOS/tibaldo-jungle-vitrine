@@ -110,7 +110,7 @@ export default function SubstratesPage() {
               <div className={`material-visual material-${item.tone}`}>
                 <Image unoptimized src={item.image} alt={item.imageAlt} loading="lazy" width="900" height="700" />
                 <span className="material-number">{item.number}</span>
-                <small>Photo matière · Guide Tibaldo</small>
+                <small>{item.slug === "perlite" ? "Visuel Tibaldo · Mise en scène assistée par IA" : "Photo matière · Guide Tibaldo"}</small>
               </div>
               <div className="material-content">
                 <div className="material-title"><p>Composant · vente en vrac</p><h3>{item.name}</h3></div>
