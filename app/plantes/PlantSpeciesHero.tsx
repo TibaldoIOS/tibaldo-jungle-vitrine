@@ -66,6 +66,7 @@ export default function PlantSpeciesHero({ plant }: { plant: PlantEntry }) {
           <span /> Encyclopédie végétale · {plant.genreLabel}
         </p>
         <h1>
+          {plant.titlePrefix ? <span className="plant-profile-title-prefix">{plant.titlePrefix} </span> : null}
           <ScientificName
             name={plant.botanicalName}
             className="scientific-name-hero"

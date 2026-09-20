@@ -43,7 +43,8 @@ const prayerPlantCatalog: PlantEntry[] = [
     sources: [{ label: "Kew Science — Maranta leuconeura", url: "https://powo.science.kew.org/" }, { label: "NC State Extension — Maranta", url: "https://plants.ces.ncsu.edu/plants/maranta-leuconeura/" }], publishedAt: "2026-08-08", updatedAt: "2026-08-08",
   },
   {
-    slug: "orbifolia", genre: "calathea", genreLabel: "Calathea", botanicalName: "Goeppertia orbifolia", displayName: "Orbifolia",
+    slug: "orbifolia", genre: "calathea", genreLabel: "Calathea", botanicalName: "Goeppertia orbifolia", displayName: "Calathea orbifolia",
+    listingName: "Calathea orbifolia — Goeppertia orbifolia", titlePrefix: "Calathea orbifolia —",
     subtitle: "Une Calathea majestueuse aux feuilles rondes striées d’argent.", family: "Marantaceae", origin: "Forêts tropicales de Bolivie",
     taxonomy: { order: "Zingiberales", family: "Marantaceae", genus: "Goeppertia", species: "Goeppertia orbifolia", cultivar: null, commonNames: ["Calathea orbifolia", "Plante paon orbifolia", "Prayer plant orbifolia"] },
     filters: { temperatureMin: 16, temperatureIdeal: [18, 27], humidityIdeal: [60, 80], light: "moyenne", watering: "régulier", substrateTags: ["humifère", "aéré", "drainant", "organique"], growthRate: "moyenne", habits: ["terrestre", "dressé"], adultSizeCm: 100, needsSupport: false, variegated: false, collection: true, flowering: false, petToxic: false, humanToxic: false, regions: ["Bolivie", "Amérique du Sud"] },
@@ -58,13 +59,14 @@ const prayerPlantCatalog: PlantEntry[] = [
     faq: [{ question: "Calathea orbifolia ou Goeppertia orbifolia ?", answer: "Goeppertia orbifolia est le nom botanique actuellement accepté ; Calathea orbifolia reste le nom horticole le plus recherché." }, { question: "Pourquoi ses feuilles brunissent-elles ?", answer: "Une humidité instable, l’eau dure, les sels ou le chauffage peuvent brunir les bords." }, { question: "Peut-elle vivre loin d’une fenêtre ?", answer: "Elle tolère une lumière moyenne mais conserve mieux sa vigueur et ses motifs dans une lumière vive filtrée." }, { question: "La Calathea est-elle toxique pour les chats ?", answer: "Les Goeppertia sont généralement considérées comme non toxiques pour chats et chiens." }, { question: "Où acheter une Calathea à Lille ?", answer: "Tibaldo Jungle propose progressivement des Calathea et Goeppertia au Studio Végétal de Lille, avec rempotage gratuit." }],
     tibaldoAdvice: ["La stabilité compte davantage qu’une humidité extrême.", "Nettoyez les larges feuilles avec un chiffon doux humide, sans produit lustrant.", "N’augmentez jamais la taille du pot trop brutalement."],
     gallery: [{ src: "/media/calathea-orbifolia-tibaldo.webp", alt: "Goeppertia orbifolia aux grandes feuilles rondes vert argenté", caption: "Goeppertia orbifolia, encore largement appelée Calathea orbifolia.", width: 1024, height: 1536 }, { src: "/media/calathea-orbifolia-tibaldo.webp", alt: "Détail des bandes argentées de Calathea orbifolia", caption: "Les larges bandes argentées donnent au feuillage son rythme graphique.", width: 1024, height: 1536 }],
-    seo: { title: "Calathea orbifolia : entretien et Goeppertia à Lille", description: "Entretien de Calathea orbifolia : lumière, eau, humidité, feuilles brunes et animaux. Guide Goeppertia orbifolia à Lille.", keywords: ["Calathea orbifolia entretien", "Goeppertia orbifolia Lille", "Calathea Lille", "Calathea feuilles brunes", "Calathea chat"] },
+    seo: { title: "Calathea orbifolia — Goeppertia orbifolia : entretien", description: "Entretien de Calathea orbifolia : lumière, eau, humidité, feuilles brunes et animaux. Guide Goeppertia orbifolia à Lille.", keywords: ["Calathea orbifolia entretien", "Goeppertia orbifolia Lille", "Calathea Lille", "Calathea feuilles brunes", "Calathea chat"] },
     sources: [{ label: "Kew Science — Goeppertia orbifolia", url: "https://powo.science.kew.org/" }, { label: "ASPCA — Calathea", url: "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants/calathia" }], publishedAt: "2026-08-08", updatedAt: "2026-08-08",
   },
 ];
 
-// Ces deux fiches ont été retirées de l’encyclopédie éditoriale. Le cultivar
-// Lemon Lime reste documenté séparément.
+// La fiche générique Maranta leuconeura reste retirée afin de ne pas doubler
+// Lemon Lime. Orbifolia est publiée sous le groupe horticole Calathea tout en
+// conservant Goeppertia orbifolia comme identité botanique canonique.
 export const prayerPlants = prayerPlantCatalog.filter(
-  (plant) => plant.slug !== "leuconeura" && plant.slug !== "orbifolia",
+  (plant) => plant.slug !== "leuconeura",
 );

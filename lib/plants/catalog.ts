@@ -690,7 +690,8 @@ if (
     slug: "echinocactus-grusonii",
     botanicalName: "Echinocactus grusonii",
     displayName: "Echinocactus grusonii",
-    listingName: "Echinocactus grusonii · Coussin de belle-mère",
+    listingName: "Cactus — Echinocactus grusonii",
+    titlePrefix: "Cactus —",
     subtitle:
       "Un cactus globulaire emblématique, aux côtes régulières et aux épines jaune doré.",
     family: "Cactaceae",
@@ -702,6 +703,7 @@ if (
       cultivar: null,
       commonNames: [
         "Coussin de belle-mère",
+        "Cactus",
         "Cactus tonneau doré",
         "Golden barrel cactus",
       ],
@@ -839,7 +841,7 @@ if (
     ],
     mediaNeeds: [],
     seo: {
-      title: "Echinocactus grusonii : entretien du cactus tonneau doré",
+      title: "Cactus — Echinocactus grusonii : entretien",
       description:
         "Guide d’Echinocactus grusonii : soleil, arrosage, substrat drainant, repos hivernal et entretien du cactus tonneau doré.",
       keywords: [
