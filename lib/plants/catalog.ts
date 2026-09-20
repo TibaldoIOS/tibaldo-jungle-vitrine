@@ -39,7 +39,7 @@ export const plantFamilies = [
   { slug: "ensete", name: "Ensete", eyebrow: "Genre documenté", description: "Proches des Musa mais généralement solitaires, les Ensete forment de puissantes rosettes ornementales. Découvrez Ensete ventricosum Maurelii.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle d’un Ensete à ajouter", available: true },
   { slug: "alocasia", name: "Alocasia", eyebrow: "Collection ouverte", description: "Plantes tropicales architecturales aux feuilles spectaculaires, les Alocasia aiment la lumière vive, la chaleur et un substrat très aéré. Découvrez nos conseils de culture et les Alocasia rares observés au Studio Végétal Tibaldo Jungle à Lille.", image: "/alocasia-cuprea-feuillage.jpg", imageAlt: "Feuillage nervuré vert métallique d’un Alocasia cuprea", available: true },
   { slug: "anthurium", name: "Anthurium", eyebrow: "Guide disponible", description: "Des Anthurium d’intérieur fleuris aux espèces botaniques aux feuilles veloutées, ce genre révèle une diversité exceptionnelle. Notre guide détaille lumière, humidité, arrosage et substrat pour cultiver un Anthurium de collection à Lille.", image: "/anthurium-crystallinum-feuille.jpg", imageAlt: "Grande feuille veloutée et nervurée d’Anthurium crystallinum", available: true },
-  { slug: "monstera", name: "Monstera", eyebrow: "Guide disponible", description: "Célèbres pour leurs feuilles découpées et leurs fenestrations, les Monstera deviennent de véritables plantes-sculptures lorsqu’ils peuvent grimper. Retrouvez les variétés classiques et rares, ainsi que nos conseils d’entretien adaptés aux intérieurs lillois.", image: "/monstera-deliciosa-feuilles.jpg", imageAlt: "Feuilles découpées et fenêtrées de Monstera deliciosa", available: true },
+  { slug: "monstera", name: "Monstera", eyebrow: "Guide disponible", description: "Célèbres pour leurs feuilles découpées et leurs fenestrations, les Monstera deviennent de véritables plantes-sculptures lorsqu’ils peuvent grimper. Retrouvez les variétés classiques et rares, ainsi que nos conseils d’entretien adaptés aux intérieurs lillois.", image: "/media/owner-media/monstera-obliqua-peru/monstera-obliqua-peru-plante-en-pot.webp", imageAlt: "Monstera obliqua « Peru » en pot vert, aux feuilles fines très largement fenestrées", available: true },
   { slug: "philodendron", name: "Philodendron", eyebrow: "Guide disponible", description: "Grimpants, rampants ou autoportants, les Philodendron offrent une incroyable palette de formes, de couleurs et de textures. Tibaldo Jungle documente leur croissance, leur rempotage et les bons substrats pour réussir leur culture à Lille.", image: "/philodendron-hastatum-feuillage.jpg", imageAlt: "Feuillage argenté lancéolé de Philodendron hastatum", available: true },
   { slug: "epipremnum", name: "Epipremnum", eyebrow: "Guide disponible", description: "Souvent appelés pothos, les Epipremnum sont des lianes tropicales accessibles qui développent de grandes feuilles lorsqu’elles grimpent dans de bonnes conditions. Découvrez comment améliorer leur lumière, leur tuteurage et leur croissance en intérieur à Lille.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie documentaire vérifiée d’Epipremnum à documenter", available: true },
   { slug: "asparagus", name: "Asparagus", eyebrow: "Nouvelle fiche", description: "Sous leur apparence de fougère, les Asparagus sont des plantes sarmenteuses aux cladodes très fins. Découvrez le Plumosus de l’arrivage, son vrai nom botanique et les gestes qui préservent son feuillage vaporeux.", image: "/media/owner-media/asparagus-plumosus/asparagus-plumosus-port-aerien.webp", imageAlt: "Asparagus plumosus en pot de culture, au port aérien et au feuillage vert plumeux", available: true },
@@ -47,7 +47,7 @@ export const plantFamilies = [
   { slug: "colocasia", name: "Colocasia", eyebrow: "Guide disponible", description: "Avec leurs immenses feuilles en oreilles d’éléphant, les Colocasia aiment l’eau, la chaleur et une nutrition généreuse pendant leur croissance. Notre guide explique leur culture en pot, leur saison extérieure et leur hivernage sous le climat de Lille.", image: "/colocasia-esculenta-feuille.jpg", imageAlt: "Grande feuille en cœur de Colocasia esculenta, oreille d’éléphant", available: true },
   { slug: "pilea", name: "Pilea", eyebrow: "Espèce documentée", description: "Le genre Pilea rassemble la plante à monnaie chinoise et de nombreuses espèces compactes, rampantes ou texturées. Apprenez à cultiver, tourner et multiplier le Pilea peperomioides, une plante d’intérieur graphique disponible selon les arrivages à Lille.", image: "/media/pilea-collection-especes.webp", imageAlt: "Collection éditoriale de Pilea aux feuilles rondes, argentées, gaufrées et retombantes", available: true },
   { slug: "peperomia", name: "Peperomia", eyebrow: "Guide disponible", description: "Compacts et graphiques, les Peperomia séduisent par leurs feuilles charnues, gaufrées, argentées ou panachées. Découvrez leurs besoins en lumière, leur arrosage modéré et les mélanges drainants conseillés par Tibaldo Jungle à Lille.", image: "/peperomia-argyreia-feuillage.jpg", imageAlt: "Feuillage rayé argent et vert de Peperomia argyreia", available: true },
-  { slug: "cactus", name: "Cactus", eyebrow: "Nouvel univers", description: "Des cactus miniatures aux grands cierges sculpturaux, les Cactaceae réunissent des plantes adaptées à la sécheresse mais exigeantes en lumière. Découvrez comment choisir, arroser, rempoter et faire refleurir un cactus dans un intérieur à Lille.", image: "/cactus-collection-serre.jpg", imageAlt: "Collection de cactus globulaires et colonnaires cultivés sous une serre lumineuse", available: true },
+  { slug: "cactus", name: "Cactus", eyebrow: "Nouvel univers", description: "Des cactus miniatures aux grands cierges sculpturaux, les Cactaceae réunissent des plantes adaptées à la sécheresse mais exigeantes en lumière. Découvrez comment choisir, arroser, rempoter et faire refleurir un cactus dans un intérieur à Lille.", image: "/media/owner-media/echinocactus-grusonii/echinocactus-grusonii-cactus-globulaire.webp", imageAlt: "Echinocactus grusonii globulaire en pot de terre cuite, aux côtes marquées et aux épines jaune pâle", available: true },
   { slug: "maranta", name: "Maranta", eyebrow: "Plantes qui prient", description: "Les Maranta déploient des feuillages peints de nervures rouges, de taches sombres et de nuances veloutées. Découvrez comment préserver leurs couleurs, comprendre le mouvement quotidien de leurs feuilles et réussir leur culture dans un intérieur à Lille.", image: "/media/maranta-leuconeura-tibaldo.webp", imageAlt: "Maranta leuconeura mature aux feuilles vertes marquées de nervures rouges", available: true },
   { slug: "calathea", name: "Calathea", eyebrow: "Feuillages graphiques", description: "Calathea reste le nom horticole familier de nombreuses plantes aujourd’hui classées dans le genre Goeppertia. Leurs grandes feuilles rayées, rondes ou dessinées demandent lumière douce, chaleur stable et arrosage attentif.", image: "/media/calathea-orbifolia-tibaldo.webp", imageAlt: "Calathea orbifolia aux grandes feuilles rondes rayées de vert argenté", available: true },
   { slug: "aloe", name: "Aloe", eyebrow: "Nouvelle fiche locale", description: "Les Aloe sont des succulentes lumineuses aux feuilles charnues. La première fiche documente Aloe vera sans transformer une plante décorative en promesse médicale.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle d’Aloe à ajouter", available: true },
@@ -57,7 +57,7 @@ export const plantFamilies = [
   { slug: "dicksonia", name: "Dicksonia", eyebrow: "Fougère arborescente", description: "Le genre Dicksonia réunit des fougères arborescentes au stipe fibreux. Découvrez Dicksonia antarctica, son besoin d’humidité et son hivernage nuancé dans le Nord.", image: "/media/owner-media/dicksonia-antarctica/dicksonia-antarctica-jeune-fougere-en-pot.webp", imageAlt: "Jeune Dicksonia antarctica en pot vert, aux frondes finement divisées et arquées", available: true },
   { slug: "plumeria", name: "Plumeria", eyebrow: "Frangipaniers", description: "Floraisons roses ou jaunes, chaleur et repos hivernal : les frangipaniers sont regroupés sans inventer le nom de leurs cultivars.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle de frangipanier à ajouter", available: true },
   { slug: "equisetum", name: "Prêle japonaise", eyebrow: "Extérieur humide", description: "La prêle japonaise forme des tiges verticales très graphiques et demande une culture maîtrisée pour contenir ses rhizomes.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle de prêle japonaise à ajouter", available: true },
-  { slug: "ficus", name: "Ficus", eyebrow: "Espèce documentée", description: "Arbres et lianes aux silhouettes très diverses, les Ficus demandent une lumière adaptée et un arrosage lu à l’échelle du pot. Ficus elastica ouvre cet univers avec son feuillage coriace et sa croissance arborescente.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie documentaire de Ficus encore manquante", available: true },
+  { slug: "ficus", name: "Ficus", eyebrow: "Espèce documentée", description: "Arbres et lianes aux silhouettes très diverses, les Ficus demandent une lumière adaptée et un arrosage lu à l’échelle du pot. Ficus elastica ouvre cet univers avec son feuillage coriace et sa croissance arborescente.", image: "/media/owner-media/ficus-elastica-abidjan/ficus-elastica-abidjan-plante-entiere.webp", imageAlt: "Ficus elastica « Abidjan » en pot clair, au port dressé et au feuillage très sombre", available: true },
   { slug: "syngonium", name: "Syngonium", eyebrow: "Nouvel univers", description: "Des jeunes feuilles en pointe de flèche aux formes adultes profondément divisées, les Syngonium changent de silhouette en grandissant. Découvrez leur lumière, leur support et les nombreuses panachures horticoles.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle d’une collection de Syngonium à ajouter", available: true },
   { slug: "hoya", name: "Hoya", eyebrow: "Nouvel univers", description: "Lianes épiphytes aux feuilles souvent charnues, les Hoya sont appréciés pour leurs formes variées et leurs floraisons en ombelles. Leur réussite repose sur la lumière, l’aération des racines et un arrosage mesuré.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie réelle d’une collection de Hoya à ajouter", available: true },
   { slug: "sansevieria", name: "Sansevieria", eyebrow: "Nom horticole familier", description: "Toujours connues comme Sansevieria, ces plantes sont désormais rattachées au genre Dracaena. Leurs feuilles verticales, cylindriques ou panachées demandent beaucoup de lumière et peu d’eau.", image: "/media/owner-media/dracaena-trifasciata-hahnii/dracaena-trifasciata-hahnii-plante-entiere.webp", imageAlt: "Dracaena trifasciata Hahnii en pot de culture, aux feuilles compactes marbrées de vert", available: true },
@@ -299,6 +299,9 @@ const obliquaPhotoPlantIndex = plants.findIndex((plant) => plant.genre === "mons
 if (obliquaPhotoPlantIndex !== -1) {
   const plant = plants[obliquaPhotoPlantIndex];
   plants[obliquaPhotoPlantIndex] = { ...plant, gallery: [{
+  "src": "/media/owner-media/monstera-obliqua-peru/monstera-obliqua-peru-plante-en-pot.webp", "alt": "Monstera obliqua « Peru » en pot vert, aux feuilles fines très largement fenestrées, devant un mur clair.", "caption": "Photo : TIBALDO", "width": 1126, "height": 1397,
+  "license": { "status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260920-three-02/monstera-peru", "registryPath": "/credits-images", "note": "Identité horticole Monstera Peru fournie par Owner et rattachée à la fiche Monstera obliqua existante. Provenance : docs/media-provenance/photo-20260920-three-02.json" }
+}, {
   "src": "/media/owner-media/monstera-obliqua/monstera-obliqua-feuilles-fenestrees.webp",
   "alt": "Feuilles de Monstera obliqua aux grandes ouvertures irrégulières, près d’un tuteur fibreux.",
   "caption": "Photo : TIBALDO",
@@ -624,7 +627,7 @@ if (ficusElasticaBase && !plants.some(p => p.genre === "ficus" && p.slug === "ab
     synonyms: [],
     description: ["Ficus elastica ‘Abidjan’ se distingue par de grandes feuilles coriaces et vernissées, vert très sombre à brun bordeaux selon la lumière, ainsi que par des jeunes pousses rouge bronze.", ficusElasticaBase.description[1]],
     comparisons: [{name: "Ficus elastica", difference: "Abidjan est un cultivar horticole de cette espèce, identifié ici par son feuillage particulièrement sombre."}, ...ficusElasticaBase.comparisons],
-    gallery: [{"src": "/media/owner-media/ficus-elastica-abidjan/ficus-elastica-abidjan-feuillage-sombre.webp", "alt": "Ficus elastica « Abidjan » en pot clair, aux feuilles épaisses vert très sombre et aux jeunes pousses rouge bronze, sur fond blanc.", "caption": "Photo : TIBALDO", "width": 1536, "height": 1024, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260916-ficus-abidjan-01/abidjan", "registryPath": "/credits-images", "note": "Identité fournie par Owner. Provenance : docs/media-provenance/photo-20260916-ficus-abidjan-01.json"}}],
+    gallery: [{"src": "/media/owner-media/ficus-elastica-abidjan/ficus-elastica-abidjan-plante-entiere.webp", "alt": "Ficus elastica « Abidjan » en pot clair, au port dressé et aux feuilles épaisses vert très sombre à brun bordeaux.", "caption": "Photo : TIBALDO", "width": 1024, "height": 1536, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260920-three-02/ficus-abidjan", "registryPath": "/credits-images", "note": "Identité fournie par Owner. Provenance : docs/media-provenance/photo-20260920-three-02.json"}}, {"src": "/media/owner-media/ficus-elastica-abidjan/ficus-elastica-abidjan-feuillage-sombre.webp", "alt": "Ficus elastica « Abidjan » en pot clair, aux feuilles épaisses vert très sombre et aux jeunes pousses rouge bronze, sur fond blanc.", "caption": "Photo : TIBALDO", "width": 1536, "height": 1024, "license": {"status": "verified", "creator": "TIBALDO", "license": "Autorisation d’utilisation confirmée par l’Owner TIBALDO", "sourceUrl": "owner-provided://tibaldo/photo-20260916-ficus-abidjan-01/abidjan", "registryPath": "/credits-images", "note": "Identité fournie par Owner. Provenance : docs/media-provenance/photo-20260916-ficus-abidjan-01.json"}}],
     mediaNeeds: [],
     seo: {title: "Ficus elastica Abidjan : entretien et feuillage sombre", description: "Guide du Ficus elastica ‘Abidjan’ : lumière, arrosage, taille et entretien de ce caoutchouc au feuillage très sombre.", keywords: ["Ficus elastica Abidjan", "Ficus Abidjan entretien", "caoutchouc feuilles sombres"]},
     publishedAt: "2026-09-16",
@@ -663,6 +666,194 @@ if (alocasiaPlatinumBase && !plants.some(p => p.genre === "alocasia" && p.slug =
     seo: {title: "Alocasia Platinum : entretien et feuillage argenté", description: "Guide d’Alocasia sp. ‘Platinum’ : lumière, arrosage, humidité et entretien de son feuillage argenté texturé.", keywords: ["Alocasia Platinum", "Alocasia sp. Platinum", "Alocasia argenté"]},
     publishedAt: "2026-09-17",
     updatedAt: "2026-09-17",
+  });
+}
+
+const echinocactusBase = plants.find(
+  (p) => p.genre === "cactus" && p.slug === "assortiment",
+);
+if (
+  echinocactusBase &&
+  !plants.some(
+    (p) => p.genre === "cactus" && p.slug === "echinocactus-grusonii",
+  )
+) {
+  plants.push({
+    ...echinocactusBase,
+    slug: "echinocactus-grusonii",
+    botanicalName: "Echinocactus grusonii",
+    displayName: "Echinocactus grusonii",
+    listingName: "Echinocactus grusonii · Coussin de belle-mère",
+    subtitle:
+      "Un cactus globulaire emblématique, aux côtes régulières et aux épines jaune doré.",
+    family: "Cactaceae",
+    taxonomy: {
+      order: "Caryophyllales",
+      family: "Cactaceae",
+      genus: "Echinocactus",
+      species: "Echinocactus grusonii",
+      cultivar: null,
+      commonNames: [
+        "Coussin de belle-mère",
+        "Cactus tonneau doré",
+        "Golden barrel cactus",
+      ],
+    },
+    origin: "Mexique",
+    habitat:
+      "Milieux secs et lumineux du centre-est du Mexique, sur des sols très drainants.",
+    hybridization:
+      "Espèce botanique longtemps connue sous Echinocactus grusonii. Kew accepte actuellement Kroenleinia grusonii ; le nom Echinocactus reste largement employé en horticulture.",
+    synonyms: ["Kroenleinia grusonii"],
+    description: [
+      "Echinocactus grusonii forme lentement une tige globulaire puis plus cylindrique, divisée en côtes nettes portant des aréoles laineuses et des épines jaune pâle.",
+      "Sa culture repose sur une lumière très vive, un substrat minéral parfaitement drainant et des arrosages espacés pendant la croissance, presque suspendus au repos hivernal.",
+    ],
+    specimen: {
+      observedHeight: "Sujet compact en pot",
+      note: "La croissance est lente ; les dimensions adultes demandent de nombreuses années.",
+    },
+    growth: {
+      adultSize: "Environ 50 cm de haut, parfois davantage avec l’âge",
+      speed: "Lente",
+      habit: "Globulaire puis brièvement colonnaire",
+    },
+    filters: {
+      temperatureMin: 5,
+      temperatureIdeal: [15, 28],
+      humidityIdeal: [25, 50],
+      light: "soleil",
+      watering: "faible",
+      substrateTags: ["cactus", "minéral", "très drainant"],
+      growthRate: "lente",
+      habits: ["terrestre", "dressé"],
+      adultSizeCm: 60,
+      needsSupport: false,
+      variegated: false,
+      collection: false,
+      flowering: true,
+      petToxic: false,
+      humanToxic: false,
+      regions: ["Mexique"],
+    },
+    care: {
+      ...echinocactusBase.care,
+      light: 5,
+      water: 1,
+      humidity: 1,
+      difficulty: 2,
+      lightText:
+        "Lumière très vive avec soleil direct progressif après acclimatation.",
+      watering:
+        "Arroser à fond lorsque le mélange est entièrement sec en période de croissance, puis réduire fortement en hiver.",
+      humidityText:
+        "Air plutôt sec et bien ventilé ; éviter l’humidité stagnante autour de la tige.",
+      temperature:
+        "Idéalement 15 à 28 °C en croissance ; conserver hors gel et au sec lorsque les températures baissent.",
+      substrate:
+        "Mélange très minéral et drainant dans un pot percé, sans eau retenue en soucoupe.",
+      repotting:
+        "Rempoter avec des gants épais lorsque les racines occupent le pot, dans un contenant seulement légèrement plus grand.",
+      fertilizing:
+        "Engrais cactus faiblement azoté, très dilué, une à deux fois pendant la croissance.",
+      propagation: "Principalement par semis.",
+    },
+    toxicity: {
+      level: "non classée comme toxique",
+      summary: "Les épines peuvent provoquer des blessures.",
+      details:
+        "Placer hors de portée des enfants et animaux pour éviter les piqûres ; l’ingestion reste déconseillée.",
+    },
+    problems: [
+      {
+        title: "Base molle ou brunissante",
+        cause: "Excès d’eau ou froid sur substrat humide.",
+        advice:
+          "Suspendre l’arrosage, contrôler les racines et corriger le drainage.",
+      },
+      {
+        title: "Forme allongée et pâle",
+        cause: "Manque de lumière.",
+        advice:
+          "Augmenter progressivement l’exposition sans brûler l’épiderme.",
+      },
+      {
+        title: "Cochenilles",
+        cause: "Parasites cachés dans les aréoles laineuses ou aux racines.",
+        advice:
+          "Isoler la plante et inspecter soigneusement les zones cotonneuses.",
+      },
+    ],
+    comparisons: [
+      {
+        name: "Ferocactus",
+        difference:
+          "Plusieurs Ferocactus portent des épines plus massives ou crochues ; l’identification précise demande d’observer côtes, aréoles et floraison.",
+      },
+    ],
+    faq: [
+      {
+        question: "Quelle lumière pour Echinocactus grusonii ?",
+        answer:
+          "Une lumière très vive et plusieurs heures de soleil, après acclimatation progressive.",
+      },
+      {
+        question: "Comment l’arroser ?",
+        answer:
+          "Seulement lorsque le substrat est entièrement sec, avec une forte réduction au repos hivernal.",
+      },
+      {
+        question: "Pourquoi Kew utilise Kroenleinia grusonii ?",
+        answer:
+          "La classification botanique actuelle de Kew accepte Kroenleinia grusonii ; Echinocactus grusonii reste le nom horticole historique fourni par l’Owner.",
+      },
+    ],
+    tibaldoAdvice: [
+      "Tournez progressivement le pot pour conserver une croissance régulière, sans changer brutalement l’exposition.",
+      "Le plein soleil ne compense jamais un substrat qui retient l’eau.",
+    ],
+    gallery: [
+      {
+        src: "/media/owner-media/echinocactus-grusonii/echinocactus-grusonii-cactus-globulaire.webp",
+        alt: "Echinocactus grusonii globulaire en pot de terre cuite, aux côtes vert sombre couvertes d’épines jaune pâle et au sommet laineux.",
+        caption: "Photo : TIBALDO",
+        width: 1254,
+        height: 1254,
+        license: {
+          status: "verified",
+          creator: "TIBALDO",
+          license: "Autorisation d’utilisation confirmée par l’Owner TIBALDO",
+          sourceUrl:
+            "owner-provided://tibaldo/photo-20260920-three-02/echinocactus-grusonii",
+          registryPath: "/credits-images",
+          note: "Identité fournie par Owner. Provenance : docs/media-provenance/photo-20260920-three-02.json",
+        },
+      },
+    ],
+    mediaNeeds: [],
+    seo: {
+      title: "Echinocactus grusonii : entretien du cactus tonneau doré",
+      description:
+        "Guide d’Echinocactus grusonii : soleil, arrosage, substrat drainant, repos hivernal et entretien du cactus tonneau doré.",
+      keywords: [
+        "Echinocactus grusonii",
+        "Kroenleinia grusonii",
+        "cactus tonneau doré",
+        "coussin de belle-mère",
+      ],
+    },
+    sources: [
+      {
+        label: "Kew Science — Kroenleinia grusonii",
+        url: "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77164085-1",
+      },
+      {
+        label: "Royal Horticultural Society — Echinocactus grusonii",
+        url: "https://www.rhs.org.uk/plants/6253/echinocactus-grusonii/details",
+      },
+    ],
+    publishedAt: "2026-09-20",
+    updatedAt: "2026-09-20",
   });
 }
 

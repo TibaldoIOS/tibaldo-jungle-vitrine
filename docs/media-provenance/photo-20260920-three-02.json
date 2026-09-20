@@ -1,0 +1,59 @@
+{
+  "batch_id": "PHOTO-20260920-THREE-02",
+  "provided_by": "Owner TIBALDO",
+  "rights_basis": "Photographies fournies directement par l’Owner TIBALDO avec demande explicite de publication sur Jungle.",
+  "transformation": "Conversion WebP sans recadrage ni modification morphologique.",
+  "photos": [
+    {
+      "owner_identity": "Monstera Peru",
+      "canonical_slug": "plantes/monstera/obliqua",
+      "identity_evidence": "Nom horticole fourni par Owner ; rattachement à la fiche Monstera obliqua existante, déjà documentée pour l’appellation Peru.",
+      "source_filename": "monstera-peru-source.png",
+      "source_bytes": 2279719,
+      "source_sha256": "53d72693a121af4f6e5dda752a1deb8b2aea07957af559fdb940a413ac5d8e69",
+      "filename": "monstera-obliqua-peru-plante-en-pot.webp",
+      "asset_path": "/owner-media/monstera-obliqua-peru/monstera-obliqua-peru-plante-en-pot.webp",
+      "public_path": "/media/owner-media/monstera-obliqua-peru/monstera-obliqua-peru-plante-en-pot.webp",
+      "api_url": "https://jungle.tibaldo.fr/media/owner-media/monstera-obliqua-peru/monstera-obliqua-peru-plante-en-pot.webp",
+      "width": 1126,
+      "height": 1397,
+      "bytes": 215772,
+      "sha256": "1f6c3081e531c9e6fef6e256cff5e5891c60108918d64bdb17775db70dc582aa",
+      "alt": "Monstera obliqua « Peru » en pot vert, aux feuilles fines très largement fenestrées, devant un mur clair."
+    },
+    {
+      "owner_identity": "Echinocactus grusonii (cactus)",
+      "canonical_slug": "plantes/cactus/echinocactus-grusonii",
+      "identity_evidence": "Nom fourni par Owner. Le nom horticole Echinocactus grusonii est conservé ; la synonymie taxonomique actuelle Kroenleinia grusonii est explicitée dans la fiche.",
+      "source_filename": "echinocactus-grusonii-source.png",
+      "source_bytes": 2657923,
+      "source_sha256": "8de56c33fc13b097a0f69ad94d18e99fb7f07734187654ba78000332f3c6ba10",
+      "filename": "echinocactus-grusonii-cactus-globulaire.webp",
+      "asset_path": "/owner-media/echinocactus-grusonii/echinocactus-grusonii-cactus-globulaire.webp",
+      "public_path": "/media/owner-media/echinocactus-grusonii/echinocactus-grusonii-cactus-globulaire.webp",
+      "api_url": "https://jungle.tibaldo.fr/media/owner-media/echinocactus-grusonii/echinocactus-grusonii-cactus-globulaire.webp",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 296558,
+      "sha256": "8a2946b0703bbffc4b557d791f8d0e2ae76ef1494d15126cb7f94146ed7253eb",
+      "alt": "Echinocactus grusonii globulaire en pot de terre cuite, aux côtes vert sombre couvertes d’épines jaune pâle et au sommet laineux."
+    },
+    {
+      "owner_identity": "Ficus abidjan",
+      "canonical_slug": "plantes/ficus/abidjan",
+      "identity_evidence": "Nom fourni par Owner ; correspond à la fiche canonique Ficus elastica ‘Abidjan’ existante.",
+      "source_filename": "ficus-elastica-abidjan-source.png",
+      "source_bytes": 2496468,
+      "source_sha256": "6e7fe617c6b15c6d6ca3f87930b352a84f4783ec26df6f52fd79fcfb19dab4dc",
+      "filename": "ficus-elastica-abidjan-plante-entiere.webp",
+      "asset_path": "/owner-media/ficus-elastica-abidjan/ficus-elastica-abidjan-plante-entiere.webp",
+      "public_path": "/media/owner-media/ficus-elastica-abidjan/ficus-elastica-abidjan-plante-entiere.webp",
+      "api_url": "https://jungle.tibaldo.fr/media/owner-media/ficus-elastica-abidjan/ficus-elastica-abidjan-plante-entiere.webp",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 240058,
+      "sha256": "6e982ed08ed24f4081ddb66b94142469e711380224f086db3297affb43d355b4",
+      "alt": "Ficus elastica « Abidjan » en pot clair, au port dressé et aux feuilles épaisses vert très sombre à brun bordeaux."
+    }
+  ]
+}

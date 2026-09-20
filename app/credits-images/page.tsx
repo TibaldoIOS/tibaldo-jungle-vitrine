@@ -9,6 +9,9 @@ export const metadata: Metadata = {
 };
 
 const credits: readonly [string, string, string, string, string?][] = [
+["Monstera obliqua « Peru »", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260920-three-02/monstera-peru"],
+["Echinocactus grusonii", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260920-three-02/echinocactus-grusonii"],
+["Ficus elastica ‘Abidjan’ · plante entière", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260920-three-02/ficus-abidjan"],
 ["Disocactus anguliger", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260920-three-01/disocactus-anguliger"],
 ["Dicksonia antarctica", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260920-three-01/dicksonia-antarctica"],
 ["Asparagus setaceus · vendu comme Asparagus plumosus", "Visuel : TIBALDO", "Visuel Owner recréé et amélioré avec génération assistée · conversion WebP", "owner-provided://tibaldo/photo-20260920-asparagus-plumosus-01/plumosus"],

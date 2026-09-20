@@ -3,7 +3,6 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { getPlant, getPlantsByGenre } from '../lib/plants/catalog.ts';
-import { toVerifiedMediaApiFields } from '../lib/plants/verified-media-api-contract.ts';
 
 const manifest = JSON.parse(readFileSync(new URL('../docs/media-provenance/photo-20260916-ficus-abidjan-01.json', import.meta.url), 'utf8'));
 const photo = manifest.photos[0];
@@ -16,9 +15,9 @@ test('Abidjan has one exact canonical cultivar entity and preserves the species 
   assert.ok(getPlant('ficus', 'elastica'));
 });
 
-test('Abidjan canonical primary, genus and API use the exact Owner WebP', () => {
+test('Abidjan preserves the first exact Owner WebP as a verified secondary view', () => {
   const plant = getPlant('ficus', 'abidjan')!;
-  const media = plant.gallery[0];
+  const media = plant.gallery[1];
   assert.equal(media.src, photo.public_path);
   assert.equal(media.alt, photo.alt);
   assert.equal(media.caption, 'Photo : TIBALDO');
@@ -28,9 +27,5 @@ test('Abidjan canonical primary, genus and API use the exact Owner WebP', () => 
   assert.equal(bytes.toString('ascii', 0, 4), 'RIFF');
   assert.equal(bytes.toString('ascii', 8, 12), 'WEBP');
   assert.equal(createHash('sha256').update(bytes).digest('hex'), photo.sha256);
-  assert.equal(getPlantsByGenre('ficus').find(p => p.slug === 'abidjan')?.gallery[0].src, media.src);
-  const api = toVerifiedMediaApiFields(plant, 'photo-wave-test');
-  assert.equal(api.primary_media_url, photo.api_url);
-  assert.equal(api.primary_media_alt, media.alt);
-  assert.equal(api.primary_media_creator, 'TIBALDO');
+  assert.equal(getPlantsByGenre('ficus').find(p => p.slug === 'abidjan')?.gallery[1].src, media.src);
 });

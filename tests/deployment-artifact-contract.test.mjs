@@ -32,7 +32,7 @@ const labs = [
 
 test("release preserves established identities and adds only documented runtime entities", () => {
   const historical = JSON.parse(readFileSync(new URL("../docs/ENCYCLOPEDIA_CANONICAL_REGISTRY_V1.json", import.meta.url), "utf8"));
-  const expected = new Set([...historical.entities.map(p => p.ENCYCLOPEDIA_ENTITY_ID), ...willaertIdentityPlants.map(p => `${p.genre}/${p.slug}`), "epipremnum/pinnatum", "ficus/abidjan", "monstera/devil-monster", "alocasia/platinum", "sansevieria/hahnii", "sansevieria/angolensis-straight"]);
+  const expected = new Set([...historical.entities.map(p => p.ENCYCLOPEDIA_ENTITY_ID), ...willaertIdentityPlants.map(p => `${p.genre}/${p.slug}`), "epipremnum/pinnatum", "ficus/abidjan", "monstera/devil-monster", "alocasia/platinum", "sansevieria/hahnii", "sansevieria/angolensis-straight", "cactus/echinocactus-grusonii"]);
   const current = plants.map(p => `${p.genre}/${p.slug}`);
   assert.equal(new Set(current).size, current.length);
   assert.deepEqual(new Set(current), expected);
@@ -116,6 +116,9 @@ test("controlled Owner WebP routes override the storage MIME safely", async () =
     "/media/owner-media/strelitzia-alba/strelitzia-alba-inflorescence-blanche-spathe-sombre.webp",
     "/media/owner-media/anthurium-silver-blush/anthurium-silver-blush-feuillage-argente.webp",
     "/media/owner-media/ficus-elastica-abidjan/ficus-elastica-abidjan-feuillage-sombre.webp",
+    "/media/owner-media/ficus-elastica-abidjan/ficus-elastica-abidjan-plante-entiere.webp",
+    "/media/owner-media/monstera-obliqua-peru/monstera-obliqua-peru-plante-en-pot.webp",
+    "/media/owner-media/echinocactus-grusonii/echinocactus-grusonii-cactus-globulaire.webp",
     "/media/owner-media/alocasia-platinum/alocasia-platinum-feuillage-argente-texture.webp",
     "/media/documentary-media/musa-basjoo/musa-basjoo-jardin-botanique-wroclaw.webp",
     "/media/documentary-media/olea-europaea/olea-europaea-oliveraie-crete.webp",
