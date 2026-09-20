@@ -4,11 +4,11 @@ import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { potComparativeScale, potEditorialCatalog, potEditorialGroups } from "../lib/pots/catalog.ts";
 
-test("the Jungle editorial collection contains the 15 Famiflora models and authorized KALYSTE 2706 pot", () => {
-  assert.equal(potEditorialCatalog.length, 16);
-  assert.deepEqual(potEditorialCatalog.map((pot) => pot.repere), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17]);
-  assert.equal(new Set(potEditorialCatalog.map((pot) => pot.supplierReference)).size, 16);
-  assert.deepEqual(potEditorialCatalog.at(-1), expectKalyste2706());
+test("the Jungle editorial collection contains the 15 Famiflora models, KALYSTE 2706 and the three EGG formats", () => {
+  assert.equal(potEditorialCatalog.length, 19);
+  assert.deepEqual(potEditorialCatalog.map((pot) => pot.repere), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20]);
+  assert.equal(new Set(potEditorialCatalog.map((pot) => pot.supplierReference)).size, 19);
+  assert.deepEqual(potEditorialCatalog.find((pot) => pot.repere === 17), expectKalyste2706());
 });
 
 function expectKalyste2706() {
@@ -37,13 +37,13 @@ test("the comparative gallery preserves one diameter scale after subject occupan
 });
 
 test("only exact same-model colour and finish variants are grouped", () => {
-  assert.deepEqual(potEditorialGroups.map((group) => [...group.reperes]), [[3, 5], [6, 7]]);
-  assert.equal(new Set(potEditorialGroups.flatMap((group) => group.reperes)).size, 4);
+  assert.deepEqual(potEditorialGroups.map((group) => [...group.reperes]), [[3, 5], [6, 7], [18, 20, 19]]);
+  assert.equal(new Set(potEditorialGroups.flatMap((group) => group.reperes)).size, 7);
 });
 
 test("every editorial model has one optimized image and factual dimensions", () => {
   for (const pot of potEditorialCatalog) {
-    assert.match(pot.image, /^\/media\/pots\/(?:famiflora-lot1\/.+\.jpg|kalyste\/.+\.png)$/);
+    assert.match(pot.image, /^\/media\/pots\/(?:famiflora-lot1\/.+\.jpg|(?:kalyste|egg)\/.+\.png)$/);
     assert.ok(existsSync(resolve(process.cwd(), "public", pot.image.slice(1))), pot.image);
     assert.ok(existsSync(resolve(process.cwd(), "public", pot.cropImage.slice(1))), pot.cropImage);
     assert.match(pot.dimensions, /^Ø/);

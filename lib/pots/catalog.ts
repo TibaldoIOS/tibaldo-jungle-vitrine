@@ -30,6 +30,9 @@ export const potEditorialCatalog: PotEditorialEntry[] = [
   { repere: 15, supplierReference: "201695169", name: "Pot Arizona Egg graphite", dimensions: "Ø25 × H25 cm", diameterCm: 25, cropImage: `${mediaRoot}/crops/pot-arizona-egg-graphite-d25-h25-crop.jpg`, cardWidthPercent: 52.6, image: `${mediaRoot}/15-graphite.jpg`, alt: "Pot Arizona arrondi graphite gris bleu texturé, diamètre 25 cm et hauteur 25 cm", description: "Un pot Arizona arrondi graphite gris bleu texturé." },
   { repere: 16, supplierReference: "201994901", name: "Pot rond Belly haut Oxblood", dimensions: "Ø21 cm · hauteur non documentée", diameterCm: 21, cropImage: `${mediaRoot}/crops/pot-rond-belly-haut-oxblood-d21-crop.jpg`, cardWidthPercent: 44.2, image: `${mediaRoot}/16-oxblood.jpg`, alt: "Pot haut arrondi rouge brun Oxblood à finition émaillée, diamètre 21 cm", description: "Un pot haut arrondi rouge brun Oxblood à finition émaillée." },
   { repere: 17, supplierReference: "CEPT00002706", name: "Pot MTerra rond à rebord", dimensions: "Ø33 × H31 cm", diameterCm: 33, cropImage: "/media/pots/kalyste/pot-rond-rebord-terre-cuite-d33-h31.png", cardWidthPercent: 69.5, image: "/media/pots/kalyste/pot-rond-rebord-terre-cuite-d33-h31.png", alt: "Grand pot MTerra rond en terre cuite patinée à rebord épais, diamètre 33 cm et hauteur 31 cm", description: "Un grand pot rond en terre cuite patinée de la collection MTerra, avec un rebord épais et une silhouette stable." },
+  { repere: 18, supplierReference: "OWNER-EGG-D30-H26-5", name: "Pot EGG", dimensions: "Ø30 × H26,5 cm", diameterCm: 30, cropImage: "/media/pots/egg/pot-egg-d30-h26-5.png", cardWidthPercent: 63.2, image: "/media/pots/egg/pot-egg-d30-h26-5.png", alt: "Grand pot EGG bicolore brun et blanc à finition émaillée, diamètre 30 cm et hauteur 26,5 cm", description: "Le grand format de la collection EGG, avec une finition bicolore brune et blanche au relief organique." },
+  { repere: 19, supplierReference: "OWNER-EGG-D18-H14", name: "Pot EGG", dimensions: "Ø18 × H14 cm", diameterCm: 18, cropImage: "/media/pots/egg/pot-egg-d18-h14.png", cardWidthPercent: 37.9, image: "/media/pots/egg/pot-egg-d18-h14.png", alt: "Petit pot EGG bicolore brun et blanc à finition émaillée, diamètre 18 cm et hauteur 14 cm", description: "Le petit format de la collection EGG, avec une finition bicolore brune et blanche au relief organique." },
+  { repere: 20, supplierReference: "OWNER-EGG-D24-H22", name: "Pot EGG", dimensions: "Ø24 × H22 cm", diameterCm: 24, cropImage: "/media/pots/egg/pot-egg-d24-h22.png", cardWidthPercent: 50.5, image: "/media/pots/egg/pot-egg-d24-h22.png", alt: "Pot EGG bicolore brun et blanc à finition émaillée, diamètre 24 cm et hauteur 22 cm", description: "Le format intermédiaire de la collection EGG, avec une finition bicolore brune et blanche au relief organique." },
 ];
 
 export function potComparativeScale(pot: PotEditorialEntry) {
@@ -39,4 +42,5 @@ export function potComparativeScale(pot: PotEditorialEntry) {
 export const potEditorialGroups = [
   { id: "oeuf-emaille-bleu", reperes: [3, 5] },
   { id: "bell-rouge", reperes: [6, 7] },
+  { id: "egg", reperes: [18, 20, 19] },
 ] as const;
