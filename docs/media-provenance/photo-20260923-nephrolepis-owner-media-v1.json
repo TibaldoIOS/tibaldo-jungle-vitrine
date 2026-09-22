@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "createdAt": "2026-09-23",
+  "sourcePackage": "/Users/tibaldo/Documents/Codex/2026-09-10/cod/deliverables/nephrolepis-owner-media-20260923-v1/provenance.json",
+  "photos": [
+    {
+      "identity": "Nephrolepis exaltata ‘Green Moment’",
+      "canonical_slug": "plantes/nephrolepis/green-moment",
+      "public_path": "/media/owner-media/nephrolepis-green-moment/nephrolepis-green-moment-fougere-en-pot.webp",
+      "sha256": "38fa7774c4e1d3693959955aa0c0cd6723e7dc7d299aff482068a15b524f7c84",
+      "bytes": 152904,
+      "dimensions": [1254, 1254],
+      "alt": "Fougère Nephrolepis exaltata ‘Green Moment’ en pot noir, formant une touffe dense de frondes vert clair sur des carreaux rouges.",
+      "credit": "Photo : TIBALDO",
+      "rights": "Owner-provided; utilisation autorisée par TIBALDO"
+    },
+    {
+      "identity": "Nephrolepis exaltata ‘Green Lady’",
+      "canonical_slug": "plantes/nephrolepis/green-lady",
+      "public_path": "/media/owner-media/nephrolepis-green-lady/nephrolepis-green-lady-fougere-en-pot.webp",
+      "sha256": "063a404d0f95e0c7d576272a57801d8e0dcc1d04b9977613970933c9686eae3c",
+      "bytes": 234756,
+      "dimensions": [1536, 1024],
+      "alt": "Fougère Nephrolepis exaltata ‘Green Lady’ en pot terre cuite, formant une large touffe de frondes arquées vert vif sur fond clair.",
+      "credit": "Photo : TIBALDO",
+      "rights": "Owner-provided; utilisation autorisée par TIBALDO"
+    }
+  ],
+  "oldPhotoHandling": {
+    "greenMoment": "Previous active file retained in the repository as rollback evidence but removed from active gallery.",
+    "greenLady": "Previous honest media gap closed with exact Owner media."
+  },
+  "commercialMutation": "NONE"
+}
