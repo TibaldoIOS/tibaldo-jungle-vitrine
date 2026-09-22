@@ -25,6 +25,7 @@ import { applyCanonicalQualityFixes } from "./canonical-quality-fixes-v1.ts";
 import { applyDevilMonsterContext } from "./devil-monster-v1.ts";
 import { willaertIdentityPlants } from "./willaert-identities-v1.ts";
 import { platyceriumBifurcatum } from "./platycerium-bifurcatum.ts";
+import { applyOwnerEpipremnumMedia20260923 } from "./owner-epipremnum-media-20260923.ts";
 
 export const plantFamilies = [
   { slug: "olea", name: "Olea", eyebrow: "Arbres méditerranéens", description: "L’olivier Olea europaea, sa lumière, son drainage et sa culture en pot ou au jardin.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie documentaire d’Olea europaea à réaliser", available: true },
@@ -560,6 +561,7 @@ if (cupreaPhotoIndex0 !== -1) {
 
 // Applied after media overlays: no historical photo/provenance record is replaced.
 plants.push(...canonicalCoverageAdditions(plants));
+applyOwnerEpipremnumMedia20260923(plants);
 plants.push(epipremnumPinnatum);
 const qualityEntries = applyCanonicalQualityFixes(plants);
 qualityEntries.forEach((entry, index) => { plants[index] = entry; });

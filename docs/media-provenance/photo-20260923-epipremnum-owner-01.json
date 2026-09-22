@@ -1,0 +1,42 @@
+{
+  "batch_id": "PHOTO-20260923-EPIPREMNUM-OWNER-01",
+  "provided_by": "Owner TIBALDO",
+  "rights_basis": "Photographies fournies directement par l’Owner TIBALDO avec demande explicite de publication sur Jungle.",
+  "processing": "Conversion déterministe WebP q85 method6, métadonnées retirées, sans recadrage, sans upscale et sans altération générative.",
+  "photos": [
+    {
+      "owner_identity": "Epipremnum aureum",
+      "canonical_slug": "plantes/epipremnum/aureum",
+      "identity_evidence": "Identité et destination exactes fournies par l’Owner ; entité canonique existante vérifiée avant ingestion.",
+      "source_filename": "codex-clipboard-ef0a6aa3-529b-46bc-bc0d-673b31ac2388.png",
+      "source_bytes": 2018090,
+      "source_dimensions": [1536, 1024],
+      "source_sha256": "57746601a4a99bdec229bdbfb3d2a97eda5f6a0ff54b632abaf500341d99324a",
+      "filename": "epipremnum-aureum-feuillage-dore.webp",
+      "public_path": "/owner-media/epipremnum-aureum/epipremnum-aureum-feuillage-dore.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 107634,
+      "sha256": "7916f0c3d9e82c08898124e6c6a267a06031fd57e61776cd613ef69629c0ddaa",
+      "alt": "Feuillage dense d’Epipremnum aureum, du vert profond au jaune doré lumineux.",
+      "credit": "Photo : TIBALDO"
+    },
+    {
+      "owner_identity": "Epipremnum aureum ‘Marble Queen’",
+      "canonical_slug": "plantes/epipremnum/marble-queen",
+      "identity_evidence": "Identité et destination exactes fournies par l’Owner ; cultivar canonique existant vérifié avant ingestion.",
+      "source_filename": "codex-clipboard-a019464e-0061-4c49-bb6c-31bf5a05f75b.png",
+      "source_bytes": 2444115,
+      "source_dimensions": [1536, 1024],
+      "source_sha256": "0a810f82c47499fc676afc2d4f80e58001787329e1bf40395f4c9eb8a9c6c291",
+      "filename": "epipremnum-aureum-marble-queen-feuillage-panache-20260923.webp",
+      "public_path": "/owner-media/marble-queen/epipremnum-aureum-marble-queen-feuillage-panache-20260923.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 201696,
+      "sha256": "84f55275aa8c98da085b95f1c80a7ab4cfb5cdfb43bde54f0ca652fe4f229784",
+      "alt": "Epipremnum aureum ‘Marble Queen’ aux feuilles vertes largement marbrées de blanc crème.",
+      "credit": "Photo : TIBALDO"
+    }
+  ]
+}

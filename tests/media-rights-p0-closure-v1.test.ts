@@ -27,6 +27,13 @@ const ownerReplacements = new Map([
   ["/plantes/anthurium/delta-force", "owner-provided://tibaldo/photo-20260911-delta-01/delta-force"],
 ]);
 
+const additionalOwnerReplacementSources = new Map([
+  ["/plantes/epipremnum/marble-queen", new Set([
+    "owner-provided://tibaldo/marble-queen-2026-09-08",
+    "owner-provided://tibaldo/photo-20260923-epipremnum-owner-01",
+  ])],
+]);
+
 function assertCurrentRights(route: string, gallery: PlantEntry["gallery"]) {
   assert.ok(gallery.length > 0, route);
   assert.equal(new Set(gallery.map(image => image.src.replace(/^\/media\//, "/"))).size, gallery.length, `${route}: no duplicate media`);
@@ -45,7 +52,9 @@ function assertCurrentRights(route: string, gallery: PlantEntry["gallery"]) {
     assert.ok(image.alt && image.width > 0 && image.height > 0);
     assert.ok(existsSync(`public${image.src.replace(/^\/media\//, "/")}`), `${route}: file exists`);
     if (license.sourceUrl.startsWith("owner-provided://")) {
-      assert.equal(license.sourceUrl, ownerReplacements.get(route), `${route}: explicit approved replacement`);
+      const additionalSources = additionalOwnerReplacementSources.get(route);
+      if (additionalSources) assert.ok(additionalSources.has(license.sourceUrl), `${route}: explicit approved replacement`);
+      else assert.equal(license.sourceUrl, ownerReplacements.get(route), `${route}: explicit approved replacement`);
       assert.equal(license.creator, "TIBALDO");
       assert.match(license.license, /confirmés|confirmée/);
       assert.match(license.note, /Owner/);
@@ -75,11 +84,14 @@ test("closes the exact 11-route P0 media-rights set", () => {
 
 test("Marble Queen active derivatives match the exact Owner evidence, not a frozen count", () => {
   const proof = JSON.parse(readFileSync("docs/media-provenance/marble-queen-owner-2026-09-08.json", "utf8"));
+  const currentProof = JSON.parse(readFileSync("docs/media-provenance/photo-20260923-epipremnum-owner-01.json", "utf8"));
   assert.equal(proof.canonicalSlug, "plantes/epipremnum/marble-queen");
   assert.equal(proof.creator, "TIBALDO");
   assert.match(proof.rightsEvidence, /explicitly authorizes reuse/);
   for (const image of getPlant("epipremnum", "marble-queen")!.gallery) {
-    const records = proof.files.filter((record: {file: string}) => record.file === `work/jungle/public${image.src}`);
+    const records = image.license?.sourceUrl === "owner-provided://tibaldo/photo-20260923-epipremnum-owner-01"
+      ? currentProof.photos.filter((record: {public_path: string}) => record.public_path === image.src)
+      : proof.files.filter((record: {file: string}) => record.file === `work/jungle/public${image.src}`);
     assert.equal(records.length, 1, image.src);
     const record = records[0];
     assert.equal(createHash("sha256").update(readFileSync(`public${image.src}`)).digest("hex"), record.sha256);
