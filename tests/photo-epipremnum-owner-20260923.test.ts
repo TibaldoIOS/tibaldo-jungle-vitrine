@@ -25,7 +25,7 @@ test("publishes the two exact Owner Epipremnum photos without identity mixing", 
     assert.equal(plant.gallery[0].alt, photo.alt);
     assert.equal(plant.gallery[0].caption.includes("Photo : TIBALDO"), true);
     assert.equal(plant.gallery[0].license?.sourceUrl, "owner-provided://tibaldo/photo-20260923-epipremnum-owner-01");
-    const bytes = readFileSync(`public${photo.public_path}`);
+    const bytes = readFileSync(`public${photo.public_path.replace("/media/", "/")}`);
     assert.equal(bytes.length, photo.bytes);
     assert.equal(createHash("sha256").update(bytes).digest("hex"), photo.sha256);
     assert.equal(plant.gallery[0].width, photo.width);

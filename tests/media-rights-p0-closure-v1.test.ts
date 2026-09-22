@@ -94,7 +94,7 @@ test("Marble Queen active derivatives match the exact Owner evidence, not a froz
       : proof.files.filter((record: {file: string}) => record.file === `work/jungle/public${image.src}`);
     assert.equal(records.length, 1, image.src);
     const record = records[0];
-    assert.equal(createHash("sha256").update(readFileSync(`public${image.src}`)).digest("hex"), record.sha256);
+    assert.equal(createHash("sha256").update(readFileSync(`public${image.src.replace("/media/", "/")}`)).digest("hex"), record.sha256);
     assert.equal(image.width, record.width);
     assert.equal(image.height, record.height);
   }

@@ -13,6 +13,8 @@ const expected = [
   ["calathea", "orbifolia", "/media/owner-media/goeppertia-orbifolia/"],
   ["cactus", "echinocactus-grusonii", "/media/owner-media/echinocactus-grusonii/"],
   ["alocasia", "platinum", "/media/owner-media/alocasia-platinum/"],
+  ["epipremnum", "aureum", "/media/owner-media/epipremnum-aureum/"],
+  ["epipremnum", "marble-queen", "/media/owner-media/marble-queen/"],
   ["musa", "basjoo", "/media/documentary-media/musa-basjoo/"],
   ["olea", "europaea", "/media/documentary-media/olea-europaea/"],
   ["asplenium", "scolopendrium", "/media/documentary-media/asplenium-scolopendrium/"],

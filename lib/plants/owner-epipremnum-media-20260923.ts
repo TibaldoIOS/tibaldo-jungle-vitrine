@@ -13,7 +13,7 @@ const license: PlantMediaLicense = {
 
 const mediaByEntity = new Map<string, PlantEntry["gallery"][number]>([
   ["epipremnum/aureum", {
-    src: "/owner-media/epipremnum-aureum/epipremnum-aureum-feuillage-dore.webp",
+    src: "/media/owner-media/epipremnum-aureum/epipremnum-aureum-feuillage-dore.webp",
     alt: "Feuillage dense d’Epipremnum aureum, du vert profond au jaune doré lumineux.",
     caption: "Feuillage doré d’Epipremnum aureum. Photo : TIBALDO",
     width: 1536,
@@ -21,7 +21,7 @@ const mediaByEntity = new Map<string, PlantEntry["gallery"][number]>([
     license,
   }],
   ["epipremnum/marble-queen", {
-    src: "/owner-media/marble-queen/epipremnum-aureum-marble-queen-feuillage-panache-20260923.webp",
+    src: "/media/owner-media/marble-queen/epipremnum-aureum-marble-queen-feuillage-panache-20260923.webp",
     alt: "Epipremnum aureum ‘Marble Queen’ aux feuilles vertes largement marbrées de blanc crème.",
     caption: "Panachure crème et verte de Marble Queen. Photo : TIBALDO",
     width: 1536,
