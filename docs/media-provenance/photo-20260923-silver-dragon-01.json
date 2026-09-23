@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "createdAt": "2026-09-23",
+  "identity": "Alocasia ‘Silver Dragon’",
+  "ownerLabel": "Alocasia baginda 'Silver Dragon'",
+  "canonicalJungleSlug": "plantes/alocasia/silver-dragon",
+  "identityNote": "Jungle canonical keeps the horticultural name and does not assert baginda parentage as taxonomically confirmed.",
+  "ownerSource": {
+    "file": "original/alocasia-silver-dragon-owner-source.png",
+    "sha256": "0f239bcc5754a9ad6cdb3779fa4d3a1cf14999a064b2283e310977e517f6f527",
+    "bytes": 2184828,
+    "width": 1254,
+    "height": 1254,
+    "mime": "image/png"
+  },
+  "derivative": {
+    "file": "webp/alocasia-silver-dragon-plante-en-pot.webp",
+    "sha256": "d6ba5d7f83e9e447f64caddb6978c3a0088e5df743fab12ec9e25aa995414d7e",
+    "bytes": 157150,
+    "width": 1254,
+    "height": 1254,
+    "mime": "image/webp",
+    "quality": 85,
+    "method": 6,
+    "metadataStripped": true,
+    "asset_path": "/owner-media/alocasia-silver-dragon/alocasia-silver-dragon-plante-en-pot.webp",
+    "public_path": "/media/owner-media/alocasia-silver-dragon/alocasia-silver-dragon-plante-en-pot.webp",
+    "api_url": "https://jungle.tibaldo.fr/media/owner-media/alocasia-silver-dragon/alocasia-silver-dragon-plante-en-pot.webp"
+  },
+  "alt": "Alocasia ‘Silver Dragon’ en pot gris, aux feuilles épaisses argentées parcourues de nervures vert sombre, sur fond clair.",
+  "credit": "Photo : TIBALDO",
+  "rights": "Owner-provided; utilisation autorisée par TIBALDO",
+  "intendedSharedVariantContract": {
+    "canonicalIdentity": "v1|plant|slug:plantes/alocasia/silver-dragon|cultivar:silver dragon",
+    "sizes": [
+      "XS",
+      "M"
+    ],
+    "status": "PENDING_XS_PRODUCT_MATCH_CONFIRMATION_AND_CURRENT_BACKEND_VARIANT_PROOF"
+  },
+  "knownEvidence": {
+    "M": {
+      "productId": "70f9ec9b-e4ea-4ed0-b83c-5dc11773c373",
+      "sku": "TJ-P-00000084",
+      "status": "HISTORICAL_EVIDENCE_ONLY"
+    },
+    "XS": {
+      "productId": null,
+      "sku": null,
+      "status": "BLOCKED_PRODUCT_MATCH_CONFIRMATION"
+    }
+  },
+  "mutations": {
+    "commerce": "NONE",
+    "database": "NONE",
+    "publication": "NONE"
+  },
+  "oldPhotoHandling": "Retain the CC BY-SA documentary photo and attribution in history; replace active primary only after coordinated exact-slug publication.",
+  "commercial_variants": [
+    {
+      "uuid": "28eb0ef9-4eb2-4207-91e7-4ba4fb0ad94f",
+      "sku": "TJ-P-00000129",
+      "size": "XS"
+    },
+    {
+      "uuid": "70f9ec9b-e4ea-4ed0-b83c-5dc11773c373",
+      "sku": "TJ-P-00000084",
+      "size": "M"
+    }
+  ],
+  "commercial_mutation": "NONE_IN_JUNGLE",
+  "previous_active_media": "/media/documentary-media/alocasia-silver-dragon/alocasia-silver-dragon-feuillage-argente.webp",
+  "previous_media_handling": "retained on disk and in its original provenance manifest; dereferenced from active gallery only"
+}

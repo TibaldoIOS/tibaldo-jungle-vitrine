@@ -947,7 +947,7 @@ if (disocactusAnguligerOwnerIndex !== -1) {
 const documentaryBatch = [
   {
     genre: "alocasia", slug: "silver-dragon",
-    media: {src: "/media/documentary-media/alocasia-silver-dragon/alocasia-silver-dragon-feuillage-argente.webp", alt: "Alocasia « Silver Dragon » en pot, aux feuilles épaisses argentées parcourues de nervures vert sombre.", caption: "Photo : Mudarrisah Tuti Alawiyah — CC BY-SA 4.0 · conversion WebP sans recadrage.", width: 900, height: 1600, license: {status: "verified" as const, creator: "Mudarrisah Tuti Alawiyah", license: "CC BY-SA 4.0", licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/", sourceUrl: "https://commons.wikimedia.org/wiki/File:Alocasia_Silver_Dragon.jpg", registryPath: "/credits-images", note: "Le fichier source nomme explicitement la sélection horticole Silver Dragon. Dérivé ShareAlike sous CC BY-SA 4.0. Provenance : docs/media-provenance/photo-20260918-documentary-batch-02.json"}},
+    media: {src: "/media/owner-media/alocasia-silver-dragon/alocasia-silver-dragon-plante-en-pot.webp", alt: "Alocasia ‘Silver Dragon’ en pot gris, aux feuilles épaisses argentées parcourues de nervures vert sombre, sur fond clair.", caption: "Photo : TIBALDO", width: 1254, height: 1254, license: {status: "verified" as const, creator: "TIBALDO", license: "Autorisation d’utilisation confirmée par l’Owner TIBALDO", sourceUrl: "owner-provided://tibaldo/photo-20260923-silver-dragon-01/silver-dragon", registryPath: "/credits-images", note: "Identité horticole fournie par Owner et reliée à l’entité canonique Alocasia ‘Silver Dragon’. Provenance : docs/media-provenance/photo-20260923-silver-dragon-01.json"}},
   },
   {
     genre: "chlorophytum", slug: "bonnie",
