@@ -17,6 +17,7 @@ const expected = [
   ["epipremnum", "marble-queen", "/media/owner-media/marble-queen/"],
   ["nephrolepis", "green-moment", "/media/owner-media/nephrolepis-green-moment/"],
   ["nephrolepis", "green-lady", "/media/owner-media/nephrolepis-green-lady/"],
+  ["musa", "florida-variegata", "/media/owner-media/musa-florida-variegata/"],
   ["musa", "basjoo", "/media/documentary-media/musa-basjoo/"],
   ["olea", "europaea", "/media/documentary-media/olea-europaea/"],
   ["asplenium", "scolopendrium", "/media/documentary-media/asplenium-scolopendrium/"],

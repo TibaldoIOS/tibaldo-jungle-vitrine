@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 };
 
 const credits: readonly [string, string, string, string, string?][] = [
+["Musa ‘Florida Variegata’", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260923-musa-florida-variegata-01/florida-variegata"],
 ["Alocasia ‘Silver Dragon’", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260923-silver-dragon-01/silver-dragon"],
 ["Goeppertia orbifolia · Calathea orbifolia", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260920-goeppertia-orbifolia-01/orbifolia"],
 ["Monstera dubia · trois plantes sur planches", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260920-monstera-dubia-02/dubia"],

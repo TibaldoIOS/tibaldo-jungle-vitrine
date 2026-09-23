@@ -1,4 +1,4 @@
-const MIME_CONTROLLED_MEDIA_PREFIX = /^\/media\/(?:documentary-media\/|owner-media\/(?:strelitzia-alba|anthurium-silver-blush|ficus-elastica-abidjan|alocasia-platinum|alocasia-silver-dragon|dracaena-angolensis-straight|asparagus-plumosus|disocactus-anguliger|dicksonia-antarctica|dracaena-trifasciata-hahnii|monstera-obliqua-peru|echinocactus-grusonii|monstera-dubia|goeppertia-orbifolia|epipremnum-aureum|marble-queen|nephrolepis-green-moment|nephrolepis-green-lady)\/)/;
+const MIME_CONTROLLED_MEDIA_PREFIX = /^\/media\/(?:documentary-media\/|owner-media\/(?:strelitzia-alba|anthurium-silver-blush|ficus-elastica-abidjan|alocasia-platinum|alocasia-silver-dragon|dracaena-angolensis-straight|asparagus-plumosus|disocactus-anguliger|dicksonia-antarctica|dracaena-trifasciata-hahnii|monstera-obliqua-peru|echinocactus-grusonii|monstera-dubia|goeppertia-orbifolia|epipremnum-aureum|marble-queen|nephrolepis-green-moment|nephrolepis-green-lady|musa-florida-variegata)\/)/;
 
 /**
  * Most historical API media URLs intentionally expose the bundled asset path
