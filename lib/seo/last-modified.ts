@@ -9,6 +9,7 @@ export const editorialLastModified = {
   "/evenements": "2026-08-17",
   "/services": "2026-08-15",
   "/coulisses": "2026-09-16",
+  "/coulisses/tibaldo-jungle-la-voix-du-nord": "2026-09-27",
   "/coulisses/mes-plantes-de-reve": "2026-09-16",
   "/plantes/monstera/devil-monster": "2026-09-16",
   "/contact": "2026-08-15",

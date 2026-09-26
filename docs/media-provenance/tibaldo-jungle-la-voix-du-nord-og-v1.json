@@ -1,0 +1,13 @@
+{
+  "source": "/media/owner-media/monstera-deliciosa/monstera-deliciosa-jeune-feuille-fenestree.webp",
+  "source_provenance": "docs/media-provenance/photo-20260916-monstera-deliciosa-01.json",
+  "output": "/media/press/tibaldo-jungle-la-voix-du-nord-og.webp",
+  "sha256": "9b90f3a1a58423927275e6f2c75ba8c9c341f92bfb150dba7f32f7875bd437a4",
+  "bytes": 50040,
+  "dimensions": [1200, 630],
+  "processing": "Deterministic center crop from the approved Owner image, resize to 1200x630, WebP quality 88; no generative alteration.",
+  "provenance": "OWNER_DERIVATIVE",
+  "rights": "Autorisation Owner permanente",
+  "credit": "Photo : TIBALDO",
+  "purpose": "Open Graph and social sharing image for the original TIBALDO press coverage page"
+}
