@@ -9,12 +9,12 @@ export default function OpeningEventLink() {
         <span>SEP<br />2026</span>
       </div>
       <div>
-        <p>Inauguration · Boutique de plantes à Lille</p>
-        <h2 id="opening-event-link-title">Découvrez Tibaldo Jungle<br /><em>lors de son inauguration.</em></h2>
-        <span>Samedi 26 septembre 2026 · 18 h · 3 place de l’Arbonnoise, Lille</span>
+        <p>Archive · Inauguration de la boutique à Lille</p>
+        <h2 id="opening-event-link-title">L’ouverture du Studio<br /><em>dans nos archives.</em></h2>
+        <span>Événement passé · samedi 26 septembre 2026 · 3 place de l’Arbonnoise, Lille</span>
       </div>
       <Link href="/evenements/ouverture-tibaldo-jungle-lille">
-        Voir l’événement <Arrow />
+        Revoir l’événement <Arrow />
       </Link>
     </aside>
   );

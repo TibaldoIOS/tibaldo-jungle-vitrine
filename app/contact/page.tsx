@@ -23,19 +23,19 @@ export default function ContactPage() {
     <section className="inner-hero compact-inner-hero">
       <div className="inner-hero-texture" aria-hidden="true" /><div className="inner-hero-shade" aria-hidden="true" />
       <SiteHeader />
-      <div className="shell inner-hero-content"><p className="eyebrow"><span /> Nous trouver · Lille</p><h1><span className="hero-line"><span>La jungle lilloise</span></span><span className="hero-line"><span><em>prend racine.</em></span></span></h1><p>Premières ventes vendredi 25 septembre 2026 à 10 h. Inauguration samedi 26 septembre à 18 h.</p><a className="button button-light" href="#itineraire">Choisir mon GPS <Arrow /></a></div>
+      <div className="shell inner-hero-content"><p className="eyebrow"><span /> Nous trouver · Lille</p><h1><span className="hero-line"><span>La jungle lilloise</span></span><span className="hero-line"><span><em>vous accueille.</em></span></span></h1><p>Le Studio Végétal est ouvert au 3 place de l’Arbonnoise, 59000 Lille.</p><a className="button button-light" href="#itineraire">Choisir mon GPS <Arrow /></a></div>
     </section>
 
     <section className="contact-map-section shell">
       <div className="contact-map-copy" data-reveal>
         <p className="section-kicker">Votre itinéraire</p>
         <h2>Venez découvrir<br />le Studio Végétal.</h2>
-        <p>Notre jardinerie urbaine commence ses ventes à Lille le vendredi 25 septembre 2026 à 10 h. Son inauguration a lieu le samedi 26 septembre à 18 h.</p>
+        <p>Notre jardinerie urbaine vous accueille à Lille du mardi au dimanche. Consultez les horaires ci-dessous avant votre venue.</p>
         <p>Besoin d’une <Link href="/livraison-plantes-lille">livraison de plantes</Link> ou de <Link href="/fleurs-sur-commande-lille">fleurs sur commande</Link> ? Contactez le Studio pour préparer votre demande.</p>
         <p>Pour la location de matériel de soirée, retrouvez notre activité dédiée sur <a href="https://evenement.tibaldo.fr/">TIBALDO Événement</a>.</p>
-        <div className="contact-details">
+        <div className="contact-details" id="horaires">
           <p><span>Adresse</span><strong>{jungleLocalIdentity.streetAddress}<br />{jungleLocalIdentity.postalCode} {jungleLocalIdentity.city}</strong></p>
-          <p><span>Horaires</span><strong>Mardi · 14h–19h<br />Mercredi–samedi · 10h–19h<br />Dimanche · 10h–13h</strong></p>
+          <p><span>Horaires</span><strong>Lundi · fermé<br />Mardi · 14h–19h<br />Mercredi–samedi · 10h–19h<br />Dimanche · 10h–13h</strong></p>
           <p><span>Contact</span><strong><a href={`mailto:${jungleLocalIdentity.email}`}>{jungleLocalIdentity.email}</a><br /><a href={`tel:${jungleLocalIdentity.phoneE164}`}>{jungleLocalIdentity.phoneDisplay}</a></strong></p>
         </div>
         <div className="gps-chooser" id="itineraire">

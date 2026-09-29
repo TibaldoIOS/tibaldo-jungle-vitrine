@@ -60,7 +60,7 @@ export function SiteFooter({ compactTransit = false }: { compactTransit?: boolea
             <article><span>04</span><strong>36 · 37</strong><div><small>V’Lille</small><h3>Cormontaigne · Fulton</h3><p>Stations 36 place Cormontaigne et 37 rue du Bazinghien.</p></div></article>
           </div>
         </div>
-        <div className="footer-transit-note"><p>Le réseau bus évolue le 31 août 2026. Vérifiez les horaires avant votre venue.</p><a href="https://www.ilevia.fr/" target="_blank" rel="noreferrer">Calculer mon itinéraire sur Ilévia <Arrow /></a></div>
+        <div className="footer-transit-note"><p>Les lignes et horaires Ilévia peuvent évoluer. Vérifiez votre trajet avant votre venue.</p><a href="https://www.ilevia.fr/" target="_blank" rel="noreferrer">Calculer mon itinéraire sur Ilévia <Arrow /></a></div>
         <section className="footer-parking" aria-labelledby="footer-parking-title">
           <header>
             <span>Venir en voiture</span>

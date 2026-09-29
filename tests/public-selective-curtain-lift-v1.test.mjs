@@ -13,20 +13,22 @@ const boutique = read("app/boutique-plantes-lille/page.tsx");
 const methodology = read("app/methodologie-sources/page.tsx");
 const leafRegistry = read("lib/plants/catalog.ts");
 
-test("PUBLIC curtain is off, Shop links are direct and the non-blocking signal remains", () => {
+test("PUBLIC curtain is off, Shop links are direct and the non-blocking practical signal remains", () => {
   assert.match(config, /PUBLIC_PRELAUNCH_CURTAIN\s*=\s*false/);
   assert.match(layout, /<PublicPreopeningSignal/);
   assert.doesNotMatch(layout, /<SafeLinkMaskLayer/);
-  assert.match(signal, /La Jungle est ouverte en ligne/);
-  assert.match(signal, /26 septembre/);
+  assert.match(signal, /Le Studio Végétal est ouvert à Lille/);
+  assert.match(signal, /contact#horaires/);
+  assert.match(signal, /mapsUrl/);
+  assert.match(signal, /href="\/plantes">Encyclopédie/);
   assert.doesNotMatch(signal, /position:\s*fixed|aria-modal|role="dialog"/);
 });
 
-test("homepage provides useful pre-opening actions without claiming Shop availability", () => {
-  assert.match(home, /Le Studio se prépare/);
-  assert.match(home, /La Jungle est déjà ouverte/);
+test("homepage provides useful post-opening actions without claiming Shop availability", () => {
+  assert.match(home, /Le Studio est ouvert/);
+  assert.match(home, /Retrouvez-nous au cœur de Lille/);
   assert.match(home, /href="\/plantes">Explorer la Jungle/);
-  assert.match(home, /href="\/contact">Préparer ma visite/);
+  assert.match(home, /href="\/contact#horaires">Horaires & itinéraire/);
 });
 
 test("Lille and Wattignies roles are explicit", () => {

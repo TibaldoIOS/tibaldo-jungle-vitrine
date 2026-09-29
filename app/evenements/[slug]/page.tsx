@@ -21,12 +21,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const event = await getPublicEvent(slug);
   if (!event) return {};
   const url = `/evenements/${event.slug}`;
-  const socialTitle = event.slug === "ouverture-tibaldo-jungle-lille"
-    ? "Que faire à Lille le 26 septembre 2026 ? Inauguration du Studio Végétal"
+  const isOpeningPage = event.slug === "ouverture-tibaldo-jungle-lille";
+  const socialTitle = isOpeningPage
+    ? "Inauguration du Studio Végétal à Lille — archive du 26 septembre 2026"
     : event.seoTitle;
+  const socialDescription = isOpeningPage
+    ? "Archive de l’inauguration du Studio Végétal TIBALDO Jungle, organisée le 26 septembre 2026 au 3 place de l’Arbonnoise à Lille."
+    : event.seoDescription;
   return {
-    title: event.seoTitle,
-    description: event.seoDescription,
+    title: isOpeningPage ? "Inauguration du Studio Végétal à Lille — archive" : event.seoTitle,
+    description: socialDescription,
     keywords: event.seoKeywords,
     alternates: { canonical: url },
     openGraph: {
@@ -34,13 +38,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       locale: "fr_FR",
       url,
       title: socialTitle,
-      description: event.seoDescription,
+      description: socialDescription,
       images: [{ url: event.coverImage, alt: event.title }],
     },
     twitter: {
       card: "summary_large_image",
       title: socialTitle,
-      description: event.seoDescription,
+      description: socialDescription,
       images: [event.coverImage],
     },
   };
@@ -101,14 +105,14 @@ export default async function EventPage({ params }: Props) {
             "https://www.facebook.com/tibaldojungle",
           ],
         },
-        offers: {
+        ...(!isPast ? { offers: {
           "@type": "Offer",
           price: "0",
           priceCurrency: "EUR",
           availability: "https://schema.org/InStock",
           validFrom: event.publishedAt,
           url: `https://jungle.tibaldo.fr/evenements/${event.slug}`,
-        },
+        } } : {}),
       },
       {
         "@type": "BreadcrumbList",
@@ -180,7 +184,7 @@ export default async function EventPage({ params }: Props) {
           </p>
           {isOpening && (
             <p className="event-opening-quickfacts">
-              Samedi 26 septembre 2026 · 18 h · entrée gratuite<br />
+              Événement passé · samedi 26 septembre 2026 · 18 h<br />
               3 place de l’Arbonnoise, Lille · sans réservation
             </p>
           )}
@@ -228,16 +232,16 @@ export default async function EventPage({ params }: Props) {
       </section>
       <section className="shell event-story">
         <div data-reveal>
-          <p className="section-kicker">Une date à retenir</p>
+          <p className="section-kicker">{isPast ? "Événement passé" : "Une date à retenir"}</p>
           <h2>
-            Une nouvelle histoire
+            {isPast && isOpening ? "L’ouverture du Studio" : "Une nouvelle histoire"}
             <br />
-            <em>végétale à Lille.</em>
+            <em>{isPast && isOpening ? "dans nos archives." : "végétale à Lille."}</em>
           </h2>
         </div>
         <div data-reveal>
-          <p>{event.description}</p>
-          {event.facebookUrl && (
+          <p>{isPast && isOpening ? "Cette page conserve la date, l’adresse et le programme publiés pour l’inauguration du Studio Végétal. Elle ne constitue pas un reportage de l’événement." : event.description}</p>
+          {event.facebookUrl && !isPast && (
             <aside className="event-rsvp">
               <span>Vous pensez venir ?</span>
               <h3>Indiquez votre présence sur Facebook.</h3>
@@ -258,32 +262,29 @@ export default async function EventPage({ params }: Props) {
           ) : (
             <EventCountdown startAt={event.startAt} />
           )}
-          <EventActions event={event} />
+          {!isPast && <EventActions event={event} />}
         </div>
       </section>
       {isOpening && (
         <section className="event-lille-guide">
           <div className="shell">
             <header data-reveal>
-              <p className="section-kicker">Agenda & sorties à Lille</p>
+              <p className="section-kicker">Archive de l’ouverture</p>
               <h2>
-                Que faire à Lille
+                L’inauguration du Studio
                 <br />
-                <em>le 26 septembre 2026 ?</em>
+                <em>le 26 septembre 2026.</em>
               </h2>
             </header>
             <div data-reveal>
               <p>
-                Le samedi 26 septembre à 18 h, Tibaldo Jungle inaugure son
-                Studio Végétal au 3 place de l’Arbonnoise. Ce rendez-vous
-                gratuit et sans réservation accueille aussi bien les curieux et
-                les familles que les collectionneurs de plantes.
+                L’inauguration du Studio Végétal TIBALDO Jungle était annoncée
+                le samedi 26 septembre 2026 à 18 h, au 3 place de l’Arbonnoise.
               </p>
               <p>
-                Cette inauguration permet de visiter le Studio Végétal,
-                d’échanger autour de l’entretien des plantes d’intérieur et de
-                découvrir une nouvelle adresse végétale à Lille. Les premières
-                ventes commencent séparément le vendredi 25 septembre à 10 h.
+                Cette archive conserve les informations pratiques et le programme
+                publiés avant l’événement, sans ajouter de récit ni de photographie
+                non documentés après coup.
               </p>
               <p>
                 Le Studio se trouve dans le quartier Vauban-Esquermes, à
@@ -363,7 +364,7 @@ export default async function EventPage({ params }: Props) {
               {event.postalCode} {event.city}
             </p>
             {isOpening ? <><a className="button button-green" href={jungleLocalIdentity.mapsUrl} target="_blank" rel="noopener noreferrer">Itinéraire</a><LocalPresence /></> : <GpsChooser address={fullAddress} />}
-            {event.facebookUrl && (
+            {event.facebookUrl && !isPast && (
               <a
                 className="event-facebook-button"
                 href={event.facebookUrl}
@@ -385,7 +386,7 @@ export default async function EventPage({ params }: Props) {
       <section className="shell event-faq">
         <header data-reveal>
           <p className="section-kicker">Questions fréquentes</p>
-          <h2>Préparer votre visite.</h2>
+          <h2>{isPast ? "Informations archivées." : "Préparer votre visite."}</h2>
         </header>
         {event.faq.map((item) => (
           <details key={item.question} data-reveal>
@@ -396,7 +397,7 @@ export default async function EventPage({ params }: Props) {
             <p>{item.answer}</p>
           </details>
         ))}
-        {event.facebookUrl && (
+        {event.facebookUrl && !isPast && (
           <div className="event-faq-rsvp" data-reveal>
             <p>
               Vous avez trouvé toutes vos réponses ? Dites-nous si vous serez

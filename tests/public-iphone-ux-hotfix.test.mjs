@@ -4,11 +4,13 @@ import { readFileSync } from 'node:fs';
 import { runInNewContext } from 'node:vm';
 import ts from 'typescript';
 const read = p => readFileSync(p, 'utf8');
-test('opening signal reuses monochrome SVG without changing destination or copy', () => {
+test('practical signal reuses monochrome SVG for mobile Studio access', () => {
   const s = read('app/PublicPreopeningSignal.tsx');
-  assert.match(s, /Préparer l’ouverture <Arrow \/>/);
+  assert.match(s, /Horaires <Arrow \/>/);
+  assert.match(s, /Itinéraire <Arrow \/>/);
+  assert.match(s, /Encyclopédie <Arrow \/>/);
   assert.doesNotMatch(s, /↗/);
-  assert.match(s, /href="\/evenements\/ouverture-tibaldo-jungle-lille"/);
+  assert.match(s, /href="\/contact#horaires"/);
 });
 test('dock clearance follows actual dimensions and safe area, with cleanup', () => {
   const s = read('app/ConversionDock.tsx'), css = read('app/IphoneSafariUx.css');

@@ -10,7 +10,7 @@ const ctx = { waitUntil() {}, passThroughOnException() {} };
 const fetchRoute = (path, userAgent = "Mozilla/5.0") =>
   worker.fetch(new Request(`http://localhost${path}`, { headers: { "user-agent": userAgent } }), env, ctx);
 
-test("PUBLIC pages are accessible and keep the non-blocking pre-opening signal", async () => {
+test("PUBLIC pages are accessible and keep the non-blocking practical signal", async () => {
   const routes = [
     "/",
     "/plantes",
@@ -22,8 +22,9 @@ test("PUBLIC pages are accessible and keep the non-blocking pre-opening signal",
     const response = await fetchRoute(route);
     const html = await response.text();
     assert.equal(response.status, 200, route);
-    assert.match(html, /La Jungle est ouverte en ligne/);
-    assert.match(html, /26 septembre/);
+    assert.match(html, /Le Studio Végétal est ouvert à Lille/);
+    assert.match(html, /Horaires/);
+    assert.match(html, /Itinéraire/);
     assert.match(html, /id="contenu-principal"/);
     assert.match(html, /<a\b[^>]*href=/i, `${route}: crawlable href missing`);
     assert.doesNotMatch(html, /<meta[^>]+name="robots"[^>]+noindex/i, route);
@@ -36,7 +37,7 @@ test("ordinary and crawler user agents receive the same accessible publication",
   const human = await (await fetchRoute("/plantes", "Mozilla/5.0 Safari/605.1.15")).text();
   const crawler = await (await fetchRoute("/plantes", "Googlebot/2.1")).text();
   for (const html of [human, crawler]) {
-    assert.match(html, /La Jungle est ouverte en ligne/);
+    assert.match(html, /Le Studio Végétal est ouvert à Lille/);
     assert.doesNotMatch(html, /class="jungle-prelaunch-curtain"/);
     assert.doesNotMatch(html, /id="contenu-principal"[^>]*(?:inert|aria-hidden)/);
   }

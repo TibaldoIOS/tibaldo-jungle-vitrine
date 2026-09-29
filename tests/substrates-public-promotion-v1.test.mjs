@@ -15,7 +15,7 @@ test("public substrate pages are indexable, canonical and link to public Shop",a
     assert.doesNotMatch(h,/<meta[^>]*name="robots"[^>]*content="[^"]*(?:noindex|nofollow)/);
     assert.doesNotMatch(h,/https:\/\/beta-(?:jungle|shop)\.tibaldo\.fr/);
     assert.match(h,/https:\/\/shop\.tibaldo\.fr/);
-    assert.match(h,/Sybotanica/);assert.match(h,/26 septembre 2026/);
+    assert.match(h,/Sybotanica/);assert.match(h,/Studio (?:Végétal )?est ouvert|Studio ouvert à Lille/);
     assert.match(h,/selection-substrats-sybotanica.webp/);
     assert.doesNotMatch(h,/"@type":"(?:Product|Offer)"/);
     if(path==="/substrats")assert.equal((h.match(/data-product-media=/g)||[]).length,24);

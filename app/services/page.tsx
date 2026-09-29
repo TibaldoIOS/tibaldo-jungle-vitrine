@@ -54,7 +54,7 @@ export default function ServicesPage() {
       partner={{
         eyebrow: "Revendeur partenaire",
         name: "Sybotanica",
-        copy: "Tibaldo Jungle sélectionne et achète les produits Sybotanica en palette afin de négocier des conditions avantageuses. Les références retenues seront revendues directement par le Studio et proposées sur la boutique en ligne.",
+        copy: "Tibaldo Jungle sélectionne les produits Sybotanica pour le Studio. Les références publiées sont proposées sur le Shop ; les autres restent présentées à titre pédagogique, sans promesse de disponibilité ni de conditionnement.",
       }}
     />
   );

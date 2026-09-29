@@ -32,9 +32,10 @@
 
 .date p, .copy p { margin: 8px 0 0; font-size: 14px; line-height: 1.5; }
 .date .kicker { margin: 0 0 10px; font-size: 12px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
-.date time { font-size: 18px; font-weight: 700; line-height: 1.35; }
+.date > strong { display: block; font-size: 18px; font-weight: 700; line-height: 1.35; }
 .copy { border-left: 1px solid rgba(9, 38, 27, .25); padding-left: 28px; }
 .copy h2 { margin: 0; max-width: 28ch; font: 400 clamp(22px, 2vw, 30px)/1.12 Georgia, "Times New Roman", serif; letter-spacing: -.025em; }
+.archive { display: inline-block; margin-top: 8px; color: inherit; font-size: 12px; line-height: 1.4; text-decoration: underline; text-underline-offset: 3px; }
 .cta { display: inline-flex; align-items: center; justify-content: center; gap: 16px; min-height: 48px; padding: 14px 18px; background: var(--forest-dark); color: var(--paper); font-size: 14px; line-height: 1.4; font-weight: 700; }
 .cta:hover { background: var(--forest); }
 .cta:focus-visible { outline: 3px solid var(--forest-dark); outline-offset: 4px; }
