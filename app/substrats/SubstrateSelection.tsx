@@ -5,6 +5,7 @@ import { supplierMedia, supplierMediaRights } from "./supplier-media";
 import { mixGroups, readyMixes, plantMixMapping, selectedComponents, mineral, nutrition, sourceRegistry, sourceReviewedAt } from "./selection";
 import styles from "./selection.module.css";
 import ProductPackshot from "./ProductPackshot";
+import ReadyMixCommerce from "./ReadyMixCommerce";
 
 export default function SubstrateSelection() {
   return <div className={styles.guide} data-substrate-guide>
@@ -36,7 +37,7 @@ export default function SubstrateSelection() {
             {readyMixes.filter(mix => mix.group === group.id).map(mix => <article id={`mix-${mix.id}`} key={mix.id} className={styles.mix} tabIndex={-1}>
               <ProductPackshot id={mix.id} />
               <div className={styles.mixCopy}><h4>{mix.name}</h4><p className={styles.profile}>{mix.profile}</p><p className={styles.plants}>Pour {mix.plants.join(" · ")}</p>
-                <p>{mix.why}</p><details><summary>Ce qu’il y a dans le mélange <span aria-hidden="true">+</span></summary><p>{mix.ingredients}. Liste indicative, non exhaustive.</p></details><a className={styles.productLink} href={mix.source}>Voir {mix.name} chez Sybotanica ↗</a>
+                <p>{mix.why}</p><details><summary>Ce qu’il y a dans le mélange <span aria-hidden="true">+</span></summary><p>{mix.ingredients}. Liste indicative, non exhaustive.</p></details><ReadyMixCommerce mixName={mix.name} manufacturerUrl={mix.source} shop={mix.shop} />
                 <div className={styles.hubLinks}>{mix.hubs.map(hub => <Link key={hub} href={`/plantes/${hub}`}>Explorer {hub === "fougeres" ? "les fougères" : hub} ↗</Link>)}</div>
               </div>
             </article>)}
