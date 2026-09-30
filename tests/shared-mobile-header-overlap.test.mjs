@@ -24,3 +24,12 @@ test("the shop label and deterministic arrow stay together", () => {
   assert.match(css, /\.site-header \.header-shop\s*\{[^}]*white-space:\s*nowrap;/);
   assert.match(css, /\.site-header \.header-shop \.jungle-arrow-icon\s*\{[^}]*flex:\s*0 0 16px;/);
 });
+
+test("the mobile menu keeps every destination visible in a compact readable rhythm", () => {
+  assert.match(css, /\.mobile-menu-primary a\s*\{[^}]*min-height:\s*50px;[^}]*clamp\(27px,5\.3vw,38px\)/);
+  assert.match(css, /\.mobile-menu-secondary a\s*\{[^}]*min-height:\s*44px;/);
+  assert.match(css, /@media \(max-width: 600px\) \{[\s\S]*?\.mobile-menu-primary a\s*\{[^}]*min-height:\s*48px;[^}]*clamp\(25px,7\.2vw,30px\)/);
+  for (const label of ["Plantes", "Boutique", "Panier", "Mon compte", "SOS Plantes", "Conseils", "Substrats", "Pots & cache-pots", "Bar à rempotage", "Fleurs sur commande", "Services", "Événements", "Nous trouver", "Contact", "Instagram", "Facebook"]) {
+    assert.ok(menu.includes(label), `${label} must remain accessible in the compact menu`);
+  }
+});
