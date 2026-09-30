@@ -2,6 +2,7 @@ import { and, desc, eq, ne } from "drizzle-orm";
 import { getDb } from "@/db";
 import { events } from "@/db/schema";
 import { eventFallbacks, openingEvent } from "./catalog";
+import { publicEventCopy } from "./public-copy";
 import type { JungleEvent } from "./types";
 
 type EventRow = typeof events.$inferSelect;
@@ -59,9 +60,9 @@ export async function listPublicEvents(): Promise<JungleEvent[]> {
   try {
     await seedOpeningEvent();
     const rows = await (await getDb()).select().from(events).where(eq(events.status, "published")).orderBy(desc(events.startAt));
-    return rows.map(fromRow);
+    return rows.map((row) => publicEventCopy(fromRow(row)));
   } catch {
-    return eventFallbacks;
+    return eventFallbacks.map((event) => publicEventCopy(event));
   }
 }
 
@@ -74,9 +75,10 @@ export async function getPublicEvent(slug: string): Promise<JungleEvent | null> 
   try {
     await seedOpeningEvent();
     const [row] = await (await getDb()).select().from(events).where(and(eq(events.slug, slug), eq(events.status, "published"))).limit(1);
-    return row ? fromRow(row) : null;
+    return row ? publicEventCopy(fromRow(row)) : null;
   } catch {
-    return eventFallbacks.find((event) => event.slug === slug) ?? null;
+    const event = eventFallbacks.find((item) => item.slug === slug);
+    return event ? publicEventCopy(event) : null;
   }
 }
 

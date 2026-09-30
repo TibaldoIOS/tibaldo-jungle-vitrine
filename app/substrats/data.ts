@@ -176,7 +176,7 @@ export const substrateProfiles: Record<string, SubstrateProfile> = {
   },
   "ecorce-de-pin": {
     slug: "ecorce-de-pin", name: "Écorce de pin horticole", shortName: "Écorce de pin", status: "soon", statusLabel: "Prochainement au Studio",
-    eyebrow: "Structure organique · Bientôt à Lille", title: "L’écorce de pin,", accent: "une charpente pour les racines.",
+    eyebrow: "Structure organique · À Lille", title: "L’écorce de pin,", accent: "une charpente pour les racines.",
     intro: "Calibrée pour l’usage horticole, l’écorce de pin forme des espaces durables dans le mélange et accompagne les racines épaisses des plantes tropicales.",
     role: "L’écorce ne sert pas seulement à décorer la surface d’un pot. Incorporée au substrat, elle donne du relief, améliore la circulation de l’air et ralentit le tassement. Sa granulométrie doit rester cohérente avec le diamètre du pot et la finesse des racines.",
     strengths: [{ title: "Structure", copy: "Les fragments maintiennent des passages d’air dans les mélanges organiques." }, { title: "Drainage durable", copy: "Elle aide le substrat à conserver une texture grossière plus longtemps." }, { title: "Racines épiphytes", copy: "Elle rappelle la matière ligneuse rencontrée par de nombreuses aracées et orchidées." }],
@@ -188,7 +188,7 @@ export const substrateProfiles: Record<string, SubstrateProfile> = {
   },
   "billes-argile": {
     slug: "billes-argile", name: "Billes d’argile expansée", shortName: "Billes d’argile", status: "soon", statusLabel: "Prochainement au Studio",
-    eyebrow: "Granulés minéraux · Bientôt à Lille", title: "Les billes d’argile,", accent: "stables et réutilisables.",
+    eyebrow: "Granulés minéraux · À Lille", title: "Les billes d’argile,", accent: "stables et réutilisables.",
     intro: "Robustes, lavables et poreuses, les billes d’argile trouvent leur place en culture semi-hydroponique, en plateau d’humidité ou comme composant d’aération.",
     role: "Les billes d’argile ne sont pas une solution magique contre l’excès d’eau. Dans un pot classique, une couche au fond ne remplace pas un trou d’évacuation. Leur intérêt dépend du système de culture : mélange, réserve séparée, cache-pot ou semi-hydroponie.",
     strengths: [{ title: "Stabilité", copy: "Elles conservent leur forme et peuvent être nettoyées puis réutilisées." }, { title: "Aération", copy: "Intégrées correctement, elles créent de grands espaces dans le volume de culture." }, { title: "Semi-hydro", copy: "Elles peuvent servir de support inerte dans un système avec gestion précise de l’eau et des nutriments." }],
@@ -200,7 +200,7 @@ export const substrateProfiles: Record<string, SubstrateProfile> = {
   },
   "sphaigne-sechee": {
     slug: "sphaigne-sechee", name: "Sphaigne séchée compactée", shortName: "Sphaigne séchée", status: "soon", statusLabel: "Prochainement au Studio",
-    eyebrow: "Fibre végétale · Bientôt à Lille", title: "La sphaigne séchée,", accent: "souple après réhydratation.",
+    eyebrow: "Fibre végétale · À Lille", title: "La sphaigne séchée,", accent: "souple après réhydratation.",
     intro: "Proposée sèche et compactée, la sphaigne reprend du volume au contact de l’eau et offre un support à la fois humide et aéré pour la propagation et certaines racines délicates.",
     role: "La sphaigne séchée n’est pas de la sphaigne vivante. Elle doit être réhydratée, essorée sans être comprimée puis disposée de façon souple. Très rétentrice, elle demande une surveillance attentive pour éviter une humidité permanente sans circulation d’air.",
     strengths: [{ title: "Réhydratation", copy: "Une petite quantité compactée développe un volume important une fois humidifiée." }, { title: "Propagation", copy: "Sa texture entoure les nœuds et jeunes racines tout en conservant une humidité régulière." }, { title: "Souplesse", copy: "Elle convient aux marcottes, supports de boutures et habillages de tuteurs." }],

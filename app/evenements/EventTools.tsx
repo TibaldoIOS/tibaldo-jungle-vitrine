@@ -25,7 +25,7 @@ export function EventCountdown({ startAt }: { startAt: string }) {
 
 const compactDate = (value: string) => new Date(value).toISOString().replace(/[-:]|\.\d{3}/g, "");
 
-export function EventActions({ event }: { event: JungleEvent }) {
+export function EventActions({ event, isPast = false }: { event: JungleEvent; isPast?: boolean }) {
   const [weather, setWeather] = useState<string | null>(null);
   const url = typeof window === "undefined" ? `https://jungle.tibaldo.fr/evenements/${event.slug}/` : window.location.href;
   const text = `${event.title} — ${new Intl.DateTimeFormat("fr-FR", { dateStyle: "long", timeZone: "Europe/Paris" }).format(new Date(event.startAt))}`;
@@ -53,7 +53,7 @@ export function EventActions({ event }: { event: JungleEvent }) {
       }).catch(() => undefined);
   }, [event.startAt]);
   return <div className="event-action-cluster">
-    <div className="event-calendar"><span>Ajouter au calendrier</span><a href={googleCalendar} target="_blank" rel="noreferrer">Google</a><button type="button" onClick={downloadIcs}>Apple / Outlook</button></div>
+    {!isPast && <div className="event-calendar"><span>Ajouter au calendrier</span><a href={googleCalendar} target="_blank" rel="noreferrer">Google</a><button type="button" onClick={downloadIcs}>Apple / Outlook</button></div>}
     <div className="event-share"><span>Partager</span><a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`} target="_blank" rel="noreferrer">Facebook</a><a href={`https://wa.me/?text=${encodeURIComponent(`${text} ${url}`)}`} target="_blank" rel="noreferrer">WhatsApp</a><a href={`https://www.facebook.com/dialog/send?link=${encodeURIComponent(url)}&app_id=291494419107518`} target="_blank" rel="noreferrer">Messenger</a>{event.instagramUrl && <a href={event.instagramUrl} target="_blank" rel="noreferrer">Instagram</a>}</div>
     {weather && <p className="event-weather">Météo prévisionnelle · <strong>{weather}</strong></p>}
   </div>;

@@ -74,7 +74,7 @@ export default async function EventPage({ params }: Props) {
         description: event.description,
         startDate: event.startAt,
         ...(event.endAt ? { endDate: event.endAt } : {}),
-        eventStatus: isPast ? "https://schema.org/EventCompleted" : "https://schema.org/EventScheduled",
+        ...(isPast ? {} : { eventStatus: "https://schema.org/EventScheduled" }),
         eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
         isAccessibleForFree: true,
         keywords: event.seoKeywords.join(", "),
@@ -256,13 +256,16 @@ export default async function EventPage({ params }: Props) {
             </aside>
           )}
           {isPast ? (
-            <p className="event-ended-badge">
-              Cet événement est terminé — découvrez ses souvenirs ci-dessous.
-            </p>
+            <>
+              <p className="event-ended-badge">
+                Cet événement est terminé. Retrouvez les horaires actuels sur la page Contact.
+              </p>
+              <Link className="button button-green" href="/contact">Visiter le Studio</Link>
+            </>
           ) : (
             <EventCountdown startAt={event.startAt} />
           )}
-          {!isPast && <EventActions event={event} />}
+          <EventActions event={event} isPast={isPast} />
         </div>
       </section>
       {isOpening && (
@@ -298,7 +301,7 @@ export default async function EventPage({ params }: Props) {
       <section className="event-program">
         <div className="shell">
           <header data-reveal>
-            <p className="section-kicker">Le programme</p>
+            <p className="section-kicker">{isPast ? "Le programme annoncé" : "Le programme"}</p>
             <h2>
               Un rendez-vous pour
               <br />

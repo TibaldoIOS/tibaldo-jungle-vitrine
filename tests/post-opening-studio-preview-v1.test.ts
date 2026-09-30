@@ -53,8 +53,11 @@ test("the inauguration URL remains crawlable as an honest past-event archive", a
   const { response, html } = await render("/evenements/ouverture-tibaldo-jungle-lille");
   assert.equal(response.status, 200);
   assert.match(html, /Événement passé/);
-  assert.match(html, /"eventStatus":"https:\/\/schema\.org\/EventCompleted"/);
+  assert.doesNotMatch(html, /EventCompleted/);
   assert.match(html, /ne constitue pas un reportage de l’événement/);
   assert.doesNotMatch(html, /"eventStatus":"https:\/\/schema\.org\/EventScheduled"/);
   assert.doesNotMatch(html, /Confirmer ma venue|Valider ma venue/);
+  assert.doesNotMatch(html, /découvrez ses souvenirs ci-dessous/);
+  assert.match(html, /Le programme annoncé/);
+  assert.match(html, /Visiter le Studio/);
 });
