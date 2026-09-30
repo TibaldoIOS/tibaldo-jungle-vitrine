@@ -11,7 +11,7 @@ export const editorialLastModified = {
   "/coulisses": "2026-09-16",
   "/coulisses/tibaldo-jungle-la-voix-du-nord": "2026-09-27",
   "/coulisses/mes-plantes-de-reve": "2026-09-16",
-  "/plantes/monstera/devil-monster": "2026-09-16",
+  "/plantes/monstera/devil-monster": "2026-10-01",
   "/contact": "2026-08-15",
   "/boutique-plantes-lille": "2026-08-17",
   "/rempotage-plantes-lille": "2026-08-17",

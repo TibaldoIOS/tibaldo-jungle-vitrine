@@ -30,15 +30,22 @@ test("dream plants preview is linked, honest and protected from indexing", async
 
 test("Devil Monster dossier separates accepted taxonomy from trade claims", async () => {
   const page = await render("/plantes/monstera/devil-monster");
-  assert.match(page, /Monstera deliciosa Liebm\./);
-  assert.match(page, /Appellation commerciale ou horticole/);
-  assert.match(page, /Cultivar non établi/);
-  assert.match(page, /Provenance[\s\S]*Non certifiée/);
-  assert.match(page, /powo\.science\.kew\.org\/taxon\/87478-1/);
-  assert.match(page, /shop\.rareplantsjapan\.jp\/products\/7-57devil/);
+  assert.match(page, /Monstera deliciosa/);
+  assert.match(page, /Commerciale \/ horticole/);
+  assert.match(page, /statut officiel comme cultivar ne l’est pas/);
+  assert.match(page, /Observer les feuillages/);
+  assert.match(page, /sans inventer une chronologie/);
+  assert.match(page, /ask\.ifas\.ufl\.edu\/publication\/EP520/);
+  assert.match(page, /rhs\.org\.uk\/plants\/swiss-cheese-plants/);
+  assert.match(page, /gelliesclub\.com\/products\/monstera-devil-monster-tissue-culture/);
+  assert.match(page, /pkplants\.de\/en\/product-page\/monstera-devil-1-pcs/);
+  assert.equal((page.match(/owner-media\/monstera-devil-monster\/monstera-devil-monster-/g) ?? []).length >= 13, true);
   assert.doesNotMatch(page, /name="robots" content="noindex/);
   assert.match(page, /"@type":"Article"/);
   assert.match(page, /"@type":"BreadcrumbList"/);
+  assert.match(page, /"@type":"FAQPage"/);
+  assert.doesNotMatch(page, /"@type":"Product"/);
+  assert.doesNotMatch(page, /"@type":"Offer"/);
   assert.doesNotMatch(page, /Adopte-moi/);
 });
 
@@ -46,7 +53,6 @@ test("published routes are present in the public sitemap", async () => {
   const sitemap = await render("/sitemap.xml");
   assert.match(sitemap, /coulisses\/mes-plantes-de-reve/);
   assert.match(sitemap, /plantes\/monstera\/devil-monster/);
-  assert.match(sitemap, /2026-09-16/);
 });
 
 test("home and Monstera genus expose discreet editorial links", async () => {
