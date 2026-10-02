@@ -1,3 +1,4 @@
+import SybotanicaWeekendLink from "../SybotanicaWeekendLink";
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -94,6 +95,7 @@ export default function SubstratesPage() {
         </div>
       </section>
 
+      <SybotanicaWeekendLink />
       <LocalSubstrateVisit />
       <SubstrateSelection />
 
@@ -152,3 +154,5 @@ export default function SubstratesPage() {
     </main>
   );
 }
+
+export const dynamic = "force-dynamic";

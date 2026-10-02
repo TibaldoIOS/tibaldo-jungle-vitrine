@@ -1,3 +1,4 @@
+import SybotanicaWeekendLink from "./SybotanicaWeekendLink";
 import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "./ScrollReveal";
@@ -37,6 +38,7 @@ export default function Home() {
         <div className="hero-photo" aria-hidden="true" /><div className="hero-shade" aria-hidden="true" />
         <SiteHeader />
         <HomeOpeningBanner />
+        <SybotanicaWeekendLink />
         <p className="hero-local-coordinates" aria-label={`Latitude ${jungleLocalIdentity.latitude} nord, longitude ${jungleLocalIdentity.longitude} est`}>
           {jungleLocalIdentity.latitude}° N · {jungleLocalIdentity.longitude}° E
         </p>
@@ -103,3 +105,5 @@ export default function Home() {
     </main>
   );
 }
+
+export const dynamic = "force-dynamic";

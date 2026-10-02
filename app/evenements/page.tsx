@@ -1,3 +1,4 @@
+import SybotanicaWeekendLink from "../SybotanicaWeekendLink";
 import type { Metadata } from "next";
 import ScrollReveal from "../ScrollReveal";
 import { SiteFooter, SiteHeader } from "../SiteChrome";
@@ -9,5 +10,5 @@ export const metadata: Metadata = { title: "Événements végétaux à Lille | T
 
 export default async function EventsPage() {
   const events = await listPublicEvents();
-  return <main className="editorial-page events-page"><ScrollReveal /><section className="events-index-hero"><div className="events-index-hero-image" /><div className="inner-hero-shade" /><SiteHeader /><div className="shell events-index-copy"><p className="eyebrow"><span /> Rencontres végétales · Lille</p><h1>La Jungle<br /><em>en mouvement.</em></h1><p>Ateliers, ouvertures, arrivages exceptionnels et moments de partage autour du vivant.</p></div></section><section className="shell events-index"><header data-reveal><p className="section-kicker">L’agenda Tibaldo Jungle</p><h2>Les prochains rendez-vous<br /><em>et leur histoire.</em></h2><p>Les événements passés restent accessibles : inspirations, galeries et conseils continuent de vivre après chaque rencontre.</p></header><EventFilters events={events} /></section><SiteFooter /></main>;
+  return <main className="editorial-page events-page"><ScrollReveal /><section className="events-index-hero"><div className="events-index-hero-image" /><div className="inner-hero-shade" /><SiteHeader /><div className="shell events-index-copy"><p className="eyebrow"><span /> Rencontres végétales · Lille</p><h1>La Jungle<br /><em>en mouvement.</em></h1><p>Ateliers, ouvertures, arrivages exceptionnels et moments de partage autour du vivant.</p></div></section><section className="shell events-index"><header data-reveal><p className="section-kicker">L’agenda Tibaldo Jungle</p><h2>Les prochains rendez-vous<br /><em>et leur histoire.</em></h2><p>Les événements passés restent accessibles : inspirations, galeries et conseils continuent de vivre après chaque rencontre.</p></header><SybotanicaWeekendLink /><EventFilters events={events} /></section><SiteFooter /></main>;
 }
