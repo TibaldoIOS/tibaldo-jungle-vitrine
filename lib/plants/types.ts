@@ -25,7 +25,7 @@ export type PlantFilters = {
   substrateTags: string[];
   growthRate: "lente" | "moyenne" | "rapide";
   habits: ("grimpant" | "rampant" | "retombant" | "terrestre" | "épiphyte" | "hémiépiphyte" | "dressé")[];
-  adultSizeCm: number;
+  adultSizeCm: number | null;
   needsSupport: boolean;
   variegated: boolean;
   collection: boolean;

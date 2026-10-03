@@ -190,6 +190,7 @@ export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
             })}</div>
           </section>
 
+          {plant.genre === "monstera" && plant.slug === "poseidon" ? <nav aria-label="Approfondir la culture de Poseidon"><Link href="/substrats">Choisir un substrat aéré pour aroïdes</Link> · <Link href="/rempotage">Comprendre le rempotage</Link></nav> : null}
           {isCycasRevoluta ? <CycasLocalGuide plant={plant} /> : null}
 
           {plant.showSources ? <section className={canonical.editorialChapters} aria-labelledby="sources-botaniques">

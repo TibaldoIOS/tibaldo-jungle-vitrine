@@ -1,4 +1,5 @@
 import type { PlantEntry } from "./types";
+import { poseidon } from "./poseidon.ts";
 import { prayerPlants } from "./prayer-plants.ts";
 import { newArrivalPlants } from "./new-arrivals.ts";
 import { requestedPlants } from "./requested-plants.ts";
@@ -209,7 +210,7 @@ const rawPlants: PlantEntry[] = [{
 
 export const plants: PlantEntry[] = applyDevilMonsterContext(applyOwnerPileaMediaV1(applyOwnerMarbleQueenMediaV1(applyOwnerMonsteraMintMediaV1(
   applyOwnerMonsteraThaiConstellationMediaV1(
-    applyMediaRightsP0Closure(applyVariegataContext(applyShopReferenceContext([...rawPlants, ...shopReferencePlants, platyceriumBifurcatum]))),
+    applyMediaRightsP0Closure(applyVariegataContext(applyShopReferenceContext([...rawPlants, ...shopReferencePlants, platyceriumBifurcatum, poseidon]))),
   ),
 ))));
 
@@ -1000,3 +1001,7 @@ export const studioCollection = [
   { genre: "Strelitzia", href: "/plantes/strelitzia", plants: ["Strelitzia alba", "Strelitzia caudata", "Strelitzia juncea", "Strelitzia nicolai", "Strelitzia reginae"] },
   { genre: "Ficus", href: "/plantes/ficus", plants: ["Gamme à identifier et photographier"] },
 ] as const;
+
+// Editorial comparison only: preserves the existing Burle Marx identity and media.
+const burleForPoseidon = plants.find(plant => plant.genre === "monstera" && plant.slug === "burle-marx-flame");
+if (burleForPoseidon) burleForPoseidon.comparisons = [...burleForPoseidon.comparisons, { name: "Monstera ‘Poseidon’", href: "/plantes/monstera/poseidon", difference: "Comparer le relief et la maturation rapportés en horticulture, sans en déduire une parenté ni une identification sur une seule feuille." }];
