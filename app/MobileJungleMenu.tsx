@@ -9,7 +9,7 @@ const primaryLinks = [
   ["Plantes", "/plantes"],
   ["Boutique", shopUrl()],
   ["Panier", shopUrl("/selection?panier=ouvert")],
-  ["Mon compte", shopUrl("/espace-client")],
+  ["Mon Passeport Jungle", shopUrl("/espace-client?section=loyalty&mode=link")],
   ["SOS Plantes", "/sos-plantes"],
   ["Conseils", "/conseils"],
 ] as const;
