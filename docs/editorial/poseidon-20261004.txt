@@ -4,7 +4,7 @@ Base : Jungle PUBLIC V212, source 38564e19db498c14d8438aea608befcbaf08175a.
 Identité : Monstera ‘Poseidon’, cultivar horticole de collection ; aucune espèce, génétique, date de création ou obtenteur certifiés.
 Thaïlande : Mama Treehouse documente diffusion et présence Bangkok, pas lieu de sélection.
 Comparaison BMF : relief du revers = observation horticole rapportée, non diagnostic absolu.
-Aucune photo Poseidon autorisée disponible : galerie vide et fallback canonique, aucune image empruntée ou générée.
+Mise à jour photo Owner du 4 octobre : image fournie et publication demandée ; conversion technique WebP sans recadrage, auteur/lieu non documentés. Provenance docs/media-provenance/poseidon-20261004.json.
 Taille adulte : null ; température/humidité : repères généraux Monstera explicitement contextualisés.
 Sources de recherche transmises par agent root et réparties par champ ; rédaction originale, pas citation longue.
 

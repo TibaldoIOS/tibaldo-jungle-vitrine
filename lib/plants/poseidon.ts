@@ -62,7 +62,7 @@ export const poseidon: PlantEntry = {
   ],
   "specimen": {
     "observedHeight": "Dimensions adultes non documentées pour ce cultivar",
-    "note": "Aucun spécimen photographique de Poseidon n’est attribué à cette fiche. Les descriptions horticoles ne garantissent pas la forme future d’un jeune plant."
+    "note": "Image fournie sous le nom Poseidon ; auteur et lieu non documentés. Cette feuille ne garantit pas la morphologie future d’un jeune plant."
   },
   "growth": {
     "adultSize": "Variable selon le sujet et son support ; maximum propre au cultivar non établi",
@@ -199,6 +199,14 @@ export const poseidon: PlantEntry = {
         "La difficulté principale consiste à éviter les ruptures : excès d’eau, froid, manque de lumière et changements répétés. Le niveau intermédiaire retenu ici est un conseil horticole, pas une mesure expérimentale du cultivar.",
         "Les repères d’entretien et de filtrage (température et humidité) proviennent de la culture générale des Monstera ; ils ne sont ni des mesures de Poseidon ni une hauteur adulte garantie. Aucun protocole spécifique Poseidon démontrant des besoins extrêmes n’est présenté."
       ]
+    },
+    {
+      "id": "poseidon-lille",
+      "eyebrow": "Au Studio de Lille",
+      "title": "Monstera « Poseidon » à Lille",
+      "paragraphs": [
+        "Monstera « Poseidon » à Lille : une arrivée au Studio est envisagée. Disponibilité et date restent à confirmer."
+      ]
     }
   ],
   "faq": [
@@ -256,7 +264,22 @@ export const poseidon: PlantEntry = {
     "Une croissance régulière apprend davantage qu’une comparaison avec une seule photographie mature.",
     "Installez un support stable et observez les racines avant de changer les apports."
   ],
-  "gallery": [],
+  "gallery": [
+    {
+      "src": "/media/owner-media/monstera-poseidon/monstera-poseidon-feuille-decoupee.webp",
+      "alt": "Feuille profondément découpée de Monstera « Poseidon »",
+      "caption": "Image fournie par Tibaldo ; auteur et lieu de prise de vue non documentés.",
+      "width": 1203,
+      "height": 1308,
+      "license": {
+        "status": "verified",
+        "license": "Utilisation sur Jungle demandée par l’Owner pour cette image fournie",
+        "sourceUrl": "owner-provided://tibaldo/poseidon-20261004",
+        "registryPath": "/credits-images",
+        "note": "Identité Poseidon fournie par Owner. Auteur et lieu non documentés. Conversion WebP sans recadrage ni retouche ; provenance docs/media-provenance/poseidon-20261004.json."
+      }
+    }
+  ],
   "mediaNeeds": [
     {
       "role": "juvénile",
@@ -265,10 +288,6 @@ export const poseidon: PlantEntry = {
     {
       "role": "intermédiaire",
       "description": "Feuille intermédiaire identifiée, sans chronologie supposée."
-    },
-    {
-      "role": "mature",
-      "description": "Feuille mature et plante entière avec provenance."
     },
     {
       "role": "revers",
@@ -324,10 +343,11 @@ export const poseidon: PlantEntry = {
   ],
   "seo": {
     "title": "Monstera Poseidon : origine, entretien et particularités | TIBALDO Jungle",
-    "description": "Découvrez Monstera ‘Poseidon’, un cultivar rare diffusé notamment en Thaïlande : origine horticole, évolution du feuillage, entretien, différences avec Burle Marx Flame et conseils de culture.",
+    "description": "Monstera ‘Poseidon’ : origine horticole, feuillage, entretien et comparaison Burle Marx Flame. Arrivée envisagée au Studio de Lille, disponibilité à confirmer.",
     "keywords": [
       "Monstera Poseidon",
       "Monstera Poseidon Thaïlande",
+      "Monstera Poseidon Lille",
       "cultivar Monstera Poseidon",
       "entretien Monstera Poseidon",
       "Monstera rare",
