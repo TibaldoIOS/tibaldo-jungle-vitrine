@@ -21,7 +21,7 @@ export default function RarePlants() {
       mainEntity: { "@type": "ItemList", itemListElement: collection.map((p,i) => ({ "@type": "ListItem", position: i+1, name: p.botanicalName, url: `https://jungle.tibaldo.fr/plantes/${p.genre}/${p.slug}` })) } },
     { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Accueil", item: "https://jungle.tibaldo.fr/" }, { "@type": "ListItem", position: 2, name: "Plantes rares", item: "https://jungle.tibaldo.fr/plantes-rares" }] }
   ] };
-  return <><SiteHeader light /><main className={styles.page}>
+  return <><div className={styles.navigation}><SiteHeader /></div><main className={styles.page}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(schema)}} />
     <header className={`shell ${styles.intro}`}><p className={styles.eyebrow}>Le carnet de collection · Lille</p><h1>Plantes rares &amp;<br/><em>plantes de collection</em></h1>
       <p>Des feuillages singuliers, des histoires à documenter et le plaisir d’apprendre à les cultiver.</p>
