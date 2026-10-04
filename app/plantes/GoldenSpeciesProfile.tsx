@@ -190,7 +190,7 @@ export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
               const target = comparisonTarget(plants, plant, item);
               const relatedPlant = target.exact ? plants.find(candidate => `/plantes/${candidate.genre}/${candidate.slug}` === target.href) : undefined;
               const preview = relatedPlant ? documentaryGallery(relatedPlant).find(image => image.license?.status === "verified") : undefined;
-              return <Link href={target.href} key={item.name} data-reveal><span>0{index + 1}</span><div className={golden.relatedPreview}>{preview ? <Image src={preview.src} alt={preview.alt} fill sizes="(max-width: 900px) 90vw, 28vw" style={{ objectFit: "cover" }} /> : <small>Photographie à venir</small>}</div><strong>{item.name}</strong><p>{item.difference}</p><b>{target.exact ? "Comparer" : "Explorer le genre"} <Arrow /></b></Link>;
+              return <Link href={target.href} key={item.name} data-reveal><span>0{index + 1}</span><div className={golden.relatedPreview}>{preview ? <Image unoptimized src={preview.src} alt={preview.alt} fill sizes="(max-width: 900px) 90vw, 28vw" style={{ objectFit: "cover" }} /> : <small>Photographie à venir</small>}</div><strong>{item.name}</strong><p>{item.difference}</p><b>{target.exact ? "Comparer" : "Explorer le genre"} <Arrow /></b></Link>;
             })}</div>
           </section>
 
