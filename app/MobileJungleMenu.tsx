@@ -7,6 +7,7 @@ import { shopUrl } from "@/lib/environment";
 
 const primaryLinks = [
   ["Plantes", "/plantes"],
+  ["Plantes rares", "/plantes-rares"],
   ["Boutique", shopUrl()],
   ["Panier", shopUrl("/selection?panier=ouvert")],
   ["Mon Passeport Jungle", shopUrl("/espace-client?section=loyalty&mode=link")],

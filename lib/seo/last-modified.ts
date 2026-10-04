@@ -1,9 +1,10 @@
 // Dates éditoriales stables. Elles ne doivent être modifiées que lorsqu'un contenu
 // public change réellement, jamais automatiquement pendant le build.
 export const editorialLastModified = {
+  "/plantes-rares": "2026-10-04",
   "/evenements/week-end-sybotanica-octobre-2026": "2026-10-03",
   "/": "2026-10-03",
-  "/plantes": "2026-08-17",
+  "/plantes": "2026-10-04",
   "/fleurs": "2026-08-15",
   "/substrats": "2026-10-03",
   "/rempotage": "2026-08-30",
@@ -12,7 +13,7 @@ export const editorialLastModified = {
   "/coulisses": "2026-09-16",
   "/coulisses/tibaldo-jungle-la-voix-du-nord": "2026-09-27",
   "/coulisses/mes-plantes-de-reve": "2026-09-16",
-  "/plantes/monstera/devil-monster": "2026-10-01",
+  "/plantes/monstera/devil-monster": "2026-10-04",
   "/contact": "2026-08-15",
   "/boutique-plantes-lille": "2026-10-03",
   "/rempotage-plantes-lille": "2026-08-17",

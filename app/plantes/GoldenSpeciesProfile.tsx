@@ -1,3 +1,4 @@
+import { isRareCollectionPlant } from "@/lib/plants/rare-collection";
 import Image from "next/image";
 import Link from "next/link";
 import { plants } from "@/lib/plants/catalog";
@@ -94,6 +95,7 @@ export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
       <div className={`${golden.speciesLayout} shell`}>
         <aside className={golden.chapterRail}><PlantSectionNav /></aside>
         <div className={golden.speciesStory}>
+          {isRareCollectionPlant(plant.genre, plant.slug) ? <nav aria-label="Collection"><Link href="/plantes-rares">← Toutes les plantes rares</Link></nav> : null}
           <section className={golden.speciesIntro} data-reveal>
             <p className="section-kicker">Portrait botanique</p>
             <div><h2>{plant.displayName}.<br /><em>Une présence à comprendre.</em></h2>{description.slice(0, 1).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>

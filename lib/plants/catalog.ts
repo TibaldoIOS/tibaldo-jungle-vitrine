@@ -1,3 +1,4 @@
+import { rarePlantEntries } from "./rare-plants.ts";
 import type { PlantEntry } from "./types";
 import { poseidon } from "./poseidon.ts";
 import { prayerPlants } from "./prayer-plants.ts";
@@ -210,7 +211,7 @@ const rawPlants: PlantEntry[] = [{
 
 export const plants: PlantEntry[] = applyDevilMonsterContext(applyOwnerPileaMediaV1(applyOwnerMarbleQueenMediaV1(applyOwnerMonsteraMintMediaV1(
   applyOwnerMonsteraThaiConstellationMediaV1(
-    applyMediaRightsP0Closure(applyVariegataContext(applyShopReferenceContext([...rawPlants, ...shopReferencePlants, platyceriumBifurcatum, poseidon]))),
+    applyMediaRightsP0Closure(applyVariegataContext(applyShopReferenceContext([...rawPlants, ...shopReferencePlants, platyceriumBifurcatum, poseidon, ...rarePlantEntries]))),
   ),
 ))));
 
