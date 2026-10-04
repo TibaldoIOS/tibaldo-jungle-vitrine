@@ -1,3 +1,4 @@
+import { octoberArrivalPlants, frydekGreenReview } from "./arrivals-october-2026.ts";
 import { rarePlantEntries } from "./rare-plants.ts";
 import type { PlantEntry } from "./types";
 import { poseidon } from "./poseidon.ts";
@@ -30,6 +31,11 @@ import { platyceriumBifurcatum } from "./platycerium-bifurcatum.ts";
 import { applyOwnerEpipremnumMedia20260923 } from "./owner-epipremnum-media-20260923.ts";
 
 export const plantFamilies = [
+  {"slug": "begonia", "name": "Begonia", "eyebrow": "Guide de culture", "description": "Feuillages ponctués et tiges à cannes : découvrir les bégonias horticoles.", "image": "/photo-reelle-a-venir.svg", "imageAlt": "Photographie documentaire non disponible", "available": true},
+  {"slug": "spathiphyllum", "name": "Spathiphyllum", "eyebrow": "Guide de culture", "description": "Feuillage brillant et spathes blanches : comprendre la fleur de lune.", "image": "/photo-reelle-a-venir.svg", "imageAlt": "Photographie documentaire non disponible", "available": true},
+  {"slug": "dieffenbachia", "name": "Dieffenbachia", "eyebrow": "Guide de culture", "description": "Identifier les plantes vendues en mélange et adapter leur culture sans inventer de cultivar.", "image": "/photo-reelle-a-venir.svg", "imageAlt": "Photographie documentaire non disponible", "available": true},
+  {"slug": "euphorbia", "name": "Euphorbia", "eyebrow": "Guide de culture", "description": "Silhouettes succulentes et latex irritant : des plantes à observer et manipuler avec soin.", "image": "/photo-reelle-a-venir.svg", "imageAlt": "Photographie documentaire non disponible", "available": true},
+  {"slug": "howea", "name": "Howea", "eyebrow": "Guide de culture", "description": "Les palmiers Kentia, leur port souple et leur culture en intérieur.", "image": "/photo-reelle-a-venir.svg", "imageAlt": "Photographie documentaire non disponible", "available": true},
   { slug: "olea", name: "Olea", eyebrow: "Arbres méditerranéens", description: "L’olivier Olea europaea, sa lumière, son drainage et sa culture en pot ou au jardin.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie documentaire d’Olea europaea à réaliser", available: true },
   { slug: "tetrapanax", name: "Tetrapanax", eyebrow: "Feuillage architectural", description: "Tetrapanax papyrifer et ses grandes feuilles palmées, avec une culture adaptée au climat lillois.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie documentaire de Tetrapanax papyrifer à réaliser", available: true },
   { slug: "beaucarnea", name: "Beaucarnea", eyebrow: "Silhouettes succulentes", description: "Un tronc renflé et une croissance lente : comprendre Beaucarnea recurvata sans le confondre avec un palmier.", image: "/photo-reelle-a-venir.svg", imageAlt: "Photographie de Beaucarnea à documenter", available: true },
@@ -211,7 +217,7 @@ const rawPlants: PlantEntry[] = [{
 
 export const plants: PlantEntry[] = applyDevilMonsterContext(applyOwnerPileaMediaV1(applyOwnerMarbleQueenMediaV1(applyOwnerMonsteraMintMediaV1(
   applyOwnerMonsteraThaiConstellationMediaV1(
-    applyMediaRightsP0Closure(applyVariegataContext(applyShopReferenceContext([...rawPlants, ...shopReferencePlants, platyceriumBifurcatum, poseidon, ...rarePlantEntries]))),
+    applyMediaRightsP0Closure(applyVariegataContext(applyShopReferenceContext([...rawPlants, ...shopReferencePlants, platyceriumBifurcatum, poseidon, ...rarePlantEntries, ...octoberArrivalPlants]))),
   ),
 ))));
 
@@ -983,6 +989,43 @@ for (const entry of documentaryBatch) {
   const existingVerified = plant.gallery.filter((media) => media.license?.status === "verified");
   if (existingVerified.some((media) => media.src === entry.media.src)) continue;
   plants[index] = {...plant, gallery: [entry.media, ...existingVerified], mediaNeeds: []};
+}
+
+// October editorial review: preserve existing identities, routes and photographs.
+const frydekGreen = plants.find(p => p.genre === 'alocasia' && p.slug === 'micholitziana');
+if (frydekGreen) {
+  frydekGreen.hybridization = frydekGreenReview.hybridization;
+  frydekGreen.synonyms = [...new Set([...frydekGreen.synonyms, ...frydekGreenReview.synonyms])];
+  frydekGreen.seo = frydekGreenReview.seo;
+  frydekGreen.sources = [...frydekGreen.sources, ...frydekGreenReview.sources];
+  frydekGreen.updatedAt = '2026-10-04'; frydekGreen.showSources = true;
+}
+
+const octoberReviewed = new Set(['alocasia/tandurusa','epiphyllum/anguliger','calathea/orbifolia','anthurium/luxurians','anthurium/magnificum','anthurium/regale','anthurium/veitchii']);
+for (const plant of plants) {
+  if (!octoberReviewed.has(`${plant.genre}/${plant.slug}`)) continue;
+  plant.updatedAt = '2026-10-04'; plant.showSources = true;
+  if (plant.genre === 'anthurium') {
+    plant.editorialSections = [...(plant.editorialSections ?? []), {id:'jeune-plante-et-maturite',eyebrow:'Observer',title:'Du jeune plant à la feuille mature',paragraphs:['Le relief, la longueur et les nervures se précisent au fil de la croissance. Un petit pot commercial ne définit ni une nouvelle variété ni la taille adulte. Les portraits documentaires de cette fiche peuvent montrer un sujet beaucoup plus mature.','Après un changement de lieu, stabilisez lumière indirecte, humidité et aération. Évaluez le séchage réel de la motte avant de reprendre un rythme d’arrosage.'],points:['Inspecter les nouvelles pousses et le revers des feuilles : thrips, cochenilles et acariens peuvent passer inaperçus.','La fertilisation accompagne une croissance saine ; elle ne remplace pas la lumière ni des racines oxygénées.']}];
+    plant.comparisons = [...plant.comparisons, {name:'Anthurium luxurians × radicans',href:'/plantes/anthurium/luxurians-radicans',difference:'Un hybride horticole documenté séparément des espèces, sans lui attribuer leurs dimensions adultes.'}];
+  }
+  if (plant.slug === 'tandurusa') {
+    plant.botanicalName = 'Alocasia tandurusa ‘Jacklyn’';
+    plant.synonyms = [...new Set([...plant.synonyms,'Alocasia Jacklyn'])];
+    plant.editorialSections = [...(plant.editorialSections ?? []), {id:'nom-jacklyn',eyebrow:'Nomenclature',title:'Tandurusa et Jacklyn',paragraphs:['Alocasia tandurusa est le nom d’espèce accepté. Jacklyn est l’appellation horticole courante conservée pour la recherche ; ce nom ne transforme pas chaque format de vente en cultivar distinct.']}];
+  }
+  if (plant.slug === 'anguliger') {
+    plant.synonyms = [...new Set([...plant.synonyms,'Epiphyllum anguliger'])];
+    plant.seo.title = 'Disocactus anguliger (Epiphyllum) : cactus zigzag | TIBALDO Jungle';
+    plant.sources = [...plant.sources,{label:'Kew — Disocactus anguliger, nom accepté',url:'https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77155391-1'}];
+  }
+  if (plant.slug === 'orbifolia') {
+    plant.origin = 'Est du Brésil selon Plants of the World Online (Kew).';
+    plant.filters.regions = ['Brésil', 'Amérique du Sud'];
+    plant.synonyms = [...new Set([...plant.synonyms,'Calathea orbifolia'])];
+    plant.seo.title = 'Calathea orbifolia — Goeppertia : entretien | TIBALDO Jungle';
+    plant.sources = [...plant.sources,{label:'Kew — Goeppertia orbifolia',url:'https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60461168-2'}];
+  }
 }
 
 export const plantGenres = Array.from(new Set(plants.map((plant) => plant.genre)));

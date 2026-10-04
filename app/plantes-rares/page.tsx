@@ -1,3 +1,4 @@
+import AnthuriumWeekendLink from "../AnthuriumWeekendLink";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
@@ -28,7 +29,7 @@ export default function RarePlants() {
       <p className={styles.context}>« Rare » désigne ici des cultivars, hybrides ou sélections horticoles à diffusion spécialisée ou limitée. Ce n’est ni une mesure de rareté dans la nature, ni un classement de valeur. Ce carnet accompagne les plantes présentes ou envisagées dans l’univers du Studio ; une fiche ne garantit pas une disponibilité à Lille.</p>
       <Link href="/plantes">Explorer toute l’encyclopédie →</Link>
     </header>
-    <section className={`shell ${styles.collection}`} aria-label="Fiches de plantes rares">
+    <AnthuriumWeekendLink /><section className={`shell ${styles.collection}`} aria-label="Fiches de plantes rares">
       <fieldset className={styles.filters}><legend>Explorer par genre</legend>
         <input id="rare-all" type="radio" name="rare-genre" defaultChecked/><label htmlFor="rare-all">Toutes</label>
         <input id="rare-monstera" type="radio" name="rare-genre"/><label htmlFor="rare-monstera">Monstera</label>

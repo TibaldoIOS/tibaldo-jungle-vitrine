@@ -1,3 +1,4 @@
+import AnthuriumWeekendLink from "../AnthuriumWeekendLink";
 import Image from "next/image";
 import Link from "next/link";
 import type { PlantEntry, Level } from "@/lib/plants/types";
@@ -148,6 +149,7 @@ export default function GoldenGenusHub({ genre, guide, plants, editorials = [], 
         </div>
       </section>
 
+      {genre === "anthurium" && <AnthuriumWeekendLink />}
       <section className={`${golden.groupIntro} ${mobile.introTransition} shell`} data-reveal>
         <HubChapterMarker number="01" label="Comprendre le groupe" />
         <div><h2>{introduction.heading[0]}<br /><em>{introduction.heading[1]}</em></h2><div className={`${golden.groupIntroCopy} ${body.bodyCopy}`}><p>{introduction.paragraphs[0]}</p><p>{introduction.paragraphs[1]}</p></div>{facts.length ? <dl className={canonical.factBand}>{facts.map((fact) => <div key={fact.label}><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}</dl> : null}</div>

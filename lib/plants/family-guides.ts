@@ -24,6 +24,11 @@ const simpleGuide = (name: string, botanicalName: string, lead: string, origin: 
 });
 
 const simpleGuides = {
+  begonia: simpleGuide("Begonia","Begonia","Feuillages ponctués et tiges à cannes : découvrir les bégonias horticoles.","Voir les origines documentées dans chaque fiche.","Photographie documentaire non disponible"),
+  spathiphyllum: simpleGuide("Spathiphyllum","Spathiphyllum","Feuillage brillant et spathes blanches : comprendre la fleur de lune.","Voir les origines documentées dans chaque fiche.","Photographie documentaire non disponible"),
+  dieffenbachia: simpleGuide("Dieffenbachia","Dieffenbachia","Identifier les plantes vendues en mélange et adapter leur culture sans inventer de cultivar.","Voir les origines documentées dans chaque fiche.","Photographie documentaire non disponible"),
+  euphorbia: simpleGuide("Euphorbia","Euphorbia","Silhouettes succulentes et latex irritant : des plantes à observer et manipuler avec soin.","Voir les origines documentées dans chaque fiche.","Photographie documentaire non disponible"),
+  howea: simpleGuide("Howea","Howea","Les palmiers Kentia, leur port souple et leur culture en intérieur.","Voir les origines documentées dans chaque fiche.","Photographie documentaire non disponible"),
   olea: {
     ...simpleGuide("Olea", "Olea europaea", "L’olivier associe feuillage persistant, plein soleil et culture très drainée, en pot comme au jardin.", "Olea europaea est une espèce acceptée des Oleaceae, largement cultivée dans la région méditerranéenne.", "Photographie documentaire d’Olea europaea à réaliser"),
     care: { difficulty: 2, light: 5, water: 2, humidity: 1, substrate: "Minéral et très drainant", nutrition: "Modérée au printemps" },

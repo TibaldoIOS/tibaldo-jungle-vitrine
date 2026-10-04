@@ -1,14 +1,15 @@
 // Dates éditoriales stables. Elles ne doivent être modifiées que lorsqu'un contenu
 // public change réellement, jamais automatiquement pendant le build.
 export const editorialLastModified = {
+  "/evenements/week-end-anthurium-octobre-2026": "2026-10-04",
   "/plantes-rares": "2026-10-04",
   "/evenements/week-end-sybotanica-octobre-2026": "2026-10-03",
-  "/": "2026-10-03",
+  "/": "2026-10-04",
   "/plantes": "2026-10-04",
   "/fleurs": "2026-08-15",
   "/substrats": "2026-10-03",
   "/rempotage": "2026-08-30",
-  "/evenements": "2026-10-03",
+  "/evenements": "2026-10-04",
   "/services": "2026-08-15",
   "/coulisses": "2026-09-16",
   "/coulisses/tibaldo-jungle-la-voix-du-nord": "2026-09-27",
@@ -34,3 +35,5 @@ export const lastModifiedDefaults = {
   substrates: "2026-08-15",
   taxonomy: "2026-08-17",
 } as const;
+
+export const octoberTaxonomyLastModified: Record<string,string> = Object.fromEntries(["begonia","spathiphyllum","dieffenbachia","euphorbia","howea","alocasia","anthurium","sansevieria"].map(g=>[`/plantes/${g}`,"2026-10-04"]));

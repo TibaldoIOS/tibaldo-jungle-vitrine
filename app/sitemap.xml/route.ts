@@ -1,3 +1,4 @@
+import { octoberTaxonomyLastModified } from "@/lib/seo/last-modified";
 import { featuredFlowerSlugs } from "@/lib/flowers/catalog";
 import { listPublicEvents } from "@/lib/events/repository";
 import { eventFallbacks } from "@/lib/events/catalog";
@@ -80,7 +81,7 @@ export async function GET() {
       .filter(isGenreIndexable)
       .map((genre) => ({
         path: `/plantes/${genre}`,
-        modified: lastModifiedDefaults.taxonomy,
+        modified: octoberTaxonomyLastModified[`/plantes/${genre}`] ?? lastModifiedDefaults.taxonomy,
       })),
     ...Array.from(
       new Set(plants.map((plant) => plant.taxonomy.family.toLowerCase())),

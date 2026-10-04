@@ -1,3 +1,4 @@
+import AnthuriumWeekendLink from "./AnthuriumWeekendLink";
 import SybotanicaWeekendLink from "./SybotanicaWeekendLink";
 import Image from "next/image";
 import Link from "next/link";
@@ -39,6 +40,7 @@ export default function Home() {
         <SiteHeader />
         <HomeOpeningBanner />
         <SybotanicaWeekendLink />
+        <AnthuriumWeekendLink />
         <p className="hero-local-coordinates" aria-label={`Latitude ${jungleLocalIdentity.latitude} nord, longitude ${jungleLocalIdentity.longitude} est`}>
           {jungleLocalIdentity.latitude}° N · {jungleLocalIdentity.longitude}° E
         </p>
