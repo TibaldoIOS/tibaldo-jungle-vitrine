@@ -1166,14 +1166,17 @@ export const octoberArrivalPlants: PlantEntry[] = [
     ],
     "gallery": [
       {
-        "src": "/photo-reelle-a-venir.svg",
-        "alt": "",
-        "caption": "Photographie documentaire non disponible.",
-        "width": 1200,
-        "height": 1200,
+        "src": "/media/owner-media/anthurium-luxurians-radicans/anthurium-luxurians-radicans-feuillage-gaufre.webp",
+        "alt": "Anthurium luxurians × radicans en pot clair, aux feuilles vert foncé brillantes et fortement gaufrées.",
+        "caption": "Anthurium luxurians × radicans — image fournie par TIBALDO.",
+        "width": 1536,
+        "height": 1024,
         "license": {
-          "status": "media-gap",
-          "note": "Aucune photo exacte avec droits établis dans ce chantier."
+          "status": "verified",
+          "license": "Image fournie par Owner pour publication sur Jungle",
+          "sourceUrl": "owner-provided://tibaldo/20261005/anthurium-luxurians-radicans",
+          "registryPath": "/credits-images",
+          "note": "Identité fournie par Owner. Origine photographique non vérifiée indépendamment. Conversion WebP sans recadrage ni retouche. Provenance : docs/media-provenance/anthurium-luxurians-radicans-20261005.json"
         }
       }
     ],
@@ -1194,7 +1197,7 @@ export const octoberArrivalPlants: PlantEntry[] = [
     ],
     "showSources": true,
     "publishedAt": "2026-10-04",
-    "updatedAt": "2026-10-04"
+    "updatedAt": "2026-10-05"
   }
 ];
 export const frydekGreenReview = {
