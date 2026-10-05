@@ -37,3 +37,6 @@ export const lastModifiedDefaults = {
 } as const;
 
 export const octoberTaxonomyLastModified: Record<string,string> = Object.fromEntries(["begonia","spathiphyllum","dieffenbachia","euphorbia","howea","alocasia","anthurium","sansevieria"].map(g=>[`/plantes/${g}`,"2026-10-04"]));
+
+// Render restored after the public crawl found a missing optional introduction.
+octoberTaxonomyLastModified["/plantes/platycerium"] = "2026-10-05";

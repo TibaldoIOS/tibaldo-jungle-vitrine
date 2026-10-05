@@ -129,7 +129,10 @@ export default function GoldenGenusHub({ genre, guide, plants, editorials = [], 
   const navigationGenres = [...new Map(plants.map((plant) => [plant.genre, plant.genreLabel])).entries()];
   const gapCount = displayPlants.filter((plant) => !plant.gallery.length).length;
   const heroCopy = groupHeroCopy(genre, guide);
-  const introduction = genusIntroductions[genre as keyof typeof genusIntroductions];
+  const introduction = genusIntroductions[genre as keyof typeof genusIntroductions] ?? {
+    heading: [guide.name, "Comprendre le genre."],
+    paragraphs: [guide.lead, guide.origin],
+  };
 
   return (
     <main className={`${golden.page} ${body.groupPage} editorial-page`} data-golden-group-v25={genre} data-golden-group-v1={genre}>

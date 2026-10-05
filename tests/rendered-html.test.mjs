@@ -1244,3 +1244,13 @@ test("serves complete, media-truth-aware SEO metadata for the nine V2 pages", as
     assert.match(html, /noindex/i, path);
   }
 });
+
+
+test("Platycerium renders even without a bespoke genus introduction", async () => {
+  const response = await render("/plantes/platycerium");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /Platycerium/);
+  assert.match(html, /Des fougères épiphytes/);
+  assert.match(html, /rel="canonical"/);
+});
