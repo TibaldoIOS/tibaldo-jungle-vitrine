@@ -27,6 +27,7 @@ test("press page exposes indexable canonical metadata and an owned Article schem
   assert.match(page, /robots: \{ index: true, follow: true \}/);
   assert.match(page, /"@type": "Article"/);
   assert.match(page, /datePublished: "2026-09-27"/);
+  assert.match(page, /"@type": "BreadcrumbList"/);
   assert.match(page, /citation: pressUrl/);
   assert.match(page, /mainEntityOfPage: canonicalUrl/);
 });
@@ -44,7 +45,7 @@ test("press page uses only the approved Owner image and keeps its rights evidenc
 test("press page is discoverable through current editorial and local paths", () => {
   assert.match(journal, new RegExp(route));
   assert.match(localLanding, new RegExp(route));
-  assert.match(lastModified, new RegExp(`"${route}": "2026-09-27"`));
+  assert.match(lastModified, new RegExp(`"${route}": "2026-10-07"`));
   for (const link of ["/boutique-plantes-lille", "/plantes", "/plantes/monstera", "/rempotage", "/contact"]) {
     assert.match(page, new RegExp(`href="${link}"`));
   }

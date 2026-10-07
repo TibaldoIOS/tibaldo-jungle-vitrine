@@ -55,19 +55,29 @@ const quickFacts = [
 export default function TibaldoJungleLaVoixDuNordPage() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "@id": `${canonicalUrl}#article`,
-    headline: "Tibaldo Jungle dans La Voix du Nord : le Studio Végétal de Lille",
-    description: metadata.description,
-    image: `https://jungle.tibaldo.fr${image.url}`,
-    datePublished: "2026-09-27",
-    dateModified: "2026-09-27",
-    inLanguage: "fr-FR",
-    mainEntityOfPage: canonicalUrl,
-    author: { "@id": jungleLocalIdentity.organizationId },
-    publisher: { "@id": jungleLocalIdentity.organizationId },
-    about: { "@id": jungleLocalIdentity.storeId },
-    citation: pressUrl,
+    "@graph": [{
+      "@type": "Article",
+      "@id": `${canonicalUrl}#article`,
+      headline: "Tibaldo Jungle dans La Voix du Nord : le Studio Végétal de Lille",
+      description: metadata.description,
+      image: `https://jungle.tibaldo.fr${image.url}`,
+      datePublished: "2026-09-27",
+      dateModified: "2026-10-07",
+      inLanguage: "fr-FR",
+      mainEntityOfPage: canonicalUrl,
+      author: { "@id": jungleLocalIdentity.organizationId },
+      publisher: { "@id": jungleLocalIdentity.organizationId },
+      about: { "@id": jungleLocalIdentity.storeId },
+      citation: pressUrl,
+    }, {
+      "@type": "BreadcrumbList",
+      "@id": `${canonicalUrl}#breadcrumb`,
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Accueil", item: "https://jungle.tibaldo.fr/" },
+        { "@type": "ListItem", position: 2, name: "Coulisses", item: "https://jungle.tibaldo.fr/coulisses" },
+        { "@type": "ListItem", position: 3, name: "TIBALDO Jungle dans La Voix du Nord", item: canonicalUrl },
+      ],
+    }],
   };
 
   return <main className={styles.page}>
@@ -85,6 +95,7 @@ export default function TibaldoJungleLaVoixDuNordPage() {
       <section className={`shell ${styles.concept}`} data-reveal><div><p className="section-kicker">Le concept du Studio</p><h2>Une boutique de plantes,<br /><em>mais pas seulement.</em></h2></div><div className={styles.conceptGrid}><div><span>01</span><h3>Une sélection vivante</h3><p>Plantes d’intérieur, plantes d’extérieur, sujets tropicaux et variétés rares se rencontrent au rythme des cultures et des arrivages.</p></div><div><span>02</span><h3>Un conseil concret</h3><p>Le choix d’une plante tient compte de la lumière, de l’espace disponible et du quotidien de la personne qui va la cultiver.</p></div><div><span>03</span><h3>Un bar à rempotage</h3><p>Le Studio accompagne aussi l’observation des racines, le choix du contenant et la composition d’un substrat adapté.</p></div></div></section>
       <section className={styles.facts} data-reveal><div className="shell"><header><p className="section-kicker">Repères factuels</p><h2>TIBALDO Jungle<br /><em>en quelques mots.</em></h2></header><dl>{quickFacts.map(([question, answer]) => <div key={question}><dt>{question}</dt><dd>{answer}</dd></div>)}</dl></div></section>
       <section className={`shell ${styles.explore}`} data-reveal><header><p className="section-kicker">Préparer votre visite</p><h2>Explorer la Jungle.</h2></header><nav aria-label="Découvrir TIBALDO Jungle"><Link href="/boutique-plantes-lille"><span>Le lieu</span><strong>Boutique de plantes à Lille</strong><Arrow /></Link><Link href="/plantes"><span>Les plantes</span><strong>Encyclopédie végétale</strong><Arrow /></Link><Link href="/plantes/monstera"><span>Les collections</span><strong>Découvrir les Monstera</strong><Arrow /></Link><Link href="/rempotage"><span>Le service</span><strong>Bar à rempotage</strong><Arrow /></Link><Link href="/contact"><span>Venir au Studio</span><strong>Adresse, horaires et itinéraire</strong><Arrow /></Link></nav></section>
+      <section className={`shell ${styles.related}`} data-reveal><p className="section-kicker">À lire aussi</p><Link href="/coulisses/tibaldo-jungle-actu-fr"><span>Presse locale · 7 octobre 2026</span><strong>TIBALDO Jungle dans Actu.fr</strong><Arrow /></Link></section>
       <footer className={`shell ${styles.credit}`}><p>Photographie d’illustration : TIBALDO. Cette page est une publication éditoriale originale de TIBALDO Jungle à propos de sa couverture dans la presse locale ; elle ne reproduit pas l’article de <cite>La Voix du Nord</cite>.</p></footer>
     </article>
     <SiteFooter />

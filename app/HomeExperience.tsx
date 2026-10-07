@@ -33,6 +33,12 @@ export default function HomeExperience() {
         <div><p className="section-kicker">Le Studio Végétal</p><h2>À Lille,<br /><em>près de vos plantes.</em></h2><p>Tibaldo Jungle est un magasin de plantes rares et exotiques, mais aussi un lieu de conseil. La sélection, le rempotage et les substrats sont pensés ensemble pour éviter les achats inutiles et accompagner durablement chaque plante.</p><p>Pour offrir ou préparer un événement, découvrez aussi nos <Link href="/fleurs-sur-commande-lille">fleurs sur commande</Link>, avec retrait au Studio ou livraison selon votre projet.</p><div className="home-studio-facts"><span><small>Adresse</small>3 place de l’Arbonnoise</span><span><small>Horaires</small>Mardi · 14 h–19 h<br />Mercredi–samedi · 10 h–19 h<br />Dimanche · 10 h–13 h</span></div><Link className="button button-green" href="/contact#horaires">Horaires & itinéraire <Arrow /></Link><Link className="home-dream-link" href="/coulisses/mes-plantes-de-reve">Mes plantes de rêve <Arrow /></Link></div>
       </section>
 
+      <aside className="home-press-signal shell" aria-label="TIBALDO Jungle dans la presse" data-reveal>
+        <p className="section-kicker">La presse parle de la Jungle</p>
+        <p>TIBALDO Jungle raconté dans <Link href="/coulisses/tibaldo-jungle-la-voix-du-nord">La Voix du Nord</Link> et <Link href="/coulisses/tibaldo-jungle-actu-fr">Actu.fr</Link>.</p>
+        <Link href="/coulisses">Voir la revue de presse <Arrow /></Link>
+      </aside>
+
       <section className="home-expertise-strip" aria-label="L’approche Tibaldo Jungle">
         <div className="shell" data-reveal><p className="section-kicker">L’expertise Tibaldo</p><h2>Observer. Comprendre.<br /><em>Conseiller sans sur-vendre.</em></h2><p>Des plantes préparées et cultivées à Wattignies, puis accueillies au Studio Végétal situé à Lille, avec des conseils adaptés à la réalité de votre intérieur.</p><nav><Link href="/conseils">Lire les conseils <Arrow /></Link><Link href="/plantes">Explorer l’encyclopédie <Arrow /></Link><Link href="/coulisses">Voir les coulisses <Arrow /></Link></nav></div>
       </section>

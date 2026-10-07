@@ -46,6 +46,11 @@
 .explore nav svg { width: 17px; }
 .credit { padding-bottom: 130px; }
 .credit p { max-width: 850px; margin: 0; color: #78837d; font-size: 12px; line-height: 1.7; }
+.related { padding-bottom: 80px; }
+.related > a { display: grid; grid-template-columns: .55fr 1fr auto; gap: 24px; align-items: center; margin-top: 24px; padding: 28px 0; border-top: 1px solid rgba(21,59,44,.2); border-bottom: 1px solid rgba(21,59,44,.2); color: inherit; }
+.related span { color: #9c716b; font-size: 9px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.related strong { font: 400 27px/1.2 Georgia,serif; }
+.related svg { width: 18px; }
 @media (max-width: 900px) {
   .hero { min-height: 820px; }
   .heroImage { inset: 37% 0 0; }
@@ -77,5 +82,7 @@
   .explore nav a, .explore nav a:nth-child(2n) { min-height: 150px; border-right: 0; border-top: 1px solid rgba(21,59,44,.2); }
   .explore nav a:first-child { border-top: 0; }
   .credit { padding-bottom: 160px; }
+  .related > a { grid-template-columns: 1fr auto; }
+  .related span { grid-column: 1 / -1; }
 }
 @media (prefers-reduced-motion: reduce) { .heroImage img { transform: none; } }
