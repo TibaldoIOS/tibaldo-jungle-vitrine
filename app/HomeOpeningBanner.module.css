@@ -40,11 +40,21 @@
 .cta:hover { background: var(--forest); }
 .cta:focus-visible { outline: 3px solid var(--forest-dark); outline-offset: 4px; }
 
+.compact .inner { min-height: 96px; padding-block: 14px; }
+.compact .date .kicker { margin-bottom: 4px; }
+.compact .date p, .compact .copy p { margin-top: 3px; }
+.compact .copy h2 { font-size: clamp(20px, 1.7vw, 26px); }
+.compact .cta { min-height: 44px; padding-block: 11px; }
+
 @media (max-width: 1000px) {
   .inner { grid-template-columns: 1fr auto; gap: 16px 24px; padding-block: 22px; }
   .date { grid-column: 1; }
   .copy { grid-column: 1; grid-row: 2; padding: 0; border: 0; }
   .cta { grid-column: 2; grid-row: 1 / span 2; }
+  .compact .inner { grid-template-columns: auto minmax(0, 1fr) auto; gap: 16px; min-height: 96px; padding-block: 12px; }
+  .compact .date { grid-column: 1; grid-row: 1; }
+  .compact .copy { grid-column: 2; grid-row: 1; padding-left: 16px; border-left: 1px solid rgba(9, 38, 27, .25); }
+  .compact .cta { grid-column: 3; grid-row: 1; }
 }
 
 @media (max-width: 600px) {
@@ -54,6 +64,14 @@
   .date p, .copy p { margin-top: 5px; }
   .copy h2 { max-width: 24ch; font-size: 22px; }
   .cta { grid-column: 1; grid-row: 3; justify-self: start; }
+  .compact .inner { grid-template-columns: auto minmax(0, 1fr); min-height: 0; gap: 6px 12px; padding-block: 8px; }
+  .compact .date { grid-column: 1; grid-row: 1; display: block; }
+  .compact .date .kicker { display: none; }
+  .compact .date > strong { font-size: 15px; }
+  .compact .copy { grid-column: 2; grid-row: 1; padding: 0; border: 0; }
+  .compact .copy h2 { font-size: 18px; }
+  .compact .copy p { font-size: 12px; }
+  .compact .cta { grid-column: 1 / -1; grid-row: 2; min-height: 36px; padding: 7px 12px; }
 }
 
 /* Keep the existing desktop navigation inside the 1280px viewport. */

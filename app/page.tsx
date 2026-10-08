@@ -7,7 +7,6 @@ import { Arrow, SiteFooter, SiteHeader } from "./SiteChrome";
 import { plantFamilies } from "@/lib/plants/catalog";
 import { substrates } from "./substrats/data";
 import HomeExperience from "./HomeExperience";
-import HomeOpeningBanner from "./HomeOpeningBanner";
 import promoStyles from "./HomeOpeningBanner.module.css";
 import { shopUrl } from "@/lib/environment";
 import { jungleLocalIdentity, jungleOrganizationStructuredData, jungleStoreStructuredData } from "@/lib/jungle-local-identity";
@@ -38,9 +37,8 @@ export default function Home() {
       <section className={`hero ${promoStyles.hero}`} id="accueil">
         <div className="hero-photo" aria-hidden="true" /><div className="hero-shade" aria-hidden="true" />
         <SiteHeader />
-        <HomeOpeningBanner />
         <SybotanicaWeekendLink />
-        <AnthuriumWeekendLink />
+        <AnthuriumWeekendLink compact />
         <p className="hero-local-coordinates" aria-label={`Latitude ${jungleLocalIdentity.latitude} nord, longitude ${jungleLocalIdentity.longitude} est`}>
           {jungleLocalIdentity.latitude}° N · {jungleLocalIdentity.longitude}° E
         </p>
