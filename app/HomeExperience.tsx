@@ -29,7 +29,7 @@ export default function HomeExperience() {
       </section>
 
       <section className="home-studio-compact shell" data-reveal>
-        <figure><Image unoptimized src="/media/projet-boutique-tibaldo-jungle-lille.webp" alt="Création du Studio Végétal Tibaldo Jungle à Lille" width="1200" height="900" loading="lazy" /></figure>
+        <figure><Image unoptimized src="/studio-vegetal-tibaldo-jungle-romain-pruvost-caisse-lille.webp" alt="Romain Pruvost derrière la caisse du Studio Végétal TIBALDO Jungle à Lille, entouré de plantes" width="2000" height="1125" loading="lazy" /></figure>
         <div><p className="section-kicker">Le Studio Végétal</p><h2>À Lille,<br /><em>près de vos plantes.</em></h2><p>Tibaldo Jungle est un magasin de plantes rares et exotiques, mais aussi un lieu de conseil. La sélection, le rempotage et les substrats sont pensés ensemble pour éviter les achats inutiles et accompagner durablement chaque plante.</p><p>Pour offrir ou préparer un événement, découvrez aussi nos <Link href="/fleurs-sur-commande-lille">fleurs sur commande</Link>, avec retrait au Studio ou livraison selon votre projet.</p><div className="home-studio-facts"><span><small>Adresse</small>3 place de l’Arbonnoise</span><span><small>Horaires</small>Mardi · 14 h–19 h<br />Mercredi–samedi · 10 h–19 h<br />Dimanche · 10 h–13 h</span></div><Link className="button button-green" href="/contact#horaires">Horaires & itinéraire <Arrow /></Link><Link className="home-dream-link" href="/coulisses/mes-plantes-de-reve">Mes plantes de rêve <Arrow /></Link></div>
       </section>
 
