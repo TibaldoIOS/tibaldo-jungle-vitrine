@@ -2,7 +2,7 @@
  * dealership, delivery area or live checkout is implied by this content. */
 export const substrateLocalCommerce = {
   studioStatus: "Studio ouvert à Lille",
-  openingHours: "Mardi 14 h–19 h · mercredi–samedi 10 h–19 h · dimanche 10 h–13 h · lundi fermé",
+  openingHours: "Lundi fermé · mardi 14 h–19 h · mercredi–samedi 10 h–13 h / 14 h–19 h · dimanche 10 h–13 h",
   retailer: "TIBALDO Jungle, revendeur Sybotanica à Lille",
   shopNotice: "Le Shop présente les références publiées. Tant qu’une commande ou un retrait n’est pas explicitement activé sur la fiche, consultez la sélection puis contactez le Studio : aucun retrait n’est réservé automatiquement.",
   nearby: "Depuis Lambersart, Lomme, La Madeleine, Marcq-en-Barœul, Saint-André-lez-Lille ou Loos, retrouvez le conseil et les substrats au même endroit : le Studio de Lille, près du métro Cormontaigne.",

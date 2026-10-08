@@ -35,7 +35,7 @@ export default function ContactPage() {
         <p>Pour la location de matériel de soirée, retrouvez notre activité dédiée sur <a href="https://evenement.tibaldo.fr/">TIBALDO Événement</a>.</p>
         <div className="contact-details" id="horaires">
           <p><span>Adresse</span><strong>{jungleLocalIdentity.streetAddress}<br />{jungleLocalIdentity.postalCode} {jungleLocalIdentity.city}</strong></p>
-          <p><span>Horaires</span><strong>Lundi · fermé<br />Mardi · 14h–19h<br />Mercredi–samedi · 10h–19h<br />Dimanche · 10h–13h</strong></p>
+          <p><span>Horaires</span><strong>Lundi · fermé<br />Mardi · 14h–19h<br />Mercredi–samedi · 10h–13h / 14h–19h<br />Dimanche · 10h–13h</strong></p>
           <p><span>Contact</span><strong><a href={`mailto:${jungleLocalIdentity.email}`}>{jungleLocalIdentity.email}</a><br /><a href={`tel:${jungleLocalIdentity.phoneE164}`}>{jungleLocalIdentity.phoneDisplay}</a></strong></p>
         </div>
         <div className="gps-chooser" id="itineraire">

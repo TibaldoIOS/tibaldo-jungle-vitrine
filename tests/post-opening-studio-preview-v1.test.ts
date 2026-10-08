@@ -28,7 +28,7 @@ test("Owner address and hours are visible on the current visit surfaces", async 
     assert.match(html, /3 place de l’Arbonnoise/);
     assert.match(html, /59000 Lille/);
     assert.match(html, /Mardi[^<]{0,20}14[^<]{0,8}19/);
-    assert.match(html, /Mercredi[^<]{0,20}samedi[^<]{0,20}10[^<]{0,8}19/i);
+    assert.match(html, /Mercredi[^<]{0,20}samedi[^<]{0,20}10[^<]{0,8}13[^<]{0,8}14[^<]{0,8}19/i);
     assert.match(html, /Dimanche[^<]{0,20}10[^<]{0,8}13/i);
   }
   assert.match(contact.html, /Lundi[^<]{0,10}fermé/i);

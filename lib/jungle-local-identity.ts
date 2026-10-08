@@ -25,13 +25,16 @@ export const jungleLocalIdentity = {
 export const jungleOpeningHours = [
   { dayOfWeek: "Monday", closed: true },
   { dayOfWeek: "Tuesday", opens: "14:00", closes: "19:00" },
-  { dayOfWeek: ["Wednesday", "Thursday", "Friday", "Saturday"], opens: "10:00", closes: "19:00" },
+  { dayOfWeek: ["Wednesday", "Thursday", "Friday", "Saturday"], opens: "10:00", closes: "13:00" },
+  { dayOfWeek: ["Wednesday", "Thursday", "Friday", "Saturday"], opens: "14:00", closes: "19:00" },
   { dayOfWeek: "Sunday", opens: "10:00", closes: "13:00" },
 ] as const;
 
 export const jungleOpeningHoursSchema = [
+  { "@type": "OpeningHoursSpecification", dayOfWeek: "Monday", opens: "00:00", closes: "00:00" },
   { "@type": "OpeningHoursSpecification", dayOfWeek: "Tuesday", opens: "14:00", closes: "19:00" },
-  { "@type": "OpeningHoursSpecification", dayOfWeek: ["Wednesday", "Thursday", "Friday", "Saturday"], opens: "10:00", closes: "19:00" },
+  { "@type": "OpeningHoursSpecification", dayOfWeek: ["Wednesday", "Thursday", "Friday", "Saturday"], opens: "10:00", closes: "13:00" },
+  { "@type": "OpeningHoursSpecification", dayOfWeek: ["Wednesday", "Thursday", "Friday", "Saturday"], opens: "14:00", closes: "19:00" },
   { "@type": "OpeningHoursSpecification", dayOfWeek: "Sunday", opens: "10:00", closes: "13:00" },
 ] as const;
 

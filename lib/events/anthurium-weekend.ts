@@ -1,14 +1,9 @@
-import { jungleLocalIdentity, jungleOpeningHours } from '../jungle-local-identity.ts';
+import { jungleLocalIdentity } from '../jungle-local-identity.ts';
 export const anthuriumWeekendPath = '/evenements/week-end-anthurium-octobre-2026';
 export const anthuriumWeekendUrl = `https://jungle.tibaldo.fr${anthuriumWeekendPath}`;
-const hours = (day: string) => {
-  const entry = jungleOpeningHours.find(h => typeof h.dayOfWeek === 'string' ? h.dayOfWeek === day : (h.dayOfWeek as readonly string[]).includes(day));
-  if (!entry || !('opens' in entry)) throw new Error(`Missing public opening hours: ${day}`);
-  return { opens:entry.opens, closes:entry.closes };
-};
 export const anthuriumWeekendDays = [
-  { date:'2026-10-10', label:'Samedi 10 octobre 2026', ...hours('Saturday') },
-  { date:'2026-10-11', label:'Dimanche 11 octobre 2026', ...hours('Sunday') },
+  { date:'2026-10-10', label:'Samedi 10 octobre 2026', opens:'10:00', closes:'19:00' },
+  { date:'2026-10-11', label:'Dimanche 11 octobre 2026', opens:'10:00', closes:'13:00' },
 ];
 export const anthuriumWeekendStart = `${anthuriumWeekendDays[0].date}T${anthuriumWeekendDays[0].opens}:00+02:00`;
 export const anthuriumWeekendEnd = `${anthuriumWeekendDays[1].date}T${anthuriumWeekendDays[1].closes}:00+02:00`;

@@ -24,7 +24,7 @@ test("removes the unsupported store opening date and keeps weekly hours untouche
   const homepage = read("app/page.tsx");
   assert.doesNotMatch(homepage, /openingDate/);
   assert.match(homepage, /Mardi · 14h–19h/);
-  assert.match(homepage, /Mercredi–samedi · 10h–19h/);
+  assert.match(homepage, /Mercredi–samedi · 10h–13h \/ 14h–19h/);
   assert.match(homepage, /Dimanche · 10h–13h/);
 });
 
