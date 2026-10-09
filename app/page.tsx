@@ -1,4 +1,5 @@
 import AnthuriumWeekendLink from "./AnthuriumWeekendLink";
+import AlocasiaContestLink from "./AlocasiaContestLink";
 import SybotanicaWeekendLink from "./SybotanicaWeekendLink";
 import Image from "next/image";
 import Link from "next/link";
@@ -37,6 +38,7 @@ export default function Home() {
       <section className={`hero ${promoStyles.hero}`} id="accueil">
         <div className="hero-photo" aria-hidden="true" /><div className="hero-shade" aria-hidden="true" />
         <SiteHeader />
+        <AlocasiaContestLink compact />
         <SybotanicaWeekendLink />
         <AnthuriumWeekendLink compact />
         <p className="hero-local-coordinates" aria-label={`Latitude ${jungleLocalIdentity.latitude} nord, longitude ${jungleLocalIdentity.longitude} est`}>

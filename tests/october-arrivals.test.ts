@@ -11,8 +11,8 @@ test('seven new identities, unique canonical routes and registered genera',()=>{
  assert.equal(getPlant('dieffenbachia','culture')?.taxonomy.cultivar,null);
  assert.equal(getPlant('begonia','maculata-spotlight-green')?.taxonomy.cultivar,'KRMACGR01');
 });
-test('five event references resolve, 54 expected units, no inferred offer or stock',()=>{
- assert.equal(anthuriumArrival.length,5);assert.equal(anthuriumArrival.reduce((s,p)=>s+p.expected,0),54);
+test('five event references resolve, 48 expected units, no inferred offer or stock',()=>{
+ assert.equal(anthuriumArrival.length,5);assert.equal(anthuriumArrival.reduce((s,p)=>s+p.expected,0),48);
  for(const p of anthuriumArrival)assert.ok(getPlant('anthurium',p.slug));
  assert.deepEqual(anthuriumWeekendOffers,{});assert.equal(visibleWeekendOffer(undefined,Date.now()),null);
  const base={ownerApproved:true as const,regularPrice:20,weekendPrice:18,availability:'confirmée',validFrom:anthuriumWeekendStart,validUntil:anthuriumWeekendEnd};

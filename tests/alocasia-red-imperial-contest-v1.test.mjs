@@ -1,0 +1,15 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const read=(path)=>readFileSync(new URL(`../${path}`,import.meta.url),'utf8');
+const page=read('app/evenements/concours-alocasia-red-imperial-octobre-2026/page.tsx');
+const contract=read('lib/events/alocasia-red-imperial-contest.ts');
+const home=read('app/page.tsx');
+const hub=read('app/evenements/page.tsx');
+const anthurium=read('lib/events/anthurium-weekend.ts');
+test('contest identity, value, deadline and social destinations are exact',()=>{assert.match(page,/Concours TIBALDO Jungle — Gagnez un/);assert.match(page,/1,60 m/);assert.match(page,/quatre feuilles/);assert.match(page,/100 €/);assert.doesNotMatch(page,/200 €/);assert.match(contract,/2026-10-11T13:00:00\+02:00/);assert.match(contract,/instagram\.com\/reel\/DeR6tUBiHj5/);assert.match(contract,/facebook\.com\/share\/r\/1CMS5hX36t/)});
+test('participation rules preserve independent platforms and story bonus',()=>{assert.match(page,/chacun une participation autonome/);assert.match(page,/ne crée pas, à lui seul, de chance supplémentaire/);assert.match(page,/doubler ses chances sur cette participation/)});
+test('home and events hub include the shared time-bounded signal',()=>{assert.match(home,/<AlocasiaContestLink compact/);assert.match(hub,/<AlocasiaContestLink archive/);assert.match(contract,/now >= Date\.parse\(alocasiaContestEnd\) \? 'ended' : 'active'/)});
+test('schema is editorial and contains no commercial or review claims',()=>{assert.match(page,/'@type':\s*'Article'/);assert.match(page,/'@type':\s*'BreadcrumbList'/);assert.doesNotMatch(page,/AggregateRating|reviewCount|ratingValue|'@type':\s*'Offer'/)});
+test('Anthurium order is reconciled to 48 units',()=>{assert.equal([...anthurium.matchAll(/expected:(\d+)/g)].reduce((sum,match)=>sum+Number(match[1]),0),48);assert.match(anthurium,/slug:'luxurians'.*expected:6/);assert.match(anthurium,/Arrivage de 48 plantes/);assert.doesNotMatch(anthurium,/Arrivage de 54 plantes/)});
+test('permanent opening-hours contract remains split and unchanged',()=>{const identity=read('lib/jungle-local-identity.ts');assert.match(identity,/Tuesday.*14:00.*19:00/s);assert.match(identity,/Wednesday.*Saturday.*10:00.*13:00/s);assert.match(identity,/Wednesday.*Saturday.*14:00.*19:00/s);assert.match(identity,/Sunday.*10:00.*13:00/s)});

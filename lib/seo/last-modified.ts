@@ -1,15 +1,16 @@
 // Dates éditoriales stables. Elles ne doivent être modifiées que lorsqu'un contenu
 // public change réellement, jamais automatiquement pendant le build.
 export const editorialLastModified = {
+  "/evenements/concours-alocasia-red-imperial-octobre-2026": "2026-10-09",
   "/evenements/week-end-anthurium-octobre-2026": "2026-10-04",
   "/plantes-rares": "2026-10-04",
   "/evenements/week-end-sybotanica-octobre-2026": "2026-10-03",
-  "/": "2026-10-07",
+  "/": "2026-10-09",
   "/plantes": "2026-10-04",
   "/fleurs": "2026-08-15",
   "/substrats": "2026-10-03",
   "/rempotage": "2026-08-30",
-  "/evenements": "2026-10-04",
+  "/evenements": "2026-10-09",
   "/services": "2026-08-15",
   "/coulisses": "2026-10-07",
   "/coulisses/tibaldo-jungle-actu-fr": "2026-10-07",
