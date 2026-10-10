@@ -29,6 +29,7 @@ import { applyDevilMonsterContext } from "./devil-monster-v1.ts";
 import { willaertIdentityPlants } from "./willaert-identities-v1.ts";
 import { platyceriumBifurcatum } from "./platycerium-bifurcatum.ts";
 import { applyOwnerEpipremnumMedia20260923 } from "./owner-epipremnum-media-20260923.ts";
+import { addCollectorAlocasiaOctober2026 } from "./collector-alocasia-october-2026.ts";
 
 export const plantFamilies = [
   {"slug": "begonia", "name": "Begonia", "eyebrow": "Guide de culture", "description": "Feuillages ponctués et tiges à cannes : découvrir les bégonias horticoles.", "image": "/photo-reelle-a-venir.svg", "imageAlt": "Photographie documentaire non disponible", "available": true},
@@ -220,6 +221,8 @@ export const plants: PlantEntry[] = applyDevilMonsterContext(applyOwnerPileaMedi
     applyMediaRightsP0Closure(applyVariegataContext(applyShopReferenceContext([...rawPlants, ...shopReferencePlants, platyceriumBifurcatum, poseidon, ...rarePlantEntries, ...octoberArrivalPlants]))),
   ),
 ))));
+
+addCollectorAlocasiaOctober2026(plants);
 
 // Owner photo wave PHOTO-20260910-MONSTERA-01: exact existing canonical media entries.
 const esqueletoOwnerMediaPlantIndex = plants.findIndex((plant) => plant.genre === "monstera" && plant.slug === "esqueleto");
