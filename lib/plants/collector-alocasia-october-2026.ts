@@ -70,8 +70,22 @@ export const addCollectorAlocasiaOctober2026 = (plants: PlantEntry[]) => {
         paragraphs: ["La documentation spécialisée rattache Venom à une mutation du groupe Amazonica, mais l’absence de source primaire accessible impose de conserver cette histoire au conditionnel."],
         points: ["Nom horticole", "Apex foliaire allongé", "Traçabilité indispensable"],
       }],
-      gallery: mediaGap("Alocasia ‘Venom’"),
-      mediaNeeds: [{role: "documentaire", description: "Photographie Owner du sujet Venom, accompagnée de son étiquette ou de sa provenance producteur."}],
+      gallery: [{
+        src: "/media/owner-media/alocasia-venom/alocasia-venom-hero-owner.webp",
+        alt: "Alocasia en pot aux feuilles vert sombre largement nervurées de blanc, présenté comme visuel Hero de Venom",
+        caption: "Visuel fourni par l’Owner pour le Hero d’Alocasia ‘Venom’ ; son usage éditorial ne constitue pas à lui seul une preuve d’identité botanique.",
+        width: 1536,
+        height: 1024,
+        license: {
+          status: "verified",
+          creator: "Créateur non communiqué",
+          license: "Utilisation publique autorisée par l’Owner",
+          sourceUrl: "owner-provided://tibaldo/photo-20261011-alocasia-venom-hero-01/venom",
+          registryPath: "/credits-images",
+          note: "Image fournie par l’Owner pour cette fiche. Créateur non attribué ; aucune preuve botanique déduite du visuel. Provenance : docs/media-provenance/photo-20261011-alocasia-venom-hero-01.json",
+        },
+      }],
+      mediaNeeds: [],
       seo: {
         title: "Alocasia Venom : identité horticole et entretien",
         description: "Comprendre Alocasia ‘Venom’ : nom horticole, apex foliaire allongé, limites d’identification, lumière, arrosage et culture.",
@@ -85,7 +99,7 @@ export const addCollectorAlocasiaOctober2026 = (plants: PlantEntry[]) => {
       ],
       showSources: true,
       publishedAt: "2026-10-10",
-      updatedAt: "2026-10-10",
+      updatedAt: "2026-10-11",
     },
     {
       ...base,

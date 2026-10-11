@@ -27,12 +27,22 @@ test("Venom and Teletubbies are presented as cautious horticultural identities",
   assert.doesNotMatch(teletubbies.origin, /gageana|Stingray|Loco/i);
 });
 
-test("new pages keep an honest media gap and expose sources", () => {
-  for (const slug of ["venom", "teletubbies"]) {
-    const plant = getPlant("alocasia", slug)!;
-    assert.equal(plant.gallery[0]?.license?.status, "media-gap");
-    assert.equal(plant.gallery[0]?.alt, "");
-    assert.equal(plant.showSources, true);
-    assert.ok(plant.sources.length >= 4);
-  }
+test("Venom uses the Owner-supplied hero without turning it into botanical proof", () => {
+  const venom = getPlant("alocasia", "venom")!;
+  assert.equal(venom.gallery[0]?.src, "/media/owner-media/alocasia-venom/alocasia-venom-hero-owner.webp");
+  assert.equal(venom.gallery[0]?.width, 1536);
+  assert.equal(venom.gallery[0]?.height, 1024);
+  assert.equal(venom.gallery[0]?.license?.status, "verified");
+  assert.equal(venom.gallery[0]?.license?.creator, "Créateur non communiqué");
+  assert.match(venom.gallery[0]?.license?.note ?? "", /aucune preuve botanique/i);
+  assert.deepEqual(venom.mediaNeeds, []);
+  assert.equal(venom.showSources, true);
+});
+
+test("Teletubbies keeps its honest media gap and exposes sources", () => {
+  const teletubbies = getPlant("alocasia", "teletubbies")!;
+  assert.equal(teletubbies.gallery[0]?.license?.status, "media-gap");
+  assert.equal(teletubbies.gallery[0]?.alt, "");
+  assert.equal(teletubbies.showSources, true);
+  assert.ok(teletubbies.sources.length >= 4);
 });

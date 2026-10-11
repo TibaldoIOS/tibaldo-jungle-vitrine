@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 };
 
 const credits: readonly [string, string, string, string, string?][] = [
+["Alocasia ‘Venom’ · Hero", "Créateur non communiqué", "Image fournie par l’Owner pour ce Hero · conversion WebP sans recadrage · aucune preuve botanique déduite du visuel", "owner-provided://tibaldo/photo-20261011-alocasia-venom-hero-01/venom"],
 ["Musa ‘Florida Variegata’", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260923-musa-florida-variegata-01/florida-variegata"],
 ["Alocasia ‘Silver Dragon’", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260923-silver-dragon-01/silver-dragon"],
 ["Goeppertia orbifolia · Calathea orbifolia", "Photo : TIBALDO", "Photographie fournie par TIBALDO · conversion WebP sans recadrage", "owner-provided://tibaldo/photo-20260920-goeppertia-orbifolia-01/orbifolia"],
