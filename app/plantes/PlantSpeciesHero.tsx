@@ -74,11 +74,13 @@ export default function PlantSpeciesHero({ plant }: { plant: PlantEntry }) {
         </h1>
         <p>{plant.subtitle}</p>
         <div className="plant-profile-hero-meta">
-          <Link
-            href={`/plantes/famille/${plant.taxonomy.family.toLowerCase()}`}
-          >
-            {plant.taxonomy.family}
-          </Link>
+          {plant.taxonomy.family === "Identité botanique variable" ? (
+            <span>{plant.taxonomy.family}</span>
+          ) : (
+            <Link href={`/plantes/famille/${plant.taxonomy.family.toLowerCase()}`}>
+              {plant.taxonomy.family}
+            </Link>
+          )}
           <Link href={`/plantes/${plant.genre}`}>{plant.taxonomy.genus}</Link>
           {!isInternalPhotoProductionCopy(plant.specimen.observedHeight) && (
             <span>{plant.specimen.observedHeight}</span>

@@ -106,7 +106,7 @@ export default function GoldenSpeciesProfile({ plant }: { plant: PlantEntry }) {
             <div className={golden.identityEditorial} data-reveal>
               <div className={golden.identityName}><span>Nom botanique</span><strong><ScientificName name={plant.botanicalName} /></strong>{plant.taxonomy.commonNames.length ? <small>{[...new Set(plant.taxonomy.commonNames)].join(" · ")}</small> : null}</div>
               <dl className={golden.identityRows}>
-                <div><dt>Famille</dt><dd><Link href={`/plantes/famille/${plant.taxonomy.family.toLowerCase()}`}>{plant.taxonomy.family}</Link></dd></div>
+                <div><dt>Famille</dt><dd>{plant.taxonomy.family === "Identité botanique variable" ? plant.taxonomy.family : <Link href={`/plantes/famille/${plant.taxonomy.family.toLowerCase()}`}>{plant.taxonomy.family}</Link>}</dd></div>
                 <div><dt>Genre</dt><dd><Link href={`/plantes/${plant.genre}`}>{plant.taxonomy.genus}</Link></dd></div>
                 <div><dt>Espèce</dt><dd><ScientificName name={plant.taxonomy.species} /></dd></div>
                 <div><dt>Ordre</dt><dd>{plant.taxonomy.order}</dd></div>

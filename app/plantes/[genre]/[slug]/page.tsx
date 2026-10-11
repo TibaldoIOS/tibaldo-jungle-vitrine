@@ -8,6 +8,7 @@ import PlantFamilyPage, {
 import { isEditorialPlaceholder, isInternalPhotoProductionCopy, isPhotoProductionPlaceholder } from "@/lib/plants/types";
 import { deliciosaNextFaq } from "@/lib/plants/deliciosa-next";
 import { betaOnlyRobots } from "@/lib/deployment-mode";
+import { jungleOrganizationStructuredData } from "@/lib/jungle-local-identity";
 
 type Props = { params: Promise<{ genre: string; slug: string }> };
 
@@ -108,21 +109,7 @@ export default async function Page({ params }: Props) {
     genre === "cycas" && slug === "revoluta"
       ? "Cultiver un Cycas revoluta à Lille : lumière, drainage, pot, froid et hivernage dans le Nord. Guide botanique et conseils du Studio TIBALDO Jungle."
       : plant.seo.description;
-  const organization = localPilot
-    ? {
-        "@type": "Organization",
-        "@id": "https://jungle.tibaldo.fr/#organization",
-        name: "TIBALDO Jungle",
-        alternateName: "Studio Végétal — TIBALDO Jungle",
-        url: "https://jungle.tibaldo.fr",
-      }
-    : {
-        "@type": "Organization",
-        "@id": "https://jungle.tibaldo.fr/#organization",
-        name: "Studio Végétal – Tibaldo Jungle",
-        alternateName: "Tibaldo Jungle",
-        url: "https://jungle.tibaldo.fr",
-      };
+  const organization = jungleOrganizationStructuredData();
   const localStudio = localPilot
     ? {
         "@type": ["GardenStore", "LocalBusiness"],
