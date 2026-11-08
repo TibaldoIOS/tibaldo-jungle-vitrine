@@ -2,7 +2,10 @@
 // public change réellement, jamais automatiquement pendant le build.
 export const editorialLastModified = {
   "/": "2026-08-15",
-  "/plantes": "2026-08-17",
+  "/plantes": "2026-11-08",
+  "/sapins-noel-lille": "2026-11-08",
+  "/sapins-noel-lille/nordmann": "2026-11-08",
+  "/sapins-noel-lille/epicea": "2026-11-08",
   "/fleurs": "2026-08-15",
   "/substrats": "2026-08-15",
   "/rempotage": "2026-08-30",
