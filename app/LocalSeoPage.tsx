@@ -30,6 +30,7 @@ type LocalPageProps = {
 };
 
 const linkVisuals: Record<string, { src: string; alt: string }> = {
+  "/sapins-noel-lille": { src: "/sapins-noel-lille/nordmann.svg", alt: "Illustration botanique originale du sapin Nordmann, conifère de Noël" },
   "/bar-a-rempotage-lille": { src: "/service-rempotage-plantes-lille.jpg", alt: "Rempotage d’une plante au Studio Végétal Tibaldo Jungle" },
   "/rempotage": { src: "/service-rempotage-plantes-lille.jpg", alt: "Bar à rempotage Tibaldo Jungle à Lille" },
   "/rempotage-plantes-lille": { src: "/service-rempotage-plantes-lille.jpg", alt: "Service de rempotage de plantes à Lille" },
