@@ -9,7 +9,7 @@ const certifiedMediaInventory = JSON.parse(
 // certified inventory. The sitemap total therefore follows both contracts.
 import { familyHubDecisions } from "../lib/seo/family-indexability-contract.ts";
 
-export const certifiedPublicNonFamilyNonSpeciesUrlCount = 77;
+export const certifiedPublicNonFamilyNonSpeciesUrlCount = 80; // +3: seasonal Lille Christmas trees and two botanical profiles
 export const certifiedPublicFamilyHubUrlCount = Object.values(
   familyHubDecisions,
 ).filter((decision) => decision === "INDEX_KEEP").length;
