@@ -40,6 +40,7 @@ export default function Page() {
       { question: "Le retrait au Studio reste-t-il possible ?", answer: "Oui. Le retrait au Studio Végétal, 3 place de l’Arbonnoise à Lille, reste proposé sans frais sur un créneau convenu." },
     ]}
     links={[
+      { href: "/sapins-noel-lille", label: "Sapins de Noël livrés dans la MEL", copy: "Offre saisonnière spécifique aux Nordmann et Épicéas, distincte des tarifs de livraison classiques." },
       { href: shopUrl(), label: "Accéder au Shop", copy: "Composer votre panier et calculer automatiquement la livraison selon votre adresse." },
       { href: "/boutique-plantes-lille", label: "Boutique de plantes à Lille", copy: "Découvrir le Studio Végétal et préparer votre visite." },
       { href: "/contact", label: "Préparer une livraison particulière", copy: "Nous signaler un accès difficile, un étage sans ascenseur ou un végétal très volumineux." },

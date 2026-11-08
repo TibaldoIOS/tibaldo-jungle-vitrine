@@ -152,6 +152,17 @@ export default function PlantsPage() {
         <div className="shell"><header data-reveal><p className="section-kicker">Index botanique complet</p><h2 id="all-genera-title">Trente et un genres.<br/><em>Un seul index.</em></h2><p>Une lecture compacte pour rejoindre chaque genre sans répéter une seconde galerie de grandes cartes.</p></header><CompactBotanicalIndex items={directoryItems} /></div>
       </section>
 
+      <section className="shell plants-hub-manifesto" aria-labelledby="sapins-saisonniers-title" data-reveal>
+        <p className="section-kicker">Saison · Conifères de Noël</p>
+        <div>
+          <h2 id="sapins-saisonniers-title">Nordmann & Épicéa.<br /><em>Deux conifères à découvrir.</em></h2>
+          <div className="plants-hub-editorial-copy">
+            <p>L’encyclopédie s’ouvre aussi aux sapins de Noël naturels : apprenez à distinguer <em>Abies nordmanniana</em> et <em>Picea abies</em>, à préserver leurs aiguilles et à préparer leur installation dans un intérieur chauffé.</p>
+            <p><Link href="/sapins-noel-lille">Découvrir les sapins de Noël à Lille, le guide botanique et la livraison saisonnière dans la MEL ↗</Link></p>
+          </div>
+        </div>
+      </section>
+
       <PlantExplorer plants={explorerItems} />
 
       <section className="plants-hub-sos-v3" data-reveal>
