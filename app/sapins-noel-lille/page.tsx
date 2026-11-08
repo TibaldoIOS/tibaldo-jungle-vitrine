@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "../ScrollReveal";
 import { SiteHeader, SiteFooter } from "../SiteChrome";
@@ -104,6 +105,7 @@ export default function SapinsNoelLille() {
         <div className={styles.grid}>
           {christmasTrees.map((tree, index) => (
             <article className={styles.card} key={tree.slug}>
+              <Image className={styles.treeArt} unoptimized src={`/sapins-noel-lille/${tree.slug}.svg`} alt={`Illustration botanique du ${tree.commonName.toLowerCase()}, conifère de Noël non décoré`} width={960} height={760} />
               <span className={styles.number}>0{index + 1} · {tree.family}</span>
               <h3>{tree.commonName}</h3>
               <small>{tree.botanicalName}</small>
@@ -212,7 +214,7 @@ export default function SapinsNoelLille() {
           <Link href="/conseils">Tous nos guides d’entretien ↗</Link>
           <Link href="/contact">Contact et localisation ↗</Link>
         </nav>
-        <p className={styles.sources}>Dossier éditorial saisonnier mis à jour en novembre 2026. Les conseils botaniques ne constituent pas une garantie de conservation ; l’offre et les disponibilités sont à confirmer auprès du Studio.</p>
+        <p className={styles.sources}>Pour comparer les caractéristiques des essences : <a href="https://www.rhs.org.uk/plants/types/trees/christmas-trees" target="_blank" rel="noreferrer">Royal Horticultural Society — guide des sapins de Noël</a>. Illustrations botaniques originales non contractuelles. Dossier éditorial saisonnier mis à jour en novembre 2026. Les conseils botaniques ne constituent pas une garantie de conservation ; l’offre et les disponibilités sont à confirmer auprès du Studio.</p>
       </section>
       <SiteFooter compactTransit />
     </main>
