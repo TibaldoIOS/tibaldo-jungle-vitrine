@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ScrollReveal from "../../ScrollReveal";
@@ -96,6 +97,7 @@ export default async function SapinSpeciesPage({ params }: Props) {
         <section className={styles.twoCol}>
           <div className={styles.prose}>
             <span className={styles.kicker}>01 · Carte d’identité</span>
+            <Image className={styles.speciesArt} unoptimized src={`/sapins-noel-lille/${tree.slug}.svg`} alt={`Illustration botanique du ${tree.commonName.toLowerCase()}, silhouette générale`} width={960} height={760} />
             <h2>Reconnaître le {tree.commonName.toLowerCase()}.</h2>
             <p><strong>Nom scientifique :</strong> <em>{tree.botanicalName}</em></p>
             <p><strong>Famille botanique :</strong> {tree.family} · <strong>Genre :</strong> <em>{tree.genus}</em> · <strong>Espèce :</strong> <em>{tree.species}</em></p>
