@@ -20,6 +20,8 @@
 .sectionHeading p { font-size:1.08rem; line-height:1.7; color:#435e52; }
 .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.25rem; }
 .card { background:#fff; border:1px solid #dce5dc; border-radius:1.1rem; padding:clamp(1.35rem,3vw,2.5rem); box-shadow:0 12px 35px rgba(10,49,34,.045); }
+.treeArt { display:block; width:100%; height:auto; max-height:275px; object-fit:contain; margin:0 0 1.4rem; border-radius:.75rem; background:#eef2e8; }
+.speciesArt { display:block; width:100%; max-width:520px; height:auto; margin:0 0 2rem; border-radius:1rem; background:#eef2e8; }
 .card h3 { font-size:clamp(1.55rem,3vw,2.2rem); line-height:1.15; margin:.7rem 0 .45rem; }
 .card p,.card li { line-height:1.75; color:#41584c; }
 .card small { display:block; margin-bottom:1.1rem; font-style:italic; color:#66786c; }
